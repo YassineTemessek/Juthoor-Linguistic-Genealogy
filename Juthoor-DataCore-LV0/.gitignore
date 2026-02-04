@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors/OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini
+
+# Local data and outputs
+data/*
+!data/raw/
+data/raw/*
+!data/raw/README.md
+outputs/*
+!outputs/README.md

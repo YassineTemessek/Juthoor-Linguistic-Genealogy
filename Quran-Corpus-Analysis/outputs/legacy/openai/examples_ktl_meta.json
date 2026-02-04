@@ -1,0 +1,22 @@
+{
+  "input": "Quran-s-Words-decoding-LV1/Codex CLI/output/examples_ktl.csv",
+  "rows": 114,
+  "k": 2,
+  "k_compare": null,
+  "auto_k": "2,3,4",
+  "use_roots": true,
+  "text_vocab": 102,
+  "timestamp": "2025-12-01T14:22:04.718793+02:00",
+  "max_features": 5000,
+  "max_root_features": 200,
+  "out_csv": "Quran-s-Words-decoding-LV1/Codex CLI/output/examples_ktl_clusters.csv",
+  "plot": "Quran-s-Words-decoding-LV1/Codex CLI/output/examples_ktl_plot.png",
+  "stop_words": "simple",
+  "root_weight": 1.5,
+  "root_vocab": 1,
+  "silhouette_scores": {
+    "2": 0.23988156987717194,
+    "3": 0.15764233333636044,
+    "4": 0.14415289376586218
+  }
+}

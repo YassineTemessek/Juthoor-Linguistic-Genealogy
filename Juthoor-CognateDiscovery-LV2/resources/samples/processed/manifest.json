@@ -1,0 +1,49 @@
+{
+  "type": "processed_samples_manifest",
+  "timestamp_utc": "2025-12-15T21:50:22.409810+00:00",
+  "rows_per_file": 200,
+  "items": [
+    {
+      "id": "quran_lemmas",
+      "input": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\data\\processed\\arabic\\quran_lemmas_enriched.jsonl",
+      "output": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\resources\\samples\\processed\\quran_lemmas_enriched_sample.jsonl",
+      "lines": 100
+    },
+    {
+      "id": "hf_roots",
+      "input": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\data\\processed\\arabic\\hf_roots.jsonl",
+      "output": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\resources\\samples\\processed\\hf_roots_sample.jsonl",
+      "lines": 100
+    },
+    {
+      "id": "word_root_map",
+      "input": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\data\\processed\\arabic\\word_root_map_filtered.jsonl",
+      "output": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\resources\\samples\\processed\\word_root_map_filtered_sample.jsonl",
+      "lines": 100
+    },
+    {
+      "id": "english_ipa",
+      "input": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\data\\processed\\english\\english_ipa_merged_pos.jsonl",
+      "output": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\resources\\samples\\processed\\english_ipa_merged_pos_sample.jsonl",
+      "lines": 100
+    },
+    {
+      "id": "latin_dict",
+      "input": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\data\\processed\\wiktionary_stardict\\filtered\\Latin-English_Wiktionary_dictionary_stardict_filtered.jsonl",
+      "output": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\resources\\samples\\processed\\Latin-English_Wiktionary_dictionary_stardict_filtered_sample.jsonl",
+      "lines": 100
+    },
+    {
+      "id": "greek_dict",
+      "input": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\data\\processed\\wiktionary_stardict\\filtered\\Ancient_Greek-English_Wiktionary_dictionary_stardict_filtered.jsonl",
+      "output": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\resources\\samples\\processed\\Ancient_Greek-English_Wiktionary_dictionary_stardict_filtered_sample.jsonl",
+      "lines": 100
+    },
+    {
+      "id": "arabic_dict",
+      "input": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\data\\processed\\wiktionary_stardict\\filtered\\Arabic-English_Wiktionary_dictionary_stardict_filtered.jsonl",
+      "output": "C:\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\resources\\samples\\processed\\Arabic-English_Wiktionary_dictionary_stardict_filtered_sample.jsonl",
+      "lines": 100
+    }
+  ]
+}

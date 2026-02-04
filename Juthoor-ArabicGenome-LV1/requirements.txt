@@ -1,0 +1,8 @@
+# LV2 minimal runtime deps.
+#
+# Most LV2 work (binary-root grouping + graph export) runs on the committed
+# processed JSONL and needs only the Python standard library.
+#
+# If you want to rebuild *all* processed outputs from raw inputs (parquet),
+# install `requirements-ingest.txt` as well.
+

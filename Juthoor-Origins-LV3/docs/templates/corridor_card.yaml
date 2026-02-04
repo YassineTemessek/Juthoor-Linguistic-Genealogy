@@ -1,0 +1,13 @@
+id: CORRIDOR_EXAMPLE_01
+name: "Example corridor"
+description: "Soft correspondence tendency used as a discovery tag (not enforced as a law)."
+attested_examples:
+  - example: "OE niht -> Eng night"
+    notes: "Orthographic fossil (gh) preserves older cluster memory."
+sources:
+  - "Add a real reference here"
+limitations:
+  - "Where this corridor does NOT apply"
+validation_notes:
+  - "How this corridor would be tested or constrained in Validation Track"
+

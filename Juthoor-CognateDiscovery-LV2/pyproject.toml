@@ -1,0 +1,17 @@
+[project]
+name = "juthoor-cognatediscovery-lv2"
+version = "0.1.0"
+description = "LV2: Cognate Discovery. Cross-lingual similarity scoring and retrieval."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "juthoor-datacore-lv0",
+    "pandas",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/juthoor_cognatediscovery_lv2"]

@@ -1,0 +1,29 @@
+
+# --- Juthoor Project Exclusions ---
+
+# Large Datasets & Resources
+Resources/**/*.jsonl
+Resources/**/*.parquet
+Resources/**/*.sql
+Resources/**/*.sqlite
+Resources/**/*.bz2
+Resources/**/*.zip
+Resources/english_modern/
+Resources/latin/
+Resources/ancient_greek/
+Resources/english_middle/
+Resources/english_old/
+Resources/arabic_roots_hf/
+Resources/arabic_roots_taj/
+
+# Large CSVs (allow small ones if needed, but blocking bulk)
+Resources/Ten dictionaries for Arabic language/
+
+# Internal Documentation
+docs/PROGRESS_LOG.md
+
+# Python/Environment
+__pycache__/
+*.pyc
+.venv/
+.env

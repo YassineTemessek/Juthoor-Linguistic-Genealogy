@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "name": "kaikki_english_modern",
+      "language": "English",
+      "path": "english_modern/kaikki.org-dictionary-English.jsonl",
+      "format": "jsonl",
+      "origin": "https://kaikki.org/dictionary/English/"
+    },
+    {
+      "name": "cmudict",
+      "language": "English",
+      "path": "english_modern/cmudict.dict",
+      "format": "text",
+      "origin": "https://github.com/cmusphinx/cmudict"
+    },
+    {
+      "name": "kaikki_middle_english",
+      "language": "Middle English",
+      "path": "english_middle/kaikki.org-dictionary-MiddleEnglish.jsonl",
+      "format": "jsonl",
+      "origin": "https://kaikki.org/dictionary/Middle%20English/"
+    },
+    {
+      "name": "kaikki_old_english",
+      "language": "Old English",
+      "path": "english_old/kaikki.org-dictionary-OldEnglish.jsonl",
+      "format": "jsonl",
+      "origin": "https://kaikki.org/dictionary/Old%20English/"
+    },
+    {
+      "name": "kaikki_latin",
+      "language": "Latin",
+      "path": "latin/kaikki.org-dictionary-Latin.jsonl",
+      "format": "jsonl",
+      "origin": "https://kaikki.org/dictionary/Latin/"
+    },
+    {
+      "name": "kaikki_ancient_greek",
+      "language": "Ancient Greek",
+      "path": "ancient_greek/kaikki.org-dictionary-AncientGreek.jsonl",
+      "format": "jsonl",
+      "origin": "https://kaikki.org/dictionary/Ancient%20Greek/"
+    }
+  ]
+}

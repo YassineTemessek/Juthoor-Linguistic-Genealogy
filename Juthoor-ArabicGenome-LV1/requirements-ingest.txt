@@ -1,0 +1,8 @@
+# LV2 ingest deps (needed only for rebuilding some processed outputs from raw inputs).
+#
+# Install:
+#   python -m pip install -r requirements-ingest.txt
+
+pandas>=2.3,<3
+pyarrow>=22,<23
+

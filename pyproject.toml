@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "juthoor-linguistic-genealogy"
+version = "0.0.0"
+description = "Unified monorepo for the Juthoor linguistic genealogy levels."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.uv.workspace]
+members = [
+  "Juthoor-DataCore-LV0",
+  "Juthoor-ArabicGenome-LV1",
+  "Juthoor-CognateDiscovery-LV2",
+  "Juthoor-Origins-LV3",
+  "Quran-Corpus-Analysis",
+]

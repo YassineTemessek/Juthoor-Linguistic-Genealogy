@@ -1,0 +1,21 @@
+{
+  "concept_id": "EYE",
+  "core_gloss_en": "eye (organ of sight)",
+  "priority_tier": "A",
+  "synonyms_en": ["eyeball"],
+  "meronyms": ["iris", "pupil"],
+  "holonyms": ["face", "head"],
+  "figurative_links": [
+    { "lang": "ara", "form": "ʿayn", "gloss": "spring (of water)", "type": "metonymy" }
+  ],
+  "anchors": {
+    "lat": {
+      "lemma": "oculus",
+      "lemma_pos": "N",
+      "lemma_status": "gold",
+      "lemma_source": "Authoritative Latin dictionary"
+    }
+  },
+  "notes": ""
+}
+

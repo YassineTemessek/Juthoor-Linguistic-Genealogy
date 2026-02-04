@@ -1,0 +1,14 @@
+{
+  "concept_id": "EYE",
+  "semitic_lexeme_ids": ["ARA.class.ʿayn.0001", "HEB.bib.ayin.0003"],
+  "ie_lexeme_ids": ["ENG.mod.eye.0001", "LAT.class.oculus.0001"],
+  "orthography_score": 0.82,
+  "sound_score": 0.71,
+  "combined_score": 0.77,
+  "corridor_tags": ["glottal"],
+  "status": "open",
+  "loan_flag": false,
+  "chronology_note": "",
+  "analyst_notes": ""
+}
+
