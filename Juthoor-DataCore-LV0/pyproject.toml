@@ -5,7 +5,17 @@ description = "LV0: The Foundation. Data ingestion and canonization engine."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "pandas",
+    "pandas>=2.0",
+    "numpy>=1.23",
+]
+
+[project.optional-dependencies]
+embeddings = [
+    "juthoor-cognatediscovery-lv2",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
 ]
 
 [build-system]

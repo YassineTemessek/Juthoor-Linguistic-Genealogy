@@ -6,7 +6,41 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "juthoor-datacore-lv0",
-    "pandas",
+    "pandas>=2.0",
+    "numpy>=1.23",
+]
+
+[project.optional-dependencies]
+# Core ML dependencies (cross-platform: Windows/Linux/macOS)
+ml-core = [
+    "faiss-cpu>=1.7,<2",
+    "torch>=2.0,<3",
+    "transformers>=4.40,<5",
+]
+# CANINE embeddings only (works on Windows/Linux/macOS)
+canine = [
+    "juthoor-cognatediscovery-lv2[ml-core]",
+]
+# SONAR embeddings (Linux/macOS only - fairseq2 has no Windows wheels)
+sonar = [
+    "juthoor-cognatediscovery-lv2[ml-core]",
+    "sonar-space>=0.2",
+    "fairseq2>=0.3",
+]
+# Full embeddings - use on Linux/macOS only
+embeddings = [
+    "juthoor-cognatediscovery-lv2[sonar]",
+]
+viz = [
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+all = [
+    "juthoor-cognatediscovery-lv2[embeddings,viz,dev]",
 ]
 
 [build-system]
@@ -15,3 +49,6 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/juthoor_cognatediscovery_lv2"]
+
+[tool.uv.sources]
+juthoor-datacore-lv0 = { workspace = true }

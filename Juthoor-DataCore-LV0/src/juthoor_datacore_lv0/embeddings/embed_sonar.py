@@ -1,32 +1,57 @@
+"""
+SONAR Embedding CLI - Batch embedding generation using LV2 SonarEmbedder.
+
+This script provides a command-line interface for generating SONAR embeddings
+from JSONL files. It delegates to the production SonarEmbedder in LV2.
+
+Prerequisites:
+    pip install juthoor-cognatediscovery-lv2[embeddings]
+
+For direct API usage, import from LV2:
+    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarEmbedder
+
+Usage:
+    python -m juthoor_datacore_lv0.embeddings.embed_sonar \\
+        input.jsonl output_dir/ --lang ara --batch-size 32
+"""
+
 from __future__ import annotations
-
-"""
-Scaffold for SONAR embedding generation.
-
-Expected inputs:
-- JSONL file with LV0.7 rows containing meaning_text.
-
-Outputs:
-- ids.json (ordered IDs)
-- vectors.npy (float32, aligned 1:1 with ids)
-- meta.json (model id/hash, dim, pooling, text_field, created_at, source hashes)
-- coverage.json (embedded vs. skipped)
-
-NOTE: This is a placeholder; plug in real SONAR model inference before use.
-"""
 
 import argparse
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable, Tuple
+from typing import Iterable
 
 import numpy as np
 
-from ingest.utils import sha256_file
+# Check for LV2 availability
+_HAS_LV2 = False
+_LV2_IMPORT_ERROR = None
+
+try:
+    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarEmbedder, SonarConfig
+    from juthoor_cognatediscovery_lv2.lv3.discovery.lang import resolve_sonar_lang
+    _HAS_LV2 = True
+except ImportError as e:
+    _LV2_IMPORT_ERROR = e
+
+try:
+    from juthoor_datacore_lv0.ingest.utils import sha256_file
+except ImportError:
+    # Fallback for running script directly
+    def sha256_file(path: Path) -> str:
+        import hashlib
+        h = hashlib.sha256()
+        with open(path, "rb") as f:
+            for chunk in iter(lambda: f.read(8192), b""):
+                h.update(chunk)
+        return h.hexdigest()
 
 
 def iter_rows(path: Path) -> Iterable[dict]:
+    """Iterate over JSONL rows, skipping empty lines."""
     with path.open("r", encoding="utf-8", errors="replace") as fh:
         for line in fh:
             line = line.strip()
@@ -35,72 +60,138 @@ def iter_rows(path: Path) -> Iterable[dict]:
             yield json.loads(line)
 
 
-def fake_embed(text: str, dim: int = 8) -> np.ndarray:
-    """
-    Placeholder deterministic embedding: hash text to a small float vector.
-    Replace with real SONAR inference.
-    """
-    h = hash(text)
-    rng = np.random.default_rng(abs(h) % (2**32))
-    return rng.standard_normal(dim).astype("float32")
+def main() -> int:
+    # Check LV2 availability before parsing args
+    if not _HAS_LV2:
+        print(
+            "ERROR: Missing juthoor_cognatediscovery_lv2 package with embeddings support.\n\n"
+            "Install with:\n"
+            "    pip install juthoor-cognatediscovery-lv2[embeddings]\n\n"
+            "Or install from monorepo:\n"
+            "    uv pip install -e Juthoor-CognateDiscovery-LV2\n"
+            "    pip install -r Juthoor-CognateDiscovery-LV2/requirements.embeddings.txt\n",
+            file=sys.stderr,
+        )
+        if _LV2_IMPORT_ERROR:
+            print(f"Original error: {_LV2_IMPORT_ERROR}", file=sys.stderr)
+        return 1
 
-
-def main() -> None:
-    ap = argparse.ArgumentParser(description="Scaffold: generate SONAR meaning embeddings (placeholder).")
-    ap.add_argument("jsonl", type=Path, help="Input JSONL with meaning_text.")
-    ap.add_argument("out_dir", type=Path, help="Output directory for ids.json/vectors.npy/meta.json/coverage.json.")
-    ap.add_argument("--dim", type=int, default=8, help="Embedding dimension for placeholder.")
-    ap.add_argument("--model-id", default="sonar-placeholder", help="Model identifier.")
-    ap.add_argument("--text-field", default="meaning_text", help="Field to embed.")
+    ap = argparse.ArgumentParser(
+        description="Generate SONAR semantic embeddings for JSONL lexeme files.",
+        epilog="Requires: pip install juthoor-cognatediscovery-lv2[embeddings]",
+    )
+    ap.add_argument("jsonl", type=Path, help="Input JSONL file with meaning_text or lemma fields.")
+    ap.add_argument("out_dir", type=Path, help="Output directory for vectors.npy, ids.json, meta.json, coverage.json.")
+    ap.add_argument("--lang", type=str, required=True, help="Language code (e.g., ara, eng, heb).")
+    ap.add_argument("--sonar-lang", type=str, default=None, help="Override SONAR language code (e.g., arb_Arab).")
+    ap.add_argument("--text-field", default="meaning_text", help="Field to embed (default: meaning_text).")
+    ap.add_argument("--fallback-field", default="lemma", help="Fallback field if text-field is empty (default: lemma).")
+    ap.add_argument("--batch-size", type=int, default=32, help="Batch size for embedding (default: 32).")
+    ap.add_argument("--encoder", default="text_sonar_basic_encoder", help="SONAR encoder model.")
+    ap.add_argument("--tokenizer", default="text_sonar_basic_encoder", help="SONAR tokenizer model.")
     args = ap.parse_args()
+
+    if not args.jsonl.exists():
+        print(f"ERROR: Input file not found: {args.jsonl}", file=sys.stderr)
+        return 1
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
+    # Resolve SONAR language code
+    try:
+        sonar_lang = resolve_sonar_lang(args.lang, args.sonar_lang)
+    except ValueError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+
+    print(f"SONAR language: {sonar_lang}")
+    print(f"Input: {args.jsonl}")
+    print(f"Output: {args.out_dir}")
+
+    # Initialize embedder
+    config = SonarConfig(encoder=args.encoder, tokenizer=args.tokenizer)
+    embedder = SonarEmbedder(config=config)
+
+    # Collect texts and IDs
     ids: list[str] = []
-    vecs: list[np.ndarray] = []
+    texts: list[str] = []
     skipped = 0
-    embedded = 0
 
+    print("Loading rows...")
     for rec in iter_rows(args.jsonl):
-        text = rec.get(args.text_field) or ""
-        if not text.strip():
-            skipped += 1
-            continue
+        # Get text from primary field or fallback
+        text = (rec.get(args.text_field) or "").strip()
+        if not text and args.fallback_field:
+            text = (rec.get(args.fallback_field) or "").strip()
+
         vid = rec.get("id") or ""
-        if not vid:
+        if not text or not vid:
             skipped += 1
             continue
+
         ids.append(vid)
-        vecs.append(fake_embed(text, dim=args.dim))
-        embedded += 1
+        texts.append(text)
 
-    if vecs:
-        mat = np.stack(vecs, axis=0)
+    print(f"Loaded {len(texts)} rows, skipped {skipped}")
+
+    if not texts:
+        print("WARNING: No texts to embed. Writing empty output.")
+        mat = np.zeros((0, 1024), dtype="float32")
     else:
-        mat = np.zeros((0, args.dim), dtype="float32")
+        # Batch embedding
+        print(f"Embedding {len(texts)} texts in batches of {args.batch_size}...")
+        all_vecs: list[np.ndarray] = []
 
-    (args.out_dir / "ids.json").write_text(json.dumps(ids, ensure_ascii=False, indent=2), encoding="utf-8")
+        for i in range(0, len(texts), args.batch_size):
+            batch = texts[i:i + args.batch_size]
+            batch_num = i // args.batch_size + 1
+            total_batches = (len(texts) + args.batch_size - 1) // args.batch_size
+            print(f"  Batch {batch_num}/{total_batches} ({len(batch)} texts)...")
+
+            vecs = embedder.embed(batch, sonar_lang=sonar_lang)
+            all_vecs.append(vecs)
+
+        mat = np.vstack(all_vecs)
+
+    # Write outputs
+    print("Writing outputs...")
+
+    (args.out_dir / "ids.json").write_text(
+        json.dumps(ids, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
     np.save(args.out_dir / "vectors.npy", mat)
 
     meta = {
-        "model_id": args.model_id,
-        "dim": args.dim,
+        "model_id": args.encoder,
+        "tokenizer": args.tokenizer,
+        "sonar_lang": sonar_lang,
+        "dim": int(mat.shape[1]) if mat.size else 1024,
         "text_field": args.text_field,
+        "fallback_field": args.fallback_field,
         "created_at": datetime.now(timezone.utc).isoformat(),
-        "source_jsonl": str(args.jsonl),
+        "source_jsonl": str(args.jsonl.resolve()),
         "source_sha256": sha256_file(args.jsonl),
-        "note": "placeholder embedding; replace with real SONAR inference",
+        "batch_size": args.batch_size,
     }
-    (args.out_dir / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    (args.out_dir / "meta.json").write_text(
+        json.dumps(meta, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
 
     coverage = {
-        "embedded": embedded,
+        "embedded": len(ids),
         "skipped": skipped,
-        "total": embedded + skipped,
+        "total": len(ids) + skipped,
     }
-    (args.out_dir / "coverage.json").write_text(json.dumps(coverage, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Embedded={embedded}, skipped={skipped}, dim={args.dim}, out={args.out_dir}")
+    (args.out_dir / "coverage.json").write_text(
+        json.dumps(coverage, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+    print(f"Done! Embedded={len(ids)}, skipped={skipped}, dim={mat.shape[1] if mat.size else 0}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

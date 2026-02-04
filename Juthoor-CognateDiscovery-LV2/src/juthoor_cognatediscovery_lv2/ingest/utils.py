@@ -3,7 +3,6 @@ Lightweight normalization helpers for ingest stubs.
 These are intentionally simple placeholders; replace with full phonology/ORT logic later.
 """
 
-import re
 from typing import Dict, Any, List
 
 VOWELS = set("aeiouAEIOU")
