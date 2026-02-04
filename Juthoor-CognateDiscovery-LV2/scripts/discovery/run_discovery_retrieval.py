@@ -5,6 +5,9 @@ LV3 discovery-first retrieval using:
 
 This script is intended to generate *ranked leads* for human review (LV3).
 It does not attempt LV4-style validation.
+
+Prerequisites:
+    Run `uv pip install -e .` from the monorepo root to install all packages.
 """
 
 from __future__ import annotations
@@ -18,17 +21,25 @@ from pathlib import Path
 from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SRC_DIR = REPO_ROOT / "src"
 
-import sys
-
-sys.path.insert(0, str(SRC_DIR))
-
-from lv3.discovery.embeddings import CanineConfig, CanineEmbedder, SonarConfig, SonarEmbedder  # noqa: E402
-from lv3.discovery.hybrid_scoring import HybridWeights, compute_hybrid  # noqa: E402
-from lv3.discovery.index import FaissIndex, build_flat_ip  # noqa: E402
-from lv3.discovery.jsonl import LexemeRow, read_jsonl_rows, write_jsonl  # noqa: E402
-from lv3.discovery.lang import resolve_sonar_lang  # noqa: E402
+# Use proper package imports (requires: uv pip install -e . from monorepo root)
+try:
+    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
+        CanineConfig,
+        CanineEmbedder,
+        SonarConfig,
+        SonarEmbedder,
+    )
+    from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights, compute_hybrid
+    from juthoor_cognatediscovery_lv2.lv3.discovery.index import FaissIndex, build_flat_ip
+    from juthoor_cognatediscovery_lv2.lv3.discovery.jsonl import LexemeRow, read_jsonl_rows, write_jsonl
+    from juthoor_cognatediscovery_lv2.lv3.discovery.lang import resolve_sonar_lang
+except ImportError as e:
+    raise ImportError(
+        f"Failed to import juthoor_cognatediscovery_lv2 package.\n"
+        f"Please run 'uv pip install -e .' from the monorepo root directory.\n"
+        f"Original error: {e}"
+    ) from e
 
 
 @dataclass(frozen=True)

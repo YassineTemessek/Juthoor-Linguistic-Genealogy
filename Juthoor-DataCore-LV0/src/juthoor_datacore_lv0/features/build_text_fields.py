@@ -69,12 +69,79 @@ def iter_text_fields(rows: Iterable[dict]) -> Iterable[dict]:
         yield rec
 
 
-def main() -> None:
-    raise SystemExit(
-        "This scaffold builds deterministic form_text/meaning_text in-memory. "
-        "Integrate with JSONL reader/writer before use."
+def main() -> int:
+    """
+    CLI for adding form_text and meaning_text fields to JSONL lexeme files.
+
+    Usage:
+        python -m juthoor_datacore_lv0.features.build_text_fields \\
+            input.jsonl output.jsonl --overwrite
+    """
+    import argparse
+    import json
+
+    ap = argparse.ArgumentParser(
+        description="Add form_text and meaning_text fields to LV0 JSONL rows.",
+        epilog="Fields are generated deterministically from existing lemma/translit/ipa/gloss data.",
     )
+    ap.add_argument("input_jsonl", type=Path, help="Input JSONL file.")
+    ap.add_argument("output_jsonl", type=Path, help="Output JSONL file.")
+    ap.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Overwrite existing form_text/meaning_text fields (default: skip rows with existing fields).",
+    )
+    args = ap.parse_args()
+
+    if not args.input_jsonl.exists():
+        print(f"ERROR: Input file not found: {args.input_jsonl}")
+        return 1
+
+    args.output_jsonl.parent.mkdir(parents=True, exist_ok=True)
+
+    processed = 0
+    skipped = 0
+    enriched = 0
+
+    with args.input_jsonl.open("r", encoding="utf-8", errors="replace") as inp, \
+         args.output_jsonl.open("w", encoding="utf-8") as out:
+        for line in inp:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+
+            # Skip if fields exist and not overwriting
+            has_form = bool(rec.get("form_text"))
+            has_meaning = bool(rec.get("meaning_text"))
+            if not args.overwrite and has_form and has_meaning:
+                out.write(json.dumps(rec, ensure_ascii=False) + "\n")
+                skipped += 1
+                continue
+
+            # Build text fields
+            lang = rec.get("language", "")
+            lemma = rec.get("lemma", "")
+            translit = rec.get("translit") or None
+            ipa = rec.get("ipa") or rec.get("ipa_raw") or None
+            gloss = rec.get("gloss_plain") or rec.get("definition") or rec.get("gloss")
+
+            form = build_form_text(language=lang, lemma=lemma, translit=translit, ipa=ipa)
+            meaning, fallback = build_meaning_text(gloss_plain=gloss, lemma=lemma)
+
+            if form:
+                rec["form_text"] = form
+            if meaning:
+                rec["meaning_text"] = meaning
+                rec["meaning_fallback"] = fallback
+                enriched += 1
+
+            out.write(json.dumps(rec, ensure_ascii=False) + "\n")
+            processed += 1
+
+    print(f"Processed: {processed}, Enriched: {enriched}, Skipped (existing): {skipped}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

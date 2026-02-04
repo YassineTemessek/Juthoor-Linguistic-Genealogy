@@ -37,17 +37,21 @@ class QuranLemmasAdapter:
                 lemma_status = rec.get("lemma_status") or "attested"
                 pos_list = ensure_pos_list(rec.get("pos"))
 
-                # ID handling
+                # ID handling - generate stable IDs with proper disambiguation
                 cur_id = rec.get("id") or ""
                 if not cur_id:
-                    base_disambig = seen.get(cur_id, 0)
+                    # Generate base key (with disambiguator=0) to track collision counts
+                    base_key = make_stable_id(lang, stage, source, rec.get("lemma", ""), pos_list, 0)
+                    disambig = seen.get(base_key, 0)
                     while True:
-                        candidate = make_stable_id(lang, stage, source, rec.get("lemma", ""), pos_list, base_disambig)
+                        candidate = make_stable_id(lang, stage, source, rec.get("lemma", ""), pos_list, disambig)
                         if candidate not in seen:
                             cur_id = candidate
                             seen[candidate] = 1
+                            # Track count for this base key for future lookups
+                            seen[base_key] = disambig + 1
                             break
-                        base_disambig += 1
+                        disambig += 1
                 else:
                     seen[cur_id] = seen.get(cur_id, 0) + 1
 
