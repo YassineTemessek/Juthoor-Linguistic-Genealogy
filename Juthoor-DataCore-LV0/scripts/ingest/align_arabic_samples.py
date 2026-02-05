@@ -9,8 +9,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Dict, List, Tuple
-from itertools import product
+from typing import List
 
 def lev(a: str, b: str) -> int:
     if a == b:
