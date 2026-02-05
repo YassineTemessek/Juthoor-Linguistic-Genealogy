@@ -8,7 +8,7 @@ import json
 import argparse
 import re
 from pathlib import Path
-from typing import List, Dict, Any, Optional, Set
+from typing import List, Dict, Any, Optional
 
 # --- Configuration ---
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "output"

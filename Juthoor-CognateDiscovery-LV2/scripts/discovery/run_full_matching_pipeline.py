@@ -7,7 +7,7 @@ import argparse
 import json
 import time
 from pathlib import Path
-from prototype_matcher import DiscoveryScorer, ConceptMapper, load_jsonl, is_arabic
+from prototype_matcher import DiscoveryScorer, ConceptMapper, load_jsonl
 
 # Configuration
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -124,7 +124,7 @@ def run_pipeline(
         print(f"  Found {len(leads_buffer)} leads in this part.")
 
     total_duration = time.time() - start_time
-    print(f"\n=== Pipeline Complete ===")
+    print("\n=== Pipeline Complete ===")
     print(f"Total Time: {total_duration:.2f}s")
     print(f"Total Leads: {total_leads}")
     print(f"Output: {out_path}")

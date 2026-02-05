@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import re
 import unicodedata
-from typing import Iterable, Tuple, List
+from typing import Iterable, List
 
 
 def sha256_file(path: Path) -> str:

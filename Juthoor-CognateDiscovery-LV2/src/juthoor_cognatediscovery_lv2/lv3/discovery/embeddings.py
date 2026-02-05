@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Iterable
 
 
 def _require(module: str, *, install_hint: str) -> None:

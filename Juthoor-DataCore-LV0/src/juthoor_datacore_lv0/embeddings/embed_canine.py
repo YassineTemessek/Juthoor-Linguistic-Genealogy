@@ -22,12 +22,20 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
+import logging
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
 import numpy as np
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logger = logging.getLogger("embed_canine")
 
 # Check for LV2 availability
 _HAS_LV2 = False
@@ -65,17 +73,16 @@ def iter_rows(path: Path) -> Iterable[dict]:
 def main() -> int:
     # Check LV2 availability before parsing args
     if not _HAS_LV2:
-        print(
-            "ERROR: Missing juthoor_cognatediscovery_lv2 package with embeddings support.\n\n"
+        logger.error(
+            "Missing juthoor_cognatediscovery_lv2 package with embeddings support.\n\n"
             "Install with:\n"
             "    pip install juthoor-cognatediscovery-lv2[embeddings]\n\n"
             "Or install from monorepo:\n"
             "    uv pip install -e Juthoor-CognateDiscovery-LV2\n"
-            "    pip install -r Juthoor-CognateDiscovery-LV2/requirements.embeddings.txt\n",
-            file=sys.stderr,
+            "    pip install -r Juthoor-CognateDiscovery-LV2/requirements.embeddings.txt"
         )
         if _LV2_IMPORT_ERROR:
-            print(f"Original error: {_LV2_IMPORT_ERROR}", file=sys.stderr)
+            logger.error("Original error: %s", _LV2_IMPORT_ERROR)
         return 1
 
     ap = argparse.ArgumentParser(
@@ -93,16 +100,16 @@ def main() -> int:
     args = ap.parse_args()
 
     if not args.jsonl.exists():
-        print(f"ERROR: Input file not found: {args.jsonl}", file=sys.stderr)
+        logger.error("Input file not found: %s", args.jsonl)
         return 1
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"CANINE model: {args.model_id}")
-    print(f"Pooling: {args.pooling}")
-    print(f"Device: {args.device}")
-    print(f"Input: {args.jsonl}")
-    print(f"Output: {args.out_dir}")
+    logger.info("CANINE model: %s", args.model_id)
+    logger.info("Pooling: %s", args.pooling)
+    logger.info("Device: %s", args.device)
+    logger.info("Input: %s", args.jsonl)
+    logger.info("Output: %s", args.out_dir)
 
     # Initialize embedder
     config = CanineConfig(model_id=args.model_id, pooling=args.pooling)
@@ -113,7 +120,7 @@ def main() -> int:
     texts: list[str] = []
     skipped = 0
 
-    print("Loading rows...")
+    logger.info("Loading rows...")
     for rec in iter_rows(args.jsonl):
         # Get text from primary field or fallback
         text = (rec.get(args.text_field) or "").strip()
@@ -128,21 +135,21 @@ def main() -> int:
         ids.append(vid)
         texts.append(text)
 
-    print(f"Loaded {len(texts)} rows, skipped {skipped}")
+    logger.info("Loaded %d rows, skipped %d", len(texts), skipped)
 
     if not texts:
-        print("WARNING: No texts to embed. Writing empty output.")
+        logger.warning("No texts to embed. Writing empty output.")
         mat = np.zeros((0, 768), dtype="float32")  # CANINE hidden size
     else:
         # Batch embedding
-        print(f"Embedding {len(texts)} texts in batches of {args.batch_size}...")
+        logger.info("Embedding %d texts in batches of %d...", len(texts), args.batch_size)
         all_vecs: list[np.ndarray] = []
 
         for i in range(0, len(texts), args.batch_size):
             batch = texts[i:i + args.batch_size]
             batch_num = i // args.batch_size + 1
             total_batches = (len(texts) + args.batch_size - 1) // args.batch_size
-            print(f"  Batch {batch_num}/{total_batches} ({len(batch)} texts)...")
+            logger.debug("Batch %d/%d (%d texts)...", batch_num, total_batches, len(batch))
 
             vecs = embedder.embed(batch)
             all_vecs.append(vecs)
@@ -150,7 +157,7 @@ def main() -> int:
         mat = np.vstack(all_vecs)
 
     # Write outputs
-    print("Writing outputs...")
+    logger.info("Writing outputs...")
 
     (args.out_dir / "ids.json").write_text(
         json.dumps(ids, ensure_ascii=False, indent=2),
@@ -185,7 +192,7 @@ def main() -> int:
         encoding="utf-8"
     )
 
-    print(f"Done! Embedded={len(ids)}, skipped={skipped}, dim={mat.shape[1] if mat.size else 0}")
+    logger.info("Done! Embedded=%d, skipped=%d, dim=%d", len(ids), skipped, mat.shape[1] if mat.size else 0)
     return 0
 
 

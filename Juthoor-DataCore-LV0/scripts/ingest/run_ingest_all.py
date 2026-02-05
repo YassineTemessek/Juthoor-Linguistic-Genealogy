@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 import os
 import subprocess
 import sys
@@ -15,6 +16,14 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)-8s | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logger = logging.getLogger("ingest")
 
 INGEST_DIR = Path(__file__).resolve().parent
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -385,7 +394,7 @@ def main() -> None:
     if args.list:
         for step in steps:
             tag_str = ", ".join(sorted(step.tags))
-            print(f"- {step.name} ({tag_str})")
+            logger.info("Step: %s (%s)", step.name, tag_str)
         return
 
     manifest: dict[str, Any] = {
@@ -430,7 +439,7 @@ def main() -> None:
                 break
             continue
 
-        print("Running:", " ".join(str(c) for c in step.cmd))
+        logger.info("Running: %s", " ".join(str(c) for c in step.cmd))
         start = time.time()
         proc = subprocess.run(step.cmd, cwd=str(REPO_ROOT), env=env, check=False)
         dur_s = round(time.time() - start, 3)
@@ -458,7 +467,7 @@ def main() -> None:
         ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         out_path = out_dir / f"ingest_run_{ts}.json"
         out_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-        print("Wrote manifest:", out_path)
+        logger.info("Wrote manifest: %s", out_path)
 
     raise SystemExit(2 if any_failed else 0)
 
