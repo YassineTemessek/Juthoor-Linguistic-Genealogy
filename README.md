@@ -1,4 +1,7 @@
 # Juthoor Linguistic Genealogy 🌳
+
+[![CI](https://github.com/YassineTemessek/Juthoor-Linguistic-Genealogy/actions/workflows/ci.yml/badge.svg)](https://github.com/YassineTemessek/Juthoor-Linguistic-Genealogy/actions/workflows/ci.yml)
+
 ### Tracing the DNA of Human Language
 
 **Juthoor** (Arabic: *Roots*) is a computational linguistics engine designed to decode the genealogical relationships between world languages, with a primary hypothesis centered on the Arabo-Semitic root system as a fundamental "linguistic genome."
@@ -24,20 +27,40 @@ The project is organized into a hierarchical stack where each level builds upon 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.10+
+- Python 3.10+ (3.11 recommended for full ML support)
 - [uv](https://github.com/astral-sh/uv) (Recommended) or standard pip
 
 ### Installation
-
-This project is configured as a Python Workspace. You can install all dependencies for all levels in one command.
 
 ```bash
 # Clone the repository
 git clone https://github.com/YassineTemessek/Juthoor-Linguistic-Genealogy.git
 cd Juthoor-Linguistic-Genealogy
 
-# Create a virtual environment and install (editable mode)
-uv pip install -e .
+# Create a virtual environment (Python 3.11 recommended)
+uv venv .venv --python 3.11
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scripts\activate   # Windows
+
+# Install core packages (editable mode)
+uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-CognateDiscovery-LV2
+
+# Install ML embeddings (platform-specific)
+# Windows - CANINE only (SONAR requires Linux/macOS):
+uv pip install "juthoor-cognatediscovery-lv2[canine]"
+
+# Linux/macOS - Full embeddings (SONAR + CANINE):
+uv pip install "juthoor-cognatediscovery-lv2[embeddings]"
+```
+
+### Running Tests
+
+```bash
+# Run all tests (excluding slow model-loading tests)
+pytest tests/ -v -m "not slow"
+
+# Run with coverage
+pytest tests/ -v --cov=Juthoor-DataCore-LV0/src --cov=Juthoor-CognateDiscovery-LV2/src
 ```
 
 ### Running the Pipeline
@@ -49,9 +72,9 @@ ldc ingest --all
 ```
 
 **2. Discovery (LV2)**
-To run a cross-lingual comparison (e.g., Arabic vs. English):
 ```bash
-python scripts/discovery/run_discovery_retrieval.py \
+# Run a cross-lingual comparison (e.g., Arabic vs. English)
+python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_discovery_retrieval.py \
   --source ara@modern \
   --target eng@modern \
   --models sonar canine
@@ -59,12 +82,31 @@ python scripts/discovery/run_discovery_retrieval.py \
 
 ---
 
+## 🌍 Supported Languages
+
+The discovery engine supports **60+ language codes** including:
+
+| Category | Languages |
+| :--- | :--- |
+| **Modern Semitic** | Arabic (`ara`), Hebrew (`heb`), Amharic (`amh`), Maltese (`mlt`) |
+| **Ancient Semitic** | Akkadian (`akk`), Phoenician (`phn`), Punic (`xpu`), Ugaritic (`uga`), Ge'ez (`gez`) |
+| **Aramaic Variants** | Syriac (`syr`, `syc`), Imperial Aramaic (`arc`), Jewish Palestinian (`jpa`), Talmudic (`tmr`) |
+| **Indo-European** | English (`eng`), Latin (`lat`), Greek (`ell`, `grc`), German (`deu`), French (`fra`), Spanish (`spa`) |
+| **Quranic** | Quranic Arabic (`ar-qur`, `ara-qur`) |
+
+Ancient languages are mapped to their closest living relative for embedding (e.g., Akkadian → Arabic, Phoenician → Hebrew).
+
+---
+
 ## 🛠️ Technologies & Methodology
 
-*   **Graph Theory:** Modeling language roots as connected graph networks.
-*   **Vector Embeddings:** Using **SONAR** text embeddings for language-agnostic semantic retrieval.
-*   **Morphological Analysis:** Custom algorithms for decomposing Semitic roots.
-*   **Hybrid Scoring:** A weighted scoring system combining orthographic (spelling), phonetic (sound), and semantic (meaning) similarity.
+| Technology | Description |
+| :--- | :--- |
+| **[Meta SONAR](https://github.com/facebookresearch/SONAR)** | Multilingual semantic embeddings for meaning-based similarity (Linux/macOS only) |
+| **[Google CANINE](https://huggingface.co/google/canine-c)** | Character-level transformer for form-based similarity (cross-platform) |
+| **[FAISS](https://github.com/facebookresearch/faiss)** | Facebook's vector similarity search for fast nearest-neighbor retrieval |
+| **Hybrid Scoring** | Weighted combination of orthographic, phonetic, skeletal, and semantic similarity |
+| **Graph Theory** | Modeling language roots as connected graph networks |
 
 ---
 
