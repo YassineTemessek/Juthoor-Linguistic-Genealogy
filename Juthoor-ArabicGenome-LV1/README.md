@@ -9,7 +9,7 @@ Core idea:
 
 - Arabic roots are often 3 (or 4) radicals.
 - LV2 treats many 3-letter roots as variations around a deeper **binary nucleus** (first 2 “core” radicals), with later letters shaping nuance.
-- LV2 builds a wide-coverage Arabic lexeme/root table, then **regroups words into binary-root-centered clusters** using methods that fit the purpose (heuristics, SONAR/CANINE-style embeddings, and graph methods).
+- LV2 builds a wide-coverage Arabic lexeme/root table, then **regroups words into binary-root-centered clusters** using methods that fit the purpose (heuristics, BGE-M3/ByT5 embeddings, and graph methods).
 
 
 ## Role in the stack ??

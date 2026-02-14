@@ -1,4 +1,4 @@
-# Optional LV3 discovery dependencies (SONAR + CANINE + ANN indexing).
+# Optional LV3 discovery dependencies (BGE-M3 + ByT5 + ANN indexing).
 #
 # Install (recommended in a venv):
 #   python -m pip install -r requirements.embeddings.txt
@@ -6,7 +6,8 @@
 # Notes:
 # - This file is intentionally separate from `requirements.txt` so CI and basic
 #   ingest/validation stay lightweight.
-# - SONAR will download model weights on first run (see `scripts/discovery/run_discovery_retrieval.py`).
+# - BGE-M3 will download model weights on first run (~1.7 GB).
+# - ByT5-small will download model weights on first run (~300 MB).
 
 # Core numeric stack
 numpy>=2.2,<3
@@ -14,10 +15,9 @@ numpy>=2.2,<3
 # ANN index (cosine / inner product)
 faiss-cpu>=1.8,<2
 
-# CANINE (character-level embeddings)
+# ByT5 form embeddings (character-level, tokenizer-free)
 torch>=2.2,<3
 transformers>=4.45,<5
 
-# Meta SONAR (sentence embeddings)
-sonar>=0.4,<1
-fairseq2>=0.5,<1
+# BGE-M3 semantic embeddings (multilingual, 100+ languages)
+FlagEmbedding>=1.3

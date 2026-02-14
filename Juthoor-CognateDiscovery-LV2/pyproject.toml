@@ -17,19 +17,18 @@ ml-core = [
     "torch>=2.0,<3",
     "transformers>=4.40,<5",
 ]
-# CANINE embeddings only (works on Windows/Linux/macOS)
-canine = [
+# BGE-M3 semantic embeddings (cross-platform)
+semantic = [
+    "juthoor-cognatediscovery-lv2[ml-core]",
+    "FlagEmbedding>=1.3",
+]
+# ByT5 form embeddings (cross-platform, uses transformers from ml-core)
+form = [
     "juthoor-cognatediscovery-lv2[ml-core]",
 ]
-# SONAR embeddings (Linux/macOS only - fairseq2 has no Windows wheels)
-sonar = [
-    "juthoor-cognatediscovery-lv2[ml-core]",
-    "sonar-space>=0.2",
-    "fairseq2>=0.3",
-]
-# Full embeddings - use on Linux/macOS only
+# Full embeddings (cross-platform)
 embeddings = [
-    "juthoor-cognatediscovery-lv2[sonar]",
+    "juthoor-cognatediscovery-lv2[semantic,form]",
 ]
 viz = [
     "matplotlib>=3.8",

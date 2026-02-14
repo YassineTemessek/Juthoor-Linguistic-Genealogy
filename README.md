@@ -1,4 +1,4 @@
-# Juthoor Linguistic Genealogy 🌳
+# Juthoor Linguistic Genealogy
 
 [![CI](https://github.com/YassineTemessek/Juthoor-Linguistic-Genealogy/actions/workflows/ci.yml/badge.svg)](https://github.com/YassineTemessek/Juthoor-Linguistic-Genealogy/actions/workflows/ci.yml)
 
@@ -6,29 +6,27 @@
 
 **Juthoor** (Arabic: *Roots*) is a computational linguistics engine designed to decode the genealogical relationships between world languages, with a primary hypothesis centered on the Arabo-Semitic root system as a fundamental "linguistic genome."
 
-This monorepo consolidates a multi-layered research stack—from raw data ingestion to theoretical synthesis—into a unified Python workspace.
+This monorepo consolidates a multi-layered research stack -- from raw data ingestion to theoretical synthesis -- into a unified Python workspace.
 
 ---
 
-## 🏗️ Architecture & Layers
-
-The project is organized into a hierarchical stack where each level builds upon the intelligence of the previous one.
+## Architecture & Layers
 
 | Level | Module | Description |
 | :--- | :--- | :--- |
-| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** A robust data engine that ingests, normalizes, and canonizes lexical data from diverse sources (Wiktionary, Lane, Taj al-Arus, Khorsi). It serves as the single source of truth. |
-| **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | **The Genome.** Decodes the **biconsonantal (2-letter) root system**. It maps the "atomic meanings" of Arabic sounds and generates the binary root graph. |
-| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** An AI-powered discovery engine using **Meta SONAR** (semantic search) and **Google CANINE** (character-level matching) to find and rank cross-lingual cognates (English, Greek, Latin vs. Arabic). |
-| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | **The Theory.** The synthesis layer. It tests genealogical hypotheses, maps global language corridors, and reconstructs the theoretical "Origin" model. |
-| **App** | **[Quran-Corpus-Analysis](./Quran-Corpus-Analysis)** | **The Application.** A specialized semantic analysis suite focused on the Quranic corpus, utilizing the engines above to decode meaning through root-based associations. |
+| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** A robust data engine that ingests, normalizes, and canonizes lexical data from diverse sources (Wiktionary, Lane, Taj al-Arus, Khorsi). Single source of truth. |
+| **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | **The Genome.** Decodes the **biconsonantal (2-letter) root system**. Maps the "atomic meanings" of Arabic sounds and generates the binary root graph. |
+| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** AI-powered discovery engine using **BGE-M3** (semantic search) and **ByT5** (character-level matching) to find and rank cross-lingual cognates (English, Greek, Latin vs. Arabic). |
+| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | **The Theory.** Synthesis layer testing genealogical hypotheses, mapping global language corridors, and reconstructing the "Origin" model. |
+| **App** | **[Quran-Corpus-Analysis](./Quran-Corpus-Analysis)** | **The Application.** Semantic analysis suite for the Quranic corpus using root-based associations. |
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Python 3.10+ (3.11 recommended for full ML support)
-- [uv](https://github.com/astral-sh/uv) (Recommended) or standard pip
+- Python 3.10+ (3.11 recommended)
+- [uv](https://github.com/astral-sh/uv) (recommended) or standard pip
 
 ### Installation
 
@@ -37,7 +35,7 @@ The project is organized into a hierarchical stack where each level builds upon 
 git clone https://github.com/YassineTemessek/Juthoor-Linguistic-Genealogy.git
 cd Juthoor-Linguistic-Genealogy
 
-# Create a virtual environment (Python 3.11 recommended)
+# Create a virtual environment
 uv venv .venv --python 3.11
 source .venv/bin/activate  # Linux/macOS
 # .venv\Scripts\activate   # Windows
@@ -45,11 +43,7 @@ source .venv/bin/activate  # Linux/macOS
 # Install core packages (editable mode)
 uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-CognateDiscovery-LV2
 
-# Install ML embeddings (platform-specific)
-# Windows - CANINE only (SONAR requires Linux/macOS):
-uv pip install "juthoor-cognatediscovery-lv2[canine]"
-
-# Linux/macOS - Full embeddings (SONAR + CANINE):
+# Install ML embeddings (cross-platform)
 uv pip install "juthoor-cognatediscovery-lv2[embeddings]"
 ```
 
@@ -67,22 +61,20 @@ pytest tests/ -v --cov=Juthoor-DataCore-LV0/src --cov=Juthoor-CognateDiscovery-L
 
 **1. Data Ingestion (LV0)**
 ```bash
-# Fetch and canonicalize the core datasets
 ldc ingest --all
 ```
 
 **2. Discovery (LV2)**
 ```bash
-# Run a cross-lingual comparison (e.g., Arabic vs. English)
 python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_discovery_retrieval.py \
-  --source ara@modern \
-  --target eng@modern \
+  --source ara@modern="data/processed/arabic.jsonl" \
+  --target eng@modern="data/processed/english.jsonl" \
   --models sonar canine
 ```
 
 ---
 
-## 🌍 Supported Languages
+## Supported Languages
 
 The discovery engine supports **60+ language codes** including:
 
@@ -94,23 +86,21 @@ The discovery engine supports **60+ language codes** including:
 | **Indo-European** | English (`eng`), Latin (`lat`), Greek (`ell`, `grc`), German (`deu`), French (`fra`), Spanish (`spa`) |
 | **Quranic** | Quranic Arabic (`ar-qur`, `ara-qur`) |
 
-Ancient languages are mapped to their closest living relative for embedding (e.g., Akkadian → Arabic, Phoenician → Hebrew).
-
 ---
 
-## 🛠️ Technologies & Methodology
+## Technologies & Methodology
 
 | Technology | Description |
 | :--- | :--- |
-| **[Meta SONAR](https://github.com/facebookresearch/SONAR)** | Multilingual semantic embeddings for meaning-based similarity (Linux/macOS only) |
-| **[Google CANINE](https://huggingface.co/google/canine-c)** | Character-level transformer for form-based similarity (cross-platform) |
+| **[BGE-M3](https://huggingface.co/BAAI/bge-m3)** | Multilingual semantic embeddings (100+ languages, cross-platform, 1024-dim) |
+| **[ByT5](https://huggingface.co/google/byt5-small)** | Byte-level tokenizer-free model for character/form-based similarity |
 | **[FAISS](https://github.com/facebookresearch/faiss)** | Facebook's vector similarity search for fast nearest-neighbor retrieval |
 | **Hybrid Scoring** | Weighted combination of orthographic, phonetic, skeletal, and semantic similarity |
 | **Graph Theory** | Modeling language roots as connected graph networks |
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - **[Project Overview](./docs/PROJECT_OVERVIEW.md)**: Detailed breakdown of the workspace and logic.
 - **[Data Flow](./docs/RAW_DATA_FLOW.md)**: How data moves from raw resources to canonical JSONL.
@@ -118,7 +108,7 @@ Ancient languages are mapped to their closest living relative for embedding (e.g
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 

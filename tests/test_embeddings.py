@@ -67,139 +67,167 @@ class TestL2Normalize:
         np.testing.assert_array_almost_equal(norms, np.ones(100), decimal=5)
 
 
-class TestSonarConfig:
-    """Test SonarConfig dataclass."""
+class TestBgeM3Config:
+    """Test BgeM3Config dataclass."""
 
     def test_default_config(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarConfig
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Config
 
-        cfg = SonarConfig()
-        assert cfg.encoder == "text_sonar_basic_encoder"
-        assert cfg.tokenizer == "text_sonar_basic_encoder"
+        cfg = BgeM3Config()
+        assert cfg.model_id == "BAAI/bge-m3"
+        assert cfg.use_fp16 is True
+        assert cfg.max_length == 8192
 
     def test_custom_config(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarConfig
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Config
 
-        cfg = SonarConfig(encoder="custom_encoder", tokenizer="custom_tokenizer")
-        assert cfg.encoder == "custom_encoder"
-        assert cfg.tokenizer == "custom_tokenizer"
+        cfg = BgeM3Config(model_id="custom/model", use_fp16=False, max_length=512)
+        assert cfg.model_id == "custom/model"
+        assert cfg.use_fp16 is False
+        assert cfg.max_length == 512
 
     def test_config_immutable(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarConfig
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Config
 
-        cfg = SonarConfig()
+        cfg = BgeM3Config()
         with pytest.raises(AttributeError):
-            cfg.encoder = "modified"
+            cfg.model_id = "modified"
 
 
-class TestCanineConfig:
-    """Test CanineConfig dataclass."""
+class TestByT5Config:
+    """Test ByT5Config dataclass."""
 
     def test_default_config(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineConfig
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Config
 
-        cfg = CanineConfig()
-        assert cfg.model_id == "google/canine-c"
+        cfg = ByT5Config()
+        assert cfg.model_id == "google/byt5-small"
         assert cfg.pooling == "mean"
 
     def test_cls_pooling(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineConfig
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Config
 
-        cfg = CanineConfig(pooling="cls")
+        cfg = ByT5Config(pooling="cls")
         assert cfg.pooling == "cls"
 
     def test_custom_model(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineConfig
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Config
 
-        cfg = CanineConfig(model_id="google/canine-s")
-        assert cfg.model_id == "google/canine-s"
+        cfg = ByT5Config(model_id="google/byt5-base")
+        assert cfg.model_id == "google/byt5-base"
 
 
-class TestSonarEmbedderInit:
-    """Test SonarEmbedder initialization (no model loading)."""
+class TestBgeM3EmbedderInit:
+    """Test BgeM3Embedder initialization (no model loading)."""
 
     def test_init_no_load(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarEmbedder
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Embedder
 
         # Should not load model on init (lazy loading)
-        embedder = SonarEmbedder()
-        assert embedder._pipeline is None
+        embedder = BgeM3Embedder()
+        assert embedder._model is None
 
     def test_init_custom_config(self):
         from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
-            SonarConfig,
-            SonarEmbedder,
+            BgeM3Config,
+            BgeM3Embedder,
         )
 
-        cfg = SonarConfig(encoder="custom")
-        embedder = SonarEmbedder(config=cfg)
-        assert embedder.config.encoder == "custom"
+        cfg = BgeM3Config(model_id="custom/model")
+        embedder = BgeM3Embedder(config=cfg)
+        assert embedder.config.model_id == "custom/model"
 
     def test_init_default_config(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarEmbedder
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Embedder
 
-        embedder = SonarEmbedder()
+        embedder = BgeM3Embedder()
         assert embedder.config is not None
-        assert embedder.config.encoder == "text_sonar_basic_encoder"
+        assert embedder.config.model_id == "BAAI/bge-m3"
 
 
-class TestCanineEmbedderInit:
-    """Test CanineEmbedder initialization (no model loading)."""
+class TestByT5EmbedderInit:
+    """Test ByT5Embedder initialization (no model loading)."""
 
     def test_init_no_load(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineEmbedder
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Embedder
 
-        embedder = CanineEmbedder()
+        embedder = ByT5Embedder()
         assert embedder._model is None
         assert embedder._tokenizer is None
 
     def test_device_setting(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineEmbedder
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Embedder
 
-        embedder = CanineEmbedder(device="cuda")
+        embedder = ByT5Embedder(device="cuda")
         assert embedder.device == "cuda"
 
     def test_default_device_cpu(self):
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineEmbedder
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Embedder
 
-        embedder = CanineEmbedder()
+        embedder = ByT5Embedder()
         assert embedder.device == "cpu"
 
     def test_custom_config(self):
         from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
-            CanineConfig,
-            CanineEmbedder,
+            ByT5Config,
+            ByT5Embedder,
         )
 
-        cfg = CanineConfig(model_id="google/canine-s", pooling="cls")
-        embedder = CanineEmbedder(config=cfg)
-        assert embedder.config.model_id == "google/canine-s"
+        cfg = ByT5Config(model_id="google/byt5-base", pooling="cls")
+        embedder = ByT5Embedder(config=cfg)
+        assert embedder.config.model_id == "google/byt5-base"
         assert embedder.config.pooling == "cls"
 
 
+class TestBackwardCompatAliases:
+    """Test that deprecated aliases still work."""
+
+    def test_sonar_aliases(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
+            SonarConfig,
+            SonarEmbedder,
+            BgeM3Config,
+            BgeM3Embedder,
+        )
+
+        assert SonarConfig is BgeM3Config
+        assert SonarEmbedder is BgeM3Embedder
+
+    def test_canine_aliases(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
+            CanineConfig,
+            CanineEmbedder,
+            ByT5Config,
+            ByT5Embedder,
+        )
+
+        assert CanineConfig is ByT5Config
+        assert CanineEmbedder is ByT5Embedder
+
+
 @pytest.mark.slow
-class TestSonarEmbedderIntegration:
-    """Integration tests for SONAR embedder (requires model download)."""
+class TestBgeM3EmbedderIntegration:
+    """Integration tests for BGE-M3 embedder (requires model download)."""
 
     def test_embed_arabic(self):
-        pytest.importorskip("sonar")
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarEmbedder
+        pytest.importorskip("FlagEmbedding")
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Embedder
 
-        embedder = SonarEmbedder()
+        embedder = BgeM3Embedder()
         texts = ["كتاب", "قلم"]
-        vecs = embedder.embed(texts, sonar_lang="arb_Arab")
+        vecs = embedder.embed(texts)
 
         assert vecs.shape == (2, 1024)
         norms = np.linalg.norm(vecs, axis=1)
         np.testing.assert_array_almost_equal(norms, [1.0, 1.0], decimal=5)
 
     def test_embed_english(self):
-        pytest.importorskip("sonar")
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarEmbedder
+        pytest.importorskip("FlagEmbedding")
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Embedder
 
-        embedder = SonarEmbedder()
+        embedder = BgeM3Embedder()
         texts = ["book", "pen", "house"]
-        vecs = embedder.embed(texts, sonar_lang="eng_Latn")
+        vecs = embedder.embed(texts)
 
         assert vecs.shape == (3, 1024)
         norms = np.linalg.norm(vecs, axis=1)
@@ -207,20 +235,20 @@ class TestSonarEmbedderIntegration:
 
 
 @pytest.mark.slow
-class TestCanineEmbedderIntegration:
-    """Integration tests for CANINE embedder (requires model download)."""
+class TestByT5EmbedderIntegration:
+    """Integration tests for ByT5 embedder (requires model download)."""
 
     def test_embed_multilingual(self):
         pytest.importorskip("transformers")
         pytest.importorskip("torch")
-        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineEmbedder
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Embedder
 
-        embedder = CanineEmbedder(device="cpu")
+        embedder = ByT5Embedder(device="cpu")
         texts = ["hello", "مرحبا", "שלום"]
         vecs = embedder.embed(texts)
 
         assert vecs.shape[0] == 3
-        assert vecs.shape[1] == 768  # CANINE hidden size
+        assert vecs.shape[1] == 1472  # ByT5-small hidden size
 
         norms = np.linalg.norm(vecs, axis=1)
         np.testing.assert_array_almost_equal(norms, np.ones(3), decimal=5)
@@ -229,16 +257,16 @@ class TestCanineEmbedderIntegration:
         pytest.importorskip("transformers")
         pytest.importorskip("torch")
         from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
-            CanineConfig,
-            CanineEmbedder,
+            ByT5Config,
+            ByT5Embedder,
         )
 
-        cfg = CanineConfig(pooling="cls")
-        embedder = CanineEmbedder(config=cfg, device="cpu")
+        cfg = ByT5Config(pooling="cls")
+        embedder = ByT5Embedder(config=cfg, device="cpu")
         texts = ["test"]
         vecs = embedder.embed(texts)
 
-        assert vecs.shape == (1, 768)
+        assert vecs.shape == (1, 1472)
 
 
 if __name__ == "__main__":
