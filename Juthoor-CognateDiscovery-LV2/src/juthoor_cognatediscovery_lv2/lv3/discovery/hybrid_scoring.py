@@ -60,8 +60,8 @@ def _first_nonempty(*values: Any) -> str:
 
 @dataclass(frozen=True)
 class HybridWeights:
-    sonar: float = 0.40
-    canine: float = 0.20
+    sonar: float = 0.40   # semantic model weight (BGE-M3, formerly SONAR)
+    canine: float = 0.20  # form model weight (ByT5, formerly CANINE)
     orthography: float = 0.15
     sound: float = 0.15
     skeleton: float = 0.10

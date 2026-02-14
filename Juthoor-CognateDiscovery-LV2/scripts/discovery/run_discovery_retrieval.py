@@ -1,7 +1,7 @@
 """
 LV3 discovery-first retrieval using:
-- Meta SONAR for multilingual semantic similarity (raw script)
-- CANINE for multilingual form similarity (raw Unicode)
+- BGE-M3 for multilingual semantic similarity (language-agnostic)
+- ByT5 for multilingual form similarity (byte-level, tokenizer-free)
 
 This script is intended to generate *ranked leads* for human review (LV3).
 It does not attempt LV4-style validation.
@@ -25,15 +25,14 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 # Use proper package imports (requires: uv pip install -e . from monorepo root)
 try:
     from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
-        CanineConfig,
-        CanineEmbedder,
-        SonarConfig,
-        SonarEmbedder,
+        BgeM3Config,
+        BgeM3Embedder,
+        ByT5Config,
+        ByT5Embedder,
     )
     from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights, compute_hybrid
     from juthoor_cognatediscovery_lv2.lv3.discovery.index import FaissIndex, build_flat_ip
     from juthoor_cognatediscovery_lv2.lv3.discovery.jsonl import LexemeRow, read_jsonl_rows, write_jsonl
-    from juthoor_cognatediscovery_lv2.lv3.discovery.lang import resolve_sonar_lang
 except ImportError as e:
     raise ImportError(
         f"Failed to import juthoor_cognatediscovery_lv2 package.\n"
@@ -47,7 +46,6 @@ class CorpusSpec:
     lang: str
     stage: str
     path: Path
-    sonar_lang: str | None = None
 
     @property
     def label(self) -> str:
@@ -56,20 +54,19 @@ class CorpusSpec:
 
 
 def parse_spec(value: str) -> CorpusSpec:
-    # Format: <lang>[@<stage>][@<sonar_lang>]=<path>
+    # Format: <lang>[@<stage>]=<path>
     # Examples:
     # - ara@modern=data/processed/arabic/quran_lemmas_enriched.jsonl
-    # - eng@old@eng_Latn=data/processed/english/english_ipa_merged_pos.jsonl
+    # - eng@old=data/processed/english/english_ipa_merged_pos.jsonl
     if "=" not in value:
-        raise ValueError(f"Invalid spec {value!r}. Expected <lang>[@<stage>][@<sonar_lang>]=<path>.")
+        raise ValueError(f"Invalid spec {value!r}. Expected <lang>[@<stage>]=<path>.")
     left, right = value.split("=", 1)
     parts = [p for p in left.split("@") if p != ""]
     if not parts:
         raise ValueError(f"Invalid spec {value!r}: missing <lang>.")
     lang = parts[0]
     stage = parts[1] if len(parts) >= 2 else "unknown"
-    sonar_lang = parts[2] if len(parts) >= 3 else None
-    return CorpusSpec(lang=lang, stage=stage, path=Path(right), sonar_lang=sonar_lang)
+    return CorpusSpec(lang=lang, stage=stage, path=Path(right))
 
 
 def _safe_text(text: str) -> str:
@@ -122,8 +119,8 @@ def embed_corpus(
     rows: list[LexemeRow],
     limit: int,
     device: str,
-    sonar_cfg: SonarConfig,
-    canine_cfg: CanineConfig,
+    semantic_cfg: BgeM3Config,
+    form_cfg: ByT5Config,
     rebuild_cache: bool,
 ):
     vectors_path, rows_path, _, _ = cache_paths(model=model, spec=spec)
@@ -137,11 +134,10 @@ def embed_corpus(
         t = _safe_text(r.lemma)
         texts.append(t if t else r.lexeme_id)
     if model == "sonar":
-        embedder = SonarEmbedder(config=sonar_cfg)
-        sonar_lang = resolve_sonar_lang(spec.lang, spec.sonar_lang)
-        vecs = embedder.embed(texts, sonar_lang=sonar_lang)
+        embedder = BgeM3Embedder(config=semantic_cfg)
+        vecs = embedder.embed(texts)
     elif model == "canine":
-        embedder = CanineEmbedder(config=canine_cfg, device=device)
+        embedder = ByT5Embedder(config=form_cfg, device=device)
         vecs = embedder.embed(texts)
     else:
         raise ValueError(f"Unknown model {model!r}.")
@@ -194,10 +190,10 @@ def main() -> int:
     parser.add_argument("--device", type=str, default=os.environ.get("LV3_DEVICE", "cpu"))
     parser.add_argument("--rebuild-cache", action="store_true", help="Recompute embeddings even if cached.")
     parser.add_argument("--rebuild-index", action="store_true", help="Rebuild FAISS indexes even if cached.")
-    parser.add_argument("--sonar-encoder", type=str, default="text_sonar_basic_encoder")
-    parser.add_argument("--sonar-tokenizer", type=str, default="text_sonar_basic_encoder")
-    parser.add_argument("--canine-model", type=str, default="google/canine-c")
-    parser.add_argument("--canine-pooling", type=str, default="mean", choices=["mean", "cls"])
+    parser.add_argument("--semantic-model", type=str, default="BAAI/bge-m3", help="BGE-M3 model ID.")
+    parser.add_argument("--semantic-max-length", type=int, default=8192, help="Max token length for BGE-M3.")
+    parser.add_argument("--form-model", type=str, default="google/byt5-small", help="ByT5 model ID.")
+    parser.add_argument("--form-pooling", type=str, default="mean", choices=["mean", "cls"])
     parser.add_argument("--no-hybrid", action="store_true", help="Disable heuristic scoring after retrieval.")
     parser.add_argument("--w-sonar", type=float, default=HybridWeights.sonar)
     parser.add_argument("--w-canine", type=float, default=HybridWeights.canine)
@@ -215,8 +211,8 @@ def main() -> int:
     sources = [parse_spec(s) for s in args.source]
     targets = [parse_spec(t) for t in args.target]
 
-    sonar_cfg = SonarConfig(encoder=args.sonar_encoder, tokenizer=args.sonar_tokenizer)
-    canine_cfg = CanineConfig(model_id=args.canine_model, pooling=args.canine_pooling)
+    semantic_cfg = BgeM3Config(model_id=args.semantic_model, max_length=args.semantic_max_length)
+    form_cfg = ByT5Config(model_id=args.form_model, pooling=args.form_pooling)
     hybrid_weights = HybridWeights(
         sonar=float(args.w_sonar),
         canine=float(args.w_canine),
@@ -240,8 +236,8 @@ def main() -> int:
                 rows=rows,
                 limit=args.limit,
                 device=args.device,
-                sonar_cfg=sonar_cfg,
-                canine_cfg=canine_cfg,
+                semantic_cfg=semantic_cfg,
+                form_cfg=form_cfg,
                 rebuild_cache=args.rebuild_cache,
             )
             index = build_or_load_index(model=model, spec=spec, vectors=vecs, rebuild_index=args.rebuild_index)

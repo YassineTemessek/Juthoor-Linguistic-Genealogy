@@ -1,18 +1,20 @@
 """
-SONAR Embedding CLI - Batch embedding generation using LV2 SonarEmbedder.
+Semantic Embedding CLI - Batch embedding generation using LV2 BgeM3Embedder.
 
-This script provides a command-line interface for generating SONAR embeddings
-from JSONL files. It delegates to the production SonarEmbedder in LV2.
+This script provides a command-line interface for generating BGE-M3 semantic
+embeddings from JSONL files. It delegates to the production BgeM3Embedder in LV2.
+
+BGE-M3 is language-agnostic (no language code required) and supports 100+ languages.
 
 Prerequisites:
     pip install juthoor-cognatediscovery-lv2[embeddings]
 
 For direct API usage, import from LV2:
-    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarEmbedder
+    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Embedder
 
 Usage:
     python -m juthoor_datacore_lv0.embeddings.embed_sonar \\
-        input.jsonl output_dir/ --lang ara --batch-size 32
+        input.jsonl output_dir/ --batch-size 32
 """
 
 from __future__ import annotations
@@ -32,15 +34,14 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
-logger = logging.getLogger("embed_sonar")
+logger = logging.getLogger("embed_semantic")
 
 # Check for LV2 availability
 _HAS_LV2 = False
 _LV2_IMPORT_ERROR = None
 
 try:
-    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import SonarEmbedder, SonarConfig
-    from juthoor_cognatediscovery_lv2.lv3.discovery.lang import resolve_sonar_lang
+    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Embedder, BgeM3Config
     _HAS_LV2 = True
 except ImportError as e:
     _LV2_IMPORT_ERROR = e
@@ -84,18 +85,16 @@ def main() -> int:
         return 1
 
     ap = argparse.ArgumentParser(
-        description="Generate SONAR semantic embeddings for JSONL lexeme files.",
+        description="Generate BGE-M3 semantic embeddings for JSONL lexeme files.",
         epilog="Requires: pip install juthoor-cognatediscovery-lv2[embeddings]",
     )
     ap.add_argument("jsonl", type=Path, help="Input JSONL file with meaning_text or lemma fields.")
     ap.add_argument("out_dir", type=Path, help="Output directory for vectors.npy, ids.json, meta.json, coverage.json.")
-    ap.add_argument("--lang", type=str, required=True, help="Language code (e.g., ara, eng, heb).")
-    ap.add_argument("--sonar-lang", type=str, default=None, help="Override SONAR language code (e.g., arb_Arab).")
     ap.add_argument("--text-field", default="meaning_text", help="Field to embed (default: meaning_text).")
     ap.add_argument("--fallback-field", default="lemma", help="Fallback field if text-field is empty (default: lemma).")
     ap.add_argument("--batch-size", type=int, default=32, help="Batch size for embedding (default: 32).")
-    ap.add_argument("--encoder", default="text_sonar_basic_encoder", help="SONAR encoder model.")
-    ap.add_argument("--tokenizer", default="text_sonar_basic_encoder", help="SONAR tokenizer model.")
+    ap.add_argument("--model-id", default="BAAI/bge-m3", help="BGE-M3 model from HuggingFace.")
+    ap.add_argument("--max-length", type=int, default=8192, help="Max token length (default: 8192).")
     args = ap.parse_args()
 
     if not args.jsonl.exists():
@@ -104,20 +103,13 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
-    # Resolve SONAR language code
-    try:
-        sonar_lang = resolve_sonar_lang(args.lang, args.sonar_lang)
-    except ValueError as e:
-        logger.error("%s", e)
-        return 1
-
-    logger.info("SONAR language: %s", sonar_lang)
+    logger.info("Model: %s", args.model_id)
     logger.info("Input: %s", args.jsonl)
     logger.info("Output: %s", args.out_dir)
 
     # Initialize embedder
-    config = SonarConfig(encoder=args.encoder, tokenizer=args.tokenizer)
-    embedder = SonarEmbedder(config=config)
+    config = BgeM3Config(model_id=args.model_id, max_length=args.max_length)
+    embedder = BgeM3Embedder(config=config)
 
     # Collect texts and IDs
     ids: list[str] = []
@@ -155,7 +147,7 @@ def main() -> int:
             total_batches = (len(texts) + args.batch_size - 1) // args.batch_size
             logger.debug("Batch %d/%d (%d texts)...", batch_num, total_batches, len(batch))
 
-            vecs = embedder.embed(batch, sonar_lang=sonar_lang)
+            vecs = embedder.embed(batch)
             all_vecs.append(vecs)
 
         mat = np.vstack(all_vecs)
@@ -170,9 +162,7 @@ def main() -> int:
     np.save(args.out_dir / "vectors.npy", mat)
 
     meta = {
-        "model_id": args.encoder,
-        "tokenizer": args.tokenizer,
-        "sonar_lang": sonar_lang,
+        "model_id": args.model_id,
         "dim": int(mat.shape[1]) if mat.size else 1024,
         "text_field": args.text_field,
         "fallback_field": args.fallback_field,

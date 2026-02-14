@@ -1,17 +1,17 @@
 """
-CANINE Embedding CLI - Batch embedding generation using LV2 CanineEmbedder.
+Form Embedding CLI - Batch embedding generation using LV2 ByT5Embedder.
 
-This script provides a command-line interface for generating CANINE form
-embeddings from JSONL files. It delegates to the production CanineEmbedder in LV2.
+This script provides a command-line interface for generating ByT5 form
+embeddings from JSONL files. It delegates to the production ByT5Embedder in LV2.
 
-CANINE is a character-level transformer that can process any Unicode text without
-a fixed vocabulary, making it ideal for multilingual form-based similarity.
+ByT5 is a byte-level transformer that processes raw bytes without tokenization,
+making it ideal for multilingual form-based similarity across scripts.
 
 Prerequisites:
     pip install juthoor-cognatediscovery-lv2[embeddings]
 
 For direct API usage, import from LV2:
-    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineEmbedder
+    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Embedder
 
 Usage:
     python -m juthoor_datacore_lv0.embeddings.embed_canine \\
@@ -35,14 +35,14 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
-logger = logging.getLogger("embed_canine")
+logger = logging.getLogger("embed_form")
 
 # Check for LV2 availability
 _HAS_LV2 = False
 _LV2_IMPORT_ERROR = None
 
 try:
-    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import CanineEmbedder, CanineConfig
+    from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import ByT5Embedder, ByT5Config
     _HAS_LV2 = True
 except ImportError as e:
     _LV2_IMPORT_ERROR = e
@@ -86,7 +86,7 @@ def main() -> int:
         return 1
 
     ap = argparse.ArgumentParser(
-        description="Generate CANINE character-level form embeddings for JSONL lexeme files.",
+        description="Generate ByT5 byte-level form embeddings for JSONL lexeme files.",
         epilog="Requires: pip install juthoor-cognatediscovery-lv2[embeddings]",
     )
     ap.add_argument("jsonl", type=Path, help="Input JSONL file with form_text or lemma fields.")
@@ -95,7 +95,7 @@ def main() -> int:
     ap.add_argument("--fallback-field", default="lemma", help="Fallback field if text-field is empty (default: lemma).")
     ap.add_argument("--batch-size", type=int, default=32, help="Batch size for embedding (default: 32).")
     ap.add_argument("--device", default="cpu", help="Device for inference: cpu or cuda (default: cpu).")
-    ap.add_argument("--model-id", default="google/canine-c", help="CANINE model from HuggingFace.")
+    ap.add_argument("--model-id", default="google/byt5-small", help="ByT5 model from HuggingFace.")
     ap.add_argument("--pooling", default="mean", choices=["mean", "cls"], help="Pooling strategy (default: mean).")
     args = ap.parse_args()
 
@@ -105,15 +105,15 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
-    logger.info("CANINE model: %s", args.model_id)
+    logger.info("ByT5 model: %s", args.model_id)
     logger.info("Pooling: %s", args.pooling)
     logger.info("Device: %s", args.device)
     logger.info("Input: %s", args.jsonl)
     logger.info("Output: %s", args.out_dir)
 
     # Initialize embedder
-    config = CanineConfig(model_id=args.model_id, pooling=args.pooling)
-    embedder = CanineEmbedder(config=config, device=args.device)
+    config = ByT5Config(model_id=args.model_id, pooling=args.pooling)
+    embedder = ByT5Embedder(config=config, device=args.device)
 
     # Collect texts and IDs
     ids: list[str] = []
@@ -139,7 +139,7 @@ def main() -> int:
 
     if not texts:
         logger.warning("No texts to embed. Writing empty output.")
-        mat = np.zeros((0, 768), dtype="float32")  # CANINE hidden size
+        mat = np.zeros((0, 1472), dtype="float32")  # ByT5-small hidden size
     else:
         # Batch embedding
         logger.info("Embedding %d texts in batches of %d...", len(texts), args.batch_size)
@@ -169,7 +169,7 @@ def main() -> int:
         "model_id": args.model_id,
         "pooling": args.pooling,
         "device": args.device,
-        "dim": int(mat.shape[1]) if mat.size else 768,
+        "dim": int(mat.shape[1]) if mat.size else 1472,
         "text_field": args.text_field,
         "fallback_field": args.fallback_field,
         "created_at": datetime.now(timezone.utc).isoformat(),

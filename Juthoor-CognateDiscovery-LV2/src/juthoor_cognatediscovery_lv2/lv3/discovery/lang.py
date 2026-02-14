@@ -1,21 +1,14 @@
 """
-Language code mapping for SONAR embeddings.
+Language code mapping and language family metadata.
 
-This module provides mappings from ISO 639 language codes to SONAR-compatible
-language codes, with special focus on Semitic and ancient languages.
+NOTE: The SONAR-specific language mappings (DEFAULT_SONAR_LANG_MAP,
+resolve_sonar_lang) are DEPRECATED as of the BGE-M3 migration.
+BGE-M3 is language-agnostic and does not require language codes.
+These mappings are retained only for backward compatibility.
 
-SONAR Language Code Format:
-    <iso639-3>_<iso15924>
-    e.g., arb_Arab (Arabic), eng_Latn (English), heb_Hebr (Hebrew)
-
-For languages without direct SONAR support, we map to the closest supported language:
-    - Akkadian -> Arabic (Semitic family proxy)
-    - Punic/Phoenician -> Hebrew (Canaanite relative)
-    - Ugaritic -> Hebrew (Canaanite relative)
-    - Ge'ez -> Arabic (Semitic proxy)
-
-These mappings are best-effort approximations. Results may be suboptimal for
-ancient languages. Use explicit overrides with `@<sonar_lang>` for fine control.
+The language family utilities (LANGUAGE_FAMILIES, get_language_family,
+are_same_family) remain active and useful for cognate discovery
+prioritization and analysis.
 """
 
 from __future__ import annotations
@@ -209,26 +202,11 @@ LANGUAGE_FAMILIES: dict[str, list[str]] = {
 
 
 def resolve_sonar_lang(lang: str, sonar_lang_override: str | None) -> str:
-    """
-    Resolve a language code to a SONAR-compatible language code.
+    """Resolve a language code to a SONAR-compatible language code.
 
-    Args:
-        lang: Input language code (ISO 639-1, 639-2, or 639-3, or custom like 'ar-qur')
-        sonar_lang_override: Explicit SONAR code to use (e.g., "arb_Arab")
-
-    Returns:
-        SONAR-compatible language code in format <iso639-3>_<iso15924>
-
-    Raises:
-        ValueError: If language cannot be resolved and no override provided
-
-    Example:
-        >>> resolve_sonar_lang("ara", None)
-        'arb_Arab'
-        >>> resolve_sonar_lang("akk", None)  # Akkadian -> Arabic proxy
-        'arb_Arab'
-        >>> resolve_sonar_lang("xyz", "custom_Lang")  # Override
-        'custom_Lang'
+    .. deprecated::
+        BGE-M3 is language-agnostic. This function is retained for backward
+        compatibility only and will be removed in a future version.
     """
     if sonar_lang_override:
         return sonar_lang_override

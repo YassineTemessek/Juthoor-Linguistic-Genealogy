@@ -68,7 +68,7 @@ Consume releases (downstream):
 ## Scaffolding added (to be wired with real data/models)
 - Adapters (LV0.7): `src/ingest/adapters/` (Qur’an lemmas, English IPA, Wiktionary filtered, concepts) using stable IDs + manifests.
 - Text fields: `src/features/build_text_fields.py` and `src/tools/apply_text_fields.py` to add `form_text`/`meaning_text`.
-- Embeddings (placeholder): `src/embeddings/embed_sonar.py`, `src/embeddings/embed_canine.py` (write ids/vectors/meta/coverage).
+- Embeddings: `src/embeddings/embed_sonar.py` (BGE-M3 semantic), `src/embeddings/embed_canine.py` (ByT5 form) (write ids/vectors/meta/coverage).
 - FAISS scaffolds: `src/index/build_faiss.py` and `src/tools/search_index.py`.
 - Manifests: `src/tools/gen_manifest.py`.
 
