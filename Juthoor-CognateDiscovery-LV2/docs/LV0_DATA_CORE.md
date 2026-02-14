@@ -1,13 +1,13 @@
 # LV0 Data Core
 
-This repo (LV3) **does not** own ingest anymore.
+This repo (LV2) **does not** own ingest anymore.
 
 Raw → processed canonical datasets live in the LV0 repo:
 
 - `https://github.com/YassineTemessek/Juthoor-DataCore-LV0`
 - LV0 project ReadMe: `https://github.com/YassineTemessek/Juthoor-DataCore-LV0/blob/main/ReadMe.txt`
 
-Use LV0 to build or fetch processed data, then run LV3 discovery on top.
+Use LV0 to build or fetch processed data, then run LV2 discovery on top.
 
 ## Recommended: fetch LV0 release bundles
 
@@ -15,7 +15,7 @@ Use LV0 to build or fetch processed data, then run LV3 discovery on top.
 
 - `python -m pip install -e /path/to/Juthoor-DataCore-LV0`
 
-2) Fetch and extract latest release assets into your LV3 repo root:
+2) Fetch and extract latest release assets into your LV2 repo root:
 
 - `ldc fetch --release latest --dest .`
 

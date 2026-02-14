@@ -1,6 +1,4 @@
 import pandas as pd
-import re
-import os
 
 # --- Configuration ---
 # Target Bi-roots to scan for (The "Fathers")
@@ -73,7 +71,7 @@ for bi in TARGET_BI_ROOTS:
 df_results = pd.DataFrame(results)
 df_results.to_csv(output_path, index=False, encoding='utf-8-sig')
 
-print(f"\nScan Complete.")
+print("\nScan Complete.")
 print(f"Found {len(df_results)} occurrences.")
 print(f"Saved to '{output_path}'.")
 print("Sample:")

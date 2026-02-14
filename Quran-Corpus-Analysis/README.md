@@ -1,6 +1,6 @@
-# Quran's Words decoding (LV1)
+# Quran's Words decoding (QCA)
 
-![level](https://img.shields.io/badge/level-LV1-6f42c1)
+![level](https://img.shields.io/badge/level-QCA-6f42c1)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
 LV1 focuses on Quranic Arabic word relationships: opposites, semantic distance, and nuance.
@@ -15,12 +15,11 @@ LV1 is the Quran-specific analysis layer. It measures relationships between Qura
 
 ## Project map
 
-- LV0 (data core): https://github.com/YassineTemessek/Juthoor-DataCore-LV0
-- LV0 project ReadMe: https://github.com/YassineTemessek/Juthoor-DataCore-LV0/blob/main/ReadMe.txt
-- LV1 (this repo): https://github.com/YassineTemessek/Quran-Corpus-Analysis
-- LV2 (Arabic decoding and clustering): https://github.com/YassineTemessek/Juthoor-ArabicGenome-LV1
-- LV3 (cross-language discovery): https://github.com/YassineTemessek/Juthoor-CognateDiscovery-LV2
-- LV4 (validation blueprint): https://github.com/YassineTemessek/Juthoor-Origins-LV3
+- LV0 (data core): Juthoor-DataCore-LV0
+- LV1 (Arabic genome): Juthoor-ArabicGenome-LV1
+- LV2 (cognate discovery): Juthoor-CognateDiscovery-LV2
+- LV3 (theory & validation): Juthoor-Origins-LV3
+- QCA (Quranic analysis, this repo): Quran-Corpus-Analysis
 
 ## Repo policy
 

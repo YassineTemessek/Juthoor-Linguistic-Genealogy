@@ -1,7 +1,7 @@
-# Raw Data Flow (LV3)
+# Raw Data Flow (LV2)
 
-LV3 consumes LV0/LV2 processed datasets. Raw data flow is owned by LV0.
+LV2 consumes LV0/LV1 processed datasets. Raw data flow is owned by LV0.
 
 Summary:
 - LV0 produces data/processed outputs.
-- LV3 consumes processed datasets for retrieval/scoring.
+- LV2 consumes processed datasets for retrieval/scoring.

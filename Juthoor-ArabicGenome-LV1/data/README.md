@@ -1,4 +1,4 @@
-# Data folder (LV2)
+# Data folder (LV1)
 
 This project uses large datasets under `data/`. They are intentionally **not committed** by default (see `.gitignore`).
 
@@ -10,7 +10,7 @@ Expected inputs (examples):
 - `data/raw/arabic/word_root_map.csv`
 - `data/raw/arabic/arabic_roots_hf/train-00000-of-00001.parquet`
 
-LV2 does not own ingest anymore; raw datasets and processing live in LV0 (data core).
+LV1 does not own ingest anymore; raw datasets and processing live in LV0 (data core).
 
 ## `data/processed/` (outputs)
 

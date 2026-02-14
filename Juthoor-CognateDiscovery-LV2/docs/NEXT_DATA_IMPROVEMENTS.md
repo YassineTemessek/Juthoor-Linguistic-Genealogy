@@ -2,11 +2,11 @@
 
 These are the next concrete tasks to improve **data quality and usefulness** (not just code).
 
-## 1) Rebuild + make validation “green”
+## 1) Rebuild + make validation "green"
 
 Goal: every canonical processed JSONL passes validation (no missing required fields, no malformed rows).
 
-LV3 no longer owns ingest; these improvements belong in LV0:
+LV2 no longer owns ingest; these improvements belong in LV0:
 
 - `https://github.com/YassineTemessek/Juthoor-DataCore-LV0`
 

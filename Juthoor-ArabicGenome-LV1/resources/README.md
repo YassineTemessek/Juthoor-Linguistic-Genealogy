@@ -1,4 +1,4 @@
-# Resources (LV2)
+# Resources (LV1)
 
 `resources/` contains small, stable reference files that are safe to commit to Git.
 

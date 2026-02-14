@@ -1,12 +1,10 @@
 import pandas as pd
 import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import arabic_reshaper
 from bidi.algorithm import get_display
-import re
 
 # --- 1. Load All Data ---
 quran_text_path = 'quran_text.csv'

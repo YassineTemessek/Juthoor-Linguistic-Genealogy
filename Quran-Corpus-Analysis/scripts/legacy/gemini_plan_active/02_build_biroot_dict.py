@@ -1,6 +1,5 @@
 import pandas as pd
 import re
-import os
 
 # Paths
 # We assume the script is running from inside 'chatgpt_plan_active' or we handle paths relative to root

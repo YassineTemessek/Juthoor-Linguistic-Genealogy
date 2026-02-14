@@ -55,30 +55,30 @@ Updated KPIs that track anchor coverage and anchor quality before Validation is 
 
 This document fixes the language scope, English-forward concept modeling, anchor lemma policy, schemas, corridors, and a rapid candidate pipeline to scale discovery responsibly.
 
-### 0.1 LV3 Implementation Notes (Code + Artifacts)
+### 0.1 LV2 Implementation Notes (Code + Artifacts)
 
-This Master Foundation document is the LV4 theory + validation blueprint.
+This Master Foundation document is the LV3 theory + validation blueprint.
 The runnable discovery pipeline lives in LV2: `C:/AI Projects/Juthoor-Linguistic-Genealogy/Juthoor-CognateDiscovery-LV2/`.
 
-LV3 produces (local, not committed by default):
+LV2 produces (local, not committed by default):
 - Canonical processed lexeme tables: `data/processed/...`
 - Ranked leads + QA artifacts: `outputs/`
 - Run manifests (what ran, outputs present): `outputs/manifests/`
 
-Key LV3 entrypoints:
+Key LV2 entrypoints:
 - Build/refresh processed data: `python "scripts/ingest/run_ingest_all.py"`
 - Validate processed outputs: `python "scripts/ingest/validate_processed.py" --all`
 - Run discovery retrieval + hybrid scoring (recommended): `python "scripts/discovery/run_discovery_retrieval.py" --source ... --target ...`
 - Optional legacy matcher: `python "scripts/discovery/run_full_matching_pipeline.py"`
 
-LV3 discovery technologies (current):
+LV2 discovery technologies (current):
 
 - **SONAR (Meta)**: multilingual semantic similarity (meaning) in a shared embedding space.
 - **CANINE (Google)**: character-level similarity (form) over raw Unicode.
-- **Hybrid scoring (LV3)**: after retrieval, compute additional rough component scores (orthography / IPA / skeleton) and a combined exploratory score for ranking.
+- **Hybrid scoring (LV2)**: after retrieval, compute additional rough component scores (orthography / IPA / skeleton) and a combined exploratory score for ranking.
 - **MMS (Meta, optional later)**: speech-centric representation for phonetic similarity and audio rendering; treated as an extra signal, not evidence by itself.
 
-LV4 uses LV3 outputs as the discovery corpus and then applies stricter constraints (anchors, chronology, null models) in the Validation Track.
+LV3 uses LV2 outputs as the discovery corpus and then applies stricter constraints (anchors, chronology, null models) in the Validation Track.
 
 ## 1. Core Principles
 
@@ -310,8 +310,8 @@ Radius 2: allow figuratives (metonymy/synecdoche) with stronger penalty (-25% se
 ## 6. Data Schemas (Minimal yet Extensible)
 
 
-Implementation note (LV3):
-The current LV3 pipeline stores a minimal shared schema for lexemes (e.g., `id`, `lemma`, `language`, `stage`, `script`, `source`, `lemma_status`, plus `ipa`/`ipa_raw` and optional `pos`/`translit`).
+Implementation note (LV2):
+The current LV2 pipeline stores a minimal shared schema for lexemes (e.g., `id`, `lemma`, `language`, `stage`, `script`, `source`, `lemma_status`, plus `ipa`/`ipa_raw` and optional `pos`/`translit`).
 Derived views (skeleton/ORT/feature vectors) may be computed during matching rather than stored in every lexeme row.
 
 ### 6.1 Concept entry
@@ -461,19 +461,19 @@ Cluster memory: kn-, gn-, wr-, ps-, pt-, mn- persist in spelling after phonetic 
 ## 9. Rapid Candidate Generation (RCG) Pipeline
 
 
-Ingest & Normalize (LV3)
+Ingest & Normalize (LV2)
 
 - Convert raw sources into canonical `data/processed/...` tables.
 - Preserve provenance and stage/script labels.
 - When present, keep `ipa`/`ipa_raw` and transliteration fields for later scoring.
 
-Retrieval-first discovery (LV3)
+Retrieval-first discovery (LV2)
 
 - **SONAR retrieval**: semantic similarity across languages (meaning neighbors).
 - **CANINE retrieval**: character-level similarity across scripts (form neighbors).
 - Candidates are the union of SONAR and CANINE top‑K lists (high recall).
 
-Hybrid scoring (LV3, exploratory)
+Hybrid scoring (LV2, exploratory)
 
 - Compute additional rough component scores on retrieved pairs:
   - orthography (n-grams + string ratio; prefers translit if available)
@@ -565,7 +565,7 @@ Implementation note:
 - `scripts/discovery/...` matching + scoring
 - `outputs/...` and `outputs/...` run artifacts (local)
 
-Conceptual architecture (for LV4 planning):
+Conceptual architecture (for LV3 planning):
 /data
   /raw/{language}/{source}/...
   /processed/{tables}.jsonl

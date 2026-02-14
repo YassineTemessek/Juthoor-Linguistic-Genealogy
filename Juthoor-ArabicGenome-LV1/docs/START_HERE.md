@@ -1,10 +1,10 @@
-# Start Here (LV2)
+# Start Here (LV1)
 
-This repo is a **data pipeline** for Arabic decoding with a specific LV2 focus:
+This repo is a **data pipeline** for Arabic decoding with a specific LV1 focus:
 
 - Build processed Arabic tables that maximize coverage of Arabic words/lemmas with known roots.
 - Derive a **binary root** key (2-letter nucleus) from the provided root so words can be regrouped into binary-root-centered clusters.
-- Run clustering/regrouping experiments using methods that fit the purpose (heuristics, embeddings like SONAR/CANINE, and graph-based approaches).
+- Run clustering/regrouping experiments using methods that fit the purpose (heuristics, embeddings like BGE-M3/ByT5, and graph-based approaches).
 - Export a **graph view** (nodes/edges) so relationships are easy to inspect visually and can support GraphRAG-style workflows.
 
 
@@ -16,7 +16,7 @@ Focus areas:
 Workflow:
 
 1) Build/fetch canonical processed datasets in LV0 (data core).
-2) Run LV2 clustering/regrouping and graph exports using those processed tables.
+2) Run LV1 clustering/regrouping and graph exports using those processed tables.
 
 ## Core commands
 

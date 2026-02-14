@@ -1,14 +1,14 @@
 # Juthoor-CognateDiscovery LV2 — Similarity Scoring Spec
 
-This repository (LV3) is a **similarity scoring engine + dataset registry + report outputs**.
+This repository (LV2) is a **similarity scoring engine + dataset registry + report outputs**.
 
 Goal: compare **Arabic (and Arabic-related languages)** against selected **Indo‑European languages** (and more) and produce ranked candidate matches for human review.
 
-LV3 supports two discovery strategies:
+LV2 supports two discovery strategies:
 
 1) **Embedding-first retrieval (recommended):**
-   - `sonar_score` (multilingual semantic similarity; raw script)
-   - `canine_score` (character/form similarity; raw Unicode)
+   - `bge_m3_score` (multilingual semantic similarity; 100+ languages, language-agnostic)
+   - `byt5_score` (byte-level character/form similarity; tokenizer-free, raw Unicode)
    - Category labels for triage (`strong_union`, `semantic_only`, `form_only`)
 
 2) **Classic similarity scoring (legacy / secondary signal):**
@@ -16,7 +16,7 @@ LV3 supports two discovery strategies:
    - `sound_score` (IPA / phonetic similarity)
    - `combined_score` (a weighted combination for ranking)
 
-This LV3 repo is **discovery-first**: it ranks and surfaces candidates for human review. It does **not** attempt to prove historical directionality. The deeper “language history” thesis lives in the separate LV4 workspace.
+This LV2 repo is **discovery-first**: it ranks and surfaces candidates for human review. It does **not** attempt to prove historical directionality. The deeper "language history" thesis lives in the separate LV3 workspace.
 
 ## What’s tracked vs local
 
@@ -26,9 +26,9 @@ This LV3 repo is **discovery-first**: it ranks and surfaces candidates for human
 - `data/` (local, git‑ignored): raw dumps and generated processed tables.
 - `outputs/` and `outputs/` (local, git‑ignored): run artifacts, previews, candidate lists.
 
-## Core languages (LV3 v1)
+## Core languages (LV2 v1)
 
-This is the current “core set” for LV3 work (can expand later):
+This is the current "core set" for LV2 work (can expand later):
 
 - Arabic
 - Hebrew
@@ -52,18 +52,18 @@ Ingest scripts normalize raw sources into consistent tables under `data/processe
 
 The matcher should only depend on these *canonical outputs* (not intermediate scratch files).
 
-## Similarity scoring model (LV3)
+## Similarity scoring model (LV2)
 
 We always compute **separate component scores**, then a combined score.
 
-## Embedding-first retrieval (SONAR + CANINE)
+## Embedding-first retrieval (BGE-M3 + ByT5)
 
-This is the primary LV3 discovery mode.
+This is the primary LV2 discovery mode.
 
-- **SONAR** provides multilingual sentence/word embeddings; similarity is cosine/inner-product over L2-normalized vectors.
-- **CANINE** provides character-level embeddings over raw Unicode strings; similarity is cosine/inner-product over L2-normalized vectors.
+- **BGE-M3** provides multilingual semantic embeddings (100+ languages, language-agnostic); similarity is cosine/inner-product over L2-normalized vectors.
+- **ByT5** provides byte-level character embeddings over raw Unicode strings (tokenizer-free); similarity is cosine/inner-product over L2-normalized vectors.
 
-In practice LV3 uses embedding retrieval to generate *candidates*, then applies a lightweight **hybrid scoring** pass on the retrieved pairs to produce additional component scores and a rough `combined_score` for ranking/inspection.
+In practice LV2 uses embedding retrieval to generate *candidates*, then applies a lightweight **hybrid scoring** pass on the retrieved pairs to produce additional component scores and a rough `combined_score` for ranking/inspection.
 
 Entry point:
 
@@ -71,17 +71,17 @@ Entry point:
 
 ### Hybrid scoring (after retrieval)
 
-Hybrid scoring is intentionally simple (LV3 “what results look like” iteration):
+Hybrid scoring is intentionally simple (LV2 "what results look like" iteration):
 
 - `orthography`: character n-gram overlap + string ratio (prefers `translit` when available)
 - `sound`: IPA similarity when present (`ipa`/`ipa_raw`)
 - `skeleton`: consonant skeleton similarity (derived from `ipa`/`translit`/`lemma`)
 
-The script produces `hybrid.combined_score` by a weighted average of available signals, including SONAR/CANINE retrieval scores.
+The script produces `hybrid.combined_score` by a weighted average of available signals, including BGE-M3/ByT5 retrieval scores.
 
 Corpus identity:
 
-- LV3 treats `lang` and `stage` as **free text** labels (e.g., `eng@old`, `eng@modern`, `grc@attic`).
+- LV2 treats `lang` and `stage` as **free text** labels (e.g., `eng@old`, `eng@modern`, `grc@attic`).
 
 ### 1) `orthography_score` (shape)
 
@@ -127,7 +127,7 @@ Weights should be configurable per run (and may differ by language/script covera
 
 ## Output artifacts (outputs/, outputs/)
 
-The default “product” of LV3 is a set of ranked candidate lists plus QA/KPI summaries.
+The default "product" of LV2 is a set of ranked candidate lists plus QA/KPI summaries.
 
 Minimum useful artifacts:
 
@@ -150,6 +150,6 @@ Each run should record:
 - source versions (wiktionary dump date, dictionary repo commit, etc.)
 - row counts per canonical processed output
 
-## LV4 separation
+## LV3 separation
 
-The longer “theory / history / validation” document (`Master FoundationV3.2.txt`) is **not an LV3 requirement** and should live in the LV4 workspace (`Origin of Languages decoding LV4/`), while LV3 stays focused on **comparison + scoring + reporting**.
+The longer "theory / history / validation" document (`Master FoundationV3.2.txt`) is **not an LV2 requirement** and should live in the LV3 workspace (`Juthoor-Origins-LV3/`), while LV2 stays focused on **comparison + scoring + reporting**.
