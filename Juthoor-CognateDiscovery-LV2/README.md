@@ -71,7 +71,7 @@ pip install -r requirements.embeddings.txt  # BGE-M3 + ByT5
 python "scripts/discovery/run_discovery_retrieval.py" \
   --source ara@modern="path/to/arabic.jsonl" \
   --target eng@modern="path/to/english.jsonl" \
-  --models sonar canine --topk 200 --max-out 200 --limit 200
+  --models bge_m3 byt5 --topk 200 --max-out 200 --limit 200
 ```
 
 Corpus spec format: `<lang>[@<stage>]=<path>`

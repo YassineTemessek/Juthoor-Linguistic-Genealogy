@@ -10,7 +10,7 @@ This project uses large linguistic datasets under `data/`. They are intentionall
 
 **Examples in this project:** Wiktionary dictionary dumps, Greek lexica XML, IPA dictionaries, Aramaic/Syriac corpora, and other language resources.
 
-## Expected folder layout (LV3)
+## Expected folder layout (LV2)
 
 This repository expects datasets under `data/raw/` in a stable, script-friendly structure:
 
@@ -50,7 +50,7 @@ Some small, stable resources are shared via Git and live under `resources/` inst
 
 - Put downloaded sources under `data/raw/`.
 - Build/fetch canonical processed tables via LV0 (see `docs/LV0_DATA_CORE.md`) to generate/refresh `data/processed/`.
-- LV3 discovery consumes `data/processed/` and `resources/` and writes results under `outputs/`.
+- LV2 discovery consumes `data/processed/` and `resources/` and writes results under `outputs/`.
 
 
 ## Project Status & Progress

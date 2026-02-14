@@ -1,6 +1,6 @@
-# Getting LV3 outputs (inputs to LV4)
+# Getting LV2 outputs (inputs to LV3)
 
-LV4 does not generate data itself. It **consumes LV3 artifacts**:
+LV3 does not generate data itself. It **consumes LV2 artifacts**:
 
 - Canonical processed lexeme tables (`data/processed/...`)
 - Ranked leads (matching outputs)
@@ -14,20 +14,20 @@ You have two ways to obtain them.
 
 - LV0 repo: `https://github.com/YassineTemessek/Juthoor-DataCore-LV0`
 - LV0 project ReadMe: `https://github.com/YassineTemessek/Juthoor-DataCore-LV0/blob/main/ReadMe.txt`
-- LV3 repo: `https://github.com/YassineTemessek/Juthoor-CognateDiscovery-LV2`
+- LV2 repo: `https://github.com/YassineTemessek/Juthoor-CognateDiscovery-LV2`
 - `python scripts/discovery/run_discovery_retrieval.py --source ... --target ...` (SONAR/CANINE retrieval + hybrid scoring)
 - Optional legacy matcher: `python scripts/discovery/run_full_matching_pipeline.py`
 
-LV3 writes run manifests, caches, and outputs under `outputs/`.
+LV2 writes run manifests, caches, and outputs under `outputs/`.
 
-Note: SONAR/CANINE runs require the optional LV3 dependencies (`requirements.embeddings.txt`) and will download model weights on first use.
+Note: SONAR/CANINE runs require the optional LV2 dependencies (`requirements.embeddings.txt`) and will download model weights on first use.
 
 ## Option B: Download maintainer-published processed bundles (fastest)
 
 If maintainers publish LV0 per-language bundles (recommended for big files):
 
-- Install LV0 package (editable) and fetch: `ldc fetch --release latest --dest <your LV3 repo root>`
+- Install LV0 package (editable) and fetch: `ldc fetch --release latest --dest <your LV2 repo root>`
 
 This extracts into the destination, creating `data/processed/...`.
 
-See LV3: `docs/RELEASE_ASSETS.md`.
+See LV2: `docs/RELEASE_ASSETS.md`.

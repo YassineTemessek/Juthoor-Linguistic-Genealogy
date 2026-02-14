@@ -1,8 +1,8 @@
-# LV4 Roadmap (Ordered)
+# LV3 Roadmap (Ordered)
 
-This roadmap assumes LV3 generates discovery artifacts (processed lexeme tables + ranked leads) and LV4 defines how to interpret and validate them.
+This roadmap assumes LV2 generates discovery artifacts (processed lexeme tables + ranked leads) and LV3 defines how to interpret and validate them.
 
-## Phase 0: Keep LV4 readable and versioned
+## Phase 0: Keep LV3 readable and versioned
 
 - Treat `Master FoundationV3.2.md` as the canonical spec.
 - When a new version is needed, create `Master FoundationV3.3.md` rather than editing history.

@@ -1,4 +1,4 @@
-# Processed data (LV2)
+# Processed data (LV1)
 
 `data/processed/` contains **machine-readable outputs** produced from `data/raw/` by the ingestion scripts.
 
@@ -9,18 +9,18 @@ Datasets are not committed by default, but this README documents the contract.
 - `data/processed/arabic/quran_lemmas_enriched.jsonl` (Quran lemma list + translit + IPA)
 - `data/processed/arabic/word_root_map_filtered.jsonl` (word-root mapping; empty-root rows removed; adds `type`)
 - `data/processed/arabic/hf_roots.jsonl` (Arabic roots dataset with translit + IPA)
-- `data/processed/arabic/arabic_words_binary_roots.jsonl` (merged word list with `binary_root` fields for LV2 grouping)
+- `data/processed/arabic/arabic_words_binary_roots.jsonl` (merged word list with `binary_root` fields for LV1 grouping)
 
-## Binary roots (LV2)
+## Binary roots (LV1)
 
-LV2 introduces `binary_root` as a 2-letter nucleus derived from the standard root string.
+LV1 introduces `binary_root` as a 2-letter nucleus derived from the standard root string.
 
 This repo keeps both:
 
 - the source `root` (triliteral/quadriliteral as provided), and
 - a derived `binary_root` (2-letter key used for grouping).
 
-## Graph-friendly exports (LV2)
+## Graph-friendly exports (LV1)
 
 Downstream, we also support exporting the processed lexicon as simple **nodes/edges CSVs** for visualization and GraphRAG-style workflows:
 

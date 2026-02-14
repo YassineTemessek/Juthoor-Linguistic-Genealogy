@@ -14,11 +14,11 @@ that the rest of the project builds on.
 
 ## Project map 🧭
 
-- LV0 (this repo): `https://github.com/YassineTemessek/Juthoor-DataCore-LV0`
-- LV1 (Quranic analysis): `https://github.com/YassineTemessek/Quran-Corpus-Analysis`
-- LV2 (Arabic decoding & clustering): `https://github.com/YassineTemessek/Juthoor-ArabicGenome-LV1`
-- LV3 (cross-language discovery pipeline): `https://github.com/YassineTemessek/Juthoor-CognateDiscovery-LV2`
-- LV4 (theory & validation blueprint): `https://github.com/YassineTemessek/Juthoor-Origins-LV3`
+- LV0 (data core, this repo): Juthoor-DataCore-LV0
+- LV1 (Arabic genome): Juthoor-ArabicGenome-LV1
+- LV2 (cognate discovery): Juthoor-CognateDiscovery-LV2
+- LV3 (theory & validation): Juthoor-Origins-LV3
+- QCA (Quranic analysis): Quran-Corpus-Analysis
 
 ## What LV0 produces ✅
 
@@ -34,7 +34,7 @@ Arabic (not exhaustive) typically includes:
 - Arabic (general, `ara`):
   - `data/processed/arabic/classical/sources/word_root_map_filtered.jsonl`
   - `data/processed/arabic/classical/sources/hf_roots.jsonl`
-  - `data/processed/arabic/classical/lexemes.jsonl` (canonical merged file ready for LV2/LV3)
+  - `data/processed/arabic/classical/lexemes.jsonl` (canonical merged file ready for LV1/LV2)
 
 ## Quickstart 🚀
 
@@ -56,7 +56,6 @@ Consume releases (downstream):
 
 ## Docs 📚
 
-- Project ReadMe (master notes): `ReadMe.txt`
 - Roadmap (ordered): `docs/ROADMAP.md`
 - Arabic fields (root + binary root): `docs/ARABIC_FIELDS.md`
 - Session start (resume guide): `docs/SESSION_START.md`

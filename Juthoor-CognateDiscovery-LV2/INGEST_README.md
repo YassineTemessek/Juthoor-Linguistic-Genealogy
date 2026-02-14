@@ -1,6 +1,6 @@
 # Ingest documentation
 
-LV3 does not own ingest anymore.
+LV2 does not own ingest anymore.
 
 Raw → processed canonical datasets live in LV0:
 
@@ -19,6 +19,6 @@ See `docs/LV0_DATA_CORE.md`.
 
 ## Next step after ingest
 
-Run LV3 discovery retrieval + hybrid scoring:
+Run LV2 discovery retrieval + hybrid scoring:
 
 - `python "scripts/discovery/run_discovery_retrieval.py" --source ... --target ...`

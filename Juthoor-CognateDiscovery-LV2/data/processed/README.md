@@ -53,7 +53,7 @@ For chunked processing (optional), prefer putting splits under:
 
 - `data/processed/_parts/<stem>/...`
 
-If you need to split large processed JSONL into parts, do it in LV0 (data core) and keep LV3 focused on discovery/scoring.
+If you need to split large processed JSONL into parts, do it in LV0 (data core) and keep LV2 focused on discovery/scoring.
 
 ## Folder layout (summary)
 

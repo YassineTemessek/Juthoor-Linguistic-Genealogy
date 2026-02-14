@@ -1,6 +1,6 @@
-# Data ingest (LV0) and LV3 pipeline
+# Data ingest (LV0) and LV2 pipeline
 
-LV3 no longer owns ingest.
+LV2 no longer owns ingest.
 
 Raw → processed canonical datasets live in LV0:
 
@@ -8,10 +8,10 @@ Raw → processed canonical datasets live in LV0:
 
 See `docs/LV0_DATA_CORE.md` for how to fetch/build processed data.
 
-## LV3 pipeline (discovery)
+## LV2 pipeline (discovery)
 
-LV3 consumes canonical processed tables (from LV0) and runs:
+LV2 consumes canonical processed tables (from LV0) and runs:
 
-- SONAR/CANINE retrieval (high recall)
+- BGE-M3/ByT5 retrieval (high recall)
 - Hybrid scoring (rough component scores + combined score)
 - Output ranked leads under `outputs/`

@@ -7,7 +7,7 @@ By default, the actual output files are not committed to Git (see `.gitignore`).
 Typical subfolders (created locally by scripts):
 
 - `outputs/manifests/`: ingest run manifests
-- `outputs/embeddings/`: cached SONAR/CANINE vectors
+- `outputs/embeddings/`: cached BGE-M3/ByT5 vectors
 - `outputs/indexes/`: FAISS indexes
 - `outputs/leads/`: ranked discovery leads (JSONL)
 
