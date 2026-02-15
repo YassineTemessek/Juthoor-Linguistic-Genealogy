@@ -1,10 +1,10 @@
 """
-LV3 discovery-first retrieval using:
+LV2 discovery-first retrieval using:
 - BGE-M3 for multilingual semantic similarity (language-agnostic)
 - ByT5 for multilingual form similarity (byte-level, tokenizer-free)
 
-This script is intended to generate *ranked leads* for human review (LV3).
-It does not attempt LV4-style validation.
+This script generates *ranked leads* for human review.
+It does not attempt LV3-style validation.
 
 Prerequisites:
     Run `uv pip install -e .` from the monorepo root to install all packages.
@@ -133,10 +133,10 @@ def embed_corpus(
     for r in rows:
         t = _safe_text(r.lemma)
         texts.append(t if t else r.lexeme_id)
-    if model == "sonar":
+    if model == "semantic":
         embedder = BgeM3Embedder(config=semantic_cfg)
         vecs = embedder.embed(texts)
-    elif model == "canine":
+    elif model == "form":
         embedder = ByT5Embedder(config=form_cfg, device=device)
         vecs = embedder.embed(texts)
     else:
@@ -175,19 +175,19 @@ def main() -> int:
         "--source",
         action="append",
         default=[],
-        help="Repeatable. Format: <lang>[@<stage>][@<sonar_lang>]=<path>",
+        help="Repeatable. Format: <lang>[@<stage>]=<path>",
     )
     parser.add_argument(
         "--target",
         action="append",
         default=[],
-        help="Repeatable. Format: <lang>[@<stage>][@<sonar_lang>]=<path>",
+        help="Repeatable. Format: <lang>[@<stage>]=<path>",
     )
-    parser.add_argument("--models", nargs="+", default=["sonar", "canine"], choices=["sonar", "canine"])
+    parser.add_argument("--models", nargs="+", default=["semantic", "form"], choices=["semantic", "form"])
     parser.add_argument("--topk", type=int, default=200, help="Top-K candidates per target corpus (per model).")
     parser.add_argument("--max-out", type=int, default=200, help="Max leads written per source lexeme.")
     parser.add_argument("--limit", type=int, default=0, help="Limit rows loaded per corpus (0 = no limit).")
-    parser.add_argument("--device", type=str, default=os.environ.get("LV3_DEVICE", "cpu"))
+    parser.add_argument("--device", type=str, default=os.environ.get("LV2_DEVICE", "cpu"))
     parser.add_argument("--rebuild-cache", action="store_true", help="Recompute embeddings even if cached.")
     parser.add_argument("--rebuild-index", action="store_true", help="Rebuild FAISS indexes even if cached.")
     parser.add_argument("--semantic-model", type=str, default="BAAI/bge-m3", help="BGE-M3 model ID.")
@@ -195,8 +195,8 @@ def main() -> int:
     parser.add_argument("--form-model", type=str, default="google/byt5-small", help="ByT5 model ID.")
     parser.add_argument("--form-pooling", type=str, default="mean", choices=["mean", "cls"])
     parser.add_argument("--no-hybrid", action="store_true", help="Disable heuristic scoring after retrieval.")
-    parser.add_argument("--w-sonar", type=float, default=HybridWeights.sonar)
-    parser.add_argument("--w-canine", type=float, default=HybridWeights.canine)
+    parser.add_argument("--w-semantic", type=float, default=HybridWeights.semantic)
+    parser.add_argument("--w-form", type=float, default=HybridWeights.form)
     parser.add_argument("--w-orth", type=float, default=HybridWeights.orthography)
     parser.add_argument("--w-sound", type=float, default=HybridWeights.sound)
     parser.add_argument("--w-skeleton", type=float, default=HybridWeights.skeleton)
@@ -214,8 +214,8 @@ def main() -> int:
     semantic_cfg = BgeM3Config(model_id=args.semantic_model, max_length=args.semantic_max_length)
     form_cfg = ByT5Config(model_id=args.form_model, pooling=args.form_pooling)
     hybrid_weights = HybridWeights(
-        sonar=float(args.w_sonar),
-        canine=float(args.w_canine),
+        semantic=float(args.w_semantic),
+        form=float(args.w_form),
         orthography=float(args.w_orth),
         sound=float(args.w_sound),
         skeleton=float(args.w_skeleton),
@@ -256,8 +256,8 @@ def main() -> int:
                     rows=source_rows,
                     limit=args.limit,
                     device=args.device,
-                    sonar_cfg=sonar_cfg,
-                    canine_cfg=canine_cfg,
+                    semantic_cfg=semantic_cfg,
+                    form_cfg=form_cfg,
                     rebuild_cache=args.rebuild_cache,
                 )
                 source_vectors_by_model[model] = vecs
@@ -336,13 +336,13 @@ def main() -> int:
 
                 # Category assignment: discovery triage signal (not validation).
                 for entry in candidates.values():
-                    got_sonar = "sonar" in entry["scores"]
-                    got_canine = "canine" in entry["scores"]
-                    if got_sonar and got_canine:
+                    got_semantic = "semantic" in entry["scores"]
+                    got_form = "form" in entry["scores"]
+                    if got_semantic and got_form:
                         entry["category"] = "strong_union"
-                    elif got_sonar:
+                    elif got_semantic:
                         entry["category"] = "semantic_only"
-                    elif got_canine:
+                    elif got_form:
                         entry["category"] = "form_only"
                     else:
                         entry["category"] = "unclassified"
@@ -351,13 +351,13 @@ def main() -> int:
                         entry["hybrid"] = compute_hybrid(
                             source=entry.get("_source_fields", {}),
                             target=entry.get("_target_fields", {}),
-                            sonar=entry["scores"].get("sonar"),
-                            canine=entry["scores"].get("canine"),
+                            semantic=entry["scores"].get("semantic"),
+                            form=entry["scores"].get("form"),
                             weights=hybrid_weights,
                         )
 
                     entry["provenance"] = {
-                        "lv": "LV3",
+                        "lv": "LV2",
                         "mode": "discovery_retrieval",
                         "models": args.models,
                         "topk_per_target": topk,
@@ -373,8 +373,8 @@ def main() -> int:
                     return (
                         float(combined) if combined is not None else -1e9,
                         2 if e.get("category") == "strong_union" else 1,
-                        float(scores.get("sonar", -1e9)),
-                        float(scores.get("canine", -1e9)),
+                        float(scores.get("semantic", -1e9)),
+                        float(scores.get("form", -1e9)),
                     )
 
                 ranked = sorted(candidates.values(), key=sort_key, reverse=True)[:max_out]

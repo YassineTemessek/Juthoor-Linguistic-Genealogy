@@ -136,10 +136,10 @@ cd Juthoor-CognateDiscovery-LV2
 python scripts/discovery/run_discovery_retrieval.py \
   --source ara@modern="data/processed/arabic/classical/lexemes.jsonl" \
   --target eng@modern="data/processed/english/english_ipa_merged_pos.jsonl" \
-  --models sonar canine
+  --models semantic form
 ```
 
-The `--models sonar canine` flag runs both BGE-M3 (semantic) and ByT5 (form) models. Despite the legacy flag names, they use the new models internally.
+The `--models semantic form` flag runs both BGE-M3 (semantic) and ByT5 (form) retrieval models.
 
 ### Corpus spec format
 
@@ -157,7 +157,10 @@ Examples:
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--models` | `sonar canine` | Which models to use (`sonar` = BGE-M3, `canine` = ByT5) |
+| `--models` | `semantic form` | Which retrieval models (`semantic` = BGE-M3, `form` = ByT5) |
+| `--semantic-model` | `BAAI/bge-m3` | HuggingFace model ID for semantic embeddings |
+| `--form-model` | `google/byt5-small` | HuggingFace model ID for form embeddings |
+| `--rebuild-index` | off | Force rebuild FAISS indexes |
 | `--topk` | `200` | Top-K candidates per query |
 | `--limit` | `0` | Limit rows loaded (0 = all) |
 | `--max-out` | `200` | Max leads per source lexeme |
@@ -171,7 +174,7 @@ Examples:
 python scripts/discovery/run_discovery_retrieval.py \
   --source ara@modern=arabic.jsonl \
   --target eng@modern=english.jsonl \
-  --w-sonar 0.5 --w-canine 0.2 --w-orth 0.1 --w-sound 0.1 --w-skeleton 0.1
+  --w-semantic 0.5 --w-form 0.2 --w-orth 0.1 --w-sound 0.1 --w-skeleton 0.1
 ```
 
 ### Multi-language comparison
@@ -184,7 +187,7 @@ python scripts/discovery/run_discovery_retrieval.py \
   --target eng@modern=english.jsonl \
   --target lat@old=latin.jsonl \
   --target grc@ancient=greek.jsonl \
-  --models sonar canine --topk 100
+  --models semantic form --topk 100
 ```
 
 ### Key outputs
@@ -197,7 +200,7 @@ python scripts/discovery/run_discovery_retrieval.py \
 
 Each lead entry contains:
 - Source and target lexeme data
-- Per-model retrieval scores (sonar, canine)
+- Per-model retrieval scores (semantic, form)
 - Hybrid component scores (orthography, sound, skeleton)
 - Combined weighted score
 
@@ -224,16 +227,9 @@ cd Quran-Corpus-Analysis
 
 # Build word-to-root map from Quranic morphology
 python scripts/analysis/build_word_root_map.py
-
-# Analyze root co-occurrence patterns
-python scripts/legacy/gemini_plan_active/01_rj_cooc.py
-
-# Build binary root dictionary
-python scripts/legacy/gemini_plan_active/02_build_biroot_dict.py
-
-# Scan roots for patterns
-python scripts/legacy/gemini_plan_active/03_scan_roots.py
 ```
+
+Additional analysis scripts live under `scripts/analysis/`.
 
 ---
 
@@ -251,6 +247,17 @@ Raw Data  -->  LV0 (ldc ingest)  -->  Canonical JSONL
                                   LV3 (theory)
                                   Hypothesis testing
 ```
+
+## Troubleshooting
+
+| Issue | Fix |
+|-------|-----|
+| First run is slow | BGE-M3 (~2 GB) and ByT5 (~300 MB) download on first use. Subsequent runs use cache. |
+| `torch` not found | Install embeddings extras: `pip install -r requirements.embeddings.txt` |
+| CUDA out of memory | Use `--device cpu` or reduce `--limit` |
+| Stale embeddings | Pass `--rebuild-cache` to recompute, `--rebuild-index` to rebuild FAISS indexes |
+
+---
 
 ## Running Tests
 

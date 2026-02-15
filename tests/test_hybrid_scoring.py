@@ -183,20 +183,20 @@ class TestHybridWeights:
         from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights
 
         w = HybridWeights()
-        assert w.sonar == 0.40
-        assert w.canine == 0.20
+        assert w.semantic == 0.40
+        assert w.form == 0.20
         assert w.orthography == 0.15
         assert w.sound == 0.15
         assert w.skeleton == 0.10
         # Weights should sum to 1.0
-        assert abs(w.sonar + w.canine + w.orthography + w.sound + w.skeleton - 1.0) < 0.001
+        assert abs(w.semantic + w.form + w.orthography + w.sound + w.skeleton - 1.0) < 0.001
 
     def test_custom_weights(self):
         from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights
 
-        w = HybridWeights(sonar=0.5, canine=0.5, orthography=0, sound=0, skeleton=0)
-        assert w.sonar == 0.5
-        assert w.canine == 0.5
+        w = HybridWeights(semantic=0.5, form=0.5, orthography=0, sound=0, skeleton=0)
+        assert w.semantic == 0.5
+        assert w.form == 0.5
 
 
 class TestCombinedScore:
@@ -210,16 +210,16 @@ class TestCombinedScore:
 
         weights = HybridWeights()
         score, used = combined_score(
-            sonar_score=0.8,
-            canine_score=0.6,
+            semantic_score=0.8,
+            form_score=0.6,
             orthography=0.7,
             sound=0.5,
             skeleton=0.4,
             weights=weights,
         )
         assert 0 < score < 1
-        assert "sonar" in used
-        assert "canine" in used
+        assert "semantic" in used
+        assert "form" in used
 
     def test_combined_partial_components(self):
         from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import (
@@ -229,16 +229,16 @@ class TestCombinedScore:
 
         weights = HybridWeights()
         score, used = combined_score(
-            sonar_score=0.8,
-            canine_score=None,  # Missing
+            semantic_score=0.8,
+            form_score=None,  # Missing
             orthography=0.7,
             sound=None,  # Missing
             skeleton=0.4,
             weights=weights,
         )
         assert 0 < score < 1
-        assert "sonar" in used
-        assert "canine" not in used
+        assert "semantic" in used
+        assert "form" not in used
         assert "sound" not in used
 
     def test_combined_no_components(self):
@@ -249,8 +249,8 @@ class TestCombinedScore:
 
         weights = HybridWeights()
         score, used = combined_score(
-            sonar_score=None,
-            canine_score=None,
+            semantic_score=None,
+            form_score=None,
             orthography=None,
             sound=None,
             skeleton=None,
@@ -275,8 +275,8 @@ class TestComputeHybrid:
         result = compute_hybrid(
             source=source,
             target=target,
-            sonar=0.7,
-            canine=0.3,
+            semantic=0.7,
+            form=0.3,
             weights=HybridWeights(),
         )
 
