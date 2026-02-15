@@ -68,7 +68,17 @@ pip install -r requirements.embeddings.txt  # BGE-M3 + ByT5
 4) Run discovery retrieval:
 
 ```bash
+# Local backend (requires torch + model downloads)
 python "scripts/discovery/run_discovery_retrieval.py" \
+  --source ara@modern="path/to/arabic.jsonl" \
+  --target eng@modern="path/to/english.jsonl" \
+  --models semantic form --topk 200 --max-out 200 --limit 200
+
+# API backend (no local GPU needed, uses Gemini embedding-001)
+pip install -r requirements.api.txt
+set GOOGLE_API_KEY=your_key
+python "scripts/discovery/run_discovery_retrieval.py" \
+  --backend api \
   --source ara@modern="path/to/arabic.jsonl" \
   --target eng@modern="path/to/english.jsonl" \
   --models semantic form --topk 200 --max-out 200 --limit 200

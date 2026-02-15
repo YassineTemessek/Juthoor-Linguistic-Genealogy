@@ -142,6 +142,68 @@ class ByT5Embedder:
 
 
 # ---------------------------------------------------------------------------
+# API embeddings: Gemini embedding-001 (no local GPU needed)
+# ---------------------------------------------------------------------------
+
+
+@dataclass(frozen=True)
+class GeminiConfig:
+    """Configuration for Gemini embedding-001 API."""
+
+    model_id: str = "gemini-embedding-001"
+    dimensions: int = 1024  # flexible; matches BGE-M3 default
+    task_type: str = "SEMANTIC_SIMILARITY"  # or "RETRIEVAL_DOCUMENT"
+    batch_size: int = 100
+
+
+class GeminiEmbedder:
+    """Gemini embedding-001 via Google GenAI API (no local GPU needed).
+
+    Requires ``google-genai`` package and ``GOOGLE_API_KEY`` env var.
+    Output: L2-normalized vectors of configurable dimensionality.
+    """
+
+    def __init__(self, *, config: GeminiConfig | None = None):
+        self.config = config or GeminiConfig()
+        self._client = None
+
+    def _get_client(self):
+        _require(
+            "google.genai",
+            install_hint="Install: `pip install google-genai`.",
+        )
+        if self._client is None:
+            from google import genai
+
+            self._client = genai.Client()
+        return self._client
+
+    def embed(self, texts: list[str]) -> "np.ndarray":
+        import numpy as np
+        from google.genai import types
+
+        client = self._get_client()
+        cfg = self.config
+        all_vecs: list[list[float]] = []
+
+        for i in range(0, len(texts), cfg.batch_size):
+            batch = texts[i : i + cfg.batch_size]
+            result = client.models.embed_content(
+                model=cfg.model_id,
+                contents=batch,
+                config=types.EmbedContentConfig(
+                    task_type=cfg.task_type,
+                    output_dimensionality=cfg.dimensions,
+                ),
+            )
+            for emb in result.embeddings:
+                all_vecs.append(emb.values)
+
+        vecs = np.asarray(all_vecs, dtype="float32")
+        return l2_normalize(vecs)
+
+
+# ---------------------------------------------------------------------------
 # Backward-compatibility aliases (deprecated — will be removed)
 # ---------------------------------------------------------------------------
 

@@ -269,5 +269,131 @@ class TestByT5EmbedderIntegration:
         assert vecs.shape == (1, 1472)
 
 
+class TestGeminiConfig:
+    """Test GeminiConfig defaults."""
+
+    def test_default_config(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import GeminiConfig
+
+        cfg = GeminiConfig()
+        assert cfg.model_id == "gemini-embedding-001"
+        assert cfg.dimensions == 1024
+        assert cfg.task_type == "SEMANTIC_SIMILARITY"
+        assert cfg.batch_size == 100
+
+    def test_custom_config(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import GeminiConfig
+
+        cfg = GeminiConfig(task_type="RETRIEVAL_DOCUMENT", dimensions=768)
+        assert cfg.task_type == "RETRIEVAL_DOCUMENT"
+        assert cfg.dimensions == 768
+
+
+class TestGeminiEmbedderInit:
+    """Test GeminiEmbedder initialization (no API call)."""
+
+    def test_init_default(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import GeminiEmbedder
+
+        embedder = GeminiEmbedder()
+        assert embedder.config.model_id == "gemini-embedding-001"
+        assert embedder._client is None
+
+    def test_init_custom_config(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
+            GeminiConfig,
+            GeminiEmbedder,
+        )
+
+        cfg = GeminiConfig(dimensions=512, task_type="RETRIEVAL_DOCUMENT")
+        embedder = GeminiEmbedder(config=cfg)
+        assert embedder.config.dimensions == 512
+        assert embedder.config.task_type == "RETRIEVAL_DOCUMENT"
+
+
+class TestGeminiEmbedderEmbed:
+    """Test GeminiEmbedder.embed() with mocked API."""
+
+    def test_embed_returns_correct_shape(self):
+        import sys
+        from types import ModuleType
+        from unittest.mock import MagicMock
+
+        # Create mock google.genai module so embed() can import it
+        mock_types = MagicMock()
+        mock_genai = MagicMock()
+        mock_genai.types = mock_types
+        mock_google = ModuleType("google")
+        mock_google.genai = mock_genai
+        sys.modules["google.genai"] = mock_genai
+        sys.modules["google.genai.types"] = mock_types
+
+        try:
+            from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
+                GeminiConfig,
+                GeminiEmbedder,
+            )
+
+            cfg = GeminiConfig(dimensions=1024, batch_size=2)
+            embedder = GeminiEmbedder(config=cfg)
+
+            mock_client = MagicMock()
+            embedder._client = mock_client
+
+            mock_emb = MagicMock()
+            mock_emb.values = [0.1] * 1024
+
+            mock_client.models.embed_content.side_effect = [
+                MagicMock(embeddings=[mock_emb, mock_emb]),
+                MagicMock(embeddings=[mock_emb]),
+            ]
+
+            vecs = embedder.embed(["hello", "world", "test"])
+
+            assert vecs.shape == (3, 1024)
+            assert vecs.dtype == np.float32
+            norms = np.linalg.norm(vecs, axis=1)
+            np.testing.assert_array_almost_equal(norms, np.ones(3), decimal=5)
+        finally:
+            sys.modules.pop("google.genai", None)
+            sys.modules.pop("google.genai.types", None)
+
+    def test_embed_calls_api_with_correct_task_type(self):
+        import sys
+        from types import ModuleType
+        from unittest.mock import MagicMock
+
+        mock_types_mod = MagicMock()
+        mock_genai = MagicMock()
+        mock_genai.types = mock_types_mod
+        sys.modules["google.genai"] = mock_genai
+        sys.modules["google.genai.types"] = mock_types_mod
+
+        try:
+            from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
+                GeminiConfig,
+                GeminiEmbedder,
+            )
+
+            cfg = GeminiConfig(task_type="RETRIEVAL_DOCUMENT", dimensions=512, batch_size=100)
+            embedder = GeminiEmbedder(config=cfg)
+
+            mock_client = MagicMock()
+            embedder._client = mock_client
+
+            mock_emb = MagicMock()
+            mock_emb.values = [0.5] * 512
+            mock_client.models.embed_content.return_value = MagicMock(embeddings=[mock_emb])
+
+            embedder.embed(["test"])
+
+            call_kwargs = mock_client.models.embed_content.call_args
+            # Verify the types.EmbedContentConfig was called with correct params
+            assert mock_client.models.embed_content.called
+        finally:
+            sys.modules.pop("google.genai", None)
+            sys.modules.pop("google.genai.types", None)
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "-m", "not slow"])

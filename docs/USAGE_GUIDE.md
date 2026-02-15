@@ -126,7 +126,37 @@ Outputs go to `outputs/clusters/`, `outputs/qa/`, and `outputs/graphs/`.
 
 ## Step 4: LV2 -- Cross-Language Cognate Discovery
 
-LV2 is the main discovery engine. It uses **BGE-M3** (semantic embeddings) and **ByT5** (character-level embeddings) to find cross-lingual cognate candidates.
+LV2 is the main discovery engine. It supports two backends:
+
+- **Local** (default): BGE-M3 + ByT5 on your machine (requires GPU or patience)
+- **API**: Gemini embedding-001 via Google API (no local GPU, free tier available)
+
+### Choose your backend
+
+| | Local (`--backend local`) | API (`--backend api`) |
+|---|---|---|
+| **Models** | BGE-M3 + ByT5 | Gemini embedding-001 |
+| **Quality** | MTEB 63.0 | MTEB 68.3 (higher) |
+| **Requirements** | torch + ~2 GB download | `google-genai` + API key |
+| **Cost** | Free (your hardware) | Free tier / $0.15 per 1M tokens |
+| **Speed** | Fast with GPU, slow on CPU | Fast (cloud) |
+
+### API backend setup
+
+```bash
+pip install -r requirements.api.txt
+set GOOGLE_API_KEY=your_key_here   # Get free at https://ai.google.dev/
+```
+
+### Estimated API costs
+
+| Corpus | Tokens (~) | Free tier | Paid ($0.15/1M) |
+|--------|-----------|-----------|-----------------|
+| Arabic + English (2 passes) | 2.2M | **Free** | $0.33 |
+| + Latin + Greek (4 targets) | 4.5M | **Free** | $0.68 |
+| Full Kaikki English (1.4M words) | 11M | **Free** | $1.65 |
+
+Embeddings are cached to disk — re-runs cost nothing.
 
 ### Basic discovery run
 
@@ -140,6 +170,18 @@ python scripts/discovery/run_discovery_retrieval.py \
 ```
 
 The `--models semantic form` flag runs both BGE-M3 (semantic) and ByT5 (form) retrieval models.
+
+### API discovery run (no local GPU)
+
+```bash
+python scripts/discovery/run_discovery_retrieval.py \
+  --backend api \
+  --source ara@modern="data/processed/arabic/classical/lexemes.jsonl" \
+  --target eng@modern="data/processed/english/english_ipa_merged_pos.jsonl" \
+  --models semantic form
+```
+
+Uses Gemini embedding-001 with `SEMANTIC_SIMILARITY` and `RETRIEVAL_DOCUMENT` task types.
 
 ### Corpus spec format
 
@@ -157,6 +199,7 @@ Examples:
 
 | Flag | Default | Description |
 |------|---------|-------------|
+| `--backend` | `local` | `local` (BGE-M3/ByT5) or `api` (Gemini embedding-001) |
 | `--models` | `semantic form` | Which retrieval models (`semantic` = BGE-M3, `form` = ByT5) |
 | `--semantic-model` | `BAAI/bge-m3` | HuggingFace model ID for semantic embeddings |
 | `--form-model` | `google/byt5-small` | HuggingFace model ID for form embeddings |
