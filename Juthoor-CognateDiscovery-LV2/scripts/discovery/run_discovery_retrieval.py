@@ -29,6 +29,8 @@ try:
         BgeM3Embedder,
         ByT5Config,
         ByT5Embedder,
+        GeminiConfig,
+        GeminiEmbedder,
     )
     from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights, compute_hybrid
     from juthoor_cognatediscovery_lv2.lv3.discovery.index import FaissIndex, build_flat_ip
@@ -122,8 +124,11 @@ def embed_corpus(
     semantic_cfg: BgeM3Config,
     form_cfg: ByT5Config,
     rebuild_cache: bool,
+    backend: str = "local",
 ):
-    vectors_path, rows_path, _, _ = cache_paths(model=model, spec=spec)
+    # Use a backend-prefixed cache path so local/api vectors don't collide.
+    cache_model = f"api_{model}" if backend == "api" else model
+    vectors_path, rows_path, _, _ = cache_paths(model=cache_model, spec=spec)
     if not rebuild_cache:
         vecs, cached_rows = maybe_load_vectors(vectors_path, rows_path)
         if vecs is not None and cached_rows is not None:
@@ -133,7 +138,12 @@ def embed_corpus(
     for r in rows:
         t = _safe_text(r.lemma)
         texts.append(t if t else r.lexeme_id)
-    if model == "semantic":
+
+    if backend == "api":
+        task = "SEMANTIC_SIMILARITY" if model == "semantic" else "RETRIEVAL_DOCUMENT"
+        embedder = GeminiEmbedder(config=GeminiConfig(task_type=task, dimensions=1024))
+        vecs = embedder.embed(texts)
+    elif model == "semantic":
         embedder = BgeM3Embedder(config=semantic_cfg)
         vecs = embedder.embed(texts)
     elif model == "form":
@@ -183,6 +193,8 @@ def main() -> int:
         default=[],
         help="Repeatable. Format: <lang>[@<stage>]=<path>",
     )
+    parser.add_argument("--backend", choices=["local", "api"], default="local",
+                        help="local = BGE-M3/ByT5 on your machine; api = Gemini embedding-001 via Google API.")
     parser.add_argument("--models", nargs="+", default=["semantic", "form"], choices=["semantic", "form"])
     parser.add_argument("--topk", type=int, default=200, help="Top-K candidates per target corpus (per model).")
     parser.add_argument("--max-out", type=int, default=200, help="Max leads written per source lexeme.")
@@ -204,6 +216,9 @@ def main() -> int:
     parser.add_argument("--language-group", type=str, default=None, help="Optional grouping label (e.g., indo_european).")
     parser.add_argument("--output", type=Path, default=None, help="Override output JSONL path.")
     args = parser.parse_args()
+
+    if args.backend == "api":
+        print("[info] Using Gemini embedding-001 API (no local GPU required).")
 
     if not args.source or not args.target:
         raise SystemExit("Provide at least one --source and one --target.")
@@ -239,8 +254,10 @@ def main() -> int:
                 semantic_cfg=semantic_cfg,
                 form_cfg=form_cfg,
                 rebuild_cache=args.rebuild_cache,
+                backend=args.backend,
             )
-            index = build_or_load_index(model=model, spec=spec, vectors=vecs, rebuild_index=args.rebuild_index)
+            cache_model = f"api_{model}" if args.backend == "api" else model
+            index = build_or_load_index(model=cache_model, spec=spec, vectors=vecs, rebuild_index=args.rebuild_index)
             target_indexes[model].append((spec, index, cached_rows))
 
     with out_path.open("w", encoding="utf-8") as out_fh:
@@ -259,6 +276,7 @@ def main() -> int:
                     semantic_cfg=semantic_cfg,
                     form_cfg=form_cfg,
                     rebuild_cache=args.rebuild_cache,
+                    backend=args.backend,
                 )
                 source_vectors_by_model[model] = vecs
                 source_rows_by_model[model] = cached_rows

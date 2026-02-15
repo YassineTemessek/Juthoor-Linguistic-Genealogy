@@ -30,6 +30,10 @@ form = [
 embeddings = [
     "juthoor-cognatediscovery-lv2[semantic,form]",
 ]
+# Gemini API backend (no local GPU needed)
+api = [
+    "google-genai>=1.0,<2",
+]
 viz = [
     "matplotlib>=3.8",
     "seaborn>=0.13",

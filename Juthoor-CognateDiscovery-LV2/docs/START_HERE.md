@@ -17,8 +17,12 @@ The workflow is always:
 
 Full datasets are not committed by default, but small samples are tracked under `resources/samples/processed/`.
 
-- Run a quick discovery smoke test on samples:
+- Run a quick discovery smoke test on samples (local backend):
   - `python "scripts/discovery/run_discovery_retrieval.py" --source ara@modern@arb_Arab="resources/samples/processed/Arabic-English_Wiktionary_dictionary_stardict_filtered_sample.jsonl" --target eng@modern@eng_Latn="resources/samples/processed/english_ipa_merged_pos_sample.jsonl" --models semantic form --topk 200 --max-out 200 --limit 200`
+
+- Or use the API backend (no local GPU needed):
+  - `pip install -r requirements.api.txt`
+  - `python "scripts/discovery/run_discovery_retrieval.py" --backend api --source ara@modern@arb_Arab="resources/samples/processed/Arabic-English_Wiktionary_dictionary_stardict_filtered_sample.jsonl" --target eng@modern@eng_Latn="resources/samples/processed/english_ipa_merged_pos_sample.jsonl" --models semantic form --topk 200 --max-out 200 --limit 200`
 
 ## Recommended runs (Arabic → Indo‑European)
 

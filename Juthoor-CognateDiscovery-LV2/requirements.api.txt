@@ -1,0 +1,12 @@
+# API backend dependencies (Gemini embedding-001).
+#
+# Install:
+#   pip install -r requirements.api.txt
+#
+# Also set your API key:
+#   set GOOGLE_API_KEY=your_key_here   (Windows)
+#   export GOOGLE_API_KEY=your_key_here (Linux/macOS)
+#
+# Get a free key at: https://ai.google.dev/
+
+google-genai>=1.0,<2
