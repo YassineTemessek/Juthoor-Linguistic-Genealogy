@@ -3,14 +3,14 @@
 ![level](https://img.shields.io/badge/level-QCA-6f42c1)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
-LV1 focuses on Quranic Arabic word relationships: opposites, semantic distance, and nuance.
+QCA focuses on Quranic Arabic word relationships: opposites, semantic distance, and nuance.
 It consumes LV0 canonical outputs and tests the idea that Quranic words are not fully identical
 in meaning even when they are close.
 
 
 ## Role in the stack
 
-LV1 is the Quran-specific analysis layer. It measures relationships between Quranic words
+QCA is the Quran-specific analysis layer. It measures relationships between Quranic words
 (opposites, distance, and nuance) on top of LV0-processed tables.
 
 ## Project map
@@ -32,7 +32,7 @@ LV1 is the Quran-specific analysis layer. It measures relationships between Qura
 1) Get canonical Quranic Arabic tables from LV0.
    - Recommended: use LV0 release bundles with ldc fetch.
    - Alternative: build locally in LV0 (ldc ingest --all).
-2) Run LV1 analysis scripts in scripts/analysis.
+2) Run QCA analysis scripts in scripts/analysis.
 3) Review outputs under outputs.
 
 ## Docs

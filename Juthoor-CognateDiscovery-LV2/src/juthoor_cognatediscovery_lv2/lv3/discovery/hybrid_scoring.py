@@ -60,8 +60,8 @@ def _first_nonempty(*values: Any) -> str:
 
 @dataclass(frozen=True)
 class HybridWeights:
-    sonar: float = 0.40   # semantic model weight (BGE-M3, formerly SONAR)
-    canine: float = 0.20  # form model weight (ByT5, formerly CANINE)
+    semantic: float = 0.40   # semantic model weight (BGE-M3)
+    form: float = 0.20       # form model weight (ByT5)
     orthography: float = 0.15
     sound: float = 0.15
     skeleton: float = 0.10
@@ -108,18 +108,18 @@ def skeleton_score(source: dict[str, Any], target: dict[str, Any]) -> float:
 
 def combined_score(
     *,
-    sonar_score: float | None,
-    canine_score: float | None,
+    semantic_score: float | None,
+    form_score: float | None,
     orthography: float | None,
     sound: float | None,
     skeleton: float | None,
     weights: HybridWeights,
 ) -> tuple[float, dict[str, float]]:
     parts: list[tuple[str, float, float]] = []
-    if sonar_score is not None:
-        parts.append(("sonar", float(sonar_score), float(weights.sonar)))
-    if canine_score is not None:
-        parts.append(("canine", float(canine_score), float(weights.canine)))
+    if semantic_score is not None:
+        parts.append(("semantic", float(semantic_score), float(weights.semantic)))
+    if form_score is not None:
+        parts.append(("form", float(form_score), float(weights.form)))
     if orthography is not None:
         parts.append(("orthography", float(orthography), float(weights.orthography)))
     if sound is not None:
@@ -143,8 +143,8 @@ def compute_hybrid(
     *,
     source: dict[str, Any],
     target: dict[str, Any],
-    sonar: float | None,
-    canine: float | None,
+    semantic: float | None,
+    form: float | None,
     weights: HybridWeights,
 ) -> dict[str, Any]:
     ort = orthography_score(source, target)
@@ -152,8 +152,8 @@ def compute_hybrid(
     skel = skeleton_score(source, target)
 
     combined, used_weights = combined_score(
-        sonar_score=sonar,
-        canine_score=canine,
+        semantic_score=semantic,
+        form_score=form,
         orthography=ort,
         sound=snd,
         skeleton=skel,
