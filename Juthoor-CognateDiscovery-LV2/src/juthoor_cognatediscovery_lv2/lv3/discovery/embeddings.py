@@ -103,6 +103,7 @@ class BgeM3Embedder:
 class ByT5Config:
     model_id: str = "google/byt5-small"
     pooling: str = "mean"  # "mean" | "cls"
+    batch_size: int = 16
 
 
 class ByT5Embedder:
@@ -140,30 +141,36 @@ class ByT5Embedder:
         return torch
 
     def embed(self, texts: list[str]) -> "np.ndarray":
+        import numpy as np
+
         torch = self._load()
         tokenizer = self._tokenizer
         model = self._model
         assert tokenizer is not None and model is not None
 
-        batch = tokenizer(
-            texts,
-            padding=True,
-            truncation=True,
-            max_length=1024,
-            return_tensors="pt",
-        )
-        batch = {k: v.to(self.device) for k, v in batch.items()}
+        all_vecs: list["np.ndarray"] = []
+        bs = self.config.batch_size
+        for i in range(0, len(texts), bs):
+            chunk = tokenizer(
+                texts[i : i + bs],
+                padding=True,
+                truncation=True,
+                max_length=1024,
+                return_tensors="pt",
+            )
+            chunk = {k: v.to(self.device) for k, v in chunk.items()}
 
-        with torch.no_grad():
-            outputs = model(**batch)
+            with torch.no_grad():
+                outputs = model(**chunk)
 
-        last = outputs.last_hidden_state  # [B, T, H]
-        if self.config.pooling == "cls":
-            pooled = last[:, 0, :]
-        else:
-            pooled = last.mean(dim=1)
+            last = outputs.last_hidden_state  # [B, T, H]
+            if self.config.pooling == "cls":
+                pooled = last[:, 0, :]
+            else:
+                pooled = last.mean(dim=1)
+            all_vecs.append(pooled.detach().cpu().numpy())
 
-        return l2_normalize(pooled.detach().cpu().numpy())
+        return l2_normalize(np.concatenate(all_vecs, axis=0))
 
 
 # ---------------------------------------------------------------------------
