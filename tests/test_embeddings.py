@@ -395,5 +395,82 @@ class TestGeminiEmbedderEmbed:
             sys.modules.pop("google.genai.types", None)
 
 
+class TestEstimateTokens:
+    """Test token estimation utility."""
+
+    def test_single_words(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import estimate_tokens
+
+        tokens = estimate_tokens(["hello", "world", "test"])
+        # 3 words × 1.2 ≈ 3.6 → 3
+        assert tokens >= 3
+        assert tokens <= 5
+
+    def test_empty_list(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import estimate_tokens
+
+        tokens = estimate_tokens([])
+        assert tokens >= 1  # minimum 1
+
+    def test_multi_word_entries(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import estimate_tokens
+
+        tokens = estimate_tokens(["hello world", "foo bar baz"])
+        # 2 words + 3 words = 5 × 1.2 = 6
+        assert tokens >= 5
+
+
+class TestEstimateCost:
+    """Test cost estimation utility."""
+
+    def test_free_tier(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import estimate_cost
+
+        cost, is_free = estimate_cost(1_000_000)
+        assert is_free is True
+        assert cost == 0.0
+
+    def test_paid_tier(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import estimate_cost
+
+        cost, is_free = estimate_cost(10_000_000)
+        assert is_free is False
+        assert cost == pytest.approx(1.5, abs=0.01)
+
+    def test_exactly_free_tier(self):
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import estimate_cost
+
+        cost, is_free = estimate_cost(3_500_000)
+        assert is_free is True
+        assert cost == 0.0
+
+
+class TestModelPinningWarning:
+    """Test that non-default model triggers a warning."""
+
+    def test_default_model_no_warning(self):
+        import warnings
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import GeminiEmbedder
+
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            GeminiEmbedder()
+            assert len(w) == 0
+
+    def test_non_default_model_warns(self):
+        import warnings
+        from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import (
+            GeminiConfig,
+            GeminiEmbedder,
+        )
+
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            cfg = GeminiConfig(model_id="some-other-model")
+            GeminiEmbedder(config=cfg)
+            assert len(w) == 1
+            assert "Non-default Gemini model" in str(w[0].message)
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "-m", "not slow"])
