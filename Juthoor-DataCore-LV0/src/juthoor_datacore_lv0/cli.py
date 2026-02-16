@@ -35,7 +35,8 @@ def main(argv: list[str] | None = None) -> int:
 
     args = ap.parse_args(argv)
 
-    repo_root = Path.cwd()
+    # LV0 package root: two levels up from this file (src/juthoor_datacore_lv0/cli.py)
+    repo_root = Path(__file__).resolve().parents[2]
 
     if args.cmd == "ingest":
         script = repo_root / "scripts" / "ingest" / "run_ingest_all.py"

@@ -20,6 +20,31 @@ def l2_normalize(vectors):
 
 
 # ---------------------------------------------------------------------------
+# Cost estimation helpers (for API backend)
+# ---------------------------------------------------------------------------
+
+_GEMINI_FREE_TIER_TOKENS = 3_500_000
+_GEMINI_PRICE_PER_MILLION = 0.15  # USD, paid tier
+
+
+def estimate_tokens(texts: list[str]) -> int:
+    """Rough token count for short lexeme strings (~1.2 tokens per word)."""
+    return max(1, int(sum(max(1, len(t.split()) * 1.2) for t in texts)))
+
+
+def estimate_cost(
+    n_tokens: int,
+    *,
+    price_per_million: float = _GEMINI_PRICE_PER_MILLION,
+    free_tier: int = _GEMINI_FREE_TIER_TOKENS,
+) -> tuple[float, bool]:
+    """Return (cost_usd, is_free). Cost is 0.0 when within free tier."""
+    if n_tokens <= free_tier:
+        return 0.0, True
+    return round(n_tokens * price_per_million / 1_000_000, 4), False
+
+
+# ---------------------------------------------------------------------------
 # Semantic embeddings: BGE-M3 (replaces Meta SONAR)
 # ---------------------------------------------------------------------------
 
@@ -156,6 +181,9 @@ class GeminiConfig:
     batch_size: int = 100
 
 
+_PINNED_GEMINI_MODEL = "gemini-embedding-001"
+
+
 class GeminiEmbedder:
     """Gemini embedding-001 via Google GenAI API (no local GPU needed).
 
@@ -165,6 +193,15 @@ class GeminiEmbedder:
 
     def __init__(self, *, config: GeminiConfig | None = None):
         self.config = config or GeminiConfig()
+        if self.config.model_id != _PINNED_GEMINI_MODEL:
+            import warnings
+            warnings.warn(
+                f"Non-default Gemini model '{self.config.model_id}' selected. "
+                f"The pinned model is '{_PINNED_GEMINI_MODEL}'. "
+                f"Different models may have different pricing.",
+                UserWarning,
+                stacklevel=2,
+            )
         self._client = None
 
     def _get_client(self):
