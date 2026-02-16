@@ -232,8 +232,14 @@ _LANG_GROUPS = {
     "akk": "Akkadian", "uga": "Ugaritic", "gez": "Ge'ez",
     "syr": "Aramaic/Syriac", "syc": "Aramaic/Syriac", "arc": "Aramaic/Syriac",
     "jpa": "Aramaic/Syriac", "tmr": "Aramaic/Syriac",
+    "aramaic-english": "Aramaic/Syriac",
     "ang": "Old/Middle English", "enm": "Old/Middle English",
 }
+
+# Preference order for deduplication: enriched > normalized > filtered.
+# When multiple StarDict versions of the same language exist, keep only
+# the highest-ranked variant.
+_STARDICT_RANK = {"enriched": 3, "normalized": 2, "filtered": 1}
 
 # ── Filename → human-readable label ──
 
@@ -289,17 +295,22 @@ def _guess_group(lang_code: str, parent_dir: str) -> str:
 
 
 def _discover_corpora() -> list[CorpusInfo]:
-    """Scan data/processed/ for JSONL files with rich metadata."""
+    """Scan data/processed/ for JSONL files with rich metadata.
+
+    Skips internal (_intermediate, _parts) and raw StarDict folders.
+    When multiple StarDict versions exist for the same language
+    (enriched / normalized / filtered), keeps only the best one.
+    """
     base = REPO_ROOT / "data" / "processed"
     if not base.exists():
         return []
 
-    results: list[CorpusInfo] = []
+    raw_results: list[CorpusInfo] = []
     print("  Scanning corpora...", end="", flush=True)
     for p in sorted(base.rglob("*.jsonl")):
         rel = p.relative_to(base)
         parts = rel.parts
-        # Skip internal folders
+        # Skip internal folders (_intermediate, _parts, etc.)
         if any(part.startswith("_") for part in parts):
             continue
         # Skip raw stardict (prefer filtered/normalized/enriched)
@@ -330,10 +341,31 @@ def _discover_corpora() -> list[CorpusInfo]:
         label = _clean_label(p.stem)
         group = _guess_group(language, parent_dir)
 
-        results.append(CorpusInfo(
+        raw_results.append(CorpusInfo(
             path=p, label=label, language=language,
             stage=stage, n_rows=n_rows, group=group,
         ))
+
+    # Deduplicate StarDict: keep only the best version per language.
+    # e.g. Latin enriched > Latin normalized > Latin filtered.
+    best_stardict: dict[str, tuple[int, CorpusInfo]] = {}
+    results: list[CorpusInfo] = []
+    for c in raw_results:
+        # Check if this is a wiktionary_stardict file
+        if "wiktionary_stardict" in str(c.path):
+            variant = c.path.parent.name  # "enriched", "normalized", "filtered"
+            rank = _STARDICT_RANK.get(variant, 0)
+            key = c.language  # e.g. "grc", "lat", "ara"
+            prev_rank, _ = best_stardict.get(key, (-1, c))
+            if rank > prev_rank:
+                best_stardict[key] = (rank, c)
+        else:
+            results.append(c)
+
+    # Add the best StarDict version for each language
+    for _, c in sorted(best_stardict.values(), key=lambda x: x[1].label):
+        results.append(c)
+
     print(" done.")
     return results
 
@@ -376,7 +408,8 @@ def _interactive_wizard() -> list[str]:
         print(f"  {group_name}:")
         for idx, c in items:
             stage_str = f" ({c.stage})" if c.stage != "unknown" else ""
-            print(f"    {idx + 1:3d}. {c.label}{stage_str:<30s} {c.n_rows:>8,d} words")
+            name = f"{c.label}{stage_str}"
+            print(f"    {idx + 1:3d}. {name:<40s} {c.n_rows:>8,d} words")
         print()
 
     src_input = input("  Source number [1]: ").strip() or "1"
@@ -397,7 +430,8 @@ def _interactive_wizard() -> list[str]:
         print(f"  {group_name}:")
         for idx, c in filtered:
             stage_str = f" ({c.stage})" if c.stage != "unknown" else ""
-            print(f"    {idx + 1:3d}. {c.label}{stage_str:<30s} {c.n_rows:>8,d} words")
+            name = f"{c.label}{stage_str}"
+            print(f"    {idx + 1:3d}. {name:<40s} {c.n_rows:>8,d} words")
         print()
 
     tgt_input = input("  Target numbers (comma-separated): ").strip()
