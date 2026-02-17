@@ -173,7 +173,7 @@ class TestSoundScore:
         source = {"lemma": "test"}  # No IPA
         target = {"lemma": "test"}
         score = sound_score(source, target)
-        assert score == 0.0  # No IPA data available
+        assert score is None  # None when IPA absent, so combined_score skips this component
 
 
 class TestHybridWeights:

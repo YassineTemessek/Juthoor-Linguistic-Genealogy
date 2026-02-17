@@ -226,6 +226,7 @@ def main() -> None:
     ap.add_argument("--max-group", type=int, default=400, help="Skip similarity+subclustering for very large binary_root groups.")
     ap.add_argument("--qa-max-pairs", type=int, default=200, help="Max random pairs per group for QA coherence.")
     ap.add_argument("--qa-seed", type=int, default=1337, help="Seed for QA shuffle baseline.")
+    ap.add_argument("--rebuild", action="store_true", help="Recompute clusters even if output already exists.")
     args = ap.parse_args()
 
     if not args.input.exists():
@@ -235,6 +236,12 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     clusters_out = out_dir / "binary_root_lemma_clusters.jsonl"
     edges_out = out_dir / "binary_root_similarity_edges.csv"
+
+    if not args.rebuild and clusters_out.exists() and edges_out.exists():
+        print(f"[cache] Outputs already exist — skipping recompute. Use --rebuild to force.")
+        print(f"  {clusters_out}")
+        print(f"  {edges_out}")
+        return
 
     groups: dict[str, list[LemmaRow]] = defaultdict(list)
     total_in = 0
