@@ -7,7 +7,9 @@ from difflib import SequenceMatcher
 from typing import Any
 
 
-_DEFAULT_VOWELS = set("aeiouyɑæɛɪɔʊʌəɨʉɯ")
+_DEFAULT_VOWELS = set("aeiouyɑæɛɪɔʊʌəɨʉɯ")  # Latin + IPA vowels
+_ARABIC_MATRES = frozenset("وياأإآ")             # Arabic long-vowel carriers (matres lectionis)
+_ARABIC_DIACRITICS_RE = re.compile(r"[\u064B-\u0652\u0670\u0640]")  # short vowel diacritics
 _PUNCT_RE = re.compile(r"[\s\-\u2010-\u2015_.,;:!?\"'`~()\[\]{}<>|/\\]+")
 
 
@@ -42,11 +44,17 @@ def _jaccard(a: set[str], b: set[str]) -> float:
 
 
 def _skeleton(text: str) -> str:
+    text = _ARABIC_DIACRITICS_RE.sub("", text)  # strip Arabic short vowel diacritics first
     text = _norm_text(text)
     out: list[str] = []
     for ch in text:
-        if ch.isalpha() and ch not in _DEFAULT_VOWELS:
-            out.append(ch)
+        if not ch.isalpha():
+            continue
+        if ch in _ARABIC_MATRES:   # Arabic long-vowel carriers act as vowels
+            continue
+        if ch in _DEFAULT_VOWELS:  # Latin/IPA vowels
+            continue
+        out.append(ch)
     return "".join(out)
 
 
@@ -65,6 +73,7 @@ class HybridWeights:
     orthography: float = 0.15
     sound: float = 0.15
     skeleton: float = 0.10
+    family_boost: float = 0.05  # multiplicative boost (+5%) for same language family
 
 
 def orthography_score(source: dict[str, Any], target: dict[str, Any]) -> float:
@@ -82,13 +91,13 @@ def orthography_score(source: dict[str, Any], target: dict[str, Any]) -> float:
     return float(0.6 * j + 0.4 * r)
 
 
-def sound_score(source: dict[str, Any], target: dict[str, Any]) -> float:
+def sound_score(source: dict[str, Any], target: dict[str, Any]) -> float | None:
     a_raw = _first_nonempty(source.get("ipa"), source.get("ipa_raw"))
     b_raw = _first_nonempty(target.get("ipa"), target.get("ipa_raw"))
     a = _norm_text(a_raw)
     b = _norm_text(b_raw)
     if not a or not b:
-        return 0.0
+        return None   # IPA absent — skip this component rather than penalise with 0.0
     return _seq_ratio(a, b)
 
 
@@ -147,8 +156,10 @@ def compute_hybrid(
     form: float | None,
     weights: HybridWeights,
 ) -> dict[str, Any]:
+    from .lang import are_same_family
+
     ort = orthography_score(source, target)
-    snd = sound_score(source, target)
+    snd = sound_score(source, target)   # may be None when IPA is absent
     skel = skeleton_score(source, target)
 
     combined, used_weights = combined_score(
@@ -159,13 +170,22 @@ def compute_hybrid(
         skeleton=skel,
         weights=weights,
     )
+
+    # Apply a small multiplicative boost for same-family language pairs
+    src_lang = source.get("lang", "") or source.get("language", "")
+    tgt_lang = target.get("lang", "") or target.get("language", "")
+    family_match = bool(src_lang and tgt_lang and are_same_family(src_lang, tgt_lang))
+    if family_match and weights.family_boost > 0:
+        combined = min(1.0, combined * (1.0 + weights.family_boost))
+
     return {
         "components": {
             "orthography": ort,
-            "sound": snd,
+            "sound": snd,        # null when IPA absent — intentional
             "skeleton": skel,
         },
-        "combined_score": combined,
+        "combined_score": round(combined, 4),
         "weights_used": used_weights,
+        "family_boost_applied": family_match,
     }
 

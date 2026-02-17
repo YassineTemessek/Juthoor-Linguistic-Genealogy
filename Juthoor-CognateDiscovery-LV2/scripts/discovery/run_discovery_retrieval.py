@@ -542,10 +542,12 @@ def main() -> int:
     parser.add_argument("--w-orth", type=float, default=HybridWeights.orthography)
     parser.add_argument("--w-sound", type=float, default=HybridWeights.sound)
     parser.add_argument("--w-skeleton", type=float, default=HybridWeights.skeleton)
-    parser.add_argument("--pair-id", type=str, default=None, help="Optional run label (e.g., ara_vs_eng_modern).")
-    parser.add_argument("--language-group", type=str, default=None, help="Optional grouping label (e.g., indo_european).")
+    parser.add_argument("--pair-id", type=str, default=None, help="Optional run label (e.g., ara_vs_eng_modern). Auto-generated if omitted.")
+    parser.add_argument("--language-group", type=str, default=None, help="Optional grouping label. Auto-derived from language families if omitted.")
     parser.add_argument("--output", type=Path, default=None, help="Override output JSONL path.")
     parser.add_argument("-y", "--yes", action="store_true", help="Skip cost confirmation prompt.")
+    parser.add_argument("--min-hybrid", type=float, default=0.0, help="Minimum hybrid score to include in output (0=all).")
+    parser.add_argument("--no-report", action="store_true", help="Skip generating the HTML report after the run.")
     args = parser.parse_args()
 
     if args.backend == "api":
@@ -556,6 +558,17 @@ def main() -> int:
 
     sources = [parse_spec(s) for s in args.source]
     targets = [parse_spec(t) for t in args.target]
+
+    # Auto-populate pair_id and language_group if not provided
+    if not args.pair_id:
+        src_langs = "_".join(s.lang for s in sources)
+        tgt_langs = "_".join(t.lang for t in targets)
+        args.pair_id = f"{src_langs}_vs_{tgt_langs}"
+
+    if not args.language_group:
+        from juthoor_cognatediscovery_lv2.lv3.discovery.lang import get_language_family
+        families = sorted({get_language_family(s.lang) for s in sources + targets} - {None})
+        args.language_group = "+".join(families) or None
 
     semantic_cfg = BgeM3Config(model_id=args.semantic_model, max_length=args.semantic_max_length)
     form_cfg = ByT5Config(model_id=args.form_model, pooling=args.form_pooling)
@@ -747,12 +760,27 @@ def main() -> int:
                     )
 
                 ranked = sorted(candidates.values(), key=sort_key, reverse=True)[:max_out]
+                if args.min_hybrid > 0:
+                    ranked = [
+                        e for e in ranked
+                        if (e.get("hybrid") or {}).get("combined_score", 0) >= args.min_hybrid
+                    ]
                 for row in ranked:
                     row.pop("_source_fields", None)
                     row.pop("_target_fields", None)
                     out_fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
     print(f"Wrote discovery leads: {out_path}")
+
+    if not args.no_report:
+        try:
+            from report import generate_report  # co-located in scripts/discovery/
+            report_path = out_path.with_suffix(".html")
+            generate_report(out_path, report_path)
+            print(f"Wrote HTML report:     {report_path}")
+        except Exception as exc:
+            print(f"[warn] Could not generate HTML report: {exc}")
+
     return 0
 
 
