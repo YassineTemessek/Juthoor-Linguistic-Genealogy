@@ -4,9 +4,10 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$repoRoot = Split-Path -Parent $PSScriptRoot
+$lv0Root = Split-Path -Parent $PSScriptRoot
+$repoRoot = Split-Path -Parent $lv0Root
 $resourcesRoot = Join-Path $repoRoot "Resources"
-$lv0RawRoot = Join-Path $repoRoot "Juthoor-DataCore-LV0\\data\\raw"
+$lv0RawRoot = Join-Path $lv0Root "data\raw"
 
 function Write-Step([string]$message) {
     Write-Host "[setup_raw_links] $message"
