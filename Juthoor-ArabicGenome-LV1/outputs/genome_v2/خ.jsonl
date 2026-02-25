@@ -1,0 +1,388 @@
+{"bab": "خ", "binary_root": "خا", "root": "خاء", "words": ["خاءِ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خاب", "words": ["خاب", "خابَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خات", "words": ["خاتَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خارزنج", "words": ["خارْزَنْجُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خاس", "words": ["خَاسَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خاض", "words": ["خاضَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خاف", "words": ["خافَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خاقان", "words": ["خاقانُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خال", "words": ["خالَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خا", "root": "خامه", "words": ["خامَة"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبا", "words": ["خبأ", "خبا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خباه", "words": ["خَبأَهٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبت", "words": ["أَخْبَتُ", "تُخْبِتَ", "خبت", "خَبَتِ", "مُخْبِتِينَ"], "muajam_match": true, "binary_root_meaning": "تخلخل باطن الشيء المتجمع", "axial_meaning": "انخفاض باتساع واستقرار", "added_letter": "ت", "quran_example": "المخبتين - \"وَبَشِّرِ الْمُخْبِتِينَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خب", "root": "خبتع", "words": ["خَبتع", "خُبْتُعٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبتل", "words": ["خبتل", "خَبتل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبث", "words": ["خبث", "خَبُثَ"], "muajam_match": true, "binary_root_meaning": "تخلخل باطن الشيء المتجمع", "axial_meaning": "رديء مكروه ينتشر من الشيء، أو يتأتى منه", "added_letter": "ث", "quran_example": "الخبيث - \"وَيُحَرِّمُ عَلَيْهِمُ الْخَبَائِثَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خب", "root": "خبج", "words": ["خبج", "خَبَجَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبد", "words": ["خَبد"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبدع", "words": ["خَبدع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبذع", "words": ["خبذع", "خَبذع", "خَبْذَعٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبر", "words": ["خبر", "خَبر"], "muajam_match": true, "binary_root_meaning": "تخلخل باطن الشيء المتجمع", "axial_meaning": "وصول الرخاوة إلى عمق الشيء", "added_letter": "ر", "quran_example": "خبير - \"وَهُوَ اللَّطِيفُ الْخَبِيرُ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خب", "root": "خبرجل", "words": ["خبرجل", "خَبرجل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبرع", "words": ["خبرع", "خَبرع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبرق", "words": ["خبرق", "خَبرق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبرنج", "words": ["خبرنج", "خَبَرْنَج"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبز", "words": ["خبز", "خَبز"], "muajam_match": true, "binary_root_meaning": "تخلخل باطن الشيء المتجمع", "axial_meaning": "بَسْطُ الشيء بإذهاب غِلَظه (أي تكتله)", "added_letter": "ز", "quran_example": "خبزًا - \"أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خب", "root": "خبس", "words": ["خبس", "خَبس", "خَبَسَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبش", "words": ["خبش", "خَبش", "خَبَشَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبص", "words": ["خبص", "خَبص"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبصه", "words": ["خَبَصَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبط", "words": ["خبط", "خَبط", "يَتَخَبَّطُ"], "muajam_match": true, "binary_root_meaning": "تخلخل باطن الشيء المتجمع", "axial_meaning": "صَدْمٌ - أو مُخالطة - بغليظ قوي يخترق، أو يكاد", "added_letter": "ط", "quran_example": "يتخبطه - \"يَتَخَبَّطُهُ الشَّيْطَانُ مِنَ الْمَسِّ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خب", "root": "خبطه", "words": ["خَبَطَه"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبع", "words": ["خبع", "خَبع", "خَبَعَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبعل", "words": ["خَبْعَلَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبق", "words": ["خبق", "خَبق", "خَبَقَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبك", "words": ["خبك", "خَبَكٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبل", "words": ["خبل", "خَبل"], "muajam_match": true, "binary_root_meaning": "تخلخل باطن الشيء المتجمع", "axial_meaning": "تَعَطُّلُ العُضْوِ واحتباسه عن الانبساط المعتاد", "added_letter": "ل", "quran_example": "خبالًا - \"لَا يَأْلُونَكُمْ خَبَالًا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خب", "root": "خبن", "words": ["خبن", "خَبن", "خَبَنَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خب", "root": "خبو", "words": ["خبو", "خَبَتْ"], "muajam_match": true, "binary_root_meaning": "تخلخل باطن الشيء المتجمع", "axial_meaning": "خمود لهب النار، ونحوها", "added_letter": "و", "quran_example": "خبت - \"كُلَّمَا خَبَتْ زِدْنَاهُمْ سَعِيرًا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خب", "root": "خبي", "words": ["خبى", "خبي"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختا", "words": ["ختأ", "ختا", "خَتَا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختاه", "words": ["خَتَأَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "خترش", "words": ["خَترش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "خترشه", "words": ["خَتْرَشَةُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "خترع", "words": ["خَترع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "خترف", "words": ["خَترف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "خترفه", "words": ["خَتْرَفَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "خترم", "words": ["خترم", "خَترم", "خَتْرَمَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختش", "words": ["خَتش", "خُتَّشُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختع", "words": ["ختع", "خَتع", "خَتَعَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختعل", "words": ["ختعل", "خَتعل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختل", "words": ["ختل", "خَتل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختلع", "words": ["ختلع", "خَتلع", "خَتْلَعَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختلم", "words": ["خَتلم", "خَتْلَمَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختله", "words": ["خَتَلَه"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختم", "words": ["ختم", "خَتم", "خَتَمَ", "مَّخْتُومٍ", "نَخْتِمُ", "يَخْتِمْ"], "muajam_match": true, "binary_root_meaning": "نقص الحدة أو الجرم", "axial_meaning": "إنهاء الشيء ومنع الزيادة عليه بتسوية ظاهره وتغطيته", "added_letter": "م", "quran_example": "ختم - \"خَتَمَ اللَّهُ عَلَى قُلُوبِهِمْ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ت", "letter2_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خت", "root": "ختمه", "words": ["خَتَمَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختن", "words": ["ختن", "خَتَنَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خت", "root": "ختوب", "words": ["خُتْوُبٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثر", "words": ["خثر", "خَثَرَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثرم", "words": ["خثرم", "خَثرم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثع", "words": ["خثع", "خَثع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثعم", "words": ["خثعم", "خَثعم", "خَثْعَمٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثل", "words": ["خثل", "خَثل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثلم", "words": ["خثلم", "خَثلم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثله", "words": ["خَثْلَةُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثم", "words": ["خثم", "خَثم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثمه", "words": ["خَثَّمَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خث", "root": "خثي", "words": ["خثى", "خثي", "خَثَى"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خج", "root": "خجا", "words": ["خجأ", "خجا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خج", "root": "خجرم", "words": ["خَجرم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خج", "root": "خجسته", "words": ["خُجَسْتَةُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خج", "root": "خجف", "words": ["خجف", "خَجف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خج", "root": "خجل", "words": ["خجل", "خَجل", "خَجِلَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خج", "root": "خجم", "words": ["خجم", "خَجم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خج", "root": "خجي", "words": ["خجي", "خَجِيَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدبه", "words": ["خَدَبَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدرب", "words": ["خدرب", "خَدْرَبٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدرع", "words": ["خَدرع", "خَدْرَعَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدرق", "words": ["خدرق", "خَدرق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدش", "words": ["خدش", "خَدش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدشه", "words": ["خَدَشَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدع", "words": ["خدع", "خَدع", "خَٰدِعُ", "يَخْدَعُ", "يُخَٰدِعُ"], "muajam_match": true, "binary_root_meaning": "التجوف الممتد", "axial_meaning": "إخفاء الشيء في باطن يلتئم ظاهره عليه فلا يُظَنّ وجوده", "added_letter": "ع", "quran_example": "يخادعون - \"يُخَادِعُونَ اللَّهَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خد", "root": "خدعه", "words": ["خَدَعَه"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدف", "words": ["خدف", "خَدف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدفل", "words": ["خدفل", "خَدفل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدل", "words": ["خدل", "خَدل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدلج", "words": ["خدلج", "خَدلج"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدم", "words": ["خدم", "خَدم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدمه", "words": ["خَدَمَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدنق", "words": ["خدنق", "خَدنق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدود", "words": ["خْدود"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خد", "root": "خدي", "words": ["خدى", "خدي", "خَدَى"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذا", "words": ["خذأ", "خذأَ", "خذا", "خَذَأ", "خَذَا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذرف", "words": ["خذرف", "خَذرف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذرق", "words": ["خذرق", "خَذرق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذرم", "words": ["خَذرم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذع", "words": ["خذع", "خَذع", "خَذَعَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذعبه", "words": ["خَذْعَبَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذعرب", "words": ["خذعرب", "خَذَعْرَبٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذعل", "words": ["خذعل", "خَذعل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذف", "words": ["خذف", "خَذف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذق", "words": ["خذق", "خَذق", "خَذَقَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذل", "words": ["خذل", "خَذل", "مَّخْذُولًا", "يَخْذُلْ"], "muajam_match": true, "binary_root_meaning": "النفاذ بقوة من الحوزة أو إليها بغلظ", "axial_meaning": "التخلف - أو التوقف - عن الصحبة المعتادة", "added_letter": "ل", "quran_example": "خذولًا - \"وَكَانَ الشَّيْطَانُ لِلْإِنسَانِ خَذُولًا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ذ", "letter2_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خذ", "root": "خذلم", "words": ["خذلم", "خَذلم", "خَذْلَمَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذله", "words": ["خَذَلَه"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذم", "words": ["خذم", "خَذم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذمه", "words": ["خَذَمَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذنق", "words": ["خذنق", "خَذنق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خذ", "root": "خذيت", "words": ["خَذِيَتْ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرا", "words": ["خرأ", "خرا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرب", "words": ["خرب", "يُخْرِبُ"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "خلاء - أو فراغ - في وَسَط الجرم الملتئم", "added_letter": "ب", "quran_example": "خرابها - \"وَسَعَى فِي خَرَابِهَا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خر", "root": "خربان", "words": ["خربَان", "خَرْبانُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خربس", "words": ["خربس", "خَربس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خربسيس", "words": ["خَرْبَسيسٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خربش", "words": ["خربش", "خَربش", "خَرْبَشَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خربص", "words": ["خربص", "خَربص", "خَرْبَصَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خربق", "words": ["خربق", "خَربق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خربل", "words": ["خَربل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خربوذ", "words": ["خَرَّبُوذَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خربيل", "words": ["خِرْبِيلُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرت", "words": ["خرت", "خَرت"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرتنك", "words": ["خَرتنك"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرث", "words": ["خرث", "خَرث"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرثم", "words": ["خرثم", "خَرثم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرثمه", "words": ["خَرْثَمَة"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرج", "words": ["أَخْرَجَ", "أَخْرَجَتِ", "أَخْرَجَتْ", "أَخْرَجُ", "أَخْرَجْ", "أَخْرِجُ", "أَخْرِجْ", "أُخْرَجَ", "أُخْرَجُ", "أُخْرِجَتْ", "أُخْرِجُ", "أُخْرِجْ", "إِخْرَاجًا", "إِخْرَاجٍ", "إِخْرَاجُ", "إِخْرَاجِ", "تَخْرُجَ", "تَخْرُجُ", "تَخْرُجْ", "تَسْتَخْرِجُ", "تُخْرَجُ", "تُخْرِجَ", "تُخْرِجُ", "خرج", "خَارِجٍ", "خَرج", "خَرَجَ", "خَرَجُ", "خَرَجْ", "خَٰرِجِينَ", "مُخْرَجَ", "مُخْرَجُونَ", "مُخْرَجِينَ", "مُخْرِجٌ", "مُخْرِجُ", "مُّخْرَجُونَ", "نَخْرُجَ", "نُخْرِجَ", "نُخْرِجُ", "نُّخْرِجُ", "يَخْرُجُ", "يَخْرُجْ", "يَسْتَخْرِجَ", "يُخْرَجُ", "يُخْرِجَ", "يُخْرِجُ", "يُخْرِجْ", "ٱخْرُجُ", "ٱخْرُجْ", "ٱسْتَخْرَجَ"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "نفاذ من الحيز - أو الأثناء - بتجمع", "added_letter": "ج", "quran_example": "خرجوا - \"خَرَجُوا مِن دِيَارِهِمْ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خر", "root": "خرد", "words": ["خرد", "خَرد"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "بقاء الشيء على فطرته - أو أصله - دون استعمال", "added_letter": "د", "quran_example": "", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خر", "root": "خردب", "words": ["خردب", "خَرْدَبٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خردق", "words": ["خردق", "خَردق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خردل", "words": ["خردل", "خَردل", "خَرْدَلَ"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "تفرق مع دقة جرم", "added_letter": "د ل", "quran_example": "خردل - \"مِثْقَالَ حَبَّةٍ مِّنْ خَرْدَلٍ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خر", "root": "خرذل", "words": ["خرذل", "خَرذل", "خَرْذَلَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرر", "words": ["تَخِرُّ", "خرر", "خَرَّ", "خَرُّ", "يَخِرُّ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرز", "words": ["خرز", "خَرز", "خَرَزَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرس", "words": ["خرس", "خَرس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرش", "words": ["خرش", "خَرش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرشب", "words": ["خرشب", "خَرْشَبَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرشع", "words": ["خَرشع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرشف", "words": ["خرشف", "خَرشف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرشم", "words": ["خرشم", "خَرشم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرشنه", "words": ["خَرْشَنَةُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرشه", "words": ["خَرَشَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرص", "words": ["تَخْرُصُ", "خرص", "خَرص", "يَخْرُصُ"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "خلوص الشيء من آخر مجتمعًا في استواء، أو تحدد", "added_letter": "ص", "quran_example": "الخراصون - \"قُتِلَ الْخَرَّاصُونَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خر", "root": "خرض", "words": ["خرض", "خَرض"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرط", "words": ["خرط", "خَرط", "خَرَطَ"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "انتزاع العالق الممتسك بممتدٍ ضما وجذبًا وسَلْتًا بقوة", "added_letter": "ط", "quran_example": "", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خر", "root": "خرطل", "words": ["خَرطل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرطم", "words": ["خرطم", "خَرطم"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "امتداد الشيء من مقدم شيء متضامًا أو مستوي الظاهر", "added_letter": "ط م", "quran_example": "الخرطوم - \"سَنَسِمُهُ عَلَى الْخُرْطُومِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خر", "root": "خرع", "words": ["خرع", "خَرع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرف", "words": ["خرف", "خَرف", "خَرَفَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرفش", "words": ["خرفش", "خَرفش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرفع", "words": ["خرفع", "خَرفع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرفق", "words": ["خرفق", "خَرفق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرق", "words": ["تَخْرِقَ", "خرق", "خَرق", "خَرَقَ", "خَرَقُ", "خَرَقْ"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "نفاذ في العمق - أو منه - بغلظ وقُوَّة", "added_letter": "ق", "quran_example": "خرقها - \"فِي السَّفِينَةِ خَرَقَهَا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خر", "root": "خرقف", "words": ["خرقف", "خَرقف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرقل", "words": ["خرقل", "خَرقل", "خَرْقَلَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرقه", "words": ["خَرَقَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرك", "words": ["خرك", "خَرك", "خَرِكَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرم", "words": ["خرم", "خَرم", "خَرَمَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرمس", "words": ["خرمس", "خَرمس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرمش", "words": ["خرمش", "خَرمش", "خَرْمَشَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرمص", "words": ["خرمص", "خَرمص"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرمل", "words": ["خرمل", "خَرمل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرنص", "words": ["خَرنص"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرنف", "words": ["خرنف", "خَرنف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خرنق", "words": ["خرنق", "خَرنق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خروه", "words": ["خُرْوَةُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خر", "root": "خري", "words": ["خري", "خَرِئَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزاه", "words": ["خَزَاهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزب", "words": ["خزب", "خَزِبَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزرانق", "words": ["خُزْرَانِقُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزرف", "words": ["خزرف", "خَزرف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزرق", "words": ["خزرق", "خَزرق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزرنق", "words": ["خزرنق", "خَزّرْنَق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزع", "words": ["خزع", "خَزع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزعبل", "words": ["خزعبل", "خَزعبل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزعل", "words": ["خزعل", "خَزعل", "خَزْعَلَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزف", "words": ["خزف", "خَزف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزق", "words": ["خزق", "خَزق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزقه", "words": ["خَزَقَه"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزل", "words": ["خزل", "خَزل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزم", "words": ["خزم", "خَزم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزمه", "words": ["خَزَمَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خز", "root": "خزن", "words": ["خزن", "خَزَنَ", "خَٰزِنِينَ"], "muajam_match": true, "binary_root_meaning": "نفاذ الحاد أو النفاذ بحدة في أثناء الشيء", "axial_meaning": "دس الشيء في باطن شيء حريز لمدة طويلة", "added_letter": "ن", "quran_example": "خزائن - \"وَلِلَّهِ خَزَائِنُ السَّمَوَاتِ وَالْأَرْضِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ز", "letter2_meaning": "اكتناز وازدحام", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خز", "root": "خزي", "words": ["أَخْزَيْ", "تُخْزُ", "تُخْزِ", "خزى", "خزي", "خَزِيَ", "مُخْزِى", "نَخْزَىٰ", "يُخْزِ", "يُخْزِى", "يُخْزِىَ", "يُخْزِي"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خسا", "words": ["خسأ", "خسا", "خَاسِئًا", "خَسَأَ", "خَٰسِـِٔينَ", "ٱخْسَـُٔ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خسب", "words": ["خسب", "خَسب"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خست", "words": ["خست", "خَسْتُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خسر", "words": ["تَخْسِيرٍ", "تُخْسِرُ", "خسر", "خَاسِرَةٌ", "خَسَرَ", "خَسِرَ", "خَسِرُ", "خَٰسِرُونَ", "خَٰسِرِينَ", "مُخْسِرِينَ", "يَخْسَرُ", "يُخْسِرُ"], "muajam_match": true, "binary_root_meaning": "القلة والنقص", "axial_meaning": "نَقْصُ الشيء بذهاب أجزاء منه فقدا", "added_letter": "ر", "quran_example": "خاسئين - \"كُونُوا قِرَدَةً خَاسِئِينَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خس", "root": "خسس", "words": ["خسس", "خَسس"], "muajam_match": true, "binary_root_meaning": "القلة والنقص", "axial_meaning": "نَقْصُ جِرْمِ الشيء (ذهاب وانتقاص منه بحدة)", "added_letter": "س", "quran_example": "", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خس", "root": "خسع", "words": ["خَسع", "خُسِعَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خسف", "words": ["خسف", "خَسف", "خَسَفَ", "خَسَفْ", "نَخْسِفْ", "يَخْسِفَ"], "muajam_match": true, "binary_root_meaning": "القلة والنقص", "axial_meaning": "انخـــراق القاع – أو الباطن- الذي يقوم عليه الشيء", "added_letter": "ف", "quran_example": "خسف - \"فَخَسَفْنَا بِهِ وَبِدَارِهِ الْأَرْضَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خس", "root": "خسق", "words": ["خسق", "خَسَقَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خسك", "words": ["خَسك", "خُسْكٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خسل", "words": ["خسل", "خَسل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خسم", "words": ["خسم", "خَسم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خس", "root": "خسي", "words": ["خسى", "خسي", "خَسي"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشبل", "words": ["خَشبل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشت", "words": ["خشت", "خَشَتِ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشرم", "words": ["خشرم", "خَشرم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشسبرم", "words": ["خشسبرم", "خَشسبرم", "خَشَسْبَرمُ", "خَشَسْبَرَمْ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشش", "words": ["خشش", "خَشش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشع", "words": ["تَخْشَعَ", "خشع", "خَشع", "خَشَعَتِ", "خَٰشِعًا", "خَٰشِعَةً", "خَٰشِعَةٌ", "خَٰشِعَٰتِ", "خَٰشِعُونَ", "خَٰشِعِينَ", "خُشُوعًا", "خُشَّعًا"], "muajam_match": true, "binary_root_meaning": "تجمع الدقاق الخشنة أو الحادّة في أثناء الشيء", "axial_meaning": "هبوط ما شأنه الارتفاع والغلظ؛ لتسيب أثنائه", "added_letter": "ع", "quran_example": "تخشع - \"أَن تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ش", "letter2_meaning": "تفشٍّ أو انتشار مع دقة", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خش", "root": "خشف", "words": ["خشف", "خَشف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشك", "words": ["خَشك", "خُشْكٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشل", "words": ["خشل", "خَشل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشم", "words": ["خشم", "خَشم", "خَشِمَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشنام", "words": ["خُشنامُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشنفل", "words": ["خَشنفل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشنم", "words": ["خَشنم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشي", "words": ["تَخْشَ", "تَخْشَى", "تَخْشَىٰ", "خشى", "خشي", "خَشِىَ", "خَشِي", "نَخْشَىٰٓ", "يَخْشَ", "يَخْشَى", "يَخْشَىٰ", "يَخْشَىٰٓ", "ٱخْشَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خش", "root": "خشيه", "words": ["خَشِيَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خص", "root": "خصص", "words": ["خصص", "خَصص", "يَخْتَصُّ"], "muajam_match": true, "binary_root_meaning": "دقة الشيء ومحدوديته", "axial_meaning": "فُرجة تحصر النافذ أو النفاذ ليكون دقيقًا", "added_letter": "ص", "quran_example": "خصاصة - \"وَلَوْ كَانَ بِهِمْ خَصَاصَةٌ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ص", "letter2_meaning": "نفاذ بغلظ وقوة وخلوص", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خص", "root": "خصف", "words": ["خصف", "خَصف", "يَخْصِفَ"], "muajam_match": true, "binary_root_meaning": "دقة الشيء ومحدوديته", "axial_meaning": "ضمُّ دِقاق منفصلة متناسبة العِرَض بعضها مع بعض", "added_letter": "ف", "quran_example": "يخصفان - \"وَطَفِقَا يَخْصِفَانِ عَلَيْهِمَا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ص", "letter2_meaning": "نفاذ بغلظ وقوة وخلوص", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خص", "root": "خصل", "words": ["خصل", "خَصل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خص", "root": "خصلف", "words": ["خصلف", "خَصلف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خص", "root": "خصلفه", "words": ["خَصْلَفَةُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خص", "root": "خصم", "words": ["تَخَاصُمُ", "تَخْتَصِمُ", "خصم", "خَصم", "يَخِصِّمُ", "يَخْتَصِمُ", "ٱخْتَصَمُ"], "muajam_match": true, "binary_root_meaning": "دقة الشيء ومحدوديته", "axial_meaning": "تحيز الشيء في جانب مناظرا لمثله", "added_letter": "م", "quran_example": "خصيم - \"فَإِذَا هُوَ خَصِيمٌ مُّبِينٌ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ص", "letter2_meaning": "نفاذ بغلظ وقوة وخلوص", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خص", "root": "خصه", "words": ["خَصَّهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خص", "root": "خصي", "words": ["خصى", "خصي"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضبه", "words": ["خَضَبَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضد", "words": ["خضد", "خَضَدَ", "مَّخْضُودٍ"], "muajam_match": true, "binary_root_meaning": "رخاوة الأثناء مع خثورتها", "axial_meaning": "لين باطن الشيء الغليظ السَوِيّ الظاهر، أي عدم صلابته", "added_letter": "د", "quran_example": "مخضود - \"فِي سِدْرٍ مَّخْضُودٍ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ض", "letter2_meaning": "ضغط بكثافة وغلظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خض", "root": "خضر", "words": ["خضر", "مُخْضَرَّةً"], "muajam_match": true, "binary_root_meaning": "رخاوة الأثناء مع خثورتها", "axial_meaning": "الامتلاء بالغضاضة والري مع ذلك اللون المريح", "added_letter": "ر", "quran_example": "خضرًا - \"وَيَلْبَسُونَ ثِيَابًا خُضْرًا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ض", "letter2_meaning": "ضغط بكثافة وغلظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خض", "root": "خضرع", "words": ["خضرع", "خَضرع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضرف", "words": ["خضرف", "خَضرف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضرم", "words": ["خضرم", "خَضرم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضع", "words": ["تَخْضَعْ", "خضع", "خَضع", "خَضَعَ", "خَٰضِعِينَ"], "muajam_match": true, "binary_root_meaning": "رخاوة الأثناء مع خثورتها", "axial_meaning": "انحناء ما شأنه أن ينتصب (لرخاوة أثنائه)", "added_letter": "ع", "quran_example": "تخضعن - \"فَلَا تَخْضَعْنَ بِالْقَوْلِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ض", "letter2_meaning": "ضغط بكثافة وغلظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خض", "root": "خضف", "words": ["خضف", "خَضف", "خَضفَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضل", "words": ["خضل", "خَضل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضلف", "words": ["خضلف", "خَضلف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضم", "words": ["خضم", "خَضم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خض", "root": "خضن", "words": ["خضن", "خَضَنَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خط", "root": "خطا", "words": ["أَخْطَأْ", "خطأ", "خطا", "خَاطِئَةٍ", "خَاطِئَةِ", "خَاطِـِٔينَ", "خَطا", "خَٰطِـُٔونَ", "خَٰطِـِٔينَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خط", "root": "خطب", "words": ["تُخَٰطِبْ", "خطب", "خَاطَبَ"], "muajam_match": true, "binary_root_meaning": "الامتداد السطحي الخفيف مع أخذ ما", "axial_meaning": "لَفْتُ وجذب بلطف مع نوع من المغالبة", "added_letter": "ب", "quran_example": "الخطاب - \"وَفَصْلَ الْخِطَابِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ط", "letter2_meaning": "ضغط باتّساع واستغلاظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خط", "root": "خطرف", "words": ["خطرف", "خَطرف", "خَطْرَفَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خط", "root": "خطط", "words": ["تَخُطُّ", "خطط", "خَطط"], "muajam_match": true, "binary_root_meaning": "الامتداد السطحي الخفيف مع أخذ ما", "axial_meaning": "شَقٌّ سطحي دقيق مستطيل في ظاهر الشيء", "added_letter": "ط", "quran_example": "تخطه - \"وَلَا تَخُطُّهُ بِيَمِينِكَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ط", "letter2_meaning": "ضغط باتّساع واستغلاظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خط", "root": "خطف", "words": ["تَخْطَفُ", "خطف", "خَطف", "خَطَفَ", "خَطِفَ", "نُتَخَطَّفْ", "يَتَخَطَّفَ", "يَخْطَفُ", "يُتَخَطَّفُ"], "muajam_match": true, "binary_root_meaning": "الامتداد السطحي الخفيف مع أخذ ما", "axial_meaning": "نزع الشيء مما يُمسكه بخفة سرعة، أو لطف", "added_letter": "ف", "quran_example": "يخطف - \"يَكَادُ الْبَرْقُ يَخْطَفُ أَبْصَارَهُمْ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ط", "letter2_meaning": "ضغط باتّساع واستغلاظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خط", "root": "خطل", "words": ["خطل", "خَطل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خط", "root": "خطم", "words": ["خطم", "خَطم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خظ", "root": "خظا", "words": ["خظا", "خَظَا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خظ", "root": "خظظ", "words": ["خظظ", "خَظظ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خظ", "root": "خظي", "words": ["خظى", "خَظِيَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خع", "root": "خعخع", "words": ["خعخع", "خَعخَع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خع", "root": "خعع", "words": ["خعع", "خَعع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خع", "root": "خعل", "words": ["خعل", "خَعل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خع", "root": "خعم", "words": ["خعم", "خَعم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفا", "words": ["خفأ", "خفا", "خَفَا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفاه", "words": ["خَفاهُ", "خَفَأَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفت", "words": ["تُخَافِتْ", "خفت", "خَفت", "خَفَتَ", "يَتَخَٰفَتُ"], "muajam_match": true, "binary_root_meaning": "تخلخل أثناء الشيء وقلة كثافته", "axial_meaning": "دِقَةُ جِرْمِ الشيء وضَعْفُه من فراغ جوفه", "added_letter": "ت", "quran_example": "تخافت - \"وَلَا تُخَافِتْ بِهَا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خف", "root": "خفثل", "words": ["خفثل", "خَفثل", "خَفْثَلٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفج", "words": ["خفج", "خَفج"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفجل", "words": ["خفجل", "خَفجل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفد", "words": ["خفد", "خَفد", "خَفَدَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفر", "words": ["خفر", "خَفر"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفس", "words": ["خفس", "خَفس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفش", "words": ["خفش", "خَفش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفشل", "words": ["خفشل", "خَفشل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفض", "words": ["خفض", "خَافِضَةٌ", "خَفض", "ٱخْفِضْ"], "muajam_match": true, "binary_root_meaning": "تخلخل أثناء الشيء وقلة كثافته", "axial_meaning": "غُؤُور السطح الناتئ عن معتاد حاله", "added_letter": "ض", "quran_example": "واخفض - \"وَاخْفِضْ لَهُمَا جَنَاحَ الذُّلِّ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خف", "root": "خفع", "words": ["خفع", "خَفع", "خَفَعَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفف", "words": ["تَخْفِيفٌ", "تَسْتَخِفُّ", "خفف", "خَفف", "خَفَّتْ", "خَفَّفَ", "يَسْتَخِفَّ", "يُخَفَّفُ", "يُخَفِّفَ", "يُخَفِّفْ", "ٱسْتَخَفَّ"], "muajam_match": true, "binary_root_meaning": "تخلخل أثناء الشيء وقلة كثافته", "axial_meaning": "قلة كثافة الشيء في نفسه، أو قلة كثافته وتركزه على حامله", "added_letter": "ف", "quran_example": "خفف - \"الْآنَ خَفَّفَ اللَّهُ عَنكُمْ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خف", "root": "خفق", "words": ["خفق", "خَفق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفل", "words": ["خفل", "خَفل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خف", "root": "خفي", "words": ["أَخْفَيْ", "أُخْفِىَ", "أُخْفِي", "تَخْفَىٰ", "تُخْفُ", "تُخْفِى", "خفى", "خفي", "خَافِيَةٌ", "خَفِي", "مُسْتَخْفٍۭ", "نُخْفِى", "يَخْفَ", "يَخْفَىٰ", "يَسْتَخْفُ", "يُخْفُ", "يُخْفِي"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خق", "root": "خقم", "words": ["خقم", "خَقم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خق", "root": "خقي", "words": ["خقى", "خقي"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلا", "words": ["خلأ", "خلا", "خَلا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلات", "words": ["خَلأتِ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلبس", "words": ["خلبس", "خَلبس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلبص", "words": ["خلبص", "خَلبص", "خَلْبَصَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلج", "words": ["خلج", "خَلج", "خَلَجَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلجم", "words": ["خلجم", "خَلجم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلد", "words": ["أَخْلَدَ", "تَخْلُدُ", "خلد", "خَلد", "خَٰلِدًا", "خَٰلِدٌ", "خَٰلِدَيْنِ", "خَٰلِدُونَ", "خَٰلِدِينَ", "مُّخَلَّدُونَ", "يَخْلُدْ"], "muajam_match": true, "binary_root_meaning": "الخلخلة أي الفراغ في الأثناء", "axial_meaning": "بقاء الشيء لازما موضعه أمدًا طويلا", "added_letter": "د", "quran_example": "خالدون - \"هُمْ فِيهَا خَالِدُونَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خل", "root": "خلس", "words": ["خلس", "خَلس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلص", "words": ["أَخْلَصُ", "أَخْلَصْ", "أَسْتَخْلِصْ", "خلص", "خَالِصًا", "خَالِصَةً", "خَالِصَةٌ", "خَالِصَةٍ", "خَالِصُ", "خَلص", "خَلَصَ", "خَلَصُ", "مُخْلَصًا", "مُخْلَصِينَ", "مُخْلِصًا", "مُخْلِصُونَ", "مُخْلِصِينَ"], "muajam_match": true, "binary_root_meaning": "الخلخلة أي الفراغ في الأثناء", "axial_meaning": "نفاذ الشيء نقيا من أثناء ما كان يخالطه", "added_letter": "ص", "quran_example": "خالصا - \"لَبَنََا خَالِصًا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خل", "root": "خلط", "words": ["تُخَالِطُ", "خلط", "خَلط", "خَلَطُ", "ٱخْتَلَطَ"], "muajam_match": true, "binary_root_meaning": "الخلخلة أي الفراغ في الأثناء", "axial_meaning": "دخول شيء في أثناء - أو خَلَلِ شيء - آخَرَ ممتزجين", "added_letter": "ط", "quran_example": "فاختلط - \"فَاخْتَلَطَ بِهِ نَبَاتُ الْأَرْضِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خل", "root": "خلطه", "words": ["خَلَطَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلع", "words": ["خلع", "خَلع", "ٱخْلَعْ"], "muajam_match": true, "binary_root_meaning": "الخلخلة أي الفراغ في الأثناء", "axial_meaning": "انفصال الشيء مما يلابسه ملابسة قوية", "added_letter": "ع", "quran_example": "فاخلع - \"فَاخْلَعْ نَعْلَيْكَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خل", "root": "خلف", "words": ["أَخْلَفُ", "أَخْلَفْ", "أُخَالِفَ", "تَخْتَلِفُ", "تُخْلَفَ", "تُخْلِفُ", "خلف", "خَلف", "خَلَفَ", "خَلَفْ", "خَلْفَ", "خَلْفُ", "خَٰلِفِينَ", "خُلِّفُ", "مُخَلَّفُونَ", "مُخَلَّفِينَ", "مُخْتَلِفًا", "مُخْتَلِفٌ", "مُخْتَلِفُونَ", "مُخْتَلِفِينَ", "مُخْلِفَ", "مُّخْتَلِفًا", "مُّخْتَلِفٌ", "مُّخْتَلِفٍ", "مُّسْتَخْلَفِينَ", "نُخْلِفُ", "يَتَخَلَّفُ", "يَخْتَلِفُ", "يَخْلُفُ", "يَسْتَخْلِفَ", "يَسْتَخْلِفُ", "يَسْتَخْلِفْ", "يُخَالِفُ", "يُخْلِفَ", "يُخْلِفُ", "ٱخْتَلَفَ", "ٱخْتَلَفُ", "ٱخْتَلَفْ", "ٱخْتُلِفَ", "ٱخْتِلَٰفًا", "ٱخْتِلَٰفُ", "ٱخْتِلَٰفِ", "ٱخْلُفْ", "ٱسْتَخْلَفَ"], "muajam_match": true, "binary_root_meaning": "الخلخلة أي الفراغ في الأثناء", "axial_meaning": "كَوْنُ - أو بقية - بعد ذاهب، أو وراءه في ظهره", "added_letter": "ف", "quran_example": "فخلف - \"فَخَلَفَ مِن بَعْدِهِمْ خَلْفٌ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خل", "root": "خلق", "words": ["أَخْلُقُ", "تَخْلُقُ", "خلق", "خَلَقَ", "خَلَقُ", "خَلَقْ", "خَٰلِقٌۢ", "خَٰلِقٍ", "خَٰلِقُ", "خَٰلِقُونَ", "خَٰلِقِينَ", "خُلِقَ", "خُلِقَتْ", "خُلِقُ", "مُخَلَّقَةٍ", "مُّخَلَّقَةٍ", "نَخْلُق", "يَخْلُقَ", "يَخْلُقُ", "يُخْلَقُ", "يُخْلَقْ", "ٱخْتِلَٰقٌ"], "muajam_match": true, "binary_root_meaning": "الخلخلة أي الفراغ في الأثناء", "axial_meaning": "تهيئة مادة (غُفْل) لتكون شيئًا مُعَيَّنا مرادًا", "added_letter": "ق", "quran_example": "الخلق - \"أَلَا لَهُ الْخَلْقُ وَالْأَمْرُ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خل", "root": "خلك", "words": ["خَلك"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلل", "words": ["خلل", "خَلل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلم", "words": ["خلم", "خَلم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلمس", "words": ["خَلمس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلو", "words": ["تَخَلَّتْ", "خلو", "خَالِيَةِ", "خَلَ", "خَلَا", "خَلَتِ", "خَلَتْ", "خَلُّ", "يَخْلُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خل", "root": "خلي", "words": ["خلى", "خلي"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خما", "words": ["خمأ", "خما", "خَمَا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمت", "words": ["خمت", "خَمت"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمج", "words": ["خمج", "خَمج"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمجل", "words": ["خَمجل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمد", "words": ["خمد", "خَمد", "خَٰمِدُونَ", "خَٰمِدِينَ"], "muajam_match": true, "binary_root_meaning": "الاضطمام على مائع كثير أو خَوَرٍ", "axial_meaning": "انقطاع للحاد الذي شأنه أن ينفذ من الشيء", "added_letter": "د", "quran_example": "خامدون - \"فَإِذَا هُمْ خَامِدُونَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خم", "root": "خمدت", "words": ["خَمَدَتِ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمر", "words": ["خمر", "خَمر"], "muajam_match": true, "binary_root_meaning": "الاضطمام على مائع كثير أو خَوَرٍ", "axial_meaning": "جنس من الستر اللطيف", "added_letter": "ر", "quran_example": "خمرهن - \"وَلْيَضْرِبْنَ بِخُمُرِهِنَّ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خم", "root": "خمز", "words": ["خمز", "خَمز"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمس", "words": ["خمس", "خَمس"], "muajam_match": true, "binary_root_meaning": "الاضطمام على مائع كثير أو خَوَرٍ", "axial_meaning": "تجمع يضم أفرادًا كثيرين (كتلة تضم أجزاء دقاقًا)", "added_letter": "س", "quran_example": "خمسة - \"وَلَا خَمْسَةٍ إِلَّا هُوَ سَادِسُهُمْ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خم", "root": "خمش", "words": ["خمش", "خَمش", "خَمَشَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمص", "words": ["خمص", "خَمص", "خَمَصَ"], "muajam_match": true, "binary_root_meaning": "الاضطمام على مائع كثير أو خَوَرٍ", "axial_meaning": "ضمور الشيء ورقة جرمه لذهاب ما بداخله من غلظ", "added_letter": "ص", "quran_example": "مخمصة - \"فَمَنِ اضْطُرَّ فِي مَخْمَصَةٍ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خم", "root": "خمط", "words": ["خمط", "خَمط", "خَمَطَ"], "muajam_match": true, "binary_root_meaning": "الاضطمام على مائع كثير أو خَوَرٍ", "axial_meaning": "فقد الشيء طيبه لعدم سواء الأثناء، أو تغيرها", "added_letter": "ط", "quran_example": "خمط - \"ذَوَاتَيْ أُكُلٍ خَمْطٍ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خم", "root": "خمطرير", "words": ["خَمْطَرِيرٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمع", "words": ["خمع", "خَمع", "خَمَعَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمق", "words": ["خمق", "خَمق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمل", "words": ["خمل", "خَمل", "خَمَلَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمم", "words": ["خمم", "خَمم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خم", "root": "خمن", "words": ["خمن", "خَمن", "خَمَنَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنا", "words": ["خنأ", "خنا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنات", "words": ["خَنَأْتُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خناج", "words": ["خُناجٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنافر", "words": ["خُنافِرُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنبس", "words": ["خنبس", "خَنبس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنبش", "words": ["خنبش", "خَنبش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنبص", "words": ["خنبص", "خَنبص"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنبع", "words": ["خنبع", "خَنبع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنبلس", "words": ["خنبلس", "خَنبلس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنت", "words": ["خنت", "خَنت", "خُنْت"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنتب", "words": ["خنتب", "خَنتب"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنتع", "words": ["خنتع", "خَنتع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنتف", "words": ["خَنتف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنتل", "words": ["خَنتل", "خَنْتَلُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنثل", "words": ["خنثل", "خَنثل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنجف", "words": ["خَنجف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنجل", "words": ["خنجل", "خَنجل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خندرس", "words": ["خندرس", "خَندرس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خندريس", "words": ["خَندريس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خندع", "words": ["خندع", "خَندع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خندف", "words": ["خندف", "خَندف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خندق", "words": ["خندق", "خَنْدَق"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خندل", "words": ["خَندل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خندلس", "words": ["خندلس", "خَندلس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خندم", "words": ["خندم", "خَندم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنذع", "words": ["خنذع", "خَنذع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنذم", "words": ["خَنذم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنز", "words": ["خنز", "خَنز", "خَنِزَ"], "muajam_match": true, "binary_root_meaning": "التخلخل الممتد في الباطن", "axial_meaning": "ريح خبيثة حادة تتولد في أثناء الشيء تُشَمّ أي تعرف منه", "added_letter": "ز", "quran_example": "", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خن", "root": "خنس", "words": ["خنس", "خَنس", "خَنَسَ"], "muajam_match": true, "binary_root_meaning": "التخلخل الممتد في الباطن", "axial_meaning": "تأخر الناتيء الدقيق غائرًا في ما نتأ منه", "added_letter": "س", "quran_example": "الخنس - \"فَلَا أُقْسِمُ بِالْخُنَّسِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خن", "root": "خنش", "words": ["خنش", "خَنش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنشع", "words": ["خنشع", "خَنشع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنشفير", "words": ["خَنْشَفير"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنشل", "words": ["خنشل", "خَنشل", "خَنْشَلَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنص", "words": ["خنص", "خَنص"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنضرف", "words": ["خَنضرف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنط", "words": ["خنط", "خَنط"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنطث", "words": ["خنطث", "خَنْطَثَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنطرف", "words": ["خَنطرف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنطل", "words": ["خنطل", "خَنطل"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنطه", "words": ["خَنَطَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنظ", "words": ["خنظ", "خَنظ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنظرف", "words": ["خَنظرف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنظوه", "words": ["خُنْظُوَةُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنع", "words": ["خنع", "خَنع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنعس", "words": ["خنعس", "خَنعس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنف", "words": ["خنف", "خَنف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنفس", "words": ["خنفس", "خَنفس", "خَنْفَسَ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنفع", "words": ["خنفع", "خَنفع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنق", "words": ["خنق", "خَنق", "مُنْخَنِقَةُ"], "muajam_match": true, "binary_root_meaning": "التخلخل الممتد في الباطن", "axial_meaning": "ضيق شديد يعترض في التجوف الممتد بحيث يكاد يسده", "added_letter": "ق", "quran_example": "المنخنقة - \"وَالْمُنْخَنِقَةُ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خن", "root": "خنقا", "words": ["خَنِقاً"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنقه", "words": ["خَنَقَهُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنم", "words": ["خنم", "خَنم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خنوخ", "words": ["خَنوخُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خن", "root": "خني", "words": ["خنى", "خني"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خه", "root": "خهفع", "words": ["خهفع", "خَهفع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوا", "words": ["خوأ", "خوا"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوب", "words": ["خوب", "خَوب"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوت", "words": ["خوت", "خَوت", "خَوَتِ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوث", "words": ["خوث", "خَوث"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوجان", "words": ["خوجانُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوخ", "words": ["خوخ", "خَوخ"], "muajam_match": true, "binary_root_meaning": "الفراغ أو الخلو في بنية الشيء", "axial_meaning": "خَرْقٌ - أو فراغ - نافذ في عريض صلب، أو بين عريضين", "added_letter": "خ و خ", "quran_example": "", "letter1": "التراكيب", "letter1_meaning": "—", "letter2": "الخائية", "letter2_meaning": "—", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خو", "root": "خوذ", "words": ["خوذ", "خَوذ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خور", "words": ["خور", "خَور", "خُوَارٌ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوز", "words": ["خوز", "خَوز"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوس", "words": ["خوس", "خَوس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوش", "words": ["خوش", "خَوش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوص", "words": ["خوص", "خَوص"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوض", "words": ["خوض", "خَاضُ", "خَآئِضِينَ", "خَوض", "خَوْضٍ", "خَوْضِ", "خُضْ", "نَخُوضُ", "يَخُوضُ"], "muajam_match": true, "binary_root_meaning": "رخاوة الأثناء مع خثورتها", "axial_meaning": "مخالطة (الرخو) بغِلَظ، أو كثافة", "added_letter": "و", "quran_example": "يخوضون - \"الَّذِينَ يَخُوضُونَ فِي ءَايَاتِنَا\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ض", "letter2_meaning": "ضغط بكثافة وغلظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خو", "root": "خوط", "words": ["خوط", "خَوط"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوع", "words": ["خوع", "خَوع"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خوف", "words": ["أَخَافُ", "تَخَافَ", "تَخَافُ", "تَخَافِى", "تَخَفْ", "تَخَوُّفٍ", "تَخَٰفُ", "تَخْوِيفًا", "خوف", "خَافَ", "خَافَتْ", "خَافُ", "خَآئِفًا", "خَآئِفِينَ", "خَوف", "خِفْ", "نَخَافُ", "نُخَوِّفُ", "يَخَافَ", "يَخَافُ", "يُخَوِّفُ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خول", "words": ["خول", "خَول", "خَوَّلَ", "خَوَّلْ"], "muajam_match": true, "binary_root_meaning": "الخلخلة أي الفراغ في الأثناء", "axial_meaning": "حَوْزُ لطيف مع بعد أو تباعد (حيازة مؤقتة)", "added_letter": "و", "quran_example": "خولناكم - \"وَتَرَكْتُم مَّا خَوَّلْنَاكُمْ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خو", "root": "خوم", "words": ["خوم", "خَوم"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خون", "words": ["أَخُنْ", "تَخُونُ", "تَخْتَانُ", "خون", "خَانَ", "خَانُ", "خَآئِنَةٍ", "خَآئِنَةَ", "خَآئِنِينَ", "يَخْتَانُ"], "muajam_match": true, "binary_root_meaning": "التخلخل الممتد في الباطن", "axial_meaning": "نقص خطير في خِفْيَة أو لطف من باطن", "added_letter": "و", "quran_example": "تخونوا - \"لَا تَخُونُوا اللَّهَ وَالرَّسُولَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خو", "root": "خوي", "words": ["خوى", "خوي", "خَاوِيَةًۢ", "خَاوِيَةٌ", "خَاوِيَةٍ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خو", "root": "خويز", "words": ["خُوَيْزِ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خي", "root": "خيب", "words": ["خيب", "خَابَ", "خَآئِبِينَ", "خَيب"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خي", "root": "خير", "words": ["تَخَيَّرُ", "خير", "خَير", "يَتَخَيَّرُ", "يَخْتَارُ", "ٱخْتَارَ", "ٱخْتَرْ"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خي", "root": "خيس", "words": ["خيس", "خَيس"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خي", "root": "خيش", "words": ["خيش", "خَيش"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خي", "root": "خيص", "words": ["خيص", "خَيص"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خي", "root": "خيط", "words": ["خيط", "خَيط"], "muajam_match": true, "binary_root_meaning": "الامتداد السطحي الخفيف مع أخذ ما", "axial_meaning": "امتداد الجرم دقيقا متصلا ينفذ خلال أثناء", "added_letter": "ي", "quran_example": "الخياط - \"فِي سَمِّ الْخِيَاطِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ط", "letter2_meaning": "ضغط باتّساع واستغلاظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خي", "root": "خيف", "words": ["خيف", "خَيف"], "muajam_match": false}
+{"bab": "خ", "binary_root": "خي", "root": "خيل", "words": ["خيل", "خَيل", "يُخَيَّلُ"], "muajam_match": true, "binary_root_meaning": "الخلخلة أي الفراغ في الأثناء", "axial_meaning": "أن يظهر على الشيء ما يشي باحتوائه شيئًا زائدًا متميزًا", "added_letter": "ي", "quran_example": "يخيل - \"يُخَيَّلُ إِلَيْهِ مِن سِحْرِهِمْ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خي", "root": "خيم", "words": ["خيم", "خَيم"], "muajam_match": true, "binary_root_meaning": "الاضطمام على مائع كثير أو خَوَرٍ", "axial_meaning": "كون الشيء غَضًا على أول فِطْرته لم تمسه صَنْعة", "added_letter": "ي", "quran_example": "الخيام - \"حُورٌ مَّقْصُورَاتٌ فِي الْخِيَامِ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
+{"bab": "خ", "binary_root": "خي", "root": "خينين", "words": ["خينين", "خَيْنِينُ"], "muajam_match": false}

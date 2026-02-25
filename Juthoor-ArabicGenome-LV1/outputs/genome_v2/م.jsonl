@@ -1,0 +1,267 @@
+{"bab": "م", "binary_root": "ما", "root": "ماء", "words": ["ماء", "ماءَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مابد", "words": ["مأبِدٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مات", "words": ["مأَت", "ماتَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماثه", "words": ["ماثَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماج", "words": ["مأج", "مأَج", "ماج"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماجشون", "words": ["ماجُشونُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماخ", "words": ["ماخ", "ماخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماد", "words": ["مأد", "مأَد", "مادَ", "مَأَدَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مار", "words": ["مأر", "مار", "مَارَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مارب", "words": ["مَأْرِبٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مازه", "words": ["مازَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مازهه", "words": ["مازَهَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماس", "words": ["مأس", "مأَس", "مَأَسَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماش", "words": ["مأش", "ماشَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماشه", "words": ["مأَشَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماص", "words": ["مأص", "مأَص"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماط", "words": ["مأَط", "ماطَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماع", "words": ["ماعَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماعنده", "words": ["ماعِنْدَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماغت", "words": ["ماغَت"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماق", "words": ["مأق", "مَأْقُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماقي", "words": ["ماقِئُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مال", "words": ["مأل", "مالَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماما", "words": ["مأمأ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مامات", "words": ["مَأْمَأَتِ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مان", "words": ["مأن", "مانَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماه", "words": ["مأه"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماو", "words": ["مأو"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماوت", "words": ["مَأَوْتُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "ماي", "words": ["مأى", "مأي", "مَأَى"], "muajam_match": false}
+{"bab": "م", "binary_root": "ما", "root": "مايه", "words": ["مائة"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متا", "words": ["متأ", "متا"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متاه", "words": ["مَتأَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متح", "words": ["متح", "مَتَحَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متخ", "words": ["متخ", "متخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متد", "words": ["متد", "مَتَدَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متز", "words": ["متز", "مَتَزَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متشه", "words": ["مَتَشَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متع", "words": ["أُمَتِّعُ", "أُمَتِّعْ", "تَمَتَّعَ", "تَمَتَّعُ", "تَمَتَّعْ", "تُمَتَّعُ", "متع", "مَتَعَ", "مَتَّعْ", "مَتِّعُ", "مَّتَّعْ", "نُمَتِّعُ", "يَتَمَتَّعُ", "يُمَتَّعُ", "يُمَتِّعْ", "ٱسْتَمْتَعَ", "ٱسْتَمْتَعُ", "ٱسْتَمْتَعْ"], "muajam_match": true, "binary_root_meaning": "الامتداد مع صفة (قوة، دقة، ضعف...)", "axial_meaning": "امتداد الشيء مع قوته وكمال حاله", "added_letter": "ع", "quran_example": "متاع - \"يُمَتِّعْكُم مَّتَاعًا حَسَنًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ت", "letter2_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مت", "root": "متغلد", "words": ["مُتَغَلِّدٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متله", "words": ["مَتَلَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "مته", "words": ["مته", "مَتَهَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متوت", "words": ["مَتَوْتُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متوث", "words": ["مَتُّوثٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متوجا", "words": ["مَتُوجاً"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متي", "words": ["متى", "متي", "مَتى", "مَتَى"], "muajam_match": false}
+{"bab": "م", "binary_root": "مت", "root": "متيته", "words": ["مَتَيْتُه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مث", "root": "مثج", "words": ["مثج", "مَثَجَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مث", "root": "مثد", "words": ["مثد", "مَثَدَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مث", "root": "مثل", "words": ["تَمَثَّلَ", "مثل"], "muajam_match": true, "binary_root_meaning": "تشخص الشيء أو رشحه", "axial_meaning": "تشخص الشيء قائماً على هيأة، أو صفات معينة", "added_letter": "ل", "quran_example": "مثل - \"ضَرَبَ اللَّهُ مَثَلًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ث", "letter2_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مث", "root": "مثنه", "words": ["مَثَنَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مج", "root": "مجح", "words": ["مجح", "مَجَحَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مج", "root": "مجس", "words": ["مجس", "مَجُوسَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مج", "root": "مجلت", "words": ["مَجَلَتْ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مج", "root": "مجن", "words": ["مجن", "مَجَنَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مج", "root": "مجوس", "words": ["مَجوسٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محاه", "words": ["مَحاه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محج", "words": ["محج", "مَحَجَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محز", "words": ["محز", "مَحَزَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محس", "words": ["محس", "مَحَسَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محص", "words": ["محص", "مَحَصَ", "يُمَحِّصَ"], "muajam_match": true, "binary_root_meaning": "ذهاب الشيء أو خلاصته", "axial_meaning": "خلوص الشيء من الغليظ المختلط به؛ فلا يبقى إلا صُلبه وحقيقته", "added_letter": "ص", "quran_example": "يمحص - \"وَلِيُمَحِّصَ اللَّهُ الَّذِينَ آمَنُوا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مح", "root": "محق", "words": ["محق", "يَمْحَقَ", "يَمْحَقُ"], "muajam_match": true, "binary_root_meaning": "ذهاب الشيء أو خلاصته", "axial_meaning": "فَقْدُ الشيء حقيقته، أو أصله وصلبه", "added_letter": "ق", "quran_example": "يمحق - \"يَمْحَقُ اللَّهُ الرِّبَا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مح", "root": "محقه", "words": ["مَحَقَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محك", "words": ["محك", "مَحَكَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محل", "words": ["محل", "مَحل", "مِحَالِ"], "muajam_match": true, "binary_root_meaning": "ذهاب الشيء أو خلاصته", "axial_meaning": "جفاف أثناء الشيء، وخلوها من اللين والبلال مع امتداد جرمه", "added_letter": "ل", "quran_example": "محال - \"وَهُوَ شَدِيدُ الْمِحَالِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مح", "root": "محن", "words": ["محن", "ٱمْتَحَنَ", "ٱمْتَحِنُ"], "muajam_match": true, "binary_root_meaning": "ذهاب الشيء أو خلاصته", "axial_meaning": "شدة تكشف حقيقة الشيء بإزالة ما يشوبها ويغطيها", "added_letter": "ن", "quran_example": "امتحن - \"امْتَحَنَ اللَّهُ قُلُوبَهُمْ لِلتَّقْوَىٰ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مح", "root": "محنه", "words": ["مَحَنَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محو", "words": ["محو", "مَحَوْ", "يَمْحُ", "يَمْحُوا۟"], "muajam_match": false}
+{"bab": "م", "binary_root": "مح", "root": "محي", "words": ["محي", "مُحي"], "muajam_match": false}
+{"bab": "م", "binary_root": "مخ", "root": "مخج", "words": ["مخج", "مخَج", "مَخَجَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مخ", "root": "مخخ", "words": ["مخخ", "مخَخَ"], "muajam_match": true, "binary_root_meaning": "توسط مادة رخوة أو خروجها", "axial_meaning": "ما يَحْتَشِي به الجِرْمُ الملتئم الظاهر من ثخين رِخْو", "added_letter": "خ", "quran_example": "", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "خ", "letter2_meaning": "تخلخل مع جفاف أو غلظ", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مخ", "root": "مخر", "words": ["مخر", "مخَر"], "muajam_match": true, "binary_root_meaning": "توسط مادة رخوة أو خروجها", "axial_meaning": "جريان - أو شَقُّ - بلطف في أثناء شيء ملتئم الظاهر", "added_letter": "ر", "quran_example": "مواخر - \"وَتَرَى الْفُلْكَ فِيهِ مَوَاخِرَ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "خ", "letter2_meaning": "تخلخل مع جفاف أو غلظ", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مخ", "root": "مخرت", "words": ["مَخَرَتِ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مخ", "root": "مخرق", "words": ["مخرق", "مخَرق"], "muajam_match": false}
+{"bab": "م", "binary_root": "مخ", "root": "مخس", "words": ["مخَس"], "muajam_match": false}
+{"bab": "م", "binary_root": "مخ", "root": "مخش", "words": ["مخش", "مخَش"], "muajam_match": false}
+{"bab": "م", "binary_root": "مخ", "root": "مخض", "words": ["مخض", "مخَض", "مَخَضَ"], "muajam_match": true, "binary_root_meaning": "توسط مادة رخوة أو خروجها", "axial_meaning": "خروج الكثيف المتجمع في الأثناء بدفع، أو ضغط ومحاولة", "added_letter": "ض", "quran_example": "المخاض - \"فَأَجَاءَهَا الْمَخَاضُ إِلَىٰ جِذْعِ النَّخْلَةِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "خ", "letter2_meaning": "تخلخل مع جفاف أو غلظ", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مخ", "root": "مخط", "words": ["مخط", "مخَط", "مَخَطَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مخ", "root": "مخق", "words": ["مخق", "مخَق"], "muajam_match": false}
+{"bab": "م", "binary_root": "مخ", "root": "مخن", "words": ["مخن", "مخَن"], "muajam_match": false}
+{"bab": "م", "binary_root": "مد", "root": "مدج", "words": ["مدج", "مُدَّجٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مد", "root": "مدحه", "words": ["مَدَحَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مد", "root": "مدخ", "words": ["مدخ", "مدخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مد", "root": "مدد", "words": ["أَمَدَّ", "أَمْدَدْ", "تَمُدَّ", "تُمِدُّ", "مدد", "مَدَدْ", "مَدًّا", "مَدَّ", "مُدَّتْ", "مُمِدُّ", "مَّمْدُودًا", "مَّمْدُودٍ", "مُّمَدَّدَةٍۭ", "نَمُدُّ", "نُمِدُّ", "نُّمِدُّ", "يَمُدُّ", "يَمْدُدْ", "يُمِدَّ", "يُمْدِدْ"], "muajam_match": true, "binary_root_meaning": "الامتداد والغاية", "axial_meaning": "استطالة جرم الشيء في نفسه، أو باتصاله بغيره فيزيده طولاً واستمراراً", "added_letter": "د", "quran_example": "يمددكم - \"وَيُمْدِدْكُم بِأَمْوَالٍ وَبَنِينَ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مد", "root": "مدع", "words": ["مدع", "مُدع"], "muajam_match": false}
+{"bab": "م", "binary_root": "مد", "root": "مدعمس", "words": ["مُدَعْمَسٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مد", "root": "مدق", "words": ["مدق", "مَدَقَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مد", "root": "مدلج", "words": ["مُدْلِج"], "muajam_match": false}
+{"bab": "م", "binary_root": "مد", "root": "مدن", "words": ["مدن", "مَدَنَ", "مَدِينَةِ", "مَدْيَنَ"], "muajam_match": true, "binary_root_meaning": "الامتداد والغاية", "axial_meaning": "المصر الجامع المحصن", "added_letter": "ن", "quran_example": "المدينة - \"مَا كَانَ لِأَهْلِ الْمَدِينَةِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مد", "root": "مدي", "words": ["مدى", "مدي"], "muajam_match": false}
+{"bab": "م", "binary_root": "مذ", "root": "مذحج", "words": ["مذحج", "مذْحج", "مَذْحِجٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مذ", "root": "مذخ", "words": ["مذخ", "مذخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مذ", "root": "مذرت", "words": ["مَذِرَتِ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مذ", "root": "مذرق", "words": ["مذرق", "مَذْرَقَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مذ", "root": "مذع", "words": ["مذع", "مَذَعَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مذ", "root": "مذل", "words": ["مذل", "مَذِلَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مذ", "root": "مذمذ", "words": ["مَذْمَذَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مذ", "root": "مذي", "words": ["مذى", "مذي"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرا", "words": ["مرأ", "مرا"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مراك", "words": ["مَرَاكٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرث", "words": ["مرث", "مَرَثَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرج", "words": ["مرج", "مَرَجَ", "مَّارِجٍ"], "muajam_match": true, "binary_root_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)", "axial_meaning": "حركة مختلفة الاتجاهات لما يُفترض استقراره (عدم الاستقرار)", "added_letter": "ج", "quran_example": "مرج - \"مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مر", "root": "مرجيطه", "words": ["مِرْجِيطةُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرح", "words": ["تَمْرَحُ", "مرح", "مَرِحَ"], "muajam_match": true, "binary_root_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)", "axial_meaning": "تسيب الشيء (اللطيف) بقوة وخفة من أثناء ما يمسكه", "added_letter": "ح", "quran_example": "مرحا - \"وَلَا تَمْشِ فِي الْأَرْضِ مَرَحًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مر", "root": "مرخ", "words": ["مرخ", "مرخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرد", "words": ["مرد", "مَرَدَ", "مَرَدُ", "مَّارِدٍ", "مُّمَرَّدٌ"], "muajam_match": true, "binary_root_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)", "axial_meaning": "ملاسة ظاهر الشيء الممتد تجرداً مما ينبت منه عادةً", "added_letter": "د", "quran_example": "مريد - \"وَيَتَّبِعُ كُلَّ شَيْطَانٍ مَّرِيدٍ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مر", "root": "مرذ", "words": ["مرذ", "مَرَذَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرر", "words": ["تَمُرُّ", "مرر", "مَرَّ", "مَرَّتْ", "مَرُّ", "مُّسْتَمِرٌّ", "مُّسْتَمِرٍّ", "يَمُرُّ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرزن", "words": ["مَرْزَن"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرستن", "words": ["مرستَّن"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرض", "words": ["مرض", "مَرِضْ"], "muajam_match": true, "binary_root_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)", "axial_meaning": "كثافة ثقيلةٌ تَغْشَى الشيء؛ فتثقله، وتحجُبُ حِدَّته", "added_letter": "ض", "quran_example": "مرض - \"فِي قُلُوبِهِم مَّرَضٌ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مر", "root": "مرطل", "words": ["مرطل", "مَرْطَلَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرقس", "words": ["مرقس", "مَرْقَسٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرن", "words": ["مرن", "مَرَنَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرند", "words": ["مرند", "مَرَنْدُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرهت", "words": ["مَرِهَتْ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مر", "root": "مرو", "words": ["مرو", "مَرُؤَ", "مَرْوَةَ"], "muajam_match": true, "binary_root_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)", "axial_meaning": "حدة محتواة في الجرم (تنتشر منه) بتجدد", "added_letter": "و", "quran_example": "المروة - \"إِنَّ الصَّفَا وَالْمَرْوَةَ مِن شَعَائِرِ اللَّهِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مر", "root": "مري", "words": ["تَتَمَارَىٰ", "تَمَارَ", "تَمْتَرُ", "تُمَارِ", "تُمَٰرُ", "مرى", "مري", "مَرَى", "مُمْتَرِينَ", "يَمْتَرُ", "يُمَارُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مز", "root": "مزح", "words": ["مزح", "مَزَحَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مز", "root": "مزد", "words": ["مزد", "مَزْد"], "muajam_match": false}
+{"bab": "م", "binary_root": "مز", "root": "مزع", "words": ["مزع", "مَزَعَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مز", "root": "مزق", "words": ["مزق", "مَزَّقْ", "مُزِّقْ", "مُمَزَّقٍ"], "muajam_match": true, "binary_root_meaning": "الجمع أو الفصل والامتلاء", "axial_meaning": "شقُّ الشيء (الرقيق الجرم) شقاً واصلاً إلى عمقه", "added_letter": "ق", "quran_example": "مزقناهم - \"وَمَزَّقْنَاهُمْ كُلَّ مُمَزَّقٍ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ز", "letter2_meaning": "اكتناز وازدحام", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مز", "root": "مزقه", "words": ["مَزَقَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مز", "root": "مزن", "words": ["مزن", "مَزَنَ"], "muajam_match": true, "binary_root_meaning": "الجمع أو الفصل والامتلاء", "axial_meaning": "امتلاء باطن الشيء بالماء، أو نحوه", "added_letter": "ن", "quran_example": "المزن - \"أَأَنتُمْ أَنزَلْتُمُوهُ مِنَ الْمُزْنِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ز", "letter2_meaning": "اكتناز وازدحام", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مز", "root": "مزه", "words": ["مزه", "مَزَّهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مز", "root": "مزي", "words": ["مزي", "مَزَى"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسا", "words": ["مسأ", "مسا", "مَسَأَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مستوتي", "words": ["مستوتى"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسح", "words": ["مسح", "مَسِيحَ", "مَسِيحُ", "ٱمْسَحُ"], "muajam_match": true, "binary_root_meaning": "المخالطة والاتصال", "axial_meaning": "انبساط باستواء ظاهر، أي خلو من النتوء", "added_letter": "ح", "quran_example": "امسحوا - \"وَامْسَحُوا بِرُءُوسِكُمْ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مس", "root": "مسخ", "words": ["مسخ", "مسخَ", "مَسَخْ"], "muajam_match": true, "binary_root_meaning": "المخالطة والاتصال", "axial_meaning": "اختلال (= انتقاص) ما به قوام هيأة الشيء، أو طبيعته منه", "added_letter": "خ", "quran_example": "لمسخناهم - \"وَلَوْ نَشَاءُ لَمَسَخْنَاهُمْ عَلَىٰ مَكَانَتِهِمْ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مس", "root": "مسخه", "words": ["مسخَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسره", "words": ["مَسَرَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسس", "words": ["تَمَسَّ", "تَمَسُّ", "تَمْسَسْ", "مسس", "مَسَّ", "مَسَّتْ", "مَّسَّ", "مَّسَّتْ", "يَتَمَآسَّ", "يَمَسَّ", "يَمَسُّ", "يَمْسَسْ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسسته", "words": ["مَسِسْتُهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسط", "words": ["مسط", "مَسَطَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسك", "words": ["أَمْسَكَ", "أَمْسَكْ", "أَمْسِكُ", "أَمْسِكْ", "إِمْسَاكٌۢ", "تُمْسِكُ", "مسك", "مُسْتَمْسِكُونَ", "مُمْسِكَ", "مُمْسِكَٰتُ", "يُمَسِّكُ", "يُمْسِكُ", "يُمْسِكْ", "ٱسْتَمْسَكَ", "ٱسْتَمْسِكْ"], "muajam_match": true, "binary_root_meaning": "المخالطة والاتصال", "axial_meaning": "ضَبْط الشيء، أو حبْسُه حَبْساً قوياً - في حيّز فلا يتسيب", "added_letter": "ك", "quran_example": "استمسك - \"فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقَىٰ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مس", "root": "مسمرط", "words": ["مُسَمْرَطُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسو", "words": ["تُمْسُ", "مسو"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسوت", "words": ["مَسَوْتُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مس", "root": "مسي", "words": ["مسى", "مسي", "مَسَى"], "muajam_match": false}
+{"bab": "م", "binary_root": "مش", "root": "مشج", "words": ["مشج", "مَشَجَ"], "muajam_match": true, "binary_root_meaning": "الانتشار والامتداد", "axial_meaning": "امتزاج الأشياء الكثيرة المختلفة جرماً واحداً غير صُلْب", "added_letter": "ج", "quran_example": "أمشاج - \"مِن نُّطْفَةٍ أَمْشَاجٍ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ش", "letter2_meaning": "تفشٍّ أو انتشار مع دقة", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مش", "root": "مشح", "words": ["مَشح"], "muajam_match": false}
+{"bab": "م", "binary_root": "مش", "root": "مشظ", "words": ["مشظ", "مَشِظَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مش", "root": "مشع", "words": ["مشع", "مَشَعَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مش", "root": "مشكان", "words": ["مُشْكَانُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مش", "root": "مشكدانه", "words": ["مُشْكَدانَةُ", "مِشْكِدانَةُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مش", "root": "مشي", "words": ["تَمْشُ", "تَمْشِ", "تَمْشِى", "تَمْشِىٓ", "مشى", "مشي", "مَشَى", "مَّشَ", "يَمْشُ", "يَمْشِى", "ٱمْشُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مش", "root": "مشيه", "words": ["مِشْيَةٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مص", "root": "مصت", "words": ["مصت", "مَصَتَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مص", "root": "مصح", "words": ["مصح", "مَصَحَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مص", "root": "مصخ", "words": ["مصخ", "مصخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مص", "root": "مصر", "words": ["مصر", "مَصَرَ", "مِصْرَ", "مِّصْرَ"], "muajam_match": true, "binary_root_meaning": "استخلاص الشيء أو أخذه", "axial_meaning": "أخذ الشيء – أو جذبه – بنحو العصر قليلاً قليلاً، أو مرة بعد أخرى، مع استرسال", "added_letter": "ر", "quran_example": "مصر - \"اهْبِطُوا مِصْرًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ص", "letter2_meaning": "نفاذ بغلظ وقوة وخلوص", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مص", "root": "مصصته", "words": ["مَصِصْتُهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مص", "root": "مصط", "words": ["مصط", "مَصَطَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مص", "root": "مصع", "words": ["مصع", "مصَع", "مَصَعَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مض", "root": "مضح", "words": ["مضح", "مَضَحَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مض", "root": "مضخ", "words": ["مضخ", "مضخَ", "مَضَخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مض", "root": "مضر", "words": ["مضر", "مَضَرَ", "مُضر"], "muajam_match": false}
+{"bab": "م", "binary_root": "مض", "root": "مضغه", "words": ["مَضَغَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مض", "root": "مضه", "words": ["مَضَّهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مض", "root": "مضووك", "words": ["مَضْؤُوكٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مض", "root": "مضي", "words": ["أَمْضِىَ", "مضى", "مضي", "مَضَتْ", "مَضَى", "مَضَىٰ", "مُضِيّ", "ٱمْضُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مط", "root": "مطا", "words": ["مطأ", "مطا", "مَطَا"], "muajam_match": false}
+{"bab": "م", "binary_root": "مط", "root": "مطاها", "words": ["مَطَأَهَا"], "muajam_match": false}
+{"bab": "م", "binary_root": "مط", "root": "مطحه", "words": ["مَطَحَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مط", "root": "مطخ", "words": ["مطخ", "مطخَ", "مَطَخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مط", "root": "مطر", "words": ["أَمْطَرْ", "أَمْطِرْ", "أُمْطِرَتْ", "مطر", "مُّمْطِرُ"], "muajam_match": true, "binary_root_meaning": "الامتداد والانسكاب", "axial_meaning": "انسكاب، أو انحدار بقوة - أو سرعة - مع استرسال", "added_letter": "ر", "quran_example": "مطر - \"إِن كَانَ بِكُمْ أَذًى مِّن مَّطَرٍ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ط", "letter2_meaning": "ضغط باتّساع واستغلاظ", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مط", "root": "مطس", "words": ["مطس", "مَطَسَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مط", "root": "مطع", "words": ["مطع", "مَطَعَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مط", "root": "مطه", "words": ["مطه", "مَطَهَ", "مَطَّه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مط", "root": "مطو", "words": ["مطو", "يَتَمَطَّىٰٓ"], "muajam_match": true, "binary_root_meaning": "الامتداد والانسكاب", "axial_meaning": "امتداد الشيء مع امتساك أثنائه", "added_letter": "و", "quran_example": "يتمطى - \"ثُمَّ ذَهَبَ إِلَىٰ أَهْلِهِ يَتَمَطَّىٰ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ط", "letter2_meaning": "ضغط باتّساع واستغلاظ", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مط", "root": "مطي", "words": ["مطى"], "muajam_match": false}
+{"bab": "م", "binary_root": "مظ", "root": "مظع", "words": ["مظع", "مَظَعَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معته", "words": ["معَتَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معج", "words": ["معج", "مَعَجَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معده", "words": ["مَعَدَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معر", "words": ["معر", "مَعِرَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معسه", "words": ["مَعَسَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معض", "words": ["معض", "مَعِضَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معطه", "words": ["مَعَطَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معكه", "words": ["مَعَكَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معل", "words": ["معل", "مَعَلَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معلسط", "words": ["مُعَلْسَطٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مع", "root": "معي", "words": ["معى", "معي"], "muajam_match": false}
+{"bab": "م", "binary_root": "مغ", "root": "مغا", "words": ["مغا", "مَغا"], "muajam_match": false}
+{"bab": "م", "binary_root": "مغ", "root": "مغج", "words": ["مغج", "مَغَجَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مغ", "root": "مغد", "words": ["مغد", "مَغَدَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مغ", "root": "مغسه", "words": ["مَغَسَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مغ", "root": "مغط", "words": ["مغط", "مَغَطَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مغ", "root": "مغمغ", "words": ["مغمغ", "مَغْمَغَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مغ", "root": "مغيل", "words": ["مَغِيلٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مف", "root": "مفج", "words": ["مفج", "مَفَجَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقا", "words": ["مقأ", "مقا", "مَقا"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقته", "words": ["مقَتَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقدشو", "words": ["مَقْدِشُو"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقر", "words": ["مقر", "مَقَرَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقس", "words": ["مقس", "مَقْسٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقط", "words": ["مقط", "مَقَطَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقلهف", "words": ["مُقْلَهِفٌّ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقنبع", "words": ["مُقَنْبِعُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقنثع", "words": ["مُقَنْثِعُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مق", "root": "مقيت", "words": ["مَقَيْتُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مك", "root": "مكا", "words": ["مكأ", "مكا", "مَكَا"], "muajam_match": false}
+{"bab": "م", "binary_root": "مك", "root": "مكت", "words": ["مكت", "مكَتَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مك", "root": "مكث", "words": ["مكث", "مَكَثَ", "مَّٰكِثُونَ", "مَّٰكِثِينَ", "يَمْكُثُ", "ٱمْكُثُ"], "muajam_match": true, "binary_root_meaning": "التمكن والرسوخ والاحتباس", "axial_meaning": "اللبث والتلبث في المكان زمناً", "added_letter": "ث", "quran_example": "يمكث - \"فَيَمْكُثُ فِي الْأَرْضِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ك", "letter2_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مك", "root": "مكد", "words": ["مكد", "مَكَدَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مك", "root": "مكر", "words": ["تَمْكُرُ", "مكر", "مَكَرَ", "مَكَرُ", "مَكَرْ", "مَٰكِرِينَ", "مَّكَرْ", "يَمْكُرُ"], "muajam_match": true, "binary_root_meaning": "التمكن والرسوخ والاحتباس", "axial_meaning": "اختزان رقيق – أو لطيف - في الأثناء؛ فتكتنز به ولا يبرز متميزاً", "added_letter": "ر", "quran_example": "مكر - \"وَمَكَرُوا وَمَكَرَ اللَّهُ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ك", "letter2_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مك", "root": "مكس", "words": ["مكس", "مَكَسَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مك", "root": "مكن", "words": ["أَمْكَنَ", "مكن", "مَكَّ", "مَّكَّ", "نُمَكِّن", "نُمَكِّنَ", "يُمَكِّنَ"], "muajam_match": true, "binary_root_meaning": "التمكن والرسوخ والاحتباس", "axial_meaning": "رسوخ الشيء متجمعاً (من دِقاق) في باطن يلتئم عليه", "added_letter": "ن", "quran_example": "مكناهم - \"مَكَّنَّاهُمْ فِي الْأَرْضِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ك", "letter2_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مك", "root": "مكه", "words": ["مَكَّهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مك", "root": "مكو", "words": ["مكو", "مُكَآءً"], "muajam_match": true, "binary_root_meaning": "التمكن والرسوخ والاحتباس", "axial_meaning": "تجوف دقيق ممتد في أثناء يجوز أو يُمر منه - بلطف", "added_letter": "و", "quran_example": "مكاء - \"إِلَّا مُكَاءً وَتَصْدِيَةً\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ك", "letter2_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مل", "root": "ملا", "words": ["أَمْلَأَ", "ملأ", "ملا", "مَالِـُٔونَ", "مَلأ", "مَلاَ", "مُلِئَتْ", "مُلِئْ", "ٱمْتَلَأْ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملاه", "words": ["مَلأَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملته", "words": ["مَلَتَه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملج", "words": ["ملج", "مَلَجَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملخ", "words": ["ملخ", "ملخَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملده", "words": ["مَلَدَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملز", "words": ["ملز", "مَلَزَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملش", "words": ["ملش", "مَلَشَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملق", "words": ["إِمْلَٰقٍ", "ملق"], "muajam_match": true, "binary_root_meaning": "الامتداد مع الحوز أو الشمول", "axial_meaning": "ملاسة ظاهر الشيء واستواؤه؛ لتجرده من الغلظ", "added_letter": "ق", "quran_example": "إملاق - \"مِّنْ إِمْلَاقٍ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مل", "root": "ملقه", "words": ["ملَقَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملك", "words": ["أَمْلِكُ", "تَمْلِكَ", "تَمْلِكُ", "ملك", "مَلَكَتْ", "مَلَكْ", "مَٰلِكَ", "مَٰلِكُ", "مَٰلِكُونَ", "مَٰلِكِ", "مَّمْلُوكًا", "يَمْلِكُ"], "muajam_match": true, "binary_root_meaning": "الامتداد مع الحوز أو الشمول", "axial_meaning": "إمساك - أو امتساك - بشدة أو قوّة مع شمول", "added_letter": "ك", "quran_example": "ملك - \"مَالِكِ يَوْمِ الدِّينِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مل", "root": "ملكه", "words": ["مَلَكَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملل", "words": ["ملل", "يُمِلَّ", "يُمْلِلِ", "يُمْلِلْ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "مللته", "words": ["مَلِلْتُهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مل", "root": "ملو", "words": ["أَمْلَىٰ", "أَمْلَيْ", "أُمْلِى", "تُمْلَىٰ", "ملو", "نُمْلِى"], "muajam_match": true, "binary_root_meaning": "الامتداد مع الحوز أو الشمول", "axial_meaning": "اتساع ما يحوز شيئاً، أو امتداده", "added_letter": "و", "quran_example": "أمليت - \"فَأَمْلَيْتُ لِلَّذِينَ كَفَرُوا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مل", "root": "ملي", "words": ["ملى"], "muajam_match": false}
+{"bab": "م", "binary_root": "مم", "root": "مماضوعفمنفايهولامه", "words": ["مِمَّاضوعفمنفائهولامه"], "muajam_match": false}
+{"bab": "م", "binary_root": "مم", "root": "ممجط", "words": ["مُمَّجِطُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "منا", "words": ["منأ", "منا"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "مناه", "words": ["مَناهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "منحه", "words": ["مَنَحَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "مند", "words": ["مند", "مُنْدُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "مندل", "words": ["مندل", "منْدَل"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "منذ", "words": ["منذ", "مُنْذُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "منع", "words": ["تَمْنَعُ", "منع", "مَمْنُوعَةٍ", "مَنَعَ", "مُنِعَ", "مَّانِعَتُ", "مَّنَعَ", "نَمْنَعْ", "يَمْنَعُ"], "muajam_match": true, "binary_root_meaning": "القوة والثبات مع صفة (نقص، وثاقة، حجز)", "axial_meaning": "حَجْزُ ظاهر الشيء ما في باطنه شديداً؛ فلا يكون فيه منفذ إلى ما بداخله", "added_letter": "ع", "quran_example": "منوعا - \"وَإِذَا مَسَّهُ الْخَيْرُ مَنُوعًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "من", "root": "منعه", "words": ["مَنَعَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "منغ", "words": ["منغ", "مَنَغٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "منغدل", "words": ["مُنَغْدِلُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "منفلوط", "words": ["مَنْفلُوطُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "منن", "words": ["تَمُنُّ", "تَمْنُن", "منن", "مَمْنُونٍ", "مَمْنُونٍۭ", "مَنَ", "مَنَّ", "مَّنَّ", "نَّمُنَّ", "يَمُنُّ", "ٱمْنُنْ"], "muajam_match": true, "binary_root_meaning": "القوة والثبات مع صفة (نقص، وثاقة، حجز)", "axial_meaning": "الاحتواء على قوة محدودة، أي مشوبة برقة أو نقص", "added_letter": "ن", "quran_example": "المن - \"لَا تُبْطِلُوا صَدَقَاتِكُم بِالْمَنِّ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "من", "root": "منهمس", "words": ["مُنْهَمِسٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "من", "root": "مني", "words": ["أُمَنِّيَ", "تَتَمَنَّ", "تَمَنَّ", "تَمَنَّىٰ", "تَمَنَّىٰٓ", "تُمْنَىٰ", "تُمْنُ", "منى", "مني", "مَنَوٰةَ", "يَتَمَنَّ", "يُمَنِّي", "يُمْنَىٰ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مه", "root": "مهد", "words": ["تَمْهِيدًا", "مهد", "مَهَّد", "مَٰهِدُونَ", "يَمْهَدُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مه", "root": "مهزه", "words": ["مَهَزَهُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مه", "root": "مهش", "words": ["مهش", "مَهَشَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مه", "root": "مهص", "words": ["مهص", "مَهَّصَ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مه", "root": "مهل", "words": ["أَمْهِلْ", "مهل", "مَهِّلِ", "مَهِّلْ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مه", "root": "مهما", "words": ["مهما", "مَهْما"], "muajam_match": false}
+{"bab": "م", "binary_root": "مه", "root": "مهيم", "words": ["مهيم", "مَهْيَمْ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مو", "root": "موا", "words": ["موأ", "موا"], "muajam_match": false}
+{"bab": "م", "binary_root": "مو", "root": "موت", "words": ["أَمَ", "أَمَاتَ", "أَمُوتُ", "أُمِيتُ", "تَمُتْ", "تَمُوتَ", "تَمُوتُ", "موت", "مَاتُ", "مُ", "مُوتُ", "مِ", "مِتْ", "مَّاتَ", "مُّ", "مِّ", "نَمُوتُ", "نُمِيتُ", "يَمُتْ", "يَمُوتُ", "يُمِيتُ"], "muajam_match": true, "binary_root_meaning": "الامتداد مع صفة (قوة، دقة، ضعف...)", "axial_meaning": "تمدد مع همود وسكون وذهاب الحدة المعتادة", "added_letter": "و", "quran_example": "موت - \"فَأَحْيَا بِهِ الْأَرْضَ بَعْدَ مَوْتِهَا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ت", "letter2_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مو", "root": "موته", "words": ["مُؤْتَةُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مو", "root": "موج", "words": ["موج", "يَمُوجُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مو", "root": "مور", "words": ["تَمُورُ", "مور"], "muajam_match": true, "binary_root_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)", "axial_meaning": "تردُّد المادة المجتمعة في مكانها بتسيبها", "added_letter": "و", "quran_example": "تمور - \"يَوْمَ تَمُورُ السَّمَاءُ مَوْرًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مو", "root": "موعه", "words": ["مَوْعَةُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مو", "root": "موي", "words": ["موى", "موي"], "muajam_match": false}
+{"bab": "م", "binary_root": "مي", "root": "ميبذ", "words": ["مَيْبِذٌ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مي", "root": "ميد", "words": ["تَمِيدَ", "ميد"], "muajam_match": true, "binary_root_meaning": "الامتداد والغاية", "axial_meaning": "دوران أو حركة واسعة ترددية (وهما من باب واحد)", "added_letter": "ي", "quran_example": "تميد - \"أَن تَمِيدَ بِكُمْ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مي", "root": "مير", "words": ["مير", "نَمِيرُ"], "muajam_match": true, "binary_root_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)", "axial_meaning": "تخفيف كثافة الشيء الكثيف الشديد، وتوسيع ما بين أثنائه", "added_letter": "ي", "quran_example": "نمير - \"وَنَمِيرُ أَهْلَنَا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مي", "root": "ميز", "words": ["تَمَيَّزُ", "ميز", "يَمِيزَ", "ٱمْتَٰزُ"], "muajam_match": true, "binary_root_meaning": "الجمع أو الفصل والامتلاء", "axial_meaning": "افتراق ما هو متجمع، أو تباعد بعضه عنه", "added_letter": "ي", "quran_example": "تميز - \"تَكَادُ تَمَيَّزُ مِنَ الْغَيْظِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ز", "letter2_meaning": "اكتناز وازدحام", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مي", "root": "ميشير", "words": ["مِئْشير"], "muajam_match": false}
+{"bab": "م", "binary_root": "مي", "root": "ميط", "words": ["ميط", "مَئِط"], "muajam_match": false}
+{"bab": "م", "binary_root": "مي", "root": "ميكاييل", "words": ["ميكائيل", "ميكائيلُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مي", "root": "ميل", "words": ["تَمِيلُ", "ميل", "يَمِيلُ"], "muajam_match": true, "binary_root_meaning": "الامتداد مع الحوز أو الشمول", "axial_meaning": "انحراف الشيء في قيامه عن الاعتدال الطبيعي المتوقع", "added_letter": "ي", "quran_example": "تميلوا - \"أَن تَمِيلُوا مَيْلًا عَظِيمًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "م", "binary_root": "مي", "root": "ميمه", "words": ["مَيْمَةُ"], "muajam_match": false}
+{"bab": "م", "binary_root": "مي", "root": "ميه", "words": ["ميه", "مَيَّةُ"], "muajam_match": false}

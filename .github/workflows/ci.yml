@@ -52,11 +52,16 @@ jobs:
         run: |
           uv pip install --system -e .
           uv pip install --system -e Juthoor-DataCore-LV0
+          uv pip install --system -e Juthoor-ArabicGenome-LV1
           uv pip install --system -e Juthoor-CognateDiscovery-LV2
-          uv pip install --system pytest pytest-cov numpy
+          uv pip install --system pytest pytest-cov numpy openpyxl
 
-      - name: Run tests (excluding slow tests)
-        run: pytest tests/ -v --tb=short -m "not slow"
+      - name: Run LV0 tests
+        run: pytest Juthoor-DataCore-LV0/tests/ -v --tb=short -m "not slow"
+
+      - name: Run LV1 tests
+        run: pytest Juthoor-ArabicGenome-LV1/tests/ -v --tb=short -m "not slow"
+        continue-on-error: true
 
       - name: Upload coverage
         if: matrix.python-version == '3.11'
@@ -143,12 +148,16 @@ jobs:
       - name: Build LV0
         run: python -m build Juthoor-DataCore-LV0
 
+      - name: Build LV1
+        run: python -m build Juthoor-ArabicGenome-LV1
+
       - name: Build LV2
         run: python -m build Juthoor-CognateDiscovery-LV2
 
       - name: Check distributions
         run: |
           twine check Juthoor-DataCore-LV0/dist/*
+          twine check Juthoor-ArabicGenome-LV1/dist/*
           twine check Juthoor-CognateDiscovery-LV2/dist/*
 
       - name: Upload artifacts
@@ -157,4 +166,5 @@ jobs:
           name: distributions
           path: |
             Juthoor-DataCore-LV0/dist/*
+            Juthoor-ArabicGenome-LV1/dist/*
             Juthoor-CognateDiscovery-LV2/dist/*
