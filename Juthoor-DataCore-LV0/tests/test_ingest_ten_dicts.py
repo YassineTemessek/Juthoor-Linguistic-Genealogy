@@ -58,7 +58,7 @@ def _parse_row(raw_row: str, raw_header: str = SAMPLE_HEADER, source_name: str =
 # ---------------------------------------------------------------------------
 
 def test_dict_names_not_empty():
-    assert len(DICT_NAMES) > 0
+    assert len(DICT_NAMES) >= 12
 
 
 def test_parse_valid_row():
@@ -115,3 +115,15 @@ def test_skips_empty_root_in_file(tmp_path):
     assert count == 1
     lines = [l for l in out_file.read_text(encoding="utf-8").splitlines() if l.strip()]
     assert len(lines) == 1
+
+
+def test_ingest_csv_file_deduplicates_ids(tmp_path):
+    """Two rows with the same root get distinct IDs."""
+    csv_content = SAMPLE_HEADER + "\n" + SAMPLE_ROW + "\n" + SAMPLE_ROW + "\n"
+    csv_file = tmp_path / "test.csv"
+    csv_file.write_text(csv_content, encoding="utf-8")
+    out_file = tmp_path / "out.jsonl"
+    count = ingest_csv_file(csv_file, out_file, source_name="AlMaghreb")
+    assert count == 2
+    lines = [json.loads(l) for l in out_file.read_text(encoding="utf-8").splitlines()]
+    assert lines[0]["id"] != lines[1]["id"], "Duplicate rows must get distinct IDs"
