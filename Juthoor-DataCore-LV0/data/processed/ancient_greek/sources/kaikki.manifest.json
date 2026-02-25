@@ -1,0 +1,7 @@
+{
+  "file": "C:\\Users\\yassi\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-DataCore-LV0\\data\\processed\\ancient_greek\\sources\\kaikki.jsonl",
+  "sha256": "f025d428b2056bfb3bdeae2becf0512054736e6ef98465b6c52f645318f22494",
+  "row_count": 56058,
+  "schema_version": "lv0.7",
+  "generated_by": "ingest_kaikki.py:grc"
+}

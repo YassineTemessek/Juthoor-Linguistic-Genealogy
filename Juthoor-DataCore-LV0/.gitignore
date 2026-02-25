@@ -16,5 +16,13 @@ data/*
 !data/raw/
 data/raw/*
 !data/raw/README.md
+!data/processed/
 outputs/*
 !outputs/README.md
+
+# Large processed files (>100MB, regenerate with ingest scripts)
+data/processed/latin/
+data/processed/english_modern/
+data/processed/arabic/classical/sources/ten_dicts.*
+data/processed/arabic/classical/sources/hf_roots.jsonl
+data/processed/arabic/classical/sources/word_root_map_raw.jsonl
