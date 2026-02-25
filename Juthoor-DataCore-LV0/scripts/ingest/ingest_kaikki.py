@@ -70,9 +70,6 @@ _DEFAULT_OUTPUT: dict[str, str] = {
     "en":  "data/processed/english_modern/sources/kaikki.jsonl",
 }
 
-# Latin-script languages where translit == lemma
-_LATIN_SCRIPT_LANGS = {"la", "ang", "enm", "en"}
-
 
 # ---------------------------------------------------------------------------
 # Parsing
@@ -137,10 +134,6 @@ def parse_record(raw: dict) -> dict | None:
 
     if meaning_text:
         rec["meaning_text"] = meaning_text
-
-    # translit = lemma for Latin-script languages
-    if lang_code in _LATIN_SCRIPT_LANGS:
-        rec["translit"] = word
 
     rec = ensure_min_schema(rec)
     return rec

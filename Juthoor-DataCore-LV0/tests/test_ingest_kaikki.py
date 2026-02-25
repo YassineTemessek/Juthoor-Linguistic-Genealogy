@@ -142,3 +142,37 @@ def test_skips_empty_word():
 def test_skips_unknown_lang_code():
     rec = ingest_kaikki.parse_record({"word": "hello", "lang_code": "xyz", "pos": "noun", "senses": [{"glosses": ["x"]}]})
     assert rec is None
+
+
+def test_no_ipa_in_sounds():
+    """Records where sounds list exists but has no 'ipa' key."""
+    raw = {"word": "testword", "lang_code": "la", "pos": "noun",
+           "senses": [{"glosses": ["a test"]}],
+           "sounds": [{"tags": ["audio"], "mp3": "test.mp3"}]}
+    rec = ingest_kaikki.parse_record(raw)
+    assert rec is not None
+    assert rec.get("ipa_raw", "") == ""
+    # form_text should be just the lemma, no IPA
+    assert rec["form_text"] == "testword"
+
+
+def test_empty_glosses_skipped():
+    """Sense with empty glosses list is skipped; next sense's gloss is used."""
+    raw = {"word": "testword", "lang_code": "la", "pos": "noun",
+           "senses": [
+               {"glosses": []},           # empty, should be skipped
+               {"glosses": ["fallback"]}  # this should be used
+           ],
+           "sounds": []}
+    rec = ingest_kaikki.parse_record(raw)
+    assert rec is not None
+    assert rec.get("gloss_plain") == "fallback"
+    assert rec.get("meaning_text") == "fallback"
+
+
+def test_old_english_fields():
+    """Old English records have form_text and lemma as translit."""
+    rec = ingest_kaikki.parse_record(json.loads(OE_RECORD))
+    assert rec["form_text"]  # must be populated
+    assert "word" in rec["form_text"]  # lemma appears in form_text
+    assert rec.get("translit") == "word"  # translit set to lemma
