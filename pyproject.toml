@@ -7,7 +7,7 @@ name = "juthoor-linguistic-genealogy"
 version = "0.0.0"
 description = "Unified monorepo for the Juthoor linguistic genealogy levels."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = []
 
 [project.optional-dependencies]
@@ -37,7 +37,10 @@ members = [
 
 [tool.uv.sources]
 juthoor-datacore-lv0 = { workspace = true }
+juthoor-arabicgenome-lv1 = { workspace = true }
 juthoor-cognatediscovery-lv2 = { workspace = true }
+juthoor-origins-lv3 = { workspace = true }
+quran-corpus-analysis = { workspace = true }
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -52,6 +55,7 @@ markers = [
 [tool.coverage.run]
 source = [
     "Juthoor-DataCore-LV0/src",
+    "Juthoor-ArabicGenome-LV1/src",
     "Juthoor-CognateDiscovery-LV2/src",
 ]
 omit = ["*/tests/*", "*/__pycache__/*"]

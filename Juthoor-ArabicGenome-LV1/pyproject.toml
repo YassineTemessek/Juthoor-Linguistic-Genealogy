@@ -3,7 +3,7 @@ name = "juthoor-arabicgenome-lv1"
 version = "0.1.0"
 description = "LV1: Arabic Genome. Decoding the root system and atomic meanings."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "juthoor-datacore-lv0",
     "pandas",

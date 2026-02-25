@@ -1,7 +1,7 @@
 {"bab": "ي", "binary_root": "يا", "root": "ياج", "words": ["يأج", "ياجُ"], "muajam_match": false}
 {"bab": "ي", "binary_root": "يا", "root": "ياجج", "words": ["يأجج", "يأْجَجُ"], "muajam_match": false}
 {"bab": "ي", "binary_root": "يا", "root": "يارم", "words": ["يارَمُ"], "muajam_match": false}
-{"bab": "ي", "binary_root": "يا", "root": "ياس", "words": ["تَا۟يْـَٔسُ", "يأس", "يَئِسَ", "يَئِسُ", "يَئِسْ", "يَا۟يْـَٔسُ", "يَا۟يْـَٔسِ", "ٱسْتَيْـَٔسَ", "ٱسْتَيْـَٔسُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "ياس", "words": ["تَا۟يْـَٔسُ", "يأس", "يَئِسَ", "يَئِسُ", "يَئِسْ", "يَا۟يْـَٔسُ", "يَا۟يْـَٔسِ", "ٱسْتَيْـَٔسَ", "ٱسْتَيْـَٔسُ"], "muajam_match": true, "binary_root_meaning": "نفاذ شعور أو أثر حاد في عمق أو فجوة", "axial_meaning": "تكوّن شعور بمعنى في النفس دقيق له حدة", "added_letter": "ي", "quran_example": "﴿وَلَا تَأْيَسُوا مِن رَّوْحِ اللَّهِ﴾", "letter1": "أ", "letter1_meaning": "—", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "امتداد بدقة ووحدة"}
 {"bab": "ي", "binary_root": "يا", "root": "ياطب", "words": ["ياطِبٌ"], "muajam_match": false}
 {"bab": "ي", "binary_root": "يا", "root": "يافث", "words": ["يافِثُ"], "muajam_match": false}
 {"bab": "ي", "binary_root": "يا", "root": "ياقد", "words": ["ياقِدُ"], "muajam_match": false}
@@ -19,7 +19,7 @@
 {"bab": "ي", "binary_root": "يج", "root": "يجوء", "words": ["يَجُوءُ"], "muajam_match": false}
 {"bab": "ي", "binary_root": "يد", "root": "يدر", "words": ["يدر", "يَدَّرٌ"], "muajam_match": false}
 {"bab": "ي", "binary_root": "يد", "root": "يده", "words": ["يده", "يَده"], "muajam_match": false}
-{"bab": "ي", "binary_root": "يد", "root": "يدي", "words": ["يدى", "يدي", "يَدي"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يد", "root": "يدي", "words": ["يدى", "يدي", "يَدي"], "muajam_match": true, "binary_root_meaning": "الامتداد بقوة للتمكين أو الضغط", "axial_meaning": "امتداد من الشيء يمكن من الإمساك به", "added_letter": "يدى", "quran_example": "﴿وَالسَّارِقُ وَالسَّارِقَةُ فَاقْطَعُوا أَيْدِيَهُمَا﴾", "letter1": "يد", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "ي", "binary_root": "ير", "root": "يرت", "words": ["يرت", "يَرْتُ"], "muajam_match": false}
 {"bab": "ي", "binary_root": "ير", "root": "يرد", "words": ["يرد", "يَرْدُ"], "muajam_match": false}
 {"bab": "ي", "binary_root": "ير", "root": "يرنا", "words": ["يرنأ"], "muajam_match": false}

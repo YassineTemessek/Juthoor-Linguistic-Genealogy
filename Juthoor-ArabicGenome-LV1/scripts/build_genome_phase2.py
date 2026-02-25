@@ -26,18 +26,49 @@ LETTER_MEANINGS = BASE / "data" / "muajam" / "letter_meanings.jsonl"
 GENOME_V1_DIR = BASE / "outputs" / "genome"
 GENOME_V2_DIR = BASE / "outputs" / "genome_v2"
 
-# Arabic diacritic codepoints (harakat + shadda + etc.)
-_ARABIC_DIACRITICS = re.compile(
-    "[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8"
-    "\u06EA-\u06ED]"
+# Arabic diacritics + tatweel (U+0640)
+_ARABIC_DIACRITICS = re.compile(r"[\u064B-\u065F\u0670\u0640]")
+
+# Hamza/letter variant normalization map
+_AR_ROOT_NORM_MAP = str.maketrans(
+    {
+        "\u0623": "\u0627",  # أ → ا
+        "\u0625": "\u0627",  # إ → ا
+        "\u0622": "\u0627",  # آ → ا
+        "\u0671": "\u0627",  # ٱ → ا
+        "\u0649": "\u064a",  # ى → ي
+        "\u0624": "\u0648",  # ؤ → و
+        "\u0626": "\u064a",  # ئ → ي
+        "\u0629": "\u0647",  # ة → ه
+    }
 )
 
 
 def normalize_root(root: str) -> str:
-    """Strip spaces and Arabic diacritics for comparison."""
-    root = root.strip()
-    root = _ARABIC_DIACRITICS.sub("", root)
+    """Normalize an Arabic root: strip diacritics, tatweel, and normalize hamza/letter variants."""
+    root = (root or "").strip()
+    if not root:
+        return ""
+    root = _ARABIC_DIACRITICS.sub("", root)   # strip diacritics + tatweel
+    root = root.translate(_AR_ROOT_NORM_MAP)  # normalize hamza/letter variants
     return root
+
+
+def expand_muajam_key(tri: str) -> list[str]:
+    """
+    Split compound entries (with / or -) into individual normalized keys,
+    so that compound Muajam roots can still match genome entries.
+    """
+    tri = tri.strip()
+    if not tri:
+        return []
+    parts = re.split(r"[/\-]", tri)
+    keys = []
+    for p in parts:
+        n = normalize_root(p)
+        if n:
+            keys.append(n)
+    return keys
 
 
 # ── Load letter meanings ───────────────────────────────────────────────────────
@@ -56,7 +87,11 @@ def load_letter_meanings() -> dict:
 
 # ── Load Muajam roots ──────────────────────────────────────────────────────────
 def load_muajam_roots() -> dict:
-    """Return dict: normalized_tri_root -> full muajam record."""
+    """
+    Return dict: normalized_key -> full muajam record.
+    Compound entries (tri_root containing / or -) are expanded so each part
+    maps to the same record. Hamza and tatweel normalization are also applied.
+    """
     muajam = {}
     with MUAJAM_ROOTS.open(encoding="utf-8") as f:
         for line in f:
@@ -64,9 +99,11 @@ def load_muajam_roots() -> dict:
             if not line:
                 continue
             rec = json.loads(line)
-            key = normalize_root(rec["tri_root"])
-            muajam[key] = rec
-    print(f"Loaded {len(muajam)} Muajam roots")
+            tri = rec.get("tri_root", "")
+            for key in expand_muajam_key(tri):
+                if key:
+                    muajam.setdefault(key, rec)
+    print(f"Loaded {len(muajam)} Muajam normalized keys")
     return muajam
 
 

@@ -15,9 +15,39 @@ Applies to all processed lexeme tables produced by adapters and used for embeddi
 - `ipa_raw`, `ipa` (string): raw IPA and normalized IPA (strip wrappers, normalize spacing/stress)
 - `pos` (list of strings)
 - `gloss_html`, `gloss_plain` (string)
-- `form_text` (string): canonical text for CANINE embeddings (deterministic rules)
-- `meaning_text` (string): canonical text for SONAR embeddings (deterministic rules)
+- `form_text` (string): canonical text for CANINE/ByT5 embeddings (deterministic rules)
+- `meaning_text` (string): canonical text for BGE-M3/SONAR embeddings (deterministic rules)
 - Additional provenance: `source_ref`, `sources`, `n_sources`, etc., as already used.
+
+## Known divergences in current outputs (as of 2026-02)
+
+Not all datasets fully conform to the schema above yet. Current state per language:
+
+### Arabic classical (`arabic/classical/lexemes.jsonl`, 32,687 rows)
+- **Missing from schema**: `stage`, `script`, `pos`, `gloss_html`, `gloss_plain`, `form_text`, `meaning_text`
+- **Extra fields present**: `root`, `root_norm`, `binary_root`, `binary_root_method`, `translit`, `definition`, `sources`, `source_refs`, `source_ref`, `source_priority`, `n_sources`
+- Note: `definition` is the gloss equivalent; not yet renamed to `gloss_plain`. `form_text`/`meaning_text` are absent (text_fields step runs on `ten_dicts.jsonl` source but not the merged lexemes.jsonl).
+
+### Quranic Arabic (`quranic_arabic/lexemes.jsonl`, 4,903 rows)
+- **Missing from schema**: `stage`, `script`, `gloss_html`, `gloss_plain`, `form_text`, `meaning_text`
+- **Extra fields present**: `translit`, `pos_tag` (raw morphology tag, complement to `pos`), `example_surface`, `sources`, `source_refs`, `source_ref`, `n_sources`
+- Note: `pos` is present as a list.
+
+### Ancient Greek (`ancient_greek/sources/kaikki.jsonl`, 56,058 rows)
+- Closest to full schema: has `stage`, `script`, `pos`, `gloss_plain`, `form_text`, `meaning_text`, `translit`, `ipa`, `ipa_raw`
+- **Missing**: `gloss_html`
+- This is the reference output; other adapters should converge toward this shape.
+
+### Latin (`latin/classical/sources/kaikki.jsonl`, 883,915 rows)
+- Same shape as ancient_greek (kaikki ingest pipeline). Has `form_text` and `meaning_text`.
+
+### English (old/middle/modern — sources/kaikki.jsonl)
+- Old English: 7,948 rows; Middle English: 49,779 rows; Modern English: 1,442,008 rows
+- Same shape as ancient_greek (kaikki ingest pipeline).
+
+### Arabic ten-dicts (`arabic/classical/sources/ten_dicts.jsonl`, 70,118 rows)
+- Has `form_text` and `meaning_text` (text_fields enrichment step runs on this file).
+- Does not have a corresponding merged `lexemes.jsonl` with these fields propagated.
 
 ## form_text rules (deterministic)
 - Arabic:

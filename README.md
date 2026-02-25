@@ -25,7 +25,7 @@ This monorepo consolidates a multi-layered research stack -- from raw data inges
 ## Getting Started
 
 ### Prerequisites
-- Python 3.10+ (3.11 recommended)
+- Python 3.11+
 - [uv](https://github.com/astral-sh/uv) (recommended) or standard pip
 
 ### Installation
@@ -41,7 +41,7 @@ source .venv/bin/activate  # Linux/macOS
 # .venv\Scripts\activate   # Windows
 
 # Install core packages (editable mode)
-uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-CognateDiscovery-LV2
+uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-ArabicGenome-LV1 -e Juthoor-CognateDiscovery-LV2
 
 # Install ML embeddings (cross-platform)
 uv pip install "juthoor-cognatediscovery-lv2[embeddings]"
@@ -50,11 +50,11 @@ uv pip install "juthoor-cognatediscovery-lv2[embeddings]"
 ### Running Tests
 
 ```bash
-# Run all tests (excluding slow model-loading tests)
-pytest tests/ -v -m "not slow"
+# Run all tests across all levels (356 tests, excluding slow model-loading tests)
+pytest Juthoor-DataCore-LV0/tests/ Juthoor-ArabicGenome-LV1/tests/ Juthoor-CognateDiscovery-LV2/tests/ -v -m "not slow"
 
-# Run with coverage
-pytest tests/ -v --cov=Juthoor-DataCore-LV0/src --cov=Juthoor-CognateDiscovery-LV2/src
+# Run a single level
+pytest Juthoor-DataCore-LV0/tests/ -v
 ```
 
 ### Running the Pipeline
@@ -64,12 +64,16 @@ pytest tests/ -v --cov=Juthoor-DataCore-LV0/src --cov=Juthoor-CognateDiscovery-L
 ldc ingest --all
 ```
 
-**2. Discovery (LV2)**
+**2. Arabic Genome (LV1)**
 ```bash
-python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_discovery_retrieval.py \
-  --source ara@modern="data/processed/arabic.jsonl" \
-  --target eng@modern="data/processed/english.jsonl" \
-  --models sonar canine
+python Juthoor-ArabicGenome-LV1/scripts/build_genome_phase1.py
+python Juthoor-ArabicGenome-LV1/scripts/build_genome_phase2.py
+```
+
+**3. Discovery (LV2)**
+```bash
+python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_discovery_retrieval.py
+# Interactive wizard guides you through corpus and model selection
 ```
 
 ---

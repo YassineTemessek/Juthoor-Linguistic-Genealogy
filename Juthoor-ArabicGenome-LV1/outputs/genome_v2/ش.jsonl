@@ -19,8 +19,8 @@
 {"bab": "ش", "binary_root": "شا", "root": "شاف", "words": ["شأف", "شأُفٍّ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شا", "root": "شاكهه", "words": ["شاكَهَهُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شا", "root": "شالت", "words": ["شالَتِ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شا", "root": "شام", "words": ["شأم"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شا", "root": "شان", "words": ["شأن", "شَأْن"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شا", "root": "شام", "words": ["شأم"], "muajam_match": true, "binary_root_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى", "axial_meaning": "كثافة تعتري الظاهر متركزة عليه", "added_letter": "شأم", "quran_example": "﴿وَأَصْحَابُ الْمَشْأَمَةِ مَا أَصْحَابُ الْمَشْأَمَةِ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
+{"bab": "ش", "binary_root": "شا", "root": "شان", "words": ["شأن", "شَأْن"], "muajam_match": true, "binary_root_meaning": "انتشار دقاق من أثناء الشيء", "axial_meaning": "فُروع - أو شُعَبٌ - دقيقة تمتد في أثناء أو منها - مع وصل، أو توصُّل", "added_letter": "شأن", "quran_example": "﴿كُلَّ يَوْمٍ هُوَ فِي شَأْنٍ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شا", "root": "شانه", "words": ["شانَهُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شا", "root": "شانيا", "words": ["شَانِيا"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شا", "root": "شاه", "words": ["شاهَ"], "muajam_match": false}
@@ -95,7 +95,7 @@
 {"bab": "ش", "binary_root": "شر", "root": "شره", "words": ["شره", "شَره", "شَرِهَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شر", "root": "شرهف", "words": ["شرهف", "شَرْهَفَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شر", "root": "شرواض", "words": ["شِرْواضٌ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شر", "root": "شري", "words": ["تَشْتَرُ", "شرى", "شري", "شَرَ", "نَشْتَرِى", "يَشْتَرُ", "يَشْتَرِى", "يَشْرُ", "يَشْرِى", "ٱشْتَرَ", "ٱشْتَرَىٰ"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شر", "root": "شري", "words": ["تَشْتَرُ", "شرى", "شري", "شَرَ", "نَشْتَرِى", "يَشْتَرُ", "يَشْتَرِى", "يَشْرُ", "يَشْرِى", "ٱشْتَرَ", "ٱشْتَرَىٰ"], "muajam_match": true, "binary_root_meaning": "الانتشار أو صورة منه", "axial_meaning": "التماثل اعتدالًا، أو مقدارًا، أو وضعًا، بالنسبة لشيء ما", "added_letter": "شرى", "quran_example": "﴿إِنَّ اللَّهَ اشْتَرَى مِنَ الْمُؤْمِنِينَ أَنفُسَهُمْ وَأَمْوَالَهُم بِأَنَّ لَهُمُ الْجَنَّةَ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شز", "root": "شزا", "words": ["شَزَا"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شز", "root": "شزره", "words": ["شَزَرَهُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شس", "root": "شسا", "words": ["شسأ", "شسا"], "muajam_match": false}
@@ -104,7 +104,7 @@
 {"bab": "ش", "binary_root": "شش", "root": "ششقل", "words": ["ششقل", "شَشْقَلَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شص", "root": "شصا", "words": ["شصا", "شَصا"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شص", "root": "شصي", "words": ["شصي", "شَصِيَ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شط", "root": "شطا", "words": ["شطأ", "شطا"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شط", "root": "شطا", "words": ["شطأ", "شطا"], "muajam_match": true, "binary_root_meaning": "الامتداد بجانب أو الانقسام عنه", "axial_meaning": "نتوء شيء بجانب ملازم له (حتى يعلوه)", "added_letter": "شطأ", "quran_example": "﴿كَزَرْعٍ أَخْرَجَ شَطْأَهُ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ط", "letter2_meaning": "ضغط باتّساع واستغلاظ", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شط", "root": "شطاه", "words": ["شَطاةُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شط", "root": "شطح", "words": ["شطح", "شِطِّحْ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شط", "root": "شطر", "words": ["شطر", "شَطْرَ"], "muajam_match": true, "binary_root_meaning": "الامتداد بجانب أو الانقسام عنه", "axial_meaning": "انقسام الشيء – في حالته - إلى نصفين بحسب الجهة", "added_letter": "شطر", "quran_example": "﴿فَوَلِّ وَجْهَكَ شَطْرَ الْمَسْجِدِ الْحَرَامِ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ط", "letter2_meaning": "ضغط باتّساع واستغلاظ", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
@@ -135,7 +135,7 @@
 {"bab": "ش", "binary_root": "شف", "root": "شفق", "words": ["أَشْفَقْ", "شفق", "مُشْفِقُونَ", "مُشْفِقِينَ", "مُّشْفِقُونَ"], "muajam_match": true, "binary_root_meaning": "فقد كثافة الأثناء", "axial_meaning": "رقة جرمِ الشيء؛ لفقد الشدّة والغِلَظ من جوفه", "added_letter": "شفق", "quran_example": "﴿وَهُم مِّنْ خَشْيَتِهِ مُشْفِقُونَ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شف", "root": "شفقل", "words": ["شفقل", "شَفْقَلٌ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شف", "root": "شفهه", "words": ["شَفَهَهُ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شف", "root": "شفي", "words": ["شفى", "شفي", "يَشْفِ", "يَشْفِي"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شف", "root": "شفي", "words": ["شفى", "شفي", "يَشْفِ", "يَشْفِي"], "muajam_match": true, "binary_root_meaning": "فقد كثافة الأثناء", "axial_meaning": "يعبر التركيب عن حافة الشيء، أي مُنقَطَع جرمه، أو أغلظه", "added_letter": "شفو - شفي", "quran_example": "﴿وَنُنَزِّلُ مِنَ الْقُرْءَانِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شق", "root": "شقا", "words": ["شقأ", "شقا", "شَقَأَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شق", "root": "شقحب", "words": ["شقحب", "شقْحَبٌ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شق", "root": "شقع", "words": ["شقع", "شَقَعَ"], "muajam_match": false}
@@ -160,21 +160,21 @@
 {"bab": "ش", "binary_root": "شل", "root": "شلوبين", "words": ["شَلَوْبِينُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شما", "words": ["شما", "شَمَا"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شمارق", "words": ["شَمارِقُ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شم", "root": "شماز", "words": ["شمأز"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شم", "root": "شماز", "words": ["شمأز"], "muajam_match": true, "binary_root_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى", "axial_meaning": "ابتعاد باندفاع شديد إثر محاولة الثني - وذلك بسبب الصلابة", "added_letter": "شمز - شمأز", "quran_example": "﴿وَإِذَا ذُكِرَ اللَّهُ وَحْدَهُ اشْمَأَزَّتْ قُلُوبُ الَّذِينَ لَا يُؤْمِنُونَ بِالْآخِرَةِ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شم", "root": "شمت", "words": ["تُشْمِتْ", "شمت", "شمِتَ"], "muajam_match": true, "binary_root_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى", "axial_meaning": "تقوي البدن قليلًا - أو انتباره كذلك - بحادٍّ قليل، أو خفيٍّ يتربى فيه", "added_letter": "شمت", "quran_example": "﴿فَلَا تُشْمِتْ بِيَ الْأَعْدَاءَ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شم", "root": "شمجر", "words": ["شمجر", "شَمْجَرَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شمخ", "words": ["شمخ", "شمخَ", "شَمَخَ"], "muajam_match": true, "binary_root_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى", "axial_meaning": "ارتفاع خارق للأفق مع رسوخ الأصل", "added_letter": "شمخ", "quran_example": "﴿وَجَعَلْنَا فِيهَا رَوَاسِيَ شَامِخَاتٍ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شم", "root": "شمختر", "words": ["شمختر", "شَّمَخْتَر"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شمذت", "words": ["شَمَذَتِ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شمر", "words": ["شمر", "شَمَرَ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شم", "root": "شمز", "words": ["شمز", "ٱشْمَأَزَّتْ"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شم", "root": "شمز", "words": ["شمز", "ٱشْمَأَزَّتْ"], "muajam_match": true, "binary_root_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى", "axial_meaning": "ابتعاد باندفاع شديد إثر محاولة الثني - وذلك بسبب الصلابة", "added_letter": "شمز - شمأز", "quran_example": "﴿وَإِذَا ذُكِرَ اللَّهُ وَحْدَهُ اشْمَأَزَّتْ قُلُوبُ الَّذِينَ لَا يُؤْمِنُونَ بِالْآخِرَةِ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شم", "root": "شمشاط", "words": ["شَمْشَاطٌ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شمص", "words": ["شمص", "شَمَصَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شمصر", "words": ["شمصر", "شَمْصَرَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شمغون", "words": ["شَمْغُونُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شم", "root": "شمل", "words": ["شمل", "ٱشْتَمَلَتْ"], "muajam_match": true, "binary_root_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى", "axial_meaning": "إحاطة ما يُخشَى انتشاره بما يلتف حوله ويضمه معًا قائمًا", "added_letter": "شمل", "quran_example": "﴿يَتَفَيَّأُ ظِلَالُهُ عَنِ الْيَمِينِ وَالشَّمَائِلِ سُجَّدًا لِّلَّهِ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شم", "root": "شمن", "words": ["شمن", "شَمَنُ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شن", "root": "شنا", "words": ["شنأ", "شنا", "شَانِئَ"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شن", "root": "شنا", "words": ["شنأ", "شنا", "شَانِئَ"], "muajam_match": true, "binary_root_meaning": "انتشار دقاق من أثناء الشيء", "axial_meaning": "دفع من الحيز - أو رد عنه - بقوة؛ لكراهة الحوز، أو عدم استحقاقه", "added_letter": "شنأ", "quran_example": "﴿إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شن", "root": "شناه", "words": ["شَنَأَهُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شن", "root": "شنباره", "words": ["شَنْبارةُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شن", "root": "شنبص", "words": ["شنبص", "شَنْبَصٌ"], "muajam_match": false}
@@ -200,15 +200,15 @@
 {"bab": "ش", "binary_root": "شه", "root": "شهدر", "words": ["شهدر", "شَهْدَرَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شه", "root": "شهرزور", "words": ["شهرزور", "شَهْرَزُوْرُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شه", "root": "شهق", "words": ["شهق", "شَهَقَ"], "muajam_match": true, "binary_root_meaning": "وجود فراغ ما", "axial_meaning": "نفاذ الشيء مجتمعًا بحدة إلى عُمق خال", "added_letter": "شهق", "quran_example": "﴿إِذَا أُلْقُوا فِيهَا سَمِعُوا لَهَا شَهِيقًا﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "هـ", "letter2_meaning": "فراغ أو إفراغ ما في الجوف", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
-{"bab": "ش", "binary_root": "شه", "root": "شهو", "words": ["تَشْتَهِىٓ", "تَشْتَهِي", "شهو", "يَشْتَهُ", "ٱشْتَهَتْ"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شه", "root": "شهو", "words": ["تَشْتَهِىٓ", "تَشْتَهِي", "شهو", "يَشْتَهُ", "ٱشْتَهَتْ"], "muajam_match": true, "binary_root_meaning": "وجود فراغ ما", "axial_meaning": "رغبة حادة في مرغوب بَدَني (من إحساس بالخلو منه)", "added_letter": "شهو - شهي", "quran_example": "﴿زُيِّنَ لِلنَّاسِ حُبُّ الشَّهَوَاتِ مِنَ النِّسَاءِ وَالْبَنِينَ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "هـ", "letter2_meaning": "فراغ أو إفراغ ما في الجوف", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شه", "root": "شهيه", "words": ["شَهِيَهُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شو", "root": "شوا", "words": ["شوأ", "شوا"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شو", "root": "شوح", "words": ["شوح", "شَوَّحَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شو", "root": "شور", "words": ["أَشَارَتْ", "تَشَاوُرٍ", "شور", "شَاوِرْ"], "muajam_match": true, "binary_root_meaning": "الانتشار أو صورة منه", "axial_meaning": "استخراج ما يحتويه الشيء من طَيِّب، أو مناسب قوي الأثر", "added_letter": "شور", "quran_example": "﴿وَأَمْرُهُمْ شُورَى بَيْنَهُمْ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شو", "root": "شوط", "words": ["شوط", "شَوْطُ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شو", "root": "شوي", "words": ["شوى", "شوي", "شَوَى", "يَشْوِى"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شو", "root": "شوي", "words": ["شوى", "شوي", "شَوَى", "يَشْوِى"], "muajam_match": true, "binary_root_meaning": "النتوء والظهور والزيادة الدقيقة", "axial_meaning": "أطراف الشيء وحواشيه الظاهرة المنتشرة حوله", "added_letter": "شوى", "quran_example": "﴿نَزَّاعَةً لِّلشَّوَى﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شي", "root": "شيء", "words": ["شيء", "شيءٌ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شي", "root": "شيا", "words": ["أَشَآءُ", "تَشَآءُ", "شيأ", "شيا", "شَآءَ", "شِئْ", "نَشَآءُ", "نَشَٰٓؤُا۟", "نَّشَأْ", "نَّشَآءُ", "يَشَأْ", "يَشَإِ", "يَشَآءَ", "يَشَآءُ"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شي", "root": "شيا", "words": ["أَشَآءُ", "تَشَآءُ", "شيأ", "شيا", "شَآءَ", "شِئْ", "نَشَآءُ", "نَشَٰٓؤُا۟", "نَّشَأْ", "نَّشَآءُ", "يَشَأْ", "يَشَإِ", "يَشَآءَ", "يَشَآءُ"], "muajam_match": true, "binary_root_meaning": "النتوء والظهور والزيادة الدقيقة", "axial_meaning": "نتوء متميز صلب في ظاهر الشيء", "added_letter": "شيأ", "quran_example": "﴿ذَلِكَ فَضْلُ اللَّهِ يُؤْتِيهِ مَن يَشَاءُ وَاللَّهُ ذُو الْفَضْلِ الْعَظِيمِ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شي", "root": "شياء", "words": ["شِياءُ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شي", "root": "شيار", "words": ["شِيارٌ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شي", "root": "شيته", "words": ["شِئْتُهُ"], "muajam_match": false}
@@ -217,5 +217,5 @@
 {"bab": "ش", "binary_root": "شي", "root": "شيد", "words": ["شيد", "مَّشِيدٍ", "مُّشَيَّدَةٍ"], "muajam_match": true, "binary_root_meaning": "هو صلابة الشيء أو وثاقة بعضه ببعض", "axial_meaning": "شَدُّ نحو البناء بما ينتشر عليه؛ فيمسكه شديدًا", "added_letter": "شيد", "quran_example": "﴿أَيْنَمَا تَكُونُوا يُدْرِككُّمُ الْمَوْتُ وَلَوْ كُنتُمْ فِي بُرُوجٍ مُّشَيَّدَةٍ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شي", "root": "شيز", "words": ["شيز", "شَئِزَ"], "muajam_match": false}
 {"bab": "ش", "binary_root": "شي", "root": "شيس", "words": ["شَئِسَ"], "muajam_match": false}
-{"bab": "ش", "binary_root": "شي", "root": "شيع", "words": ["تَشِيعَ", "شيع"], "muajam_match": false}
+{"bab": "ش", "binary_root": "شي", "root": "شيع", "words": ["تَشِيعَ", "شيع"], "muajam_match": true, "binary_root_meaning": "الانتشار بتفرق ودقة وامتداد", "axial_meaning": "تفرق الشيء المجتمع إلى تجمعات صغيرة بتشعث، أي عدم انتظام", "added_letter": "شوع - شيع", "quran_example": "﴿وَإِنَّ مِن شِيعَتِهِ لَإِبْرَاهِيمَ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ع", "letter2_meaning": "التحام على رقة مع حدة ما / رخاوة جرم ملتحم", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ش", "binary_root": "شي", "root": "شينيز", "words": ["شئنيز"], "muajam_match": false}

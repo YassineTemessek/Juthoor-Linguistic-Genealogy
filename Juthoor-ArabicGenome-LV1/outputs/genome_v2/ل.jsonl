@@ -12,7 +12,7 @@
 {"bab": "ل", "binary_root": "لا", "root": "لاق", "words": ["لاقَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لا", "root": "لاك", "words": ["لأك"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لا", "root": "لال", "words": ["لأل"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لا", "root": "لالا", "words": ["لألأ"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لا", "root": "لالا", "words": ["لألأ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "تركز الصفاء واللمعان وانحصاره في حيز مع انتشار أثره", "added_letter": "لألأ", "quran_example": "﴿كَأَمْثَالِ ٱللُّؤْلُوِ ٱلْمَكْنُونِ﴾", "letter1": "لء", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لا", "root": "لام", "words": ["لأم", "لام"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لا", "root": "لان", "words": ["لانَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لا", "root": "لاه", "words": ["لاهَ"], "muajam_match": false}
@@ -44,8 +44,8 @@
 {"bab": "ل", "binary_root": "لث", "root": "لثق", "words": ["لثق", "لَثِقَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لث", "root": "لثم", "words": ["لثم", "لَثَمَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لث", "root": "لثي", "words": ["لثى", "لثي"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لج", "root": "لجا", "words": ["لجأ", "لجا", "لَجَأَ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لج", "root": "لجج", "words": ["لجج", "لَجُّ", "لَّجُّ"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لج", "root": "لجا", "words": ["لجأ", "لجا", "لَجَأَ"], "muajam_match": true, "binary_root_meaning": "التراكم ثم ما قد يلزمه من كثافة وشدة مادية", "axial_meaning": "حيز قوي حصين يحفظ ويمسك ما يلوذ به", "added_letter": "لجأ", "quran_example": "﴿وَظَنُّوٓا۟ أَن لَّا مَلْجَأَ مِنَ ٱللَّهِ إِلَّآ إِلَيْهِ﴾", "letter1": "لج", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
+{"bab": "ل", "binary_root": "لج", "root": "لجج", "words": ["لجج", "لَجُّ", "لَّجُّ"], "muajam_match": true, "binary_root_meaning": "التراكم ثم ما قد يلزمه من كثافة وشدة مادية", "axial_meaning": "تراكم بكثافة بالغة للشيء الرخو في مقره", "added_letter": "لجج-لجلج", "quran_example": "﴿فِى بَحْرٍ لُّجِّىٍّ﴾", "letter1": "لج", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لح", "root": "لحاه", "words": ["لَحاهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لح", "root": "لحته", "words": ["لَحَتَه"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لح", "root": "لحج", "words": ["لحج", "لحِجَ"], "muajam_match": false}
@@ -56,7 +56,7 @@
 {"bab": "ل", "binary_root": "لح", "root": "لحفه", "words": ["لَحَفَهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لح", "root": "لحق", "words": ["أَلْحَقْ", "أَلْحِقْ", "لحق", "لَحِقَ", "يَلْحَقُ"], "muajam_match": true, "binary_root_meaning": "الالتحام وما يلزمه من عرض وامتداد", "axial_meaning": "إدراك الشيء شيئًا كان يسبقه متصلًا بأثنائه", "added_letter": "لحق", "quran_example": "﴿لَمْ يَلْحَقُوا۟ بِهِم﴾", "letter1": "لح", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لح", "root": "لحكه", "words": ["لَحَكَهُ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لح", "root": "لحي", "words": ["لحى", "لحي"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لح", "root": "لحي", "words": ["لحى", "لحي"], "muajam_match": true, "binary_root_meaning": "الالتحام وما يلزمه من عرض وامتداد", "axial_meaning": "لصوق ما هو كالقشر لشيء بظاهره لصوقًا شديدًا", "added_letter": "لحى", "quran_example": "﴿لَا تَأْخُذْ بِلِحْيَتِى وَلَا بِرَأْسِىٓ﴾", "letter1": "لح", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لخ", "root": "لخب", "words": ["لخب", "لخَب", "لخَبَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لخ", "root": "لخجم", "words": ["لخجم", "لخَجم"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لخ", "root": "لخخ", "words": ["لخخ", "لخَخَ"], "muajam_match": false}
@@ -73,10 +73,10 @@
 {"bab": "ل", "binary_root": "لد", "root": "لدغته", "words": ["لَدَغَتْهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لد", "root": "لدك", "words": ["لدك", "لَدِكَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لد", "root": "لدن", "words": ["لدن", "لَّدُنْ"], "muajam_match": true, "binary_root_meaning": "الضم الشديد، أي الحوز بلا إفلات", "axial_meaning": "امتساك الجسم مع اهتزازه بسبب لطف أو رقة تمتد في باطنه", "added_letter": "لدن", "quran_example": "﴿مِن لَّدُنكَ رَحْمَةً﴾", "letter1": "لد", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
-{"bab": "ل", "binary_root": "لد", "root": "لدي", "words": ["لدى", "لدي", "لَدَى"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لد", "root": "لدي", "words": ["لدى", "لدي", "لَدَى"], "muajam_match": true, "binary_root_meaning": "الضم الشديد، أي الحوز بلا إفلات", "axial_meaning": "المكان الذي يكون فيه الشيء يحتبس فيه ويتمسك", "added_letter": "لدى", "quran_example": "﴿وَأَلْفَيَا سَيِّدَهَا لَدَا ٱلْبَابِ﴾", "letter1": "لد", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لذ", "root": "لذب", "words": ["لذب", "لذَبَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لذ", "root": "لذج", "words": ["لذج", "لَذَجَ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لذ", "root": "لذذ", "words": ["تَلَذُّ", "لذذ"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لذ", "root": "لذذ", "words": ["تَلَذُّ", "لذذ"], "muajam_match": true, "binary_root_meaning": "مماسة مستطابة", "axial_meaning": "استطابة المماسة للشيء ووقعه على الحس مع لطفه وخفته", "added_letter": "لذذ-لذلذ", "quran_example": "﴿وَتَلَذُّ ٱلْأَعْيُنُ﴾", "letter1": "لذ", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لذ", "root": "لذع", "words": ["لذع", "لَذَعَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لذ", "root": "لذمه", "words": ["لَذِمَه"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لذ", "root": "لذو", "words": ["لذو", "لذُو"], "muajam_match": false}
@@ -113,7 +113,7 @@
 {"bab": "ل", "binary_root": "لط", "root": "لطف", "words": ["لطف", "لَطَفَ", "يَتَلَطَّفْ"], "muajam_match": true, "binary_root_meaning": "حجب الثغرة أو سدها بشيء خارجي", "axial_meaning": "نفاذ بدقة أو احتيال مع خفاء المنفذ أو المدخل", "added_letter": "لطف", "quran_example": "﴿وَلْيَتَلَطَّفْ﴾", "letter1": "لط", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لط", "root": "لطي", "words": ["لطئ", "لطى", "لطي"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لظ", "root": "لظا", "words": ["لظأ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لظ", "root": "لظي", "words": ["تَلَظَّىٰ", "لظى", "لظي"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لظ", "root": "لظي", "words": ["تَلَظَّىٰ", "لظى", "لظي"], "muajam_match": true, "binary_root_meaning": "الحركة الخفيفة مع الحدة", "axial_meaning": "توقد النار وتوهجها (بلوغ الحدة أقصاها)", "added_letter": "لظى", "quran_example": "﴿كَلَّآ ۖ إِنَّهَا لَظَىٰ﴾", "letter1": "لظ", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لع", "root": "لعب", "words": ["لعب", "لَعِبَ", "لَٰعِبِينَ", "لَّٰعِبِينَ", "نَلْعَبُ", "يَلْعَبُ", "يَلْعَبْ"], "muajam_match": true, "binary_root_meaning": "الحدة في الأثناء حدة يظهر أثرها", "axial_meaning": "اضطراب وتسيب فيما يصدر عن الشيء بسبب تجمع حيويته", "added_letter": "لعب", "quran_example": "﴿ٱلْحَيَوٰةُ ٱلدُّنْيَا لَعِبٌ وَلَهْوٌ﴾", "letter1": "لع", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لع", "root": "لعثم", "words": ["لعثم", "لَعْثَمَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لع", "root": "لعج", "words": ["لعج", "لَعَجَ"], "muajam_match": false}
@@ -136,7 +136,7 @@
 {"bab": "ل", "binary_root": "لف", "root": "لفخه", "words": ["لَفَخَهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لف", "root": "لفظ", "words": ["لفظ", "يَلْفِظُ"], "muajam_match": true, "binary_root_meaning": "التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة", "axial_meaning": "قذف بقوة من جوف أو حيز", "added_letter": "لفظ", "quran_example": "﴿مَّا يَلْفِظُ مِن قَوْلٍ﴾", "letter1": "لف", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لف", "root": "لفظه", "words": ["لَفِظَه"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لف", "root": "لفف", "words": ["لفف", "ٱلْتَفَّتِ"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لف", "root": "لفف", "words": ["لفف", "ٱلْتَفَّتِ"], "muajam_match": true, "binary_root_meaning": "التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة", "axial_meaning": "تلوي شيء على آخر من ظاهره عالقًا غير لاصق", "added_letter": "لفف-لفلف", "quran_example": "﴿وَٱلْتَفَّتِ ٱلسَّاقُ بِٱلسَّاقِ﴾", "letter1": "لف", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لف", "root": "لفق", "words": ["لفق", "لَفَقَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لف", "root": "لفه", "words": ["لَفَّهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لف", "root": "لفو", "words": ["أَلْفَ", "أَلْفَيَ", "أَلْفَيْ", "لفو"], "muajam_match": true, "binary_root_meaning": "التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة", "axial_meaning": "وجود الشيء أو تهيؤه على وجه الأرض أو في المتناول", "added_letter": "لفو", "quran_example": "﴿وَأَلْفَيَا سَيِّدَهَا لَدَا ٱلْبَابِ﴾", "letter1": "لف", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
@@ -151,7 +151,7 @@
 {"bab": "ل", "binary_root": "لق", "root": "لقف", "words": ["تَلْقَفُ", "تَلْقَفْ", "لقف"], "muajam_match": true, "binary_root_meaning": "الصدم أو الالتقاء بالشيء في الحيز بقوة", "axial_meaning": "أخذ الشيء بخفة أو خطف", "added_letter": "لقف", "quran_example": "﴿تَلْقَفْ مَا صَنَعُوٓا۟﴾", "letter1": "لق", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لق", "root": "لقفه", "words": ["لَقِفَهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لق", "root": "لقم", "words": ["لقم", "ٱلْتَقَمَ"], "muajam_match": true, "binary_root_meaning": "الصدم أو الالتقاء بالشيء في الحيز بقوة", "axial_meaning": "ضم الفم على ما يلقى إليه لقفًا بمرة", "added_letter": "لقم", "quran_example": "﴿فَٱلْتَقَمَهُ ٱلْحُوتُ وَهُوَ مُلِيمٌ﴾", "letter1": "لق", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
-{"bab": "ل", "binary_root": "لق", "root": "لقي", "words": ["ءُلْقِىَ", "أَلْقَ", "أَلْقَتْ", "أَلْقَى", "أَلْقَىٰ", "أَلْقَىٰٓ", "أَلْقَيْ", "أَلْقُ", "أَلْقِ", "أَلْقِيَ", "أُلْقُ", "أُلْقِى", "أُلْقِىَ", "تَتَلَقَّىٰ", "تَلَقَّ", "تَلَقَّىٰٓ", "تَلْقَ", "تُلَقَّى", "تُلْقَىٰ", "تُلْقُ", "تُلْقِىَ", "تِلْقَآءَ", "تَّلَاقِ", "لقى", "لقي", "لَقُ", "لَقِي", "لَقِيَ", "لَقَّىٰ", "لَٰقِي", "لِقَآءَ", "لِقَآءِ", "لِقَآئِ", "لِّقَآءِ", "لِّقَآئِ", "مُتَلَقِّيَانِ", "مُلَٰقٍ", "مُلَٰقِي", "مُلْقِينَ", "مُلْقِيَٰتِ", "مُّلَٰقُو", "مُّلَٰقُوا۟", "مُّلْقُونَ", "نُلْقِى", "يَتَلَقَّى", "يَلْتَقِيَ", "يَلْقَ", "يَلْقَىٰ", "يُلَقَّ", "يُلَقَّىٰ", "يُلَٰقُ", "يُلْقَىٰ", "يُلْقَىٰٓ", "يُلْقُ", "يُلْقِ", "يُلْقِى", "ٱلْتَقَ", "ٱلْتَقَى", "ٱلْتَقَيْ"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لق", "root": "لقي", "words": ["ءُلْقِىَ", "أَلْقَ", "أَلْقَتْ", "أَلْقَى", "أَلْقَىٰ", "أَلْقَىٰٓ", "أَلْقَيْ", "أَلْقُ", "أَلْقِ", "أَلْقِيَ", "أُلْقُ", "أُلْقِى", "أُلْقِىَ", "تَتَلَقَّىٰ", "تَلَقَّ", "تَلَقَّىٰٓ", "تَلْقَ", "تُلَقَّى", "تُلْقَىٰ", "تُلْقُ", "تُلْقِىَ", "تِلْقَآءَ", "تَّلَاقِ", "لقى", "لقي", "لَقُ", "لَقِي", "لَقِيَ", "لَقَّىٰ", "لَٰقِي", "لِقَآءَ", "لِقَآءِ", "لِقَآئِ", "لِّقَآءِ", "لِّقَآئِ", "مُتَلَقِّيَانِ", "مُلَٰقٍ", "مُلَٰقِي", "مُلْقِينَ", "مُلْقِيَٰتِ", "مُّلَٰقُو", "مُّلَٰقُوا۟", "مُّلْقُونَ", "نُلْقِى", "يَتَلَقَّى", "يَلْتَقِيَ", "يَلْقَ", "يَلْقَىٰ", "يُلَقَّ", "يُلَقَّىٰ", "يُلَٰقُ", "يُلْقَىٰ", "يُلْقَىٰٓ", "يُلْقُ", "يُلْقِ", "يُلْقِى", "ٱلْتَقَ", "ٱلْتَقَى", "ٱلْتَقَيْ"], "muajam_match": true, "binary_root_meaning": "الصدم أو الالتقاء بالشيء في الحيز بقوة", "axial_meaning": "تحصيل بالمقابلة مواجهة أو تماشيًا أي بقوة", "added_letter": "لقى", "quran_example": "﴿بِلِقَآءِ ٱللَّهِ﴾ / ﴿فَتَلَقَّىٰٓ ءَادَمُ﴾", "letter1": "لق", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لق", "root": "لقيته", "words": ["لَقيتُه"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لق", "root": "لقيه", "words": ["لَقِيَهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لك", "root": "لكا", "words": ["لكأ"], "muajam_match": false}
@@ -161,7 +161,7 @@
 {"bab": "ل", "binary_root": "لك", "root": "لكن", "words": ["لكن", "لَكِن", "لَكِنَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لك", "root": "لكه", "words": ["لَكَّهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لك", "root": "لكي", "words": ["لكى", "لكي", "لكَي", "لَكِيَ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لم", "root": "لما", "words": ["لمأ", "لما", "لَمَا"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لم", "root": "لما", "words": ["لمأ", "لما", "لَمَا"], "muajam_match": true, "binary_root_meaning": "نوع من الضم أو التضام لما شأنه الانتشار إلى الظاهر", "axial_meaning": "تجمع الشيء المتسع عند أطرافه فيلتقي ولا ينتشر", "added_letter": "لمم- لملم - - لما", "quran_example": "﴿إِلَّا ٱللَّمَمَ﴾", "letter1": "لم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لم", "root": "لماه", "words": ["لَمَأَهُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لم", "root": "لمح", "words": ["لمح", "لَمَحَ"], "muajam_match": true, "binary_root_meaning": "نوع من الضم أو التضام لما شأنه الانتشار إلى الظاهر", "axial_meaning": "لمع سطحية لطيفة تنتشر على ظاهر الشيء وتميزه", "added_letter": "لمح", "quran_example": "﴿وَمَآ أَمْرُ ٱلسَّاعَةِ إِلَّا كَلَمْحِ بِٱلْبَصَرِ﴾", "letter1": "لم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لم", "root": "لمخ", "words": ["لمخ", "لمخَ"], "muajam_match": false}
@@ -172,7 +172,7 @@
 {"bab": "ل", "binary_root": "لم", "root": "لمظ", "words": ["لمظ", "لَمَظَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لم", "root": "لمع", "words": ["لمع", "لَمَعَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لم", "root": "لمعظه", "words": ["لَمْعَظَةٌ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لم", "root": "لمم", "words": ["لمم", "لَّمًّا"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لم", "root": "لمم", "words": ["لمم", "لَّمًّا"], "muajam_match": true, "binary_root_meaning": "نوع من الضم أو التضام لما شأنه الانتشار إلى الظاهر", "axial_meaning": "تجمع الشيء المتسع عند أطرافه فيلتقي ولا ينتشر", "added_letter": "لمم- لملم - - لما", "quran_example": "﴿إِلَّا ٱللَّمَمَ﴾", "letter1": "لم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لم", "root": "لمه", "words": ["لَمَّه"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لم", "root": "لمهج", "words": ["لمهج", "لَمْهَجٌ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لم", "root": "لمي", "words": ["لمى", "لمي"], "muajam_match": false}
@@ -190,25 +190,25 @@
 {"bab": "ل", "binary_root": "له", "root": "لهم", "words": ["أَلْهَمَ", "لهم"], "muajam_match": true, "binary_root_meaning": "الاتساع مع شمول وشفافية أو فراغ أثناء", "axial_meaning": "جذب إلى الجوف بجمع وخفة", "added_letter": "لهم", "quran_example": "﴿فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَىٰهَا﴾", "letter1": "له", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "له", "root": "لهمه", "words": ["لَهِمَه"], "muajam_match": false}
 {"bab": "ل", "binary_root": "له", "root": "لهن", "words": ["لهن", "لَهُنَّ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "له", "root": "لهو", "words": ["أَلْهَىٰ", "تَلَهَّىٰ", "تُلْهِ", "تُلْهِي", "لهو", "لَاهِيَةً", "لَهو", "يُلْهِ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "له", "root": "لهي", "words": ["لهى", "لهي"], "muajam_match": false}
+{"bab": "ل", "binary_root": "له", "root": "لهو", "words": ["أَلْهَىٰ", "تَلَهَّىٰ", "تُلْهِ", "تُلْهِي", "لهو", "لَاهِيَةً", "لَهو", "يُلْهِ"], "muajam_match": true, "binary_root_meaning": "الاتساع مع شمول وشفافية أو فراغ أثناء", "axial_meaning": "التدلي هويًا في فراغ", "added_letter": "لهو-لهى", "quran_example": "﴿لَّا تُلْهِيهِمْ تِجَٰرَةٌ﴾ / ﴿أَلْهَىٰكُمُ ٱلتَّكَاثُرُ﴾", "letter1": "له", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
+{"bab": "ل", "binary_root": "له", "root": "لهي", "words": ["لهى", "لهي"], "muajam_match": true, "binary_root_meaning": "الاتساع مع شمول وشفافية أو فراغ أثناء", "axial_meaning": "التدلي هويًا في فراغ", "added_letter": "لهو-لهى", "quran_example": "﴿لَّا تُلْهِيهِمْ تِجَٰرَةٌ﴾ / ﴿أَلْهَىٰكُمُ ٱلتَّكَاثُرُ﴾", "letter1": "له", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لو", "root": "لوا", "words": ["لوأ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لو", "root": "لواه", "words": ["لَواهُ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لو", "root": "لوت", "words": ["لوت", "لَاتَ"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لو", "root": "لوت", "words": ["لوت", "لَاتَ"], "muajam_match": true, "binary_root_meaning": "التماسك واللزوق وما إليه وهو تداخل يلزمه النقص", "axial_meaning": "نقص أو رقة وضعف في الشيء الممتد", "added_letter": "لوت- ليت", "quran_example": "﴿لَا يَلِتْكُم مِّنْ أَعْمَٰلِكُمْ شَيْـًٔا﴾", "letter1": "لت", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لو", "root": "لوج", "words": ["لوج", "لوَج", "لَوَّجَ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لو", "root": "لوط", "words": ["لوط", "لُوطٌ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لو", "root": "لولا", "words": ["لولا", "لَوْلَا"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لو", "root": "لولو", "words": ["لؤلؤ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لو", "root": "لوم", "words": ["تَلُومُ", "لوم", "لَآئِمٍ", "لُمْ", "لُومُ", "مَلُومًا", "مَلُومٍ", "مَلُومِينَ", "مُلِيمٌ", "يَتَلَٰوَمُ"], "muajam_match": true, "binary_root_meaning": "نوع من الضم أو التضام لما شأنه الانتشار إلى الظاهر", "axial_meaning": "تحيز مع اشتداد", "added_letter": "لوم", "quran_example": "﴿فَلَا تَلُومُونِى وَلُومُوٓا۟ أَنفُسَكُمْ﴾", "letter1": "لم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لو", "root": "لوهه", "words": ["لَوْهَةُ"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لو", "root": "لوي", "words": ["تَلْ", "تَلْوُ", "لوى", "لوي", "لَوِيَ", "لَوَّ", "لَيًّۢا", "يَلْ"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لو", "root": "لوي", "words": ["تَلْ", "تَلْوُ", "لوى", "لوي", "لَوِيَ", "لَوَّ", "لَيًّۢا", "يَلْ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "لفت الجرم وعطفه بعضه حول بعض أو حول غيره", "added_letter": "لوى-لو", "quran_example": "﴿لَوَوْا رُءُوسَهُمْ﴾", "letter1": "لو", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لي", "root": "ليا", "words": ["ليأ", "ليا"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لي", "root": "لياد", "words": ["لَياد"], "muajam_match": false}
-{"bab": "ل", "binary_root": "لي", "root": "ليت", "words": ["ليت", "لَيْت", "لَيْتَ", "يَلِتْ"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لي", "root": "ليت", "words": ["ليت", "لَيْت", "لَيْتَ", "يَلِتْ"], "muajam_match": true, "binary_root_meaning": "التماسك واللزوق وما إليه وهو تداخل يلزمه النقص", "axial_meaning": "نقص أو رقة وضعف في الشيء الممتد", "added_letter": "لوت- ليت", "quran_example": "﴿لَا يَلِتْكُم مِّنْ أَعْمَٰلِكُمْ شَيْـًٔا﴾", "letter1": "لت", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لي", "root": "ليث", "words": ["ليث", "لَيْث"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لي", "root": "ليس", "words": ["ليس", "لَسْ", "لَيْسَ", "لَيْسَتِ", "لَيْسُ", "لَّسْ", "لَّيْسَ", "لَّيْسُ"], "muajam_match": true, "binary_root_meaning": "قلة مفارقة المنشأ أو المقر", "axial_meaning": "التوقف أو اللزوق ثقلًا بالموضع وعدم البراح منه", "added_letter": "ليس", "quran_example": "﴿لَيْسَ عَلَى ٱلْأَعْمَىٰ حَرَجٌ﴾", "letter1": "لس", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ل", "binary_root": "لي", "root": "ليغ", "words": ["لئغ", "ليغ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لي", "root": "ليف", "words": ["ليف", "لِيفُ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لي", "root": "ليفس", "words": ["لِيَفْسٌ"], "muajam_match": false}
 {"bab": "ل", "binary_root": "لي", "root": "ليل", "words": ["ليل", "لَيَالِىَ", "لَيْلًا", "لَيْلَةَ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "حجاب لطيف كثيف يلف الأشياء متميزًا عنها عالقًا في الأفق", "added_letter": "ليل", "quran_example": "﴿وَٱلَّيْلِ إِذَا سَجَىٰ﴾", "letter1": "لي", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
-{"bab": "ل", "binary_root": "لي", "root": "لين", "words": ["أَلَ", "تَلِينُ", "لين", "لِن"], "muajam_match": false}
+{"bab": "ل", "binary_root": "لي", "root": "لين", "words": ["أَلَ", "تَلِينُ", "لين", "لِن"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "احتشاء الشيء بلطيف رخو يظهر أو يظهر أثره", "added_letter": "لون-لين", "quran_example": "﴿مَا قَطَعْتُم مِّن لِّينَةٍ﴾", "letter1": "لن", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
