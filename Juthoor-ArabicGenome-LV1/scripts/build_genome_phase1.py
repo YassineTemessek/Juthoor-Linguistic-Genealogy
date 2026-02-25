@@ -24,10 +24,10 @@ def default_input() -> Path:
     return repo_root / "Juthoor-DataCore-LV0" / "data" / "processed" / "arabic" / "classical" / "lexemes.jsonl"
 
 
-def build_genome(input_path: Path, output_dir: Path) -> dict[str, int]:
+def build_genome(input_path: Path, output_dir: Path) -> tuple[dict[str, int], int]:
     """
     Read LV0 Arabic lexemes, group into genome structure, write per-BAB JSONL files.
-    Returns dict: bab_letter -> count of root entries written.
+    Returns (dict: bab_letter -> count of root entries written, total unique words written).
     """
     # Structure: bab -> binary_root -> root_norm -> set of lemmas
     genome: dict[str, dict[str, dict[str, set[str]]]] = defaultdict(
@@ -52,10 +52,20 @@ def build_genome(input_path: Path, output_dir: Path) -> dict[str, int]:
                 skipped += 1
                 continue
 
+            # Filter 1: skip roots shorter than 3 characters
+            if len(root_norm) < 3:
+                skipped += 1
+                continue
+
             binary_root = str(rec.get("binary_root") or "").strip()
             if not binary_root:
                 # derive from first 2 chars of root_norm
                 binary_root = root_norm[:2] if len(root_norm) >= 2 else root_norm
+
+            # Filter 2: skip entries where binary_root is shorter than 2 characters
+            if len(binary_root) < 2:
+                skipped += 1
+                continue
 
             bab = root_norm[0]
             lemma = str(rec.get("lemma") or "").strip()
@@ -68,6 +78,7 @@ def build_genome(input_path: Path, output_dir: Path) -> dict[str, int]:
 
     output_dir.mkdir(parents=True, exist_ok=True)
     counts: dict[str, int] = {}
+    total_words_written = 0
 
     for bab in sorted(genome.keys()):
         out_path = output_dir / f"{bab}.jsonl"
@@ -78,7 +89,11 @@ def build_genome(input_path: Path, output_dir: Path) -> dict[str, int]:
             for binary_root in sorted(binary_roots.keys()):
                 roots = binary_roots[binary_root]
                 for root in sorted(roots.keys()):
+                    # words is already a set, so duplicates are handled; sort for determinism
                     words = sorted(roots[root])
+                    # Filter 4: skip entries where the only word is the root itself
+                    if words == [root]:
+                        continue
                     rec = {
                         "bab": bab,
                         "binary_root": binary_root,
@@ -87,11 +102,12 @@ def build_genome(input_path: Path, output_dir: Path) -> dict[str, int]:
                     }
                     out_f.write(json.dumps(rec, ensure_ascii=False) + "\n")
                     written += 1
+                    total_words_written += len(words)
 
         counts[bab] = written
 
-    print(f"Read {total:,} lemmas, skipped {skipped:,} (no root/lemma)")
-    return counts
+    print(f"Read {total:,} lemmas, skipped {skipped:,} (no root/lemma or quality filter)")
+    return counts, total_words_written
 
 
 def main() -> None:
@@ -108,13 +124,19 @@ def main() -> None:
     if not args.input.exists():
         raise SystemExit(f"Input not found: {args.input}")
 
-    counts = build_genome(args.input, args.output_dir)
+    counts, total_words = build_genome(args.input, args.output_dir)
 
     total_roots = sum(counts.values())
+    avg_words = total_words / total_roots if total_roots else 0.0
     print(f"\nWrote {len(counts)} BAB files, {total_roots:,} root entries total:")
     for bab, count in sorted(counts.items()):
         out_path = args.output_dir / f"{bab}.jsonl"
         print(f"  {bab}.jsonl  ->  {count} roots  ({out_path})")
+    print(f"\n--- Summary ---")
+    print(f"  BAB files:       {len(counts):,}")
+    print(f"  Total roots:     {total_roots:,}")
+    print(f"  Total words:     {total_words:,}")
+    print(f"  Avg words/root:  {avg_words:.1f}")
 
 
 if __name__ == "__main__":
