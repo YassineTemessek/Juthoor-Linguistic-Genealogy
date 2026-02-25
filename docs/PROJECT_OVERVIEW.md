@@ -7,7 +7,7 @@ This monorepo consolidates five distinct research layers into a single, cohesive
 
 ## Architecture & Layers
 
-The project is organized into a **layered architecture** (LV0 to LV4):
+The project is organized into a **layered architecture** (LV0 to LV3 + App):
 
 | Level | Folder Name | Role & Responsibility | Dependencies |
 | :--- | :--- | :--- | :--- |
@@ -22,7 +22,7 @@ The project is organized into a **layered architecture** (LV0 to LV4):
 This project is configured as a **Python Workspace**. The root `pyproject.toml` defines the entire repository as a workspace, meaning all 5 levels are member packages.
 
 ### Benefits
-*   **Unified Imports:** Scripts in LV4 can import directly from LV0 (e.g., `from juthoor_datacore_lv0 import ...`) without messy path hacks (`sys.path.append`).
+*   **Unified Imports:** Scripts in LV3 can import directly from LV0 (e.g., `from juthoor_datacore_lv0 import ...`) without messy path hacks (`sys.path.append`).
 *   **Explicit Dependencies:** Each level has its own `pyproject.toml` declaring exactly which other levels it needs.
 *   **Single Install:** You can install the entire project in one go using `uv`, `pip`, or `pdm`.
 
@@ -58,7 +58,7 @@ Juthoor-Linguistic-Genealogy/
     *   **Experiments/Runners:** Put it in `scripts/` within the appropriate level.
 
 2.  **Data Flow:**
-    *   Data should ideally flow **UP** the levels (LV0 -> LV4).
+    *   Data should ideally flow **UP** the levels (LV0 -> LV3/App).
     *   LV0 is the only place that should handle raw data ingestion.
     *   Higher levels should consume the *canonical* data produced by LV0.
 

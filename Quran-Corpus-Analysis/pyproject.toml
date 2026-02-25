@@ -3,10 +3,12 @@ name = "quran-corpus-analysis"
 version = "0.1.0"
 description = "Quranic semantic analysis and decoding application."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
-    "juthoor-datacore-lv0",
     "pandas",
+    "scikit-learn",
+    "scipy",
+    "matplotlib",
 ]
 
 [build-system]

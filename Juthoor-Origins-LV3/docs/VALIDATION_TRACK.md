@@ -1,6 +1,6 @@
 # Validation Track (Blueprint)
 
-LV4’s Validation Track turns “ranked discovery leads” into “testable claims”.
+LV3’s Validation Track turns “ranked discovery leads” into “testable claims”.
 
 ## When to activate validation
 

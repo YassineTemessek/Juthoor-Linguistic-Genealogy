@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Dict
 
 from .base import AdapterResult
-from ingest.utils import ensure_pos_list, make_stable_id, write_manifest
+from juthoor_datacore_lv0.ingest.utils import ensure_pos_list, make_stable_id, write_manifest
 
 
 class EnglishIPAAdapter:

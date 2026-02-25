@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report an inconsistency or error in LV4 docs
+about: Report an inconsistency or error in LV3 docs
 ---
 
 ## What is wrong
