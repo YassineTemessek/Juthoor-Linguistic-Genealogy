@@ -1,29 +1,31 @@
 # Start Here (LV1)
 
-This repo is a **data pipeline** for Arabic decoding with a specific LV1 focus:
+Juthoor Arabic Genome (LV1) decodes the Arabo-Semitic root system by analyzing the 2-letter binary root structure underlying Arabic words.
 
-- Build processed Arabic tables that maximize coverage of Arabic words/lemmas with known roots.
-- Derive a **binary root** key (2-letter nucleus) from the provided root so words can be regrouped into binary-root-centered clusters.
-- Run clustering/regrouping experiments using methods that fit the purpose (heuristics, embeddings like BGE-M3/ByT5, and graph-based approaches).
-- Export a **graph view** (nodes/edges) so relationships are easy to inspect visually and can support GraphRAG-style workflows.
+## Current Status
 
+**Phase 1: DONE**
+- Grouping Arabic lexemes by BAB → binary root → triconsonantal root → words
+- Command: `python scripts/build_genome_phase1.py`
+- Output: `outputs/genome/<letter>.jsonl` (one file per Arabic letter)
 
-Focus areas:
+**Phase 2: IN PROGRESS**
+- Overlaying Muajam Ishtiqaqi meanings (letter → binary root → axial meanings)
+- Ingest: Processes Muajam Ishtiqaqi data into `data/muajam/`
+- This phase links letter-based meaning semantics to binary root clusters
 
-- Regroup words by binary root and measure distances between binary roots.
-- Study how 3-letter roots connect within each binary-root cluster.
+**Phase 3: PLANNED**
+- Semantic validation of binary root ↔ word meaning connections
 
-Workflow:
+## Existing Clustering Scripts
 
-1) Build/fetch canonical processed datasets in LV0 (data core).
-2) Run LV1 clustering/regrouping and graph exports using those processed tables.
+Clustering and analysis pipelines from earlier work still available:
+- Cluster by binary root: `python scripts/cluster/cluster_by_binary_root.py`
+- Binary vs tri-root coherence: `python scripts/analysis/compare_binary_vs_triroot.py`
+- Export binary root graph: `python scripts/graph/export_binary_root_graph.py --input <binary_root_lexicon.jsonl>`
 
-## Core commands
+## Quick Start
 
-- Setup (optional): `powershell -ExecutionPolicy Bypass -File scripts/setup.ps1`
-- LV0 (data core): `Juthoor-DataCore-LV0/`
-- LV0 project ReadMe: `Juthoor-DataCore-LV0/ReadMe.txt`
-- In LV0, the Arabic ingest produces a canonical merged file ready to use: `data/processed/arabic/classical/lexemes.jsonl`
-- Cluster within each `binary_root` (discovery): `python "scripts/cluster/cluster_by_binary_root.py"`
-- QA reports (binary vs tri-root coherence): `python "scripts/analysis/compare_binary_vs_triroot.py"`
-- Export graph (nodes + edges): `python "scripts/graph/export_binary_root_graph.py" --input <binary_root_lexicon.jsonl>`
+1. Ensure LV0 processed data is ready (see `Juthoor-DataCore-LV0/`)
+2. Run Phase 1 genome build: `python scripts/build_genome_phase1.py`
+3. Results appear in `outputs/genome/`
