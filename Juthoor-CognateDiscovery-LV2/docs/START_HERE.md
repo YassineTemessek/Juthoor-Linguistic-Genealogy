@@ -44,7 +44,6 @@ Replace paths with your LV0 outputs:
 
 - Get/build canonical processed outputs: see `docs/LV0_DATA_CORE.md`
 - Discover (BGE-M3/ByT5): `python "scripts/discovery/run_discovery_retrieval.py" ...`
-- Legacy matcher: `python "scripts/discovery/run_full_matching_pipeline.py"`
 
 ## Discovery mode (BGE-M3 + ByT5)
 

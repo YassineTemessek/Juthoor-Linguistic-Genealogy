@@ -88,12 +88,6 @@ Corpus spec format: `<lang>[@<stage>]=<path>`
 
 Outputs are written to `outputs/leads/` and embeddings/index caches to `outputs/`.
 
-## Legacy (Classic Scoring Pipeline)
-
-The classic scorer (orthography vs IPA sound scoring) remains available:
-
-- `python "scripts/discovery/run_full_matching_pipeline.py"`
-
 ## Contributing
 
 See `CONTRIBUTING.md`.

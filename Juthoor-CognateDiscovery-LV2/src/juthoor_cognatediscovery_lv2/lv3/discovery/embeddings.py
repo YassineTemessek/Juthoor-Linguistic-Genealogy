@@ -246,12 +246,3 @@ class GeminiEmbedder:
         vecs = np.asarray(all_vecs, dtype="float32")
         return l2_normalize(vecs)
 
-
-# ---------------------------------------------------------------------------
-# Backward-compatibility aliases (deprecated — will be removed)
-# ---------------------------------------------------------------------------
-
-SonarConfig = BgeM3Config
-SonarEmbedder = BgeM3Embedder
-CanineConfig = ByT5Config
-CanineEmbedder = ByT5Embedder
