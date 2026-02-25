@@ -28,6 +28,24 @@ Examples (Arabic, classical):
 - `stage` is treated as a dataset boundary in LV0 (folder/file level), not a required per-row field.
 - After ingest, LV0 writes per-source processed files under `data/processed/<language>/<stage>/sources/` and a merged canonical `lexemes.jsonl`.
 
+## Currently linked raw sources (as of 2026-02)
+
+The `data/raw/` directory is populated via `scripts/setup_raw_links.ps1` which creates junctions from `Resources/` into here.
+
+Currently present:
+- `arabic/arabic_roots_hf/` — HuggingFace Arabic roots Parquet
+- `arabic/quran-morphology/` — Quran morphology text file
+- `arabic/word_root_map.csv` — Arabic word-root mapping CSV
+- `arabic/cmudict` — CMU pronouncing dictionary (Arabic-adjacent IPA source)
+- `english/` — English IPA data
+
+Not yet linked here (consumed directly from `Resources/` via `kaikki_root` path in runner):
+- `ancient_greek/kaikki.org-dictionary-AncientGreek.jsonl`
+- `latin/kaikki.org-dictionary-Latin.jsonl`
+- `english_old/kaikki.org-dictionary-OldEnglish.jsonl`
+- `english_middle/kaikki.org-dictionary-MiddleEnglish.jsonl`
+- `english_modern/kaikki.org-dictionary-English.jsonl`
+- `Ten dictionaries for Arabic language/` (CSV files)
 
 ## Project Status & Progress
-- Project-wide progress log: docs/PROGRESS_LOG.md`n- Raw data flow (Resources -> LV0 -> processed): docs/RAW_DATA_FLOW.md`n
+- Raw data flow (Resources -> LV0 -> processed): `docs/RAW_DATA_FLOW.md`
