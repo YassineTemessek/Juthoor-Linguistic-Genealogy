@@ -186,7 +186,7 @@ def _default_input_dir() -> Path:
     resources_dir = os.environ.get("LC_RESOURCES_DIR")
     if resources_dir:
         return Path(resources_dir) / "Ten dictionaries for Arabic language"
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     return repo_root / "Resources" / "Ten dictionaries for Arabic language"
 
 
