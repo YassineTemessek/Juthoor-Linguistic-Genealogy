@@ -188,7 +188,7 @@ def _default_input(lang_code: str) -> Path:
     resources_dir = os.environ.get("LC_RESOURCES_DIR")
     if resources_dir:
         return Path(resources_dir) / LANG_CODE_TO_FILE[lang_code]
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     return repo_root / "Resources" / LANG_CODE_TO_FILE[lang_code]
 
 
@@ -239,7 +239,7 @@ def main() -> None:
 
     manifest_path: Path | None = args.manifest
     if manifest_path is None:
-        manifest_path = out_path.parent / "kaikki_manifest.json"
+        manifest_path = out_path.parent / "kaikki.manifest.json"
 
     write_manifest(
         target=out_path,
