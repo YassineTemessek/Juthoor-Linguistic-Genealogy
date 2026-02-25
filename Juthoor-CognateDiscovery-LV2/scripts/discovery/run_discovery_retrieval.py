@@ -301,7 +301,10 @@ def _discover_corpora() -> list[CorpusInfo]:
     When multiple StarDict versions exist for the same language
     (enriched / normalized / filtered), keeps only the best one.
     """
-    base = REPO_ROOT / "data" / "processed"
+    # Prefer LV0 canonical processed data; fall back to LV2-local data
+    lv0_base = REPO_ROOT / "Juthoor-DataCore-LV0" / "data" / "processed"
+    lv2_base = REPO_ROOT / "data" / "processed"
+    base = lv0_base if lv0_base.exists() else lv2_base
     if not base.exists():
         return []
 

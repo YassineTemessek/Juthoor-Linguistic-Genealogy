@@ -71,18 +71,19 @@ This layer is the **Laboratory** where cross-lingual connections are hypothesize
 
 ### Core Functionality
 1.  **AI Retrieval (The Heavy Lifting):**
-    *   **SONAR (Meta):** Finds words with similar *meanings* across languages (semantic search), even if they sound different.
-    *   **CANINE (Google):** Finds words with similar *spelling/form* at a character level (raw Unicode).
+    *   **BGE-M3:** Multilingual semantic embeddings (100+ languages, 1024-dim). Finds words with similar *meanings* across languages, even if they sound different.
+    *   **ByT5:** Byte-level character embeddings (tokenizer-free). Finds words with similar *spelling/form* at a raw character level.
 
 2.  **Hybrid Scoring (The Refinement):**
     *   Calculates precise scores for candidate pairs based on:
         *   **Orthography:** Visual letter similarity.
         *   **Phonetics (IPA):** Sound similarity.
         *   **Skeleton:** Consonant root structure comparison.
+        *   **Semantic:** BGE-M3 embedding cosine similarity.
 
 3.  **Output:**
     *   Generates **"Ranked Leads"**: Lists of candidate cognates with match scores (e.g., "85% match").
     *   Does *not* make final truth claims; it filters the noise so researchers can focus on high-probability connections.
 
 ---
-*Generated: February 3, 2026*
+*Updated: February 25, 2026*
