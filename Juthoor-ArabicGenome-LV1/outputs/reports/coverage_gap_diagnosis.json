@@ -1,0 +1,2804 @@
+{
+  "muajam_total": 1923,
+  "genome_total": 12333,
+  "original_matched": 934,
+  "original_matched_pct": 48.6,
+  "total_unmatched": 989,
+  "category_counts": {
+    "bracket_entry": 1,
+    "normalization_diff": 133,
+    "compound_entry": 377,
+    "fuzzy_near_miss_d1": 408,
+    "root_length_mismatch": 39,
+    "heh_tatweel": 31
+  },
+  "potential_coverage_after_normalization": 64.5,
+  "category_details": {
+    "bracket_entry": [
+      {
+        "tri_root": "[سغغ]سغسغ",
+        "primary_root": "سغغسغسغ",
+        "fuzzy_candidates": [],
+        "reason": "bracket_entry"
+      }
+    ],
+    "normalization_diff": [
+      {
+        "tri_root": "أبب",
+        "primary_root": "أبب",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ابب",
+        "norm_form": "ابب",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أبد",
+        "primary_root": "أبد",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ابد",
+        "norm_form": "ابد",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أبق",
+        "primary_root": "أبق",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ابق",
+        "norm_form": "ابق",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أبل",
+        "primary_root": "أبل",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ابل",
+        "norm_form": "ابل",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أبو",
+        "primary_root": "أبو",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ابو",
+        "norm_form": "ابو",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أبي",
+        "primary_root": "أبي",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ابي",
+        "norm_form": "ابي",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أتت",
+        "primary_root": "أتت",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اتت",
+        "norm_form": "اتت",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أثث",
+        "primary_root": "أثث",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اثث",
+        "norm_form": "اثث",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أثر",
+        "primary_root": "أثر",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اثر",
+        "norm_form": "اثر",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أثل",
+        "primary_root": "أثل",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اثل",
+        "norm_form": "اثل",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أثم",
+        "primary_root": "أثم",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اثم",
+        "norm_form": "اثم",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أجج",
+        "primary_root": "أجج",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اجج",
+        "norm_form": "اجج",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أجر",
+        "primary_root": "أجر",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اجر",
+        "norm_form": "اجر",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أجل",
+        "primary_root": "أجل",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اجل",
+        "norm_form": "اجل",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أحد",
+        "primary_root": "أحد",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "احد",
+        "norm_form": "احد",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أخخ",
+        "primary_root": "أخخ",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اخخ",
+        "norm_form": "اخخ",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أخذ",
+        "primary_root": "أخذ",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اخذ",
+        "norm_form": "اخذ",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أخر",
+        "primary_root": "أخر",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ءخر",
+        "norm_form": "اخر",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أدد",
+        "primary_root": "أدد",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ادد",
+        "norm_form": "ادد",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أدم",
+        "primary_root": "أدم",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ادم",
+        "norm_form": "ادم",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أذن",
+        "primary_root": "أذن",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اذن",
+        "norm_form": "اذن",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أرب",
+        "primary_root": "أرب",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ارب",
+        "norm_form": "ارب",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أرض",
+        "primary_root": "أرض",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ارض",
+        "norm_form": "ارض",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أرك",
+        "primary_root": "أرك",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ارك",
+        "norm_form": "ارك",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أرم",
+        "primary_root": "أرم",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ارم",
+        "norm_form": "ارم",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أزر",
+        "primary_root": "أزر",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ازر",
+        "norm_form": "ازر",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أزز",
+        "primary_root": "أزز",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ازز",
+        "norm_form": "ازز",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أزف",
+        "primary_root": "أزف",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "ازف",
+        "norm_form": "ازف",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أسر",
+        "primary_root": "أسر",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اسر",
+        "norm_form": "اسر",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أسس",
+        "primary_root": "أسس",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اسس",
+        "norm_form": "اسس",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أسف",
+        "primary_root": "أسف",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اسف",
+        "norm_form": "اسف",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أسن",
+        "primary_root": "أسن",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اسن",
+        "norm_form": "اسن",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أسو",
+        "primary_root": "أسو",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اسو",
+        "norm_form": "اسو",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أشر",
+        "primary_root": "أشر",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اشر",
+        "norm_form": "اشر",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أصد",
+        "primary_root": "أصد",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اصد",
+        "norm_form": "اصد",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أصر",
+        "primary_root": "أصر",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اصر",
+        "norm_form": "اصر",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أصل",
+        "primary_root": "أصل",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اصل",
+        "norm_form": "اصل",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أفف",
+        "primary_root": "أفف",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "افف",
+        "norm_form": "افف",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أفق",
+        "primary_root": "أفق",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "افق",
+        "norm_form": "افق",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أفك",
+        "primary_root": "أفك",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "افك",
+        "norm_form": "افك",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أفل",
+        "primary_root": "أفل",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "افل",
+        "norm_form": "افل",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أكل",
+        "primary_root": "أكل",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اكل",
+        "norm_form": "اكل",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "ألف",
+        "primary_root": "ألف",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "الف",
+        "norm_form": "الف",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "ألك",
+        "primary_root": "ألك",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "الك",
+        "norm_form": "الك",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "ألل",
+        "primary_root": "ألل",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "الل",
+        "norm_form": "الل",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "ألم",
+        "primary_root": "ألم",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "الم",
+        "norm_form": "الم",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أله",
+        "primary_root": "أله",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "اله",
+        "norm_form": "اله",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "ألو",
+        "primary_root": "ألو",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "الو",
+        "norm_form": "الو",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أمت",
+        "primary_root": "أمت",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "امت",
+        "norm_form": "امت",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      },
+      {
+        "tri_root": "أمد",
+        "primary_root": "أمد",
+        "fuzzy_candidates": [],
+        "reason": "normalization_diff",
+        "genome_match": "امد",
+        "norm_form": "امد",
+        "normalization_types": [
+          "hamza_variant"
+        ]
+      }
+    ],
+    "compound_entry": [
+      {
+        "tri_root": "أتو/أتى",
+        "primary_root": "أتو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "اتو"
+      },
+      {
+        "tri_root": "أخو/أخي",
+        "primary_root": "أخو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "ءخو"
+      },
+      {
+        "tri_root": "أدو/أدى",
+        "primary_root": "أدو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "ادو"
+      },
+      {
+        "tri_root": "أذذ/إذ",
+        "primary_root": "أذذ",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "اذذ"
+      },
+      {
+        "tri_root": "ألت-ولت",
+        "primary_root": "ألت",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "الت"
+      },
+      {
+        "tri_root": "أنو-أنى",
+        "primary_root": "أنو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "انو"
+      },
+      {
+        "tri_root": "أوب/أيب",
+        "primary_root": "أوب",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "اوب"
+      },
+      {
+        "tri_root": "أوم-أيم",
+        "primary_root": "أوم",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "اوم"
+      },
+      {
+        "tri_root": "أوو-أوى",
+        "primary_root": "أوو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_norm": true,
+        "genome_match": "اوو"
+      },
+      {
+        "tri_root": "أيى-إي",
+        "primary_root": "أيى",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بثث/بثبث",
+        "primary_root": "بثث",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "بجج/بجبج",
+        "primary_root": "بجج",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بحح/بحبح",
+        "primary_root": "بحح",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بخخ/بخبخ",
+        "primary_root": "بخخ",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "بدد/بدبد",
+        "primary_root": "بدد",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بدل/بأدل",
+        "primary_root": "بدل",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "بره/برهن",
+        "primary_root": "بره",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "برو/برى",
+        "primary_root": "برو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بزز/بزبز",
+        "primary_root": "بزز",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بسس/بسبس",
+        "primary_root": "بسس",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "بشش/بشبش",
+        "primary_root": "بشش",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بصص/بصبص",
+        "primary_root": "بصص",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بعع/بعبع",
+        "primary_root": "بعع",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بغغ/بغبغ",
+        "primary_root": "بغغ",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بغو/بغى",
+        "primary_root": "بغو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بقق/بقبق",
+        "primary_root": "بقق",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بقو/بقى",
+        "primary_root": "بقو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بكك/بكبك",
+        "primary_root": "بكك",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بلل/بلبل",
+        "primary_root": "بلل",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بلو/بلي",
+        "primary_root": "بلو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "بنن/بنبن",
+        "primary_root": "بنن",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بنو/بني",
+        "primary_root": "بنو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بهـهـ/بهـبهـ",
+        "primary_root": "بهه",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "بون/بين",
+        "primary_root": "بون",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "تبب-تبتب",
+        "primary_root": "تبب",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "تعع-تعتع",
+        "primary_root": "تعع",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "تفف-تفتف",
+        "primary_root": "تفف",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "تلل-تلتل",
+        "primary_root": "تلل",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "تلو-تلي",
+        "primary_root": "تلو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "تنن-تنتن",
+        "primary_root": "تنن",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "تور-تير",
+        "primary_root": "تور",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "تيهـ/توهـ",
+        "primary_root": "تيه",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": true
+      },
+      {
+        "tri_root": "ثبب-ثبثب",
+        "primary_root": "ثبب",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "ثرر-ثرثر",
+        "primary_root": "ثرر",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "ثعع-ثعثع",
+        "primary_root": "ثعع",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "ثقق-ثقثق",
+        "primary_root": "ثقق",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "ثلل-ثلثل",
+        "primary_root": "ثلل",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "ثمم-ثمثم",
+        "primary_root": "ثمم",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "جبب-جبجب",
+        "primary_root": "جبب",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      },
+      {
+        "tri_root": "جبو-جبى",
+        "primary_root": "جبو",
+        "fuzzy_candidates": [],
+        "reason": "compound_entry",
+        "primary_found_exact": false
+      }
+    ],
+    "fuzzy_near_miss_d1": [
+      {
+        "tri_root": "أذى",
+        "primary_root": "أذى",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "اذذ",
+            "distance": 1
+          },
+          {
+            "genome_root": "اذف",
+            "distance": 1
+          },
+          {
+            "genome_root": "اذم",
+            "distance": 1
+          },
+          {
+            "genome_root": "اذن",
+            "distance": 1
+          },
+          {
+            "genome_root": "اذا",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ألى",
+        "primary_root": "ألى",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "الق",
+            "distance": 1
+          },
+          {
+            "genome_root": "الخ",
+            "distance": 1
+          },
+          {
+            "genome_root": "الي",
+            "distance": 1
+          },
+          {
+            "genome_root": "الز",
+            "distance": 1
+          },
+          {
+            "genome_root": "الد",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بتت",
+        "primary_root": "بتت",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "بست",
+            "distance": 1
+          },
+          {
+            "genome_root": "بكت",
+            "distance": 1
+          },
+          {
+            "genome_root": "بتا",
+            "distance": 1
+          },
+          {
+            "genome_root": "بنت",
+            "distance": 1
+          },
+          {
+            "genome_root": "عتت",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بتر",
+        "primary_root": "بتر",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ستر",
+            "distance": 1
+          },
+          {
+            "genome_root": "برر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بار",
+            "distance": 1
+          },
+          {
+            "genome_root": "وتر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بسر",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بذذ",
+        "primary_root": "بذذ",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "اذذ",
+            "distance": 1
+          },
+          {
+            "genome_root": "بذا",
+            "distance": 1
+          },
+          {
+            "genome_root": "جذذ",
+            "distance": 1
+          },
+          {
+            "genome_root": "لذذ",
+            "distance": 1
+          },
+          {
+            "genome_root": "بذر",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "برص",
+        "primary_root": "برص",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "برر",
+            "distance": 1
+          },
+          {
+            "genome_root": "برح",
+            "distance": 1
+          },
+          {
+            "genome_root": "برك",
+            "distance": 1
+          },
+          {
+            "genome_root": "برد",
+            "distance": 1
+          },
+          {
+            "genome_root": "برخ",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بسق",
+        "primary_root": "بسق",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "بسا",
+            "distance": 1
+          },
+          {
+            "genome_root": "بسر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بست",
+            "distance": 1
+          },
+          {
+            "genome_root": "عسق",
+            "distance": 1
+          },
+          {
+            "genome_root": "غسق",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بصل",
+        "primary_root": "بصل",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "بخل",
+            "distance": 1
+          },
+          {
+            "genome_root": "وصل",
+            "distance": 1
+          },
+          {
+            "genome_root": "بقل",
+            "distance": 1
+          },
+          {
+            "genome_root": "بهل",
+            "distance": 1
+          },
+          {
+            "genome_root": "بدل",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بضض",
+        "primary_root": "بضض",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "اضض",
+            "distance": 1
+          },
+          {
+            "genome_root": "عضض",
+            "distance": 1
+          },
+          {
+            "genome_root": "بعض",
+            "distance": 1
+          },
+          {
+            "genome_root": "فضض",
+            "distance": 1
+          },
+          {
+            "genome_root": "حضض",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بضع",
+        "primary_root": "بضع",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "بيع",
+            "distance": 1
+          },
+          {
+            "genome_root": "وضع",
+            "distance": 1
+          },
+          {
+            "genome_root": "خضع",
+            "distance": 1
+          },
+          {
+            "genome_root": "رضع",
+            "distance": 1
+          },
+          {
+            "genome_root": "بضي",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بطط",
+        "primary_root": "بطط",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "باط",
+            "distance": 1
+          },
+          {
+            "genome_root": "بطا",
+            "distance": 1
+          },
+          {
+            "genome_root": "بسط",
+            "distance": 1
+          },
+          {
+            "genome_root": "بطغ",
+            "distance": 1
+          },
+          {
+            "genome_root": "شطط",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بعر",
+        "primary_root": "بعر",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "برر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بار",
+            "distance": 1
+          },
+          {
+            "genome_root": "كعر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بسر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بغر",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بغض",
+        "primary_root": "بغض",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "نغض",
+            "distance": 1
+          },
+          {
+            "genome_root": "بغر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بغا",
+            "distance": 1
+          },
+          {
+            "genome_root": "بعض",
+            "distance": 1
+          },
+          {
+            "genome_root": "بغت",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بغل",
+        "primary_root": "بغل",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "شغل",
+            "distance": 1
+          },
+          {
+            "genome_root": "بخل",
+            "distance": 1
+          },
+          {
+            "genome_root": "بقل",
+            "distance": 1
+          },
+          {
+            "genome_root": "بغر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بغا",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بقر",
+        "primary_root": "بقر",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "فقر",
+            "distance": 1
+          },
+          {
+            "genome_root": "برر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بار",
+            "distance": 1
+          },
+          {
+            "genome_root": "بسر",
+            "distance": 1
+          },
+          {
+            "genome_root": "بقل",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بقع",
+        "primary_root": "بقع",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "وقع",
+            "distance": 1
+          },
+          {
+            "genome_root": "هقع",
+            "distance": 1
+          },
+          {
+            "genome_root": "بقل",
+            "distance": 1
+          },
+          {
+            "genome_root": "شقع",
+            "distance": 1
+          },
+          {
+            "genome_root": "بيع",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بكم",
+        "primary_root": "بكم",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "بكي",
+            "distance": 1
+          },
+          {
+            "genome_root": "بخم",
+            "distance": 1
+          },
+          {
+            "genome_root": "بكت",
+            "distance": 1
+          },
+          {
+            "genome_root": "بجم",
+            "distance": 1
+          },
+          {
+            "genome_root": "عكم",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بكى",
+        "primary_root": "بكى",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "بكي",
+            "distance": 1
+          },
+          {
+            "genome_root": "بكت",
+            "distance": 1
+          },
+          {
+            "genome_root": "بكس",
+            "distance": 1
+          },
+          {
+            "genome_root": "بكش",
+            "distance": 1
+          },
+          {
+            "genome_root": "بكا",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بوب",
+        "primary_root": "بوب",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "بوس",
+            "distance": 1
+          },
+          {
+            "genome_root": "جوب",
+            "distance": 1
+          },
+          {
+            "genome_root": "نوب",
+            "distance": 1
+          },
+          {
+            "genome_root": "بور",
+            "distance": 1
+          },
+          {
+            "genome_root": "توب",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بول",
+        "primary_root": "بول",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "بخل",
+            "distance": 1
+          },
+          {
+            "genome_root": "كول",
+            "distance": 1
+          },
+          {
+            "genome_root": "بوس",
+            "distance": 1
+          },
+          {
+            "genome_root": "بقل",
+            "distance": 1
+          },
+          {
+            "genome_root": "بهل",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "بيب",
+        "primary_root": "بيب",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ريب",
+            "distance": 1
+          },
+          {
+            "genome_root": "صيب",
+            "distance": 1
+          },
+          {
+            "genome_root": "بير",
+            "distance": 1
+          },
+          {
+            "genome_root": "بيع",
+            "distance": 1
+          },
+          {
+            "genome_root": "ايب",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "تجر",
+        "primary_root": "تجر",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ضجر",
+            "distance": 1
+          },
+          {
+            "genome_root": "حجر",
+            "distance": 1
+          },
+          {
+            "genome_root": "تفر",
+            "distance": 1
+          },
+          {
+            "genome_root": "عجر",
+            "distance": 1
+          },
+          {
+            "genome_root": "سجر",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ترب",
+        "primary_root": "ترب",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ترق",
+            "distance": 1
+          },
+          {
+            "genome_root": "ورب",
+            "distance": 1
+          },
+          {
+            "genome_root": "تعب",
+            "distance": 1
+          },
+          {
+            "genome_root": "تبب",
+            "distance": 1
+          },
+          {
+            "genome_root": "ترخ",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ترر",
+        "primary_root": "ترر",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "برر",
+            "distance": 1
+          },
+          {
+            "genome_root": "فرر",
+            "distance": 1
+          },
+          {
+            "genome_root": "ترق",
+            "distance": 1
+          },
+          {
+            "genome_root": "صرر",
+            "distance": 1
+          },
+          {
+            "genome_root": "خرر",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "تسع",
+        "primary_root": "تسع",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "وسع",
+            "distance": 1
+          },
+          {
+            "genome_root": "تبع",
+            "distance": 1
+          },
+          {
+            "genome_root": "تاع",
+            "distance": 1
+          },
+          {
+            "genome_root": "طسع",
+            "distance": 1
+          },
+          {
+            "genome_root": "خسع",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "تعس",
+        "primary_root": "تعس",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "طعس",
+            "distance": 1
+          },
+          {
+            "genome_root": "تعب",
+            "distance": 1
+          },
+          {
+            "genome_root": "تيس",
+            "distance": 1
+          },
+          {
+            "genome_root": "تعي",
+            "distance": 1
+          },
+          {
+            "genome_root": "تيق",
+            "distance": 2
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "تفث",
+        "primary_root": "تفث",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "تفر",
+            "distance": 1
+          },
+          {
+            "genome_root": "تفل",
+            "distance": 1
+          },
+          {
+            "genome_root": "تفه",
+            "distance": 1
+          },
+          {
+            "genome_root": "نفث",
+            "distance": 1
+          },
+          {
+            "genome_root": "تفي",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "تنر",
+        "primary_root": "تنر",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "تفر",
+            "distance": 1
+          },
+          {
+            "genome_root": "تنخ",
+            "distance": 1
+          },
+          {
+            "genome_root": "تنا",
+            "distance": 1
+          },
+          {
+            "genome_root": "تمر",
+            "distance": 1
+          },
+          {
+            "genome_root": "تنب",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "تين",
+        "primary_root": "تين",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "تيق",
+            "distance": 1
+          },
+          {
+            "genome_root": "تيه",
+            "distance": 1
+          },
+          {
+            "genome_root": "تهن",
+            "distance": 1
+          },
+          {
+            "genome_root": "تيت",
+            "distance": 1
+          },
+          {
+            "genome_root": "تيس",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ثبو",
+        "primary_root": "ثبو",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "صبو",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثبن",
+            "distance": 1
+          },
+          {
+            "genome_root": "ربو",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثبت",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثبق",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ثجج",
+        "primary_root": "ثجج",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ثاج",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثوج",
+            "distance": 1
+          },
+          {
+            "genome_root": "اجج",
+            "distance": 1
+          },
+          {
+            "genome_root": "وجج",
+            "distance": 1
+          },
+          {
+            "genome_root": "حجج",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ثرى",
+        "primary_root": "ثرى",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ثرد",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثرع",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثرن",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثري",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثرب",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ثنن",
+        "primary_root": "ثنن",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ثبن",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثان",
+            "distance": 1
+          },
+          {
+            "genome_root": "جنن",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثدن",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثتن",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ثنى",
+        "primary_root": "ثنى",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ثني",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثنت",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثيخ",
+            "distance": 2
+          },
+          {
+            "genome_root": "دنع",
+            "distance": 2
+          },
+          {
+            "genome_root": "ثلط",
+            "distance": 2
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "ثوى",
+        "primary_root": "ثوى",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ثور",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثوا",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثوج",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثوي",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثوب",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جبت",
+        "primary_root": "جبت",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "تبت",
+            "distance": 1
+          },
+          {
+            "genome_root": "جيت",
+            "distance": 1
+          },
+          {
+            "genome_root": "جرت",
+            "distance": 1
+          },
+          {
+            "genome_root": "نبت",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثبت",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جبر",
+        "primary_root": "جبر",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "طبر",
+            "distance": 1
+          },
+          {
+            "genome_root": "غبر",
+            "distance": 1
+          },
+          {
+            "genome_root": "دبر",
+            "distance": 1
+          },
+          {
+            "genome_root": "جخر",
+            "distance": 1
+          },
+          {
+            "genome_root": "جير",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جبل",
+        "primary_root": "جبل",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "فبل",
+            "distance": 1
+          },
+          {
+            "genome_root": "جال",
+            "distance": 1
+          },
+          {
+            "genome_root": "جهل",
+            "distance": 1
+          },
+          {
+            "genome_root": "خبل",
+            "distance": 1
+          },
+          {
+            "genome_root": "جعل",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جبن",
+        "primary_root": "جبن",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "ثبن",
+            "distance": 1
+          },
+          {
+            "genome_root": "جنن",
+            "distance": 1
+          },
+          {
+            "genome_root": "لبن",
+            "distance": 1
+          },
+          {
+            "genome_root": "خبن",
+            "distance": 1
+          },
+          {
+            "genome_root": "صبن",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جبه",
+        "primary_root": "جبه",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "جظه",
+            "distance": 1
+          },
+          {
+            "genome_root": "جره",
+            "distance": 1
+          },
+          {
+            "genome_root": "ابه",
+            "distance": 1
+          },
+          {
+            "genome_root": "وبه",
+            "distance": 1
+          },
+          {
+            "genome_root": "سبه",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جحم",
+        "primary_root": "جحم",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "نحم",
+            "distance": 1
+          },
+          {
+            "genome_root": "جحس",
+            "distance": 1
+          },
+          {
+            "genome_root": "جشم",
+            "distance": 1
+          },
+          {
+            "genome_root": "جرم",
+            "distance": 1
+          },
+          {
+            "genome_root": "رحم",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جدث",
+        "primary_root": "جدث",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "جثث",
+            "distance": 1
+          },
+          {
+            "genome_root": "جيث",
+            "distance": 1
+          },
+          {
+            "genome_root": "جدش",
+            "distance": 1
+          },
+          {
+            "genome_root": "حدث",
+            "distance": 1
+          },
+          {
+            "genome_root": "جاث",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جدر",
+        "primary_root": "جدر",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "فدر",
+            "distance": 1
+          },
+          {
+            "genome_root": "صدر",
+            "distance": 1
+          },
+          {
+            "genome_root": "ندر",
+            "distance": 1
+          },
+          {
+            "genome_root": "جخر",
+            "distance": 1
+          },
+          {
+            "genome_root": "قدر",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جذع",
+        "primary_root": "جذع",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "جوع",
+            "distance": 1
+          },
+          {
+            "genome_root": "جمع",
+            "distance": 1
+          },
+          {
+            "genome_root": "جذا",
+            "distance": 1
+          },
+          {
+            "genome_root": "جرع",
+            "distance": 1
+          },
+          {
+            "genome_root": "وذع",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جرد",
+        "primary_root": "جرد",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "جلد",
+            "distance": 1
+          },
+          {
+            "genome_root": "ثرد",
+            "distance": 1
+          },
+          {
+            "genome_root": "جره",
+            "distance": 1
+          },
+          {
+            "genome_root": "فرد",
+            "distance": 1
+          },
+          {
+            "genome_root": "جري",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جرف",
+        "primary_root": "جرف",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "قرف",
+            "distance": 1
+          },
+          {
+            "genome_root": "جخف",
+            "distance": 1
+          },
+          {
+            "genome_root": "جره",
+            "distance": 1
+          },
+          {
+            "genome_root": "جري",
+            "distance": 1
+          },
+          {
+            "genome_root": "جنف",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جرى",
+        "primary_root": "جرى",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "جره",
+            "distance": 1
+          },
+          {
+            "genome_root": "جري",
+            "distance": 1
+          },
+          {
+            "genome_root": "جرت",
+            "distance": 1
+          },
+          {
+            "genome_root": "جرح",
+            "distance": 1
+          },
+          {
+            "genome_root": "جرع",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جزى",
+        "primary_root": "جزى",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "جزي",
+            "distance": 1
+          },
+          {
+            "genome_root": "جزا",
+            "distance": 1
+          },
+          {
+            "genome_root": "جزع",
+            "distance": 1
+          },
+          {
+            "genome_root": "جزح",
+            "distance": 1
+          },
+          {
+            "genome_root": "عزب",
+            "distance": 2
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جسم",
+        "primary_root": "جسم",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "اسم",
+            "distance": 1
+          },
+          {
+            "genome_root": "خسم",
+            "distance": 1
+          },
+          {
+            "genome_root": "جسد",
+            "distance": 1
+          },
+          {
+            "genome_root": "جشم",
+            "distance": 1
+          },
+          {
+            "genome_root": "جرم",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      },
+      {
+        "tri_root": "جفن",
+        "primary_root": "جفن",
+        "fuzzy_candidates": [
+          {
+            "genome_root": "جنن",
+            "distance": 1
+          },
+          {
+            "genome_root": "جفو",
+            "distance": 1
+          },
+          {
+            "genome_root": "ضفن",
+            "distance": 1
+          },
+          {
+            "genome_root": "جان",
+            "distance": 1
+          },
+          {
+            "genome_root": "جلن",
+            "distance": 1
+          }
+        ],
+        "reason": "fuzzy_near_miss_d1"
+      }
+    ],
+    "root_length_mismatch": [
+      {
+        "tri_root": "برزخ",
+        "primary_root": "برزخ",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "تحتح",
+        "primary_root": "تحتح",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "تقتق",
+        "primary_root": "تقتق",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "جهنم",
+        "primary_root": "جهنم",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "حلقم",
+        "primary_root": "حلقم",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "حنجر",
+        "primary_root": "حنجر",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "خنزر",
+        "primary_root": "خنزر",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "ذقذق",
+        "primary_root": "ذقذق",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "ذكذك",
+        "primary_root": "ذكذك",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "رهره",
+        "primary_root": "رهره",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "زمهرير",
+        "primary_root": "زمهرير",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 6
+      },
+      {
+        "tri_root": "زنجبيل",
+        "primary_root": "زنجبيل",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 6
+      },
+      {
+        "tri_root": "زهزه",
+        "primary_root": "زهزه",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "سربل",
+        "primary_root": "سربل",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "سردق",
+        "primary_root": "سردق",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "سرمد",
+        "primary_root": "سرمد",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "سنبل",
+        "primary_root": "سنبل",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "سندس",
+        "primary_root": "سندس",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "شرذم",
+        "primary_root": "شرذم",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "شغشغ",
+        "primary_root": "شغشغ",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "صغصغ",
+        "primary_root": "صغصغ",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "ضفدع",
+        "primary_root": "ضفدع",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "عرجن",
+        "primary_root": "عرجن",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "عنكبوت",
+        "primary_root": "عنكبوت",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 6
+      },
+      {
+        "tri_root": "غظغظ",
+        "primary_root": "غظغظ",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "فردوس",
+        "primary_root": "فردوس",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 5
+      },
+      {
+        "tri_root": "فسفس",
+        "primary_root": "فسفس",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "فعفع",
+        "primary_root": "فعفع",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "قرطس",
+        "primary_root": "قرطس",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "قسطس",
+        "primary_root": "قسطس",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "قطمر",
+        "primary_root": "قطمر",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "قمطر",
+        "primary_root": "قمطر",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "كوكب",
+        "primary_root": "كوكب",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "لغلغ",
+        "primary_root": "لغلغ",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "لهله",
+        "primary_root": "لهله",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "نغنغ",
+        "primary_root": "نغنغ",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "نلنل",
+        "primary_root": "نلنل",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "نمرق",
+        "primary_root": "نمرق",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 4
+      },
+      {
+        "tri_root": "وول←أول",
+        "primary_root": "وول←أول",
+        "fuzzy_candidates": [],
+        "reason": "root_length_mismatch",
+        "arabic_letter_count": 6
+      }
+    ],
+    "heh_tatweel": [
+      {
+        "tri_root": "بهـت",
+        "primary_root": "بهت",
+        "fuzzy_candidates": [],
+        "stripped_form": "بهت",
+        "genome_match": "بهت",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "بهـج",
+        "primary_root": "بهج",
+        "fuzzy_candidates": [],
+        "stripped_form": "بهج",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "بهـل",
+        "primary_root": "بهل",
+        "fuzzy_candidates": [],
+        "stripped_form": "بهل",
+        "genome_match": "بهل",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "بهـم",
+        "primary_root": "بهم",
+        "fuzzy_candidates": [],
+        "stripped_form": "بهم",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "تهـتهـ",
+        "primary_root": "تهته",
+        "fuzzy_candidates": [],
+        "stripped_form": "تهته",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "سنهـ",
+        "primary_root": "سنه",
+        "fuzzy_candidates": [],
+        "stripped_form": "سنه",
+        "genome_match": "سنه",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "سهـر",
+        "primary_root": "سهر",
+        "fuzzy_candidates": [],
+        "stripped_form": "سهر",
+        "genome_match": "سهر",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "سهـل",
+        "primary_root": "سهل",
+        "fuzzy_candidates": [],
+        "stripped_form": "سهل",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "سهـم",
+        "primary_root": "سهم",
+        "fuzzy_candidates": [],
+        "stripped_form": "سهم",
+        "genome_match": "سهم",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "سهـو",
+        "primary_root": "سهو",
+        "fuzzy_candidates": [],
+        "stripped_form": "سهو",
+        "genome_match": "سهو",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "صهـر",
+        "primary_root": "صهر",
+        "fuzzy_candidates": [],
+        "stripped_form": "صهر",
+        "genome_match": "صهر",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "طهـر",
+        "primary_root": "طهر",
+        "fuzzy_candidates": [],
+        "stripped_form": "طهر",
+        "genome_match": "طهر",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "طهـطهـ",
+        "primary_root": "طهطه",
+        "fuzzy_candidates": [],
+        "stripped_form": "طهطه",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "ظهـر",
+        "primary_root": "ظهر",
+        "fuzzy_candidates": [],
+        "stripped_form": "ظهر",
+        "genome_match": "ظهر",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "فرهـ",
+        "primary_root": "فره",
+        "fuzzy_candidates": [],
+        "stripped_form": "فره",
+        "genome_match": "فره",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "فقهـ",
+        "primary_root": "فقه",
+        "fuzzy_candidates": [],
+        "stripped_form": "فقه",
+        "genome_match": "فقه",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "فكهـ",
+        "primary_root": "فكه",
+        "fuzzy_candidates": [],
+        "stripped_form": "فكه",
+        "genome_match": "فكه",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "فوهـ",
+        "primary_root": "فوه",
+        "fuzzy_candidates": [],
+        "stripped_form": "فوه",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "قهـر",
+        "primary_root": "قهر",
+        "fuzzy_candidates": [],
+        "stripped_form": "قهر",
+        "genome_match": "قهر",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "كرهـ",
+        "primary_root": "كره",
+        "fuzzy_candidates": [],
+        "stripped_form": "كره",
+        "genome_match": "كره",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "كمهـ",
+        "primary_root": "كمه",
+        "fuzzy_candidates": [],
+        "stripped_form": "كمه",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "كهـف",
+        "primary_root": "كهف",
+        "fuzzy_candidates": [],
+        "stripped_form": "كهف",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "كهـل",
+        "primary_root": "كهل",
+        "fuzzy_candidates": [],
+        "stripped_form": "كهل",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "كهـن",
+        "primary_root": "كهن",
+        "fuzzy_candidates": [],
+        "stripped_form": "كهن",
+        "genome_match": "كهن",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "مهـد",
+        "primary_root": "مهد",
+        "fuzzy_candidates": [],
+        "stripped_form": "مهد",
+        "genome_match": "مهد",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "مهـل",
+        "primary_root": "مهل",
+        "fuzzy_candidates": [],
+        "stripped_form": "مهل",
+        "genome_match": "مهل",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "مهـن",
+        "primary_root": "مهن",
+        "fuzzy_candidates": [],
+        "stripped_form": "مهن",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "نهـج",
+        "primary_root": "نهج",
+        "fuzzy_candidates": [],
+        "stripped_form": "نهج",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "نهـر",
+        "primary_root": "نهر",
+        "fuzzy_candidates": [],
+        "stripped_form": "نهر",
+        "genome_match": "نهر",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "نهـنهـ",
+        "primary_root": "نهنه",
+        "fuzzy_candidates": [],
+        "stripped_form": "نهنه",
+        "reason": "heh_tatweel"
+      },
+      {
+        "tri_root": "نهـى",
+        "primary_root": "نهى",
+        "fuzzy_candidates": [],
+        "stripped_form": "نهى",
+        "reason": "heh_tatweel"
+      }
+    ]
+  },
+  "recoverable_by_normalization": 307
+}

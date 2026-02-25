@@ -1,13 +1,14 @@
-# Contributing (LV4)
+# Contributing (LV3)
 
-This repository is documentation-first: it defines the LV4 theory + validation blueprint.
+This repository is documentation-first: it defines the LV3 theory + validation blueprint.
 
 Project map:
 
-- LV0: `https://github.com/YassineTemessek/Juthoor-DataCore-LV0`
-- LV2: `https://github.com/YassineTemessek/Juthoor-ArabicGenome-LV1`
-- LV3: `https://github.com/YassineTemessek/Juthoor-CognateDiscovery-LV2`
-- LV4: `https://github.com/YassineTemessek/Juthoor-Origins-LV3`
+- LV0: `Juthoor-DataCore-LV0` — Data ingestion and normalization
+- LV1: `Juthoor-ArabicGenome-LV1` — Arabic root system decoding
+- LV2: `Juthoor-CognateDiscovery-LV2` — Cross-lingual cognate discovery
+- LV3: `Juthoor-Origins-LV3` — Theory synthesis and validation (this repo)
+- App: `Quran-Corpus-Analysis` — Quranic semantic analysis
 
 ## What to change here
 
@@ -26,7 +27,7 @@ Project map:
 
 ## Versioning policy
 
-- Do not overwrite the meaning of an existing “vX.Y” Master Foundation.
+- Do not overwrite the meaning of an existing "vX.Y" Master Foundation.
 - Create a new file for major revisions (e.g., `Master FoundationV3.3.md`) and link it from `README.md`.
 
 ## Contact

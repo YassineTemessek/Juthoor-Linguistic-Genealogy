@@ -1,35 +1,93 @@
-# Start Here (LV1)
+# Quran Corpus Analysis (QCA) - Start Here
 
-LV1 is the Quran-focused analysis layer. It consumes LV0 canonical data and produces
-Quran-specific analysis outputs that measure opposites, semantic distance, and nuance.
+QCA is the Quran-specific analysis layer of the Juthoor stack. It takes raw Quranic
+data (QAC morphology file + Quran text CSV) and produces root-annotated verse tables
+that can be clustered to reveal semantic patterns.
 
+## What QCA does
 
-Focus areas:
+1. Parses the Quranic Arabic Corpus (QAC) morphology file to map every Quranic word
+   to its root and lemma.
+2. Extracts subsets of verses by root or by substring pattern.
+3. Clusters those verses using KMeans on word co-occurrence features (with optional
+   root augmentation) and visualises the clusters with PCA.
 
-- Identify 100 percent opposites where they exist.
-- Measure distance between close words and concepts.
-- Document nuance where meanings are similar but not identical.
+The goal is to surface semantic distinctions between words that share a root family
+(e.g. رجم vs رجع vs رجل under the bi-root رج) and to document opposites, distance,
+and nuance within Quranic vocabulary.
 
-Workflow:
+## Data inputs
 
-1) Build or fetch LV0 processed data.
-2) Run LV1 analysis scripts against the Quranic tables.
-3) Inspect outputs under outputs.
+| File | Source | Notes |
+|------|--------|-------|
+| `Resources/qac_morphology/quran-morphology.txt` | Quranic Arabic Corpus | Tab-delimited, one morpheme per line |
+| `Resources/quran_dataset including CSV/quran_text.csv` | Quran text CSV | Columns: surah_no, ayah_no, text_with_diacritics, text_clean |
 
-## Core data inputs
+Both files must be present before running the scripts. They are not committed to git
+(see `.gitignore`).
 
-In LV0, Quranic Arabic outputs typically include:
+## Script pipeline
 
-- data/processed/quranic_arabic/lexemes.jsonl
-- data/processed/quranic_arabic/sources/quran_lemmas_enriched.jsonl
+Run scripts from inside `scripts/analysis/` or pass absolute paths.
 
-Copy or fetch these into this repo under data/processed.
+### Step 1 - Build the word-root map (one-time)
 
-## Core scripts (LV1)
+```
+python build_word_root_map.py \
+  --morph ../../Resources/qac_morphology/quran-morphology.txt \
+  --output ../../Resources/word_root_map.csv
+```
 
-- scripts/analysis/01_rj_cooc.py
-- scripts/analysis/build_word_root_map.py
-- scripts/analysis/make_examples_from_roots.py
-- scripts/analysis/make_subset.py
+Produces `Resources/word_root_map.csv` with columns:
+`sura, ayah, position, word, lemma, root`
 
-Legacy scripts and archived outputs live under scripts/legacy and outputs/legacy.
+### Step 2a - Extract verses by root (morphologically clean)
+
+```
+python make_examples_from_roots.py \
+  --word-root-map ../../Resources/word_root_map.csv \
+  --quran-text "../../Resources/quran_dataset including CSV/quran_text.csv" \
+  --roots "رجم,رجع,رجل" \
+  --output output/examples_roots.csv
+```
+
+### Step 2b - Extract verses by substring pattern (fast, exploratory)
+
+```
+python make_subset.py \
+  --input "../../Resources/quran_dataset including CSV/quran_text.csv" \
+  --patterns "رجع:رجع|يرجع,رجم:رجم|مرجوم" \
+  --output output/examples_rj.csv
+```
+
+### Step 3 - Cluster and visualise
+
+```
+python 01_rj_cooc.py \
+  --input output/examples_rj.csv \
+  --k 2 \
+  --use-roots \
+  --out-csv output/cluster_assignments.csv \
+  --plot output/cluster_plot.png
+```
+
+Key flags:
+- `--k N` sets the number of KMeans clusters
+- `--auto-k 2,3,4,5` picks the best k by silhouette score
+- `--k-compare 2,3,4` prints silhouette scores for each k without choosing
+- `--use-roots` augments text bag-of-words with root token features
+- `--root-weight 2.0` up-weights root features relative to raw words
+- `--stop-words none` disables the built-in Arabic stop-word filter
+
+Outputs written to `output/` (gitignored by default):
+- `cluster_assignments.csv` - every verse with its cluster label
+- `cluster_plot.png` - 2D PCA scatter coloured by cluster
+- `run_metadata.json` - run parameters and silhouette scores
+
+## Dependencies
+
+```
+pip install pandas scikit-learn scipy matplotlib
+```
+
+Or install the package: `uv pip install -e .` from `Quran-Corpus-Analysis/`.

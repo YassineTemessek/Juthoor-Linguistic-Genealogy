@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an improvement to LV4 docs/policy
+about: Suggest an improvement to LV3 docs/policy
 ---
 
 ## Problem
