@@ -3,7 +3,7 @@ name = "juthoor-datacore-lv0"
 version = "0.1.0"
 description = "LV0: The Foundation. Data ingestion and canonization engine."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "pandas>=2.0",
     "numpy>=1.23",

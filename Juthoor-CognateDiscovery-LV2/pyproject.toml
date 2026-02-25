@@ -3,7 +3,7 @@ name = "juthoor-cognatediscovery-lv2"
 version = "0.1.0"
 description = "LV2: Cognate Discovery. Cross-lingual similarity scoring and retrieval."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "juthoor-datacore-lv0",
     "pandas>=2.0",

@@ -18,7 +18,7 @@
 {"bab": "ض", "binary_root": "ضا", "root": "ضال", "words": ["ضأل"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضا", "root": "ضام", "words": ["ضامَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضا", "root": "ضامه", "words": ["ضامَهُ"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضا", "root": "ضان", "words": ["ضأن", "ضَأْن"], "muajam_match": false}
+{"bab": "ض", "binary_root": "ضا", "root": "ضان", "words": ["ضأن", "ضَأْن"], "muajam_match": true, "binary_root_meaning": "هو لزوم الشيء حيزه أي بقاؤه داخله لا يبرحه", "axial_meaning": "تكاثف رخو يمتد في باطن الشيء", "added_letter": "ضأن", "quran_example": "الضأن - ﴿مِّنَ الضَّأْنِ اثْنَيْنِ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضا", "root": "ضاهي", "words": ["ضاهى"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضا", "root": "ضاي", "words": ["ضأي", "ضَأى"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضب", "root": "ضبا", "words": ["ضبأ", "ضبا", "ضَبَأَ"], "muajam_match": false}
@@ -33,10 +33,10 @@
 {"bab": "ض", "binary_root": "ضج", "root": "ضجحر", "words": ["ضجحر", "ضَجْحَر"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضج", "root": "ضجر", "words": ["ضجر", "ضَجِرَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضج", "root": "ضجعم", "words": ["ضجعم", "ضُجْعُمٌ"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضح", "root": "ضحضح", "words": ["ضحضح", "ضَحْضَحَ"], "muajam_match": false}
+{"bab": "ض", "binary_root": "ضح", "root": "ضحضح", "words": ["ضحضح", "ضَحْضَحَ"], "muajam_match": true, "binary_root_meaning": "هو الانبساط مع الانكشاف أو الشفافية", "axial_meaning": "انبساط مع شفافية ورقة، أي عدم كثافة أو تراكم", "added_letter": "ضحح / ضحضح", "quran_example": "الضِّح / ضحضاح", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضح", "root": "ضحك", "words": ["أَضْحَكَ", "تَضْحَكُ", "ضحك", "ضَاحِكًا", "ضَاحِكَةٌ", "ضَحِكَ", "ضَحِكَتْ", "يَضْحَكُ"], "muajam_match": true, "binary_root_meaning": "هو الانبساط مع الانكشاف أو الشفافية", "axial_meaning": "بروز الشيء أبيض واضحًا من بين ما يكتنفه ملتئمًا عليه", "added_letter": "ضحك", "quran_example": "فضحكت - ﴿فَضَحِكَتْ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "ضغط بكثافة وغلظ"}
-{"bab": "ض", "binary_root": "ضح", "root": "ضحو", "words": ["تَضْحَىٰ", "ضحو", "ضُحًى"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضح", "root": "ضحي", "words": ["ضحى", "ضحي"], "muajam_match": false}
+{"bab": "ض", "binary_root": "ضح", "root": "ضحو", "words": ["تَضْحَىٰ", "ضحو", "ضُحًى"], "muajam_match": true, "binary_root_meaning": "هو الانبساط مع الانكشاف أو الشفافية", "axial_meaning": "انكشاف الشمس وانبساط الضوء انبساطًا شاملًا بلا ساتر", "added_letter": "ضحو / ضحى", "quran_example": "الضحى - ﴿وَالضُّحَىٰ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "ضغط بكثافة وغلظ"}
+{"bab": "ض", "binary_root": "ضح", "root": "ضحي", "words": ["ضحى", "ضحي"], "muajam_match": true, "binary_root_meaning": "هو الانبساط مع الانكشاف أو الشفافية", "axial_meaning": "انكشاف الشمس وانبساط الضوء انبساطًا شاملًا بلا ساتر", "added_letter": "ضحو / ضحى", "quran_example": "الضحى - ﴿وَالضُّحَىٰ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضخ", "root": "ضخخ", "words": ["ضخخ", "ضخَخَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضخ", "root": "ضخز", "words": ["ضخز", "ضَخَزَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضخ", "root": "ضخم", "words": ["ضخم", "ضخَم"], "muajam_match": false}
@@ -77,13 +77,13 @@
 {"bab": "ض", "binary_root": "ضك", "root": "ضكه", "words": ["ضَكَّهُ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضل", "root": "ضلا", "words": ["ضلا", "ضَلا"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضل", "root": "ضلفع", "words": ["ضلفع", "ضَلْفَعٌ"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضل", "root": "ضلل", "words": ["أَضَلَّ", "أَضَلُّ", "أَضِلُّ", "أَضْلَلْ", "أُضِلَّ", "تَضِلَّ", "تَضِلُّ", "تَضْلِيلٍ", "تُضِلُّ", "ضلل", "ضَآلًّا", "ضَآلُّونَ", "ضَآلِّينَ", "ضَلَلْ", "ضَلَّ", "ضَلُّ", "ضَّآلُّونَ", "ضَّآلِّينَ", "مُضِلِّينَ", "مُّضِلٌّ", "مُّضِلٍّ", "يَضِلُّ", "يُضَلُّ", "يُضِلَّ", "يُضِلُّ", "يُضْلِلِ", "يُضْلِلْ"], "muajam_match": false}
+{"bab": "ض", "binary_root": "ضل", "root": "ضلل", "words": ["أَضَلَّ", "أَضَلُّ", "أَضِلُّ", "أَضْلَلْ", "أُضِلَّ", "تَضِلَّ", "تَضِلُّ", "تَضْلِيلٍ", "تُضِلُّ", "ضلل", "ضَآلًّا", "ضَآلُّونَ", "ضَآلِّينَ", "ضَلَلْ", "ضَلَّ", "ضَلُّ", "ضَّآلُّونَ", "ضَّآلِّينَ", "مُضِلِّينَ", "مُّضِلٌّ", "مُّضِلٍّ", "يَضِلُّ", "يُضَلُّ", "يُضِلَّ", "يُضِلُّ", "يُضْلِلِ", "يُضْلِلْ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "غياب الشيء في أثناء شيء حتى لا يتميز هذا من ذاك", "added_letter": "ضلل / ضلضل", "quran_example": "ضللنا - ﴿أَإِذَا ضَلَلْنَا فِي الْأَرْضِ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضم", "root": "ضمخ", "words": ["ضمخ", "ضمخَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضم", "root": "ضمد", "words": ["ضمد", "ضَمَدَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضم", "root": "ضمر", "words": ["ضمر", "ضَامِرٍ"], "muajam_match": true, "binary_root_meaning": "هو الجمع بضغط ولأم", "axial_meaning": "استرسال تضام الجرم بعضه في بعض مشتدًا وذهاب الرخاوة", "added_letter": "ضمر", "quran_example": "ضامر - ﴿وَعَلَىٰ كُلِّ ضَامِرٍ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضم", "root": "ضمز", "words": ["ضمز", "ضَمَزَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضم", "root": "ضمس", "words": ["ضمس", "ضَمَسَ"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضم", "root": "ضمم", "words": ["ضمم", "ٱضْمُمْ"], "muajam_match": false}
+{"bab": "ض", "binary_root": "ضم", "root": "ضمم", "words": ["ضمم", "ٱضْمُمْ"], "muajam_match": true, "binary_root_meaning": "هو الجمع بضغط ولأم", "axial_meaning": "الجمع بضغط ولأم قوي يستوي به ظاهر الأشياء المجموعة", "added_letter": "ضمم / ضمضم", "quran_example": "واضمم - ﴿وَاضْمُمْ يَدَكَ إِلَىٰ جَنَاحِكَ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضم", "root": "ضمن", "words": ["ضمن", "ضَمِنَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضم", "root": "ضمي", "words": ["ضمي", "ضَمِيَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضن", "root": "ضنا", "words": ["ضنأ", "ضنا"], "muajam_match": false}
@@ -92,7 +92,7 @@
 {"bab": "ض", "binary_root": "ضن", "root": "ضنبر", "words": ["ضنبر", "ضَنْبَرٌ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضن", "root": "ضنت", "words": ["ضَنَتْ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضن", "root": "ضني", "words": ["ضنى", "ضني"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضه", "root": "ضها", "words": ["ضهأ", "ضها", "يُضَٰهِـُٔ"], "muajam_match": false}
+{"bab": "ض", "binary_root": "ضه", "root": "ضها", "words": ["ضهأ", "ضها", "يُضَٰهِـُٔ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "خلو الشيء مما يتميز به عن غيره", "added_letter": "ضهأ", "quran_example": "يضاهئون - ﴿يُضَاهِئُونَ قَوْلَ الَّذِينَ كَفَرُوا﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "هـ", "letter2_meaning": "فراغ أو إفراغ ما في الجوف", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضه", "root": "ضهبه", "words": ["ضَهَبَهُ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضه", "root": "ضهته", "words": ["ضَهَتَهُ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضه", "root": "ضهده", "words": ["ضَهَدَه"], "muajam_match": false}
@@ -102,7 +102,7 @@
 {"bab": "ض", "binary_root": "ضه", "root": "ضهه", "words": ["ضهه", "ضَهَّهُ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضه", "root": "ضهي", "words": ["ضهى", "ضهي"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضه", "root": "ضهيا", "words": ["ضهيأ"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضو", "root": "ضوا", "words": ["أَضَآءَ", "أَضَآءَتْ", "ضوأ", "ضوا", "يُضِىٓءُ"], "muajam_match": false}
+{"bab": "ض", "binary_root": "ضو", "root": "ضوا", "words": ["أَضَآءَ", "أَضَآءَتْ", "ضوأ", "ضوا", "يُضِىٓءُ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "أشعة تنفذ من شيء وتنتشر فتزيل كثافة الظلام والإعتام", "added_letter": "ضَوأ", "quran_example": "ضياء - ﴿جَعَلَ الشَّمْسَ ضِيَاءً﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضو", "root": "ضوت", "words": ["ضوت", "ضَوْتٌ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضو", "root": "ضوج", "words": ["ضوج", "ضوَج"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضو", "root": "ضوكع", "words": ["ضَوْكَعَ"], "muajam_match": false}
@@ -111,7 +111,7 @@
 {"bab": "ض", "binary_root": "ضي", "root": "ضيات", "words": ["ضَيَّأَتِ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضي", "root": "ضيط", "words": ["ضيط", "ضَئِطَ"], "muajam_match": false}
 {"bab": "ض", "binary_root": "ضي", "root": "ضيطن", "words": ["ضَيْطَنَ"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضي", "root": "ضيع", "words": ["أَضَاعُ", "أُضِيعُ", "ضيع", "نُضِيعُ", "يُضِيعَ", "يُضِيعُ"], "muajam_match": false}
-{"bab": "ض", "binary_root": "ضي", "root": "ضيف", "words": ["ضيف", "يُضَيِّفُ"], "muajam_match": false}
+{"bab": "ض", "binary_root": "ضي", "root": "ضيع", "words": ["أَضَاعُ", "أُضِيعُ", "ضيع", "نُضِيعُ", "يُضِيعَ", "يُضِيعُ"], "muajam_match": true, "binary_root_meaning": "هو تفكيك الشيء الغليظ الشديد التماسك ويلزمه التفرق", "axial_meaning": "بُعدُ الشيء أو انتشاره بعيدًا عن المتناول", "added_letter": "ضوع / ضيع", "quran_example": "لا يضيع - ﴿لَا يُضِيعُ أَجْرَ الْمُؤْمِنِينَ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ع", "letter2_meaning": "التحام على رقة مع حدة ما / رخاوة جرم ملتحم", "bab_meaning": "ضغط بكثافة وغلظ"}
+{"bab": "ض", "binary_root": "ضي", "root": "ضيف", "words": ["ضيف", "يُضَيِّفُ"], "muajam_match": true, "binary_root_meaning": "هو التجمع على الشيء أو حوله", "axial_meaning": "انعطاف الشيء وميله إلى شيء ركونًا أو تحيزًا", "added_letter": "ضوف / ضيف", "quran_example": "ضيف - ﴿هَلْ أَتَاكَ حَدِيثُ ضَيْفِ إِبْرَاهِيمَ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضي", "root": "ضيق", "words": ["تُضَيِّقُ", "ضيق", "ضَاقَ", "ضَاقَتْ", "ضَآئِقٌۢ", "يَضِيقُ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "نقص فراغ الحيز من تضام جوانب محيطه", "added_letter": "ضيق", "quran_example": "ضيق - ﴿وَلَا تَكُن فِي ضَيْقٍ﴾", "letter1": "ض", "letter1_meaning": "ضغط بكثافة وغلظ", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "ضغط بكثافة وغلظ"}
 {"bab": "ض", "binary_root": "ضي", "root": "ضين", "words": ["ضين", "ضِيْنٌ"], "muajam_match": false}

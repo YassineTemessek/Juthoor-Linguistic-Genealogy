@@ -46,7 +46,7 @@
 {"bab": "ث", "binary_root": "ثر", "root": "ثرن", "words": ["ثرن", "ثَرِنَ"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثر", "root": "ثروغ", "words": ["ثُرُوغُ"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثر", "root": "ثروق", "words": ["ثَرْوَقُ"], "muajam_match": false}
-{"bab": "ث", "binary_root": "ثر", "root": "ثري", "words": ["ثرى", "ثري"], "muajam_match": false}
+{"bab": "ث", "binary_root": "ثر", "root": "ثري", "words": ["ثرى", "ثري"], "muajam_match": true, "binary_root_meaning": "نفاذ المائع وما يشبهه بغزارة وانتشار", "axial_meaning": "تخلل الندى ونحوه أثناء جرم باستر سال", "added_letter": "ثرى", "quran_example": "الثرى - ﴿وَمَا تَحْتَ الثَّرَىٰ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ث", "binary_root": "ثر", "root": "ثريده", "words": ["ثَريدَةٌ"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثط", "root": "ثطا", "words": ["ثطأ", "ثطا", "ثَطَا"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثط", "root": "ثطاه", "words": ["ثَطَأَهُ"], "muajam_match": false}
@@ -59,7 +59,7 @@
 {"bab": "ث", "binary_root": "ثف", "root": "ثفج", "words": ["ثفج", "ثَفَجَ"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثف", "root": "ثفي", "words": ["ثفى", "ثفي"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثق", "root": "ثقب", "words": ["ثقب", "ثَاقِبٌ", "ثَّاقِبُ"], "muajam_match": true, "binary_root_meaning": "الغلظ والشدة", "axial_meaning": "اختراق دقيق لعمق شيء متين", "added_letter": "ثقب", "quran_example": "ثاقب - ﴿النَّجْمُ الثَّاقِبُ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
-{"bab": "ث", "binary_root": "ثق", "root": "ثقثق", "words": ["ثقثق", "ثَقْثَقَ"], "muajam_match": false}
+{"bab": "ث", "binary_root": "ثق", "root": "ثقثق", "words": ["ثقثق", "ثَقْثَقَ"], "muajam_match": true, "binary_root_meaning": "الغلظ والشدة", "axial_meaning": "خروج كلام فج غليظ يوحي بثقل الذهن", "added_letter": "ثقق - ثقثق", "quran_example": "", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ث", "binary_root": "ثق", "root": "ثقف", "words": ["تَثْقَفَ", "ثقف", "ثَقُفَ", "ثَقِفْ", "ثُقِفُ", "يَثْقَفُ"], "muajam_match": true, "binary_root_meaning": "الغلظ والشدة", "axial_meaning": "تمكّن يبلغ به إتقان أحوال الشيء وأحكمها", "added_letter": "ثقف", "quran_example": "يثقفوكم - ﴿إِن يَثْقَفُوكُمْ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ث", "binary_root": "ثق", "root": "ثقل", "words": ["أَثْقَلَت", "ثقل", "ثَقُلَتْ", "مُثْقَلَةٌ", "مُّثْقَلُونَ", "ٱثَّاقَلْ"], "muajam_match": true, "binary_root_meaning": "الغلظ والشدة", "axial_meaning": "انجذاب الشيء المحمول إلى الأرض أو إلى أسفل تبعًا لما تجمع فيه من مادة", "added_letter": "ثقل", "quran_example": "أثقالكم - ﴿وَتَحْمِلُ أَثْقَالَكُمْ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ث", "binary_root": "ثك", "root": "ثكد", "words": ["ثكد", "ثَكْدٌ"], "muajam_match": false}
@@ -80,7 +80,7 @@
 {"bab": "ث", "binary_root": "ثم", "root": "ثمن", "words": ["ثمن", "ثَمَٰنِيَةَ"], "muajam_match": true, "binary_root_meaning": "ضم الدقائق أو ما يشبهها في حيز", "axial_meaning": "ضم الشيء وجمعه في الجوف", "added_letter": "ثمن", "quran_example": "الثمن - ﴿فَلَهُنَّ الثُّمُنُ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ث", "binary_root": "ثم", "root": "ثمه", "words": ["ثَمَّهُ"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثن", "root": "ثنت", "words": ["ثنت", "ثَنِتَ"], "muajam_match": false}
-{"bab": "ث", "binary_root": "ثن", "root": "ثني", "words": ["ثنى", "ثني", "ثَنَى", "يَثْنُ", "يَسْتَثْنُ"], "muajam_match": false}
+{"bab": "ث", "binary_root": "ثن", "root": "ثني", "words": ["ثنى", "ثني", "ثَنَى", "يَثْنُ", "يَسْتَثْنُ"], "muajam_match": true, "binary_root_meaning": "التبطن والكثرة في الداخل", "axial_meaning": "طي الشيء وإدخال أجزاء منه في أحنائه", "added_letter": "ثنى", "quran_example": "ثاني - ﴿ثَانِيَ اثْنَيْنِ﴾ / المثاني - ﴿مِّنَ الْمَثَانِي﴾ / يثنون - ﴿يَثْنُونَ صُدُورَهُمْ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ث", "binary_root": "ثه", "root": "ثها", "words": ["ثها", "ثَهَا"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثه", "root": "ثهت", "words": ["ثهت", "ثهِتَ"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثه", "root": "ثهثه", "words": ["ثهثه", "ثَهْثَهَ"], "muajam_match": false}
@@ -89,7 +89,7 @@
 {"bab": "ث", "binary_root": "ثو", "root": "ثوب", "words": ["أَثَٰبَ", "ثوب", "ثَوْبٌ", "ثُوِّبَ", "مَثُوبَةً", "مَثُوبَةٌ"], "muajam_match": true, "binary_root_meaning": "التجمع والتماسك", "axial_meaning": "رجوع الشيء المتفرق الذاهب وتجمعه في نفس مكانه ثانية", "added_letter": "ثوب", "quran_example": "ثواب - ﴿ثَوَابَ الدُّنْيَا﴾ / ثيابًا", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ث", "binary_root": "ثو", "root": "ثوج", "words": ["ثوج", "ثوَج"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثو", "root": "ثور", "words": ["أَثَارُ", "أَثَرْ", "تُثِيرُ", "ثور", "ثَوْر"], "muajam_match": true, "binary_root_meaning": "نفاذ المائع وما يشبهه بغزارة وانتشار", "axial_meaning": "انتشار (حاد) كامن في عمق الشيء إلى حيث يرى في ظاهره", "added_letter": "ثور", "quran_example": "فتثير - ﴿فَتُثِيرُ سَحَابًا﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
-{"bab": "ث", "binary_root": "ثو", "root": "ثوي", "words": ["ثوى", "ثوي", "ثَاوِيًا", "ثَوَى"], "muajam_match": false}
+{"bab": "ث", "binary_root": "ثو", "root": "ثوي", "words": ["ثوى", "ثوي", "ثَاوِيًا", "ثَوَى"], "muajam_match": true, "binary_root_meaning": "تجمع الدقائق بكثافة", "axial_meaning": "لمّ المنتشر المتفرق وجمعه في ما يؤويه", "added_letter": "ثوى", "quran_example": "مثواه - ﴿أَكْرِمِي مَثْوَاهُ﴾", "letter1": "أ", "letter1_meaning": "—", "letter2": "ث", "letter2_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ث", "binary_root": "ثي", "root": "ثيب", "words": ["ثيب", "ثُئِبَ"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثي", "root": "ثيبان", "words": ["ثِيبانُ"], "muajam_match": false}
 {"bab": "ث", "binary_root": "ثي", "root": "ثيخ", "words": ["ثيخ", "ثيخَ"], "muajam_match": false}

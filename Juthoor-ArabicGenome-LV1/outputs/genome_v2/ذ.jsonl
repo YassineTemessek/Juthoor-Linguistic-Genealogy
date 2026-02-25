@@ -1,4 +1,4 @@
-{"bab": "ذ", "binary_root": "ذا", "root": "ذاب", "words": ["ذأب", "ذأَب", "ذَابَ"], "muajam_match": false}
+{"bab": "ذ", "binary_root": "ذا", "root": "ذاب", "words": ["ذأب", "ذأَب", "ذَابَ"], "muajam_match": true, "binary_root_meaning": "النفاذ والامتداد باندفاع وحِدّة", "axial_meaning": "امتدادٌ من الشيء إلى أعلى باندفاع", "added_letter": "ذأب", "quran_example": "الذئب - ﴿وَأَخَافُ أَن يَأْكُلَهُ الذِّئْبُ ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ذ", "binary_root": "ذا", "root": "ذات", "words": ["ذأت", "ذأَت", "ذات"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذا", "root": "ذاته", "words": ["ذَأَتَه"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذا", "root": "ذاج", "words": ["ذأج", "ذأَج", "ذَأجَ"], "muajam_match": false}
@@ -11,7 +11,7 @@
 {"bab": "ذ", "binary_root": "ذا", "root": "ذاف", "words": ["ذأف", "ذأُفٍّ", "ذافَ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذا", "root": "ذاقه", "words": ["ذاقَهُ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذا", "root": "ذال", "words": ["ذأل", "ذَأَلَ"], "muajam_match": false}
-{"bab": "ذ", "binary_root": "ذا", "root": "ذام", "words": ["ذأم", "مَذْءُومًا"], "muajam_match": false}
+{"bab": "ذ", "binary_root": "ذا", "root": "ذام", "words": ["ذأم", "مَذْءُومًا"], "muajam_match": true, "binary_root_meaning": "ضعف قدر المذءوم", "axial_meaning": "تحقير الشيء -تصغير حجمه", "added_letter": "ذأم", "quran_example": "مذءوما -﴿قَالَ اخْرُجْ مِنْهَا مَذْءُومًا مَّدْحُورًا ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ذ", "binary_root": "ذا", "root": "ذامه", "words": ["ذَأَمَهُ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذا", "root": "ذان", "words": ["ذأن"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذا", "root": "ذاهفه", "words": ["ذَاهِفَةٌ"], "muajam_match": false}
@@ -19,7 +19,7 @@
 {"bab": "ذ", "binary_root": "ذا", "root": "ذاي", "words": ["ذأى", "ذأي", "ذَأى"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذب", "root": "ذبا", "words": ["ذبأ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذب", "root": "ذبح", "words": ["أَا۟ذْبَحَ", "أَذْبَحُ", "تَذْبَحُ", "ذبح", "ذَبَحَ", "ذَبَحُ", "ذُبِحَ", "يُذَبِّحُ"], "muajam_match": true, "binary_root_meaning": "النفاذ والامتداد باندفاع وحِدّة", "axial_meaning": "شقٌّ يغور دقيقًا في جُرم ملتحم", "added_letter": "ذبح", "quran_example": "ذبح / يذبح - ﴿ فَذَبَحُوهَا وَمَا كَادُوا يَفْعَلُونَ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
-{"bab": "ذ", "binary_root": "ذب", "root": "ذبذب", "words": ["مُّذَبْذَبِينَ"], "muajam_match": false}
+{"bab": "ذ", "binary_root": "ذب", "root": "ذبذب", "words": ["مُّذَبْذَبِينَ"], "muajam_match": true, "binary_root_meaning": "النفاذ والامتداد باندفاع وحِدّة", "axial_meaning": "حادٌّ دقيق الحَرَم يسبق أو ينفذ باندفاع", "added_letter": "ذبب / ذبذب", "quran_example": "", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ذ", "binary_root": "ذب", "root": "ذبل", "words": ["ذبل", "ذَبَلَ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذب", "root": "ذبي", "words": ["ذبى", "ذبي"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذب", "root": "ذبيان", "words": ["ذُبْيانُ"], "muajam_match": false}
@@ -29,7 +29,7 @@
 {"bab": "ذ", "binary_root": "ذح", "root": "ذحمله", "words": ["ذَحْمَلَهُ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذخ", "root": "ذخر", "words": ["تَدَّخِرُ", "ذخر"], "muajam_match": true, "binary_root_meaning": "النفاذ والحفظ في الجوف", "axial_meaning": "حفظ الشيء في جوف أو ظرف زمنًا ممتدًا", "added_letter": "ذخر", "quran_example": "تدخرون - ﴿ وَمَا تَدَّخِرُونَ فِي بُيُوتِكُمْ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "خ", "letter2_meaning": "تخلخل مع جفاف أو غلظ", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ذ", "binary_root": "ذخ", "root": "ذخره", "words": ["ذَخَرَهُ"], "muajam_match": false}
-{"bab": "ذ", "binary_root": "ذر", "root": "ذرا", "words": ["ذرأ", "ذرأَ", "ذرا", "ذَرأ", "ذَرَأَ", "ذَرَأْ", "يَذْرَؤُ"], "muajam_match": false}
+{"bab": "ذ", "binary_root": "ذر", "root": "ذرا", "words": ["ذرأ", "ذرأَ", "ذرا", "ذَرأ", "ذَرَأَ", "ذَرَأْ", "يَذْرَؤُ"], "muajam_match": true, "binary_root_meaning": "النثر والنفاذ بدقة واسترسال", "axial_meaning": "نشر أشياء دقيقة ناشئة (من أثناء شيء)", "added_letter": "ذرأ", "quran_example": "ذرأكم -﴿قُلْ هُوَ الَّذِي ذَرَأَكُمْ فِي الْأَرْضِ وَإِلَيْهِ تُحْشَرُونَ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ذ", "binary_root": "ذر", "root": "ذرب", "words": ["ذرب", "ذَرِبَ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذر", "root": "ذرباطه", "words": ["ذِرْباطَةٌ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذر", "root": "ذرت", "words": ["ذَرَتِ"], "muajam_match": false}
@@ -39,11 +39,11 @@
 {"bab": "ذ", "binary_root": "ذر", "root": "ذرقط", "words": ["ذرقط", "ذَرْقَطَ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذر", "root": "ذرمت", "words": ["ذَرَمَتِ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذر", "root": "ذرمل", "words": ["ذرمل", "ذَرْمَلَ"], "muajam_match": false}
-{"bab": "ذ", "binary_root": "ذر", "root": "ذرو", "words": ["تَذْرُو", "ذرو", "ذَّٰرِيَٰتِ"], "muajam_match": false}
+{"bab": "ذ", "binary_root": "ذر", "root": "ذرو", "words": ["تَذْرُو", "ذرو", "ذَّٰرِيَٰتِ"], "muajam_match": true, "binary_root_meaning": "النثر والنفاذ بدقة واسترسال", "axial_meaning": "نفاذٌ إلى أعلى أو إلى الظاهر بامتدادٍ ما مع شيء من التجمع والدقة", "added_letter": "ذرو / ذرى", "quran_example": "تذروه - ﴿ كَمَاءٍ أَنزَلْنَاهُ مِنَ السَّمَاءِ فَاخْتَلَطَ بِهِ نَبَاتُ الْأَرْضِ فَأَصْبَحَ هَشِيمًا تَذْرُوهُ الرِّيَاحُ ۗ ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ذ", "binary_root": "ذر", "root": "ذرود", "words": ["ذرود", "ذِرْوَدٌ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذع", "root": "ذعته", "words": ["ذعَتَه"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذع", "root": "ذعجه", "words": ["ذَعَجَهُ"], "muajam_match": false}
-{"bab": "ذ", "binary_root": "ذع", "root": "ذعذع", "words": ["ذعذع", "ذَعْذَعَ"], "muajam_match": false}
+{"bab": "ذ", "binary_root": "ذع", "root": "ذعذع", "words": ["ذعذع", "ذَعْذَعَ"], "muajam_match": true, "binary_root_meaning": "التفرق والانقياد برقة", "axial_meaning": "تفرق الشيء أجزاء متصلة من ضعف أو رقة", "added_letter": "ذعع-ذعذع", "quran_example": "", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "ع", "letter2_meaning": "التحام على رقة مع حدة ما / رخاوة جرم ملتحم", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ذ", "binary_root": "ذع", "root": "ذعطه", "words": ["ذَعَطَهُ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذع", "root": "ذعقه", "words": ["ذَعَقَهُ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذع", "root": "ذعلفه", "words": ["ذَعْلَفَه"], "muajam_match": false}
@@ -58,7 +58,7 @@
 {"bab": "ذ", "binary_root": "ذل", "root": "ذلج", "words": ["ذلج", "ذَلَجَ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذل", "root": "ذلغت", "words": ["ذَلِغَتْ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذل", "root": "ذلق", "words": ["ذلق", "ذَلَقَ"], "muajam_match": false}
-{"bab": "ذ", "binary_root": "ذل", "root": "ذلل", "words": ["تَذْلِيلًا", "تُذِلُّ", "ذلل", "ذَلَّلْ", "ذُلِّلَتْ", "نَّذِلَّ"], "muajam_match": false}
+{"bab": "ذ", "binary_root": "ذل", "root": "ذلل", "words": ["تَذْلِيلًا", "تُذِلُّ", "ذلل", "ذَلَّلْ", "ذُلِّلَتْ", "نَّذِلَّ"], "muajam_match": true, "binary_root_meaning": "النقص والانخفاض والتيسير", "axial_meaning": "نقص ارتفاع الشيء؛ فيقرب ويتيسر التعامل معه", "added_letter": "ذلل-ذلذل", "quran_example": "ذلولا / الذلة -﴿هُوَ الَّذِي جَعَلَ لَكُمُ الْأَرْضَ ذَلُولًا ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ذ", "binary_root": "ذل", "root": "ذلي", "words": ["ذلى", "ذلي"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذم", "root": "ذما", "words": ["ذمأ", "ذَمَأَ"], "muajam_match": false}
 {"bab": "ذ", "binary_root": "ذم", "root": "ذمت", "words": ["ذمت", "ذَمَتَ"], "muajam_match": false}

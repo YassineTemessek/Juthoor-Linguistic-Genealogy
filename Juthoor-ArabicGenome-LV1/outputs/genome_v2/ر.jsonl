@@ -2,17 +2,17 @@
 {"bab": "ر", "binary_root": "را", "root": "رابل", "words": ["رأبل", "رأَبل"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راج", "words": ["راجَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راخ", "words": ["راخَ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "را", "root": "راد", "words": ["رأد", "رأَد", "راد"], "muajam_match": false}
+{"bab": "ر", "binary_root": "را", "root": "راد", "words": ["رأد", "رأَد", "راد"], "muajam_match": true, "binary_root_meaning": "التراكم المترتب على صدّ الشيء المسترسل", "axial_meaning": "تثني الشيء من طراءته، أو حداثته؛ فلا يَصْلُبُ، ولا يشتد", "added_letter": "رأد", "quran_example": "﴿فَمَهِّلِ الْكَافِرِينَ أَمْهِلْهُمْ رُوَيْدًا﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "را", "root": "رارا", "words": ["رأرأ", "رَأرَأ", "رَأْرَأَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راز", "words": ["رأز", "راز"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "رازه", "words": ["رازَهُ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "را", "root": "راس", "words": ["رأس", "رأَس", "راسَ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "را", "root": "راس", "words": ["رأس", "رأَس", "راسَ"], "muajam_match": true, "binary_root_meaning": "النفاذ بامتداد", "axial_meaning": "الطرف الجامع لقوام الشيء في أعلاه أو مقدمه", "added_letter": "رأس", "quran_example": "﴿لَتَدْخُلُنَّ الْمَسْجِدَ الْحَرَامَ إِن شَاءَ اللَّهُ ءَامِنِينَ مُحَلِّقِينَ رُءُوسَكُمْ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "را", "root": "راش", "words": ["رأش"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راص", "words": ["راصَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راط", "words": ["رَاطَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راع", "words": ["راع", "راعَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راغ", "words": ["راغَ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "را", "root": "راف", "words": ["رأف", "رأُفٍّ", "رَأْفٌ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "را", "root": "راف", "words": ["رأف", "رأُفٍّ", "رَأْفٌ"], "muajam_match": true, "binary_root_meaning": "الامتداد أو الطرفية مع رقة أو رخاوة", "axial_meaning": "الرحمة والرقة", "added_letter": "رأف", "quran_example": "﴿وَلَا تَأْخُذْكُم بِهِمَا رَأْفَةٌ فِي دِينِ اللَّهِ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "را", "root": "رال", "words": ["رأل"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "رام", "words": ["رأم"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "ران", "words": ["رأن"], "muajam_match": false}
@@ -20,7 +20,7 @@
 {"bab": "ر", "binary_root": "را", "root": "رانه", "words": ["رَأنَّهُ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راه", "words": ["راهَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "را", "root": "راو", "words": ["رأو"], "muajam_match": false}
-{"bab": "ر", "binary_root": "را", "root": "راي", "words": ["أَرَى", "أَرَىٰ", "أَرَىٰكَ", "أَرَيْ", "أَرُ", "أَرِ", "أُرِي", "أُو۟رِي", "تَرَ", "تَرَآءَتِ", "تَرَوُ", "تَرَى", "تَرَىٰ", "تَرَىٰٓ", "تَرَيِ", "تَرَٰٓءَا", "تُرِيَ", "رأى", "رأي", "رَءَا", "رَءَآ", "رَءَيْ", "رَأَ", "رَأَتْ", "رَأَىٰ", "رَأَىٰٓ", "رَأَيْ", "رِئَآءَ", "رَّءَا", "نَرَى", "نَرَىٰ", "نُرِىَ", "نُرِىٓ", "نُرِي", "نُرِيَ", "نُّرِيَ", "يَرَ", "يَرَى", "يَرَىٰ", "يَرَىٰٓ", "يُرَ", "يُرَآءُ", "يُرَىٰ", "يُرَىٰٓ", "يُرِي", "يُرِيَ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "را", "root": "راي", "words": ["أَرَى", "أَرَىٰ", "أَرَىٰكَ", "أَرَيْ", "أَرُ", "أَرِ", "أُرِي", "أُو۟رِي", "تَرَ", "تَرَآءَتِ", "تَرَوُ", "تَرَى", "تَرَىٰ", "تَرَىٰٓ", "تَرَيِ", "تَرَٰٓءَا", "تُرِيَ", "رأى", "رأي", "رَءَا", "رَءَآ", "رَءَيْ", "رَأَ", "رَأَتْ", "رَأَىٰ", "رَأَىٰٓ", "رَأَيْ", "رِئَآءَ", "رَّءَا", "نَرَى", "نَرَىٰ", "نُرِىَ", "نُرِىٓ", "نُرِي", "نُرِيَ", "نُّرِيَ", "يَرَ", "يَرَى", "يَرَىٰ", "يَرَىٰٓ", "يُرَ", "يُرَآءُ", "يُرَىٰ", "يُرَىٰٓ", "يُرِي", "يُرِيَ"], "muajam_match": true, "binary_root_meaning": "نفاذ شيء لطيف أو خفي من حيز إلى آخر", "axial_meaning": "لحظ العين الشيء حال اتجاهها إليه", "added_letter": "رأى", "quran_example": "﴿لَقَدْ رَأَى مِنْ ءَايَاتِ رَبِّهِ الْكُبْرَى﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "أ", "letter2_meaning": "—", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رب", "root": "ربا", "words": ["ربأ", "ربا", "رَبَا"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رب", "root": "ربتس", "words": ["ربتس", "رَبْتَسٌ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رب", "root": "ربح", "words": ["ربح", "رَبحَ", "رَبِحَت"], "muajam_match": true, "binary_root_meaning": "الاستغلاظ وما إليه من تماسك وتجمع", "axial_meaning": "زيادة تتولّد عن الشيء من جنسه بجهد ما", "added_letter": "ربح", "quran_example": "﴿أُوْلَئِكَ الَّذِينَ اشْتَرَوُا الضَّلَالَةَ بِالْهُدَى فَمَا رَبِحَت تِّجَارَتُهُمْ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "استرسال مع تماسك ما"}
@@ -33,8 +33,8 @@
 {"bab": "ر", "binary_root": "رب", "root": "ربع", "words": ["أَرْبَعِينَ", "ربع"], "muajam_match": true, "binary_root_meaning": "الاستغلاظ وما إليه من تماسك وتجمع", "axial_meaning": "التئام الشيء متجمعًا متناسب الأبعاد مع عدم انتشاره", "added_letter": "ربع", "quran_example": "﴿وَقَدَّرَ فِيهَا أَقْوَاتَهَا فِي أَرْبَعَةِ أَيَّامٍ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رب", "root": "ربغ", "words": ["ربغ", "رَبَغَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رب", "root": "ربكه", "words": ["رَبَكَهُ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رب", "root": "ربو", "words": ["أَرْبَىٰ", "ربو", "رَبَتْ", "رَبَّيَ", "رَّابِيًا", "رَّابِيَةً", "نُرَبِّ", "يَرْبُوا۟", "يَرْبُوَا۟", "يُرْبِى"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رب", "root": "ربي", "words": ["ربى", "ربي"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رب", "root": "ربو", "words": ["أَرْبَىٰ", "ربو", "رَبَتْ", "رَبَّيَ", "رَّابِيًا", "رَّابِيَةً", "نُرَبِّ", "يَرْبُوا۟", "يَرْبُوَا۟", "يُرْبِى"], "muajam_match": true, "binary_root_meaning": "الاستغلاظ وما إليه من تماسك وتجمع", "axial_meaning": "نمو الشيء مستغلظًا مرتفعًا", "added_letter": "ربو - ربى", "quran_example": "﴿وَقُل رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "استرسال مع تماسك ما"}
+{"bab": "ر", "binary_root": "رب", "root": "ربي", "words": ["ربى", "ربي"], "muajam_match": true, "binary_root_meaning": "الاستغلاظ وما إليه من تماسك وتجمع", "axial_meaning": "نمو الشيء مستغلظًا مرتفعًا", "added_letter": "ربو - ربى", "quran_example": "﴿وَقُل رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رت", "root": "رتا", "words": ["رتأ", "رتا", "رَتَأَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رت", "root": "رتاه", "words": ["رَتاهُ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رت", "root": "رتب", "words": ["رتب", "رَتَبَ"], "muajam_match": false}
@@ -47,9 +47,9 @@
 {"bab": "ر", "binary_root": "رث", "root": "رثد", "words": ["رثد", "رَثَدَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رث", "root": "رثط", "words": ["رثط", "رَثَطَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رث", "root": "رثي", "words": ["رثى", "رثي"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رج", "root": "رجا", "words": ["رجأ", "رجا"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رج", "root": "رجا", "words": ["رجأ", "رجا"], "muajam_match": true, "binary_root_meaning": "الاضطراب المادي، أي اضطراب الجِرْم وتردده", "axial_meaning": "تأخّرُ المُقبل مسافةً ما - أو تأخيره", "added_letter": "رجأ", "quran_example": "﴿تُرْجِي مَن تَشَاءُ مِنْهُنَّ وَتُئْوِي إِلَيْكَ مَن تَشَاءُ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ج", "letter2_meaning": "تجمع هش مع حدة ما", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رج", "root": "رجب", "words": ["رجب", "رَجَب", "رَجِبَ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رج", "root": "رجج", "words": ["رجج", "رَجًّا", "رُجَّتِ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رج", "root": "رجج", "words": ["رجج", "رَجًّا", "رُجَّتِ"], "muajam_match": true, "binary_root_meaning": "الاضطراب المادي، أي اضطراب الجِرْم وتردده", "axial_meaning": "اضطراب الجرم (المتجمع) من رخاوته", "added_letter": "رجج - رجرج", "quran_example": "﴿إِذَا رُجَّتِ الْأَرْضُ رَجًّا﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ج", "letter2_meaning": "تجمع هش مع حدة ما", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رج", "root": "رجح", "words": ["رجح", "رَجَحَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رج", "root": "رجد", "words": ["رجد", "رُجِدَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رج", "root": "رجست", "words": ["رَجَسَتِ"], "muajam_match": false}
@@ -67,7 +67,7 @@
 {"bab": "ر", "binary_root": "رخ", "root": "رخان", "words": ["رَخانُ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رخ", "root": "رخبز", "words": ["رخبز", "رَخْبَزٌ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رخ", "root": "رخج", "words": ["رخج", "رخَج"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رخ", "root": "رخخ", "words": ["رخخ", "رخَخَ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رخ", "root": "رخخ", "words": ["رخخ", "رخَخَ"], "muajam_match": true, "binary_root_meaning": "طراءة الشيء المتجسم لتندى أثنائه", "axial_meaning": "رخاوة الشيء لكثرة الندى والرطوبة في أثناء جوفه", "added_letter": "رخخ -رخرخ", "quran_example": "", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "خ", "letter2_meaning": "تخلخل مع جفاف أو غلظ", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رخ", "root": "رخد", "words": ["رخد", "رخَد"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رخ", "root": "رخس", "words": ["رخَس"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رخ", "root": "رخش", "words": ["رخَش", "رَخْشٍ"], "muajam_match": false}
@@ -75,8 +75,8 @@
 {"bab": "ر", "binary_root": "رخ", "root": "رخف", "words": ["رخف", "رخَف"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رخ", "root": "رخل", "words": ["رخل", "رخَل"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رخ", "root": "رخم", "words": ["رخم", "رخَم"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رخ", "root": "رخو", "words": ["رخو", "رخَو"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رد", "root": "ردا", "words": ["ردأ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رخ", "root": "رخو", "words": ["رخو", "رخَو"], "muajam_match": true, "binary_root_meaning": "طراءة الشيء المتجسم لتندى أثنائه", "axial_meaning": "طراوة الشيء (المنتفخ) لتَنَدّي أثنائه وعَدَمِ جفافها واشتدادها", "added_letter": "رخو - رخى", "quran_example": "﴿فَسَخَّرْنَا لَهُ الرِّيحَ تَجْرِي بِأَمْرِهِ رُخَاءً حَيْثُ أَصَابَ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "خ", "letter2_meaning": "تخلخل مع جفاف أو غلظ", "bab_meaning": "استرسال مع تماسك ما"}
+{"bab": "ر", "binary_root": "رد", "root": "ردا", "words": ["ردأ"], "muajam_match": true, "binary_root_meaning": "التراكم المترتب على صدّ الشيء المسترسل", "axial_meaning": "دفع المرتفع الذي يُخْشَى سقوطه بقوة تجعله يتماسك ويتجمع", "added_letter": "ردأ", "quran_example": "﴿فَأَرْسِلْهُ مَعِيَ رِدْءًا يُصَدِّقُنِي﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رد", "root": "رداه", "words": ["رَداهُ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رد", "root": "ردج", "words": ["ردج", "رَدَجَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رد", "root": "ردح", "words": ["ردح", "رَدَحَ"], "muajam_match": false}
@@ -88,7 +88,7 @@
 {"bab": "ر", "binary_root": "رد", "root": "ردف", "words": ["ردف", "رَدِفَ", "رَّادِفَةُ", "مُرْدِفِينَ"], "muajam_match": true, "binary_root_meaning": "التراكم المترتب على صدّ الشيء المسترسل", "axial_meaning": "لحاق تجمع - أو كتلة - الشيء من خلفه، أو آخره", "added_letter": "ردف", "quran_example": "﴿فَاسْتَجَابَ لَكُمْ أَنِّي مُمِدُّكُم بِأَلْفٍ مِّنَ الْمَلَائِكَةِ مُرْدِفِينَ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رد", "root": "ردم", "words": ["ردم", "رَدَمَ"], "muajam_match": true, "binary_root_meaning": "التراكم المترتب على صدّ الشيء المسترسل", "axial_meaning": "تراكم مادة مناسبة في ثلمة - أو فجوة - حتى تُسَدَّ", "added_letter": "ردم", "quran_example": "﴿فَأَعِينُونِي بِقُوَّةٍ أَجْعَلْ بَيْنَكُمْ وَبَيْنَهُمْ رَدْمًا﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رد", "root": "رده", "words": ["رده", "رَدَّهُ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رد", "root": "ردي", "words": ["أَرْدَىٰ", "تَرَدَّىٰٓ", "تَرْدَىٰ", "تُرْدِي", "ردى", "ردي", "رَدَى", "مُتَرَدِّيَةُ", "يُرْدُ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رد", "root": "ردي", "words": ["أَرْدَىٰ", "تَرَدَّىٰٓ", "تَرْدَىٰ", "تُرْدِي", "ردى", "ردي", "رَدَى", "مُتَرَدِّيَةُ", "يُرْدُ"], "muajam_match": true, "binary_root_meaning": "التراكم المترتب على صدّ الشيء المسترسل", "axial_meaning": "صدم بشدة وثقل عظيمين", "added_letter": "ردى", "quran_example": "﴿فَلَا يَصُدَّنَّكَ عَنْهَا مَن لَّا يُؤْمِنُ بِهَا وَاتَّبَعَ هَوَيْهُ فَتَرْدَى﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رذ", "root": "رذان", "words": ["رَذانٌ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رذ", "root": "رذم", "words": ["رذم", "رَذَمَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رذ", "root": "رذي", "words": ["رذى", "رذي"], "muajam_match": false}
@@ -120,7 +120,7 @@
 {"bab": "ر", "binary_root": "رص", "root": "رصخ", "words": ["رصخ", "رصخَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رص", "root": "رصد", "words": ["إِرْصَادًا", "رصد"], "muajam_match": true, "binary_root_meaning": "الالتحام بغلظ أو متانة", "axial_meaning": "لزوم مكان للترقب مع تحفز للأخذ، أو الإصابة", "added_letter": "رصد", "quran_example": "﴿فَإِنَّهُ يَسْلُكُ مِن بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِ رَصَدًا﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ص", "letter2_meaning": "نفاذ بغلظ وقوة وخلوص", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رص", "root": "رصده", "words": ["رَصَدَهُ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رص", "root": "رصص", "words": ["رصص", "مَّرْصُوصٌ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رص", "root": "رصص", "words": ["رصص", "مَّرْصُوصٌ"], "muajam_match": true, "binary_root_meaning": "الالتحام بغلظ أو متانة", "axial_meaning": "التحام المادة (اللينة) مع غِلَظ وقوة", "added_letter": "رصص - رصرص", "quran_example": "﴿صَفًّا كَأَنَّهُم بُنْيَانٌ مَّرْصُوصٌ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ص", "letter2_meaning": "نفاذ بغلظ وقوة وخلوص", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رص", "root": "رصغ", "words": ["رصغ", "رصِغ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رص", "root": "رصنه", "words": ["رَصَنَهُ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رص", "root": "رصه", "words": ["رَصَّهُ"], "muajam_match": false}
@@ -130,8 +130,8 @@
 {"bab": "ر", "binary_root": "رض", "root": "رضد", "words": ["رضد", "رَضَدَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رض", "root": "رضع", "words": ["أَرْضَعَتْ", "أَرْضَعْ", "أَرْضِعِ", "تَسْتَرْضِعُ", "تُرْضِعُ", "رضع", "رَضِعَ", "مُرْضِعَةٍ", "يُرْضِعْ"], "muajam_match": true, "binary_root_meaning": "تضخم الجرم مع رخاوة باطنه", "axial_meaning": "مص اللبن – أو المائع - إلى الباطن من كتلة رخوة كالضرع", "added_letter": "رضع", "quran_example": "﴿وَأُمَّهَاتُكُمُ اللَّاتِي أَرْضَعْنَكُمْ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ض", "letter2_meaning": "ضغط بكثافة وغلظ", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رض", "root": "رضم", "words": ["رضم", "رَضَمَ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رض", "root": "رضو", "words": ["تَرَاضٍ", "تَرَٰضَ", "تَرَٰضَيْ", "تَرْضَ", "تَرْضَىٰ", "تَرْضَىٰٓ", "رضو", "رَاضِيَةً", "رَاضِيَةٌ", "رَضُ", "رَضِىَ", "رَضِي", "رَّاضِيَةٍ", "رَّضِىَ", "مَرْضَاتَ", "مَرْضَاتِ", "مَرْضِيًّا", "مَّرْضِيَّةً", "يَرْضَ", "يَرْضَىٰ", "يَرْضَىٰٓ", "يَرْضَيْ", "يُرْضُ", "ٱرْتَضَىٰ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رض", "root": "رضي", "words": ["رضي", "رَضِي", "رَضِيَ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رض", "root": "رضو", "words": ["تَرَاضٍ", "تَرَٰضَ", "تَرَٰضَيْ", "تَرْضَ", "تَرْضَىٰ", "تَرْضَىٰٓ", "رضو", "رَاضِيَةً", "رَاضِيَةٌ", "رَضُ", "رَضِىَ", "رَضِي", "رَّاضِيَةٍ", "رَّضِىَ", "مَرْضَاتَ", "مَرْضَاتِ", "مَرْضِيًّا", "مَّرْضِيَّةً", "يَرْضَ", "يَرْضَىٰ", "يَرْضَىٰٓ", "يَرْضَيْ", "يُرْضُ", "ٱرْتَضَىٰ"], "muajam_match": true, "binary_root_meaning": "تضخم الجرم مع رخاوة باطنه", "axial_meaning": "تشبع النفس وامتلاؤها بلالًا ورقة نحو شيء", "added_letter": "رضو - رضى", "quran_example": "﴿وَالَّذِينَ اتَّبَعُوهُم بِإِحْسَانٍ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ض", "letter2_meaning": "ضغط بكثافة وغلظ", "bab_meaning": "استرسال مع تماسك ما"}
+{"bab": "ر", "binary_root": "رض", "root": "رضي", "words": ["رضي", "رَضِي", "رَضِيَ"], "muajam_match": true, "binary_root_meaning": "تضخم الجرم مع رخاوة باطنه", "axial_meaning": "تشبع النفس وامتلاؤها بلالًا ورقة نحو شيء", "added_letter": "رضو - رضى", "quran_example": "﴿وَالَّذِينَ اتَّبَعُوهُم بِإِحْسَانٍ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ض", "letter2_meaning": "ضغط بكثافة وغلظ", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رط", "root": "رطا", "words": ["رطأ", "رطا", "رَطا", "رَطَأَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رط", "root": "رطعها", "words": ["رَطَعَها"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رط", "root": "رطمه", "words": ["رَطَمَه"], "muajam_match": false}
@@ -144,7 +144,7 @@
 {"bab": "ر", "binary_root": "رع", "root": "رعظ", "words": ["رعظ", "رُعْظُ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رع", "root": "رعف", "words": ["رعف", "رَعَفَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رع", "root": "رعله", "words": ["رَعَلَهُ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رع", "root": "رعي", "words": ["رعى", "رعي", "رَعَ", "رَٰعُونَ", "رَٰعِ", "رِعَايَتِ", "رِّعَآءُ", "ٱرْعَ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رع", "root": "رعي", "words": ["رعى", "رعي", "رَعَ", "رَٰعُونَ", "رَٰعِ", "رِعَايَتِ", "رِّعَآءُ", "ٱرْعَ"], "muajam_match": true, "binary_root_meaning": "(الامتداد) مع رقة أو رخاوة", "axial_meaning": "ما تَغْتَذِي به الماشية من نبات غضّ طري فيحفظ حياتها", "added_letter": "رعى", "quran_example": "﴿وَالَّذِينَ هُمْ لِأَمَانَاتِهِمْ وَعَهْدِهِمْ رَاعُونَ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ع", "letter2_meaning": "التحام على رقة مع حدة ما / رخاوة جرم ملتحم", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رغ", "root": "رغا", "words": ["رغا", "رَغَا"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رغ", "root": "رغاط", "words": ["رُغاطٌ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رغ", "root": "رغب", "words": ["تَرْغَبُ", "رغب", "رَاغِبٌ", "رَغِبَ", "رَٰغِبُونَ", "يَرْغَبُ", "ٱرْغَب"], "muajam_match": true, "binary_root_meaning": "طبقة رخوة مع كثافة ما", "axial_meaning": "قَبولُ الجُوفِ رِخوا مُسْتَحَبًّا بكثرة، أو غزارة", "added_letter": "رغب", "quran_example": "﴿إِنَّا إِلَى اللَّهِ رَاغِبُونَ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "غ", "letter2_meaning": "تخلخل مع شيء من رخاوة وكثافة", "bab_meaning": "استرسال مع تماسك ما"}
@@ -166,7 +166,7 @@
 {"bab": "ر", "binary_root": "رق", "root": "رقز", "words": ["رقز", "رَقَزَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رق", "root": "رقص", "words": ["رقص", "رَقَصَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رق", "root": "رقم", "words": ["رقم", "رَقَمَ", "مَّرْقُومٌ"], "muajam_match": true, "binary_root_meaning": "الانبساط مع الرقة", "axial_meaning": "تميز بقعة محدودة السعة على ظاهر واسع", "added_letter": "رقم", "quran_example": "﴿كِتَابٌ مَّرْقُومٌ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "استرسال مع تماسك ما"}
-{"bab": "ر", "binary_root": "رق", "root": "رقي", "words": ["تَرْقَىٰ", "رقى", "رقي", "رَاقٍ", "رَقِيَ", "يَرْتَقُ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رق", "root": "رقي", "words": ["تَرْقَىٰ", "رقى", "رقي", "رَاقٍ", "رَقِيَ", "يَرْتَقُ"], "muajam_match": true, "binary_root_meaning": "الانبساط مع الرقة", "axial_meaning": "ارتفاع بلطف - أو رفق، أي قلة نتوء", "added_letter": "رقو - رقى", "quran_example": "﴿فَلْيَرْتَقُوا فِي الْأَسْبَابِ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رك", "root": "ركب", "words": ["تَرْكَبُ", "ركب", "رَكِبَ", "رَكِبُ", "رَكَّبَ", "مُّتَرَاكِبًا", "يَرْكَبُ", "ٱرْكَب", "ٱرْكَبُ"], "muajam_match": true, "binary_root_meaning": "التجمع مع قلة الكثافة والتماسك", "axial_meaning": "استعلاء للاحتمال مع حركة مُيَسَّرة", "added_letter": "ركب", "quran_example": "﴿وَجَعَلَ لَكُم مِّنَ الْفُلْكِ وَالْأَنْعَامِ مَا تَرْكَبُونَ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ك", "letter2_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رك", "root": "ركبه", "words": ["رَكِبَهُ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رك", "root": "ركح", "words": ["ركح", "رَكَحَ"], "muajam_match": false}
@@ -206,10 +206,10 @@
 {"bab": "ر", "binary_root": "رو", "root": "روت", "words": ["رَوَت"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رو", "root": "روث", "words": ["روث", "رَوْث"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رو", "root": "روج", "words": ["روج", "روَج"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رو", "root": "روح", "words": ["تُرِيحُ", "روح"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رو", "root": "روح", "words": ["تُرِيحُ", "روح"], "muajam_match": true, "binary_root_meaning": "الاتساع والانبساط مع نوع من الرقة", "axial_meaning": "انبساط - أو اتساع وانتشار - مع شمول ولطفٍ ما", "added_letter": "روح - ريح", "quran_example": "﴿فَرَوْحٌ وَرَيْحَانٌ وَجَنَّتُ نَعِيمٍ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ح", "letter2_meaning": "احتكاك بعرض وجفاف في الباطن", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رو", "root": "رود", "words": ["أَرَادَ", "أَرَادُ", "أَرَد", "أَرَدْ", "أُرِيدَ", "أُرِيدُ", "تُرَٰوِدُ", "تُرِدْ", "تُرِيدُ", "رود", "رَود", "رَٰوَد", "رَٰوَدَتْ", "رَٰوَدُ", "نُرَٰوِدُ", "نُرِيدُ", "نُّرِيدُ", "يُرَادُ", "يُرِدِ", "يُرِدْ", "يُرِيدَ", "يُرِيدُ"], "muajam_match": true, "binary_root_meaning": "التراكم المترتب على صدّ الشيء المسترسل", "axial_meaning": "حركة انتقال - أو تردد - بخفة وعدم ثبات واستقرار", "added_letter": "رود", "quran_example": "﴿وَرَاوَدَتْهُ الَّتِي هُوَ فِي بَيْتِهَا عَن نَّفْسِهِ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رو", "root": "روذس", "words": ["روذس", "رُوذِسُ"], "muajam_match": false}
-{"bab": "ر", "binary_root": "رو", "root": "روغ", "words": ["روغ", "رَاغَ"], "muajam_match": false}
+{"bab": "ر", "binary_root": "رو", "root": "روغ", "words": ["روغ", "رَاغَ"], "muajam_match": true, "binary_root_meaning": "طبقة رخوة مع كثافة ما", "axial_meaning": "تقلب وتحول - أو تقليب وتحويل - يُقْصَد به شمول التغطّي برخو متسيّب", "added_letter": "روغ - ريغ", "quran_example": "﴿فَرَاغَ إِلَى أَهْلِهِ فَجَاءَ بِعِجْلٍ سَمِينٍ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "غ", "letter2_meaning": "تخلخل مع شيء من رخاوة وكثافة", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ر", "binary_root": "رو", "root": "رومانس", "words": ["رُومانِسُ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "رو", "root": "روي", "words": ["روى", "روي", "رَوِيَ", "رُوِيَ"], "muajam_match": false}
 {"bab": "ر", "binary_root": "ري", "root": "ريا", "words": ["ريأ", "ريا"], "muajam_match": false}

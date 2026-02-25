@@ -1,4 +1,4 @@
-{"bab": "د", "binary_root": "دا", "root": "داب", "words": ["دأب", "دأَب", "دأَبَ", "دَابَ", "دَآئِبَيْنِ"], "muajam_match": false}
+{"bab": "د", "binary_root": "دا", "root": "داب", "words": ["دأب", "دأَب", "دأَبَ", "دَابَ", "دَآئِبَيْنِ"], "muajam_match": true, "binary_root_meaning": "الثقل أو الضغط والحركة البطيئة، ويلزمها التخلف", "axial_meaning": "الاستمرار في إتيان الشيء بجد ودفع يمنع الفتور", "added_letter": "دأب", "quran_example": "﴿قَالَ تَزْرَعُونَ سَبْعَ سِنِينَ دَأَبًا﴾", "letter1": "دب", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دا", "root": "دات", "words": ["دأَت"], "muajam_match": false}
 {"bab": "د", "binary_root": "دا", "root": "داث", "words": ["دأث", "دأَث"], "muajam_match": false}
 {"bab": "د", "binary_root": "دا", "root": "داج", "words": ["داجَ"], "muajam_match": false}
@@ -63,13 +63,13 @@
 {"bab": "د", "binary_root": "دح", "root": "دحمل", "words": ["دحمل", "دحْمَلَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دح", "root": "دحمه", "words": ["دَحَمَهُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دح", "root": "دحن", "words": ["دحن", "دحِنَ"], "muajam_match": false}
-{"bab": "د", "binary_root": "دح", "root": "دحو", "words": ["دحو", "دَحَىٰ"], "muajam_match": false}
-{"bab": "د", "binary_root": "دح", "root": "دحي", "words": ["دحى", "دحي"], "muajam_match": false}
+{"bab": "د", "binary_root": "دح", "root": "دحو", "words": ["دحو", "دَحَىٰ"], "muajam_match": true, "binary_root_meaning": "الضغط القوي على الشيء", "axial_meaning": "بسط الشيء بسطاً جزئياً بنحو الضغط مع كفّ أطرافه", "added_letter": "دحو - دحي", "quran_example": "﴿وَالْأَرْضَ بَعْدَ ذَلِكَ دَحَاهَا﴾", "letter1": "دح", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
+{"bab": "د", "binary_root": "دح", "root": "دحي", "words": ["دحى", "دحي"], "muajam_match": true, "binary_root_meaning": "الضغط القوي على الشيء", "axial_meaning": "بسط الشيء بسطاً جزئياً بنحو الضغط مع كفّ أطرافه", "added_letter": "دحو - دحي", "quran_example": "﴿وَالْأَرْضَ بَعْدَ ذَلِكَ دَحَاهَا﴾", "letter1": "دح", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دح", "root": "دحيت", "words": ["دَحَيْتُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دخ", "root": "دخبش", "words": ["دخبش", "دخَبش", "دَخْبَشٌ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دخ", "root": "دختنس", "words": ["دختنس", "دخَتنس"], "muajam_match": false}
 {"bab": "د", "binary_root": "دخ", "root": "دختنوس", "words": ["دَخْتَنوُس", "دَخْتَنُوسُ"], "muajam_match": false}
-{"bab": "د", "binary_root": "دخ", "root": "دخخ", "words": ["دخخ", "دخَخَ"], "muajam_match": false}
+{"bab": "د", "binary_root": "دخ", "root": "دخخ", "words": ["دخخ", "دخَخَ"], "muajam_match": true, "binary_root_meaning": "تخلخل مادة الشيء وأثنائه", "axial_meaning": "تخلل أثناء الشيء المنتشر وخفة كثافته", "added_letter": "دخخ - دخدخ", "quran_example": "", "letter1": "دخ", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دخ", "root": "دخر", "words": ["دخر", "دخَر", "دَاخِرِينَ", "دَخَرَ", "دَٰخِرُونَ", "دَٰخِرِينَ"], "muajam_match": true, "binary_root_meaning": "تخلخل مادة الشيء وأثنائه", "axial_meaning": "تغلغل الضعف والرخاوة في الشخص فلا يكون فيه شدة", "added_letter": "دخر", "quran_example": "﴿سَيَدْخُلُونَ جَهَنَّمَ دَاخِرِينَ﴾", "letter1": "دخ", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دخ", "root": "دخرش", "words": ["دخَرش", "دَخْرَشٌ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دخ", "root": "دخرص", "words": ["دخرص", "دخَرص", "دَخْرَصَ"], "muajam_match": false}
@@ -88,7 +88,7 @@
 {"bab": "د", "binary_root": "دخ", "root": "دخنس", "words": ["دخنس", "دخَنس"], "muajam_match": false}
 {"bab": "د", "binary_root": "دخ", "root": "دخنش", "words": ["دخَنش"], "muajam_match": false}
 {"bab": "د", "binary_root": "دخ", "root": "دخي", "words": ["دخي", "دخَي"], "muajam_match": false}
-{"bab": "د", "binary_root": "در", "root": "درا", "words": ["درأ", "دَرأ", "يَدْرَءُ", "يَدْرَؤُا۟", "ٱدَّٰرَْٰٔ", "ٱدْرَءُ"], "muajam_match": false}
+{"bab": "د", "binary_root": "در", "root": "درا", "words": ["درأ", "دَرأ", "يَدْرَءُ", "يَدْرَؤُا۟", "ٱدَّٰرَْٰٔ", "ٱدْرَءُ"], "muajam_match": true, "binary_root_meaning": "الجريان باسترسال، أو الامتداد بتوال", "axial_meaning": "دفع أو اندفاع بقوة عظيمة بلا صد", "added_letter": "درأ", "quran_example": "﴿وَيَدْرَءُونَ بِالْحَسَنَةِ السَّيِّئَةَ﴾", "letter1": "در", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "در", "root": "دراه", "words": ["دَرَأَهُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "در", "root": "دربا", "words": ["دربأ"], "muajam_match": false}
 {"bab": "د", "binary_root": "در", "root": "دربج", "words": ["دربج", "دَرْبَجَ"], "muajam_match": false}
@@ -104,7 +104,7 @@
 {"bab": "د", "binary_root": "در", "root": "درخم", "words": ["درخم", "درخَم"], "muajam_match": false}
 {"bab": "د", "binary_root": "در", "root": "درخمل", "words": ["درخمل", "درخَمل"], "muajam_match": false}
 {"bab": "د", "binary_root": "در", "root": "درخميل", "words": ["دُّرَخْميل"], "muajam_match": false}
-{"bab": "د", "binary_root": "در", "root": "درر", "words": ["درر", "دُرَر"], "muajam_match": false}
+{"bab": "د", "binary_root": "در", "root": "درر", "words": ["درر", "دُرَر"], "muajam_match": true, "binary_root_meaning": "الجريان باسترسال، أو الامتداد بتوال", "axial_meaning": "جريان المائع ونحوه باندفاع واسترسال", "added_letter": "درر - دردر", "quran_example": "﴿يُرْسِلِ السَّمَاءَ عَلَيْكُم مِّدْرَارًا﴾", "letter1": "در", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "در", "root": "درس", "words": ["تَدْرُسُ", "درس", "دَرَسَ", "دَرَسُ", "دَرَسْ", "يَدْرُسُ"], "muajam_match": true, "binary_root_meaning": "الجريان باسترسال، أو الامتداد بتوال", "axial_meaning": "ذهاب جِدّةِ الشيء الفطرية وقوته بما يعتريه", "added_letter": "درس", "quran_example": "﴿وَبِمَا كُنتُمْ تَدْرُسُونَ﴾", "letter1": "در", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "در", "root": "درست", "words": ["درست", "دُرُسْتُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "در", "root": "درع", "words": ["درع", "دِرْعُ"], "muajam_match": false}
@@ -117,15 +117,15 @@
 {"bab": "د", "binary_root": "در", "root": "دره", "words": ["دره", "دَرَهَ"], "muajam_match": true, "binary_root_meaning": "الجريان باسترسال، أو الامتداد بتوال", "axial_meaning": "الاندفاع للمخالطة مفاجأة", "added_letter": "دره", "quran_example": "", "letter1": "در", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "در", "root": "درهم", "words": ["درهم", "دِرْهَمٌ"], "muajam_match": true, "binary_root_meaning": "الجريان باسترسال، أو الامتداد بتوال", "axial_meaning": "ذهاب ما به قوة الشيء من أثنائه مع بقاء ظاهره", "added_letter": "درهم", "quran_example": "﴿وَشَرَوْهُ بِثَمَنٍ بَخْسٍ دَرَاهِمَ مَعْدُودَةٍ﴾", "letter1": "در", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "در", "root": "دروليه", "words": ["دِرَوْلِيَةُ"], "muajam_match": false}
-{"bab": "د", "binary_root": "در", "root": "دري", "words": ["أَدْرَىٰ", "أَدْرِ", "أَدْرِى", "أَدْرِىٓ", "تَدْرُ", "تَدْرِى", "درى", "دري", "نَدْرِى", "نَدْرِىٓ", "يُدْرِي"], "muajam_match": false}
+{"bab": "د", "binary_root": "در", "root": "دري", "words": ["أَدْرَىٰ", "أَدْرِ", "أَدْرِى", "أَدْرِىٓ", "تَدْرُ", "تَدْرِى", "درى", "دري", "نَدْرِى", "نَدْرِىٓ", "يُدْرِي"], "muajam_match": true, "binary_root_meaning": "الجريان باسترسال، أو الامتداد بتوال", "axial_meaning": "تغلغل الشيء بدقة وقوة خلال جرم كثيف", "added_letter": "درى", "quran_example": "﴿لَا تَدْرُونَ أَيُّهُمْ أَقْرَبُ لَكُمْ نَفْعًا﴾", "letter1": "در", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "در", "root": "دريته", "words": ["دَرَيْتُه"], "muajam_match": false}
 {"bab": "د", "binary_root": "دز", "root": "دزق", "words": ["دزق", "دِزَقُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دز", "root": "دزماره", "words": ["دِزْمارَةُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دس", "root": "دسا", "words": ["دسا", "دَسا"], "muajam_match": false}
 {"bab": "د", "binary_root": "دس", "root": "دستوي", "words": ["دَسْتَوَى"], "muajam_match": false}
 {"bab": "د", "binary_root": "دس", "root": "دسس", "words": ["دسس", "يَدُسُّ"], "muajam_match": true, "binary_root_meaning": "النفاذ بدفع مع دقة أو حدة في أثناء شيء", "axial_meaning": "دفع الشيء في أثناء تراب حتى يغيب فيه", "added_letter": "دسس", "quran_example": "﴿أَيُمْسِكُهُ عَلَى هُونٍ أَمْ يَدُسُّهُ فِي التُّرَابِ﴾", "letter1": "دس", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
-{"bab": "د", "binary_root": "دس", "root": "دسو", "words": ["دسو", "دَسَّىٰ"], "muajam_match": false}
-{"bab": "د", "binary_root": "دس", "root": "دسي", "words": ["دسى", "دسي", "دَسَى"], "muajam_match": false}
+{"bab": "د", "binary_root": "دس", "root": "دسو", "words": ["دسو", "دَسَّىٰ"], "muajam_match": true, "binary_root_meaning": "النفاذ بدفع مع دقة أو حدة في أثناء شيء", "axial_meaning": "اختفاء الشيء باندساسه أو تواريه في كِنّ", "added_letter": "دسو - دسي", "quran_example": "﴿وَقَدْ خَابَ مَن دَسَّاهَا﴾", "letter1": "دس", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
+{"bab": "د", "binary_root": "دس", "root": "دسي", "words": ["دسى", "دسي", "دَسَى"], "muajam_match": true, "binary_root_meaning": "النفاذ بدفع مع دقة أو حدة في أثناء شيء", "axial_meaning": "اختفاء الشيء باندساسه أو تواريه في كِنّ", "added_letter": "دسو - دسي", "quran_example": "﴿وَقَدْ خَابَ مَن دَسَّاهَا﴾", "letter1": "دس", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دش", "root": "دشا", "words": ["دشا", "دَشا"], "muajam_match": false}
 {"bab": "د", "binary_root": "دش", "root": "دشن", "words": ["دشن", "دَشَنَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دع", "root": "دعانيم", "words": ["دَعانيمُ"], "muajam_match": false}
@@ -139,7 +139,7 @@
 {"bab": "د", "binary_root": "دع", "root": "دعسق", "words": ["دعسق", "دَعْسَقَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دع", "root": "دعسم", "words": ["دعسم", "دَعْسَمٌ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دع", "root": "دعشب", "words": ["دعشب", "دَعْشَبُ"], "muajam_match": false}
-{"bab": "د", "binary_root": "دع", "root": "دعع", "words": ["دعع", "دَعًّا", "يَدُعُّ", "يُدَعُّ"], "muajam_match": false}
+{"bab": "د", "binary_root": "دع", "root": "دعع", "words": ["دعع", "دَعًّا", "يَدُعُّ", "يُدَعُّ"], "muajam_match": true, "binary_root_meaning": "الدفع بضغط على رخو فيتداخل ويتجمع", "axial_meaning": "دفع الجرم الرخو بضغط فيكتنز ويتداخل", "added_letter": "دعع - دعدع", "quran_example": "﴿يَوْمَ يُدَعُّونَ إِلَى نَارِ جَهَنَّمَ دَعًّا﴾", "letter1": "دع", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دع", "root": "دعق", "words": ["دعق", "دَعَقَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دع", "root": "دعك", "words": ["دعك", "دَعَكَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دع", "root": "دعلج", "words": ["دعلج", "دعْلج"], "muajam_match": false}
@@ -159,7 +159,7 @@
 {"bab": "د", "binary_root": "دغ", "root": "دغمش", "words": ["دغمش", "دَغْمَشَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دغ", "root": "دغمهم", "words": ["دَغَمَهُمُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دغ", "root": "دغن", "words": ["دغن", "دَغَنَ"], "muajam_match": false}
-{"bab": "د", "binary_root": "دف", "root": "دفا", "words": ["دفأ", "دفا"], "muajam_match": false}
+{"bab": "د", "binary_root": "دف", "root": "دفا", "words": ["دفأ", "دفا"], "muajam_match": true, "binary_root_meaning": "الضغط من الظاهر أو إليه", "axial_meaning": "تراكم شعر أو دقاق بكثافة على ظاهر الشيء", "added_letter": "دفأ", "quran_example": "﴿وَالْأَنْعَامَ خَلَقَهَا لَكُمْ فِيهَا دِفْءٌ وَمَنَافِعُ﴾", "letter1": "دف", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دف", "root": "دفض", "words": ["دفض", "دَفَضَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دف", "root": "دفط", "words": ["دفط", "دَفَطَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دف", "root": "دفطس", "words": ["دفطس", "دَفْطَسَ"], "muajam_match": false}
@@ -193,7 +193,7 @@
 {"bab": "د", "binary_root": "دل", "root": "دلق", "words": ["دلق", "دَلَقَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دل", "root": "دلك", "words": ["دلك", "دُلُوكِ"], "muajam_match": true, "binary_root_meaning": "الامتداد (من أعلى) اتجاهاً إلى شيء أو مقر بقوة", "axial_meaning": "زوال غلظ الشيء أو حدته بنحو العرك فيلين", "added_letter": "دلك", "quran_example": "﴿أَقِمِ الصَّلَاةَ لِدُلُوكِ الشَّمْسِ﴾", "letter1": "دل", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دل", "root": "دلكه", "words": ["دَلَكَهُ"], "muajam_match": false}
-{"bab": "د", "binary_root": "دل", "root": "دلل", "words": ["أَدُلُّ", "دلل", "دَلَّ", "دَلَّىٰ", "نَدُلُّ"], "muajam_match": false}
+{"bab": "د", "binary_root": "دل", "root": "دلل", "words": ["أَدُلُّ", "دلل", "دَلَّ", "دَلَّىٰ", "نَدُلُّ"], "muajam_match": true, "binary_root_meaning": "الامتداد (من أعلى) اتجاهاً إلى شيء أو مقر بقوة", "axial_meaning": "الامتداد من أعلى إلى أسفل اتجاهاً إلى شيء بقوة", "added_letter": "دلل - دلدل", "quran_example": "﴿هَلْ أَدُلُّكُمْ عَلَى تِجَارَةٍ تُنجِيكُم مِّنْ عَذَابٍ أَلِيمٍ﴾", "letter1": "دل", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دل", "root": "دلم", "words": ["دلم", "دَلِمَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دل", "root": "دلنظ", "words": ["دلنظ", "دَلنظ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دل", "root": "دلو", "words": ["أَدْلَىٰ", "تَدَلَّىٰ", "تُدْلُ", "دلو"], "muajam_match": true, "binary_root_meaning": "الامتداد (من أعلى) اتجاهاً إلى شيء أو مقر بقوة", "axial_meaning": "امتداد الشيء إلى سفل بثقل محدود ليتصل بشيء", "added_letter": "دلو", "quran_example": "﴿فَدَلَّهُمَا بِغُرُورٍ﴾", "letter1": "دل", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
@@ -204,7 +204,7 @@
 {"bab": "د", "binary_root": "دم", "root": "دمحله", "words": ["دمْحَلَهُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دم", "root": "دمخ", "words": ["دمخ", "دمخَ", "دَمْخٌ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دم", "root": "دمخق", "words": ["دمخق", "دَمْخَقَ"], "muajam_match": false}
-{"bab": "د", "binary_root": "دم", "root": "دمدم", "words": ["دمدم", "دَمْدَمَ"], "muajam_match": false}
+{"bab": "د", "binary_root": "دم", "root": "دمدم", "words": ["دمدم", "دَمْدَمَ"], "muajam_match": true, "binary_root_meaning": "استواء الظاهر وبروزه كذلك", "axial_meaning": "تسوية ظاهر الشيء بما يشبه كبس الشقوق", "added_letter": "دمم - دمدم", "quran_example": "﴿فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنْبِهِمْ فَسَوَّاهَا﴾", "letter1": "دم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دم", "root": "دمر", "words": ["تَدْمِيرًا", "تُدَمِّرُ", "دمر", "دَمَّرَ", "دَمَّرْ"], "muajam_match": true, "binary_root_meaning": "استواء الظاهر وبروزه كذلك", "axial_meaning": "غشيان بفساد محيط", "added_letter": "دمر", "quran_example": "﴿تُدَمِّرُ كُلَّ شَيْءٍ بِأَمْرِ رَبِّهَا﴾", "letter1": "دم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دم", "root": "دمس", "words": ["دمس", "دَمَسَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دم", "root": "دمشق", "words": ["دمشق", "دِمِشْقُ"], "muajam_match": false}
@@ -243,7 +243,7 @@
 {"bab": "د", "binary_root": "ده", "root": "دهشم", "words": ["دهشم", "دَهْشَمٌ"], "muajam_match": false}
 {"bab": "د", "binary_root": "ده", "root": "دهع", "words": ["دهع", "دهـع"], "muajam_match": false}
 {"bab": "د", "binary_root": "ده", "root": "دهفه", "words": ["دَهَفَه"], "muajam_match": false}
-{"bab": "د", "binary_root": "ده", "root": "دهق", "words": ["دهق", "دَهَقَ"], "muajam_match": false}
+{"bab": "د", "binary_root": "ده", "root": "دهق", "words": ["دهق", "دَهَقَ"], "muajam_match": true, "binary_root_meaning": "الحدر أو الدفع في فراغ أو مهواة", "axial_meaning": "صب الشيء في فجوة بحيث ينضغط فيها", "added_letter": "دهق - دهدق", "quran_example": "﴿وَكَأْسًا دِهَاقًا﴾", "letter1": "دهـ", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "ده", "root": "دهك", "words": ["دهك", "دَهَكُ"], "muajam_match": false}
 {"bab": "د", "binary_root": "ده", "root": "دهلك", "words": ["دهلك", "دَهْلَكٌ"], "muajam_match": false}
 {"bab": "د", "binary_root": "ده", "root": "دهم", "words": ["دهم", "مُدْهَآمَّتَانِ"], "muajam_match": true, "binary_root_meaning": "الحدر أو الدفع في فراغ أو مهواة", "axial_meaning": "سواد أو كثيف معتم يغشى ظاهر الشيء", "added_letter": "دهم", "quran_example": "﴿مُدْهَامَّتَانِ﴾", "letter1": "دهـ", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
@@ -252,13 +252,13 @@
 {"bab": "د", "binary_root": "ده", "root": "دهمقه", "words": ["دَهْمَقَه"], "muajam_match": false}
 {"bab": "د", "binary_root": "ده", "root": "دهمن", "words": ["دهمن", "دَهْمَنٌ"], "muajam_match": false}
 {"bab": "د", "binary_root": "ده", "root": "دهن", "words": ["تُدْهِنُ", "دهن", "دَهَنَ", "مُّدْهِنُونَ", "يُدْهِنُ"], "muajam_match": true, "binary_root_meaning": "الحدر أو الدفع في فراغ أو مهواة", "axial_meaning": "مائع ذو لزوجة ينشأ بعسر ويلين به", "added_letter": "دهن", "quran_example": "﴿وَدُّوا لَوْ تُدْهِنُ فَيُدْهِنُونَ﴾", "letter1": "دهـ", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
-{"bab": "د", "binary_root": "ده", "root": "دهي", "words": ["دهى", "دهي"], "muajam_match": false}
+{"bab": "د", "binary_root": "ده", "root": "دهي", "words": ["دهى", "دهي"], "muajam_match": true, "binary_root_meaning": "الحدر أو الدفع في فراغ أو مهواة", "axial_meaning": "جرف الشيء المجوف كثيراً يندفع فيه بقوة", "added_letter": "دهى", "quran_example": "﴿وَالسَّاعَةُ أَدْهَى وَأَمَرُّ﴾", "letter1": "دهـ", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دو", "root": "دوا", "words": ["دوأ", "دوا"], "muajam_match": false}
 {"bab": "د", "binary_root": "دو", "root": "دوج", "words": ["دوج", "دوَج"], "muajam_match": false}
-{"bab": "د", "binary_root": "دو", "root": "دور", "words": ["تَدُورُ", "تُدِيرُ", "دور"], "muajam_match": false}
+{"bab": "د", "binary_root": "دو", "root": "دور", "words": ["تَدُورُ", "تُدِيرُ", "دور"], "muajam_match": true, "binary_root_meaning": "الجريان باسترسال، أو الامتداد بتوال", "axial_meaning": "تحوي الشيء، أو إحاطته حول شيء", "added_letter": "دور - دير", "quran_example": "﴿إِلَّا أَن تَكُونَ تِجَارَةً حَاضِرَةً تُدِيرُونَهَا بَيْنَكُمْ﴾", "letter1": "در", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دو", "root": "دوص", "words": ["دوص", "دَوَّصَ"], "muajam_match": false}
 {"bab": "د", "binary_root": "دو", "root": "دول", "words": ["دول", "نُدَاوِلُ"], "muajam_match": true, "binary_root_meaning": "الامتداد (من أعلى) اتجاهاً إلى شيء أو مقر بقوة", "axial_meaning": "تحول الشيء الغليظ بعيدًا عن مكانه حتى يتميز", "added_letter": "دول", "quran_example": "﴿وَتِلْكَ الْأَيَّامُ نُدَاوِلُهَا بَيْنَ النَّاسِ﴾", "letter1": "دل", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
-{"bab": "د", "binary_root": "دو", "root": "دوم", "words": ["دوم", "دَامَتِ", "دَامُ", "دَآئِمٌ", "دَآئِمُونَ", "دُمْ"], "muajam_match": false}
+{"bab": "د", "binary_root": "دو", "root": "دوم", "words": ["دوم", "دَامَتِ", "دَامُ", "دَآئِمٌ", "دَآئِمُونَ", "دُمْ"], "muajam_match": true, "binary_root_meaning": "استواء الظاهر وبروزه كذلك", "axial_meaning": "امتداد مكاني أو زماني مع ثبات على حال واحدة", "added_letter": "دوم - ديم", "quran_example": "﴿أُكُلُهَا دَائِمٌ وَظِلُّهَا﴾", "letter1": "دم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دو", "root": "دون", "words": ["دون", "دُونَ"], "muajam_match": true, "binary_root_meaning": "اندساس الشيء في أثناء أو ثباته فيه", "axial_meaning": "كون الشيء منخفضًا في أسفل شيء", "added_letter": "دون", "quran_example": "﴿وَيَغْفِرُ مَا دُونَ ذَلِكَ لِمَن يَشَاءُ﴾", "letter1": "دن", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "د", "binary_root": "دو", "root": "دوي", "words": ["دوى", "دوي", "دوِي"], "muajam_match": false}
 {"bab": "د", "binary_root": "دي", "root": "دياف", "words": ["دِيافُ"], "muajam_match": false}

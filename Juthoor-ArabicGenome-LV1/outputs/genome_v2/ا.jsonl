@@ -1,7 +1,7 @@
 {"bab": "ا", "binary_root": "اا", "root": "ااء", "words": ["أاءٌ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابا", "words": ["أبأ", "أبا", "أَبأ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابام", "words": ["أُبامٌ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اب", "root": "ابب", "words": ["أبب", "أَبب"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اب", "root": "ابب", "words": ["أبب", "أَبب"], "muajam_match": true, "binary_root_meaning": "الغَذْو والتهيؤ والامتناع", "axial_meaning": "التهيؤ للأمر تقدمًا، أو ارتفاعًا", "added_letter": "أ ب", "quran_example": "الأب - \"وَفَاكِهَةً وَأَبًّا\"", "letter1": "ء", "letter1_meaning": "تؤكد معنى ما تصحبه / ضغط وتقوية", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تجمع رخو مع تلاصق ما"}
 {"bab": "ا", "binary_root": "اب", "root": "ابت", "words": ["أبت", "أبِتَ", "أَبت"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابث", "words": ["أبث", "أَبث"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابثاججت", "words": ["ابْثَأَجَّجْتُ"], "muajam_match": false}
@@ -10,7 +10,7 @@
 {"bab": "ا", "binary_root": "اب", "root": "ابج", "words": ["أَبج"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابخ", "words": ["أبخ", "أَبخ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابخه", "words": ["أبَّخَهُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اب", "root": "ابد", "words": ["أبد", "أَبد", "أَبَدًا", "أَبَدًۢا", "ابد"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اب", "root": "ابد", "words": ["أبد", "أَبد", "أَبَدًا", "أَبَدًۢا", "ابد"], "muajam_match": true, "binary_root_meaning": "الظهور والتكوين الأول", "axial_meaning": "البقاء الدائم أو الإقامة الدائمة بلا حد مع عدم الألفة", "added_letter": "أ", "quran_example": "أبدا - \"خَالِدِينَ فِيهَا أَبَدًا\"", "letter1": "ب", "letter1_meaning": "تجمع رخو مع تلاصق ما", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "تجمع رخو مع تلاصق ما"}
 {"bab": "ا", "binary_root": "اب", "root": "ابدوج", "words": ["أُبْدوجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابذ", "words": ["أَبذ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابذعروا", "words": ["ابْذَعَرُّوا"], "muajam_match": false}
@@ -26,10 +26,10 @@
 {"bab": "ا", "binary_root": "اب", "root": "ابض", "words": ["أبض", "أبَضَ", "أَبض", "ابض"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابط", "words": ["أبط", "أَبط", "ابط"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابغ", "words": ["أبغ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اب", "root": "ابق", "words": ["أبق", "أبِقَ", "أَبق", "أَبَقَ", "ابق"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اب", "root": "ابق", "words": ["أبق", "أبِقَ", "أَبق", "أَبَقَ", "ابق"], "muajam_match": true, "binary_root_meaning": "الثبات والكشف باتساع", "axial_meaning": "حَبْسٌ مكروه في حيّز، أو جوف شيء", "added_letter": "أ", "quran_example": "أبق - \"إِذْ أَبَقَ إِلَى الْفُلْكِ الْمَشْحُونِ\"", "letter1": "ب", "letter1_meaning": "تجمع رخو مع تلاصق ما", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "تجمع رخو مع تلاصق ما"}
 {"bab": "ا", "binary_root": "اب", "root": "ابقن", "words": ["أبْقَنَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابك", "words": ["آبَكُ", "أبك", "أَبك", "ابِكَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اب", "root": "ابل", "words": ["أبل", "أَبل", "إبل", "إِبِلٌ", "ابل"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اب", "root": "ابل", "words": ["أبل", "أَبل", "إبل", "إِبِلٌ", "ابل"], "muajam_match": true, "binary_root_meaning": "التمكن والحَوْز بشدة", "axial_meaning": "احتواء باطن الشيء على مائع - أو غضّ - كثير - ويلزم ذلك التمدد", "added_letter": "أ", "quran_example": "أبابيل - \"وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ\" / الإبل - \"أَفَلَا يَنظُرُونَ إِلَى الْإِبِلِ\"", "letter1": "ب", "letter1_meaning": "تجمع رخو مع تلاصق ما", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تجمع رخو مع تلاصق ما"}
 {"bab": "ا", "binary_root": "اب", "root": "ابلندك", "words": ["ابْلَنْدَكَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابله", "words": ["أبْلَهُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابم", "words": ["أَبم"], "muajam_match": false}
@@ -39,13 +39,13 @@
 {"bab": "ا", "binary_root": "اب", "root": "ابه", "words": ["أبه", "ابه"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابهته", "words": ["أبَهْتُه"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اب", "root": "ابهل", "words": ["أبهل", "أَبهل"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اب", "root": "ابو", "words": ["أبو", "ابو"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اب", "root": "ابي", "words": ["أبى", "أبي", "أبَى", "أَبى", "أَبَ", "أَبَى", "أَبَىٰ", "أَبَىٰٓ", "أَبَيْ", "ابى", "تَأْبَىٰ", "يَأْبَ", "يَأْبَى"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اب", "root": "ابو", "words": ["أبو", "ابو"], "muajam_match": true, "binary_root_meaning": "الغَذْو والتهيؤ والامتناع", "axial_meaning": "الغَذْو", "added_letter": "أ و", "quran_example": "أبوهما - \"وَكَانَ أَبُوهُمَا صَالِحًا\"", "letter1": "ء", "letter1_meaning": "تؤكد معنى ما تصحبه / ضغط وتقوية", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تجمع رخو مع تلاصق ما"}
+{"bab": "ا", "binary_root": "اب", "root": "ابي", "words": ["أبى", "أبي", "أبَى", "أَبى", "أَبَ", "أَبَى", "أَبَىٰ", "أَبَىٰٓ", "أَبَيْ", "ابى", "تَأْبَىٰ", "يَأْبَ", "يَأْبَى"], "muajam_match": true, "binary_root_meaning": "الغَذْو والتهيؤ والامتناع", "axial_meaning": "الامتناع عن الشيء امتناعًا تامًا؛ كراهة له", "added_letter": "أ ي", "quran_example": "يأبى - \"وَيَأْبَى اللَّهُ إِلَّا أَن يُتِمَّ نُورَهُ\"", "letter1": "ء", "letter1_meaning": "تؤكد معنى ما تصحبه / ضغط وتقوية", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "تجمع رخو مع تلاصق ما"}
 {"bab": "ا", "binary_root": "ات", "root": "اتا", "words": ["أتأ", "أَتأ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ات", "root": "اتارته", "words": ["أتْأَرْتُهُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ات", "root": "اتاه", "words": ["أََتْأَةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ات", "root": "اتب", "words": ["أتب", "أَتب", "اتب"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ات", "root": "اتت", "words": ["أتت", "أَتت"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ات", "root": "اتت", "words": ["أتت", "أَتت"], "muajam_match": true, "binary_root_meaning": "الوصول والصدم", "axial_meaning": "صدم الرأس بصلب دقيق يؤثر بالقطع والجرح", "added_letter": "ت", "quran_example": "", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "أ", "letter2_meaning": "—", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
 {"bab": "ا", "binary_root": "ات", "root": "اتد", "words": ["أَتد"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ات", "root": "اتر", "words": ["أتر", "أَتر"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ات", "root": "اتش", "words": ["أَتش", "أَتَشٌ"], "muajam_match": false}
@@ -55,22 +55,22 @@
 {"bab": "ا", "binary_root": "ات", "root": "اتمهل", "words": ["اتْمَهَلَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ات", "root": "اتن", "words": ["أتن", "اتن"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ات", "root": "اته", "words": ["أته", "أتَّهُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ات", "root": "اتو", "words": ["أتو", "أَتَوْ", "اتو"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ات", "root": "اتي", "words": ["ءَاتٍ", "ءَاتَ", "ءَاتَتْ", "ءَاتَى", "ءَاتَىٰ", "ءَاتَيْ", "ءَاتُ", "ءَاتِ", "ءَاتِى", "ءَاتِي", "ءَاتِيَةٌ", "ءَاتِيَنَّ", "أتى", "أتي", "أَتَ", "أَتَتْ", "أَتَى", "أَتَىٰ", "أَتَىٰٓ", "أَتَيَ", "أَتَيْ", "أُتُ", "أُوتَ", "أُوتَيَ", "أُوتُ", "أُوتِىَ", "أُوتِي", "أُوتِيَتْ", "أْتُ", "أْتِ", "أْتِيَ", "إِيتَآءَ", "إِيتَآءِ", "إِيتَآئِ", "اتى", "تَأْتُ", "تَأْتُنَّ", "تَأْتِ", "تَأْتِى", "تَأْتِىَ", "تَأْتِي", "تَأْتِيَ", "تُؤْتَ", "تُؤْتُ", "تُؤْتِى", "تُؤْتِىٓ", "تَّأْتِي", "ـَٔاتَتْ", "ـَٔاتَىٰ", "ـَٔاتَيْ", "ـَٔاتُ", "ـَٔاتِ", "ـَٔاتِي", "مَأْتِيًّا", "مُؤْتُونَ", "نَأْتِ", "نَأْتِى", "نَأْتِيَ", "نُؤْتَىٰ", "نُؤْتِ", "نُؤْتِي", "نَّأْتِيَ", "نُّؤْتِ", "يَأْتُ", "يَأْتِ", "يَأْتِى", "يَأْتِىَ", "يَأْتِىٓ", "يَأْتِي", "يَأْتِيَ", "يُؤْتَ", "يُؤْتَىٰ", "يُؤْتَىٰٓ", "يُؤْتُ", "يُؤْتِ", "يُؤْتِى", "يُؤْتِي", "يُؤْتِيَ", "ٱئْتُ", "ٱئْتِ", "ٱئْتِيَ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ات", "root": "اتو", "words": ["أتو", "أَتَوْ", "اتو"], "muajam_match": true, "binary_root_meaning": "الوصول والصدم", "axial_meaning": "وصول أو تقدم وحضور إلى مكان أو شيء بتهيئة أو قوة تزيل ما يعوق مع خفاء مصدر", "added_letter": "و / أ ت ى", "quran_example": "أتى / آتى - \"هَلْ أَتَاكَ\" / \"فَلَمَّا أَتَاهَا\" / \"وَآتَيْنَاهُ الْحُكْمَ\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "أ", "letter2_meaning": "—", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
+{"bab": "ا", "binary_root": "ات", "root": "اتي", "words": ["ءَاتٍ", "ءَاتَ", "ءَاتَتْ", "ءَاتَى", "ءَاتَىٰ", "ءَاتَيْ", "ءَاتُ", "ءَاتِ", "ءَاتِى", "ءَاتِي", "ءَاتِيَةٌ", "ءَاتِيَنَّ", "أتى", "أتي", "أَتَ", "أَتَتْ", "أَتَى", "أَتَىٰ", "أَتَىٰٓ", "أَتَيَ", "أَتَيْ", "أُتُ", "أُوتَ", "أُوتَيَ", "أُوتُ", "أُوتِىَ", "أُوتِي", "أُوتِيَتْ", "أْتُ", "أْتِ", "أْتِيَ", "إِيتَآءَ", "إِيتَآءِ", "إِيتَآئِ", "اتى", "تَأْتُ", "تَأْتُنَّ", "تَأْتِ", "تَأْتِى", "تَأْتِىَ", "تَأْتِي", "تَأْتِيَ", "تُؤْتَ", "تُؤْتُ", "تُؤْتِى", "تُؤْتِىٓ", "تَّأْتِي", "ـَٔاتَتْ", "ـَٔاتَىٰ", "ـَٔاتَيْ", "ـَٔاتُ", "ـَٔاتِ", "ـَٔاتِي", "مَأْتِيًّا", "مُؤْتُونَ", "نَأْتِ", "نَأْتِى", "نَأْتِيَ", "نُؤْتَىٰ", "نُؤْتِ", "نُؤْتِي", "نَّأْتِيَ", "نُّؤْتِ", "يَأْتُ", "يَأْتِ", "يَأْتِى", "يَأْتِىَ", "يَأْتِىٓ", "يَأْتِي", "يَأْتِيَ", "يُؤْتَ", "يُؤْتَىٰ", "يُؤْتَىٰٓ", "يُؤْتُ", "يُؤْتِ", "يُؤْتِى", "يُؤْتِي", "يُؤْتِيَ", "ٱئْتُ", "ٱئْتِ", "ٱئْتِيَ"], "muajam_match": true, "binary_root_meaning": "الوصول والصدم", "axial_meaning": "وصول أو تقدم وحضور إلى مكان أو شيء بتهيئة أو قوة تزيل ما يعوق مع خفاء مصدر", "added_letter": "و / أ ت ى", "quran_example": "أتى / آتى - \"هَلْ أَتَاكَ\" / \"فَلَمَّا أَتَاهَا\" / \"وَآتَيْنَاهُ الْحُكْمَ\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "أ", "letter2_meaning": "—", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
 {"bab": "ا", "binary_root": "ات", "root": "اتيته", "words": ["أتَيْتُه"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثا", "words": ["أثأ", "أثا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثب", "words": ["أثب", "أَثب"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثبجر", "words": ["اثْبَجَرَّ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اث", "root": "اثث", "words": ["أثث", "أَثث"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اث", "root": "اثث", "words": ["أثث", "أَثث"], "muajam_match": true, "binary_root_meaning": "تجمع الدقائق بكثافة", "axial_meaning": "تجمع الدقاق اللطيفة بكثافة في شيء أو حوله فتكون طبقة لينة", "added_letter": "أثث", "quran_example": "أثاثًا - ﴿أَثَاثًا وَمَتَاعًا﴾", "letter1": "أ", "letter1_meaning": "—", "letter2": "ث", "letter2_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ا", "binary_root": "اث", "root": "اثجل", "words": ["أثجل"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثد", "words": ["أَثد"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اث", "root": "اثر", "words": ["ءَاثَرَ", "أثر", "أَثر", "أَثَٰرَةٍ", "اثر", "تُؤْثِرُ", "نُّؤْثِرَ", "يُؤْثَرُ", "يُؤْثِرُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اث", "root": "اثر", "words": ["ءَاثَرَ", "أثر", "أَثر", "أَثَٰرَةٍ", "اثر", "تُؤْثِرُ", "نُّؤْثِرَ", "يُؤْثَرُ", "يُؤْثِرُ"], "muajam_match": true, "binary_root_meaning": "نفاذ المائع وما يشبهه بغزارة وانتشار", "axial_meaning": "بقية أو علامة تبقى من جرم الشيء ثابتة تخلفه", "added_letter": "أثر", "quran_example": "آثار - ﴿آثَارِ رَحْمَتِ اللَّهِ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ا", "binary_root": "اث", "root": "اثع", "words": ["أَثع"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثعنجح", "words": ["اثْعَنْجَحَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثف", "words": ["أثف", "اثف"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثكل", "words": ["أثكل", "اثكل"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اث", "root": "اثل", "words": ["أثل", "أثَلَ", "اثل"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اث", "root": "اثم", "words": ["ءَاثِمًا", "ءَاثِمٌ", "ءَاثِمِينَ", "أثم", "أَثَامًا", "إثم", "اثم", "تَأْثِيمًا", "تَأْثِيمٌ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اث", "root": "اثل", "words": ["أثل", "أثَلَ", "اثل"], "muajam_match": true, "binary_root_meaning": "تجمع الدقائق وتماسكها", "axial_meaning": "تمكن أصول الشيء واجتماع الدقاق (الهدب) حوله مع عدم تفرعه", "added_letter": "أثل", "quran_example": "أثل - ﴿وَأَثْلٍ وَشَيْءٍ مِّن سِدْرٍ قَلِيلٍ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
+{"bab": "ا", "binary_root": "اث", "root": "اثم", "words": ["ءَاثِمًا", "ءَاثِمٌ", "ءَاثِمِينَ", "أثم", "أَثَامًا", "إثم", "اثم", "تَأْثِيمًا", "تَأْثِيمٌ"], "muajam_match": true, "binary_root_meaning": "ضم الدقائق أو ما يشبهها في حيز", "axial_meaning": "البطء (ثقلًا أو من حمل ثقيل)", "added_letter": "أثم", "quran_example": "إثم - ﴿فَلَا إِثْمَ عَلَيْهِ﴾", "letter1": "ث", "letter1_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار"}
 {"bab": "ا", "binary_root": "اث", "root": "اثن", "words": ["أثن", "اثن"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثو", "words": ["أثو"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اث", "root": "اثوت", "words": ["أثَوْتُ"], "muajam_match": false}
@@ -78,18 +78,18 @@
 {"bab": "ا", "binary_root": "اث", "root": "اثيع", "words": ["أُثَيْعٍ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجا", "words": ["أجأ", "أجَأُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجتفت", "words": ["اجْتَفَتَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اج", "root": "اجج", "words": ["أجج", "أَجج"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اج", "root": "اجج", "words": ["أجج", "أَجج"], "muajam_match": true, "binary_root_meaning": "الحدة والتجوف", "axial_meaning": "حدة وحرافة تعمّ أثناء شيء غير صلب المادة", "added_letter": "أجج", "quran_example": "أجاج - ﴿مِلْحٌ أُجَاجٌ﴾ / يأجوج ومأجوج - ﴿يَأْجُوجَ وَمَأْجُوجَ﴾", "letter1": "أ", "letter1_meaning": "—", "letter2": "ج", "letter2_meaning": "تجمع هش مع حدة ما", "bab_meaning": "تجمع هش مع حدة ما"}
 {"bab": "ا", "binary_root": "اج", "root": "اجح", "words": ["أَجح"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجحم", "words": ["أجْحَمَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجد", "words": ["أجد", "أَجد"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجدانق", "words": ["أجدانق"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اج", "root": "اجر", "words": ["أجر", "أَجر", "اجر", "تَأْجُرَ", "ٱسْتَـْٔجَرْ", "ٱسْتَـْٔجِرْ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اج", "root": "اجر", "words": ["أجر", "أَجر", "اجر", "تَأْجُرَ", "ٱسْتَـْٔجَرْ", "ٱسْتَـْٔجِرْ"], "muajam_match": true, "binary_root_meaning": "الاسترسال والامتداد", "axial_meaning": "أثر أو حصيلة لجهد مادي فيه صنعة", "added_letter": "أجر", "quran_example": "أجر - ﴿أَجْرٌ عَظِيمٌ﴾", "letter1": "ج", "letter1_meaning": "تجمع هش مع حدة ما", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تجمع هش مع حدة ما"}
 {"bab": "ا", "binary_root": "اج", "root": "اجرعن", "words": ["اجْرَعَنَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجرهد", "words": ["اجْرَهَدَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجز", "words": ["أجز"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجص", "words": ["أجص", "اجص"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجط", "words": ["أَجط", "اجْطِ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اج", "root": "اجل", "words": ["أجل", "أَجَّلْ", "أُجِّلَتْ", "اجل", "مُّؤَجَّلًا"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اج", "root": "اجل", "words": ["أجل", "أَجَّلْ", "أُجِّلَتْ", "اجل", "مُّؤَجَّلًا"], "muajam_match": true, "binary_root_meaning": "الاتساع والانكشاف", "axial_meaning": "تجمع أو تماس مؤقت", "added_letter": "أجل", "quran_example": "أجل - ﴿إِلَىٰ أَجَلٍ مُّسَمًّى﴾", "letter1": "ج", "letter1_meaning": "تجمع هش مع حدة ما", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "تجمع هش مع حدة ما"}
 {"bab": "ا", "binary_root": "اج", "root": "اجلخب", "words": ["اجْلَخَبَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجلخموا", "words": ["اجْلَخَمُّوا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اج", "root": "اجم", "words": ["أجم", "أجَمَ", "اجم"], "muajam_match": false}
@@ -98,7 +98,7 @@
 {"bab": "ا", "binary_root": "اح", "root": "احا", "words": ["أحا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اح", "root": "احاظه", "words": ["أُحاظَةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اح", "root": "احح", "words": ["أحح", "أَحح"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اح", "root": "احد", "words": ["أحد", "أَحد", "احد"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اح", "root": "احد", "words": ["أحد", "أَحد", "احد"], "muajam_match": true, "binary_root_meaning": "إيقاف الامتداد والتخطي للشيء، أي إنهاؤه، أو منعه", "axial_meaning": "انفراد الشيء؛ فلا يكون معه مثله", "added_letter": "أحد", "quran_example": "﴿قُلْ هُوَ اللَّهُ أَحَدٌ﴾", "letter1": "ح", "letter1_meaning": "احتكاك بعرض وجفاف في الباطن", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "احتكاك بعرض وجفاف في الباطن"}
 {"bab": "ا", "binary_root": "اح", "root": "احرنبا", "words": ["احْرَنْبَأَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اح", "root": "احرنفزوا", "words": ["احْرَنْفَزُوا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اح", "root": "احزال", "words": ["احْزَألَّ"], "muajam_match": false}
@@ -108,22 +108,22 @@
 {"bab": "ا", "binary_root": "اخ", "root": "اخا", "words": ["أخا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اخ", "root": "اخبعث", "words": ["اخْبَعَثَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اخ", "root": "اخبندي", "words": ["اخْبَنْدى"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اخ", "root": "اخخ", "words": ["أخخ", "أَخخ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اخ", "root": "اخخ", "words": ["أخخ", "أَخخ"], "muajam_match": true, "binary_root_meaning": "الفراغ أو الخلو في بنية الشيء", "axial_meaning": "رقةُ أثناء الشيء، أي تخلخله بحيث يُشْرَب كالسوائل", "added_letter": "أ خ خ", "quran_example": "", "letter1": "التراكيب", "letter1_meaning": "—", "letter2": "الخائية", "letter2_meaning": "—", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
 {"bab": "ا", "binary_root": "اخ", "root": "اخد", "words": ["أخد", "أَخد"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اخ", "root": "اخذ", "words": ["ءَاخِذٌۢ", "ءَاخِذِينَ", "أخذ", "أَتَّخِذَ", "أَتَّخِذُ", "أَتَّخِذْ", "أَخذ", "أَخَذَ", "أَخَذَتِ", "أَخَذَتْ", "أَخَذْ", "أَخْذًا", "أَخْذَ", "أَخْذَةً", "أَخْذُ", "أَخْذِ", "أُخِذَ", "أُخِذُ", "اخذ", "تَأْخُذُ", "تَأْخُذْ", "تَتَّخِذَ", "تَتَّخِذُ", "تُؤَاخِذْ", "تَّخَذْ", "خُذُ", "خُذِ", "خُذْ", "ـَٔاخِذِي", "مُتَّخِذَ", "مُتَّخِذَٰتِ", "مُتَّخِذِىٓ", "نَتَّخِذَ", "نَّأْخُذَ", "نَّتَّخِذَ", "يَأْخُذَ", "يَأْخُذُ", "يَأْخُذْ", "يَتَّخِذَ", "يَتَّخِذُ", "يَتَّخِذِ", "يَتَّخِذْ", "يُؤَاخِذُ", "يُؤْخَذُ", "يُؤْخَذْ", "ٱتَّخَذَ", "ٱتَّخَذَتْ", "ٱتَّخَذُ", "ٱتَّخَذْ", "ٱتَّخِذُ", "ٱتَّخِذِ", "ٱتَّخِذْ", "ٱتِّخَاذِ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اخ", "root": "اخذ", "words": ["ءَاخِذٌۢ", "ءَاخِذِينَ", "أخذ", "أَتَّخِذَ", "أَتَّخِذُ", "أَتَّخِذْ", "أَخذ", "أَخَذَ", "أَخَذَتِ", "أَخَذَتْ", "أَخَذْ", "أَخْذًا", "أَخْذَ", "أَخْذَةً", "أَخْذُ", "أَخْذِ", "أُخِذَ", "أُخِذُ", "اخذ", "تَأْخُذُ", "تَأْخُذْ", "تَتَّخِذَ", "تَتَّخِذُ", "تُؤَاخِذْ", "تَّخَذْ", "خُذُ", "خُذِ", "خُذْ", "ـَٔاخِذِي", "مُتَّخِذَ", "مُتَّخِذَٰتِ", "مُتَّخِذِىٓ", "نَتَّخِذَ", "نَّأْخُذَ", "نَّتَّخِذَ", "يَأْخُذَ", "يَأْخُذُ", "يَأْخُذْ", "يَتَّخِذَ", "يَتَّخِذُ", "يَتَّخِذِ", "يَتَّخِذْ", "يُؤَاخِذُ", "يُؤْخَذُ", "يُؤْخَذْ", "ٱتَّخَذَ", "ٱتَّخَذَتْ", "ٱتَّخَذُ", "ٱتَّخَذْ", "ٱتَّخِذُ", "ٱتَّخِذِ", "ٱتَّخِذْ", "ٱتِّخَاذِ"], "muajam_match": true, "binary_root_meaning": "النفاذ بقوة من الحوزة أو إليها بغلظ", "axial_meaning": "حَوْزُ الشيء في الأثناء ضمًا، أو قبضًا على غِلَظ", "added_letter": "أ", "quran_example": "فأخذتهم - \"فَأَخَذَتْهُمُ الصَّيْحَةُ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ذ", "letter2_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
 {"bab": "ا", "binary_root": "اخ", "root": "اخذه", "words": ["أخَذَهُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اخ", "root": "اخر", "words": ["ءَاخِرَ", "أخر", "أَخَّرَ", "أَخَّرَتْ", "أَخَّرْ", "أَخِّرْ", "اخر", "تَأَخَّرَ", "تَسْتَـْٔخِرُ", "مُسْتَـْٔخِرِينَ", "نُؤَخِّرُ", "يَتَأَخَّرَ", "يَسْتَأْخِرُ", "يَسْتَـْٔخِرُ", "يُؤَخَّرُ", "يُؤَخِّرَ", "يُؤَخِّرُ", "يُؤَخِّرْ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اخ", "root": "اخر", "words": ["ءَاخِرَ", "أخر", "أَخَّرَ", "أَخَّرَتْ", "أَخَّرْ", "أَخِّرْ", "اخر", "تَأَخَّرَ", "تَسْتَـْٔخِرُ", "مُسْتَـْٔخِرِينَ", "نُؤَخِّرُ", "يَتَأَخَّرَ", "يَسْتَأْخِرُ", "يَسْتَـْٔخِرُ", "يُؤَخَّرُ", "يُؤَخِّرَ", "يُؤَخِّرُ", "يُؤَخِّرْ"], "muajam_match": true, "binary_root_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص", "axial_meaning": "تخلف الشيء (في المكان أو الزمان) عن مقارنه", "added_letter": "أ", "quran_example": "الآخرة - \"وَبِالْآخِرَةِ هُمْ يُوقِنُونَ\"", "letter1": "خ", "letter1_meaning": "تخلخل مع جفاف أو غلظ", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
 {"bab": "ا", "binary_root": "اخ", "root": "اخرمص", "words": ["اخْرَمَّصَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اخ", "root": "اخسن", "words": ["أخْسَنَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اخ", "root": "اخف", "words": ["أَخف"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اخ", "root": "اخقي", "words": ["أَخْقَى"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اخ", "root": "اخن", "words": ["أخن"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اخ", "root": "اخو", "words": ["أخو", "أَخُو", "اخو"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اخ", "root": "اخو", "words": ["أخو", "أَخُو", "اخو"], "muajam_match": true, "binary_root_meaning": "الفراغ أو الخلو في بنية الشيء", "axial_meaning": "عُروة - أو نحوها - يُشَدُّ فيها الشيء", "added_letter": "أ خ و / أ خ ي", "quran_example": "إخوة - \"إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ\"", "letter1": "التراكيب", "letter1_meaning": "—", "letter2": "الخائية", "letter2_meaning": "—", "bab_meaning": "تخلخل مع جفاف أو غلظ"}
 {"bab": "ا", "binary_root": "اخ", "root": "اخيف", "words": ["اخَيْفٌ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "ادا", "words": ["أدا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "اداه", "words": ["أَدَّاهُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "ادب", "words": ["أدب", "أَدب", "ادب"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اد", "root": "ادد", "words": ["أدد", "أَدد"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اد", "root": "ادد", "words": ["أدد", "أَدد"], "muajam_match": true, "binary_root_meaning": "الامتداد مع الضغط أو التماسك", "axial_meaning": "ضغط عظيم مع امتداد", "added_letter": "أدد", "quran_example": "﴿لَقَدْ جِئْتُمْ شَيْئًا إِدًّا﴾", "letter1": "ود", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "ا", "binary_root": "اد", "root": "ادر", "words": ["أدر", "أَدر", "ادر"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "ادرعبت", "words": ["ادْرَعَبَّتِ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "ادرعش", "words": ["ادْرَعَشَّ"], "muajam_match": false}
@@ -139,17 +139,17 @@
 {"bab": "ا", "binary_root": "اد", "root": "ادلعف", "words": ["ادْلَعَفَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "ادلهم", "words": ["ادْلَهَمَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "ادلهن", "words": ["ادْلَهَنَّ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اد", "root": "ادم", "words": ["ءَادَمَ", "ءَادَمُ", "آدم", "أدم", "ادم", "ـَٔادَمُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اد", "root": "ادم", "words": ["ءَادَمَ", "ءَادَمُ", "آدم", "أدم", "ادم", "ـَٔادَمُ"], "muajam_match": true, "binary_root_meaning": "استواء الظاهر وبروزه كذلك", "axial_meaning": "غلاف يمسك الشيء ويطيب ظاهره أو يسيغه", "added_letter": "أدم", "quran_example": "﴿وَعَلَّمَ ءَادَمَ الْأَسْمَاءَ كُلَّهَا﴾", "letter1": "دم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "ا", "binary_root": "اد", "root": "ادن", "words": ["أدن"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "اده", "words": ["أده"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "ادهج", "words": ["أدْهَجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اد", "root": "ادهضت", "words": ["ادْهَضَتِ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اد", "root": "ادو", "words": ["أدو", "ادو"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اد", "root": "ادي", "words": ["أدى", "أدي", "أدّى", "أَدَآءٌ", "أَدُّ", "ادى", "تُؤَدُّ", "يُؤَدِّ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اد", "root": "ادو", "words": ["أدو", "ادو"], "muajam_match": true, "binary_root_meaning": "الامتداد بقوة للتمكين أو الضغط", "axial_meaning": "التمكن والتمكين من الشيء حَوْزًا، أو إتاحة انتفاع", "added_letter": "أدو/أدى", "quran_example": "﴿إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَى أَهْلِهَا﴾", "letter1": "يد", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
+{"bab": "ا", "binary_root": "اد", "root": "ادي", "words": ["أدى", "أدي", "أدّى", "أَدَآءٌ", "أَدُّ", "ادى", "تُؤَدُّ", "يُؤَدِّ"], "muajam_match": true, "binary_root_meaning": "الامتداد بقوة للتمكين أو الضغط", "axial_meaning": "التمكن والتمكين من الشيء حَوْزًا، أو إتاحة انتفاع", "added_letter": "أدو/أدى", "quran_example": "﴿إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَى أَهْلِهَا﴾", "letter1": "يد", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "ا", "binary_root": "اذ", "root": "اذا", "words": ["أذا", "إذا", "إِذا", "اذا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اذ", "root": "اذار", "words": ["آذارُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اذ", "root": "اذج", "words": ["أذج", "أذَجَ", "أَذج"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اذ", "root": "اذذ", "words": ["أذذ", "أَذذ", "اذذ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اذ", "root": "اذذ", "words": ["أذذ", "أَذذ", "اذذ"], "muajam_match": true, "binary_root_meaning": "القطع والفصل", "axial_meaning": "القطع الوَحِيُّ السهل", "added_letter": "أذذ / إذ", "quran_example": "إذ - ﴿وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "أ/ء", "letter2_meaning": "—", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ا", "binary_root": "اذ", "root": "اذر", "words": ["أَذر", "اذر"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اذ", "root": "اذرب", "words": ["أذرب", "أَذرب"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اذ", "root": "اذربج", "words": ["أذربج", "أَذربج"], "muajam_match": false}
@@ -165,12 +165,12 @@
 {"bab": "ا", "binary_root": "اذ", "root": "اذلولي", "words": ["اذْلَوْلَى"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اذ", "root": "اذم", "words": ["أذم"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اذ", "root": "اذمقر", "words": ["اذْمَقَرَّ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اذ", "root": "اذن", "words": ["ءَاذَ", "ءَاذَن", "ءَاذَنَ", "أذن", "أذِنَ", "أَذِن", "أَذِنَ", "أَذِنَتْ", "أَذَّنَ", "أَذِّن", "أُذِنَ", "أْذَن", "أْذَنُ", "إذَنْ", "اذن", "تَأَذَّنَ", "مُؤَذِّنٌ", "مُؤَذِّنٌۢ", "يَأْذَنَ", "يَأْذَنۢ", "يَسْتَـْٔذِن", "يَسْتَـْٔذِنُ", "يُؤْذَنَ", "يُؤْذَنُ", "ٱئْذَن", "ٱسْتَـْٔذَنَ", "ٱسْتَـْٔذَنُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اذ", "root": "اذي", "words": ["ءَاذَ", "ءَاذَيْ", "أذى", "أذي", "أَذَى", "أَذِيَ", "أُوذُ", "أُوذِىَ", "أُوذِي", "اذى", "تُؤْذُ", "ـَٔاذُ", "يُؤْذَيْ", "يُؤْذُ", "يُؤْذِى"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اذ", "root": "اذن", "words": ["ءَاذَ", "ءَاذَن", "ءَاذَنَ", "أذن", "أذِنَ", "أَذِن", "أَذِنَ", "أَذِنَتْ", "أَذَّنَ", "أَذِّن", "أُذِنَ", "أْذَن", "أْذَنُ", "إذَنْ", "اذن", "تَأَذَّنَ", "مُؤَذِّنٌ", "مُؤَذِّنٌۢ", "يَأْذَنَ", "يَأْذَنۢ", "يَسْتَـْٔذِن", "يَسْتَـْٔذِنُ", "يُؤْذَنَ", "يُؤْذَنُ", "ٱئْذَن", "ٱسْتَـْٔذَنَ", "ٱسْتَـْٔذَنُ"], "muajam_match": true, "binary_root_meaning": "الامتداد الخلفي والتبعية", "axial_meaning": "مرور لطيف من منفذ خلال أثناء مرورًا له أثر قوي", "added_letter": "أذن", "quran_example": "فأذنوا / بإذن - ﴿فَإِن لَّمْ تَفْعَلُوا فَأْذَنُوا بِحَرْبٍ مِّنَ اللَّهِ وَرَسُولِهِ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
+{"bab": "ا", "binary_root": "اذ", "root": "اذي", "words": ["ءَاذَ", "ءَاذَيْ", "أذى", "أذي", "أَذَى", "أَذِيَ", "أُوذُ", "أُوذِىَ", "أُوذِي", "اذى", "تُؤْذُ", "ـَٔاذُ", "يُؤْذَيْ", "يُؤْذُ", "يُؤْذِى"], "muajam_match": true, "binary_root_meaning": "القطع والفصل", "axial_meaning": "إفرازٌ - أو نحوه - مُنَفِّر (للنفس)، أو مقلق", "added_letter": "أذى", "quran_example": "أذى - ﴿وَلَا تُطِعِ الْكَافِرِينَ وَالْمُنَافِقِينَ وَدَعْ أَذَاهُمْ ﴾", "letter1": "ذ", "letter1_meaning": "نفاذ ثخين ذي رخاوة وغلظ", "letter2": "أ/ء", "letter2_meaning": "—", "bab_meaning": "نفاذ ثخين ذي رخاوة وغلظ"}
 {"bab": "ا", "binary_root": "اذ", "root": "اذيم", "words": ["أُذَيْمٌ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارا", "words": ["أرا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "اراد", "words": ["أراد"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ار", "root": "ارب", "words": ["أرب", "أَرب", "ارب"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ار", "root": "ارب", "words": ["أرب", "أَرب", "ارب"], "muajam_match": true, "binary_root_meaning": "الاستغلاظ وما إليه من تماسك وتجمع", "axial_meaning": "جمع المتفرق (أو ما شأنه التفرق)، أي رَبطه معا بضبط وإحكام", "added_letter": "أرب", "quran_example": "﴿وَلِيَ فِيهَا مَآرِبُ أُخْرَى﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ا", "binary_root": "ار", "root": "ارت", "words": ["أرت", "أَرت"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارتصق", "words": ["ارْتَصَقَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارتكف", "words": ["ارْتَكَفَ"], "muajam_match": false}
@@ -193,7 +193,7 @@
 {"bab": "ا", "binary_root": "ار", "root": "ارزع", "words": ["أرْزَعُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارس", "words": ["أرس"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارش", "words": ["أرش", "أَرش", "ارش"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ار", "root": "ارض", "words": ["أرض", "أرضٌ", "أَرض", "ارض"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ار", "root": "ارض", "words": ["أرض", "أرضٌ", "أَرض", "ارض"], "muajam_match": true, "binary_root_meaning": "تضخم الجرم مع رخاوة باطنه", "axial_meaning": "كثافة الجرم مع غِنَى باطنه بلطيف تقوم به وعليه الأشياء", "added_letter": "أرض", "quran_example": "﴿يَعِبَادِيَ الَّذِينَ ءَامَنُوا إِنَّ أَرْضِي وَاسِعَةٌ فَإِيَّايَ فَاعْبُدُونِ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ض", "letter2_meaning": "ضغط بكثافة وغلظ", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ا", "binary_root": "ار", "root": "ارضك", "words": ["ارْضَكَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارط", "words": ["أرط", "أَرط", "ارط"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارظ", "words": ["أَرظ"], "muajam_match": false}
@@ -202,9 +202,9 @@
 {"bab": "ا", "binary_root": "ار", "root": "ارغيان", "words": ["ارْغَيانُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارف", "words": ["أرف", "أَرف", "ارف"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارق", "words": ["أرق", "ارق"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ار", "root": "ارك", "words": ["أرك", "ارك"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ار", "root": "ارك", "words": ["أرك", "ارك"], "muajam_match": true, "binary_root_meaning": "التجمع مع قلة الكثافة والتماسك", "axial_meaning": "إقامة، أو التئام (مع رقة، أو لطف)", "added_letter": "أرك", "quran_example": "﴿هُمْ وَأَزْوَاجُهُمْ فِي ظِلَالٍ عَلَى الْأَرَائِكِ مُتَّكِئُونَ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "ك", "letter2_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ا", "binary_root": "ار", "root": "ارل", "words": ["أرل", "ارُلٌ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ار", "root": "ارم", "words": ["أرم", "أرَمَ", "ارم"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ار", "root": "ارم", "words": ["أرم", "أرَمَ", "ارم"], "muajam_match": true, "binary_root_meaning": "التجمع الرخو في الأثناء من تحول ذي حدة", "axial_meaning": "تضامُّ الشيء في كتلة صلبة منتصبة أو ناصبة", "added_letter": "أرم", "quran_example": "إرم - ﴿إِرَمَ ذَاتِ الْعِمَادِ﴾", "letter1": "ر", "letter1_meaning": "استرسال مع تماسك ما", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "استرسال مع تماسك ما"}
 {"bab": "ا", "binary_root": "ار", "root": "ارمال", "words": ["أرمأل"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارمعل", "words": ["ارْمَعَلَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ار", "root": "ارمعن", "words": ["ارْمَعَنَّ"], "muajam_match": false}
@@ -226,10 +226,10 @@
 {"bab": "ا", "binary_root": "از", "root": "ازدره", "words": ["أزْدَرَهُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "از", "root": "ازدف", "words": ["ازْدَفَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "از", "root": "ازذ", "words": ["أَزذ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "از", "root": "ازر", "words": ["أزر", "أَزر", "ازر", "ـَٔازَرَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "از", "root": "ازز", "words": ["أزز", "تَؤُزُّ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "از", "root": "ازر", "words": ["أزر", "أَزر", "ازر", "ـَٔازَرَ"], "muajam_match": true, "binary_root_meaning": "النفاذ بدقة مع إمساك ما", "axial_meaning": "اشتداد الشيء الممتد بقوى في أثنائه أو يحيط به", "added_letter": "أزر", "quran_example": "آزره - ﴿فَآزَرَهُ﴾", "letter1": "ز", "letter1_meaning": "اكتناز وازدحام", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "اكتناز وازدحام"}
+{"bab": "ا", "binary_root": "از", "root": "ازز", "words": ["أزز", "تَؤُزُّ"], "muajam_match": true, "binary_root_meaning": "الاكتناز أو أثره في الانتصاب أو النضح", "axial_meaning": "ازدحام الأشياء وتضاغطها لقلة الفراغ بينها ويلزم ذلك حركة كالتموج", "added_letter": "أزز", "quran_example": "تؤزهم أزا - ﴿تَؤُزُّهُمْ أَزًّا﴾", "letter1": "ز", "letter1_meaning": "اكتناز وازدحام", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "اكتناز وازدحام"}
 {"bab": "ا", "binary_root": "از", "root": "ازع", "words": ["أَزع"], "muajam_match": false}
-{"bab": "ا", "binary_root": "از", "root": "ازف", "words": ["ءَازِفَةُ", "ءَازِفَةِ", "أزف", "أزِفَ", "أَزِفَتِ", "ازف"], "muajam_match": false}
+{"bab": "ا", "binary_root": "از", "root": "ازف", "words": ["ءَازِفَةُ", "ءَازِفَةِ", "أزف", "أزِفَ", "أَزِفَتِ", "ازف"], "muajam_match": true, "binary_root_meaning": "حركة ما هو جمع أو كثير بخفة", "axial_meaning": "تقارب المتباعد من الشيء أو جوانبه فيتضايق ما بينها", "added_letter": "أزف", "quran_example": "أزفت - ﴿أَزِفَتِ الْآزِفَةُ﴾", "letter1": "ز", "letter1_meaning": "اكتناز وازدحام", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "اكتناز وازدحام"}
 {"bab": "ا", "binary_root": "از", "root": "ازق", "words": ["أزق", "ازق", "ازِقَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "از", "root": "ازك", "words": ["أزك"], "muajam_match": false}
 {"bab": "ا", "binary_root": "از", "root": "ازل", "words": ["أزل", "ازل"], "muajam_match": false}
@@ -262,11 +262,11 @@
 {"bab": "ا", "binary_root": "اس", "root": "اسحنفر", "words": ["اسحنفر", "اسْحَنْفَرَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اس", "root": "اسحنكك", "words": ["اسحنكك", "اسْحَنْكَكَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اس", "root": "اسد", "words": ["أسد", "أَسد", "اسد"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اس", "root": "اسر", "words": ["أسر", "أَسر", "اسر", "تَأْسِرُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اس", "root": "اسر", "words": ["أسر", "أَسر", "اسر", "تَأْسِرُ"], "muajam_match": true, "binary_root_meaning": "الامتداد أو النفاذ مع الدقة", "axial_meaning": "شد الشيء - أي إيثاقه بدقيق ممتد؛ لحبسه على وضع ما دائما أو مدة طويلة", "added_letter": "أ", "quran_example": "﴿قُل لِّمَن فِي أَيْدِيكُم مِّنَ الْأَسْرَىٰ...﴾", "letter1": "س", "letter1_meaning": "امتداد بدقة ووحدة", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتداد بدقة ووحدة"}
 {"bab": "ا", "binary_root": "اس", "root": "اسرافيل", "words": ["اسْرافيلُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اس", "root": "اسس", "words": ["أسس", "أَسَّسَ", "أُسِّسَ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اس", "root": "اسس", "words": ["أسس", "أَسَّسَ", "أُسِّسَ"], "muajam_match": true, "binary_root_meaning": "التكوّن أو الصوت في عمق أو خفاء", "axial_meaning": "قوي (صلب، أو حاد الأثر) في عمق ينصب أو يتكون عليه ما بعده", "added_letter": "أ", "quran_example": "﴿أَفَمَنْ أَسَّسَ بُنْيَانَهُ عَلَى تَقْوَى مِنَ اللَّهِ وَرِضْوَانٍ خَيْرٌ أَم مَّنْ ... ﴾", "letter1": "س", "letter1_meaning": "امتداد بدقة ووحدة", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "امتداد بدقة ووحدة"}
 {"bab": "ا", "binary_root": "اس", "root": "اسعرد", "words": ["اسْعِرْدُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اس", "root": "اسف", "words": ["ءَاسَفُ", "أسف", "أسِف", "اسف"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اس", "root": "اسف", "words": ["ءَاسَفُ", "أسف", "أسِف", "اسف"], "muajam_match": true, "binary_root_meaning": "نفاذ دقاق جافة من أثناء مع ظهورها", "axial_meaning": "جفاف أثناء الشيء وذهاب نحو البلال منها", "added_letter": "أ", "quran_example": "﴿فَلَعَلَّكَ بَاخِعٌ نَّفْسَكَ عَلَىٰ آثَارِهِمْ إِن لَّمْ يُؤْمِنُوا بِهَٰذَا الْحَدِيثِ أَسَفًا﴾", "letter1": "س", "letter1_meaning": "امتداد بدقة ووحدة", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "امتداد بدقة ووحدة"}
 {"bab": "ا", "binary_root": "اس", "root": "اسفراين", "words": ["إسْفِرايِنُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اس", "root": "اسفس", "words": ["إسْفِسُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اس", "root": "اسفط", "words": ["أسفط"], "muajam_match": false}
@@ -283,9 +283,9 @@
 {"bab": "ا", "binary_root": "اس", "root": "اسمعط", "words": ["اسْمَعَطَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اس", "root": "اسمعل", "words": ["أسمعل", "اسمعل"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اس", "root": "اسمغد", "words": ["اسْمَغَدَّ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اس", "root": "اسن", "words": ["ءَاسِنٍ", "أسن", "اسن"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اس", "root": "اسن", "words": ["ءَاسِنٍ", "أسن", "اسن"], "muajam_match": true, "binary_root_meaning": "الامتداد (أو النفاذ) مع حدة أو دقة", "axial_meaning": "حدة تمتد في أثناء طولًا، أو قدمًا", "added_letter": "أ", "quran_example": "﴿...مِّن مَّاءٍ غَيْرِ آسِنٍ...﴾", "letter1": "س", "letter1_meaning": "امتداد بدقة ووحدة", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "امتداد بدقة ووحدة"}
 {"bab": "ا", "binary_root": "اس", "root": "اسنتوا", "words": ["أسْنَتُوا"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اس", "root": "اسو", "words": ["ءَاسَىٰ", "أسو", "اسو", "تَأْسَ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اس", "root": "اسو", "words": ["ءَاسَىٰ", "أسو", "اسو", "تَأْسَ"], "muajam_match": true, "binary_root_meaning": "نفاذ شعور أو أثر حاد في عمق أو فجوة", "axial_meaning": "ارتفاع الشيء القوي أو الحاد في الفجوة ليستوي أعلاه مع ما حوله", "added_letter": "و", "quran_example": "﴿لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ﴾", "letter1": "أ", "letter1_meaning": "—", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "امتداد بدقة ووحدة"}
 {"bab": "ا", "binary_root": "اس", "root": "اسي", "words": ["أسى", "أسي", "اسى"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اس", "root": "اسيت", "words": ["أَسِيتُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اش", "root": "اشا", "words": ["أشأ", "أشا"], "muajam_match": false}
@@ -298,7 +298,7 @@
 {"bab": "ا", "binary_root": "اش", "root": "اشج", "words": ["أشج", "أَشج"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اش", "root": "اشح", "words": ["أشح", "أشِحَ", "أَشح"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اش", "root": "اشخذ", "words": ["أشْخَذَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اش", "root": "اشر", "words": ["أشر", "أشِرَ", "أَشر", "اشر"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اش", "root": "اشر", "words": ["أشر", "أشِرَ", "أَشر", "اشر"], "muajam_match": true, "binary_root_meaning": "الانتشار أو صورة منه", "axial_meaning": "حِدّةٌ (أسنان دقيقةٌ حادة) تنتشر من طَرَفِ الشيء", "added_letter": "أشر", "quran_example": "﴿سَيَعْلَمُونَ غَدًا مَّنِ الْكَذَّابُ الْأَشِرُ﴾", "letter1": "ش", "letter1_meaning": "تفشٍّ أو انتشار مع دقة", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "تفشٍّ أو انتشار مع دقة"}
 {"bab": "ا", "binary_root": "اش", "root": "اشرحف", "words": ["اشْرَحَفَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اش", "root": "اشش", "words": ["أشش", "أَشش"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اش", "root": "اشع", "words": ["أَشع"], "muajam_match": false}
@@ -324,8 +324,8 @@
 {"bab": "ا", "binary_root": "اص", "root": "اصت", "words": ["أَصت"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اص", "root": "اصتت", "words": ["أَصَتَتِ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اص", "root": "اصخات", "words": ["اصْخاتَّ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اص", "root": "اصد", "words": ["أصد", "أَصد", "اصد"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اص", "root": "اصر", "words": ["أصر", "أَصر", "اصر"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اص", "root": "اصد", "words": ["أصد", "أَصد", "اصد"], "muajam_match": true, "binary_root_meaning": "شيء كثيف أو صلب قوي يعترض فيوقف النفاذ", "axial_meaning": "إحكام حجب الشيء وحده بما يسد المنفذ إليه", "added_letter": "أ", "quran_example": "مؤصدة - \"عَلَيْهِمْ نَارٌ مُؤْصَدَةٌ\"", "letter1": "ص", "letter1_meaning": "نفاذ بغلظ وقوة وخلوص", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "نفاذ بغلظ وقوة وخلوص"}
+{"bab": "ا", "binary_root": "اص", "root": "اصر", "words": ["أصر", "أَصر", "اصر"], "muajam_match": true, "binary_root_meaning": "التضام الشديد الذي يمنع الانتشار", "axial_meaning": "شدٌّ للحبس، أو الجمع", "added_letter": "أ", "quran_example": "إصرا / إصري - \"وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا\"", "letter1": "ص", "letter1_meaning": "نفاذ بغلظ وقوة وخلوص", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "نفاذ بغلظ وقوة وخلوص"}
 {"bab": "ا", "binary_root": "اص", "root": "اصص", "words": ["أصص"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اص", "root": "اصطب", "words": ["أصطب", "أَصطب"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اص", "root": "اصطبل", "words": ["أصطبل", "إصطبل", "اصطبل"], "muajam_match": false}
@@ -336,7 +336,7 @@
 {"bab": "ا", "binary_root": "اص", "root": "اصفط", "words": ["أصفط"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اص", "root": "اصفعد", "words": ["أصفعد"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اص", "root": "اصفعند", "words": ["إصْفَعنْدُ", "إِصفعند"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اص", "root": "اصل", "words": ["أصل", "أَصِيلًا", "اصل"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اص", "root": "اصل", "words": ["أصل", "أَصِيلًا", "اصل"], "muajam_match": true, "binary_root_meaning": "التماسك الدقيق مع لطف ما في الأثناء", "axial_meaning": "امتداد في العمق يقوم عليه الشيء ويمتد منه إلى الأعلى", "added_letter": "أ", "quran_example": "أصلها / أصل - \"أَصْلُهَا ثَابِتٌ\"", "letter1": "ص", "letter1_meaning": "نفاذ بغلظ وقوة وخلوص", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "نفاذ بغلظ وقوة وخلوص"}
 {"bab": "ا", "binary_root": "اص", "root": "اصلخم", "words": ["اصْلَخَمَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اص", "root": "اصن", "words": ["أصن"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اص", "root": "اصه", "words": ["أصَّهُ"], "muajam_match": false}
@@ -401,11 +401,11 @@
 {"bab": "ا", "binary_root": "اف", "root": "افظي", "words": ["أفْظَى"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اف", "root": "افع", "words": ["أَفع"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اف", "root": "افعل", "words": ["افْعَلْ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اف", "root": "افف", "words": ["أفف", "أُفٍّ", "أُفٍّف"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اف", "root": "افق", "words": ["أفق", "أُفٍّق", "افق"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اف", "root": "افك", "words": ["أفك", "أفَكَ", "أَفَّاكٍ", "أُفِكَ", "أُفٍّك", "افك", "تَأْفِكَ", "تُؤْفَكُ", "مُؤْتَفِكَةَ", "مُؤْتَفِكَٰتُ", "مُؤْتَفِكَٰتِ", "يَأْفِكُ", "يُؤْفَكُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اف", "root": "افف", "words": ["أفف", "أُفٍّ", "أُفٍّف"], "muajam_match": true, "binary_root_meaning": "إفراز شيء مكروه ونفيه", "axial_meaning": "(إفراز) شيء مكروه قليلًا، ونفيه، أي إبعاده وعدم قبوله", "added_letter": "ف", "quran_example": "فَلَا تَقُل لَّهُمَا أُفٍّ", "letter1": "أ", "letter1_meaning": "—", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "طرد وإبعاد ونفاذ بقوة"}
+{"bab": "ا", "binary_root": "اف", "root": "افق", "words": ["أفق", "أُفٍّق", "افق"], "muajam_match": true, "binary_root_meaning": "شق الشيء إلى عمقه ويلزمه فراغ", "axial_meaning": "تجوُّف داخلي (عُلْوِي) محاط", "added_letter": "أ", "quran_example": "سَنُرِيهِمْ آيَاتِنَا فِي الْآفَاقِ", "letter1": "ف", "letter1_meaning": "طرد وإبعاد ونفاذ بقوة", "letter2": "ق", "letter2_meaning": "تعقد واشتداد في العمق", "bab_meaning": "طرد وإبعاد ونفاذ بقوة"}
+{"bab": "ا", "binary_root": "اف", "root": "افك", "words": ["أفك", "أفَكَ", "أَفَّاكٍ", "أُفِكَ", "أُفٍّك", "افك", "تَأْفِكَ", "تُؤْفَكُ", "مُؤْتَفِكَةَ", "مُؤْتَفِكَٰتُ", "مُؤْتَفِكَٰتِ", "يَأْفِكُ", "يُؤْفَكُ"], "muajam_match": true, "binary_root_meaning": "تسيّب جزئي مع شيء من الربط", "axial_meaning": "تغير حال الشيء جملة من وجه إلى وجه", "added_letter": "أ", "quran_example": "وَالْمُؤْتَفِكَةَ أَهْوَىٰ", "letter1": "ف", "letter1_meaning": "طرد وإبعاد ونفاذ بقوة", "letter2": "ك", "letter2_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "bab_meaning": "طرد وإبعاد ونفاذ بقوة"}
 {"bab": "ا", "binary_root": "اف", "root": "افكل", "words": ["أفكل"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اف", "root": "افل", "words": ["ءَافِلِينَ", "أفل", "أفَلَ", "أَفَلَ", "أَفَلَتْ", "أُفٍّل", "افل"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اف", "root": "افل", "words": ["ءَافِلِينَ", "أفل", "أفَلَ", "أَفَلَ", "أَفَلَتْ", "أُفٍّل", "افل"], "muajam_match": true, "binary_root_meaning": "انفصال ندورًا أو نتوءًا مع ضعف", "axial_meaning": "غياب الشيء (الحاد) في مقره مع ضعف ما", "added_letter": "أ", "quran_example": "لَا أُحِبُّ الْآفِلِينَ", "letter1": "ف", "letter1_meaning": "طرد وإبعاد ونفاذ بقوة", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "طرد وإبعاد ونفاذ بقوة"}
 {"bab": "ا", "binary_root": "اف", "root": "افلود", "words": ["أُفْلودٌ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اف", "root": "افن", "words": ["أفن", "أفَنَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اف", "root": "افي", "words": ["أفى"], "muajam_match": false}
@@ -447,7 +447,7 @@
 {"bab": "ا", "binary_root": "اك", "root": "اكر", "words": ["أكر", "أَكر", "اكر"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اك", "root": "اكف", "words": ["أكف", "اكف"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اك", "root": "اكك", "words": ["أكك"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اك", "root": "اكل", "words": ["ءَاكِلُونَ", "ءَاكِلِينَ", "أكل", "أَكَلَ", "أَكَلُ", "أَكْلًا", "أَكْلِ", "اكل", "تَأْكُلُ", "تَأْكُلْ", "كُلَ", "كُلُ", "كُلِ", "مَّأْكُولٍۭ", "نَّأْكُلَ", "يَأْكُلَ", "يَأْكُلُ", "يَأْكُلْ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اك", "root": "اكل", "words": ["ءَاكِلُونَ", "ءَاكِلِينَ", "أكل", "أَكَلَ", "أَكَلُ", "أَكْلًا", "أَكْلِ", "اكل", "تَأْكُلُ", "تَأْكُلْ", "كُلَ", "كُلُ", "كُلِ", "مَّأْكُولٍۭ", "نَّأْكُلَ", "يَأْكُلَ", "يَأْكُلُ", "يَأْكُلْ"], "muajam_match": true, "binary_root_meaning": "تجمع الشيء كتلة دون حد أو طرف دقيق", "axial_meaning": "طحن الحي للمادة المطعومة مضغًا وبلعها", "added_letter": "أ", "quran_example": "وَمَا أَكَلَ السَّبُعُ", "letter1": "ك", "letter1_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع"}
 {"bab": "ا", "binary_root": "اك", "root": "اكله", "words": ["أكَلَهُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اك", "root": "اكم", "words": ["أكم", "اكم"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اك", "root": "اكن", "words": ["أكن"], "muajam_match": false}
@@ -1001,7 +1001,7 @@
 {"bab": "ا", "binary_root": "ال", "root": "البينيث", "words": ["البَيْنيثُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "البيهن", "words": ["البَيْهَنُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "البييل", "words": ["البَئيلُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ال", "root": "الت", "words": ["ألت", "أَلت", "أَلَتْ", "الت"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ال", "root": "الت", "words": ["ألت", "أَلت", "أَلَتْ", "الت"], "muajam_match": true, "binary_root_meaning": "التماسك واللزوق وما إليه وهو تداخل يلزمه النقص", "axial_meaning": "النقص عن المستحق أو المتوقع", "added_letter": "ألت-ولت", "quran_example": "﴿وَمَآ أَلَتْنَٰهُم مِّنْ عَمَلِهِم مِّن شَىْءٍ﴾", "letter1": "لت", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "ال", "root": "التاتاه", "words": ["التَّأْتَأَةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "التاته", "words": ["التَّأَتُّهُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "التاجر", "words": ["التَّاجِرُ"], "muajam_match": false}
@@ -4579,7 +4579,7 @@
 {"bab": "ا", "binary_root": "ال", "root": "الغينف", "words": ["الغَيْنَفُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الغيهب", "words": ["الغَيْهَبُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الغيهم", "words": ["الغَيْهَمُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ال", "root": "الف", "words": ["ألف", "أَلَّفَ", "أَلَّفْ", "إِيلَٰفِ", "إِۦلَٰفِ", "الف", "مُؤَلَّفَةِ", "يُؤَلِّفُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ال", "root": "الف", "words": ["ألف", "أَلَّفَ", "أَلَّفْ", "إِيلَٰفِ", "إِۦلَٰفِ", "الف", "مُؤَلَّفَةِ", "يُؤَلِّفُ"], "muajam_match": true, "binary_root_meaning": "التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة", "axial_meaning": "تجمع المتفرقات مع نوع من المجانسة أو القبول بينها", "added_letter": "ألف", "quran_example": "﴿فَأَلَّفَ بَيْنَ قُلُوبِكُمْ﴾", "letter1": "لف", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "ال", "root": "الفاثج", "words": ["الفاثِجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الفاثور", "words": ["الفاثورُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الفاحشه", "words": ["الفاحِشَةُ"], "muajam_match": false}
@@ -5191,7 +5191,7 @@
 {"bab": "ا", "binary_root": "ال", "root": "القيعم", "words": ["القَيْعَمُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "القيق", "words": ["القَيْقُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "القيقب", "words": ["القَيْقَبُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ال", "root": "الك", "words": ["ألك", "ألَكَ", "الك"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ال", "root": "الك", "words": ["ألك", "ألَكَ", "الك"], "muajam_match": true, "binary_root_meaning": "نوع من التراكم يتمثل في الاكتناز باللحم", "axial_meaning": "مضغ الشيء أو إدارته في الفم على شدة فيه", "added_letter": "ألك", "quran_example": "﴿ٱللَّهُ يَصْطَفِى مِنَ ٱلْمَلَٰٓئِكَةِ رُسُلًا﴾", "letter1": "لك", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "ال", "root": "الكاء", "words": ["الكاءُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الكاب", "words": ["الكَأْبُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الكاخره", "words": ["الكَاخِرَةُ"], "muajam_match": false}
@@ -5473,7 +5473,7 @@
 {"bab": "ا", "binary_root": "ال", "root": "الكيكه", "words": ["الكَيْكَةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الكيم", "words": ["الكِيمُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الكيه", "words": ["الكَيِّهُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ال", "root": "الل", "words": ["ألل"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ال", "root": "الل", "words": ["ألل"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "انبساط أو امتداد بعرض ورقة دون كثافة أو انثناء", "added_letter": "ألل", "quran_example": "﴿لَا يَرْقُبُوا۟ فِى مُؤْمِنٍ إِلًّا وَلَا ذِمَّةً﴾", "letter1": "ءل", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "ال", "root": "اللاءه", "words": ["اللاَّءَة"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "اللاذقيه", "words": ["اللاَّذِقِيَّةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "اللاذن", "words": ["اللاَّذَنُ"], "muajam_match": false}
@@ -5625,7 +5625,7 @@
 {"bab": "ا", "binary_root": "ال", "root": "الليكه", "words": ["اللَّيْكَةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الليل", "words": ["اللَّيْلُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الليم", "words": ["الليمُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ال", "root": "الم", "words": ["ألم", "الم", "تَأْلَمُ", "يَأْلَمُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ال", "root": "الم", "words": ["ألم", "الم", "تَأْلَمُ", "يَأْلَمُ"], "muajam_match": true, "binary_root_meaning": "نوع من الضم أو التضام لما شأنه الانتشار إلى الظاهر", "axial_meaning": "وجع يسري في أثناء البدن (أو النفس)", "added_letter": "ألم", "quran_example": "﴿وَلَهُمْ عَذَابٌ أَلِيمٌ﴾", "letter1": "لم", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "ال", "root": "الماء", "words": ["الماءُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الماج", "words": ["المَأْجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الماجشون", "words": ["الماجُشُونُ"], "muajam_match": false}
@@ -6128,7 +6128,7 @@
 {"bab": "ا", "binary_root": "ال", "root": "النيلنج", "words": ["النِّيلَنْجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "النيلوفر", "words": ["النَّيْلَوفَرُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "النيم", "words": ["النِّيمُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ال", "root": "اله", "words": ["أله", "ألَهَ", "أَله", "اله", "آللَّهُ", "لَّهِ", "ٱللَّهَ", "ٱللَّهُ", "ٱللَّهِ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ال", "root": "اله", "words": ["أله", "ألَهَ", "أَله", "اله", "آللَّهُ", "لَّهِ", "ٱللَّهَ", "ٱللَّهُ", "ٱللَّهِ"], "muajam_match": true, "binary_root_meaning": "الاتساع مع شمول وشفافية أو فراغ أثناء", "axial_meaning": "شفافية أو ضوء مع أثر تستشعر حدته", "added_letter": "أله", "quran_example": "﴿وَهُوَ ٱلَّذِى فِى ٱلسَّمَآءِ إِلَٰهٌ﴾", "letter1": "له", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "ال", "root": "الهاء", "words": ["الهاءُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الهاذل", "words": ["الهاذِلُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الهاغيه", "words": ["الهاغِيَةُ"], "muajam_match": false}
@@ -6401,7 +6401,7 @@
 {"bab": "ا", "binary_root": "ال", "root": "الهينمه", "words": ["الهَيْنَمَةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الهيه", "words": ["الهَيْهُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الهييه", "words": ["الهَيْئَةُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ال", "root": "الو", "words": ["ألو", "الو", "يَأْتَلِ", "يَأْلُ", "يُؤْلُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ال", "root": "الو", "words": ["ألو", "الو", "يَأْتَلِ", "يَأْلُ", "يُؤْلُ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "اختزان الشيء مادته لا تتبدد", "added_letter": "ألو", "quran_example": "﴿لَا يَأْلُونَكُمْ خَبَالًا﴾", "letter1": "ءلو", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "ال", "root": "الواب", "words": ["الوأْبُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الواج", "words": ["الوَأْجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الواحد", "words": ["الواحِدُ"], "muajam_match": false}
@@ -6628,7 +6628,7 @@
 {"bab": "ا", "binary_root": "ال", "root": "الويل", "words": ["الوَيْلُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الويمه", "words": ["الوَيْمَةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الوين", "words": ["الوَيْنُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ال", "root": "الي", "words": ["ألى", "ألي", "إلى", "إِلَى", "الى"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ال", "root": "الي", "words": ["ألى", "ألي", "إلى", "إِلَى", "الى"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "تجمع غض يعلق بآخر الشيء أو أصله", "added_letter": "ألى", "quran_example": "﴿فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ﴾", "letter1": "ءلي", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "ال", "root": "اليارج", "words": ["اليارَجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "اليازع", "words": ["اليازِعُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ال", "root": "الياس", "words": ["اليَأْسُ"], "muajam_match": false}
@@ -6673,17 +6673,17 @@
 {"bab": "ا", "binary_root": "ام", "root": "اما", "words": ["أما", "اما"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "اما لا", "words": ["إما لا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امبرباريس", "words": ["أمبرباريس"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ام", "root": "امت", "words": ["أمت", "أَمت", "امت"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ام", "root": "امت", "words": ["أمت", "أَمت", "امت"], "muajam_match": true, "binary_root_meaning": "الامتداد مع صفة (قوة، دقة، ضعف...)", "axial_meaning": "تخلخل الأثناء المفترض امتلاؤها من الشيء الممتد", "added_letter": "أ", "quran_example": "أمتا - \"لَّا تَرَىٰ فِيهَا عِوَجًا وَلَا أَمْتًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ت", "letter2_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "bab_meaning": "امتساك واستواء ظاهري"}
 {"bab": "ا", "binary_root": "ام", "root": "امته", "words": ["أمَتَه"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امج", "words": ["أمج", "أَمج"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امح", "words": ["أمح", "أمَحَ", "أَمح"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ام", "root": "امد", "words": ["أمد", "أَمد", "امد"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ام", "root": "امد", "words": ["أمد", "أَمد", "امد"], "muajam_match": true, "binary_root_meaning": "الامتداد والغاية", "axial_meaning": "حدود ما يُجْهَد فيه جرياً، أو حملاً", "added_letter": "أ", "quran_example": "أمدا - \"أَمَدًا بَعِيدًا\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "د", "letter2_meaning": "احتباس بضغط وامتداد طولي", "bab_meaning": "امتساك واستواء ظاهري"}
 {"bab": "ا", "binary_root": "ام", "root": "امدان", "words": ["إمِّدانُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امذقر", "words": ["امْذَقَرَّ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ام", "root": "امر", "words": ["ءَامُرَ", "ءَامُرُ", "ءَامِرُونَ", "أمر", "أَمر", "أَمَرَ", "أَمَرُ", "أَمَرْ", "أُمِرُ", "أُمِرْ", "أْتَمِرُ", "أْمُرْ", "امر", "تَأْمُرُ", "تَأْمُرِينَ", "تُؤْمَرُ", "يَأْتَمِرُ", "يَأْمُرَ", "يَأْمُرُ", "يُؤْمَرُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ام", "root": "امر", "words": ["ءَامُرَ", "ءَامُرُ", "ءَامِرُونَ", "أمر", "أَمر", "أَمَرَ", "أَمَرُ", "أَمَرْ", "أُمِرُ", "أُمِرْ", "أْتَمِرُ", "أْمُرْ", "امر", "تَأْمُرُ", "تَأْمُرِينَ", "تُؤْمَرُ", "يَأْتَمِرُ", "يَأْمُرَ", "يَأْمُرُ", "يُؤْمَرُ"], "muajam_match": true, "binary_root_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)", "axial_meaning": "نفاذ مع علو دونه جمع بشدّة", "added_letter": "أ", "quran_example": "الأمر - \"أَلَا لَهُ الْخَلْقُ وَالْأَمْرُ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتساك واستواء ظاهري"}
 {"bab": "ا", "binary_root": "ام", "root": "امرخد", "words": ["امْرَخَدَّ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امزهل", "words": ["امْزَهَلَّ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ام", "root": "امس", "words": ["أمس", "أمْسِ", "امس"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ام", "root": "امس", "words": ["أمس", "أمْسِ", "امس"], "muajam_match": true, "binary_root_meaning": "المخالطة والاتصال", "axial_meaning": "التخلف", "added_letter": "أ", "quran_example": "الأمس - \"كَأَن لَّمْ تَغْنَ بِالْأَمْسِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "امتساك واستواء ظاهري"}
 {"bab": "ا", "binary_root": "ام", "root": "امسغ", "words": ["امْسَغَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امص", "words": ["أمص"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امض", "words": ["أمض", "أَمض", "امِضَ"], "muajam_match": false}
@@ -6691,11 +6691,11 @@
 {"bab": "ا", "binary_root": "ام", "root": "امط", "words": ["أمط", "أَمط"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امع", "words": ["أمع", "أَمع"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ام", "root": "امق", "words": ["أمق", "امْقُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ام", "root": "امل", "words": ["أمل", "امل"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ام", "root": "امم", "words": ["ءَآمِّينَ", "أمم", "أَمَامَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ام", "root": "امن", "words": ["ءَامَ", "ءَامَن", "ءَامَنَ", "ءَامَنَتْ", "ءَامَنُ", "ءَامِنًا", "ءَامِنَةً", "ءَامِنُ", "ءَامِنُونَ", "ءَامِنِينَ", "ءَامِنْ", "أمن", "أَمن", "أَمِن", "أَمِنَ", "أَمِنُ", "إِيمَٰنًا", "إِيمَٰنٍ", "إِيمَٰنَ", "إِيمَٰنُ", "إِيمَٰنِ", "امن", "تَأْمَنْ", "تَأْمَ۫نَّ", "تُؤْمِن", "تُؤْمِنَ", "تُؤْمِنُ", "ـَٔامَ", "ـَٔامَنَ", "ـَٔامَنَت", "ـَٔامَنُ", "ـَٔامِنُ", "مَأْمُونٍ", "مُؤْمِنًا", "مُؤْمِنٌ", "مُؤْمِنٍ", "مُؤْمِنَةٍ", "مُؤْمِنَيْنِ", "مُؤْمِنَٰتٍ", "مُؤْمِنَٰتُ", "مُؤْمِنَٰتِ", "مُؤْمِنُ", "مُؤْمِنُونَ", "مُؤْمِنِينَ", "مُّؤْمِنٌ", "مُّؤْمِنَةً", "مُّؤْمِنَةٌ", "مُّؤْمِنَةٍ", "مُّؤْمِنَٰتٌ", "مُّؤْمِنَٰتٍ", "مُّؤْمِنُونَ", "مُّؤْمِنِينَ", "نُؤْمِنَ", "نُؤْمِنُ", "نُّؤْمِنَ", "يَأْمَنُ", "يُؤْمِ", "يُؤْمِن", "يُؤْمِنَ", "يُؤْمِنُ", "يُؤْمِنۢ", "ٱؤْتُمِنَ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ام", "root": "امل", "words": ["أمل", "امل"], "muajam_match": true, "binary_root_meaning": "الامتداد مع الحوز أو الشمول", "axial_meaning": "امتداد الشيء طولاً مع عرض ما، وتجمع - أو كثافة - فيه", "added_letter": "أ", "quran_example": "الأمل - \"وَيُلْهِهِمُ الْأَمَلُ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "ا", "binary_root": "ام", "root": "امم", "words": ["ءَآمِّينَ", "أمم", "أَمَامَ"], "muajam_match": true, "binary_root_meaning": "التجمع والتضام", "axial_meaning": "تَضَامُّ شَيءٍ - أو أشياء - متجانسة في حيّز يحيط بظاهرها بلطف", "added_letter": "أ", "quran_example": "أمة - \"كَانَ النَّاسُ أُمَّةً وَاحِدَةً\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "ا", "binary_root": "ام", "root": "امن", "words": ["ءَامَ", "ءَامَن", "ءَامَنَ", "ءَامَنَتْ", "ءَامَنُ", "ءَامِنًا", "ءَامِنَةً", "ءَامِنُ", "ءَامِنُونَ", "ءَامِنِينَ", "ءَامِنْ", "أمن", "أَمن", "أَمِن", "أَمِنَ", "أَمِنُ", "إِيمَٰنًا", "إِيمَٰنٍ", "إِيمَٰنَ", "إِيمَٰنُ", "إِيمَٰنِ", "امن", "تَأْمَنْ", "تَأْمَ۫نَّ", "تُؤْمِن", "تُؤْمِنَ", "تُؤْمِنُ", "ـَٔامَ", "ـَٔامَنَ", "ـَٔامَنَت", "ـَٔامَنُ", "ـَٔامِنُ", "مَأْمُونٍ", "مُؤْمِنًا", "مُؤْمِنٌ", "مُؤْمِنٍ", "مُؤْمِنَةٍ", "مُؤْمِنَيْنِ", "مُؤْمِنَٰتٍ", "مُؤْمِنَٰتُ", "مُؤْمِنَٰتِ", "مُؤْمِنُ", "مُؤْمِنُونَ", "مُؤْمِنِينَ", "مُّؤْمِنٌ", "مُّؤْمِنَةً", "مُّؤْمِنَةٌ", "مُّؤْمِنَةٍ", "مُّؤْمِنَٰتٌ", "مُّؤْمِنَٰتٍ", "مُّؤْمِنُونَ", "مُّؤْمِنِينَ", "نُؤْمِنَ", "نُؤْمِنُ", "نُّؤْمِنَ", "يَأْمَنُ", "يُؤْمِ", "يُؤْمِن", "يُؤْمِنَ", "يُؤْمِنُ", "يُؤْمِنۢ", "ٱؤْتُمِنَ"], "muajam_match": true, "binary_root_meaning": "القوة والثبات مع صفة (نقص، وثاقة، حجز)", "axial_meaning": "وثاقة في الباطن", "added_letter": "أ", "quran_example": "آمن - \"آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "امتساك واستواء ظاهري"}
 {"bab": "ا", "binary_root": "ام", "root": "امه", "words": ["أمه", "أمِهَ", "أَمَّهُ", "امه"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ام", "root": "امو", "words": ["أمو"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ام", "root": "امو", "words": ["أمو"], "muajam_match": true, "binary_root_meaning": "النقص والانفراد", "axial_meaning": "أنثى مملوكة", "added_letter": "أ و", "quran_example": "أمة - \"وَلَأَمَةٌ مُّؤْمِنَةٌ خَيْرٌ مِّن مُّشْرِكَةٍ\"", "letter1": "ء", "letter1_meaning": "تؤكد معنى ما تصحبه / ضغط وتقوية", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "امتساك واستواء ظاهري"}
 {"bab": "ا", "binary_root": "ام", "root": "امي", "words": ["أمى", "أمي"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "ان وان", "words": ["إِنَّ وأَنَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انا", "words": ["أنا", "انا"], "muajam_match": false}
@@ -6707,7 +6707,7 @@
 {"bab": "ا", "binary_root": "ان", "root": "انت", "words": ["أنت", "أنَتَ", "أَنت", "انت"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انتتم", "words": ["انْتَتَمَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انتن", "words": ["أنتن"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ان", "root": "انث", "words": ["أنث", "أَنث", "انث"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ان", "root": "انث", "words": ["أنث", "أَنث", "انث"], "muajam_match": true, "binary_root_meaning": "الانتثار أو النشر بتفشٍّ واندفاع ما", "axial_meaning": "لين أثناء الشيء وعدم غِلَظها وصلادتها", "added_letter": "أ", "quran_example": "الأنثى - \"الذَّكَرَ وَالْأُنثَى\"", "letter1": "ن", "letter1_meaning": "امتداد لطيف في الباطن أو منه", "letter2": "ث", "letter2_meaning": "كثافة أو غلظ مع تفشٍّ وانتشار", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
 {"bab": "ا", "binary_root": "ان", "root": "انثت", "words": ["آنَثَتِ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انجذان", "words": ["أنجذان"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انح", "words": ["أنح", "أنَحَ", "أَنح", "انح"], "muajam_match": false}
@@ -6719,14 +6719,14 @@
 {"bab": "ا", "binary_root": "ان", "root": "اندكان", "words": ["اندُكانُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "اندلس", "words": ["أندلس"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انده", "words": ["أُنْدَةُ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ان", "root": "انس", "words": ["ءَانَسَ", "ءَانَسْ", "أنس", "إنس", "انس", "تَسْتَأْنِسُ", "مُسْتَـْٔنِسِينَ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ان", "root": "انس", "words": ["ءَانَسَ", "ءَانَسْ", "أنس", "إنس", "انس", "تَسْتَأْنِسُ", "مُسْتَـْٔنِسِينَ"], "muajam_match": true, "binary_root_meaning": "نفاذ بدقة من أثناء شيء أو فيها", "axial_meaning": "( الأنس والالفة) كَوْنُ الشيء في وَسَطِ مجانس – أو مشاكل – له (يظهر منه)", "added_letter": "أ", "quran_example": "الإنس / آنس - \"وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ\"", "letter1": "ن", "letter1_meaning": "امتداد لطيف في الباطن أو منه", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
 {"bab": "ا", "binary_root": "ان", "root": "انسدخ", "words": ["انْسَدَخَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انش", "words": ["أَنش"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انصن", "words": ["أنصن"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انض", "words": ["أنض", "أَنض"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انطاكيه", "words": ["انْطاكِيَةُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انظح", "words": ["أنْظَحَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ان", "root": "انف", "words": ["أنف", "أَنف", "انف"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ان", "root": "انف", "words": ["أنف", "أَنف", "انف"], "muajam_match": true, "binary_root_meaning": "نفاذ أو إبعاد بانتشار", "axial_meaning": "نتوء الشيء للأمام - أو إلى أعلى - دقيقًا مُسَوَّى سابقًا ما هو منه", "added_letter": "أ", "quran_example": "الأنف - \"وَالْأَنفَ بِالْأَنفِ\"", "letter1": "ن", "letter1_meaning": "امتداد لطيف في الباطن أو منه", "letter2": "ف", "letter2_meaning": "طرد وإبعاد ونفاذ بقوة", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
 {"bab": "ا", "binary_root": "ان", "root": "انفشط", "words": ["انْفَشَطَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انفطش", "words": ["انْفَطَشَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انق", "words": ["أنق", "أَنق", "انق"], "muajam_match": false}
@@ -6734,27 +6734,27 @@
 {"bab": "ا", "binary_root": "ان", "root": "انقليس", "words": ["أنقليس"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انك", "words": ["أنك", "أَنك", "انك"], "muajam_match": false}
 {"bab": "ا", "binary_root": "ان", "root": "انكلث", "words": ["انْكَلَثَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ان", "root": "انم", "words": ["أنم", "أَنم", "انم"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ان", "root": "انم", "words": ["أنم", "أَنم", "انم"], "muajam_match": true, "binary_root_meaning": "انتشار من باطن الشيء إلى ظاهره مع لطف ما", "axial_meaning": "كل ما ينمو من إنسان وجان وحيوان ونبات", "added_letter": "أ", "quran_example": "للأنام - \"وَضَعَهَا لِلْأَنَامِ\"", "letter1": "ن", "letter1_meaning": "امتداد لطيف في الباطن أو منه", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
 {"bab": "ا", "binary_root": "ان", "root": "انمل", "words": ["أنمل"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ان", "root": "انن", "words": ["أنن"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ان", "root": "انن", "words": ["أنن"], "muajam_match": true, "binary_root_meaning": "التجوف والوجود في الجوف", "axial_meaning": "وجود الشيء - أو امتداده - في أثناء، أو جوف", "added_letter": "أ", "quran_example": "إنّ / أنّ - \"شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ\"", "letter1": "ن", "letter1_meaning": "امتداد لطيف في الباطن أو منه", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
 {"bab": "ا", "binary_root": "ان", "root": "انه", "words": ["أنه", "أنَهَ", "أَنه"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ان", "root": "انو", "words": ["أنو", "إنْوٌ", "انو"], "muajam_match": false}
-{"bab": "ا", "binary_root": "ان", "root": "اني", "words": ["ءَانٍ", "ءَانَآءَ", "ءَانِيَةٍ", "أنى", "أني", "أنَى", "أنَّى", "أَنى", "أَنَّى", "انى", "ـَٔانِيَةٍ", "يَأْنِ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "ان", "root": "انو", "words": ["أنو", "إنْوٌ", "انو"], "muajam_match": true, "binary_root_meaning": "التهيؤ والصلاح للبلوغ والاستعمال", "axial_meaning": "تهيؤ الشيء وصُلُوحُ حاله لما يراد به", "added_letter": "و - أ ن ى", "quran_example": "آنية / آن - \"بِآنِيَةٍ مِّن فِضَّةٍ\"", "letter1": "أ", "letter1_meaning": "—", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
+{"bab": "ا", "binary_root": "ان", "root": "اني", "words": ["ءَانٍ", "ءَانَآءَ", "ءَانِيَةٍ", "أنى", "أني", "أنَى", "أنَّى", "أَنى", "أَنَّى", "انى", "ـَٔانِيَةٍ", "يَأْنِ"], "muajam_match": true, "binary_root_meaning": "التهيؤ والصلاح للبلوغ والاستعمال", "axial_meaning": "تهيؤ الشيء وصُلُوحُ حاله لما يراد به", "added_letter": "و - أ ن ى", "quran_example": "آنية / آن - \"بِآنِيَةٍ مِّن فِضَّةٍ\"", "letter1": "أ", "letter1_meaning": "—", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
 {"bab": "ا", "binary_root": "اه", "root": "اها", "words": ["أها"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اه", "root": "اهب", "words": ["أهب", "أَهب", "اهب"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اه", "root": "اهر", "words": ["أهر", "أَهر"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اه", "root": "اهق", "words": ["أهق"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اه", "root": "اهل", "words": ["أهل", "أَهْلُ", "اهل"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اه", "root": "اهل", "words": ["أهل", "أَهْلُ", "اهل"], "muajam_match": true, "binary_root_meaning": "فراغ الأثناء أو ما هو من باب الفراغ", "axial_meaning": "سيوغ إلى الجوف بتمكن ولطف واستطابة", "added_letter": "أهل", "quran_example": "أهل - \"هُوَ أَهْلُ التَّقْوَى وَأَهْلُ الْمَغْفِرَةِ\"", "letter1": "هـ", "letter1_meaning": "فراغ أو إفراغ ما في الجوف", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "فراغ أو إفراغ ما في الجوف"}
 {"bab": "ا", "binary_root": "اه", "root": "اهن", "words": ["أهن"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اه", "root": "اهناس", "words": ["أهْناسُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اه", "root": "اهه", "words": ["أهه"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اه", "root": "اهو", "words": ["أهو"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اه", "root": "اهي", "words": ["أهى", "أهَى"], "muajam_match": false}
 {"bab": "ا", "binary_root": "او", "root": "اوا", "words": ["أوأ", "أوا"], "muajam_match": false}
-{"bab": "ا", "binary_root": "او", "root": "اوب", "words": ["أوب", "أَوب", "أَوِّبِ", "اوب"], "muajam_match": false}
+{"bab": "ا", "binary_root": "او", "root": "اوب", "words": ["أوب", "أَوب", "أَوِّبِ", "اوب"], "muajam_match": true, "binary_root_meaning": "الرجوع إلى مستقر", "axial_meaning": "رجوع الشيء إلى مستقره", "added_letter": "أ ب / أ ي ب", "quran_example": "إيابهم - \"إِنَّ إِلَيْنَا إِيَابَهُمْ\" / أوّاب - \"كُلٌّ لَّهُ أَوَّابٌ\"", "letter1": "ء", "letter1_meaning": "تؤكد معنى ما تصحبه / ضغط وتقوية", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "تجمع رخو مع تلاصق ما"}
 {"bab": "ا", "binary_root": "او", "root": "اوج", "words": ["أَوج"], "muajam_match": false}
 {"bab": "ا", "binary_root": "او", "root": "اوخ", "words": ["أَوخ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "او", "root": "اود", "words": ["أود", "أوِدَ", "أَود", "اود", "يَـُٔودُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "او", "root": "اود", "words": ["أود", "أوِدَ", "أَود", "اود", "يَـُٔودُ"], "muajam_match": true, "binary_root_meaning": "الامتداد بقوة للتمكين أو الضغط", "axial_meaning": "الضغط بثقل شديد على الممتد حتى ينثني", "added_letter": "أود", "quran_example": "﴿وَلَا يَئُودُهُ حِفْظُهُمَا﴾", "letter1": "يد", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "ا", "binary_root": "او", "root": "اودح", "words": ["أوْدَحَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "او", "root": "اور", "words": ["أور", "أَور"], "muajam_match": false}
 {"bab": "ا", "binary_root": "او", "root": "اوز", "words": ["أوز", "اوز"], "muajam_match": false}
@@ -6766,24 +6766,24 @@
 {"bab": "ا", "binary_root": "او", "root": "اوق", "words": ["أوق", "اوق"], "muajam_match": false}
 {"bab": "ا", "binary_root": "او", "root": "اوقليدس", "words": ["أَوقْلِيدِسُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "او", "root": "اوك", "words": ["أوك"], "muajam_match": false}
-{"bab": "ا", "binary_root": "او", "root": "اول", "words": ["أول", "أَوَّلَ", "اول", "تَأْوِيلًا", "تَأْوِيلَ", "تَأْوِيلُ", "تَأْوِيلِ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "او", "root": "اول", "words": ["أول", "أَوَّلَ", "اول", "تَأْوِيلًا", "تَأْوِيلَ", "تَأْوِيلُ", "تَأْوِيلِ"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "حقيقة الشيء المتحصلة منه أي صلب مادته الخالصة", "added_letter": "أول", "quran_example": "﴿وَءَالَ إِبْرَٰهِيمَ﴾ / ﴿تَأْوِيلِ ٱلْأَحَادِيثِ﴾", "letter1": "ءول", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "تعلق أو امتداد مع استقلال أو تميز"}
 {"bab": "ا", "binary_root": "او", "root": "اولاء", "words": ["أولاء"], "muajam_match": false}
 {"bab": "ا", "binary_root": "او", "root": "اولو", "words": ["أولو", "أُولُو", "اولو"], "muajam_match": false}
 {"bab": "ا", "binary_root": "او", "root": "اولي", "words": ["أولى", "أُولَى"], "muajam_match": false}
-{"bab": "ا", "binary_root": "او", "root": "اوم", "words": ["أوم", "اوم"], "muajam_match": false}
-{"bab": "ا", "binary_root": "او", "root": "اون", "words": ["ءَانَ", "أون", "اون", "ـَٰٔنَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "او", "root": "اوه", "words": ["أوه", "أوَّه", "أوْهُِ", "اوه"], "muajam_match": false}
-{"bab": "ا", "binary_root": "او", "root": "اوو", "words": ["أوو"], "muajam_match": false}
-{"bab": "ا", "binary_root": "او", "root": "اوي", "words": ["ءَاوَ", "ءَاوَىٰٓ", "ءَاوَيْ", "ءَاوِىٓ", "أوى", "أوي", "أَوَى", "أَوَيْ", "أْوُ", "اوى", "تُـْٔوِىٓ", "تُـْٔوِي", "ـَٔاوَىٰ", "ـَٔاوِىٓ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "او", "root": "اوم", "words": ["أوم", "اوم"], "muajam_match": true, "binary_root_meaning": "النقص والانفراد", "axial_meaning": "ذهاب كثافة الشيء ونداه - أو كماله - رغم اجتماع ظاهره أو استوائه", "added_letter": "أ و - أ ي م", "quran_example": "الأيامى - \"وَأَنكِحُوا الْأَيَامَىٰ مِنكُمْ\"", "letter1": "ء", "letter1_meaning": "تؤكد معنى ما تصحبه / ضغط وتقوية", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "ا", "binary_root": "او", "root": "اون", "words": ["ءَانَ", "أون", "اون", "ـَٰٔنَ"], "muajam_match": true, "binary_root_meaning": "اتساع الحيز والامتلاء", "axial_meaning": "اتساع الحيز لما يوضع فيه، وامتلاؤه به امتلاءً تامًا", "added_letter": "ن", "quran_example": "الآن - \"الْآنَ حَصْحَصَ الْحَقُّ\"", "letter1": "أ", "letter1_meaning": "—", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
+{"bab": "ا", "binary_root": "او", "root": "اوه", "words": ["أوه", "أوَّه", "أوْهُِ", "اوه"], "muajam_match": true, "binary_root_meaning": "الفراغ وما يتولد عنه من امتداد أو ضعف أو استعداد", "axial_meaning": "التصويت تعبيراً عن التوجع من ألم حسي أو نفسي", "added_letter": "أوه", "quran_example": "أواه - \"إِنَّ إِبْرَاهِيمَ لَأَوَّاهٌ حَلِيمٌ\"", "letter1": "هـ", "letter1_meaning": "فراغ أو إفراغ ما في الجوف", "letter2": "", "letter2_meaning": "", "bab_meaning": "فراغ أو إفراغ ما في الجوف"}
+{"bab": "ا", "binary_root": "او", "root": "اوو", "words": ["أوو"], "muajam_match": true, "binary_root_meaning": "الوجود وحالاته بين الضعف والظهور", "axial_meaning": "ضم مع ضعف ما", "added_letter": "أوو - أوى", "quran_example": "المأوى - \"فَإِنَّ الْجَنَّةَ هِيَ الْمَأْوَى\"", "letter1": "أ", "letter1_meaning": "—", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "فراغ أو إفراغ ما في الجوف"}
+{"bab": "ا", "binary_root": "او", "root": "اوي", "words": ["ءَاوَ", "ءَاوَىٰٓ", "ءَاوَيْ", "ءَاوِىٓ", "أوى", "أوي", "أَوَى", "أَوَيْ", "أْوُ", "اوى", "تُـْٔوِىٓ", "تُـْٔوِي", "ـَٔاوَىٰ", "ـَٔاوِىٓ"], "muajam_match": true, "binary_root_meaning": "الوجود وحالاته بين الضعف والظهور", "axial_meaning": "ضم مع ضعف ما", "added_letter": "أوو - أوى", "quran_example": "المأوى - \"فَإِنَّ الْجَنَّةَ هِيَ الْمَأْوَى\"", "letter1": "أ", "letter1_meaning": "—", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "فراغ أو إفراغ ما في الجوف"}
 {"bab": "ا", "binary_root": "او", "root": "اويت", "words": ["أوَيْتُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايا", "words": ["أيأ", "أيا", "أيَا", "أَيَا", "إيا", "ايا"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايايا", "words": ["أيأيأ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اي", "root": "ايب", "words": ["أيب", "أَيب", "ايب"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اي", "root": "ايب", "words": ["أيب", "أَيب", "ايب"], "muajam_match": true, "binary_root_meaning": "الرجوع إلى مستقر", "axial_meaning": "رجوع الشيء إلى مستقره", "added_letter": "أ ب / أ ي ب", "quran_example": "إيابهم - \"إِنَّ إِلَيْنَا إِيَابَهُمْ\" / أوّاب - \"كُلٌّ لَّهُ أَوَّابٌ\"", "letter1": "ء", "letter1_meaning": "تؤكد معنى ما تصحبه / ضغط وتقوية", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "تجمع رخو مع تلاصق ما"}
 {"bab": "ا", "binary_root": "اي", "root": "ايتلخ", "words": ["ايْتَلَخَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايج", "words": ["أَيج", "إِيجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايح", "words": ["أيح", "أَيح"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايخ", "words": ["أَيخ", "إِيخِ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اي", "root": "ايد", "words": ["أيد", "أَيد", "أَيَّد", "أَيَّدَ", "أَيَّدْ", "ايد", "يُؤَيِّدُ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اي", "root": "ايد", "words": ["أيد", "أَيد", "أَيَّد", "أَيَّدَ", "أَيَّدْ", "ايد", "يُؤَيِّدُ"], "muajam_match": true, "binary_root_meaning": "الامتداد بقوة للتمكين أو الضغط", "axial_meaning": "تحصين الشيء وتقويته من حوله", "added_letter": "أيد", "quran_example": "﴿وَاذْكُرْ عَبْدَنَا دَاوُدَ ذَا الْأَيْدِ﴾", "letter1": "يد", "letter1_meaning": "—", "letter2": "", "letter2_meaning": "", "bab_meaning": "احتباس بضغط وامتداد طولي"}
 {"bab": "ا", "binary_root": "اي", "root": "ايدج", "words": ["أيْدَجُ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "اير", "words": ["أير", "أَير", "إير", "اير"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايس", "words": ["أيس", "أيِسَ", "ايس"], "muajam_match": false}
@@ -6791,11 +6791,11 @@
 {"bab": "ا", "binary_root": "اي", "root": "ايص", "words": ["أيص", "أَيص"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايض", "words": ["أيض", "أَيض", "ايض"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايق", "words": ["أيق", "أَيق"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اي", "root": "ايك", "words": ["أيك", "أَيك", "ايك"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اي", "root": "ايك", "words": ["أيك", "أَيك", "ايك"], "muajam_match": true, "binary_root_meaning": "", "axial_meaning": "التفاف الشجر بعضه على بعض مع نعومة وخفة", "added_letter": "ي", "quran_example": "كَذَّبَ أَصْحَابُ لَيْكَةِ الْمُرْسَلِينَ", "letter1": "ك", "letter1_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع", "letter2": "أ", "letter2_meaning": "—", "bab_meaning": "ضغط غُؤوري دقيق يؤدي إلى امتساك أو قطع"}
 {"bab": "ا", "binary_root": "اي", "root": "ايل", "words": ["أيل", "أَيل", "إِيلُ", "ايل"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اي", "root": "ايم", "words": ["أيم", "أَيم", "ايم"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اي", "root": "اين", "words": ["أين", "أَيْن", "اين"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اي", "root": "ايم", "words": ["أيم", "أَيم", "ايم"], "muajam_match": true, "binary_root_meaning": "النقص والانفراد", "axial_meaning": "ذهاب كثافة الشيء ونداه - أو كماله - رغم اجتماع ظاهره أو استوائه", "added_letter": "أ و - أ ي م", "quran_example": "الأيامى - \"وَأَنكِحُوا الْأَيَامَىٰ مِنكُمْ\"", "letter1": "ء", "letter1_meaning": "تؤكد معنى ما تصحبه / ضغط وتقوية", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "ا", "binary_root": "اي", "root": "اين", "words": ["أين", "أَيْن", "اين"], "muajam_match": true, "binary_root_meaning": "لزوم الأرض وبطء المفارقة", "axial_meaning": "لزوم الأرض، أو بطء مفارقتها", "added_letter": "ن", "quran_example": "أين / أينما - \"أَيْنَ الْمَفَرُّ\"", "letter1": "أ", "letter1_meaning": "—", "letter2": "ي", "letter2_meaning": "اتصال الممتد شيئاً واحداً وعدم تفرقه", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
 {"bab": "ا", "binary_root": "اي", "root": "اينخ", "words": ["أيْنَخَ"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايه", "words": ["أيه", "إِيهِ", "ايه"], "muajam_match": false}
 {"bab": "ا", "binary_root": "اي", "root": "ايهت", "words": ["أيْهَتَ"], "muajam_match": false}
-{"bab": "ا", "binary_root": "اي", "root": "ايي", "words": ["أيي", "أَىَّ", "أَىُّ", "أَىِّ", "أَييِّ", "أَيًّا", "أَيَّ", "أَيُّ", "أَيُّهَآ"], "muajam_match": false}
+{"bab": "ا", "binary_root": "اي", "root": "ايي", "words": ["أيي", "أَىَّ", "أَىُّ", "أَىِّ", "أَييِّ", "أَيًّا", "أَيَّ", "أَيُّ", "أَيُّهَآ"], "muajam_match": true, "binary_root_meaning": "الوجود وحالاته بين الضعف والظهور", "axial_meaning": "بقاء الشيء في مكانه شاخصاً علامةً لشيء", "added_letter": "أيى - إي", "quran_example": "آيات - \"تِلْكَ آيَاتُ الْكِتَابِ الْحَكِيمِ\"", "letter1": "أ", "letter1_meaning": "—", "letter2": "ي", "letter2_meaning": "اتصال الممتد شيئاً واحداً وعدم تفرقه", "bab_meaning": "فراغ أو إفراغ ما في الجوف"}

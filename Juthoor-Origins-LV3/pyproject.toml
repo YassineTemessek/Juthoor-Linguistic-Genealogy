@@ -3,7 +3,7 @@ name = "juthoor-origins-lv3"
 version = "0.1.0"
 description = "LV3: Origins. Genealogical mapping and theory synthesis."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "juthoor-arabicgenome-lv1",
     "juthoor-cognatediscovery-lv2",

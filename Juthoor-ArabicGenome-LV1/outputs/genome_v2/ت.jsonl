@@ -21,7 +21,7 @@
 {"bab": "ت", "binary_root": "تب", "root": "تبا", "words": ["تبا", "تَبَا"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تب", "root": "تباط", "words": ["تَبَأَّطَ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تب", "root": "تبانت", "words": ["تَبَأَّنْتُ"], "muajam_match": false}
-{"bab": "ت", "binary_root": "تب", "root": "تبب", "words": ["تبب", "تَبَّ", "تَبَّتْ", "تَتْبِيبٍ"], "muajam_match": false}
+{"bab": "ت", "binary_root": "تب", "root": "تبب", "words": ["تبب", "تَبَّ", "تَبَّتْ", "تَتْبِيبٍ"], "muajam_match": true, "binary_root_meaning": "ضعف الشيء المتجمع أو ذهاب غلظه", "axial_meaning": "ذهاب غلظ الشيء وشدته من ضغط حاد عليه", "added_letter": "ب - ت ب ت ب", "quran_example": "تبت / تباب - \"تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
 {"bab": "ت", "binary_root": "تب", "root": "تبت", "words": ["تبت", "تُبَّتُ"], "muajam_match": true, "binary_root_meaning": "ضعف الشيء المتجمع أو ذهاب غلظه", "axial_meaning": "صندوق يُحفظ فيه الشيء، أي يثبت حفظا وثباتا دائما", "added_letter": "ت", "quran_example": "التابوت - \"أَنِ اقْذِفِيهِ فِي التَّابُوتِ\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
 {"bab": "ت", "binary_root": "تب", "root": "تبخلص", "words": ["تَبَخْلَصَ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تب", "root": "تبر", "words": ["تبر", "تَبَّرْ", "تَتْبِيرًا", "مُتَبَّرٌ", "يُتَبِّرُ"], "muajam_match": true, "binary_root_meaning": "ضعف الشيء المتجمع أو ذهاب غلظه", "axial_meaning": "تفتت الشيء قطعًا دقيقة كثيرة", "added_letter": "ر", "quran_example": "تتبير / متبر - \"وَلِيُتَبِّرُوا مَا عَلَوْا تَتْبِيرًا\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "ب", "letter2_meaning": "تجمع رخو مع تلاصق ما", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
@@ -127,14 +127,14 @@
 {"bab": "ت", "binary_root": "تل", "root": "تلصه", "words": ["تَلَّصَهُ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تل", "root": "تلعسم", "words": ["تَلَعْسَمَ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تل", "root": "تلف", "words": ["تلف", "تَلِفَ"], "muajam_match": false}
-{"bab": "ت", "binary_root": "تل", "root": "تلل", "words": ["تلل", "تَلَّ"], "muajam_match": false}
+{"bab": "ت", "binary_root": "تل", "root": "تلل", "words": ["تلل", "تَلَّ"], "muajam_match": true, "binary_root_meaning": "التكديس والاتباع", "axial_meaning": "تكديس بالضغط إلى أسفل حتى يصير الشيء جثا رابيا متماسكا", "added_letter": "ل - ت ل ت ل", "quran_example": "تله - \"وَتَلَّهُ لِلْجَبِينِ\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
 {"bab": "ت", "binary_root": "تل", "root": "تلمخ", "words": ["تَلَمَّخَ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تل", "root": "تلمسان", "words": ["تِلِمْسَانُ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تل", "root": "تله", "words": ["تله", "تَلَّهُ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تل", "root": "تلهلا", "words": ["تَلَهْلأَ"], "muajam_match": false}
-{"bab": "ت", "binary_root": "تل", "root": "تلو", "words": ["أَتْلُ", "أَتْلُوا۟", "أَتْلُوَا۟", "تلو", "تَتْلُ", "تَتْلُوا۟", "تَتْلُوَا۟", "تَلَوْ", "تَلَىٰ", "تُتْلَىٰ", "تُلِيَتْ", "تَّٰلِيَٰتِ", "نَتْلُو", "نَتْلُوا۟", "يَتْلُ", "يَتْلُو", "يَتْلُوا۟", "يُتْلَىٰ", "ٱتْلُ"], "muajam_match": false}
+{"bab": "ت", "binary_root": "تل", "root": "تلو", "words": ["أَتْلُ", "أَتْلُوا۟", "أَتْلُوَا۟", "تلو", "تَتْلُ", "تَتْلُوا۟", "تَتْلُوَا۟", "تَلَوْ", "تَلَىٰ", "تُتْلَىٰ", "تُلِيَتْ", "تَّٰلِيَٰتِ", "نَتْلُو", "نَتْلُوا۟", "يَتْلُ", "يَتْلُو", "يَتْلُوا۟", "يُتْلَىٰ", "ٱتْلُ"], "muajam_match": true, "binary_root_meaning": "التكديس والاتباع", "axial_meaning": "اتباع الشيء ما يسبقه لحوقًا به من خلفه", "added_letter": "و - ت ل ي", "quran_example": "يتلونه / تلاها - \"يَتْلُونَهُ حَقَّ تِلَاوَتِهِ\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
 {"bab": "ت", "binary_root": "تل", "root": "تلوته", "words": ["تَلَوْتُه"], "muajam_match": false}
-{"bab": "ت", "binary_root": "تل", "root": "تلي", "words": ["تلى"], "muajam_match": false}
+{"bab": "ت", "binary_root": "تل", "root": "تلي", "words": ["تلى"], "muajam_match": true, "binary_root_meaning": "التكديس والاتباع", "axial_meaning": "اتباع الشيء ما يسبقه لحوقًا به من خلفه", "added_letter": "و - ت ل ي", "quran_example": "يتلونه / تلاها - \"يَتْلُونَهُ حَقَّ تِلَاوَتِهِ\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "ل", "letter2_meaning": "تعلق أو امتداد مع استقلال أو تميز", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
 {"bab": "ت", "binary_root": "تل", "root": "تليزه", "words": ["تَلِّيزَةُ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تم", "root": "تمار", "words": ["تمأر"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تم", "root": "تمال", "words": ["تمأل"], "muajam_match": false}
@@ -172,4 +172,4 @@
 {"bab": "ت", "binary_root": "تي", "root": "تيس", "words": ["تيس", "تَيْس"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تي", "root": "تيفاق", "words": ["تيفاقُ"], "muajam_match": false}
 {"bab": "ت", "binary_root": "تي", "root": "تيق", "words": ["تَئِقَ"], "muajam_match": false}
-{"bab": "ت", "binary_root": "تي", "root": "تيه", "words": ["تيه", "يَتِيهُ"], "muajam_match": false}
+{"bab": "ت", "binary_root": "تي", "root": "تيه", "words": ["تيه", "يَتِيهُ"], "muajam_match": true, "binary_root_meaning": "الفراغ وما هو من جنسه كالباطل", "axial_meaning": "التحير في فضاء أو فراغ لا معالم فيه", "added_letter": "ي / ت و هـ", "quran_example": "يتيهون - \"يَتِيهُونَ فِي الْأَرْضِ\"", "letter1": "ت", "letter1_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع", "letter2": "هـ", "letter2_meaning": "فراغ أو إفراغ ما في الجوف", "bab_meaning": "ضغط بدقة ووحدة، قد يؤدي إلى إمساك ضعيف أو قطع"}
