@@ -53,13 +53,13 @@ LANG_MAP: dict[str, tuple[str, str, str]] = {
     "en":  ("eng", "modern", "Latn"),
 }
 
-# lang_code -> relative path under Resources/ (relative to repo root)
+# lang_code -> relative path WITHIN Resources/ (no Resources/ prefix)
 LANG_CODE_TO_FILE: dict[str, str] = {
-    "grc": "Resources/ancient_greek/kaikki.org-dictionary-AncientGreek.jsonl",
-    "la":  "Resources/latin/kaikki.org-dictionary-Latin.jsonl",
-    "ang": "Resources/english_old/kaikki.org-dictionary-OldEnglish.jsonl",
-    "enm": "Resources/english_middle/kaikki.org-dictionary-MiddleEnglish.jsonl",
-    "en":  "Resources/english_modern/kaikki.org-dictionary-English.jsonl",
+    "grc": "ancient_greek/kaikki.org-dictionary-AncientGreek.jsonl",
+    "la":  "latin/kaikki.org-dictionary-Latin.jsonl",
+    "ang": "english_old/kaikki.org-dictionary-OldEnglish.jsonl",
+    "enm": "english_middle/kaikki.org-dictionary-MiddleEnglish.jsonl",
+    "en":  "english_modern/kaikki.org-dictionary-English.jsonl",
 }
 
 _DEFAULT_OUTPUT: dict[str, str] = {
@@ -196,7 +196,7 @@ def _default_input(lang_code: str) -> Path:
     if resources_dir:
         return Path(resources_dir) / LANG_CODE_TO_FILE[lang_code]
     repo_root = Path(__file__).resolve().parents[2]
-    return repo_root / LANG_CODE_TO_FILE[lang_code]
+    return repo_root / "Resources" / LANG_CODE_TO_FILE[lang_code]
 
 
 def main() -> None:

@@ -137,3 +137,8 @@ def test_skips_empty_word():
     raw = json.dumps({"word": "", "lang_code": "la", "pos": "noun",
                       "senses": [{"glosses": ["something"]}], "sounds": []})
     assert ingest_kaikki.parse_record(json.loads(raw)) is None
+
+
+def test_skips_unknown_lang_code():
+    rec = ingest_kaikki.parse_record({"word": "hello", "lang_code": "xyz", "pos": "noun", "senses": [{"glosses": ["x"]}]})
+    assert rec is None
