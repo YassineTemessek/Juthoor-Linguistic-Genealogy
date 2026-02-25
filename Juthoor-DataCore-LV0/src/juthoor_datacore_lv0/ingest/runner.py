@@ -59,6 +59,7 @@ def build_steps(*, python_exe: str, repo_root: Path, resources_dir: Path | None)
     data_raw = repo_root / "data" / "raw"
     data_processed = repo_root / "data" / "processed"
     resources_root = resources_dir if resources_dir is not None else data_raw
+    kaikki_root = resources_dir if resources_dir is not None else repo_root / "Resources"
 
     arabic_out = data_processed / "arabic" / "classical"
     arabic_sources = arabic_out / "sources"
@@ -194,6 +195,76 @@ def build_steps(*, python_exe: str, repo_root: Path, resources_dir: Path | None)
             ),
             outputs=(arabic_out / "lexemes.jsonl",),
         ),
+        # ── Kaikki.org Wiktionary dumps ──────────────────────────────────
+        *[
+            Step(
+                name=f"kaikki:{lang_code}",
+                tags=frozenset({lang_tag}),
+                cmd=[
+                    python_exe,
+                    str(scripts_dir / "ingest_kaikki.py"),
+                    "--lang-code", lang_code,
+                    "--output", str(data_processed / out_subpath),
+                ],
+                required_all_inputs=(kaikki_root / src_subpath,),
+                outputs=(data_processed / out_subpath,),
+            )
+            for lang_code, lang_tag, src_subpath, out_subpath in [
+                ("grc", "ancient_greek",
+                 "ancient_greek/kaikki.org-dictionary-AncientGreek.jsonl",
+                 "ancient_greek/sources/kaikki.jsonl"),
+                ("la", "latin",
+                 "latin/kaikki.org-dictionary-Latin.jsonl",
+                 "latin/classical/sources/kaikki.jsonl"),
+                ("ang", "english_old",
+                 "english_old/kaikki.org-dictionary-OldEnglish.jsonl",
+                 "english_old/sources/kaikki.jsonl"),
+                ("enm", "english_middle",
+                 "english_middle/kaikki.org-dictionary-MiddleEnglish.jsonl",
+                 "english_middle/sources/kaikki.jsonl"),
+                ("en", "english_modern",
+                 "english_modern/kaikki.org-dictionary-English.jsonl",
+                 "english_modern/sources/kaikki.jsonl"),
+            ]
+        ],
+        # ── Arabic: 10 classical dictionaries ────────────────────────────
+        Step(
+            name="arabic:ingest_ten_dicts",
+            tags=frozenset({"arabic"}),
+            cmd=[
+                python_exe,
+                str(scripts_dir / "ingest_arabic_ten_dicts.py"),
+                "--input-dir",
+                str(kaikki_root / "Ten dictionaries for Arabic language"),
+                "--output",
+                str(arabic_sources / "ten_dicts.jsonl"),
+            ],
+            required_all_inputs=(kaikki_root / "Ten dictionaries for Arabic language",),
+            outputs=(arabic_sources / "ten_dicts.jsonl",),
+        ),
+        # ── Text-field enrichment (form_text + meaning_text) ─────────────
+        *[
+            Step(
+                name=f"text_fields:{lang_tag}",
+                tags=frozenset({lang_tag, "text_fields"}),
+                cmd=[
+                    python_exe, "-m", "juthoor_datacore_lv0.features.build_text_fields",
+                    str(data_processed / src_subpath),
+                    str(data_processed / src_subpath),
+                    "--overwrite",
+                ],
+                required_all_inputs=(data_processed / src_subpath,),
+                outputs=(data_processed / src_subpath,),
+            )
+            for lang_tag, src_subpath in [
+                ("ancient_greek",   "ancient_greek/sources/kaikki.jsonl"),
+                ("latin",           "latin/classical/sources/kaikki.jsonl"),
+                ("english_old",     "english_old/sources/kaikki.jsonl"),
+                ("english_middle",  "english_middle/sources/kaikki.jsonl"),
+                ("english_modern",  "english_modern/sources/kaikki.jsonl"),
+                ("arabic",          "arabic/classical/sources/ten_dicts.jsonl"),
+            ]
+        ],
     ]
 
 
