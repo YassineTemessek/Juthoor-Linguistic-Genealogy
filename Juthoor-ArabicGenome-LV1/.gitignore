@@ -30,3 +30,6 @@ Desktop.ini
 # Local outputs (generated artifacts)
 outputs/*
 !outputs/README.md
+!outputs/genome/
+!outputs/genome_v2/
+!outputs/reports/

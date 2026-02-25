@@ -1,0 +1,61 @@
+{"bab": "ي", "binary_root": "يا", "root": "ياج", "words": ["يأج", "ياجُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "ياجج", "words": ["يأجج", "يأْجَجُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "يارم", "words": ["يارَمُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "ياس", "words": ["تَا۟يْـَٔسُ", "يأس", "يَئِسَ", "يَئِسُ", "يَئِسْ", "يَا۟يْـَٔسُ", "يَا۟يْـَٔسِ", "ٱسْتَيْـَٔسَ", "ٱسْتَيْـَٔسُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "ياطب", "words": ["ياطِبٌ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "يافث", "words": ["يافِثُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "ياقد", "words": ["ياقِدُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "ياي", "words": ["يأي"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "يايا", "words": ["يأيأ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يا", "root": "ياياه", "words": ["يَأْيَأَهُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يب", "root": "يبرين", "words": ["يَبْرِينُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يب", "root": "يبس", "words": ["يبس", "يَابِسٍ", "يَبِسَ"], "muajam_match": true, "binary_root_meaning": "الجفاف واليبوسة", "axial_meaning": "جفاف الشيء بذهاب رطوبته ونداه", "added_letter": "ي", "quran_example": "يبسا - \"فَاضْرِبْ لَهُمْ طَرِيقًا فِي الْبَحْرِ يَبَسًا\" / يابسات - \"وَأُخَرَ يَابِسَاتٍ\"", "letter1": "ب", "letter1_meaning": "تجمع رخو مع تلاصق ما", "letter2": "س", "letter2_meaning": "امتداد بدقة ووحدة", "bab_meaning": "تجمع رخو مع تلاصق ما"}
+{"bab": "ي", "binary_root": "يت", "root": "يتاخ", "words": ["يَتاخٌ", "يَتَاخٌ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يت", "root": "يتبحلس", "words": ["يَتَبَحْلَسُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يت", "root": "يتبهرس", "words": ["يَتَبهْرَسُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يت", "root": "يتيب", "words": ["يَتِيبُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يث", "root": "يثخ", "words": ["يثخ", "يثخَ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يث", "root": "يثيع", "words": ["يُثَيْعٌ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يج", "root": "يجوء", "words": ["يَجُوءُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يد", "root": "يدر", "words": ["يدر", "يَدَّرٌ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يد", "root": "يده", "words": ["يده", "يَده"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يد", "root": "يدي", "words": ["يدى", "يدي", "يَدي"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ير", "root": "يرت", "words": ["يرت", "يَرْتُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ير", "root": "يرد", "words": ["يرد", "يَرْدُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ير", "root": "يرنا", "words": ["يرنأ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يز", "root": "يزد", "words": ["يزدْ", "يَزْدُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يز", "root": "يزر", "words": ["يزر", "يَزِرٌ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يز", "root": "يزع", "words": ["يَزع"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يز", "root": "يزن", "words": ["يزن", "يَزَنُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يس", "root": "يستعور", "words": ["يَسْتَعُورُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يس", "root": "يسر", "words": ["تَيَسَّرَ", "مَّيْسُورًا", "نُيَسِّرُ", "يسر", "يَسَّرَ", "يَسَّرْ", "يَسِّرْ", "ٱسْتَيْسَرَ"], "muajam_match": true, "binary_root_meaning": "الامتداد أو النفاذ مع الدقة", "axial_meaning": "سريان الرقيق في الباطن ( أو منه) مستطابًا بلطف واتصال", "added_letter": "ي", "quran_example": "﴿وَنُيَسِّرُكَ لِلْيُسْرَىٰ﴾", "letter1": "س", "letter1_meaning": "امتداد بدقة ووحدة", "letter2": "ر", "letter2_meaning": "استرسال مع تماسك ما", "bab_meaning": "امتداد بدقة ووحدة"}
+{"bab": "ي", "binary_root": "يص", "root": "يصص", "words": ["يصص", "يَصَّصَ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يض", "root": "يضض", "words": ["يضض", "يَضَّضَ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يظ", "root": "يظافه", "words": ["يَظْأفُه"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يع", "root": "يعاط", "words": ["يَعَاطِ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يف", "root": "يفخ", "words": ["يفخ", "يفخَ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يف", "root": "يفخه", "words": ["يَفَخَهُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يف", "root": "يفع", "words": ["ىفع", "يفع"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يق", "root": "يقن", "words": ["تُوقِنُ", "مُسْتَيْقِنِينَ", "مُوقِنُونَ", "مُوقِنِينَ", "مُّوقِنِينَ", "يقن", "يَسْتَيْقِنَ", "يَقِنَ", "يُوقِنُ", "ٱسْتَيْقَنَتْ"], "muajam_match": true, "binary_root_meaning": "النفاذ في الباطن أو الأخذ إليه بعمق أو امتداد", "axial_meaning": "ثبوت الشيء واستقراره في حيزه محفوظًا", "added_letter": "ي", "quran_example": "الموقنين - \"وَلِيَكُونَ مِنَ الْمُوقِنِينَ\"", "letter1": "ق", "letter1_meaning": "تعقد واشتداد في العمق", "letter2": "ن", "letter2_meaning": "امتداد لطيف في الباطن أو منه", "bab_meaning": "تعقد واشتداد في العمق"}
+{"bab": "ي", "binary_root": "يق", "root": "يقنش", "words": ["يُقَنَّشْ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يم", "root": "يمم", "words": ["تَيَمَّمُ", "يمم"], "muajam_match": true, "binary_root_meaning": "التجمع والتضام", "axial_meaning": "تجمع لطيف متصل المادة متراكمها", "added_letter": "ي", "quran_example": "اليم - \"فَأَلْقِيهِ فِي الْيَمِّ\"", "letter1": "م", "letter1_meaning": "امتساك واستواء ظاهري", "letter2": "م", "letter2_meaning": "امتساك واستواء ظاهري", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "ي", "binary_root": "ين", "root": "ينار", "words": ["يَنَّارُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ين", "root": "يناق", "words": ["يَناقُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ين", "root": "ينبت", "words": ["ينبت", "ينْبت"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ين", "root": "ينخ", "words": ["ينخ", "ينخَ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ين", "root": "يندد", "words": ["يندد", "يَنْدَدُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ين", "root": "ينش", "words": ["ىنش"], "muajam_match": false}
+{"bab": "ي", "binary_root": "ين", "root": "ينع", "words": ["ينع", "يَنَعَ"], "muajam_match": true, "binary_root_meaning": "الرخاوة والطراءة وما إلى ذلك رقة الأثناء", "axial_meaning": "صلاح الثمر (والمأكول) للتناول برخاوته، أو رقته", "added_letter": "ي", "quran_example": "ينعه - \"وَيَنْعِهِ\"", "letter1": "ن", "letter1_meaning": "امتداد لطيف في الباطن أو منه", "letter2": "ع", "letter2_meaning": "التحام على رقة مع حدة ما / رخاوة جرم ملتحم", "bab_meaning": "امتداد لطيف في الباطن أو منه"}
+{"bab": "ي", "binary_root": "ين", "root": "ينه", "words": ["يَنَّةُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يه", "root": "يهيا", "words": ["يهيا", "يَهْيَا"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يه", "root": "يهيه", "words": ["يهيه", "يَهْيَهَ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يو", "root": "يوبب", "words": ["يُوبَبُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يو", "root": "يوح", "words": ["يوح", "يُوح", "يُوحٌ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يو", "root": "يوخ", "words": ["يوخ", "يَوْخٌ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يو", "root": "يوله", "words": ["يُولةُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يو", "root": "يوم", "words": ["أَيَّامًا", "يوم", "يَوْمٌ", "يَوْمَ", "يَوْمِ"], "muajam_match": true, "binary_root_meaning": "امتداد الزمن", "axial_meaning": "مدة من الزمن ممتدة متصلة", "added_letter": "—", "quran_example": "يوم - \"الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ\"", "letter1": "ي", "letter1_meaning": "اتصال الممتد شيئاً واحداً وعدم تفرقه", "letter2": "و", "letter2_meaning": "اشتمال واحتواء", "bab_meaning": "امتساك واستواء ظاهري"}
+{"bab": "ي", "binary_root": "يو", "root": "يون", "words": ["يون", "يَوَنُ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يو", "root": "يوي", "words": ["يوي", "يُوَيُّ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يو", "root": "يويو", "words": ["يؤيؤ"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يي", "root": "ييس", "words": ["يئس"], "muajam_match": false}
+{"bab": "ي", "binary_root": "يي", "root": "يين", "words": ["يين", "يَيَنٌ"], "muajam_match": false}
