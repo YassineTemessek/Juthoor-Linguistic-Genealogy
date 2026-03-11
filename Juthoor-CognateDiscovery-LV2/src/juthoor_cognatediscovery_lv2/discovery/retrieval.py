@@ -4,6 +4,7 @@ Handles embedding, indexing, and searching.
 """
 from __future__ import annotations
 
+import hashlib
 import numpy as np
 from pathlib import Path
 from typing import Any
@@ -15,21 +16,35 @@ from juthoor_cognatediscovery_lv2.lv3.discovery.index import FaissIndex, build_f
 from juthoor_cognatediscovery_lv2.lv3.discovery.jsonl import LexemeRow, read_jsonl_rows, write_jsonl
 from .corpora import CorpusSpec
 
-def load_lexemes(spec: CorpusSpec, repo_root: Path, limit: int = 0) -> list[LexemeRow]:
+
+def resolve_corpus_path(spec: CorpusSpec, repo_root: Path) -> Path:
     path = spec.path
     if not path.is_absolute():
-        # Check if it's already a subpath of repo_root or if we need to join
         if not str(path).startswith(str(repo_root)):
             path = repo_root / path
+    return path.resolve()
+
+
+def _corpus_cache_key(spec: CorpusSpec, repo_root: Path) -> str:
+    resolved = resolve_corpus_path(spec, repo_root)
+    stem = resolved.stem or "corpus"
+    safe_stem = "".join(ch if ch.isalnum() or ch in {"-", "_"} else "_" for ch in stem)
+    digest = hashlib.sha1(str(resolved).encode("utf-8")).hexdigest()[:12]
+    return f"{safe_stem}_{digest}"
+
+
+def load_lexemes(spec: CorpusSpec, repo_root: Path, limit: int = 0) -> list[LexemeRow]:
+    path = resolve_corpus_path(spec, repo_root)
     return read_jsonl_rows(path, limit=limit)
 
 def get_cache_paths(repo_root: Path, model: str, spec: CorpusSpec) -> tuple[Path, Path, Path, Path]:
     base = repo_root / "outputs"
-    embeddings_dir = base / "embeddings" / model / spec.lang / (spec.stage or "unknown")
+    corpus_key = _corpus_cache_key(spec, repo_root)
+    embeddings_dir = base / "embeddings" / model / spec.lang / (spec.stage or "unknown") / corpus_key
     vectors_path = embeddings_dir / "vectors.npy"
     rows_path = embeddings_dir / "rows.jsonl"
 
-    indexes_dir = base / "indexes" / model / spec.lang / (spec.stage or "unknown")
+    indexes_dir = base / "indexes" / model / spec.lang / (spec.stage or "unknown") / corpus_key
     index_path = indexes_dir / "index.faiss"
     meta_path = indexes_dir / "meta.json"
     return vectors_path, rows_path, index_path, meta_path

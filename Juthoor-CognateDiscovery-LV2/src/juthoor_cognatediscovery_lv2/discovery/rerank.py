@@ -195,3 +195,15 @@ def train_reranker(
     model.weights = {name: float(weights[idx]) for idx, name in enumerate(FEATURE_NAMES)}
     model.save()
     return model
+
+
+def rerank_leads_file(model_path: Path, leads_path: Path, output_path: Path) -> Path:
+    reranker = DiscoveryReranker(model_path)
+    grouped = load_leads(leads_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", encoding="utf-8") as handle:
+        for _, candidates in grouped.items():
+            ranked = reranker.rerank(candidates)
+            for row in ranked:
+                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+    return output_path

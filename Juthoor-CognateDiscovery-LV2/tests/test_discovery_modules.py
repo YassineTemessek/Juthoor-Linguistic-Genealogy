@@ -6,6 +6,7 @@ from pathlib import Path
 from juthoor_cognatediscovery_lv2.discovery.corpora import CorpusInfo, CorpusSpec, clean_label, discover_corpora
 from juthoor_cognatediscovery_lv2.discovery.reporting import write_leads
 from juthoor_cognatediscovery_lv2.discovery.rerank import DiscoveryReranker
+from juthoor_cognatediscovery_lv2.discovery.retrieval import get_cache_paths
 from juthoor_cognatediscovery_lv2.discovery.scoring import DiscoveryScorer, rank_candidates
 
 
@@ -72,3 +73,11 @@ def test_reranker_reads_hybrid_components():
     }
     score = DiscoveryReranker().predict_one(entry)
     assert score > 0.0
+
+
+def test_cache_paths_differ_for_different_corpora(tmp_path: Path):
+    spec_a = CorpusSpec(lang="eng", stage="modern", path=Path("a.jsonl"))
+    spec_b = CorpusSpec(lang="eng", stage="modern", path=Path("b.jsonl"))
+    paths_a = get_cache_paths(tmp_path, "semantic", spec_a)
+    paths_b = get_cache_paths(tmp_path, "semantic", spec_b)
+    assert paths_a != paths_b
