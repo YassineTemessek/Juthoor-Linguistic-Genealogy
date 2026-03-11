@@ -48,6 +48,14 @@ class MatchResult:
             return 0.0
         return 1.0 / math.log2(float(self.found_rank) + 1.0)
 
+    @property
+    def weighted_reciprocal_rank(self) -> float:
+        return self.reciprocal_rank * float(self.pair.confidence)
+
+    @property
+    def weighted_ndcg(self) -> float:
+        return self.ndcg * float(self.pair.confidence)
+
 
 def _norm(value: Any) -> str:
     return " ".join(str(value or "").split()).strip().casefold()
@@ -123,6 +131,9 @@ def build_metrics(results: Iterable[MatchResult]) -> dict[str, Any]:
     hits = sum(1 for item in items if item.hit)
     mrr = sum(item.reciprocal_rank for item in items)
     ndcg = sum(item.ndcg for item in items)
+    weighted_total = sum(float(item.pair.confidence) for item in items)
+    weighted_mrr = sum(item.weighted_reciprocal_rank for item in items)
+    weighted_ndcg = sum(item.weighted_ndcg for item in items)
     relation_counts: dict[str, dict[str, int]] = {}
     for item in items:
         bucket = relation_counts.setdefault(item.pair.relation, {"total": 0, "hits": 0})
@@ -143,6 +154,8 @@ def build_metrics(results: Iterable[MatchResult]) -> dict[str, Any]:
         "recall": round(hits / total, 6) if total else 0.0,
         "mrr": round(mrr / total, 6) if total else 0.0,
         "ndcg": round(ndcg / total, 6) if total else 0.0,
+        "weighted_mrr": round(weighted_mrr / weighted_total, 6) if weighted_total else 0.0,
+        "weighted_ndcg": round(weighted_ndcg / weighted_total, 6) if weighted_total else 0.0,
         "by_relation": by_relation,
     }
 
@@ -152,6 +165,8 @@ def format_summary(metrics: dict[str, Any], *, top_k: int) -> str:
         f"Recall@{top_k}: {metrics['recall']:.4f} ({metrics['hits']}/{metrics['total_pairs']})",
         f"MRR:       {metrics['mrr']:.4f}",
         f"nDCG:      {metrics['ndcg']:.4f}",
+        f"wMRR:      {metrics['weighted_mrr']:.4f}",
+        f"wnDCG:     {metrics['weighted_ndcg']:.4f}",
     ]
     by_relation = metrics.get("by_relation") or {}
     if by_relation:

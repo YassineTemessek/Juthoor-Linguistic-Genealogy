@@ -94,6 +94,32 @@ def evaluate_leads_against_benchmark(leads_path: Path, benchmark_path: Path, *, 
     return metrics
 
 
+def load_combined_benchmark(paths: list[Path]) -> list[BenchmarkPair]:
+    pairs: list[BenchmarkPair] = []
+    for path in paths:
+        pairs.extend(load_benchmark(path))
+    return pairs
+
+
+def evaluate_leads_against_benchmarks(leads_path: Path, benchmark_paths: list[Path], *, top_k: int) -> dict[str, Any]:
+    benchmark = load_combined_benchmark(benchmark_paths)
+    leads_by_source = load_leads(leads_path)
+    _, metrics = evaluate_pairs(benchmark, leads_by_source, top_k=top_k)
+    return metrics
+
+
+def compare_lead_runs(
+    baseline_path: Path,
+    candidate_path: Path,
+    benchmark_paths: list[Path],
+    *,
+    top_k: int,
+) -> dict[str, Any]:
+    baseline = evaluate_leads_against_benchmarks(baseline_path, benchmark_paths, top_k=top_k)
+    candidate = evaluate_leads_against_benchmarks(candidate_path, benchmark_paths, top_k=top_k)
+    return compare_metrics(baseline, candidate)
+
+
 def compare_metrics(before: dict[str, Any], after: dict[str, Any]) -> dict[str, Any]:
     keys = ("recall", "mrr", "ndcg")
     delta = {key: round(float(after.get(key, 0.0)) - float(before.get(key, 0.0)), 6) for key in keys}
