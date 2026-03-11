@@ -6,6 +6,7 @@ from __future__ import annotations
 
 from typing import Any
 from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights, compute_hybrid
+from .correspondence import correspondence_features
 
 
 def _norm(value: Any) -> str:
@@ -33,6 +34,29 @@ def _apply_root_match_bonus(
     return boosted
 
 
+def _apply_correspondence_bonus(
+    hybrid: dict[str, Any],
+    *,
+    source_fields: dict[str, Any],
+    target_fields: dict[str, Any],
+) -> dict[str, Any]:
+    boosted = dict(hybrid)
+    components = dict(boosted.get("components") or {})
+    features = correspondence_features(source_fields, target_fields)
+    components.update(features)
+    components.setdefault("root_match", 0.0)
+
+    base_score = float(boosted.get("combined_score") or 0.0)
+    extra = (
+        0.12 * float(features.get("correspondence", 0.0))
+        + 0.05 * float(features.get("weak_radical_match", 0.0))
+        + 0.04 * float(features.get("hamza_match", 0.0))
+    )
+    boosted["components"] = components
+    boosted["combined_score"] = round(min(1.0, base_score + extra), 6)
+    return boosted
+
+
 def apply_hybrid_scoring(
     candidates: dict[str, dict[str, Any]],
     weights: HybridWeights,
@@ -54,7 +78,12 @@ def apply_hybrid_scoring(
             form=entry["scores"].get("form"),
             weights=weights,
         )
-        entry["hybrid"] = _apply_root_match_bonus(
+        hybrid = _apply_root_match_bonus(
+            hybrid,
+            source_fields=src_fields,
+            target_fields=tgt_fields,
+        )
+        entry["hybrid"] = _apply_correspondence_bonus(
             hybrid,
             source_fields=src_fields,
             target_fields=tgt_fields,

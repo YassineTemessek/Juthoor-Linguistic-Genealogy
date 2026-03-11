@@ -17,6 +17,10 @@ FEATURE_NAMES = (
     "sound",
     "skeleton",
     "family_boost",
+    "root_match",
+    "correspondence",
+    "weak_radical_match",
+    "hamza_match",
 )
 
 
@@ -33,6 +37,10 @@ def _feature_vector(entry: dict[str, Any]) -> np.ndarray:
             float(sound_value or 0.0),
             float(components.get("skeleton", 0.0)),
             1.0 if hybrid.get("family_boost_applied") else 0.0,
+            float(components.get("root_match", 0.0)),
+            float(components.get("correspondence", 0.0)),
+            float(components.get("weak_radical_match", 0.0)),
+            float(components.get("hamza_match", 0.0)),
         ],
         dtype=np.float32,
     )
@@ -67,6 +75,10 @@ class DiscoveryReranker:
             "sound": 0.15,
             "skeleton": 0.1,
             "family_boost": 0.1,
+            "root_match": 0.25,
+            "correspondence": 0.2,
+            "weak_radical_match": 0.1,
+            "hamza_match": 0.05,
         }
         self.model_type = "linear_baseline"
         if model_path and model_path.exists():

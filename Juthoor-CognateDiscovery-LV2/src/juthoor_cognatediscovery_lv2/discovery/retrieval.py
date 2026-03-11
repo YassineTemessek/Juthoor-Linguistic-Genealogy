@@ -29,11 +29,19 @@ def resolve_corpus_path(spec: CorpusSpec, repo_root: Path) -> Path:
     return (repo_root / path).resolve()
 
 
-def _corpus_cache_key(spec: CorpusSpec, repo_root: Path) -> str:
+def _rows_signature(rows: list[LexemeRow]) -> str:
+    joined = "|".join(row.lexeme_id for row in rows)
+    return hashlib.sha1(joined.encode("utf-8")).hexdigest()[:12]
+
+
+def _corpus_cache_key(spec: CorpusSpec, repo_root: Path, rows: list[LexemeRow] | None = None) -> str:
     resolved = resolve_corpus_path(spec, repo_root)
     stem = resolved.stem or "corpus"
     safe_stem = "".join(ch if ch.isalnum() or ch in {"-", "_"} else "_" for ch in stem)
-    digest = hashlib.sha1(str(resolved).encode("utf-8")).hexdigest()[:12]
+    digest_source = str(resolved)
+    if rows is not None:
+        digest_source = f"{digest_source}|n={len(rows)}|sig={_rows_signature(rows)}"
+    digest = hashlib.sha1(digest_source.encode("utf-8")).hexdigest()[:12]
     return f"{safe_stem}_{digest}"
 
 
@@ -41,9 +49,14 @@ def load_lexemes(spec: CorpusSpec, repo_root: Path, limit: int = 0) -> list[Lexe
     path = resolve_corpus_path(spec, repo_root)
     return read_jsonl_rows(path, limit=limit)
 
-def get_cache_paths(repo_root: Path, model: str, spec: CorpusSpec) -> tuple[Path, Path, Path, Path]:
+def get_cache_paths(
+    repo_root: Path,
+    model: str,
+    spec: CorpusSpec,
+    rows: list[LexemeRow] | None = None,
+) -> tuple[Path, Path, Path, Path]:
     base = repo_root / "outputs"
-    corpus_key = _corpus_cache_key(spec, repo_root)
+    corpus_key = _corpus_cache_key(spec, repo_root, rows)
     embeddings_dir = base / "embeddings" / model / spec.lang / (spec.stage or "unknown") / corpus_key
     vectors_path = embeddings_dir / "vectors.npy"
     rows_path = embeddings_dir / "rows.jsonl"
@@ -66,7 +79,7 @@ def embed_corpus(
     backend: str = "local",
 ):
     cache_model = f"api_{model}" if backend == "api" else model
-    v_path, r_path, _, _ = get_cache_paths(repo_root, cache_model, spec)
+    v_path, r_path, _, _ = get_cache_paths(repo_root, cache_model, spec, rows)
 
     if not rebuild_cache and v_path.exists() and r_path.exists():
         vecs = np.load(v_path)
@@ -104,9 +117,17 @@ def embed_corpus(
     write_jsonl(r_path, (r.data | {"_row_idx": r.row_idx} for r in rows))
     return vecs, rows
 
-def build_or_load_index(*, repo_root: Path, model: str, spec: CorpusSpec, vectors: np.ndarray, rebuild_index: bool):
+def build_or_load_index(
+    *,
+    repo_root: Path,
+    model: str,
+    spec: CorpusSpec,
+    vectors: np.ndarray,
+    rows: list[LexemeRow],
+    rebuild_index: bool,
+):
     cache_model = model # already prefixed if api
-    _, _, index_path, meta_path = get_cache_paths(repo_root, cache_model, spec)
+    _, _, index_path, meta_path = get_cache_paths(repo_root, cache_model, spec, rows)
     
     idx_meta = FaissIndex(index_path=index_path, meta_path=meta_path, dim=int(vectors.shape[1]))
     if not rebuild_index and index_path.exists():

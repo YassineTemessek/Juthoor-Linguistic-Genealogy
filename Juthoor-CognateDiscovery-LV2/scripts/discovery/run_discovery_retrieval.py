@@ -154,7 +154,14 @@ def main() -> int:
                 device=args.device, rebuild_cache=args.rebuild_cache, backend=args.backend
             )
             idx_name = f"api_{model}" if args.backend == "api" else model
-            index = build_or_load_index(repo_root=REPO_ROOT, model=idx_name, spec=spec, vectors=vecs, rebuild_index=args.rebuild_index)
+            index = build_or_load_index(
+                repo_root=REPO_ROOT,
+                model=idx_name,
+                spec=spec,
+                vectors=vecs,
+                rows=cached_rows,
+                rebuild_index=args.rebuild_index,
+            )
             target_data[model].append((spec, index, cached_rows))
 
     # 2. Process Sources
