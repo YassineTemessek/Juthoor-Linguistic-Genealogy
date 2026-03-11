@@ -7,6 +7,32 @@ from __future__ import annotations
 from typing import Any
 from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights, compute_hybrid
 
+
+def _norm(value: Any) -> str:
+    return " ".join(str(value or "").split()).strip().casefold()
+
+
+def _apply_root_match_bonus(
+    hybrid: dict[str, Any],
+    *,
+    source_fields: dict[str, Any],
+    target_fields: dict[str, Any],
+) -> dict[str, Any]:
+    source_root = _norm(source_fields.get("root_norm") or source_fields.get("root"))
+    target_root = _norm(target_fields.get("root_norm") or target_fields.get("root"))
+    if not source_root or source_root != target_root:
+        return hybrid
+
+    boosted = dict(hybrid)
+    components = dict(boosted.get("components") or {})
+    components["root_match"] = 1.0
+    base_score = float(boosted.get("combined_score") or 0.0)
+    boosted["components"] = components
+    boosted["combined_score"] = round(min(1.0, base_score + 0.35), 6)
+    boosted["root_match_applied"] = True
+    return boosted
+
+
 def apply_hybrid_scoring(
     candidates: dict[str, dict[str, Any]],
     weights: HybridWeights,
@@ -21,12 +47,17 @@ def apply_hybrid_scoring(
         src_fields = entry.get("_source_fields", {})
         tgt_fields = entry.get("_target_fields", {})
         
-        entry["hybrid"] = compute_hybrid(
+        hybrid = compute_hybrid(
             source=src_fields,
             target=tgt_fields,
             semantic=entry["scores"].get("semantic"),
             form=entry["scores"].get("form"),
             weights=weights,
+        )
+        entry["hybrid"] = _apply_root_match_bonus(
+            hybrid,
+            source_fields=src_fields,
+            target_fields=tgt_fields,
         )
 
 def rank_candidates(

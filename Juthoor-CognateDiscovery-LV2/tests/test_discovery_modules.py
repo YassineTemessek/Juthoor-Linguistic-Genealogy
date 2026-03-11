@@ -6,7 +6,7 @@ from pathlib import Path
 from juthoor_cognatediscovery_lv2.discovery.corpora import CorpusInfo, CorpusSpec, clean_label, discover_corpora
 from juthoor_cognatediscovery_lv2.discovery.reporting import write_leads
 from juthoor_cognatediscovery_lv2.discovery.rerank import DiscoveryReranker
-from juthoor_cognatediscovery_lv2.discovery.retrieval import get_cache_paths
+from juthoor_cognatediscovery_lv2.discovery.retrieval import get_cache_paths, resolve_corpus_path
 from juthoor_cognatediscovery_lv2.discovery.scoring import DiscoveryScorer, rank_candidates
 
 
@@ -29,6 +29,26 @@ def test_discover_corpora_prefers_lv0_processed(tmp_path: Path):
     assert any(c.language == "lat" and c.stage == "classical" for c in results)
 
 
+def test_discover_corpora_finds_root_family_outputs(tmp_path: Path):
+    base = tmp_path / "Juthoor-CognateDiscovery-LV2" / "outputs" / "corpora"
+    base.mkdir(parents=True)
+    sample = base / "arabic_root_families.jsonl"
+    sample.write_text(
+        json.dumps(
+            {
+                "lang": "ara",
+                "stage": "classical",
+                "record_type": "root_family",
+                "lemma": "بتك",
+            }
+        ) + "\n",
+        encoding="utf-8",
+    )
+
+    results = discover_corpora(tmp_path)
+    assert any(c.record_type == "root_family" and c.group == "Arabic Root Families" for c in results)
+
+
 def test_write_leads_round_trip(tmp_path: Path):
     out_path = tmp_path / "out" / "leads.jsonl"
     leads = [{"source": {"lemma": "عين"}, "target": {"lemma": "עין"}}]
@@ -42,14 +62,15 @@ def test_discovery_scorer_removes_temp_fields():
     candidates = {
         "x": {
             "scores": {"semantic": 0.9, "form": 0.8},
-            "_source_fields": {"lemma": "عين", "lang": "ara"},
-            "_target_fields": {"lemma": "עין", "lang": "heb"},
+            "_source_fields": {"lemma": "عين", "lang": "ara", "root_norm": "عين"},
+            "_target_fields": {"lemma": "עין", "lang": "heb", "root_norm": "عين"},
             "category": "strong_union",
         }
     }
     scored = DiscoveryScorer().score(candidates)
     assert len(scored) == 1
     assert "hybrid" in scored[0]
+    assert scored[0]["hybrid"]["root_match_applied"] is True
     assert "_source_fields" not in scored[0]
     assert "_target_fields" not in scored[0]
 
@@ -81,3 +102,11 @@ def test_cache_paths_differ_for_different_corpora(tmp_path: Path):
     paths_a = get_cache_paths(tmp_path, "semantic", spec_a)
     paths_b = get_cache_paths(tmp_path, "semantic", spec_b)
     assert paths_a != paths_b
+
+
+def test_resolve_corpus_path_prefers_existing_relative_path(tmp_path: Path, monkeypatch):
+    corpus = tmp_path / "subset.jsonl"
+    corpus.write_text(json.dumps({"lemma": "name"}) + "\n", encoding="utf-8")
+    monkeypatch.chdir(tmp_path)
+    spec = CorpusSpec(lang="eng", stage="modern", path=Path("subset.jsonl"))
+    assert resolve_corpus_path(spec, tmp_path / "repo").resolve() == corpus.resolve()
