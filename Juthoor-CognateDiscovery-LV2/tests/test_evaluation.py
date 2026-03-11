@@ -59,19 +59,23 @@ def test_evaluate_pairs_computes_metrics():
     assert "cognate" in metrics["by_relation"]
     assert metrics["by_relation"]["cognate"]["recall"] == 1.0
     assert metrics["by_relation"]["borrowing"]["recall"] == 0.0
+    assert "weighted_mrr" in metrics
+    assert "weighted_ndcg" in metrics
 
 
 def test_format_summary_includes_core_metrics():
     metrics = build_metrics(
         [
-            type("R", (), {"hit": True, "reciprocal_rank": 1.0, "ndcg": 1.0, "pair": type("P", (), {"relation": "cognate"})()})(),
-            type("R", (), {"hit": False, "reciprocal_rank": 0.0, "ndcg": 0.0, "pair": type("P", (), {"relation": "borrowing"})()})(),
+            type("R", (), {"hit": True, "reciprocal_rank": 1.0, "ndcg": 1.0, "weighted_reciprocal_rank": 1.0, "weighted_ndcg": 1.0, "pair": type("P", (), {"relation": "cognate", "confidence": 1.0})()})(),
+            type("R", (), {"hit": False, "reciprocal_rank": 0.0, "ndcg": 0.0, "weighted_reciprocal_rank": 0.0, "weighted_ndcg": 0.0, "pair": type("P", (), {"relation": "borrowing", "confidence": 1.0})()})(),
         ]
     )
     summary = format_summary(metrics, top_k=20)
     assert "Recall@20" in summary
     assert "MRR" in summary
     assert "nDCG" in summary
+    assert "wMRR" in summary
+    assert "wnDCG" in summary
     assert "cognate" in summary
 
 
@@ -87,3 +91,16 @@ def test_load_leads_groups_by_source_key(tmp_path: Path):
     grouped = load_leads(path)
     assert ("ara", "عين") in grouped
     assert len(grouped[("ara", "عين")]) == 2
+
+
+def test_weighted_metrics_follow_confidence():
+    benchmark = [
+        BenchmarkPair("ara", "عين", "heb", "עין", "cognate", confidence=1.0),
+        BenchmarkPair("ara", "سكر", "eng", "sugar", "borrowing", confidence=0.2),
+    ]
+    leads = {
+        ("ara", "عين"): [{"target": {"lang": "heb", "lemma": "עין"}}],
+        ("ara", "سكر"): [{"target": {"lang": "eng", "lemma": "sweet"}}],
+    }
+    _, metrics = evaluate_pairs(benchmark, leads, top_k=10)
+    assert metrics["weighted_mrr"] > metrics["mrr"]
