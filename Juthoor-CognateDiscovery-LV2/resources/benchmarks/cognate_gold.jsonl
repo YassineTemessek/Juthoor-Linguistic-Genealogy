@@ -1,0 +1,26 @@
+{"source": {"lang": "ara", "lemma": "عين", "gloss": "eye"}, "target": {"lang": "heb", "lemma": "עין", "gloss": "eye"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root ʿ-y-n"}
+{"source": {"lang": "ara", "lemma": "أذن", "gloss": "ear"}, "target": {"lang": "heb", "lemma": "אוזן", "gloss": "ear"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root ʾ-dh-n / ʾ-z-n"}
+{"source": {"lang": "ara", "lemma": "سن", "gloss": "tooth"}, "target": {"lang": "heb", "lemma": "שן", "gloss": "tooth"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root s-n-n / sh-n"}
+{"source": {"lang": "ara", "lemma": "يد", "gloss": "hand"}, "target": {"lang": "heb", "lemma": "يد", "gloss": "hand"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root y-d"}
+{"source": {"lang": "ara", "lemma": "بيت", "gloss": "house"}, "target": {"lang": "heb", "lemma": "بيت", "gloss": "house"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root b-y-t"}
+{"source": {"lang": "ara", "lemma": "رأس", "gloss": "head"}, "target": {"lang": "heb", "lemma": "ראש", "gloss": "head"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root r-ʾ-s"}
+{"source": {"lang": "ara", "lemma": "قلب", "gloss": "heart"}, "target": {"lang": "heb", "lemma": "לב", "gloss": "heart"}, "relation": "cognate", "confidence": 0.9, "notes": "Common Semitic, though Arabic has prefix/variant q-l-b vs heb l-b"}
+{"source": {"lang": "ara", "lemma": "دم", "gloss": "blood"}, "target": {"lang": "heb", "lemma": "دم", "gloss": "blood"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root d-m"}
+{"source": {"lang": "ara", "lemma": "ماء", "gloss": "water"}, "target": {"lang": "heb", "lemma": "מים", "gloss": "water"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root m-y"}
+{"source": {"lang": "ara", "lemma": "أرض", "gloss": "earth/land"}, "target": {"lang": "heb", "lemma": "ארץ", "gloss": "earth/land"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root ʾ-r-ḍ / ʾ-r-ṣ"}
+{"source": {"lang": "lat", "lemma": "mater", "gloss": "mother"}, "target": {"lang": "grc", "lemma": "μήτηρ", "gloss": "mother"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "pater", "gloss": "father"}, "target": {"lang": "grc", "lemma": "πατήρ", "gloss": "father"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "pes", "gloss": "foot"}, "target": {"lang": "grc", "lemma": "πούς", "gloss": "foot"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "nomen", "gloss": "name"}, "target": {"lang": "grc", "lemma": "ὄνομα", "gloss": "name"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "tres", "gloss": "three"}, "target": {"lang": "grc", "lemma": "τρεῖς", "gloss": "three"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "septem", "gloss": "seven"}, "target": {"lang": "grc", "lemma": "ἑπτά", "gloss": "seven"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "ego", "gloss": "I"}, "target": {"lang": "grc", "lemma": "ἐγώ", "gloss": "I"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "tu", "gloss": "thou"}, "target": {"lang": "grc", "lemma": "σύ", "gloss": "thou"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "quis", "gloss": "who"}, "target": {"lang": "grc", "lemma": "τίς", "gloss": "who"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "canis", "gloss": "dog"}, "target": {"lang": "grc", "lemma": "κύων", "gloss": "dog"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "ara", "lemma": "أرض", "gloss": "earth"}, "target": {"lang": "eng", "lemma": "earth", "gloss": "earth"}, "relation": "cognate", "confidence": 0.8}
+{"source": {"lang": "ara", "lemma": "ثور", "gloss": "bull"}, "target": {"lang": "eng", "lemma": "steer", "gloss": "steer/bull"}, "relation": "cognate", "confidence": 0.9, "notes": "Common root t-w-r / s-t-r"}
+{"source": {"lang": "ara", "lemma": "قرن", "gloss": "horn"}, "target": {"lang": "eng", "lemma": "horn", "gloss": "horn"}, "relation": "cognate", "confidence": 0.9, "notes": "q-r-n vs h-r-n"}
+{"source": {"lang": "ara", "lemma": "اسم", "gloss": "name"}, "target": {"lang": "eng", "lemma": "name", "gloss": "name"}, "relation": "cognate", "confidence": 0.7, "notes": "Common human word, etymology debated but likely common origin"}
+{"source": {"lang": "ara", "lemma": "بيت", "gloss": "house"}, "target": {"lang": "eng", "lemma": "booth", "gloss": "booth/stall"}, "relation": "cognate", "confidence": 0.6}
+{"source": {"lang": "ara", "lemma": "طريق", "gloss": "path/track"}, "target": {"lang": "eng", "lemma": "track", "gloss": "track"}, "relation": "cognate", "confidence": 0.5}
