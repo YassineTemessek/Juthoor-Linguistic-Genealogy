@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, Tuple
@@ -12,15 +13,19 @@ class TextFieldSpec:
     meaning_fallback: bool = False
 
 
+def _is_arabic_language(language: str) -> bool:
+    lang = (language or "").strip().lower()
+    return lang == "arabic" or lang == "ara" or lang.startswith("ara-")
+
+
 def build_form_text(*, language: str, lemma: str, translit: str | None = None, ipa: str | None = None) -> str:
     """
     Deterministic form_text builder (scaffold).
     Arabic: include script + translit; others: lemma plus IPA if present.
     """
-    lang = (language or "").lower()
     parts: list[str] = []
     if lemma:
-        if lang.startswith("ar"):
+        if _is_arabic_language(language):
             parts.append(f"AR: {lemma}")
         else:
             parts.append(lemma)
@@ -58,9 +63,12 @@ def iter_text_fields(rows: Iterable[dict]) -> Iterable[dict]:
         lemma = rec.get("lemma", "")
         translit = rec.get("translit") or None
         ipa = rec.get("ipa") or rec.get("ipa_raw") or None
-        gloss = rec.get("gloss_plain") or rec.get("definition")
         form = build_form_text(language=lang, lemma=lemma, translit=translit, ipa=ipa)
-        meaning, fallback = build_meaning_text(gloss_plain=gloss, lemma=lemma)
+        meaning, fallback = build_meaning_text(
+            gloss_plain=rec.get("gloss_plain"),
+            lemma=lemma,
+            fallback_definition=rec.get("definition") or rec.get("gloss"),
+        )
         rec = dict(rec)
         rec["form_text"] = form
         if meaning:
@@ -98,13 +106,17 @@ def main() -> int:
         return 1
 
     args.output_jsonl.parent.mkdir(parents=True, exist_ok=True)
+    input_path = args.input_jsonl.resolve()
+    output_path = args.output_jsonl.resolve()
+    same_path = input_path == output_path
+    temp_output_path = output_path.with_suffix(output_path.suffix + ".tmp") if same_path else output_path
 
     processed = 0
     skipped = 0
     enriched = 0
 
-    with args.input_jsonl.open("r", encoding="utf-8", errors="replace") as inp, \
-         args.output_jsonl.open("w", encoding="utf-8") as out:
+    with input_path.open("r", encoding="utf-8", errors="replace") as inp, \
+         temp_output_path.open("w", encoding="utf-8") as out:
         for line in inp:
             line = line.strip()
             if not line:
@@ -124,10 +136,12 @@ def main() -> int:
             lemma = rec.get("lemma", "")
             translit = rec.get("translit") or None
             ipa = rec.get("ipa") or rec.get("ipa_raw") or None
-            gloss = rec.get("gloss_plain") or rec.get("definition") or rec.get("gloss")
-
             form = build_form_text(language=lang, lemma=lemma, translit=translit, ipa=ipa)
-            meaning, fallback = build_meaning_text(gloss_plain=gloss, lemma=lemma)
+            meaning, fallback = build_meaning_text(
+                gloss_plain=rec.get("gloss_plain"),
+                lemma=lemma,
+                fallback_definition=rec.get("definition") or rec.get("gloss"),
+            )
 
             if form:
                 rec["form_text"] = form
@@ -138,6 +152,9 @@ def main() -> int:
 
             out.write(json.dumps(rec, ensure_ascii=False) + "\n")
             processed += 1
+
+    if same_path:
+        os.replace(temp_output_path, output_path)
 
     print(f"Processed: {processed}, Enriched: {enriched}, Skipped (existing): {skipped}")
     return 0

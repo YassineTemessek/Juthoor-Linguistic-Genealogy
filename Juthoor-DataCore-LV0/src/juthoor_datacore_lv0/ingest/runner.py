@@ -263,6 +263,8 @@ def build_steps(*, python_exe: str, repo_root: Path, resources_dir: Path | None)
                 ("english_middle",  "english_middle/sources/kaikki.jsonl"),
                 ("english_modern",  "english_modern/sources/kaikki.jsonl"),
                 ("arabic",          "arabic/classical/sources/ten_dicts.jsonl"),
+                ("arabic",          "arabic/classical/lexemes.jsonl"),
+                ("quranic_arabic",  "quranic_arabic/lexemes.jsonl"),
             ]
         ],
     ]
