@@ -31,13 +31,13 @@ def test_build_training_examples_matches_benchmark_rows(tmp_path: Path):
                 "source": {"lang": "ara", "lemma": "عين"},
                 "target": {"lang": "heb", "lemma": "עין"},
                 "scores": {"semantic": 0.8, "form": 0.7},
-                "hybrid": {"components": {"orthography": 0.6, "sound": 0.5, "skeleton": 0.6}, "family_boost_applied": True},
+                "hybrid": {"components": {"orthography": 0.6, "sound": 0.5, "skeleton": 0.6, "root_match": 1.0, "correspondence": 0.8, "weak_radical_match": 0.0, "hamza_match": 0.0}, "family_boost_applied": True},
             },
             {
                 "source": {"lang": "ara", "lemma": "سكر"},
                 "target": {"lang": "eng", "lemma": "sugar"},
                 "scores": {"semantic": 0.9, "form": 0.8},
-                "hybrid": {"components": {"orthography": 0.9, "sound": 0.7, "skeleton": 0.2}, "family_boost_applied": False},
+                "hybrid": {"components": {"orthography": 0.9, "sound": 0.7, "skeleton": 0.2, "root_match": 0.0, "correspondence": 0.1, "weak_radical_match": 0.0, "hamza_match": 0.0}, "family_boost_applied": False},
             },
         ],
     )
@@ -66,13 +66,13 @@ def test_train_reranker_writes_model_and_predicts_probability(tmp_path: Path):
                 "source": {"lang": "ara", "lemma": "عين"},
                 "target": {"lang": "heb", "lemma": "עין"},
                 "scores": {"semantic": 0.7, "form": 0.8},
-                "hybrid": {"components": {"orthography": 0.6, "sound": 0.7, "skeleton": 0.8}, "family_boost_applied": True},
+                "hybrid": {"components": {"orthography": 0.6, "sound": 0.7, "skeleton": 0.8, "root_match": 1.0, "correspondence": 0.9, "weak_radical_match": 0.0, "hamza_match": 0.0}, "family_boost_applied": True},
             },
             {
                 "source": {"lang": "ara", "lemma": "سكر"},
                 "target": {"lang": "eng", "lemma": "sugar"},
                 "scores": {"semantic": 0.95, "form": 0.8},
-                "hybrid": {"components": {"orthography": 0.9, "sound": 0.8, "skeleton": 0.1}, "family_boost_applied": False},
+                "hybrid": {"components": {"orthography": 0.9, "sound": 0.8, "skeleton": 0.1, "root_match": 0.0, "correspondence": 0.1, "weak_radical_match": 0.0, "hamza_match": 0.0}, "family_boost_applied": False},
             },
         ],
     )
@@ -85,7 +85,7 @@ def test_train_reranker_writes_model_and_predicts_probability(tmp_path: Path):
     score = loaded.predict_one(
         {
             "scores": {"semantic": 0.7, "form": 0.8},
-            "hybrid": {"components": {"orthography": 0.6, "sound": 0.7, "skeleton": 0.8}, "family_boost_applied": True},
+            "hybrid": {"components": {"orthography": 0.6, "sound": 0.7, "skeleton": 0.8, "root_match": 1.0, "correspondence": 0.9, "weak_radical_match": 0.0, "hamza_match": 0.0}, "family_boost_applied": True},
         }
     )
     assert 0.0 <= score <= 1.0

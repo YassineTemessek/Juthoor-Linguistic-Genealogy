@@ -7,6 +7,7 @@ from juthoor_cognatediscovery_lv2.discovery.corpora import CorpusInfo, CorpusSpe
 from juthoor_cognatediscovery_lv2.discovery.reporting import write_leads
 from juthoor_cognatediscovery_lv2.discovery.rerank import DiscoveryReranker
 from juthoor_cognatediscovery_lv2.discovery.retrieval import get_cache_paths, resolve_corpus_path
+from juthoor_cognatediscovery_lv2.lv3.discovery.jsonl import LexemeRow
 from juthoor_cognatediscovery_lv2.discovery.scoring import DiscoveryScorer, rank_candidates
 
 
@@ -71,6 +72,8 @@ def test_discovery_scorer_removes_temp_fields():
     assert len(scored) == 1
     assert "hybrid" in scored[0]
     assert scored[0]["hybrid"]["root_match_applied"] is True
+    assert scored[0]["hybrid"]["components"]["correspondence"] > 0.0
+    assert scored[0]["hybrid"]["components"]["root_match"] == 1.0
     assert "_source_fields" not in scored[0]
     assert "_target_fields" not in scored[0]
 
@@ -88,7 +91,15 @@ def test_reranker_reads_hybrid_components():
     entry = {
         "scores": {"semantic": 0.7, "form": 0.6},
         "hybrid": {
-            "components": {"orthography": 0.5, "sound": None, "skeleton": 0.4},
+            "components": {
+                "orthography": 0.5,
+                "sound": None,
+                "skeleton": 0.4,
+                "root_match": 1.0,
+                "correspondence": 0.8,
+                "weak_radical_match": 0.0,
+                "hamza_match": 1.0,
+            },
             "family_boost_applied": True,
         },
     }
@@ -101,6 +112,15 @@ def test_cache_paths_differ_for_different_corpora(tmp_path: Path):
     spec_b = CorpusSpec(lang="eng", stage="modern", path=Path("b.jsonl"))
     paths_a = get_cache_paths(tmp_path, "semantic", spec_a)
     paths_b = get_cache_paths(tmp_path, "semantic", spec_b)
+    assert paths_a != paths_b
+
+
+def test_cache_paths_differ_for_different_row_slices(tmp_path: Path):
+    spec = CorpusSpec(lang="eng", stage="modern", path=Path("same.jsonl"))
+    rows_a = [LexemeRow(0, {"id": "lex:a", "lemma": "name"})]
+    rows_b = [LexemeRow(0, {"id": "lex:a", "lemma": "name"}), LexemeRow(1, {"id": "lex:b", "lemma": "sun"})]
+    paths_a = get_cache_paths(tmp_path, "semantic", spec, rows_a)
+    paths_b = get_cache_paths(tmp_path, "semantic", spec, rows_b)
     assert paths_a != paths_b
 
 
