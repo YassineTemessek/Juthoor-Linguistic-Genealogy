@@ -195,11 +195,17 @@ def main() -> int:
                             "run_id": run_id, "pair_id": args.pair_id,
                             "source": {
                                 "id": row.lexeme_id, "lemma": row.lemma, "lang": src_spec.lang,
-                                "translit": row.data.get("translit"), "ipa": row.data.get("ipa")
+                                "translit": row.data.get("translit"), "ipa": row.data.get("ipa"),
+                                "record_type": row.data.get("record_type", "lexeme"),
+                                "words": row.data.get("words"),
+                                "root_norm": row.data.get("root_norm"),
                             },
                             "target": {
                                 "id": tgt_row.lexeme_id, "lemma": tgt_row.lemma, "lang": tgt_spec.lang,
-                                "translit": tgt_row.data.get("translit"), "ipa": tgt_row.data.get("ipa")
+                                "translit": tgt_row.data.get("translit"), "ipa": tgt_row.data.get("ipa"),
+                                "record_type": tgt_row.data.get("record_type", "lexeme"),
+                                "words": tgt_row.data.get("words"),
+                                "root_norm": tgt_row.data.get("root_norm"),
                             },
                             "scores": {}, "retrieved_by": [],
                             "_source_fields": row.data, "_target_fields": tgt_row.data

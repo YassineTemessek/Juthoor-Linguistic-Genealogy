@@ -28,6 +28,7 @@ class CorpusInfo:
     stage: str          # Stage from JSONL (e.g., "Classical", "Modern")
     n_rows: int         # Number of lexeme rows
     group: str          # Display group (e.g., "Arabic", "English")
+    record_type: str = "lexeme"
 
 _LANG_GROUPS = {
     "ara": "Arabic", "ara-qur": "Arabic",
@@ -50,6 +51,7 @@ _LABEL_MAP = {
     "hf_roots": "HF Arabic Roots",
     "english_ipa_merged_pos": "English IPA + POS",
     "concepts_v3_2_enriched": "Concepts Index",
+    "arabic_root_families": "Arabic Root Families",
 }
 
 def clean_label(stem: str) -> str:
@@ -62,7 +64,11 @@ def clean_label(stem: str) -> str:
     s = s.replace("_", " ").strip()
     return s if s else stem
 
-def guess_group(lang_code: str, parent_dir: str) -> str:
+def guess_group(lang_code: str, parent_dir: str, record_type: str = "lexeme") -> str:
+    if record_type == "root_family":
+        if lang_code == "ara":
+            return "Arabic Root Families"
+        return "Root Families"
     if lang_code in _LANG_GROUPS:
         return _LANG_GROUPS[lang_code]
     d = parent_dir.lower()
@@ -89,47 +95,52 @@ def guess_group(lang_code: str, parent_dir: str) -> str:
     return "Other"
 
 def discover_corpora(repo_root: Path) -> list[CorpusInfo]:
-    lv0_base = repo_root / "Juthoor-DataCore-LV0" / "data" / "processed"
-    lv2_base = repo_root / "data" / "processed"
-    base = lv0_base if lv0_base.exists() else lv2_base
-    if not base.exists():
-        return []
-
     raw_results: list[CorpusInfo] = []
-    for p in sorted(base.rglob("*.jsonl")):
-        rel = p.relative_to(base)
-        parts = rel.parts
-        if any(part.startswith("_") for part in parts):
+    bases = [
+        repo_root / "Juthoor-DataCore-LV0" / "data" / "processed",
+        repo_root / "data" / "processed",
+        repo_root / "Juthoor-CognateDiscovery-LV2" / "outputs" / "corpora",
+        repo_root / "outputs" / "corpora",
+    ]
+    for base in bases:
+        if not base.exists():
             continue
-        if "raw" in parts:
-            continue
+        for p in sorted(base.rglob("*.jsonl")):
+            rel = p.relative_to(base)
+            parts = rel.parts
+            if any(part.startswith("_") for part in parts):
+                continue
+            if "raw" in parts:
+                continue
 
-        language = "unknown"
-        stage = "unknown"
-        try:
-            with open(p, "r", encoding="utf-8") as f:
-                first_line = f.readline().strip()
-                if first_line:
-                    row = json.loads(first_line)
-                    language = row.get("language", "unknown")
-                    stage = row.get("stage", "unknown")
-        except Exception:
-            pass
+            language = "unknown"
+            stage = "unknown"
+            record_type = "lexeme"
+            try:
+                with open(p, "r", encoding="utf-8") as f:
+                    first_line = f.readline().strip()
+                    if first_line:
+                        row = json.loads(first_line)
+                        language = row.get("language") or row.get("lang") or "unknown"
+                        stage = row.get("stage", "unknown")
+                        record_type = row.get("record_type", "lexeme")
+            except Exception:
+                pass
 
-        try:
-            with open(p, "r", encoding="utf-8") as f:
-                n_rows = sum(1 for _ in f)
-        except Exception:
-            n_rows = 0
+            try:
+                with open(p, "r", encoding="utf-8") as f:
+                    n_rows = sum(1 for _ in f)
+            except Exception:
+                n_rows = 0
 
-        parent_dir = parts[0] if parts else ""
-        label = clean_label(p.stem)
-        group = guess_group(language, parent_dir)
+            parent_dir = parts[0] if parts else ""
+            label = clean_label(p.stem)
+            group = guess_group(language, parent_dir, record_type)
 
-        raw_results.append(CorpusInfo(
-            path=p, label=label, language=language,
-            stage=stage, n_rows=n_rows, group=group,
-        ))
+            raw_results.append(CorpusInfo(
+                path=p, label=label, language=language,
+                stage=stage, n_rows=n_rows, group=group, record_type=record_type,
+            ))
 
     best_stardict: dict[str, tuple[int, CorpusInfo]] = {}
     results: list[CorpusInfo] = []

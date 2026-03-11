@@ -19,10 +19,14 @@ from .corpora import CorpusSpec
 
 def resolve_corpus_path(spec: CorpusSpec, repo_root: Path) -> Path:
     path = spec.path
-    if not path.is_absolute():
-        if not str(path).startswith(str(repo_root)):
-            path = repo_root / path
-    return path.resolve()
+    if path.is_absolute():
+        return path.resolve()
+    if path.exists():
+        return path.resolve()
+    cwd_candidate = (Path.cwd() / path)
+    if cwd_candidate.exists():
+        return cwd_candidate.resolve()
+    return (repo_root / path).resolve()
 
 
 def _corpus_cache_key(spec: CorpusSpec, repo_root: Path) -> str:
