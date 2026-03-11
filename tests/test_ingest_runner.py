@@ -169,6 +169,24 @@ class TestBuildSteps:
         assert "arabic" in all_tags
         assert "quranic_arabic" in all_tags
 
+    def test_build_steps_enriches_final_arabic_and_quranic_lexemes(self, tmp_path):
+        from juthoor_datacore_lv0.ingest.runner import build_steps
+
+        steps = build_steps(
+            python_exe="python",
+            repo_root=tmp_path,
+            resources_dir=None,
+        )
+
+        output_paths = {
+            str(path).replace("\\", "/")
+            for step in steps
+            for path in step.outputs
+        }
+
+        assert any(path.endswith("arabic/classical/lexemes.jsonl") for path in output_paths)
+        assert any(path.endswith("quranic_arabic/lexemes.jsonl") for path in output_paths)
+
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
