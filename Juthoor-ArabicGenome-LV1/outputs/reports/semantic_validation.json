@@ -1,0 +1,206 @@
+{
+  "total_scored": 1910,
+  "mean": 0.55781,
+  "median": 0.551743,
+  "std": 0.109736,
+  "min": 0.267387,
+  "max": 1.0,
+  "q25": 0.48086,
+  "q75": 0.61996,
+  "histogram": [
+    {
+      "bin_start": 0.2674,
+      "bin_end": 0.3406,
+      "count": 24
+    },
+    {
+      "bin_start": 0.3406,
+      "bin_end": 0.4139,
+      "count": 119
+    },
+    {
+      "bin_start": 0.4139,
+      "bin_end": 0.4872,
+      "count": 368
+    },
+    {
+      "bin_start": 0.4872,
+      "bin_end": 0.5604,
+      "count": 521
+    },
+    {
+      "bin_start": 0.5604,
+      "bin_end": 0.6337,
+      "count": 461
+    },
+    {
+      "bin_start": 0.6337,
+      "bin_end": 0.707,
+      "count": 246
+    },
+    {
+      "bin_start": 0.707,
+      "bin_end": 0.7802,
+      "count": 105
+    },
+    {
+      "bin_start": 0.7802,
+      "bin_end": 0.8535,
+      "count": 47
+    },
+    {
+      "bin_start": 0.8535,
+      "bin_end": 0.9267,
+      "count": 8
+    },
+    {
+      "bin_start": 0.9267,
+      "bin_end": 1.0,
+      "count": 11
+    }
+  ],
+  "top_10": [
+    {
+      "tri_root": "تجر",
+      "binary_root": "تج",
+      "binary_root_meaning": "العمل طلبًا للأجر",
+      "axial_meaning": "العمل طلبًا للأجر",
+      "semantic_score": 1.0
+    },
+    {
+      "tri_root": "حقق-حقحق",
+      "binary_root": "حق",
+      "binary_root_meaning": "تمكن الشيء في عُمق مَقَرَّه، أو وسط مقره",
+      "axial_meaning": "تمكن الشيء في عُمق مَقَرَّه، أو وسط مقره",
+      "semantic_score": 1.0
+    },
+    {
+      "tri_root": "رمم-رمرم",
+      "binary_root": "رم",
+      "binary_root_meaning": "ضمّ غَضّ - أو رِخْو - (متغيّر أو متحوّل) في الأثناء",
+      "axial_meaning": "ضمّ غَضّ - أو رِخْو - (متغيّر أو متحوّل) في الأثناء",
+      "semantic_score": 1.0
+    },
+    {
+      "tri_root": "قوو",
+      "binary_root": "قو",
+      "binary_root_meaning": "شدة في الأثناء بالالتئام أو الالتواء مع امتداد",
+      "axial_meaning": "شدة في الأثناء بالالتئام أو الالتواء مع امتداد",
+      "semantic_score": 1.0
+    },
+    {
+      "tri_root": "يقظ",
+      "binary_root": "قظ",
+      "binary_root_meaning": "إثارة الساكن وتحريكه",
+      "axial_meaning": "إثارة الساكن وتحريكه",
+      "semantic_score": 1.0
+    },
+    {
+      "tri_root": "حدد",
+      "binary_root": "حد",
+      "binary_root_meaning": "إيقاف الامتداد والتخطي للشيء، أي إنهاؤه، أو منعه",
+      "axial_meaning": "إيقاف الامتداد والتخطي للشيء، أي إنهاؤه، أو مَنْعه",
+      "semantic_score": 0.997043
+    },
+    {
+      "tri_root": "قضى",
+      "binary_root": "قض",
+      "binary_root_meaning": "انفصال أو فراغ من شيء بعد تمامه أو قطعه",
+      "axial_meaning": "انفصال أو فراغ من شيء بعد قطعه أو تمامِه",
+      "semantic_score": 0.99396
+    },
+    {
+      "tri_root": "ضنن",
+      "binary_root": "ضن",
+      "binary_root_meaning": "هو لزوم الشيء حيزه أي بقاؤه داخله لا يبرحه",
+      "axial_meaning": "لزوم الشيء حيزه أي بقاؤه داخله لا يبرحه",
+      "semantic_score": 0.980008
+    },
+    {
+      "tri_root": "غوى",
+      "binary_root": "غو",
+      "binary_root_meaning": "الانجذاب إلى الشيء مع تغش وفساد",
+      "axial_meaning": "الانجذاب إلى الشيء مع تغشٍّ وفساد",
+      "semantic_score": 0.971384
+    },
+    {
+      "tri_root": "سلل-سلسل-سلسبيل",
+      "binary_root": "سل",
+      "binary_root_meaning": "انسحاب الشيء ممتدًا من أثناء أو فيها بطول ورفق",
+      "axial_meaning": "انسحاب الشيء من أثناء أو فيها بطول ورفق أو لطف",
+      "semantic_score": 0.945497
+    }
+  ],
+  "bottom_10": [
+    {
+      "tri_root": "روغ-ريغ",
+      "binary_root": "رغ",
+      "binary_root_meaning": "طبقة رخوة مع كثافة ما",
+      "axial_meaning": "تقلب وتحول - أو تقليب وتحويل - يُقْصَد به شمول التغطّي برخو متسيّب",
+      "semantic_score": 0.267387
+    },
+    {
+      "tri_root": "ولد",
+      "binary_root": "لد",
+      "binary_root_meaning": "الضم الشديد، أي الحوز بلا إفلات",
+      "axial_meaning": "نسل (أنثى) الحي من (بطنها) صغيرًا من جنسه",
+      "semantic_score": 0.270916
+    },
+    {
+      "tri_root": "ضغغ",
+      "binary_root": "ضغ",
+      "binary_root_meaning": "هو التجمع الكثيف الرخو",
+      "axial_meaning": "وَفْرَةُ ما يُحتاج إليه في العيش مع رخاوة ما",
+      "semantic_score": 0.280871
+    },
+    {
+      "tri_root": "مسح",
+      "binary_root": "مس",
+      "binary_root_meaning": "المخالطة والاتصال",
+      "axial_meaning": "انبساط باستواء ظاهر، أي خلو من النتوء",
+      "semantic_score": 0.296271
+    },
+    {
+      "tri_root": "زود",
+      "binary_root": "زد",
+      "binary_root_meaning": "إضافة شيء إلى الحيز",
+      "axial_meaning": "ما يُعد من الطعام والماء لحال البعد عنهما أمدًا طويلًا",
+      "semantic_score": 0.299771
+    },
+    {
+      "tri_root": "رعى",
+      "binary_root": "رع",
+      "binary_root_meaning": "(الامتداد) مع رقة أو رخاوة",
+      "axial_meaning": "ما تَغْتَذِي به الماشية من نبات غضّ طري فيحفظ حياتها",
+      "semantic_score": 0.301996
+    },
+    {
+      "tri_root": "ورث",
+      "binary_root": "رث",
+      "binary_root_meaning": "مستوى من البلى",
+      "axial_meaning": "حَوْزُ الإنسان ما كان يملكه آخر بعد موت هذا الآخَرِ",
+      "semantic_score": 0.306882
+    },
+    {
+      "tri_root": "حرف",
+      "binary_root": "حر",
+      "binary_root_meaning": "الخلوص من الغلظ",
+      "axial_meaning": "نهاية جانب – أو وجه من الشيء- يبدأ به جانب آخر",
+      "semantic_score": 0.307997
+    },
+    {
+      "tri_root": "جرم",
+      "binary_root": "جر",
+      "binary_root_meaning": "الاسترسال والامتداد",
+      "axial_meaning": "حصد عذوق التمر المعلقة بالنخل تجريدًا بعد تمام حاله",
+      "semantic_score": 0.308033
+    },
+    {
+      "tri_root": "وجد",
+      "binary_root": "جد",
+      "binary_root_meaning": "العظم والامتداد",
+      "axial_meaning": "تحصل شيء ذي بال في حوزة كانت خالية منه",
+      "semantic_score": 0.309929
+    }
+  ]
+}
