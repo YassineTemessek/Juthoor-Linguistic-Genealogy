@@ -1,0 +1,6 @@
+{"source": {"lang": "ara", "lemma": "كلب", "gloss": "dog"}, "target": {"lang": "eng", "lemma": "dog", "gloss": "dog"}, "relation": "negative_translation", "confidence": 0.95, "notes": "Semantic match but not a cognate claim"}
+{"source": {"lang": "ara", "lemma": "ماء", "gloss": "water"}, "target": {"lang": "eng", "lemma": "water", "gloss": "water"}, "relation": "negative_translation", "confidence": 0.95}
+{"source": {"lang": "ara", "lemma": "شمس", "gloss": "sun"}, "target": {"lang": "eng", "lemma": "sun", "gloss": "sun"}, "relation": "negative_translation", "confidence": 0.95}
+{"source": {"lang": "lat", "lemma": "canis", "gloss": "dog"}, "target": {"lang": "eng", "lemma": "dog", "gloss": "dog"}, "relation": "negative_translation", "confidence": 0.9}
+{"source": {"lang": "ara", "lemma": "غزال", "gloss": "gazelle"}, "target": {"lang": "eng", "lemma": "gazelle", "gloss": "gazelle"}, "relation": "borrowing", "confidence": 1.0}
+{"source": {"lang": "ara", "lemma": "قطن", "gloss": "cotton"}, "target": {"lang": "eng", "lemma": "cotton", "gloss": "cotton"}, "relation": "borrowing", "confidence": 1.0}

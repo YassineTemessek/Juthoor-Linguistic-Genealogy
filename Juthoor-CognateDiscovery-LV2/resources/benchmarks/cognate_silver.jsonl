@@ -1,0 +1,10 @@
+{"source": {"lang": "ara", "lemma": "عين", "gloss": "eye"}, "target": {"lang": "heb", "lemma": "עין", "gloss": "eye"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root ʿ-y-n"}
+{"source": {"lang": "ara", "lemma": "يد", "gloss": "hand"}, "target": {"lang": "heb", "lemma": "יד", "gloss": "hand"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root y-d"}
+{"source": {"lang": "ara", "lemma": "دم", "gloss": "blood"}, "target": {"lang": "heb", "lemma": "דם", "gloss": "blood"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root d-m"}
+{"source": {"lang": "ara", "lemma": "بيت", "gloss": "house"}, "target": {"lang": "heb", "lemma": "בית", "gloss": "house"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root b-y-t"}
+{"source": {"lang": "lat", "lemma": "mater", "gloss": "mother"}, "target": {"lang": "grc", "lemma": "μήτηρ", "gloss": "mother"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "pater", "gloss": "father"}, "target": {"lang": "grc", "lemma": "πατήρ", "gloss": "father"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "nomen", "gloss": "name"}, "target": {"lang": "grc", "lemma": "ὄνομα", "gloss": "name"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "lat", "lemma": "tres", "gloss": "three"}, "target": {"lang": "grc", "lemma": "τρεῖς", "gloss": "three"}, "relation": "cognate", "confidence": 1.0}
+{"source": {"lang": "ara", "lemma": "سكر", "gloss": "sugar"}, "target": {"lang": "eng", "lemma": "sugar", "gloss": "sugar"}, "relation": "borrowing", "confidence": 1.0}
+{"source": {"lang": "ara", "lemma": "كحول", "gloss": "alcohol"}, "target": {"lang": "eng", "lemma": "alcohol", "gloss": "alcohol"}, "relation": "borrowing", "confidence": 1.0}
