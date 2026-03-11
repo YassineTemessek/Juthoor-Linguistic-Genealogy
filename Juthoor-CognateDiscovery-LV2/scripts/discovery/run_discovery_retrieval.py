@@ -32,6 +32,7 @@ from juthoor_cognatediscovery_lv2.discovery.retrieval import (
 )
 from juthoor_cognatediscovery_lv2.discovery.scoring import DiscoveryScorer, rank_candidates
 from juthoor_cognatediscovery_lv2.discovery.reporting import write_leads, generate_discovery_report
+from juthoor_cognatediscovery_lv2.discovery.rerank import DiscoveryReranker
 
 def parse_spec(value: str) -> CorpusSpec:
     if "=" not in value:
@@ -124,6 +125,7 @@ def main() -> int:
     parser.add_argument("--pair-id", type=str, default=None)
     parser.add_argument("--min-hybrid", type=float, default=0.0)
     parser.add_argument("--no-report", action="store_true")
+    parser.add_argument("--reranker-model", type=Path, default=None, help="Optional trained reranker model JSON.")
     parser.add_argument("-y", "--yes", action="store_true")
     args = parser.parse_args()
 
@@ -140,6 +142,7 @@ def main() -> int:
         sound=args.w_sound, skeleton=args.w_skeleton
     )
     scorer = DiscoveryScorer(weights=weights)
+    reranker = DiscoveryReranker(args.reranker_model) if args.reranker_model else None
 
     # 1. Embed and Index targets
     target_data = {m: [] for m in args.models}
@@ -207,6 +210,8 @@ def main() -> int:
             # Post-retrieval scoring
             scored = scorer.score(candidates)
             ranked = rank_candidates(scored, max_out=args.max_out, min_hybrid=args.min_hybrid)
+            if reranker:
+                ranked = reranker.rerank(ranked)
             all_leads.extend(ranked)
 
     # 4. Reporting
