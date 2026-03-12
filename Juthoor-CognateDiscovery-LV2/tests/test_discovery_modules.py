@@ -63,8 +63,20 @@ def test_write_leads_round_trip(tmp_path: Path):
 
 def test_build_evidence_card_exposes_parallel_channels():
     entry = {
-        "source": {"lemma": "بيت", "translit": "bayt", "ipa": "bajt", "root_norm": "بيت"},
-        "target": {"lemma": "בית", "translit": "bayit", "ipa": "bajit", "root_norm": "بيت"},
+        "source": {
+            "lemma": "بيت",
+            "translit": "bayt",
+            "ipa": "bajt",
+            "root_norm": "بيت",
+            "meaning_text": "house; dwelling; home; household; shelter in a built structure.",
+        },
+        "target": {
+            "lemma": "בית",
+            "translit": "bayit",
+            "ipa": "bajit",
+            "root_norm": "بيت",
+            "gloss": "house / household / dwelling.",
+        },
         "scores": {"semantic": 0.9, "form": 0.8},
         "hybrid": {
             "components": {"orthography": 0.8, "sound": 0.7, "skeleton": 1.0, "correspondence": 1.0},
@@ -77,6 +89,45 @@ def test_build_evidence_card_exposes_parallel_channels():
     assert "phonetic_form" in card
     assert "root_or_skeleton" in card
     assert card["root_family_support"] is True
+    assert set(card["meaning"]["source_gloss"].split(" / ")) == {"house", "dwelling", "home"}
+    assert set(card["meaning"]["target_gloss"].split(" / ")) == {"house", "household", "dwelling"}
+    assert "Strong cognate candidate" in card["why_this_candidate"]
+
+
+def test_build_evidence_card_marks_translation_led_pairs_honestly():
+    entry = {
+        "category": "translation_only_candidate",
+        "source": {"lemma": "كلب", "translit": "kalb", "meaning_text": "dog; hound; canine animal"},
+        "target": {"lemma": "dog", "translit": "dog", "meaning_text": "dog; domestic canine"},
+        "scores": {"semantic": 0.93, "form": 0.1},
+        "hybrid": {
+            "components": {"orthography": 0.1, "sound": 0.1, "skeleton": 0.05, "correspondence": 0.1},
+            "combined_score": 0.41,
+            "root_match_applied": False,
+        },
+    }
+    card = build_evidence_card(entry)
+    assert card["candidate_category"] == "translation_only_candidate"
+    assert "translation-led" in card["why_this_candidate"]
+    assert card["meaning"]["source_gloss"] == "dog / hound / canine animal"
+
+
+def test_build_evidence_card_compacts_arabic_dictionary_glosses():
+    entry = {
+        "source": {
+            "lemma": "أرض",
+            "translit": "arḍ",
+            "meaning_text": "أرض — [أرض] الارض مؤنثة، وهى اسم جنس. وكل ما سفل فهو أرض. والأرض: أسفل قوائم الدابة.",
+        },
+        "target": {"lemma": "earth", "translit": "earth", "meaning_text": "earth; land; ground"},
+        "scores": {"semantic": 0.7, "form": 0.2},
+        "hybrid": {
+            "components": {"orthography": 0.1, "sound": 0.1, "skeleton": 0.0, "correspondence": 0.1},
+            "combined_score": 0.45,
+        },
+    }
+    card = build_evidence_card(entry)
+    assert card["meaning"]["source_gloss"].startswith("كل ما سفل فهو أرض")
 
 
 def test_discovery_scorer_removes_temp_fields():
