@@ -14,6 +14,7 @@ def main() -> int:
     parser.add_argument("--epochs", type=int, default=400)
     parser.add_argument("--learning-rate", type=float, default=0.5)
     parser.add_argument("--l2", type=float, default=0.01)
+    parser.add_argument("--negatives-per-positive", type=int, default=3)
     args = parser.parse_args()
 
     model = train_reranker(
@@ -23,6 +24,7 @@ def main() -> int:
         learning_rate=args.learning_rate,
         epochs=args.epochs,
         l2=args.l2,
+        negatives_per_positive=args.negatives_per_positive,
     )
     print(f"Model written to: {args.output}")
     print(f"Model type: {model.model_type}")
