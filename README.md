@@ -111,6 +111,68 @@ The discovery engine supports **60+ language codes** including:
 
 ---
 
+## Showing Connections
+
+The project should not present a candidate as only `score = 0.82`.
+It should present each proposed Arabic-to-other-language link as an **evidence card**.
+
+Each evidence card should expose:
+
+- surface forms in script
+- transliteration
+- IPA / phonetic form
+- root or consonantal skeleton
+- semantic gloss
+- correspondence explanation
+- score breakdown
+
+Example of a strong explanation:
+
+- Arabic: `بيت` / `bayt`
+- Hebrew: `בית` / `bayit`
+- Gloss: `house`
+- Skeleton: `byt` vs `byt`
+- Shape similarity: high
+- Phonetic similarity: high
+- Semantic similarity: high
+- Root-family support: yes
+- Correspondence note: stable Semitic `b-y-t`
+
+Example of a weaker explanation:
+
+- Arabic: `قرن` / `qarn`
+- English: `horn`
+- Gloss: `horn`
+- Skeleton: `qrn` vs `hrn`
+- Shape similarity: medium
+- Phonetic similarity: medium
+- Semantic similarity: high
+- Correspondence note: possible `q/h` corridor hypothesis
+- Confidence: tentative, needs broader pattern support
+
+The connection should be shown in parallel channels, not as one blended score:
+
+1. surface shape
+2. phonetic form
+3. consonantal skeleton
+4. correspondence classes
+5. meaning
+
+A good candidate should show **convergence of evidence**:
+
+- at least moderate semantic proximity
+- some form or phonetic support
+- some consonantal or correspondence support
+- ideally broader family or root support
+
+Success means the system can:
+
+1. retrieve plausible pairs
+2. explain why they are plausible
+3. separate real historical candidates from false friends and mere translations
+
+---
+
 ## Documentation
 
 - **[Project Overview](./docs/PROJECT_OVERVIEW.md)**: Detailed breakdown of the workspace and logic.

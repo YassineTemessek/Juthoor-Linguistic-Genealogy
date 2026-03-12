@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from juthoor_cognatediscovery_lv2.discovery.corpora import CorpusInfo, CorpusSpec, clean_label, discover_corpora
-from juthoor_cognatediscovery_lv2.discovery.reporting import write_leads
+from juthoor_cognatediscovery_lv2.discovery.reporting import build_evidence_card, write_leads
 from juthoor_cognatediscovery_lv2.discovery.rerank import DiscoveryReranker
 from juthoor_cognatediscovery_lv2.discovery.retrieval import get_cache_paths, resolve_corpus_path
 from juthoor_cognatediscovery_lv2.lv3.discovery.jsonl import LexemeRow
@@ -52,11 +52,31 @@ def test_discover_corpora_finds_root_family_outputs(tmp_path: Path):
 
 def test_write_leads_round_trip(tmp_path: Path):
     out_path = tmp_path / "out" / "leads.jsonl"
-    leads = [{"source": {"lemma": "عين"}, "target": {"lemma": "עין"}}]
+    leads = [{"source": {"lemma": "عين", "translit": "ʿayn", "ipa": "ʕajn", "root_norm": "عين"}, "target": {"lemma": "עין", "translit": "ʿayin", "ipa": "ʕajin", "root_norm": "عين"}, "scores": {}, "hybrid": {"components": {"correspondence": 1.0}, "combined_score": 0.8, "root_match_applied": True}}]
     write_leads(leads, out_path)
     lines = out_path.read_text(encoding="utf-8").splitlines()
     assert len(lines) == 1
-    assert json.loads(lines[0])["target"]["lemma"] == "עין"
+    row = json.loads(lines[0])
+    assert row["target"]["lemma"] == "עין"
+    assert "evidence_card" in row
+
+
+def test_build_evidence_card_exposes_parallel_channels():
+    entry = {
+        "source": {"lemma": "بيت", "translit": "bayt", "ipa": "bajt", "root_norm": "بيت"},
+        "target": {"lemma": "בית", "translit": "bayit", "ipa": "bajit", "root_norm": "بيت"},
+        "scores": {"semantic": 0.9, "form": 0.8},
+        "hybrid": {
+            "components": {"orthography": 0.8, "sound": 0.7, "skeleton": 1.0, "correspondence": 1.0},
+            "combined_score": 0.88,
+            "root_match_applied": True,
+        },
+    }
+    card = build_evidence_card(entry)
+    assert "surface_shape" in card
+    assert "phonetic_form" in card
+    assert "root_or_skeleton" in card
+    assert card["root_family_support"] is True
 
 
 def test_discovery_scorer_removes_temp_fields():

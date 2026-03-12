@@ -25,6 +25,7 @@ phonetic similarity, then ranks candidate connections for review.
 
 - Canonical, machine-readable lexeme tables under `data/processed/` (JSONL contract).
 - Discovery outputs under `outputs/` (ranked leads, manifests, caches, previews).
+- Structured `evidence_card` fields in lead rows so candidates can be shown as explainable multi-channel evidence rather than a single score.
 - Validation tooling to catch broken rows early.
 
 ## Repo Policy
