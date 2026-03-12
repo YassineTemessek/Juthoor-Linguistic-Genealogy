@@ -16,7 +16,7 @@ This monorepo consolidates a multi-layered research stack -- from raw data inges
 | :--- | :--- | :--- |
 | **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** A robust data engine that ingests, normalizes, and canonizes lexical data from diverse sources (Wiktionary, Lane, Taj al-Arus, Khorsi). Single source of truth. |
 | **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | **The Genome.** Decodes the **biconsonantal (2-letter) root system**. Maps the "atomic meanings" of Arabic sounds and generates the binary root graph. |
-| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** AI-powered discovery engine using **BGE-M3** (semantic search) and **ByT5** (character-level matching) to find and rank cross-lingual cognates (English, Greek, Latin vs. Arabic). |
+| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** Discovery engine using **BGE-M3** (semantic search), **ByT5** (character-level matching), correspondence-aware reranking, benchmark evaluation, and root-family retrieval experiments. |
 | **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | **The Theory.** Synthesis layer testing genealogical hypotheses, mapping global language corridors, and reconstructing the "Origin" model. |
 | **App** | **[Quran-Corpus-Analysis](./Quran-Corpus-Analysis)** | **The Application.** Semantic analysis suite for the Quranic corpus using root-based associations. |
 
@@ -76,6 +76,13 @@ python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_discovery_retrieval.py
 # Interactive wizard guides you through corpus and model selection
 ```
 
+**4. Evaluate / Benchmark (LV2)**
+```bash
+python Juthoor-CognateDiscovery-LV2/scripts/discovery/evaluate.py \
+  Juthoor-CognateDiscovery-LV2/outputs/leads/discovery_YYYYMMDD_HHMMSS.jsonl \
+  --benchmark Juthoor-CognateDiscovery-LV2/resources/benchmarks/cognate_gold.jsonl
+```
+
 ---
 
 ## Supported Languages
@@ -99,7 +106,7 @@ The discovery engine supports **60+ language codes** including:
 | **[BGE-M3](https://huggingface.co/BAAI/bge-m3)** | Multilingual semantic embeddings (100+ languages, cross-platform, 1024-dim) |
 | **[ByT5](https://huggingface.co/google/byt5-small)** | Byte-level tokenizer-free model for character/form-based similarity |
 | **[FAISS](https://github.com/facebookresearch/faiss)** | Facebook's vector similarity search for fast nearest-neighbor retrieval |
-| **Hybrid Scoring** | Weighted combination of orthographic, phonetic, skeletal, and semantic similarity |
+| **Hybrid Scoring** | Weighted combination of orthographic, phonetic, skeletal, semantic, and correspondence-aware similarity |
 | **Graph Theory** | Modeling language roots as connected graph networks |
 
 ---
@@ -109,6 +116,7 @@ The discovery engine supports **60+ language codes** including:
 - **[Project Overview](./docs/PROJECT_OVERVIEW.md)**: Detailed breakdown of the workspace and logic.
 - **[Data Flow](./docs/RAW_DATA_FLOW.md)**: How data moves from raw resources to canonical JSONL.
 - **[Progress Log](./docs/PROGRESS_LOG.md)**: Tracking the development milestones.
+- **[LV2 Benchmarks](./Juthoor-CognateDiscovery-LV2/resources/benchmarks/README.md)**: Evaluation assets, coverage checks, and slice-generation workflow.
 
 ---
 
