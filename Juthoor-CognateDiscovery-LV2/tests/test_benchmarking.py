@@ -5,6 +5,7 @@ from pathlib import Path
 
 from juthoor_cognatediscovery_lv2.discovery.benchmarking import (
     apply_gloss_overrides,
+    build_root_family_benchmark_source,
     compare_metrics,
     compare_lead_runs,
     evaluate_leads_against_benchmarks,
@@ -66,6 +67,30 @@ def test_filter_available_benchmark_pairs_only_keeps_present_rows():
     )
     assert len(available) == 1
     assert available[0]["source"]["lemma"] == "بيت"
+
+
+def test_build_root_family_benchmark_source_preserves_benchmark_lemma():
+    source_rows = [
+        {"lang": "ara", "lemma": "بيت", "root_norm": "بيت", "short_gloss": "البيت / المسكن", "meaning_text": "old"}
+    ]
+    root_family_rows = [
+        {
+            "lang": "ara",
+            "lemma": "بيت",
+            "root_norm": "بيت",
+            "words": ["بيت", "مبيت"],
+            "meaning_text": "dwelling family",
+            "gloss_plain": "dwelling family",
+            "word_count": 2,
+            "binary_root": "بي",
+        }
+    ]
+    rows = build_root_family_benchmark_source(source_rows, root_family_rows)
+    assert rows[0]["lemma"] == "بيت"
+    assert rows[0]["record_type"] == "root_family_source"
+    assert rows[0]["root_family_lemma"] == "بيت"
+    assert rows[0]["short_gloss"] == "البيت / المسكن"
+    assert "words: بيت, مبيت" in rows[0]["form_text"]
 
 
 def test_compare_metrics_reports_deltas():

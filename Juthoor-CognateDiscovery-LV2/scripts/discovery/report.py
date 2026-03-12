@@ -244,7 +244,7 @@ def _render_evidence_card(lead: dict[str, Any]) -> str:
     roots = card.get("root_or_skeleton") or {}
     meaning = card.get("meaning") or {}
     scores = card.get("score_breakdown") or {}
-    verdict = category_label(str(card.get("candidate_category") or "tentative_candidate"))
+    verdict = str(card.get("verdict") or category_label(str(card.get("candidate_category") or "tentative_candidate")))
     shared_concept = meaning.get("shared_concept") or "—"
     rows = ""
     for label in ("semantic", "form", "orthography", "sound", "skeleton", "correspondence"):

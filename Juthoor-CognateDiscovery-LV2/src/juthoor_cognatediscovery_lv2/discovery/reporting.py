@@ -193,6 +193,15 @@ def category_label(category: str) -> str:
     }.get(category, category.replace("_", " "))
 
 
+def _verdict(entry: dict[str, Any]) -> str:
+    category = _candidate_category(entry)
+    if category == "likely_cognate_candidate":
+        return "strong cognate candidate"
+    if category == "translation_only_candidate":
+        return "translation-led candidate"
+    return "tentative candidate"
+
+
 def _shared_concept(source_gloss: str | None, target_gloss: str | None) -> str | None:
     if source_gloss and target_gloss:
         if any("a" <= ch.lower() <= "z" for ch in target_gloss):
@@ -225,9 +234,12 @@ def _candidate_category(entry: dict[str, Any]) -> str:
     form = float(scores.get("form", 0.0) or 0.0)
     corr = float(components.get("correspondence", 0.0) or 0.0)
     skeleton = float(components.get("skeleton", 0.0) or 0.0)
-    if hybrid.get("root_match_applied") or (semantic >= 0.6 and (corr >= 0.6 or skeleton >= 0.6 or form >= 0.6)):
+    combined = float(hybrid.get("combined_score", 0.0) or 0.0)
+    if (hybrid.get("root_match_applied") and semantic >= 0.45) or (
+        combined >= 0.72 and semantic >= 0.55 and corr >= 0.45 and (skeleton >= 0.45 or form >= 0.5)
+    ):
         return "likely_cognate_candidate"
-    if semantic >= 0.7 and form < 0.35 and corr < 0.35 and skeleton < 0.35:
+    if semantic >= 0.72 and form < 0.3 and corr < 0.35 and skeleton < 0.3:
         return "translation_only_candidate"
     if semantic < 0.45 and (form >= 0.55 or corr >= 0.55):
         return "shape_only_resemblance"
@@ -309,6 +321,7 @@ def build_evidence_card(entry: dict[str, Any]) -> dict[str, Any]:
     category = _candidate_category(entry)
     source_gloss = _preferred_gloss(source)
     target_gloss = _preferred_gloss(target)
+    verdict = _verdict(entry)
     return {
         "surface_shape": {
             "source": _surface_forms(source),
@@ -341,6 +354,7 @@ def build_evidence_card(entry: dict[str, Any]) -> dict[str, Any]:
         },
         "root_family_support": bool(hybrid.get("root_match_applied")),
         "candidate_category": category,
+        "verdict": verdict,
         "correspondence_note": _correspondence_note(entry),
         "confidence_note": "tentative" if float(hybrid.get("combined_score", 0.0) or 0.0) < 0.6 else "promising",
         "why_this_candidate": _why_this_candidate(entry),

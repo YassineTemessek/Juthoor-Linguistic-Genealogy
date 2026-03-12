@@ -99,9 +99,12 @@ def _candidate_category(entry: dict[str, Any]) -> str:
     corr = float(components.get("correspondence", 0.0) or 0.0)
     skeleton = float(components.get("skeleton", 0.0) or 0.0)
     root_support = bool(hybrid.get("root_match_applied"))
-    if root_support or (semantic >= 0.6 and (corr >= 0.6 or skeleton >= 0.6 or form >= 0.6)):
+    combined = float(hybrid.get("combined_score", 0.0) or 0.0)
+    if (root_support and semantic >= 0.45) or (
+        combined >= 0.72 and semantic >= 0.55 and corr >= 0.45 and (skeleton >= 0.45 or form >= 0.5)
+    ):
         return "likely_cognate_candidate"
-    if semantic >= 0.7 and form < 0.35 and corr < 0.35 and skeleton < 0.35:
+    if semantic >= 0.72 and form < 0.3 and corr < 0.35 and skeleton < 0.3:
         return "translation_only_candidate"
     if semantic < 0.45 and (form >= 0.55 or corr >= 0.55):
         return "shape_only_resemblance"
