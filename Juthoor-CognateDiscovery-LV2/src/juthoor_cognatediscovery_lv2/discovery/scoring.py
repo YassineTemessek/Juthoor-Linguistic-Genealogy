@@ -89,6 +89,24 @@ def apply_hybrid_scoring(
             target_fields=tgt_fields,
         )
 
+
+def _candidate_category(entry: dict[str, Any]) -> str:
+    scores = entry.get("scores", {})
+    hybrid = entry.get("hybrid", {})
+    components = hybrid.get("components", {})
+    semantic = float(scores.get("semantic", 0.0) or 0.0)
+    form = float(scores.get("form", 0.0) or 0.0)
+    corr = float(components.get("correspondence", 0.0) or 0.0)
+    skeleton = float(components.get("skeleton", 0.0) or 0.0)
+    root_support = bool(hybrid.get("root_match_applied"))
+    if root_support or (semantic >= 0.6 and (corr >= 0.6 or skeleton >= 0.6 or form >= 0.6)):
+        return "likely_cognate_candidate"
+    if semantic >= 0.7 and form < 0.35 and corr < 0.35 and skeleton < 0.35:
+        return "translation_only_candidate"
+    if semantic < 0.45 and (form >= 0.55 or corr >= 0.55):
+        return "shape_only_resemblance"
+    return "tentative_candidate"
+
 def rank_candidates(
     candidates: list[dict[str, Any]],
     max_out: int = 200,
@@ -130,6 +148,7 @@ class DiscoveryScorer:
         apply_hybrid_scoring(candidates, self.weights)
         # Clean up temporary fields used for scoring but not needed in output
         for entry in candidates.values():
+            entry["category"] = _candidate_category(entry)
             entry.pop("_source_fields", None)
             entry.pop("_target_fields", None)
         return list(candidates.values())

@@ -206,6 +206,8 @@ def main() -> int:
                                 "record_type": row.data.get("record_type", "lexeme"),
                                 "words": row.data.get("words"),
                                 "root_norm": row.data.get("root_norm"),
+                                "gloss": row.data.get("gloss_plain") or row.data.get("meaning_text"),
+                                "meaning_text": row.data.get("meaning_text"),
                             },
                             "target": {
                                 "id": tgt_row.lexeme_id, "lemma": tgt_row.lemma, "lang": tgt_spec.lang,
@@ -213,6 +215,8 @@ def main() -> int:
                                 "record_type": tgt_row.data.get("record_type", "lexeme"),
                                 "words": tgt_row.data.get("words"),
                                 "root_norm": tgt_row.data.get("root_norm"),
+                                "gloss": tgt_row.data.get("gloss_plain") or tgt_row.data.get("meaning_text"),
+                                "meaning_text": tgt_row.data.get("meaning_text"),
                             },
                             "scores": {}, "retrieved_by": [],
                             "_source_fields": row.data, "_target_fields": tgt_row.data
