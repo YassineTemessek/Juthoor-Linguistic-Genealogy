@@ -150,7 +150,7 @@ def compute_stats(leads: list[dict[str, Any]]) -> dict[str, Any]:
     # Category breakdown
     categories: dict[str, int] = defaultdict(int)
     for lead in leads:
-        categories[lead.get("category", "unknown")] += 1
+        categories[_category_key(lead)] += 1
 
     return {
         "run_id": run_id,
@@ -205,6 +205,61 @@ def _lemma_span(lemma: str, lang: str) -> str:
     if lang in rtl_langs:
         return f'<span dir="rtl" lang="{_e(lang)}" style="font-size:1.1em">{_e(lemma)}</span>'
     return _e(lemma)
+
+
+def _category_key(lead: dict[str, Any]) -> str:
+    return str(lead.get("candidate_category") or lead.get("category") or "unknown")
+
+
+def _category_badge(label: str) -> str:
+    short = {
+        "likely_cognate_candidate": "COG",
+        "translation_only_candidate": "TRN",
+        "shape_only_resemblance": "SHAPE",
+        "tentative_candidate": "TENT",
+        "strong_union": "SU",
+        "semantic_only": "SEM",
+        "form_only": "FORM",
+    }.get(label, label)
+    return f'<span class="cat cat-{_e(label)}">{_e(short)}</span>'
+
+
+def _render_evidence_card(lead: dict[str, Any]) -> str:
+    card = lead.get("evidence_card") or {}
+    surface = card.get("surface_shape") or {}
+    phon = card.get("phonetic_form") or {}
+    roots = card.get("root_or_skeleton") or {}
+    meaning = card.get("meaning") or {}
+    scores = card.get("score_breakdown") or {}
+    rows = ""
+    for label in ("semantic", "form", "orthography", "sound", "skeleton", "correspondence"):
+        info = scores.get(label) or {}
+        rows += (
+            f"<tr><td>{_e(label)}</td><td>{_score_badge(info.get('value'))}</td>"
+            f"<td>{_e(info.get('strength') or 'missing')}</td></tr>"
+        )
+    return f"""
+<div class="evidence-card">
+  <div class="evidence-head">
+    {_category_badge(str(card.get('candidate_category') or 'tentative_candidate'))}
+    <span class="note">{_e(card.get('confidence_note') or '')}</span>
+  </div>
+  <p><strong>Why this candidate:</strong> {_e(card.get('why_this_candidate') or '')}</p>
+  <table class="info-table evidence-table">
+    <tr><td>Surface</td><td>{_e(' / '.join(surface.get('source') or []))} ⇄ {_e(' / '.join(surface.get('target') or []))}</td></tr>
+    <tr><td>IPA</td><td>{_e(phon.get('source_ipa') or '—')} ⇄ {_e(phon.get('target_ipa') or '—')}</td></tr>
+    <tr><td>Gloss</td><td>{_e(meaning.get('source_gloss') or '—')} ⇄ {_e(meaning.get('target_gloss') or '—')}</td></tr>
+    <tr><td>Skeleton</td><td>{_e(roots.get('source_skeleton') or '—')} vs {_e(roots.get('target_skeleton') or '—')}</td></tr>
+    <tr><td>Classes</td><td>{_e(roots.get('source_classes') or '—')} vs {_e(roots.get('target_classes') or '—')}</td></tr>
+    <tr><td>Roots</td><td>{_e(roots.get('source_root') or '—')} vs {_e(roots.get('target_root') or '—')}</td></tr>
+    <tr><td>Root support</td><td>{_e('yes' if card.get('root_family_support') else 'no')}</td></tr>
+    <tr><td>Note</td><td>{_e(card.get('correspondence_note') or '')}</td></tr>
+  </table>
+  <table class="data-table compact">
+    <thead><tr><th>Channel</th><th>Score</th><th>Strength</th></tr></thead>
+    <tbody>{rows}</tbody>
+  </table>
+</div>"""
 
 
 # ---------------------------------------------------------------------------
@@ -342,10 +397,7 @@ def _render_leads_table(leads: list[dict[str, Any]], top_n: int) -> str:
         src_tip = f' title="IPA: {src_ipa}"' if src_ipa else ""
         tgt_tip = f' title="IPA: {tgt_ipa}"' if tgt_ipa else ""
 
-        cat = _e(lead.get("category", ""))
-        cat_abbr = {"strong_union": "SU", "semantic_only": "SEM", "form_only": "FORM"}.get(
-            lead.get("category", ""), cat
-        )
+        cat = _category_key(lead)
 
         family_marker = ' <span title="Same language family" style="color:#2d8a4e;font-size:0.8em">&#9650;</span>' if family_boost else ""
 
@@ -361,7 +413,7 @@ def _render_leads_table(leads: list[dict[str, Any]], top_n: int) -> str:
       <td style="text-align:right">{_score_badge(comps.get('sound'))}</td>
       <td style="text-align:right">{_score_badge(comps.get('skeleton'))}</td>
       <td style="text-align:right">{_score_badge(combined)}{family_marker}</td>
-      <td><span class="cat cat-{_e(lead.get('category',''))}">{cat_abbr}</span></td>
+      <td>{_category_badge(cat)}</td>
     </tr>"""
 
     return f"""
@@ -416,6 +468,7 @@ def _render_by_source(leads: list[dict[str, Any]], top_sources: int = 50) -> str
         ipa_part = f" <span style='color:#666;font-size:0.9em'>/{ipa_str}/</span>" if ipa_str else ""
 
         rows = ""
+        evidence_cards = ""
         for i, lead in enumerate(group, 1):
             tgt = lead.get("target", {})
             hybrid = lead.get("hybrid") or {}
@@ -427,6 +480,7 @@ def _render_by_source(leads: list[dict[str, Any]], top_sources: int = 50) -> str
             skel = comps.get("skeleton")
             snd_str = f"{snd:.2f}" if snd is not None else "—"
             skel_str = f"{skel:.2f}" if skel is not None else "—"
+            evidence_cards += _render_evidence_card(lead)
             rows += f"""
           <tr>
             <td style="color:#666;padding-right:8px">{i}.</td>
@@ -447,12 +501,13 @@ def _render_by_source(leads: list[dict[str, Any]], top_sources: int = 50) -> str
     </summary>
     <table style="margin:8px 0 4px 16px;border-collapse:collapse">{rows}
     </table>
+    <div class="evidence-grid">{evidence_cards}</div>
   </details>"""
 
     return f"""
 <section class="card" id="by-source">
   <h2>By Source Word <span class="note">(top {top_sources} source words, top 5 matches each)</span></h2>
-  <p class="note">Click a word to expand its best matches. Scores show hybrid combined, sound, and consonant skeleton similarity.</p>
+  <p class="note">Click a word to expand its best matches. Each source group now includes evidence cards with gloss, IPA, skeleton, correspondence classes, and explanation notes.</p>
 {blocks}
 </section>"""
 
@@ -589,6 +644,15 @@ summary:hover { background: #f0f4f8; }
 .cat-strong_union  { background: #d4edda; color: #155724; }
 .cat-semantic_only { background: #cce5ff; color: #004085; }
 .cat-form_only     { background: #fff3cd; color: #856404; }
+.cat-likely_cognate_candidate { background: #d4edda; color: #155724; }
+.cat-translation_only_candidate { background: #f8d7da; color: #721c24; }
+.cat-shape_only_resemblance { background: #fff3cd; color: #856404; }
+.cat-tentative_candidate { background: #e2e3e5; color: #383d41; }
+.evidence-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; margin: 12px 0 4px 16px; }
+.evidence-card { border:1px solid #e8ecf0; border-radius:8px; padding:12px; background:#fbfcfd; }
+.evidence-head { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; }
+.evidence-table td:first-child { width: 110px; }
+.compact th, .compact td { font-size: 0.85em; padding: 4px 8px; }
 </style>
 """
 

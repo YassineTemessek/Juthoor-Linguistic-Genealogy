@@ -58,6 +58,18 @@ def collapse_weak_radicals(text: str) -> str:
     return "".join(out)
 
 
+def literal_skeleton(text: str) -> str:
+    text = normalize_hamza(text)
+    out: list[str] = []
+    for ch in text:
+        if not ch.isalpha():
+            continue
+        if ch in _WEAK_RADICALS or ch in _WEAK_LATIN:
+            continue
+        out.append(ch)
+    return "".join(out)
+
+
 def correspondence_string(text: str) -> str:
     text = normalize_hamza(text)
     out: list[str] = []
@@ -83,6 +95,23 @@ def best_radical_text(row: dict[str, Any]) -> str:
         or row.get("lemma")
         or ""
     ).strip()
+
+
+def explain_correspondence_rules(source: dict[str, Any], target: dict[str, Any]) -> list[str]:
+    src = best_radical_text(source)
+    tgt = best_radical_text(target)
+    notes: list[str] = []
+    if normalize_hamza(src) == normalize_hamza(tgt) and src and tgt and src != tgt:
+        notes.append("hamza normalization aligns the forms")
+    if collapse_weak_radicals(src) == collapse_weak_radicals(tgt) and src and tgt:
+        notes.append("weak-radical reduction produces the same consonant trace")
+    src_corr = correspondence_string(src)
+    tgt_corr = correspondence_string(tgt)
+    if src_corr == tgt_corr and src_corr:
+        notes.append(f"shared correspondence class trace: {src_corr}")
+    elif _seq_ratio(src_corr, tgt_corr) >= 0.7 and src_corr and tgt_corr:
+        notes.append(f"close correspondence class traces: {src_corr} vs {tgt_corr}")
+    return notes
 
 
 def correspondence_features(source: dict[str, Any], target: dict[str, Any]) -> dict[str, float]:

@@ -155,6 +155,23 @@ python "scripts/discovery/build_root_family_corpus.py"
 - Latin-Greek gold slice: `10/10` gold pairs are currently runnable with existing corpora, and the baseline retrieval is already perfect on that slice.
 - Reranking is not universally helpful; it should be treated as language-pair-specific and benchmark-gated.
 
+## Evidence Cards
+
+LV2 lead rows now carry an `evidence_card` object. The goal is to show each candidate as explainable historical evidence, not only as a scalar score.
+
+Each card includes:
+
+- surface forms
+- transliteration
+- IPA
+- literal consonantal skeleton
+- correspondence-class trace
+- gloss fields
+- score breakdown by channel
+- correspondence note
+- generated `why_this_candidate`
+- candidate category
+
 ## Contributing
 
 See `CONTRIBUTING.md`.
