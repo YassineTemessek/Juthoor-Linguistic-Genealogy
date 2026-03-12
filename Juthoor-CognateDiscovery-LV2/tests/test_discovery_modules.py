@@ -89,8 +89,9 @@ def test_build_evidence_card_exposes_parallel_channels():
     assert "phonetic_form" in card
     assert "root_or_skeleton" in card
     assert card["root_family_support"] is True
-    assert set(card["meaning"]["source_gloss"].split(" / ")) == {"house", "dwelling", "home"}
+    assert {"house", "home"}.issubset(set(card["meaning"]["source_gloss"].split(" / ")))
     assert set(card["meaning"]["target_gloss"].split(" / ")) == {"house", "household", "dwelling"}
+    assert set(card["meaning"]["shared_concept"].split(" / ")) == {"house", "household", "dwelling"}
     assert "Strong cognate candidate" in card["why_this_candidate"]
 
 
@@ -109,7 +110,8 @@ def test_build_evidence_card_marks_translation_led_pairs_honestly():
     card = build_evidence_card(entry)
     assert card["candidate_category"] == "translation_only_candidate"
     assert "translation-led" in card["why_this_candidate"]
-    assert card["meaning"]["source_gloss"] == "dog / hound / canine animal"
+    assert set(card["meaning"]["source_gloss"].split(" / ")) == {"dog", "hound"}
+    assert card["meaning"]["shared_concept"] == "dog / domestic canine"
 
 
 def test_build_evidence_card_compacts_arabic_dictionary_glosses():
@@ -128,6 +130,7 @@ def test_build_evidence_card_compacts_arabic_dictionary_glosses():
     }
     card = build_evidence_card(entry)
     assert card["meaning"]["source_gloss"].startswith("كل ما سفل فهو أرض")
+    assert set(card["meaning"]["shared_concept"].split(" / ")) == {"earth", "land", "ground"}
 
 
 def test_discovery_scorer_removes_temp_fields():

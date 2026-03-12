@@ -231,6 +231,8 @@ def _render_evidence_card(lead: dict[str, Any]) -> str:
     roots = card.get("root_or_skeleton") or {}
     meaning = card.get("meaning") or {}
     scores = card.get("score_breakdown") or {}
+    verdict = str(card.get("candidate_category") or "tentative_candidate").replace("_", " ")
+    shared_concept = meaning.get("shared_concept") or "—"
     rows = ""
     for label in ("semantic", "form", "orthography", "sound", "skeleton", "correspondence"):
         info = scores.get(label) or {}
@@ -244,16 +246,20 @@ def _render_evidence_card(lead: dict[str, Any]) -> str:
     {_category_badge(str(card.get('candidate_category') or 'tentative_candidate'))}
     <span class="note">{_e(card.get('confidence_note') or '')}</span>
   </div>
-  <p><strong>Why this candidate:</strong> {_e(card.get('why_this_candidate') or '')}</p>
+  <div class="evidence-lead">
+    <div><strong>Verdict:</strong> {_e(verdict)}</div>
+    <div><strong>Shared concept:</strong> {_e(shared_concept)}</div>
+    <div><strong>Correspondence note:</strong> {_e(card.get('correspondence_note') or '')}</div>
+    <div><strong>Why this candidate:</strong> {_e(card.get('why_this_candidate') or '')}</div>
+  </div>
   <table class="info-table evidence-table">
     <tr><td>Surface</td><td>{_e(' / '.join(surface.get('source') or []))} ⇄ {_e(' / '.join(surface.get('target') or []))}</td></tr>
     <tr><td>IPA</td><td>{_e(phon.get('source_ipa') or '—')} ⇄ {_e(phon.get('target_ipa') or '—')}</td></tr>
-    <tr><td>Gloss</td><td>{_e(meaning.get('source_gloss') or '—')} ⇄ {_e(meaning.get('target_gloss') or '—')}</td></tr>
+    <tr><td>Short gloss</td><td>{_e(meaning.get('source_gloss') or '—')} ⇄ {_e(meaning.get('target_gloss') or '—')}</td></tr>
     <tr><td>Skeleton</td><td>{_e(roots.get('source_skeleton') or '—')} vs {_e(roots.get('target_skeleton') or '—')}</td></tr>
     <tr><td>Classes</td><td>{_e(roots.get('source_classes') or '—')} vs {_e(roots.get('target_classes') or '—')}</td></tr>
     <tr><td>Roots</td><td>{_e(roots.get('source_root') or '—')} vs {_e(roots.get('target_root') or '—')}</td></tr>
     <tr><td>Root support</td><td>{_e('yes' if card.get('root_family_support') else 'no')}</td></tr>
-    <tr><td>Note</td><td>{_e(card.get('correspondence_note') or '')}</td></tr>
   </table>
   <table class="data-table compact">
     <thead><tr><th>Channel</th><th>Score</th><th>Strength</th></tr></thead>
@@ -651,6 +657,7 @@ summary:hover { background: #f0f4f8; }
 .evidence-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; margin: 12px 0 4px 16px; }
 .evidence-card { border:1px solid #e8ecf0; border-radius:8px; padding:12px; background:#fbfcfd; }
 .evidence-head { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; }
+.evidence-lead { display:grid; gap:6px; margin-bottom:10px; padding:10px 12px; border-radius:6px; background:#f3f7fb; }
 .evidence-table td:first-child { width: 110px; }
 .compact th, .compact td { font-size: 0.85em; padding: 4px 8px; }
 </style>

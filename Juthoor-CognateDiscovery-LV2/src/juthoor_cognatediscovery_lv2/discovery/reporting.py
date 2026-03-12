@@ -19,6 +19,7 @@ _LEADIN_RE = re.compile(
     r"^(?:to\s+|the\s+|a\s+|an\s+|that\s+which\s+|that\s+|be\s+|being\s+|act\s+of\s+)+",
     flags=re.IGNORECASE,
 )
+_ARABIC_DEF_MARKERS = ("هو", "هي", "كل", "أي", ":")
 
 
 def _strength_label(value: float | None) -> str:
@@ -63,8 +64,19 @@ def _is_lexicographic_meta(chunk: str) -> bool:
         "بالواو والنون",
         "تجمع",
         "زعم",
+        "وربما",
+        "كقولهم",
+        "ولكنهم",
+        "لانهم",
+        "ثم قالوا",
     )
     return any(marker in lowered for marker in markers)
+
+
+def _is_arabic_side(side: dict[str, Any]) -> bool:
+    lang = str(side.get("lang") or "").casefold()
+    text = "".join(str(side.get(key) or "") for key in ("lemma", "gloss", "meaning_text"))
+    return lang.startswith("ara") or any("\u0600" <= ch <= "\u06FF" for ch in text)
 
 
 def _gloss_candidate_score(chunk: str) -> float:
@@ -84,11 +96,9 @@ def _gloss_candidate_score(chunk: str) -> float:
     return score
 
 
-def _compact_gloss(value: Any, *, max_items: int = 3, max_chars: int = 120) -> str | None:
-    text = _clean_gloss_text(value)
+def _extract_gloss_candidates(text: str) -> list[str]:
     if not text:
-        return None
-    text = _strip_dictionary_preamble(text)
+        return []
     sentences = [part.strip() for part in re.split(r"[.!?]\s+", text) if part.strip()]
     if not sentences:
         sentences = [text]
@@ -112,7 +122,42 @@ def _compact_gloss(value: Any, *, max_items: int = 3, max_chars: int = 120) -> s
     if not candidates:
         candidates = [sentences[0]]
     chunks = [_clean_gloss_text(re.sub(r"\s{2,}", " ", chunk).strip(" ;,:-")) for chunk in candidates if chunk.strip(" ;,:-")]
-    chunks = [chunk for chunk in chunks if chunk and chunk not in filler_terms]
+    return [chunk for chunk in chunks if chunk and chunk not in filler_terms]
+
+
+def _select_arabic_gloss(value: Any, *, max_items: int = 2, max_chars: int = 100) -> str | None:
+    text = _clean_gloss_text(value)
+    if not text:
+        return None
+    text = _strip_dictionary_preamble(text)
+    chunks = _extract_gloss_candidates(text)
+    if not chunks:
+        return None
+    definitional = [chunk for chunk in chunks if any(marker in chunk for marker in _ARABIC_DEF_MARKERS) and not _is_lexicographic_meta(chunk)]
+    pool = definitional or [chunk for chunk in chunks if not _is_lexicographic_meta(chunk)] or chunks
+    ordered = sorted(pool, key=_gloss_candidate_score, reverse=True)
+    selected: list[str] = []
+    for chunk in ordered:
+        if chunk.casefold() in {item.casefold() for item in selected}:
+            continue
+        selected.append(chunk)
+        if len(selected) >= max_items:
+            break
+    gloss = " / ".join(selected).strip(" /")
+    if len(gloss) <= max_chars:
+        return gloss
+    trimmed = gloss[: max_chars - 1].rstrip(" ,;/:-")
+    return trimmed + "…"
+
+
+def _compact_gloss(value: Any, *, max_items: int = 3, max_chars: int = 120) -> str | None:
+    text = _clean_gloss_text(value)
+    if not text:
+        return None
+    text = _strip_dictionary_preamble(text)
+    chunks = _extract_gloss_candidates(text)
+    if not chunks:
+        return None
     chunks = sorted(chunks, key=_gloss_candidate_score, reverse=True)
     selected: list[str] = []
     for chunk in chunks:
@@ -130,10 +175,21 @@ def _compact_gloss(value: Any, *, max_items: int = 3, max_chars: int = 120) -> s
 
 def _preferred_gloss(side: dict[str, Any]) -> str | None:
     for key in ("gloss", "gloss_plain", "meaning_text", "definition", "sense"):
-        compact = _compact_gloss(side.get(key))
+        if _is_arabic_side(side):
+            compact = _select_arabic_gloss(side.get(key))
+        else:
+            compact = _compact_gloss(side.get(key))
         if compact:
             return compact
     return None
+
+
+def _shared_concept(source_gloss: str | None, target_gloss: str | None) -> str | None:
+    if source_gloss and target_gloss:
+        if any("a" <= ch.lower() <= "z" for ch in target_gloss):
+            return target_gloss
+        return source_gloss if len(source_gloss) <= len(target_gloss) else target_gloss
+    return target_gloss or source_gloss
 
 
 def _correspondence_note(entry: dict[str, Any]) -> str:
@@ -247,6 +303,8 @@ def build_evidence_card(entry: dict[str, Any]) -> dict[str, Any]:
     source_classes = correspondence_string(source_root)
     target_classes = correspondence_string(target_root)
     category = _candidate_category(entry)
+    source_gloss = _preferred_gloss(source)
+    target_gloss = _preferred_gloss(target)
     return {
         "surface_shape": {
             "source": _surface_forms(source),
@@ -265,8 +323,9 @@ def build_evidence_card(entry: dict[str, Any]) -> dict[str, Any]:
             "target_classes": target_classes,
         },
         "meaning": {
-            "source_gloss": _preferred_gloss(source),
-            "target_gloss": _preferred_gloss(target),
+            "source_gloss": source_gloss,
+            "target_gloss": target_gloss,
+            "shared_concept": _shared_concept(source_gloss, target_gloss),
         },
         "score_breakdown": {
             "semantic": {"value": scores.get("semantic"), "strength": _strength_label(scores.get("semantic"))},
