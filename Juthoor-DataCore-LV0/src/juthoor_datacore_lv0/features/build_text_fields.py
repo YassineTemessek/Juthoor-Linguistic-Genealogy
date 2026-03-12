@@ -24,6 +24,7 @@ _LEADIN_RE = re.compile(
     flags=re.IGNORECASE,
 )
 _ARABIC_DEF_MARKERS = ("هو", "هي", "أي", "كل ما", ":")
+_ARABIC_STRONG_DEF_MARKERS = ("هو", "هي", "أي", "كل ما", "المعروف", "الذي", "التي")
 _ARABIC_META_MARKERS = (
     "يقال",
     "قال",
@@ -41,6 +42,11 @@ _ARABIC_META_MARKERS = (
     "ولكنهم",
     "لانهم",
     "ثم قالوا",
+    "انما",
+    "وحد",
+    "لغة في",
+    "حكاها",
+    "قبل العقوبة",
 )
 
 
@@ -90,10 +96,22 @@ def _gloss_candidate_score(chunk: str) -> float:
         score -= 5.0
     if any(marker in cleaned for marker in ("هو", "هي", "كل", "أي")):
         score += 2.0
+    if any(marker in cleaned for marker in _ARABIC_STRONG_DEF_MARKERS):
+        score += 2.5
+    if "من " in cleaned or "لل" in cleaned:
+        score += 0.4
+    if any(marker in cleaned for marker in ("معروف", "الذكر من", "الانثى", "أسفل", "استماع", "علم")):
+        score += 1.0
     if len(cleaned) <= 40:
         score += 1.5
     elif len(cleaned) <= 80:
         score += 0.5
+    if len(cleaned.split()) <= 2:
+        score -= 0.8
+    if cleaned.startswith("(") or cleaned.endswith(")"):
+        score -= 0.8
+    if cleaned.count(":") > 1:
+        score -= 0.5
     score -= len(cleaned) / 200.0
     return score
 
@@ -121,6 +139,8 @@ def build_short_gloss(*, language: str, gloss_plain: str | None = None, fallback
                 candidates.extend(parts)
         pool = [chunk for chunk in candidates if chunk and not _is_lexicographic_meta(chunk)]
         definitional = [chunk for chunk in pool if any(marker in chunk for marker in _ARABIC_DEF_MARKERS)]
+        if not definitional:
+            definitional = [chunk for chunk in pool if any(marker in chunk for marker in _ARABIC_STRONG_DEF_MARKERS)]
         ranked = sorted(definitional or pool or candidates, key=_gloss_candidate_score, reverse=True)
         selected: list[str] = []
         for chunk in ranked:

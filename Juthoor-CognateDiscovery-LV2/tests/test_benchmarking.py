@@ -4,11 +4,13 @@ import json
 from pathlib import Path
 
 from juthoor_cognatediscovery_lv2.discovery.benchmarking import (
+    apply_gloss_overrides,
     compare_metrics,
     compare_lead_runs,
     evaluate_leads_against_benchmarks,
     extract_benchmark_subset,
     filter_available_benchmark_pairs,
+    load_gloss_overrides,
     load_combined_benchmark,
     write_jsonl,
 )
@@ -17,8 +19,8 @@ from juthoor_cognatediscovery_lv2.discovery.evaluation import BenchmarkPair
 
 def test_extract_benchmark_subset_matches_requested_side():
     pairs = [
-        BenchmarkPair("ara", "بيت", "eng", "booth", "cognate"),
-        BenchmarkPair("ara", "كلب", "eng", "dog", "negative_translation"),
+        BenchmarkPair("ara", "بيت", "eng", "booth", "cognate", source_gloss="house"),
+        BenchmarkPair("ara", "كلب", "eng", "dog", "negative_translation", source_gloss="dog"),
     ]
     corpus_rows = [
         {"lang": "ara", "lemma": "بيت", "lexeme_id": "ara1"},
@@ -28,6 +30,28 @@ def test_extract_benchmark_subset_matches_requested_side():
 
     subset = extract_benchmark_subset(corpus_rows, pairs, lang="ara", side="source")
     assert [row["lemma"] for row in subset] == ["بيت", "كلب"]
+    assert subset[0]["short_gloss"] == "house"
+
+
+def test_extract_benchmark_subset_prefers_manual_overrides():
+    pairs = [BenchmarkPair("ara", "أرض", "eng", "earth", "cognate", source_gloss="earth")]
+    corpus_rows = [{"lang": "ara", "lemma": "أرض", "lexeme_id": "ara1", "short_gloss": "bad gloss"}]
+    overrides = {("ara", "أرض"): "الأرض / اليابسة"}
+    subset = extract_benchmark_subset(
+        corpus_rows,
+        pairs,
+        lang="ara",
+        side="source",
+        gloss_overrides=overrides,
+    )
+    assert subset[0]["short_gloss"] == "الأرض / اليابسة"
+
+
+def test_load_gloss_overrides_reads_lang_lemma_keys(tmp_path: Path):
+    path = tmp_path / "gloss.json"
+    path.write_text(json.dumps({"ara:أرض": "الأرض / اليابسة"}, ensure_ascii=False), encoding="utf-8")
+    overrides = load_gloss_overrides(path)
+    assert overrides[("ara", "أرض")] == "الأرض / اليابسة"
 
 
 def test_filter_available_benchmark_pairs_only_keeps_present_rows():

@@ -16,6 +16,9 @@ class BenchmarkPair:
     relation: str
     confidence: float = 1.0
     notes: str = ""
+    source_gloss: str = ""
+    target_gloss: str = ""
+    shared_concept: str = ""
 
     @property
     def source_key(self) -> tuple[str, str]:
@@ -76,6 +79,9 @@ def load_benchmark(path: Path, *, relations: set[str] | None = None) -> list[Ben
                 relation=rec.get("relation", "unknown"),
                 confidence=float(rec.get("confidence", 1.0)),
                 notes=str(rec.get("notes", "")),
+                source_gloss=str(rec.get("source", {}).get("gloss", "")),
+                target_gloss=str(rec.get("target", {}).get("gloss", "")),
+                shared_concept=str(rec.get("shared_concept", "")),
             )
             if relations and pair.relation not in relations:
                 continue

@@ -14,8 +14,10 @@ if str(SRC_ROOT) not in sys.path:
     sys.path.append(str(SRC_ROOT))
 
 from juthoor_cognatediscovery_lv2.discovery.benchmarking import (
+    apply_gloss_overrides,
     extract_benchmark_subset,
     filter_available_benchmark_pairs,
+    load_gloss_overrides,
     load_combined_benchmark,
     read_jsonl,
     write_jsonl,
@@ -36,6 +38,12 @@ def main() -> int:
     parser.add_argument("--source", required=True, help="Source corpus spec: <lang>[@<stage>]=<path>.")
     parser.add_argument("--target", required=True, help="Target corpus spec: <lang>[@<stage>]=<path>.")
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument(
+        "--gloss-overrides",
+        type=Path,
+        default=REPO_ROOT / "resources" / "benchmarks" / "arabic_gloss_overrides.json",
+        help="Optional JSON file mapping lang:lemma -> preferred short_gloss for benchmark slices.",
+    )
     args = parser.parse_args()
 
     source_spec = parse_spec(args.source)
@@ -44,11 +52,24 @@ def main() -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     benchmark = load_combined_benchmark([Path(item) for item in args.benchmark])
+    gloss_overrides = load_gloss_overrides(args.gloss_overrides)
     source_rows = read_jsonl(resolve_corpus_path(source_spec, REPO_ROOT))
     target_rows = read_jsonl(resolve_corpus_path(target_spec, REPO_ROOT))
 
-    source_subset = extract_benchmark_subset(source_rows, benchmark, lang=source_spec.lang, side="source")
-    target_subset = extract_benchmark_subset(target_rows, benchmark, lang=target_spec.lang, side="target")
+    source_subset = extract_benchmark_subset(
+        source_rows,
+        benchmark,
+        lang=source_spec.lang,
+        side="source",
+        gloss_overrides=gloss_overrides,
+    )
+    target_subset = extract_benchmark_subset(
+        target_rows,
+        benchmark,
+        lang=target_spec.lang,
+        side="target",
+        gloss_overrides=gloss_overrides,
+    )
     filtered = filter_available_benchmark_pairs(
         benchmark,
         source_rows=source_subset,
