@@ -174,7 +174,7 @@ def _compact_gloss(value: Any, *, max_items: int = 3, max_chars: int = 120) -> s
 
 
 def _preferred_gloss(side: dict[str, Any]) -> str | None:
-    for key in ("gloss", "gloss_plain", "meaning_text", "definition", "sense"):
+    for key in ("short_gloss", "gloss", "gloss_plain", "meaning_text", "definition", "sense"):
         if _is_arabic_side(side):
             compact = _select_arabic_gloss(side.get(key))
         else:
@@ -182,6 +182,15 @@ def _preferred_gloss(side: dict[str, Any]) -> str | None:
         if compact:
             return compact
     return None
+
+
+def category_label(category: str) -> str:
+    return {
+        "likely_cognate_candidate": "strong cognate candidate",
+        "translation_only_candidate": "translation-led candidate",
+        "shape_only_resemblance": "shape-led resemblance",
+        "tentative_candidate": "tentative candidate",
+    }.get(category, category.replace("_", " "))
 
 
 def _shared_concept(source_gloss: str | None, target_gloss: str | None) -> str | None:
@@ -226,12 +235,7 @@ def _candidate_category(entry: dict[str, Any]) -> str:
 
 
 def _category_label(category: str) -> str:
-    return {
-        "likely_cognate_candidate": "strong cognate candidate",
-        "translation_only_candidate": "translation-led candidate",
-        "shape_only_resemblance": "shape-led resemblance",
-        "tentative_candidate": "tentative candidate",
-    }.get(category, category.replace("_", " "))
+    return category_label(category)
 
 
 def _why_this_candidate(entry: dict[str, Any]) -> str:

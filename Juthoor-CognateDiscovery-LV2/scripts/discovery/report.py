@@ -19,6 +19,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from juthoor_cognatediscovery_lv2.discovery.reporting import category_label
 
 # ---------------------------------------------------------------------------
 # Data loading
@@ -224,6 +225,18 @@ def _category_badge(label: str) -> str:
     return f'<span class="cat cat-{_e(label)}">{_e(short)}</span>'
 
 
+def _score_bar(score: float | None) -> str:
+    pct = max(0.0, min(100.0, float(score or 0.0) * 100.0))
+    color = _score_color(score)
+    label = "—" if score is None else f"{float(score):.3f}"
+    return (
+        '<div class="score-bar">'
+        f'<div class="score-fill" style="width:{pct:.1f}%;background:{color}"></div>'
+        f'<span class="score-text">{_e(label)}</span>'
+        '</div>'
+    )
+
+
 def _render_evidence_card(lead: dict[str, Any]) -> str:
     card = lead.get("evidence_card") or {}
     surface = card.get("surface_shape") or {}
@@ -231,13 +244,13 @@ def _render_evidence_card(lead: dict[str, Any]) -> str:
     roots = card.get("root_or_skeleton") or {}
     meaning = card.get("meaning") or {}
     scores = card.get("score_breakdown") or {}
-    verdict = str(card.get("candidate_category") or "tentative_candidate").replace("_", " ")
+    verdict = category_label(str(card.get("candidate_category") or "tentative_candidate"))
     shared_concept = meaning.get("shared_concept") or "—"
     rows = ""
     for label in ("semantic", "form", "orthography", "sound", "skeleton", "correspondence"):
         info = scores.get(label) or {}
         rows += (
-            f"<tr><td>{_e(label)}</td><td>{_score_badge(info.get('value'))}</td>"
+            f"<tr><td>{_e(label)}</td><td>{_score_bar(info.get('value'))}</td>"
             f"<td>{_e(info.get('strength') or 'missing')}</td></tr>"
         )
     return f"""
@@ -638,6 +651,9 @@ h2 { font-size: 1.1em; margin: 0 0 16px; color: #1a2e4a;
 .hist-count { width: 110px; color: #555; font-size: 0.85em; flex-shrink: 0; }
 .note { color: #888; font-size: 0.85em; margin-top: 10px; }
 code { background: #f0f4f8; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+ .score-bar { position:relative; min-width:140px; height:18px; background:#edf0f4; border-radius:999px; overflow:hidden; }
+ .score-fill { position:absolute; left:0; top:0; bottom:0; border-radius:999px; }
+ .score-text { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:0.8em; color:#1f2d3d; font-weight:600; }
 details { border: 1px solid #e8ecf0; border-radius: 6px; margin: 4px 0; padding: 0; }
 details[open] { background: #f8fafc; }
 summary {

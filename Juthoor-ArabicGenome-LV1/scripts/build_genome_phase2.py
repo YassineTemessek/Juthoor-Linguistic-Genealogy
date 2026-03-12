@@ -54,6 +54,19 @@ def normalize_root(root: str) -> str:
     return root
 
 
+def build_short_gloss(*, binary_root_meaning: str = "", axial_meaning: str = "", quran_example: str = "") -> str | None:
+    candidates = [
+        (axial_meaning or "").strip(),
+        (binary_root_meaning or "").strip(),
+        (quran_example or "").strip(),
+    ]
+    selected = [text for text in candidates if text]
+    if not selected:
+        return None
+    gloss = " / ".join(selected[:2]).strip(" /")
+    return gloss[:119] + "…" if len(gloss) > 120 else gloss
+
+
 def expand_muajam_key(tri: str) -> list[str]:
     """
     Split compound entries (with / or -) into individual normalized keys,
@@ -152,6 +165,13 @@ def process_bab_file(
                 "letter2_meaning": muajam_rec.get("letter2_meaning", ""),
                 "bab_meaning": muajam_rec.get("bab_meaning", ""),
             }
+            short_gloss = build_short_gloss(
+                binary_root_meaning=rec["binary_root_meaning"],
+                axial_meaning=rec["axial_meaning"],
+                quran_example=rec["quran_example"],
+            )
+            if short_gloss:
+                rec["short_gloss"] = short_gloss
             matched += 1
         else:
             rec = {

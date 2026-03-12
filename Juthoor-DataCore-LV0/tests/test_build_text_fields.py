@@ -9,6 +9,7 @@ from pathlib import Path
 from juthoor_datacore_lv0.features.build_text_fields import (
     build_form_text,
     build_meaning_text,
+    build_short_gloss,
     iter_text_fields,
     main,
 )
@@ -80,6 +81,19 @@ class TestBuildMeaningText:
         assert text == "hello world"
 
 
+class TestBuildShortGloss:
+    def test_compacts_english_gloss(self):
+        gloss = build_short_gloss(language="english", gloss_plain="house; dwelling; home; shelter")
+        assert gloss == "house / dwelling / home"
+
+    def test_prefers_arabic_definitional_clause(self):
+        gloss = build_short_gloss(
+            language="arabic",
+            fallback_definition="أرض — [أرض] الارض مؤنثة، وهى اسم جنس. وكل ما سفل فهو أرض. والأرض: أسفل قوائم الدابة.",
+        )
+        assert gloss and gloss.startswith("كل ما سفل فهو أرض")
+
+
 # ── iter_text_fields ─────────────────────────────────────────────
 
 class TestIterTextFields:
@@ -89,6 +103,7 @@ class TestIterTextFields:
         assert len(result) == 1
         assert result[0]["form_text"] == "aqua"
         assert result[0]["meaning_text"] == "water"
+        assert result[0]["short_gloss"] == "water"
 
     def test_uses_ipa_raw_fallback(self):
         rows = [{"language": "english", "lemma": "cat", "ipa_raw": "/kæt/"}]
@@ -105,6 +120,7 @@ class TestIterTextFields:
         result = list(iter_text_fields(rows))
         assert result[0]["meaning_text"] == "كتب — to write"
         assert result[0]["meaning_fallback"] is True
+        assert result[0]["short_gloss"] == "write"
 
     def test_does_not_mutate_input(self):
         original = {"language": "latin", "lemma": "aqua"}

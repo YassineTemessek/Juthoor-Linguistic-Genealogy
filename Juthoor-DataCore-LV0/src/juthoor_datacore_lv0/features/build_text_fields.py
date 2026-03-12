@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, Tuple
@@ -10,7 +11,37 @@ from typing import Iterable, Tuple
 class TextFieldSpec:
     form_text: str | None
     meaning_text: str | None
+    short_gloss: str | None = None
     meaning_fallback: bool = False
+
+
+_WHITESPACE_RE = re.compile(r"\s+")
+_ARABIC_SENTENCE_RE = re.compile(r"[.!?؟]\s*")
+_ARABIC_CLAUSE_RE = re.compile(r"[،؛]")
+_GENERIC_SPLIT_RE = re.compile(r"[;|/]|(?:\s+-\s+)|(?:\s+[•·]\s+)")
+_LEADIN_RE = re.compile(
+    r"^(?:to\s+|the\s+|a\s+|an\s+|that\s+which\s+|that\s+|be\s+|being\s+|act\s+of\s+)+",
+    flags=re.IGNORECASE,
+)
+_ARABIC_DEF_MARKERS = ("هو", "هي", "أي", "كل ما", ":")
+_ARABIC_META_MARKERS = (
+    "يقال",
+    "قال",
+    "الجمع",
+    "الواحدة",
+    "مؤنثة",
+    "مذكر",
+    "اسم جنس",
+    "على غير قياس",
+    "بالواو والنون",
+    "تجمع",
+    "زعم",
+    "وربما",
+    "كقولهم",
+    "ولكنهم",
+    "لانهم",
+    "ثم قالوا",
+)
 
 
 def _is_arabic_language(language: str) -> bool:
@@ -34,6 +65,89 @@ def build_form_text(*, language: str, lemma: str, translit: str | None = None, i
     if ipa:
         parts.append(f"IPA: {ipa}")
     return " | ".join(parts).strip()
+
+
+def _clean_gloss_text(value: str | None) -> str:
+    text = _WHITESPACE_RE.sub(" ", str(value or "")).strip(" ;,.:-")
+    text = re.sub(r"^\s*[^\s]+?\s+[—\-]\s+\[[^\]]+\]\s*", "", text)
+    text = re.sub(r"^\s*\[[^\]]+\]\s*", "", text)
+    if text.startswith("وكل "):
+        text = text[1:]
+    return text
+
+
+def _is_lexicographic_meta(chunk: str) -> bool:
+    lowered = _clean_gloss_text(chunk)
+    return any(marker in lowered for marker in _ARABIC_META_MARKERS)
+
+
+def _gloss_candidate_score(chunk: str) -> float:
+    cleaned = _clean_gloss_text(chunk)
+    score = 0.0
+    if not cleaned:
+        return -1e9
+    if _is_lexicographic_meta(cleaned):
+        score -= 5.0
+    if any(marker in cleaned for marker in ("هو", "هي", "كل", "أي")):
+        score += 2.0
+    if len(cleaned) <= 40:
+        score += 1.5
+    elif len(cleaned) <= 80:
+        score += 0.5
+    score -= len(cleaned) / 200.0
+    return score
+
+
+def build_short_gloss(*, language: str, gloss_plain: str | None = None, fallback_definition: str | None = None) -> str | None:
+    raw = gloss_plain or fallback_definition
+    text = _clean_gloss_text(raw)
+    if not text:
+        return None
+    if _is_arabic_language(language):
+        sentences = [part.strip() for part in _ARABIC_SENTENCE_RE.split(text) if part.strip()]
+        if not sentences:
+            sentences = [text]
+        candidates: list[str] = []
+        for sentence in sentences[:8]:
+            clauses = [part.strip(" ;,:-") for part in _ARABIC_CLAUSE_RE.split(sentence) if part.strip(" ;,:-")]
+            if not clauses:
+                clauses = [sentence]
+            for clause in clauses:
+                parts = [
+                    _clean_gloss_text(_LEADIN_RE.sub("", item.strip(" ;,:-")))
+                    for item in _GENERIC_SPLIT_RE.split(clause)
+                    if item.strip(" ;,:-")
+                ]
+                candidates.extend(parts)
+        pool = [chunk for chunk in candidates if chunk and not _is_lexicographic_meta(chunk)]
+        definitional = [chunk for chunk in pool if any(marker in chunk for marker in _ARABIC_DEF_MARKERS)]
+        ranked = sorted(definitional or pool or candidates, key=_gloss_candidate_score, reverse=True)
+        selected: list[str] = []
+        for chunk in ranked:
+            if chunk.casefold() in {item.casefold() for item in selected}:
+                continue
+            selected.append(chunk)
+            if len(selected) >= 2:
+                break
+        gloss = " / ".join(selected).strip(" /")
+        return gloss[:99] + "…" if len(gloss) > 100 else gloss
+
+    parts = [
+        _clean_gloss_text(_LEADIN_RE.sub("", item.strip(" ;,:-")))
+        for item in _GENERIC_SPLIT_RE.split(text)
+        if item.strip(" ;,:-")
+    ]
+    selected: list[str] = []
+    for part in parts:
+        if not part or part.casefold() in {item.casefold() for item in selected}:
+            continue
+        selected.append(part)
+        if len(selected) >= 3:
+            break
+    if not selected:
+        return None
+    gloss = " / ".join(selected).strip(" /")
+    return gloss[:119] + "…" if len(gloss) > 120 else gloss
 
 
 def build_meaning_text(gloss_plain: str | None, lemma: str | None = None, fallback_definition: str | None = None) -> Tuple[str | None, bool]:
@@ -69,11 +183,18 @@ def iter_text_fields(rows: Iterable[dict]) -> Iterable[dict]:
             lemma=lemma,
             fallback_definition=rec.get("definition") or rec.get("gloss"),
         )
+        short_gloss = build_short_gloss(
+            language=lang,
+            gloss_plain=rec.get("gloss_plain"),
+            fallback_definition=rec.get("definition") or rec.get("gloss"),
+        )
         rec = dict(rec)
         rec["form_text"] = form
         if meaning:
             rec["meaning_text"] = meaning
             rec["meaning_fallback"] = fallback
+        if short_gloss:
+            rec["short_gloss"] = short_gloss
         yield rec
 
 
@@ -142,6 +263,11 @@ def main() -> int:
                 lemma=lemma,
                 fallback_definition=rec.get("definition") or rec.get("gloss"),
             )
+            short_gloss = build_short_gloss(
+                language=lang,
+                gloss_plain=rec.get("gloss_plain"),
+                fallback_definition=rec.get("definition") or rec.get("gloss"),
+            )
 
             if form:
                 rec["form_text"] = form
@@ -149,6 +275,8 @@ def main() -> int:
                 rec["meaning_text"] = meaning
                 rec["meaning_fallback"] = fallback
                 enriched += 1
+            if short_gloss:
+                rec["short_gloss"] = short_gloss
 
             out.write(json.dumps(rec, ensure_ascii=False) + "\n")
             processed += 1
