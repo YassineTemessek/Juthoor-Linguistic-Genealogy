@@ -10,7 +10,7 @@ import pytest
 from pathlib import Path
 
 # conftest.py adds scripts/ to sys.path
-from build_genome_phase2 import normalize_root, process_bab_file
+from build_genome_phase2 import build_short_gloss, normalize_root, process_bab_file
 
 
 # ---------------------------------------------------------------------------
@@ -135,9 +135,12 @@ class TestProcessBabFile:
         expected_fields = {
             "binary_root_meaning", "axial_meaning", "added_letter",
             "quran_example", "letter1", "letter1_meaning",
-            "letter2", "letter2_meaning", "bab_meaning",
+            "letter2", "letter2_meaning", "bab_meaning", "short_gloss",
         }
         assert expected_fields.issubset(entry.keys())
+
+    def test_build_short_gloss_prefers_axial_then_binary(self):
+        assert build_short_gloss(binary_root_meaning="التثبيت", axial_meaning="الكتابة والتدوين") == "الكتابة والتدوين / التثبيت"
 
     def test_unmatched_entry_only_has_core_fields(self, tmp_path):
         bab_file = tmp_path / "ك.jsonl"

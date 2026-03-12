@@ -114,6 +114,18 @@ def test_build_evidence_card_marks_translation_led_pairs_honestly():
     assert card["meaning"]["shared_concept"] == "dog / domestic canine"
 
 
+def test_build_evidence_card_prefers_persisted_short_gloss():
+    entry = {
+        "source": {"lemma": "أرض", "lang": "ara", "short_gloss": "الأرض / اليابسة"},
+        "target": {"lemma": "earth", "lang": "eng", "short_gloss": "earth / land / ground"},
+        "scores": {"semantic": 0.7, "form": 0.2},
+        "hybrid": {"components": {"orthography": 0.1, "sound": 0.1, "skeleton": 0.0, "correspondence": 0.1}, "combined_score": 0.45},
+    }
+    card = build_evidence_card(entry)
+    assert card["meaning"]["source_gloss"] == "الأرض / اليابسة"
+    assert set(card["meaning"]["shared_concept"].split(" / ")) == {"earth", "land", "ground"}
+
+
 def test_build_evidence_card_compacts_arabic_dictionary_glosses():
     entry = {
         "source": {
