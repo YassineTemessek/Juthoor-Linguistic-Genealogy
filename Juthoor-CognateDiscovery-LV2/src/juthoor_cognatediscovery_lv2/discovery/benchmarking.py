@@ -149,6 +149,57 @@ def filter_available_benchmark_pairs(
     return available
 
 
+def build_root_family_benchmark_source(
+    source_rows: list[dict[str, Any]],
+    root_family_rows: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    by_root: dict[str, dict[str, Any]] = {}
+    by_word: dict[tuple[str, str], dict[str, Any]] = {}
+    for row in root_family_rows:
+        root = _norm(row.get("root_norm") or row.get("lemma"))
+        if root and root not in by_root:
+            by_root[root] = row
+        lang = _norm(row.get("lang") or row.get("language"))
+        for word in row.get("words") or []:
+            key = (lang, _norm(word))
+            by_word.setdefault(key, row)
+
+    materialized: list[dict[str, Any]] = []
+    for row in source_rows:
+        row_lang = _norm(row.get("lang") or row.get("language"))
+        lemma = _norm(row.get("lemma"))
+        root = _norm(row.get("root_norm") or row.get("root"))
+        family = by_root.get(root) or by_word.get((row_lang, lemma))
+        if not family:
+            materialized.append(dict(row))
+            continue
+        words = [str(item).strip() for item in family.get("words") or [] if str(item).strip()]
+        preview = ", ".join(words[:8])
+        family_lemma = str(family.get("lemma") or family.get("root_norm") or "").strip()
+        form_text = f"{family_lemma} | source: {row.get('lemma')} | words: {preview}" if preview else family_lemma
+        meaning_text = str(family.get("meaning_text") or row.get("meaning_text") or row.get("gloss_plain") or "").strip()
+        enriched = dict(row)
+        enriched.update(
+            {
+                "id": f"rootfamsrc:{row_lang}:{row.get('lemma')}:{family_lemma}",
+                "record_type": "root_family_source",
+                "root_family_lemma": family_lemma,
+                "words": words,
+                "word_count": family.get("word_count", len(words)),
+                "form_text": form_text,
+                "meaning_text": meaning_text,
+                "gloss_plain": str(family.get("gloss_plain") or meaning_text).strip(),
+                "binary_root": family.get("binary_root") or row.get("binary_root"),
+                "binary_root_meaning": family.get("binary_root_meaning"),
+                "axial_meaning": family.get("axial_meaning"),
+                "semantic_score": family.get("semantic_score"),
+                "short_gloss": row.get("short_gloss") or family.get("short_gloss"),
+            }
+        )
+        materialized.append(enriched)
+    return materialized
+
+
 def evaluate_leads_against_benchmark(leads_path: Path, benchmark_path: Path, *, top_k: int) -> dict[str, Any]:
     benchmark = load_benchmark(benchmark_path)
     leads_by_source = load_leads(leads_path)

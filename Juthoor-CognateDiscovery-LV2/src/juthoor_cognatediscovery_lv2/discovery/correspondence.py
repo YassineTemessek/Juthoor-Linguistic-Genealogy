@@ -9,7 +9,7 @@ from typing import Any
 _ARABIC_DIACRITICS_RE = re.compile(r"[\u064B-\u065F\u0670\u0640]")
 _SPACE_RE = re.compile(r"\s+")
 _WEAK_RADICALS = set("اويى")
-_WEAK_LATIN = {"a", "i", "u", "w", "y"}
+_WEAK_LATIN = {"a", "e", "i", "o", "u", "w", "y"}
 _HAMZA_MAP = str.maketrans(
     {
         "أ": "ا",
@@ -34,6 +34,16 @@ _CLASS_MAP = {
     "ر": "R", "ل": "R", "ن": "R", "r": "R", "l": "R", "n": "R",
     "ك": "K", "ق": "K", "گ": "K", "k": "K", "q": "K", "g̣": "K",
     "و": "W", "ي": "W", "ى": "W", "w": "W", "y": "W",
+}
+_DISPLAY_MAP = {
+    "ء": "ʔ", "ا": "a", "أ": "ʔ", "إ": "ʔ", "آ": "ʔa", "ٱ": "a",
+    "ه": "h", "ح": "ḥ", "خ": "kh", "ع": "ʿ", "غ": "gh",
+    "ب": "b", "ف": "f", "م": "m",
+    "ت": "t", "ط": "ṭ", "ث": "th", "د": "d", "ض": "ḍ", "ذ": "dh", "ظ": "ẓ",
+    "س": "s", "ص": "ṣ", "ز": "z", "ش": "sh", "ج": "j",
+    "ر": "r", "ل": "l", "ن": "n",
+    "ك": "k", "ق": "q", "گ": "g",
+    "و": "w", "ي": "y", "ى": "y",
 }
 
 
@@ -80,6 +90,15 @@ def correspondence_string(text: str) -> str:
     return "".join(out)
 
 
+def _display_tokens(text: str) -> list[str]:
+    text = literal_skeleton(text)
+    return [_DISPLAY_MAP.get(ch, ch) for ch in text]
+
+
+def display_skeleton(text: str) -> str:
+    return "-".join(_display_tokens(text))
+
+
 def _seq_ratio(a: str, b: str) -> float:
     if not a or not b:
         return 0.0
@@ -101,6 +120,8 @@ def explain_correspondence_rules(source: dict[str, Any], target: dict[str, Any])
     src = best_radical_text(source)
     tgt = best_radical_text(target)
     notes: list[str] = []
+    src_skeleton = display_skeleton(src)
+    tgt_skeleton = display_skeleton(tgt)
     if normalize_hamza(src) == normalize_hamza(tgt) and src and tgt and src != tgt:
         notes.append("hamza normalization aligns the forms")
     if collapse_weak_radicals(src) == collapse_weak_radicals(tgt) and src and tgt:
@@ -111,6 +132,20 @@ def explain_correspondence_rules(source: dict[str, Any], target: dict[str, Any])
         notes.append(f"shared correspondence class trace: {src_corr}")
     elif _seq_ratio(src_corr, tgt_corr) >= 0.7 and src_corr and tgt_corr:
         notes.append(f"close correspondence class traces: {src_corr} vs {tgt_corr}")
+    src_tokens = _display_tokens(src)
+    tgt_tokens = _display_tokens(tgt)
+    if src_tokens and tgt_tokens and len(src_tokens) == len(tgt_tokens):
+        mismatches: list[str] = []
+        for left, right in zip(src_tokens, tgt_tokens):
+            if left == right:
+                continue
+            pair = f"{left} ~ {right}"
+            if pair not in mismatches:
+                mismatches.append(pair)
+            if len(mismatches) >= 2:
+                break
+        if mismatches:
+            notes.append("observed rule path: " + ", ".join(mismatches))
     return notes
 
 

@@ -109,6 +109,7 @@ def test_build_evidence_card_marks_translation_led_pairs_honestly():
     }
     card = build_evidence_card(entry)
     assert card["candidate_category"] == "translation_only_candidate"
+    assert card["verdict"] == "translation-led candidate"
     assert "translation-led" in card["why_this_candidate"]
     assert set(card["meaning"]["source_gloss"].split(" / ")) == {"dog", "hound"}
     assert card["meaning"]["shared_concept"] == "dog / domestic canine"
@@ -124,6 +125,22 @@ def test_build_evidence_card_prefers_persisted_short_gloss():
     card = build_evidence_card(entry)
     assert card["meaning"]["source_gloss"] == "الأرض / اليابسة"
     assert set(card["meaning"]["shared_concept"].split(" / ")) == {"earth", "land", "ground"}
+    assert card["verdict"] == "tentative candidate"
+
+
+def test_build_evidence_card_surfaces_rule_level_correspondence_notes():
+    entry = {
+        "source": {"lemma": "قرن", "lang": "ara", "root_norm": "قرن", "short_gloss": "القرن / horn"},
+        "target": {"lemma": "horn", "lang": "eng", "short_gloss": "horn"},
+        "scores": {"semantic": 0.72, "form": 0.54},
+        "hybrid": {
+            "components": {"orthography": 0.4, "sound": 0.45, "skeleton": 0.5, "correspondence": 0.65},
+            "combined_score": 0.74,
+        },
+    }
+    card = build_evidence_card(entry)
+    assert card["verdict"] == "strong cognate candidate"
+    assert "q ~ h" in card["correspondence_note"]
 
 
 def test_build_evidence_card_compacts_arabic_dictionary_glosses():
