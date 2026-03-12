@@ -139,6 +139,7 @@ def build_training_examples(
     discovery_path: Path,
     *,
     positive_relations: set[str] | None = None,
+    negatives_per_positive: int = 3,
 ) -> list[TrainingExample]:
     positive_relations = positive_relations or {"cognate"}
     leads_by_source = load_leads(discovery_path)
@@ -147,7 +148,12 @@ def build_training_examples(
         benchmark_rows.extend(load_benchmark(path))
 
     examples: list[TrainingExample] = []
+    positives_by_source: dict[tuple[str, str], set[tuple[str, str]]] = {}
     for pair in benchmark_rows:
+        positives_by_source.setdefault(pair.source_key, set()).add(pair.target_key)
+
+    for pair in benchmark_rows:
+        source_leads = leads_by_source.get(pair.source_key, [])
         for entry in leads_by_source.get(pair.source_key, []):
             if _candidate_key(entry) != (
                 pair.source_key[0],
@@ -168,6 +174,28 @@ def build_training_examples(
                     relation=pair.relation,
                 )
             )
+        if pair.relation in positive_relations and negatives_per_positive > 0:
+            added = 0
+            allowed_targets = positives_by_source.get(pair.source_key, set())
+            for entry in source_leads:
+                candidate_key = _candidate_key(entry)
+                target_key = (candidate_key[2], candidate_key[3])
+                if target_key in allowed_targets:
+                    continue
+                examples.append(
+                    TrainingExample(
+                        features=_feature_vector(entry),
+                        label=0.0,
+                        source_lang=pair.source_lang,
+                        source_lemma=pair.source_lemma,
+                        target_lang=str(entry.get("target", {}).get("lang", "")),
+                        target_lemma=str(entry.get("target", {}).get("lemma", "")),
+                        relation="implicit_negative",
+                    )
+                )
+                added += 1
+                if added >= negatives_per_positive:
+                    break
     return examples
 
 
@@ -179,8 +207,13 @@ def train_reranker(
     learning_rate: float = 0.5,
     epochs: int = 400,
     l2: float = 0.01,
+    negatives_per_positive: int = 3,
 ) -> DiscoveryReranker:
-    examples = build_training_examples(benchmark_paths, discovery_path)
+    examples = build_training_examples(
+        benchmark_paths,
+        discovery_path,
+        negatives_per_positive=negatives_per_positive,
+    )
     if not examples:
         raise ValueError("No training examples matched the discovery leads.")
 
