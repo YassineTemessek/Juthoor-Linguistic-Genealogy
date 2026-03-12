@@ -30,7 +30,24 @@ def resolve_corpus_path(spec: CorpusSpec, repo_root: Path) -> Path:
 
 
 def _rows_signature(rows: list[LexemeRow]) -> str:
-    joined = "|".join(row.lexeme_id for row in rows)
+    parts: list[str] = []
+    for row in rows:
+        payload = row.data
+        parts.append(
+            "|".join(
+                [
+                    row.lexeme_id,
+                    str(payload.get("lemma") or ""),
+                    str(payload.get("short_gloss") or ""),
+                    str(payload.get("meaning_text") or ""),
+                    str(payload.get("gloss_plain") or ""),
+                    str(payload.get("form_text") or ""),
+                    str(payload.get("ipa") or ""),
+                    str(payload.get("translit") or ""),
+                ]
+            )
+        )
+    joined = "||".join(parts)
     return hashlib.sha1(joined.encode("utf-8")).hexdigest()[:12]
 
 

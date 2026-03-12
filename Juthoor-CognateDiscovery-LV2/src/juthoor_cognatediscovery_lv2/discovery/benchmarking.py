@@ -28,12 +28,69 @@ def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> Path:
     return path
 
 
+def load_gloss_overrides(path: Path) -> dict[tuple[str, str], str]:
+    if not path.exists():
+        return {}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    overrides: dict[tuple[str, str], str] = {}
+    for key, value in payload.items():
+        if not value:
+            continue
+        if ":" in key:
+            lang, lemma = key.split(":", 1)
+        else:
+            lang, lemma = "ara", key
+        overrides[(_norm(lang), _norm(lemma))] = str(value).strip()
+    return overrides
+
+
+def _benchmark_gloss_map(
+    benchmark_pairs: list[BenchmarkPair],
+    *,
+    side: str,
+) -> dict[tuple[str, str], str]:
+    glosses: dict[tuple[str, str], str] = {}
+    for pair in benchmark_pairs:
+        if side == "source":
+            key = pair.source_key
+            gloss = pair.source_gloss
+        else:
+            key = pair.target_key
+            gloss = pair.target_gloss
+        if gloss and key not in glosses:
+            glosses[key] = gloss
+    return glosses
+
+
+def apply_gloss_overrides(
+    rows: list[dict[str, Any]],
+    *,
+    benchmark_pairs: list[BenchmarkPair],
+    side: str,
+    overrides: dict[tuple[str, str], str] | None = None,
+) -> list[dict[str, Any]]:
+    benchmark_glosses = _benchmark_gloss_map(benchmark_pairs, side=side)
+    overrides = overrides or {}
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        lang = _norm(row.get("lang") or row.get("language"))
+        lemma = _norm(row.get("lemma"))
+        key = (lang, lemma)
+        short_gloss = overrides.get(key) or benchmark_glosses.get(key)
+        if short_gloss:
+            row = dict(row)
+            row["short_gloss"] = short_gloss
+        out.append(row)
+    return out
+
+
 def extract_benchmark_subset(
     corpus_rows: list[dict[str, Any]],
     benchmark_pairs: list[BenchmarkPair],
     *,
     lang: str,
     side: str,
+    gloss_overrides: dict[tuple[str, str], str] | None = None,
 ) -> list[dict[str, Any]]:
     if side not in {"source", "target"}:
         raise ValueError("side must be 'source' or 'target'")
@@ -54,7 +111,12 @@ def extract_benchmark_subset(
         if lemma in wanted and row_lang == lang_norm and lemma not in seen:
             subset.append(row)
             seen.add(lemma)
-    return subset
+    return apply_gloss_overrides(
+        subset,
+        benchmark_pairs=benchmark_pairs,
+        side=side,
+        overrides=gloss_overrides,
+    )
 
 
 def filter_available_benchmark_pairs(

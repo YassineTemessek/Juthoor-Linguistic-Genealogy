@@ -210,6 +210,15 @@ def test_cache_paths_differ_for_different_row_slices(tmp_path: Path):
     assert paths_a != paths_b
 
 
+def test_cache_paths_differ_when_row_content_changes(tmp_path: Path):
+    spec = CorpusSpec(lang="ara", stage="classical", path=Path("same.jsonl"))
+    rows_a = [LexemeRow(0, {"id": "lex:a", "lemma": "أرض", "short_gloss": "gloss a"})]
+    rows_b = [LexemeRow(0, {"id": "lex:a", "lemma": "أرض", "short_gloss": "gloss b"})]
+    paths_a = get_cache_paths(tmp_path, "semantic", spec, rows_a)
+    paths_b = get_cache_paths(tmp_path, "semantic", spec, rows_b)
+    assert paths_a != paths_b
+
+
 def test_resolve_corpus_path_prefers_existing_relative_path(tmp_path: Path, monkeypatch):
     corpus = tmp_path / "subset.jsonl"
     corpus.write_text(json.dumps({"lemma": "name"}) + "\n", encoding="utf-8")
