@@ -33,5 +33,11 @@ __pycache__/
 .claude/
 nul
 
+# LV0 processed data (large, regenerate locally)
+Juthoor-DataCore-LV0/data/processed/**
+
+# Muajam XLSX source (duplicated in LV1)
+Muajam Ishtiqaqi/
+
 # Legacy generated outputs
-Quran-Corpus-Analysis/outputs/legacy/
+Quran-Corpus-Analysis/

@@ -32,7 +32,6 @@ members = [
   "Juthoor-ArabicGenome-LV1",
   "Juthoor-CognateDiscovery-LV2",
   "Juthoor-Origins-LV3",
-  "Quran-Corpus-Analysis",
 ]
 
 [tool.uv.sources]
@@ -40,7 +39,6 @@ juthoor-datacore-lv0 = { workspace = true }
 juthoor-arabicgenome-lv1 = { workspace = true }
 juthoor-cognatediscovery-lv2 = { workspace = true }
 juthoor-origins-lv3 = { workspace = true }
-quran-corpus-analysis = { workspace = true }
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
