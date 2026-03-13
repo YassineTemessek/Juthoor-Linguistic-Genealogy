@@ -1,0 +1,84 @@
+hypotheses:
+  - id: "H1"
+    name: "phonetic_semantic_proximity"
+    claim: "Letters with similar articulation points (makhaarij) have similar meanings"
+    source: "Al-Khalil (implicit)"
+    experiments: ["1.1", "5.1"]
+    status: "pending"
+
+  - id: "H2"
+    name: "binary_root_field_stability"
+    claim: "The binary root consistently determines a stable semantic field across all its triliteral derivations"
+    source: "Jabal (al-fasl al-mu'jami)"
+    experiments: ["2.3"]
+    status: "pending"
+
+  - id: "H3"
+    name: "third_letter_modifier_personality"
+    claim: "The third letter has a stable and consistent modifying personality across all roots where it appears as the third consonant"
+    source: "Jabal (al-tarkib al-tatabi'i)"
+    experiments: ["3.1"]
+    status: "pending"
+
+  - id: "H4"
+    name: "metathesis_preserves_core_meaning"
+    claim: "Binary metathesis (swapping the two letters) preserves part of the semantic core"
+    source: "Ibn Jinni (al-ishtiqaq al-akbar)"
+    experiments: ["4.1"]
+    status: "pending"
+
+  - id: "H5"
+    name: "metathesis_changes_meaning"
+    claim: "Binary metathesis changes the meaning (letter order is semantically significant)"
+    source: "Jabal (contra Ibn Jinni)"
+    experiments: ["4.1"]
+    status: "pending"
+
+  - id: "H6"
+    name: "same_makhraj_substitution_closer"
+    claim: "Phonetic substitution from the same articulation point (makhraj) produces semantically closer roots"
+    source: "Ibn Jinni (his three conditions)"
+    experiments: ["4.3"]
+    status: "pending"
+
+  - id: "H7"
+    name: "missing_combinations_semantic_conflict"
+    claim: "Some missing binary combinations are absent due to semantic contradiction between the two letters"
+    source: "An-Najah University"
+    experiments: ["2.2"]
+    status: "pending"
+
+  - id: "H8"
+    name: "positional_meaning_shift"
+    claim: "A letter's meaning changes depending on its position (first, second, or third) within the root"
+    source: "Al-Aqqad"
+    experiments: ["1.2"]
+    status: "pending"
+
+  - id: "H9"
+    name: "emphatic_letters_stronger_semantics"
+    claim: "Emphatic (mutbaq) letters are semantically stronger than their non-emphatic counterparts"
+    source: "Ibn Jinni + Ohala"
+    experiments: ["5.2"]
+    status: "pending"
+
+  - id: "H10"
+    name: "root_meaning_compositionality"
+    claim: "The meaning of a triliteral root equals the compositional combination of its individual letter meanings"
+    source: "Jabal (al-mu'adalat al-kimiyaiya)"
+    experiments: ["3.2"]
+    status: "pending"
+
+  - id: "H11"
+    name: "unsupervised_binary_structure_discovery"
+    claim: "A machine learning model can discover the binary root structure without supervision"
+    source: "Independent empirical test"
+    experiments: ["6.2"]
+    status: "pending"
+
+  - id: "H12"
+    name: "root_meaning_predictability"
+    claim: "The axial meaning of a new root can be predicted from its binary root meaning and third letter meaning"
+    source: "Al-quwwa al-tawlidiya (generative power)"
+    experiments: ["6.1"]
+    status: "pending"
