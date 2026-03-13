@@ -106,7 +106,7 @@ def main() -> None:
     save_feature("articulatory_vectors", matrix, meta)
     print(f"Saved articulatory_vectors: shape {matrix.shape}")
     print(f"  {meta['makhraj_count']} makhraj features + {meta['sifaat_count']} sifaat features")
-    print(f"  Letters: {' '.join(letters)}")
+    print(f"  Letters: {len(letters)} entries")
 
 
 if __name__ == "__main__":
