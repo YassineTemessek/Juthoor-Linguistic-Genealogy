@@ -1,14 +1,10 @@
 {
   "n_letters": 28,
-  "n_components": 5,
+  "n_components": 1,
   "canonical_correlations": [
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0
+    0.962009
   ],
-  "first_canonical_correlation": 1.0,
+  "first_canonical_correlation": 0.962009,
   "success_threshold": 0.4,
   "passes_threshold": true
 }
