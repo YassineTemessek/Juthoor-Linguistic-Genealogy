@@ -1,0 +1,19 @@
+{
+  "experiment_id": "4.1",
+  "experiment_name": "binary_metathesis",
+  "status": "completed",
+  "start_time": "2026-03-14T00:21:58.595617+00:00",
+  "end_time": "2026-03-14T00:22:02.394204+00:00",
+  "duration_seconds": 3.798587,
+  "metrics": {
+    "real_mean_similarity": 0.526308,
+    "control_mean_similarity": 0.502288,
+    "rank_sum_statistic": 2.467811,
+    "rank_sum_p_value": 0.013594,
+    "cohens_d": 0.278819,
+    "similar_share": 0.042169,
+    "divergent_share": 0.0,
+    "total_pairs": 166
+  },
+  "error": null
+}

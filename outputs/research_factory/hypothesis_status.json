@@ -3,7 +3,7 @@
     "last_experiment_id": "5.1",
     "last_experiment_name": "sound_meaning_matrix",
     "last_run_status": "completed",
-    "last_run_time": "2026-03-14T00:17:42.431959+00:00"
+    "last_run_time": "2026-03-14T00:20:40.136692+00:00"
   },
   "H3": {
     "last_experiment_id": "3.1",
@@ -22,5 +22,23 @@
     "last_experiment_name": "positional_semantics",
     "last_run_status": "completed",
     "last_run_time": "2026-03-14T00:17:10.118115+00:00"
+  },
+  "H6": {
+    "last_experiment_id": "4.3",
+    "last_experiment_name": "phonetic_substitution",
+    "last_run_status": "completed",
+    "last_run_time": "2026-03-14T00:22:20.378908+00:00"
+  },
+  "H4": {
+    "last_experiment_id": "4.1",
+    "last_experiment_name": "binary_metathesis",
+    "last_run_status": "completed",
+    "last_run_time": "2026-03-14T00:22:02.394204+00:00"
+  },
+  "H5": {
+    "last_experiment_id": "4.1",
+    "last_experiment_name": "binary_metathesis",
+    "last_run_status": "completed",
+    "last_run_time": "2026-03-14T00:22:02.394204+00:00"
   }
 }
