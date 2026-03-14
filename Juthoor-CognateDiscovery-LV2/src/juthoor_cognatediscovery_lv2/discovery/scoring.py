@@ -4,9 +4,12 @@ Includes hybrid scoring and interfaces for future learned rerankers.
 """
 from __future__ import annotations
 
-from typing import Any
+from typing import TYPE_CHECKING, Any
 from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights, compute_hybrid
 from .correspondence import correspondence_features
+
+if TYPE_CHECKING:
+    from .genome_scoring import GenomeScorer
 
 
 def _norm(value: Any) -> str:
@@ -57,9 +60,28 @@ def _apply_correspondence_bonus(
     return boosted
 
 
+def _apply_genome_bonus(
+    hybrid: dict[str, Any],
+    *,
+    source_fields: dict[str, Any],
+    target_fields: dict[str, Any],
+    genome_scorer: "GenomeScorer",
+) -> dict[str, Any]:
+    boosted = dict(hybrid)
+    bonus = genome_scorer.genome_bonus(source_fields, target_fields)
+    if bonus == 0.0:
+        boosted["genome_bonus"] = 0.0
+        return boosted
+    base_score = float(boosted.get("combined_score") or 0.0)
+    boosted["combined_score"] = round(min(1.0, base_score + bonus), 6)
+    boosted["genome_bonus"] = round(bonus, 6)
+    return boosted
+
+
 def apply_hybrid_scoring(
     candidates: dict[str, dict[str, Any]],
     weights: HybridWeights,
+    genome_scorer: "GenomeScorer | None" = None,
 ) -> None:
     """
     Applies heuristic hybrid scoring to a dictionary of candidates.
@@ -83,11 +105,19 @@ def apply_hybrid_scoring(
             source_fields=src_fields,
             target_fields=tgt_fields,
         )
-        entry["hybrid"] = _apply_correspondence_bonus(
+        hybrid = _apply_correspondence_bonus(
             hybrid,
             source_fields=src_fields,
             target_fields=tgt_fields,
         )
+        if genome_scorer is not None:
+            hybrid = _apply_genome_bonus(
+                hybrid,
+                source_fields=src_fields,
+                target_fields=tgt_fields,
+                genome_scorer=genome_scorer,
+            )
+        entry["hybrid"] = hybrid
 
 
 def _candidate_category(entry: dict[str, Any]) -> str:
@@ -144,11 +174,16 @@ class DiscoveryScorer:
     Placeholder for a learned reranker (Phase 4).
     Currently defaults to the hybrid baseline.
     """
-    def __init__(self, weights: HybridWeights | None = None):
+    def __init__(
+        self,
+        weights: HybridWeights | None = None,
+        genome_scorer: "GenomeScorer | None" = None,
+    ):
         self.weights = weights or HybridWeights()
+        self.genome_scorer = genome_scorer
 
     def score(self, candidates: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
-        apply_hybrid_scoring(candidates, self.weights)
+        apply_hybrid_scoring(candidates, self.weights, genome_scorer=self.genome_scorer)
         # Clean up temporary fields used for scoring but not needed in output
         for entry in candidates.values():
             entry["category"] = _candidate_category(entry)
