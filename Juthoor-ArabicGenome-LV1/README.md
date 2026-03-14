@@ -1,78 +1,166 @@
-# Arabic Word Decoding (LV1) 🧩
+# Juthoor ArabicGenome (LV1)
 
 ![level](https://img.shields.io/badge/level-LV1-6f42c1)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
-LV1 is the Arabic-focused level: **binary-root (2-letter nucleus) decoding**, clustering, and graph exports, starting with Quranic Arabic and expanding to broader Arabic.
+**LV1 is the Arabic linguistic genome and computational research factory.** It encodes the hypothesis that Arabic's consonantal root system carries a structured layer of meaning *before* morphological derivation -- from the single letter, through the biconsonantal (2-letter) nucleus, to the triconsonantal root.
 
-Core idea:
+## The Core Idea
 
-- Arabic roots are often 3 (or 4) radicals.
-- LV1 treats many 3-letter roots as variations around a deeper **binary nucleus** (first 2 "core" radicals), with later letters shaping nuance.
-- LV1 builds a wide-coverage Arabic lexeme/root table, then **regroups words into binary-root-centered clusters** using methods that fit the purpose (heuristics, BGE-M3/ByT5 embeddings, and graph methods).
+Arabic words derive from 3-consonant roots (e.g. **k-t-b** = writing). But beneath these roots lies a deeper **binary nucleus** -- the first two consonants define a *semantic field*, and the third consonant *modifies* that field in a predictable way. This is the theory of Jabal's *Mu'jam al-Ishtiqaqi al-Mu'assal* (The Systematized Etymological Dictionary).
 
+LV1 tests this theory computationally.
 
-## Role in the stack ??
+## Two Layers
 
-LV1 regroups Arabic words by binary roots derived in LV0, measures distances between binary roots,
-and studies how 3-letter roots connect inside each binary-root cluster.
+### LV1-CORE (Stable)
 
-## Project map 🧭
+The genome -- a read-only data foundation built in three phases:
 
-- LV0 (data core): Juthoor-DataCore-LV0
-- LV1 (Arabic genome, this repo): Juthoor-ArabicGenome-LV1
-- LV2 (cognate discovery): Juthoor-CognateDiscovery-LV2
-- LV3 (theory & validation): Juthoor-Origins-LV3
-- QCA (Quranic analysis): Quran-Corpus-Analysis
+| Phase | What | Output | Status |
+|-------|------|--------|--------|
+| **Phase 1** | Brute grouping of Arabic lexemes by binary root | 30 BAB files, 12,333 roots, 22,908 words | Complete |
+| **Phase 2** | Muajam Ishtiqaqi overlay (semantic enrichment) | 1,335 matched roots with axial meanings | Complete |
+| **Phase 3** | Semantic validation (BGE-M3 cosine scoring) | Mean score 0.558 | Complete |
 
-## Outputs ✅
+**Key data assets:**
+- `data/muajam/letter_meanings.jsonl` -- 28 Arabic letters with semantic axioms
+- `data/muajam/roots.jsonl` -- 1,938 triconsonantal roots with binary nuclei, axial meanings, and Quranic examples
+- `outputs/genome_v2/` -- 12,333 genome entries across 30 BAB (chapter) files
 
-- Binary-root-ready lexeme tables (consumed from LV0; processed locally as needed)
-- Cluster assignments (discovery-stage)
-- Graph exports (nodes/edges) for inspection and GraphRAG-style workflows
+### LV1-RESEARCH FACTORY (Experimental)
 
-## Graph view 🕸️
+A computational research engine that tests **12 formal hypotheses** about Arabic sound-meaning structure through **19 planned experiments** across 7 research axes.
 
-LV1 aims to produce a graph-friendly representation of Arabic word relationships:
+**Architecture:**
 
-- Nodes: `lemma`, `root`, `binary_root`
-- Edges: `lemma -> root`, `root -> binary_root`, plus optional derived links (shared pattern, shared cluster, etc.)
+```
+Research Factory
+├── Data Contracts       -- 7 entity types (Letter, BinaryRoot, TriliteralRoot, ...)
+├── Feature Store        -- Precomputed embeddings & phonetic vectors (.npy files)
+├── Experiment Engine    -- Standardized runner with hypothesis tracking
+├── Hypothesis Registry  -- 12 hypotheses from Jabal, Ibn Jinni, Al-Khalil, Al-Aqqad
+└── Promotion Gateway    -- experimental -> measured -> stable -> promoted to LV2/LV3
+```
 
-## Repo policy (important) 📌
+**The golden rule:** The factory reads from the core. It never modifies it.
 
-- Large datasets under `data/raw/` and generated tables under `data/processed/` are **not committed by default** (see `.gitignore`).
-- Small, versioned reference assets can live under `resources/`.
+## Hypothesis Registry
 
-## Quickstart 🚀
+| ID | Hypothesis | Source | Status |
+|----|-----------|--------|--------|
+| H1 | Letters with similar articulation have similar meanings | Al-Khalil | Inconclusive |
+| H2 | The binary root defines a stable semantic field | Jabal | **Supported** |
+| H3 | Each third letter has a stable "modifier personality" | Jabal | Inconclusive |
+| H4 | Metathesis preserves core meaning | Ibn Jinni | Pending |
+| H5 | Metathesis changes meaning (order matters) | Jabal | Pending |
+| H6 | Same-makhraj substitution produces closer meanings | Ibn Jinni | Pending |
+| H7 | Missing root combinations reflect semantic conflict | Najah Univ. | Pending |
+| H8 | A letter's meaning shifts by position | Al-Aqqad | Pending |
+| H9 | Emphatic letters carry stronger semantics | Ibn Jinni / Ohala | Pending |
+| H10 | Root meaning = composition of letter meanings | Jabal | Pending |
+| H11 | Machines can discover binary structure unsupervised | Independent | Pending |
+| H12 | Root meaning is predictable from components | Generative test | Pending |
 
-1) Get canonical Arabic processed tables from LV0 (recommended: fetch LV0 release bundles).
-2) Run LV1 clustering/graph scripts here.
+## Phase 1 Results (Latest)
 
-Binary-root clustering (discovery):
+| Experiment | Metric | Result | Verdict |
+|-----------|--------|--------|---------|
+| **1.1** Letter Similarity | Mantel r (phonetic vs semantic) | r=-0.15, p=0.16 | Not significant |
+| **2.3** Field Coherence | Real vs random baseline | 0.540 vs 0.518, >11 sigma | **Supported** |
+| **3.1** Modifier Personality | Consistency > 0.5 | 0/27 letters pass | Needs refinement |
 
-- `python "scripts/cluster/cluster_by_binary_root.py"`
+**Key finding:** Binary root families are significantly more semantically coherent than random groupings. This is the strongest quantitative evidence for Jabal's theory to date.
 
-QA report (binary vs tri-root):
+## Project Structure
 
-- `python "scripts/analysis/compare_binary_vs_triroot.py"`
+```
+Juthoor-ArabicGenome-LV1/
+├── src/juthoor_arabicgenome_lv1/
+│   ├── core/                        -- Data models & loaders
+│   │   ├── models.py                -- 7 frozen dataclasses
+│   │   └── loaders.py               -- Load letters, roots, families
+│   ├── factory/                     -- Research engine
+│   │   ├── feature_store.py         -- Save/load numpy features
+│   │   └── experiment_runner.py     -- Run & log experiments
+│   └── qca/                         -- Quranic Corpus Analysis
+│
+├── scripts/
+│   ├── build_genome_phase1.py       -- Brute binary-root grouping
+│   ├── build_genome_phase2.py       -- Muajam overlay
+│   ├── semantic_validation_phase3.py
+│   └── research_factory/
+│       ├── phase0_setup/            -- Embeddings, articulatory vectors
+│       ├── common/                  -- Statistics, visualization
+│       ├── axis1_letter/            -- Letter-level experiments
+│       ├── axis2_binary/            -- Binary root experiments
+│       ├── axis3_third_letter/      -- Modifier personality
+│       ├── axis4_permutation/       -- Metathesis & substitution
+│       ├── axis5_phonetics/         -- Sound-meaning correlation
+│       ├── axis6_generative/        -- AI prediction experiments
+│       └── axis7_validation/        -- Cross-validation
+│
+├── data/muajam/                     -- Source data (Muajam Ishtiqaqi)
+├── resources/
+│   ├── hypotheses.yaml              -- 12 hypotheses (machine-readable)
+│   └── phonetics/                   -- Makhaarij & sifaat JSON
+├── outputs/
+│   ├── genome_v2/                   -- 30 BAB files (stable core)
+│   └── research_factory/            -- Experiment results & features
+└── tests/                           -- 175 tests
+```
 
-Graph export (nodes + edges):
+## Numbers
 
-- `python "scripts/graph/export_binary_root_graph.py" --input <binary_root_lexicon.jsonl>`
+| Dimension | Count | Source |
+|-----------|-------|--------|
+| Letters with meanings | 28 | `letter_meanings.jsonl` |
+| Binary roots (documented) | 457 of 784 theoretical | `roots.jsonl` |
+| Missing binary combinations | 327 | Computed |
+| Triliteral roots with axial meanings | 1,938 | `roots.jsonl` |
+| Genome entries (full) | 12,333 | `genome_v2/` |
+| Binary metathesis pairs | 166 | Computed |
+| Roots with Quranic examples | 1,739 (90%) | `roots.jsonl` |
+| Formal hypotheses | 12 | `hypotheses.yaml` |
+| Planned experiments | 19 | 7 axes |
 
-## Docs 📚
+## Quickstart
 
-- Start here: `docs/START_HERE.md`
-- Ingest policy (LV0): `docs/INGEST.md`
+```bash
+# Install (from monorepo root)
+uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-ArabicGenome-LV1 -e Juthoor-CognateDiscovery-LV2
 
-## Contact 🤝
+# Run tests
+pytest Juthoor-ArabicGenome-LV1/tests/ -v
 
-For collaboration: `yassine.temessek@hotmail.com`
+# Build genome
+python Juthoor-ArabicGenome-LV1/scripts/build_genome_phase1.py
+python Juthoor-ArabicGenome-LV1/scripts/build_genome_phase2.py
 
-## Suggested GitHub "About" 📝
+# Compute research factory features (requires BGE-M3 model)
+python Juthoor-ArabicGenome-LV1/scripts/research_factory/phase0_setup/compute_all_embeddings.py
+python Juthoor-ArabicGenome-LV1/scripts/research_factory/phase0_setup/build_articulatory_vectors.py
+```
 
-Arabic decoding (LV1): binary-root clustering + graph exports, built on LV0 canonical datasets.
+## Role in the Stack
 
+```
+LV0 (data) --> LV1 (genome + research factory) --> LV3 (theory)
+                    |
+                    +--> promotes features to LV2 (cognate discovery)
+```
 
-## Project Status & Progress
-- Project-wide progress log: docs/PROGRESS_LOG.md`n- Raw data flow (Resources -> LV0 -> processed): docs/RAW_DATA_FLOW.md`n
+LV1 does not feed LV2 directly. It feeds **LV3** for theory validation. Stable, promoted features (modifier profiles, field coherence scores) can be exported to LV2 as retrieval features.
+
+## Documentation
+
+- **[Research Factory Master Plan](./docs/plans/RESEARCH_FACTORY_MASTER_PLAN.md)** -- Full theory, hypothesis registry, and experiment specs
+- **[Execution Orchestration](./docs/plans/EXECUTION_ORCHESTRATION.md)** -- Multi-agent work plan
+- **[Phase 1 Review](../outputs/research_factory/reports/phase1_summary.md)** -- Opus analysis of Phase 1 results
+- **[QCA Documentation](./docs/qca/START_HERE.md)** -- Quranic Corpus Analysis
+
+## License
+
+MIT License. See [LICENSE](../LICENSE).
+
+**Author:** Yassine Temessek

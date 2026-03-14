@@ -14,11 +14,10 @@ This monorepo consolidates a multi-layered research stack -- from raw data inges
 
 | Level | Module | Description |
 | :--- | :--- | :--- |
-| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** A robust data engine that ingests, normalizes, and canonizes lexical data from diverse sources (Wiktionary, Lane, Taj al-Arus, Khorsi). Single source of truth. |
-| **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | **The Genome.** Decodes the **biconsonantal (2-letter) root system**. Maps the "atomic meanings" of Arabic sounds and generates the binary root graph. |
-| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** Discovery engine using **BGE-M3** (semantic search), **ByT5** (character-level matching), correspondence-aware reranking, benchmark evaluation, and root-family retrieval experiments. |
+| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** Data engine that ingests, normalizes, and canonizes lexical data from diverse sources (Wiktionary, Lane, Taj al-Arus, Khorsi). Single source of truth for ~2.6M lexemes across 6 languages. |
+| **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | **The Genome & Research Factory.** Decodes the biconsonantal root system (457 binary roots, 1,938 triliteral roots, 12,333 genome entries). Houses a computational research factory testing 12 formal hypotheses about Arabic sound-meaning structure across 19 experiments. |
+| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** Cross-lingual cognate discovery engine using **BGE-M3** (semantic search), **ByT5** (character-level matching), correspondence-aware reranking, benchmark evaluation, and root-family retrieval. |
 | **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | **The Theory.** Synthesis layer testing genealogical hypotheses, mapping global language corridors, and reconstructing the "Origin" model. |
-| **App** | **[Quran-Corpus-Analysis](./Quran-Corpus-Analysis)** | **The Application.** Semantic analysis suite for the Quranic corpus using root-based associations. |
 
 ---
 
@@ -50,11 +49,11 @@ uv pip install "juthoor-cognatediscovery-lv2[embeddings]"
 ### Running Tests
 
 ```bash
-# Run all tests across all levels (356 tests, excluding slow model-loading tests)
+# Run all tests across all levels (500+ tests, excluding slow model-loading tests)
 pytest Juthoor-DataCore-LV0/tests/ Juthoor-ArabicGenome-LV1/tests/ Juthoor-CognateDiscovery-LV2/tests/ -v -m "not slow"
 
 # Run a single level
-pytest Juthoor-DataCore-LV0/tests/ -v
+pytest Juthoor-ArabicGenome-LV1/tests/ -v
 ```
 
 ### Running the Pipeline
@@ -66,8 +65,13 @@ ldc ingest --all
 
 **2. Arabic Genome (LV1)**
 ```bash
+# Build the genome (Phase 1 brute grouping + Phase 2 Muajam overlay)
 python Juthoor-ArabicGenome-LV1/scripts/build_genome_phase1.py
 python Juthoor-ArabicGenome-LV1/scripts/build_genome_phase2.py
+
+# Research Factory — compute features and run experiments
+python Juthoor-ArabicGenome-LV1/scripts/research_factory/phase0_setup/compute_all_embeddings.py
+python Juthoor-ArabicGenome-LV1/scripts/research_factory/phase0_setup/build_articulatory_vectors.py
 ```
 
 **3. Discovery (LV2)**
