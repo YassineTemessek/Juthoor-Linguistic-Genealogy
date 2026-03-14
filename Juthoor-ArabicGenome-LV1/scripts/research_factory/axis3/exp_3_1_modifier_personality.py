@@ -42,11 +42,11 @@ NORMALIZE_MAP = str.maketrans({"أ": "ء", "إ": "ء", "آ": "ء", "ى": "ي"})
 
 
 def canonical_added_letter(tri_root: str) -> str | None:
-    candidate = SPLIT_RE.split(tri_root.strip())[0]
+    candidate = SPLIT_RE.split(tri_root.strip())[0].translate(NORMALIZE_MAP)
     letters = ARABIC_RE.findall(candidate)
     if not letters:
         return None
-    return letters[-1].translate(NORMALIZE_MAP)
+    return letters[-1]
 
 
 def pairwise_consistency(vectors: np.ndarray) -> float | None:
