@@ -16,34 +16,34 @@
   │  DataCore │     --all               (Arabic, English, Latin, Greek...)
   └───────────┘
        │
-       ├────────────────┬──────────────────────────┐
-       ▼                ▼                          ▼
-  ┌───────────┐   ┌───────────┐             ┌───────────┐
-  │    LV1    │   │    LV2    │             │    QCA    │
-  │  Arabic   │   │  Cognate  │             │   Quran   │
-  │  Genome   │   │ Discovery │             │  Analysis │
-  └───────────┘   └───────────┘             └───────────┘
-  Binary root      Ranked leads              Word-root maps
-  clusters         discovery_*.jsonl         Co-occurrence
-  Root graphs      + hybrid scores           Semantic fields
-       │                │
-       └───────┬────────┘
-               ▼
-          ┌───────────┐
-          │    LV3    │     Validated corridors
-          │  Origins  │     Genealogical mapping
-          └───────────┘     (future implementation)
+       ├────────────────────────────────┐
+       ▼                                ▼
+  ┌─────────────────────────┐     ┌───────────┐
+  │          LV1            │     │    LV2    │
+  │  Arabic Genome          │     │  Cognate  │
+  │  + Research Factory     │     │ Discovery │
+  │  + QCA (subpackage)     │     └───────────┘
+  └─────────────────────────┘      Ranked leads
+  Binary root clusters              discovery_*.jsonl
+  Research hypotheses               + hybrid scores
+  Word-root maps, co-occurrence
+       │                                │
+       └───────────────┬────────────────┘
+                       ▼
+                  ┌───────────┐
+                  │    LV3    │     Validated corridors
+                  │  Origins  │     Genealogical mapping
+                  └───────────┘     (future implementation)
 ```
 
 ### What Each Level Does
 
 | Level | Name | What It Does | Status |
 |-------|------|-------------|--------|
-| **LV0** | DataCore | Ingests raw data → clean canonical JSONL per language | Done |
-| **LV1** | Arabic Genome | Groups Arabic words by 2-letter root nucleus, exports graphs | Done |
+| **LV0** | DataCore | Ingests raw data → clean canonical JSONL per language (~2.6M lexemes) | Done |
+| **LV1** | Arabic Genome | Groups Arabic words by 2-letter root nucleus; Research Factory tests 12 hypotheses about Arabic sound-meaning structure; QCA subpackage handles Quranic word-root analysis | Done |
 | **LV2** | Cognate Discovery | AI-powered cross-language matching using embeddings + hybrid scoring | Done |
 | **LV3** | Origins | Tests genealogical hypotheses using LV1+LV2 outputs | Blueprint |
-| **QCA** | Quran Analysis | Semantic analysis of Quranic text (word relationships, co-occurrence) | Done |
 
 ---
 
@@ -278,11 +278,23 @@ Consumes LV2 leads to validate genealogical hypotheses. Currently documentation-
 
 Key docs: `Master FoundationV3.2.md`, `docs/CORRIDORS.md`, `docs/ANCHOR_POLICY.md`, `docs/VALIDATION_TRACK.md`.
 
-### QCA — Quran Corpus Analysis
+### Step 5b: LV1 — QCA (Quranic Corpus Analysis)
+
+QCA is a subpackage of LV1. Scripts live at `Juthoor-ArabicGenome-LV1/scripts/qca/`.
 
 ```bash
-cd Quran-Corpus-Analysis
-python scripts/analysis/build_word_root_map.py
+cd Juthoor-ArabicGenome-LV1
+python scripts/qca/build_word_root_map.py
+python scripts/qca/01_rj_cooc.py
+```
+
+### Step 5c: LV1 — Research Factory
+
+The Research Factory runs 19 experiments across 12 hypotheses about Arabic sound-meaning structure.
+
+```bash
+cd Juthoor-ArabicGenome-LV1
+python scripts/research/run_factory.py
 ```
 
 ---

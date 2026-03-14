@@ -3,23 +3,22 @@
 ## The Vision
 **Juthoor** (Arabic: *Roots*) is a unified linguistic engine designed to trace the genealogy of human language, with a primary focus on the Arabo-Semitic root system as a potential "linguistic DNA."
 
-This monorepo consolidates five distinct research layers into a single, cohesive system where higher levels build upon the foundational data and logic of the lower levels.
+This monorepo consolidates four research layers into a single, cohesive system where higher levels build upon the foundational data and logic of the lower levels.
 
 ## Architecture & Layers
 
-The project is organized into a **layered architecture** (LV0 to LV3 + App):
+The project is organized into a **layered architecture** (LV0 to LV3):
 
 | Level | Folder Name | Role & Responsibility | Dependencies |
 | :--- | :--- | :--- | :--- |
-| **LV0** | `Juthoor-DataCore-LV0` | **The Foundation.** Data ingestion, normalization, and canonization. It serves as the "single source of truth" for raw linguistic data. | *(None)* |
-| **LV1** | `Juthoor-ArabicGenome-LV1` | **Arabic Genome.** Decoding the biconsonantal (2-letter) root system and establishing the core "atomic" meanings of Arabic sounds. | LV0 |
-| **LV2** | `Juthoor-CognateDiscovery-LV2` | **Discovery Engine.** Cross-lingual similarity scoring (e.g., comparing Arabic roots to English, Latin, Greek). Generates ranked candidates for cognates. | LV0 |
-| **LV3** | `Juthoor-Origins-LV3` | **Theory & Genealogy.** The synthesis layer. Hypothesis testing, genealogical mapping, and reconstructing the "Origin" language model. | LV0, LV1, LV2 |
-| **App** | `Quran-Corpus-Analysis` | **Quran Application.** Semantic analysis of Quranic text using the engines above. | LV0, LV1 |
+| **LV0** | `Juthoor-DataCore-LV0` | **The Foundation.** Data ingestion, normalization, and canonization. It serves as the "single source of truth" for raw linguistic data. ~2.6M lexemes across 6 languages. 145 tests. | *(None)* |
+| **LV1** | `Juthoor-ArabicGenome-LV1` | **Arabic Genome + Research Factory.** Decoding the biconsonantal (2-letter) root system and establishing the core "atomic" meanings of Arabic sounds. Includes a Research Factory testing 12 hypotheses about Arabic sound-meaning structure across 19 experiments. QCA (Quranic Corpus Analysis) is a subpackage here. 175 tests. | LV0 |
+| **LV2** | `Juthoor-CognateDiscovery-LV2` | **Discovery Engine.** Cross-lingual similarity scoring (e.g., comparing Arabic roots to English, Latin, Greek). Generates ranked candidates for cognates. 150 tests. | LV0 |
+| **LV3** | `Juthoor-Origins-LV3` | **Theory & Genealogy.** The synthesis layer. Hypothesis testing, genealogical mapping, and reconstructing the "Origin" language model. Docs only; no implementation yet. | LV0, LV1, LV2 |
 
 ## Workspace Structure (Python)
 
-This project is configured as a **Python Workspace**. The root `pyproject.toml` defines the entire repository as a workspace, meaning all 5 levels are member packages.
+This project is configured as a **Python Workspace**. The root `pyproject.toml` defines the entire repository as a workspace, meaning all 4 levels are member packages.
 
 ### Benefits
 *   **Unified Imports:** Scripts in LV3 can import directly from LV0 (e.g., `from juthoor_datacore_lv0 import ...`) without messy path hacks (`sys.path.append`).
@@ -33,7 +32,6 @@ This project is configured as a **Python Workspace**. The root `pyproject.toml` 
 | LV1 | `juthoor-arabicgenome-lv1` |
 | LV2 | `juthoor-cognatediscovery-lv2` |
 | LV3 | `juthoor-origins-lv3` |
-| App | `quran-corpus-analysis` |
 
 ## Directory Layout
 
@@ -45,10 +43,9 @@ Juthoor-Linguistic-Genealogy/
 ├── Resources/                  # Shared external resources (PDFs, reference materials)
 │
 ├── Juthoor-DataCore-LV0/       # [CODE] Data Engine
-├── Juthoor-ArabicGenome-LV1/   # [CODE] Arabic Root Graph
+├── Juthoor-ArabicGenome-LV1/   # [CODE] Arabic Genome + Research Factory + QCA
 ├── Juthoor-CognateDiscovery-LV2/ # [CODE] Cross-Lingual Scorer
-├── Juthoor-Origins-LV3/        # [CODE] Theoretical Models
-└── Quran-Corpus-Analysis/      # [CODE] Quran Analysis Application
+└── Juthoor-Origins-LV3/        # [DOCS] Theoretical Models
 ```
 
 ## Development Guidelines
@@ -58,7 +55,7 @@ Juthoor-Linguistic-Genealogy/
     *   **Experiments/Runners:** Put it in `scripts/` within the appropriate level.
 
 2.  **Data Flow:**
-    *   Data should ideally flow **UP** the levels (LV0 -> LV3/App).
+    *   Data should ideally flow **UP** the levels (LV0 -> LV3).
     *   LV0 is the only place that should handle raw data ingestion.
     *   Higher levels should consume the *canonical* data produced by LV0.
 
@@ -86,4 +83,4 @@ This layer is the **Laboratory** where cross-lingual connections are hypothesize
     *   Does *not* make final truth claims; it filters the noise so researchers can focus on high-probability connections.
 
 ---
-*Updated: February 25, 2026*
+*Updated: March 14, 2026*

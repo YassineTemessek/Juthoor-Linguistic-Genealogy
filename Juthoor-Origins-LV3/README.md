@@ -14,8 +14,7 @@ source for multiple language families, using LV2 outputs as evidence inputs.
 ## Project map 🧭
 
 - LV0 (data core): Juthoor-DataCore-LV0
-- QCA (Quranic analysis): Quran-Corpus-Analysis
-- LV1 (Arabic genome): Juthoor-ArabicGenome-LV1
+- LV1 (Arabic genome + Research Factory + QCA): Juthoor-ArabicGenome-LV1
 - LV2 (cognate discovery): Juthoor-CognateDiscovery-LV2
 - LV3 (theory & validation, this repo): Juthoor-Origins-LV3
 
