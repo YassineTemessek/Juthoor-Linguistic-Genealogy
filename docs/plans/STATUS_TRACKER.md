@@ -1,6 +1,6 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-14 (after A.6+A.7 completion)
+**Last updated:** 2026-03-14 (LV0+LV2 plan COMPLETE)
 
 ---
 
@@ -26,9 +26,9 @@
 |------|-------|--------|--------|-------|
 | B.1 GenomeScorer module | Sonnet | DONE | `1a55505` | 396 coherence, 166 metathesis pairs, 13 tests |
 | B.2 Wire into scoring pipeline | Sonnet | DONE | `6c95e8e` | Optional genome_scorer param, 226 LV2 tests pass |
-| B.3 First Hebrew-Arabic discovery run | Codex | UNBLOCKED — ready to go | — | Genome-enabled run |
-| B.4 Genome vs blind comparison | Codex | BLOCKED on B.3 | — | Compare metrics |
-| B.5 Review & analysis | Opus | BLOCKED on B.4 | — | Final review |
+| B.3 First Hebrew-Arabic discovery run | Codex | DONE | `89f812c` | 550 leads, 19 gold pairs, Recall@50=1.0 |
+| B.4 Genome vs blind comparison | Codex | DONE | `89f812c` | MRR +0.040, nDCG +0.032 (genome helps ranking) |
+| B.5 Review & analysis | Opus | DONE | see below | `outputs/reports/lv2_genome_integration_review.md` |
 
 ---
 
