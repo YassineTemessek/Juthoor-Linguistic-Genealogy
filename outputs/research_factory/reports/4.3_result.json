@@ -2,13 +2,15 @@
   "experiment_id": "4.3",
   "experiment_name": "phonetic_substitution",
   "status": "completed",
-  "start_time": "2026-03-14T00:22:17.958183+00:00",
-  "end_time": "2026-03-14T00:22:20.378908+00:00",
-  "duration_seconds": 2.420725,
+  "start_time": "2026-03-14T00:25:04.004574+00:00",
+  "end_time": "2026-03-14T00:25:06.106410+00:00",
+  "duration_seconds": 2.101836,
   "metrics": {
     "n_pairs": 14309,
     "spearman_rho": -0.021008,
     "p_value": 0.011968,
+    "mean_articulatory_distance": 2.041741,
+    "mean_semantic_distance": 0.467261,
     "supports_h6": false
   },
   "error": null
