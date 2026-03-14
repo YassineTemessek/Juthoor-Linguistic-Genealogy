@@ -4,42 +4,66 @@ hypotheses:
     claim: "Letters with similar articulation points (makhaarij) have similar meanings"
     source: "Al-Khalil (implicit)"
     experiments: ["1.1", "5.1"]
-    status: "pending"
+    status: "inconclusive"
+    evidence:
+      experiment_id: "1.1"
+      key_metric: "Mantel r=-0.152, p=0.161; CCA r=0.962, perm p=0.149 — no significant phonetic-semantic correlation"
+      verdict_date: "2026-03-14"
 
   - id: "H2"
     name: "binary_root_field_stability"
     claim: "The binary root consistently determines a stable semantic field across all its triliteral derivations"
     source: "Jabal (al-fasl al-mu'jami)"
     experiments: ["2.3"]
-    status: "pending"
+    status: "supported"
+    evidence:
+      experiment_id: "2.3"
+      key_metric: "real_mean=0.540 vs baseline=0.518, >11σ above shuffle"
+      verdict_date: "2026-03-14"
 
   - id: "H3"
     name: "third_letter_modifier_personality"
     claim: "The third letter has a stable and consistent modifying personality across all roots where it appears as the third consonant"
     source: "Jabal (al-tarkib al-tatabi'i)"
     experiments: ["3.1"]
-    status: "pending"
+    status: "weak_signal"
+    evidence:
+      experiment_id: "3.1"
+      key_metric: "z=3.51 above shuffle, but 0 letters above 0.5 consistency threshold"
+      verdict_date: "2026-03-14"
 
   - id: "H4"
     name: "metathesis_preserves_core_meaning"
     claim: "Binary metathesis (swapping the two letters) preserves part of the semantic core"
     source: "Ibn Jinni (al-ishtiqaq al-akbar)"
     experiments: ["4.1"]
-    status: "pending"
+    status: "weakly_supported"
+    evidence:
+      experiment_id: "4.1"
+      key_metric: "mean cosine 0.526 vs 0.502 baseline, p=0.014, Cohen d=0.28"
+      verdict_date: "2026-03-14"
 
   - id: "H5"
     name: "metathesis_changes_meaning"
     claim: "Binary metathesis changes the meaning (letter order is semantically significant)"
     source: "Jabal (contra Ibn Jinni)"
     experiments: ["4.1"]
-    status: "pending"
+    status: "supported"
+    evidence:
+      experiment_id: "4.1"
+      key_metric: "complement of H4: letter order is significant (p=0.014), metathesis pairs are not equivalent"
+      verdict_date: "2026-03-14"
 
   - id: "H6"
     name: "same_makhraj_substitution_closer"
     claim: "Phonetic substitution from the same articulation point (makhraj) produces semantically closer roots"
     source: "Ibn Jinni (his three conditions)"
     experiments: ["4.3"]
-    status: "pending"
+    status: "not_supported"
+    evidence:
+      experiment_id: "4.3"
+      key_metric: "Spearman rho=-0.021, wrong direction — same-makhraj substitution not semantically closer"
+      verdict_date: "2026-03-14"
 
   - id: "H7"
     name: "missing_combinations_semantic_conflict"
@@ -53,7 +77,11 @@ hypotheses:
     claim: "A letter's meaning changes depending on its position (first, second, or third) within the root"
     source: "Al-Aqqad"
     experiments: ["1.2"]
-    status: "pending"
+    status: "supported"
+    evidence:
+      experiment_id: "1.2"
+      key_metric: "24/28 letters show significant positional meaning shift"
+      verdict_date: "2026-03-14"
 
   - id: "H9"
     name: "emphatic_letters_stronger_semantics"

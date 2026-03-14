@@ -51,24 +51,28 @@ Research Factory
 |----|-----------|--------|--------|
 | H1 | Letters with similar articulation have similar meanings | Al-Khalil | Inconclusive |
 | H2 | The binary root defines a stable semantic field | Jabal | **Supported** |
-| H3 | Each third letter has a stable "modifier personality" | Jabal | Inconclusive |
-| H4 | Metathesis preserves core meaning | Ibn Jinni | Pending |
-| H5 | Metathesis changes meaning (order matters) | Jabal | Pending |
-| H6 | Same-makhraj substitution produces closer meanings | Ibn Jinni | Pending |
+| H3 | Each third letter has a stable "modifier personality" | Jabal | Weak signal |
+| H4 | Metathesis preserves core meaning | Ibn Jinni | Weakly supported |
+| H5 | Metathesis changes meaning (order matters) | Jabal | **Supported** |
+| H6 | Same-makhraj substitution produces closer meanings | Ibn Jinni | Not supported |
 | H7 | Missing root combinations reflect semantic conflict | Najah Univ. | Pending |
-| H8 | A letter's meaning shifts by position | Al-Aqqad | Pending |
+| H8 | A letter's meaning shifts by position | Al-Aqqad | **Supported** |
 | H9 | Emphatic letters carry stronger semantics | Ibn Jinni / Ohala | Pending |
 | H10 | Root meaning = composition of letter meanings | Jabal | Pending |
 | H11 | Machines can discover binary structure unsupervised | Independent | Pending |
 | H12 | Root meaning is predictable from components | Generative test | Pending |
 
-## Phase 1 Results (Latest)
+## Research Factory Results (Phase 1-2)
 
 | Experiment | Metric | Result | Verdict |
 |-----------|--------|--------|---------|
 | **1.1** Letter Similarity | Mantel r (phonetic vs semantic) | r=-0.15, p=0.16 | Not significant |
+| **1.2** Positional Semantics | Kruskal-Wallis significance | 24/28 letters significant | **Supported** |
 | **2.3** Field Coherence | Real vs random baseline | 0.540 vs 0.518, >11 sigma | **Supported** |
 | **3.1** Modifier Personality | Consistency > 0.5 | 0/27 letters pass | Needs refinement |
+| **4.1** Binary Metathesis | Wilcoxon + Cohen's d | mean 0.526 vs 0.502, d=0.28 | Weakly supported |
+| **4.3** Phonetic Substitution | Spearman rho | rho=-0.021 | Not supported |
+| **5.1** Sound-Meaning CCA | Canonical correlation + perm test | r=0.962, perm p=0.149 | Inconclusive |
 
 **Key finding:** Binary root families are significantly more semantically coherent than random groupings. This is the strongest quantitative evidence for Jabal's theory to date.
 
@@ -107,7 +111,7 @@ Juthoor-ArabicGenome-LV1/
 ├── outputs/
 │   ├── genome_v2/                   -- 30 BAB files (stable core)
 │   └── research_factory/            -- Experiment results & features
-└── tests/                           -- 175 tests
+└── tests/                           -- 183 tests
 ```
 
 ## Numbers
