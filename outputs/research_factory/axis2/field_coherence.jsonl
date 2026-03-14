@@ -1,0 +1,396 @@
+{"binary_root": "غظ", "n_members": 2, "coherence": 0.766433, "members": ["غظغظ", "غيظ"]}
+{"binary_root": "تف", "n_members": 2, "coherence": 0.746377, "members": ["تفف-تفتف", "تفث"]}
+{"binary_root": "طح", "n_members": 2, "coherence": 0.745144, "members": ["طحح-طحطح", "طحو-طحى"]}
+{"binary_root": "بش", "n_members": 2, "coherence": 0.726421, "members": ["بشش/بشبش", "بشر"]}
+{"binary_root": "ثخ", "n_members": 2, "coherence": 0.721123, "members": ["ثخخ", "ثخن"]}
+{"binary_root": "لز", "n_members": 3, "coherence": 0.702714, "members": ["لزز", "لزب", "لزم"]}
+{"binary_root": "تم", "n_members": 2, "coherence": 0.698701, "members": ["تمم", "يتم"]}
+{"binary_root": "نن", "n_members": 2, "coherence": 0.693661, "members": ["نون", "أنن"]}
+{"binary_root": "مص", "n_members": 2, "coherence": 0.689812, "members": ["مصص-مصمص", "مصر"]}
+{"binary_root": "رط", "n_members": 2, "coherence": 0.684394, "members": ["رطط-رطرط", "رطب"]}
+{"binary_root": "زح", "n_members": 2, "coherence": 0.68296, "members": ["زحح-زحزح", "زحف"]}
+{"binary_root": "رخ", "n_members": 2, "coherence": 0.671866, "members": ["رخخ-رخرخ", "رخو-رخى"]}
+{"binary_root": "مم", "n_members": 2, "coherence": 0.66491, "members": ["أمم", "يمم"]}
+{"binary_root": "بز", "n_members": 2, "coherence": 0.663748, "members": ["بزز/بزبز", "بزغ"]}
+{"binary_root": "نت", "n_members": 2, "coherence": 0.660235, "members": ["نتت-نتنت", "نتق"]}
+{"binary_root": "جث", "n_members": 3, "coherence": 0.656612, "members": ["جثث-جثجث", "جثو-جثى", "جثم"]}
+{"binary_root": "رن", "n_members": 4, "coherence": 0.654421, "members": ["رنن", "رين", "رنن", "رين"]}
+{"binary_root": "ضز", "n_members": 2, "coherence": 0.653135, "members": ["ضزز", "ضوز/ضيز"]}
+{"binary_root": "دس", "n_members": 3, "coherence": 0.649673, "members": ["دسس", "دسو-دسي", "دسر"]}
+{"binary_root": "عك", "n_members": 2, "coherence": 0.648095, "members": ["عكك", "عكف"]}
+{"binary_root": "ظف", "n_members": 2, "coherence": 0.646312, "members": ["ظفف", "ظفر"]}
+{"binary_root": "ظل", "n_members": 2, "coherence": 0.645479, "members": ["ظلل", "ظلم"]}
+{"binary_root": "قهـ", "n_members": 2, "coherence": 0.640297, "members": ["قهـهـ-قهقه", "قهـر"]}
+{"binary_root": "مط", "n_members": 3, "coherence": 0.638924, "members": ["مطط-مطمط", "مطو", "مطر"]}
+{"binary_root": "ند", "n_members": 3, "coherence": 0.638023, "members": ["ندد", "ندو-ندى", "ندم"]}
+{"binary_root": "عط", "n_members": 4, "coherence": 0.637007, "members": ["عطط", "عطو", "عطف", "عطل"]}
+{"binary_root": "فس", "n_members": 5, "coherence": 0.636771, "members": ["فسفس", "فسح", "فسد", "فسر", "فسق"]}
+{"binary_root": "غش", "n_members": 2, "coherence": 0.636728, "members": ["غشش", "غشو/غشى"]}
+{"binary_root": "زج", "n_members": 4, "coherence": 0.633685, "members": ["زجج", "زجو-زجي", "زوج", "زجر"]}
+{"binary_root": "كز", "n_members": 2, "coherence": 0.633501, "members": ["كزز", "وكز"]}
+{"binary_root": "لذ", "n_members": 2, "coherence": 0.63286, "members": ["لذذ-لذلذ", "لوذ"]}
+{"binary_root": "عص", "n_members": 6, "coherence": 0.632329, "members": ["عصص-عصعص", "عصو-عصى", "عصب", "عصر", "عصف", "عصم"]}
+{"binary_root": "نهـ", "n_members": 4, "coherence": 0.632051, "members": ["نهـنهـ", "نهـى", "نهـج", "نهـر"]}
+{"binary_root": "تر", "n_members": 6, "coherence": 0.630126, "members": ["ترر", "تور-تير", "وتر", "ترب", "ترف", "ترك"]}
+{"binary_root": "حق", "n_members": 4, "coherence": 0.624562, "members": ["حقق-حقحق", "حيق", "حقب", "حقف"]}
+{"binary_root": "مح", "n_members": 6, "coherence": 0.624437, "members": ["محح-محمح", "محو-محى", "محص", "محق", "محل", "محن"]}
+{"binary_root": "جز", "n_members": 5, "coherence": 0.622215, "members": ["جزز-جزجز", "جزى", "جزأ", "جوز-جيز", "جزع"]}
+{"binary_root": "يد", "n_members": 5, "coherence": 0.619864, "members": ["يدى", "أدو/أدى", "أود", "أيد", "وأد"]}
+{"binary_root": "نز", "n_members": 5, "coherence": 0.619645, "members": ["نزز", "نزع", "نزغ", "نزف", "نزل"]}
+{"binary_root": "سد", "n_members": 5, "coherence": 0.618779, "members": ["سدد", "سدو-سدى", "سود", "سدر", "سدس-ستت"]}
+{"binary_root": "ذم", "n_members": 2, "coherence": 0.617317, "members": ["ذم-ذمذم", "ذأم"]}
+{"binary_root": "غص", "n_members": 3, "coherence": 0.615724, "members": ["غصص", "غوص", "غصب"]}
+{"binary_root": "عل", "n_members": 5, "coherence": 0.615302, "members": ["علل-علعل", "علو-على", "عول-عيل", "علق", "علم"]}
+{"binary_root": "دق", "n_members": 3, "coherence": 0.61515, "members": ["دقق-دقدق", "ودق", "دكك"]}
+{"binary_root": "سو", "n_members": 2, "coherence": 0.614842, "members": ["سوى", "سوأ"]}
+{"binary_root": "تح", "n_members": 2, "coherence": 0.613317, "members": ["تحتح", "تحت"]}
+{"binary_root": "رس", "n_members": 5, "coherence": 0.612532, "members": ["رسس-رسرس", "رسو", "رأس", "رسخ", "رسل"]}
+{"binary_root": "غب", "n_members": 4, "coherence": 0.610695, "members": ["غبب", "غيب", "غبر", "غبن"]}
+{"binary_root": "هـض", "n_members": 2, "coherence": 0.609742, "members": ["هضض-هضهض", "هضم"]}
+{"binary_root": "لط", "n_members": 2, "coherence": 0.609412, "members": ["لطط", "لطف"]}
+{"binary_root": "ضف", "n_members": 4, "coherence": 0.608574, "members": ["ضفف", "ضوف/ضيف", "ضفد", "ضفدع"]}
+{"binary_root": "دح", "n_members": 4, "coherence": 0.608434, "members": ["دحح-دحدح", "دحو-دحي", "دحض", "دحر"]}
+{"binary_root": "سط", "n_members": 6, "coherence": 0.608258, "members": ["سطط", "سطو", "سوط", "وسط", "سطح", "سطر"]}
+{"binary_root": "قث", "n_members": 2, "coherence": 0.607894, "members": ["قثث", "قثأ"]}
+{"binary_root": "مض", "n_members": 3, "coherence": 0.60755, "members": ["مضض-مضمض", "مضى", "مضغ"]}
+{"binary_root": "قش", "n_members": 3, "coherence": 0.606816, "members": ["قشش-قشقش", "قشع", "قشعر"]}
+{"binary_root": "نو", "n_members": 2, "coherence": 0.606731, "members": ["نوى", "نوأ"]}
+{"binary_root": "زب", "n_members": 5, "coherence": 0.606441, "members": ["أزز", "زبب-زبزب", "زبد", "زبر", "زبن"]}
+{"binary_root": "بل", "n_members": 5, "coherence": 0.605638, "members": ["بلل/بلبل", "بلو/بلي", "بول", "وبل", "أبل"]}
+{"binary_root": "فح", "n_members": 2, "coherence": 0.604927, "members": ["فحح", "فحش"]}
+{"binary_root": "حظ", "n_members": 2, "coherence": 0.603761, "members": ["حظظ", "حظر"]}
+{"binary_root": "حث", "n_members": 2, "coherence": 0.602744, "members": ["حثث-حثحث", "حوث-حيث"]}
+{"binary_root": "مج", "n_members": 3, "coherence": 0.602475, "members": ["مجج-مجمج", "موج-ميج", "مجد"]}
+{"binary_root": "تق", "n_members": 2, "coherence": 0.601911, "members": ["تقتق", "تقن"]}
+{"binary_root": "صل", "n_members": 7, "coherence": 0.601883, "members": ["صلل-صلصل", "صلو-صلى", "وصل", "أصل", "صلب", "صلح", "صلد"]}
+{"binary_root": "صح", "n_members": 4, "coherence": 0.601796, "members": ["صحح-صحصح", "صوح-صيح", "صحب", "صحف"]}
+{"binary_root": "كش", "n_members": 3, "coherence": 0.601233, "members": ["كشش", "كشط", "كشف"]}
+{"binary_root": "جف", "n_members": 6, "coherence": 0.600437, "members": ["جفف-جفجف", "جفو", "جفأ", "جوف-جيف", "وجف", "جفن"]}
+{"binary_root": "كم", "n_members": 3, "coherence": 0.598875, "members": ["كمم-كمكم", "كمل", "كمهـ"]}
+{"binary_root": "ثب", "n_members": 6, "coherence": 0.59852, "members": ["ثبب-ثبثب", "ثبو", "ثوب", "ثبت", "ثبر", "ثبط"]}
+{"binary_root": "غس", "n_members": 3, "coherence": 0.59711, "members": ["غسس", "غسق", "غسل"]}
+{"binary_root": "شو", "n_members": 3, "coherence": 0.595223, "members": ["شوى", "وشى", "شيأ"]}
+{"binary_root": "جن", "n_members": 5, "coherence": 0.594429, "members": ["جنى", "جنب", "جنح", "جند", "جنف"]}
+{"binary_root": "دل", "n_members": 4, "coherence": 0.593804, "members": ["دلل-دلدل", "دلو", "دول", "دلك"]}
+{"binary_root": "خذ", "n_members": 3, "coherence": 0.592737, "members": ["خذذ", "أخذ", "خذل"]}
+{"binary_root": "كر", "n_members": 6, "coherence": 0.592105, "members": ["كرر-كركر", "كور-كير", "كرب", "كرس", "كرم", "كرهـ"]}
+{"binary_root": "مث", "n_members": 2, "coherence": 0.591718, "members": ["مثث-مثمث", "مثل"]}
+{"binary_root": "لف", "n_members": 6, "coherence": 0.590122, "members": ["لفف-لفلف", "لفو", "ألف", "لفت", "لفح", "لفظ"]}
+{"binary_root": "قص", "n_members": 6, "coherence": 0.589778, "members": ["قصص-قصقص", "قصو", "قصد", "قصر", "قصف", "قصم"]}
+{"binary_root": "قح", "n_members": 2, "coherence": 0.589662, "members": ["قحح", "قحم"]}
+{"binary_root": "بت", "n_members": 5, "coherence": 0.5895, "members": ["بتت", "بيت", "بتر", "بتك", "بتل"]}
+{"binary_root": "صب", "n_members": 9, "coherence": 0.588355, "members": ["صبب-صبصب", "صبو", "صوب-صيب", "وصب", "صبأ", "صبح", "صبر", "صبع", "صبغ"]}
+{"binary_root": "طهـ", "n_members": 2, "coherence": 0.587137, "members": ["طهـطهـ", "طهـر"]}
+{"binary_root": "حف", "n_members": 6, "coherence": 0.586594, "members": ["حفف-حفحف", "حفو", "حيف", "حفد", "حفر", "حفظ"]}
+{"binary_root": "دب", "n_members": 3, "coherence": 0.586233, "members": ["دبب-دبدب", "دأب", "دبر"]}
+{"binary_root": "صخ", "n_members": 2, "coherence": 0.586172, "members": ["صخخ", "صخر"]}
+{"binary_root": "قن", "n_members": 7, "coherence": 0.585884, "members": ["قنن-قنقن", "قنو-قنى", "يقن", "قنت", "قنط", "قنطر", "قنع"]}
+{"binary_root": "ذر", "n_members": 5, "coherence": 0.585642, "members": ["ذرر-ذرذر", "ذرو/ذرى", "ذرأ", "وذر", "ذرع"]}
+{"binary_root": "فص", "n_members": 4, "coherence": 0.584758, "members": ["فصص", "فصح", "فصل", "فصم"]}
+{"binary_root": "خس", "n_members": 4, "coherence": 0.584707, "members": ["خسس", "خسأ", "خسر", "خسف"]}
+{"binary_root": "ثع", "n_members": 2, "coherence": 0.584163, "members": ["ثعع-ثعثع", "ثعب"]}
+{"binary_root": "عف", "n_members": 3, "coherence": 0.583341, "members": ["عفف-عفعف", "عفو", "عفر"]}
+{"binary_root": "رم", "n_members": 15, "coherence": 0.582393, "members": ["رمم-رمرم", "رمي", "أرم", "رمح", "رمد", "رمز", "رمض", "رمن", "رمي", "أرم", "رمح", "رمد", "رمز", "رمض", "رمن"]}
+{"binary_root": "هـر", "n_members": 4, "coherence": 0.581971, "members": ["هرر-هرهر", "هور-هير", "هرب", "هرع"]}
+{"binary_root": "حص", "n_members": 8, "coherence": 0.581847, "members": ["حصص-حصحص", "حصو-حصى", "حوص-حيص", "حصب", "حصد", "حصر", "حصل", "حصن"]}
+{"binary_root": "حز", "n_members": 4, "coherence": 0.580935, "members": ["حزز", "حوز-حيز", "حزب", "حزن"]}
+{"binary_root": "التراكيبالخائية", "n_members": 4, "coherence": 0.580422, "members": ["أخخ", "خوخ", "خوو/خوى", "أخو/أخي"]}
+{"binary_root": "قذ", "n_members": 3, "coherence": 0.578502, "members": ["قذذ", "وقذ", "قذف"]}
+{"binary_root": "مت", "n_members": 6, "coherence": 0.577552, "members": ["متت-متمت", "موت", "متو-متى", "أمت", "متع", "متن"]}
+{"binary_root": "طب", "n_members": 4, "coherence": 0.577348, "members": ["طبب-طبطب", "طيب", "طبع", "طبق"]}
+{"binary_root": "غض", "n_members": 3, "coherence": 0.576579, "members": ["غضض/غضغض", "غيض", "غضب"]}
+{"binary_root": "صي", "n_members": 2, "coherence": 0.576063, "members": ["صيص", "وصى"]}
+{"binary_root": "غم", "n_members": 4, "coherence": 0.575575, "members": ["غمم/غمغم", "غمر", "غمز", "غمض"]}
+{"binary_root": "بخ", "n_members": 4, "coherence": 0.575549, "members": ["بخخ/بخبخ", "بخس", "بخع", "بخل"]}
+{"binary_root": "عت", "n_members": 6, "coherence": 0.575501, "members": ["عتت-عتعتت", "عتو", "عتب", "عتد", "عتق", "عتل"]}
+{"binary_root": "مز", "n_members": 5, "coherence": 0.575232, "members": ["مزز-مزمز", "ميز", "مزج", "مزق", "مزن"]}
+{"binary_root": "هـج", "n_members": 6, "coherence": 0.575171, "members": ["هجج-هجهج", "هيج", "وهج", "هجد", "هجر", "هجع"]}
+{"binary_root": "خل", "n_members": 10, "coherence": 0.574662, "members": ["خلل/خلخل", "خلو/خلى", "خول", "خيل", "خلد", "خلص", "خلط", "خلع", "خلف", "خلق"]}
+{"binary_root": "حت", "n_members": 3, "coherence": 0.574384, "members": ["حتت-حتحت", "حوت", "حتم"]}
+{"binary_root": "ضن", "n_members": 4, "coherence": 0.573037, "members": ["ضنن", "وضن", "ضأن", "ضنك"]}
+{"binary_root": "كس", "n_members": 7, "coherence": 0.572891, "members": ["كسس", "كسو", "كأس", "كسب", "كسد", "كسف", "كسل"]}
+{"binary_root": "سح", "n_members": 7, "coherence": 0.572614, "members": ["سحح-سحسح", "سيح", "سحب", "سحت", "سحر", "سحق", "سحل"]}
+{"binary_root": "فم", "n_members": 2, "coherence": 0.572394, "members": ["فمم", "فوم"]}
+{"binary_root": "رح", "n_members": 6, "coherence": 0.572372, "members": ["رحح-رحرح", "روح-ريح", "رحب", "رحق", "رحل", "رحم"]}
+{"binary_root": "هـز", "n_members": 4, "coherence": 0.571728, "members": ["هزز-هزهز", "هزأ", "هزل", "هزم"]}
+{"binary_root": "قم", "n_members": 9, "coherence": 0.57084, "members": ["قمم-قمقم", "قوم", "قمح", "قمر", "قمص", "قمط", "قمطر", "قمع", "قمل"]}
+{"binary_root": "شط", "n_members": 4, "coherence": 0.570721, "members": ["شطط", "شطأ", "شطر", "شطن"]}
+{"binary_root": "رهـ", "n_members": 12, "coherence": 0.570141, "members": ["رهره", "رهو", "رهب", "رهط", "رهق", "رهن", "رهره", "رهو", "رهب", "رهط", "رهق", "رهن"]}
+{"binary_root": "نس", "n_members": 10, "coherence": 0.56901, "members": ["نسس-نسنس", "نسو-نسى", "نسأ", "أنس", "نسب", "نسخ", "نسر", "نسف", "نسك", "نسل"]}
+{"binary_root": "طر", "n_members": 9, "coherence": 0.568957, "members": ["طرر-طرطر", "طرو-طرى-طرأ", "طور", "طير", "وطر", "طرح", "طرد", "طرف", "طرق"]}
+{"binary_root": "نج", "n_members": 5, "coherence": 0.568084, "members": ["نجج-نجنج", "نجو", "نجد", "نجس", "نجم"]}
+{"binary_root": "دهـ", "n_members": 6, "coherence": 0.56751, "members": ["دهده", "دهى", "دهر", "دهق-دهدق", "دهم", "دهن"]}
+{"binary_root": "نش", "n_members": 6, "coherence": 0.567378, "members": ["نشش-نشنش", "نشأ", "نوش", "نشر", "نشز", "نشط"]}
+{"binary_root": "مل", "n_members": 9, "coherence": 0.567335, "members": ["ملل-ململ", "ملو", "مول", "ميل", "ملأ", "أمل", "ملح", "ملق", "ملك"]}
+{"binary_root": "كث", "n_members": 3, "coherence": 0.567271, "members": ["كثث-كثكث", "كثب", "كثر"]}
+{"binary_root": "جهـ", "n_members": 7, "coherence": 0.566315, "members": ["جهه-جهجه", "وجه", "جهد", "جهر", "جهز", "جهل", "جهنم"]}
+{"binary_root": "عض", "n_members": 4, "coherence": 0.566118, "members": ["عضض", "عضو", "عضد", "عضل"]}
+{"binary_root": "صم", "n_members": 5, "coherence": 0.565863, "members": ["صمم-صمصم", "صوم", "صمت", "صمد", "صمع"]}
+{"binary_root": "خف", "n_members": 5, "coherence": 0.565633, "members": ["خفف", "خفو/خفي", "خوف/خيف", "خفت", "خفض"]}
+{"binary_root": "سف", "n_members": 10, "coherence": 0.565523, "members": ["سفف-سفسف", "سوف", "أسف", "سفح", "سفر", "سفع", "سفك", "سفل", "سفن", "سفه"]}
+{"binary_root": "حس", "n_members": 6, "coherence": 0.565359, "members": ["حسس-حسحس", "حسب", "حسد", "حسر", "حسم", "حسن"]}
+{"binary_root": "بن", "n_members": 6, "coherence": 0.564914, "members": ["بلد", "بلس", "بلع", "بلغ", "بنن/بنبن", "بنو/بني"]}
+{"binary_root": "شم", "n_members": 7, "coherence": 0.563609, "members": ["شمم", "شأم", "شمت", "شمخ", "شمز-شمأز", "شمس", "شمل"]}
+{"binary_root": "ود", "n_members": 3, "coherence": 0.563547, "members": ["ودد", "أدد", "ودى"]}
+{"binary_root": "طم", "n_members": 5, "coherence": 0.562972, "members": ["طمم-طمطم", "طمث", "طمس", "طمع", "طمن-طمأن"]}
+{"binary_root": "نف", "n_members": 14, "coherence": 0.56263, "members": ["نفف-نفنف", "نفي", "أنف", "نفث", "نفح", "نفخ", "نفد", "نفذ", "نفر", "نفس", "نفش", "نفع", "نفق", "نفل"]}
+{"binary_root": "زل", "n_members": 6, "coherence": 0.562089, "members": ["زلل-زلزل", "زول", "زيل", "زلف", "زلق", "زلم"]}
+{"binary_root": "ذب", "n_members": 3, "coherence": 0.561948, "members": ["ذبب/ذبذب", "ذأب", "ذبح"]}
+{"binary_root": "خن", "n_members": 6, "coherence": 0.561884, "members": ["خنن/خنخن", "خون", "خنز", "خنزر", "خنس", "خنق"]}
+{"binary_root": "خت", "n_members": 3, "coherence": 0.559845, "members": ["ختت", "ختر", "ختم"]}
+{"binary_root": "جس", "n_members": 5, "coherence": 0.559742, "members": ["جسس", "جوس", "وجس", "جسد", "جسم"]}
+{"binary_root": "نم", "n_members": 6, "coherence": 0.559632, "members": ["نمم-نمنم", "نوم", "أنم", "نمر", "نمرق", "نمل"]}
+{"binary_root": "دث", "n_members": 2, "coherence": 0.55956, "members": ["دثث", "دثر"]}
+{"binary_root": "قد", "n_members": 7, "coherence": 0.559538, "members": ["قدد", "قدو-قدى", "وقد", "قدح", "قدر", "قدس", "قدم"]}
+{"binary_root": "نق", "n_members": 9, "coherence": 0.559398, "members": ["نقق-نقنق", "نوق", "نقب", "نقذ", "نقر", "نقص", "نقض", "نقع", "نقم"]}
+{"binary_root": "زر", "n_members": 8, "coherence": 0.559364, "members": ["زرر-زرزر", "زري", "زور", "وزر", "أزر", "زرب", "زرع", "زرق"]}
+{"binary_root": "ثن", "n_members": 3, "coherence": 0.558327, "members": ["ثنن", "ثنى", "وثن"]}
+{"binary_root": "قض", "n_members": 4, "coherence": 0.558098, "members": ["قضض-قضقض", "قضى", "قيض", "قضب"]}
+{"binary_root": "سع", "n_members": 6, "coherence": 0.557979, "members": ["سعع-سعسع", "سعو-سعى", "سوع/سعي", "وسع", "سعد", "سعر"]}
+{"binary_root": "ذك", "n_members": 3, "coherence": 0.557548, "members": ["ذكذك", "ذكو", "ذكر"]}
+{"binary_root": "قر", "n_members": 14, "coherence": 0.557508, "members": ["قرر-قرقر", "قري", "قرأ", "وقر", "قرب", "قرح", "قرد", "قرش", "قرض", "قرط", "قرطس", "قرع", "قرف", "قرن"]}
+{"binary_root": "فط", "n_members": 3, "coherence": 0.5554, "members": ["فطط-فطفط", "فطر", "فظظ"]}
+{"binary_root": "بج", "n_members": 2, "coherence": 0.55536, "members": ["بجج/بجبج", "بجس"]}
+{"binary_root": "ثل", "n_members": 3, "coherence": 0.55497, "members": ["ثلل-ثلثل", "أثل", "ثلث"]}
+{"binary_root": "خد", "n_members": 3, "coherence": 0.554161, "members": ["خدد", "خدع", "خدن"]}
+{"binary_root": "حد", "n_members": 7, "coherence": 0.554104, "members": ["حدد", "حيد", "وحد", "أحد", "حدب", "حدث", "حدق"]}
+{"binary_root": "كب", "n_members": 5, "coherence": 0.554016, "members": ["كبب-كبكب", "كوب", "كبت", "كبد", "كبر"]}
+{"binary_root": "لج", "n_members": 3, "coherence": 0.553804, "members": ["لجج-لجلج", "لجأ", "ولج"]}
+{"binary_root": "عق", "n_members": 7, "coherence": 0.553186, "members": ["عقق", "عوق", "عقب", "عقد", "عقر", "عقل", "عقم"]}
+{"binary_root": "شغ", "n_members": 3, "coherence": 0.553082, "members": ["شغشغ", "شغف", "شغل"]}
+{"binary_root": "صغ", "n_members": 3, "coherence": 0.552693, "members": ["صغصغ", "صغو-صغى", "صغر"]}
+{"binary_root": "هـت", "n_members": 3, "coherence": 0.55237, "members": ["هتت-هتهت", "هتو", "هوت-هيت"]}
+{"binary_root": "تهـ", "n_members": 2, "coherence": 0.552186, "members": ["تهـتهـ", "تيهـ/توهـ"]}
+{"binary_root": "فق", "n_members": 8, "coherence": 0.551474, "members": ["فقق-فقفق", "فوق", "وفق", "أفق", "فقد", "فقر", "فقع", "فقهـ"]}
+{"binary_root": "بك", "n_members": 4, "coherence": 0.550394, "members": ["بكك/بكبك", "بكى", "بكر", "بكم"]}
+{"binary_root": "سهـ", "n_members": 4, "coherence": 0.550283, "members": ["سهـو", "سهـر", "سهـل", "سهـم"]}
+{"binary_root": "خر", "n_members": 11, "coherence": 0.549143, "members": ["خرر/خرخر", "خور/خير", "أخر", "خرب", "خرج", "خرد", "خردل", "خرص", "خرط", "خرطم", "خرق"]}
+{"binary_root": "خط", "n_members": 6, "coherence": 0.548986, "members": ["خطط", "خطو", "خيط", "خطأ", "خطب", "خطف"]}
+{"binary_root": "لك", "n_members": 2, "coherence": 0.548934, "members": ["لكك-لكلك", "ألك"]}
+{"binary_root": "عر", "n_members": 12, "coherence": 0.547539, "members": ["عرر-عرعر", "عرو", "عرى", "عور", "عير", "عرب", "عرج", "عرجن", "عرش", "عرض", "عرف", "عرم"]}
+{"binary_root": "عs", "n_members": 3, "coherence": 0.547402, "members": ["عسو-عسي", "عسر", "عسل"]}
+{"binary_root": "رض", "n_members": 5, "coherence": 0.546874, "members": ["رضض-رضرض", "رضو-رضى", "روض-ريض", "أرض", "رضع"]}
+{"binary_root": "حذ", "n_members": 3, "coherence": 0.545881, "members": ["حذذ-حذحذ", "حوذ", "حذر"]}
+{"binary_root": "سم", "n_members": 10, "coherence": 0.545311, "members": ["سمم-سمسم", "سمو", "سوم", "وسم", "سأم", "سمد", "سمر", "سمع", "سمك", "سمن"]}
+{"binary_root": "بر", "n_members": 16, "coherence": 0.54522, "members": ["برر", "برو/برى", "برأ", "بور", "بأر", "وبر", "برج", "برح", "برد", "برز", "برزخ", "برص", "برق", "برك", "برم", "بره/برهن"]}
+{"binary_root": "سق", "n_members": 8, "coherence": 0.542934, "members": ["سقق-سقسق", "سقى", "سوق", "وسق", "سقر", "سقط", "سقف", "سقم"]}
+{"binary_root": "شد", "n_members": 2, "coherence": 0.542286, "members": ["شدد", "شيد"]}
+{"binary_root": "خص", "n_members": 3, "coherence": 0.542219, "members": ["خصص", "خصف", "خصم"]}
+{"binary_root": "رق", "n_members": 6, "coherence": 0.541859, "members": ["رقق-رقرق", "رقو-رقى", "ورق", "رقب", "رقد", "رقم"]}
+{"binary_root": "طل", "n_members": 6, "coherence": 0.541589, "members": ["طلل-طلطل", "طول", "طلب", "طلح", "طلع", "طلق"]}
+{"binary_root": "زك", "n_members": 3, "coherence": 0.541058, "members": ["زكك-زكزك", "زكو", "زكر"]}
+{"binary_root": "كد", "n_members": 7, "coherence": 0.540974, "members": ["كدد-كدكد", "كدى", "كود", "كيد", "وكد", "كدح", "كدر"]}
+{"binary_root": "زخ", "n_members": 3, "coherence": 0.540712, "members": ["زخخ-زخزخ", "زخر", "زخرف"]}
+{"binary_root": "عد", "n_members": 7, "coherence": 0.540688, "members": ["عدد", "عدو", "عود-عيد", "وعد", "عدس", "عدل", "عدن"]}
+{"binary_root": "شر", "n_members": 13, "coherence": 0.539926, "members": ["شرر-شرشر", "شرى", "شور", "أشر", "شرب", "شرح", "شرد", "شرذ", "شرذم", "شرط", "شرع", "شرق", "شرك"]}
+{"binary_root": "شهـ", "n_members": 5, "coherence": 0.539298, "members": ["شهو-شهي", "شهب", "شهد", "شهر", "شهق"]}
+{"binary_root": "عذ", "n_members": 3, "coherence": 0.539272, "members": ["عوذ", "عذب", "عذر"]}
+{"binary_root": "نذ", "n_members": 2, "coherence": 0.538459, "members": ["نذذ", "نذر"]}
+{"binary_root": "عم", "n_members": 9, "coherence": 0.537971, "members": ["علن", "عمم", "عمي", "عوم", "عمد", "عمر", "عمق", "عمل", "عمه"]}
+{"binary_root": "فر", "n_members": 17, "coherence": 0.537938, "members": ["فرر-فرفر", "فرى", "فور", "وفر", "فرت", "فرث", "فرج", "فرح", "فرد", "فردوس", "فرش", "فرض", "فرط", "فرع", "فرغ", "فرق", "فرهـ"]}
+{"binary_root": "ذن", "n_members": 3, "coherence": 0.537782, "members": ["ذنن", "أذن", "ذنب"]}
+{"binary_root": "بص", "n_members": 3, "coherence": 0.537093, "members": ["بصص/بصبص", "بصر", "بصل"]}
+{"binary_root": "قع", "n_members": 5, "coherence": 0.536953, "members": ["قعع-قعقع", "قوع", "وقع", "قعد", "قعر"]}
+{"binary_root": "رد", "n_members": 9, "coherence": 0.536796, "members": ["ردد", "ردى", "رود", "ريد", "ردأ", "رأد", "ورد", "ردف", "ردم"]}
+{"binary_root": "فن", "n_members": 3, "coherence": 0.53669, "members": ["فنن-فنفن", "فنى", "فند"]}
+{"binary_root": "خش", "n_members": 4, "coherence": 0.536592, "members": ["خشش/خشخش", "خشو/خشى", "خشب", "خشع"]}
+{"binary_root": "فك", "n_members": 4, "coherence": 0.535914, "members": ["فكك", "أفك", "فكر", "فكهـ"]}
+{"binary_root": "شع", "n_members": 5, "coherence": 0.535499, "members": ["شعع-شعشع", "شوع-شيع", "شعب", "شعر", "شعل"]}
+{"binary_root": "نص", "n_members": 8, "coherence": 0.535168, "members": ["نصص-نصنص", "نصو", "نيص-نوص", "نصب", "نصت", "نصح", "نصر", "نصف"]}
+{"binary_root": "در", "n_members": 9, "coherence": 0.535121, "members": ["درر-دردر", "درى", "دور-دير", "درأ", "درج", "درس", "درك", "دره", "درهم"]}
+{"binary_root": "ذق", "n_members": 3, "coherence": 0.535101, "members": ["ذقذق", "ذوق", "ذقن"]}
+{"binary_root": "فد", "n_members": 4, "coherence": 0.53505, "members": ["فدد-فدفد", "فدى", "وفد", "فأد"]}
+{"binary_root": "مك", "n_members": 5, "coherence": 0.534374, "members": ["مكك-مكمك", "مكو", "مكث", "مكر", "مكن"]}
+{"binary_root": "ضب", "n_members": 2, "coherence": 0.534149, "members": ["ضبب", "ضبح"]}
+{"binary_root": "مر", "n_members": 11, "coherence": 0.533665, "members": ["مرر-مرمر", "مرو", "مرى", "مور", "مير", "مرأ", "أمر", "مرج", "مرح", "مرد", "مرض"]}
+{"binary_root": "صد", "n_members": 8, "coherence": 0.533056, "members": ["صدد-صدى", "صيد", "وصد", "أصد", "صدر", "صدع", "صدف", "صدق"]}
+{"binary_root": "غف", "n_members": 3, "coherence": 0.532228, "members": ["غفف", "غفر", "غفل"]}
+{"binary_root": "بس", "n_members": 8, "coherence": 0.532028, "members": ["بسس/بسبس", "يبس", "بأس", "بسر", "بسط", "بسق", "بسل", "بسم"]}
+{"binary_root": "كأ", "n_members": 4, "coherence": 0.531871, "members": ["كأكأ", "كوو-كوى-كى", "وكأ", "أيك"]}
+{"binary_root": "هـش", "n_members": 2, "coherence": 0.531666, "members": ["هشش", "هشم"]}
+{"binary_root": "كت", "n_members": 3, "coherence": 0.531112, "members": ["كتت-كتكت", "كتب", "كتم"]}
+{"binary_root": "ضر", "n_members": 4, "coherence": 0.530636, "members": ["ضرر", "ضور/ضير", "ضرب", "ضرع"]}
+{"binary_root": "شن", "n_members": 3, "coherence": 0.530111, "members": ["شنن-شنشن", "شنأ", "شأن"]}
+{"binary_root": "سب", "n_members": 10, "coherence": 0.529584, "members": ["سبب-سبسب", "سيب", "سبأ", "سبت", "سبح", "سبط", "سبع", "سبغ", "سبق", "سبل-سنبل"]}
+{"binary_root": "جم", "n_members": 5, "coherence": 0.529054, "members": ["جمم-جمجم", "جمح", "جمد", "جمع", "جمل"]}
+{"binary_root": "هـم", "n_members": 7, "coherence": 0.528952, "members": ["همم-همهم", "هيم", "همد", "همر", "همز", "همس", "همن"]}
+{"binary_root": "لم", "n_members": 6, "coherence": 0.528894, "members": ["لمم-لملم-لم-لما", "لوم", "ألم", "لمح", "لمز", "لمس"]}
+{"binary_root": "نط", "n_members": 4, "coherence": 0.528459, "members": ["نطط-نطنط", "نطح", "نطف", "نطق"]}
+{"binary_root": "سل", "n_members": 14, "coherence": 0.527988, "members": ["سلل-سلسل-سلسبيل", "سلو/سلي", "سول", "سيل", "وسل", "سأل", "سلب", "سلح", "سلخ", "سلط", "سلف", "سلق", "سلك", "سلم"]}
+{"binary_root": "حن", "n_members": 8, "coherence": 0.527912, "members": ["حنن-حنحن", "حين", "حنث", "حنج", "حنجر", "حنذ", "حنف", "حنك"]}
+{"binary_root": "فز", "n_members": 3, "coherence": 0.527786, "members": ["فزز-فزفز", "فوز", "فزع"]}
+{"binary_root": "تن", "n_members": 4, "coherence": 0.527593, "members": ["تنن-تنتن", "تين", "وتن", "تنر"]}
+{"binary_root": "غط", "n_members": 4, "coherence": 0.527439, "members": ["غطط", "غطو/غطى", "غوط", "غطش"]}
+{"binary_root": "عب", "n_members": 9, "coherence": 0.526776, "members": ["عبب-عبعب", "عبأ", "عيب", "عبث", "عبد", "عبر", "عبس", "عبق", "عبقر"]}
+{"binary_root": "سك", "n_members": 5, "coherence": 0.526292, "members": ["سكك", "سكب", "سكت", "سكر", "سكن"]}
+{"binary_root": "غل", "n_members": 9, "coherence": 0.526245, "members": ["غلل/غلغل", "غلو", "غلى", "غول", "غلب", "غلظ", "غلف", "غلق", "غلم"]}
+{"binary_root": "رك", "n_members": 10, "coherence": 0.52622, "members": ["ركك-ركرك", "أرك", "ركب", "ركد", "ركز", "ركس", "ركض", "ركع", "ركم", "ركن"]}
+{"binary_root": "زف", "n_members": 3, "coherence": 0.525349, "members": ["زفف-زفزف", "أزف", "زفر"]}
+{"binary_root": "نض", "n_members": 5, "coherence": 0.525282, "members": ["نضض-نضنض", "نضج", "نضخ", "نضد", "نضر"]}
+{"binary_root": "عز", "n_members": 6, "coherence": 0.524936, "members": ["عزز", "عزو-عزي", "عزب", "عزر", "عزل", "عزم"]}
+{"binary_root": "سج", "n_members": 6, "coherence": 0.524868, "members": ["سجج-سجسج", "سجو", "سجد", "سجر", "سجل", "سجن"]}
+{"binary_root": "كف", "n_members": 7, "coherence": 0.524163, "members": ["كفف-كفكف", "كفى", "كفأ-كفو", "كوف-كيف", "كفت", "كفر", "كفل"]}
+{"binary_root": "رص", "n_members": 2, "coherence": 0.523986, "members": ["رصص-رصرص", "رصد"]}
+{"binary_root": "صر", "n_members": 9, "coherence": 0.523826, "members": ["صرر", "صور", "صير", "أصر", "صرح", "صرخ", "صرع", "صرف", "صرم"]}
+{"binary_root": "خز", "n_members": 3, "coherence": 0.523769, "members": ["خزز", "خزو/خزى", "خزن"]}
+{"binary_root": "رب", "n_members": 9, "coherence": 0.523231, "members": ["ربب-ربرب", "ربو-ربى", "روب", "ريب", "أرب", "ربح", "ربص", "ربط", "ربع"]}
+{"binary_root": "طو", "n_members": 2, "coherence": 0.522869, "members": ["طوى", "وطأ"]}
+{"binary_root": "فع", "n_members": 2, "coherence": 0.5225, "members": ["فعفع", "فعل"]}
+{"binary_root": "رغ", "n_members": 5, "coherence": 0.522404, "members": ["رغغ-رغرغ", "روغ-ريغ", "رغب", "رغد", "رغم"]}
+{"binary_root": "بذ", "n_members": 2, "coherence": 0.521495, "members": ["بذذ", "بذر"]}
+{"binary_root": "مخ", "n_members": 3, "coherence": 0.521301, "members": ["مخخ", "مخر", "مخض"]}
+{"binary_root": "نب", "n_members": 9, "coherence": 0.520779, "members": ["نبب-نبنب", "نبو", "نبأ", "نوب", "نبت", "نبذ", "نبط", "نبز", "نبع"]}
+{"binary_root": "فت", "n_members": 9, "coherence": 0.520638, "members": ["فتت-فتفت", "فتو-فتى", "فتأ", "فوت", "فتح", "فتر", "فتق", "فتل", "فتن"]}
+{"binary_root": "غر", "n_members": 8, "coherence": 0.520342, "members": ["غرر/غرغر", "غرو/غرى", "غور", "غير", "غرب", "غرف", "غرق", "غرم"]}
+{"binary_root": "حض", "n_members": 3, "coherence": 0.519766, "members": ["حضض", "حيض", "حضر"]}
+{"binary_root": "دخ", "n_members": 4, "coherence": 0.519181, "members": ["دخخ-دخدخ", "دخر", "دخل", "دخن"]}
+{"binary_root": "ضح", "n_members": 3, "coherence": 0.518987, "members": ["ضحح/ضحضح", "ضحو/ضحى", "ضحك"]}
+{"binary_root": "رف", "n_members": 7, "coherence": 0.518138, "members": ["رفف-رفرف", "رأف", "رفت", "رفث", "رفد", "رفع", "رفق"]}
+{"binary_root": "صت", "n_members": 2, "coherence": 0.517302, "members": ["صتت", "صوت"]}
+{"binary_root": "حر", "n_members": 15, "coherence": 0.51714, "members": ["حرر-حرحر", "حرو-حرى", "حور", "حير", "حرب", "حرث", "حرج", "حرد", "حرس", "حرص", "حرض", "حرف", "حرق", "حرك", "حرم"]}
+{"binary_root": "بع", "n_members": 8, "coherence": 0.516291, "members": ["بعع/بعبع", "بيع", "بعث", "بعثر", "بعد", "بعر", "بعض", "بعل"]}
+{"binary_root": "دف", "n_members": 4, "coherence": 0.516055, "members": ["دفف-دفدف", "دفأ", "دفع", "دفق"]}
+{"binary_root": "نح", "n_members": 6, "coherence": 0.515564, "members": ["نحح", "نحب", "نحت", "نحر", "نحس", "نحل"]}
+{"binary_root": "كذ", "n_members": 2, "coherence": 0.515015, "members": ["كذذ", "كذب"]}
+{"binary_root": "لد", "n_members": 4, "coherence": 0.514995, "members": ["لدد", "لدى", "ولد", "لدن"]}
+{"binary_root": "ضم", "n_members": 2, "coherence": 0.514842, "members": ["ضمم/ضمضم", "ضمر"]}
+{"binary_root": "عظ", "n_members": 3, "coherence": 0.514676, "members": ["عظظ-عظعظ", "وعظ", "عظم"]}
+{"binary_root": "رش", "n_members": 3, "coherence": 0.514553, "members": ["رشش-رشرش", "ريش", "رشد"]}
+{"binary_root": "سر", "n_members": 18, "coherence": 0.51388, "members": ["سرر-سرسر", "سرو-سرى", "سور", "سير", "يسر", "أسر", "سرب", "سربل", "سرج", "سرح", "سرد", "سردق", "سرط", "سرع", "سرف", "سرق", "سرم", "سرمد"]}
+{"binary_root": "نع", "n_members": 7, "coherence": 0.513315, "members": ["نعع-نعنع", "ينع", "نعج", "نعس", "نعق", "نعل", "نعم"]}
+{"binary_root": "بض", "n_members": 3, "coherence": 0.512525, "members": ["بضض", "بيض", "بضع"]}
+{"binary_root": "مع", "n_members": 4, "coherence": 0.512478, "members": ["معع-معمع", "معى", "معز", "معن"]}
+{"binary_root": "نغ", "n_members": 2, "coherence": 0.512412, "members": ["نغنغ", "نغض"]}
+{"binary_root": "صع", "n_members": 5, "coherence": 0.512183, "members": ["صعع-صعصع", "صوع-صيع", "صعد", "صعق", "صعر"]}
+{"binary_root": "مش", "n_members": 3, "coherence": 0.51207, "members": ["مشش-مشمش", "مشى", "مشج"]}
+{"binary_root": "مهـ", "n_members": 5, "coherence": 0.511658, "members": ["مهـهـ-مهمه", "موهـ-ميه", "مهـد", "مهـل", "مهـن"]}
+{"binary_root": "زق", "n_members": 2, "coherence": 0.511496, "members": ["زقق-زقزق", "زقم"]}
+{"binary_root": "فج", "n_members": 4, "coherence": 0.511227, "members": ["فجج-فجفج", "فجو", "فوج-فيج", "فجر"]}
+{"binary_root": "حم", "n_members": 6, "coherence": 0.51065, "members": ["حمم-حمحم", "حمو-حمى", "حمأ", "حمد", "حمر", "حمل"]}
+{"binary_root": "بد", "n_members": 9, "coherence": 0.510098, "members": ["بدد/بدبد", "بدو", "بيد", "بدأ", "أبد", "بدر", "بدع", "بدل/بأدل", "بدن"]}
+{"binary_root": "أس", "n_members": 2, "coherence": 0.509986, "members": ["أسو", "يأس"]}
+{"binary_root": "بغ", "n_members": 5, "coherence": 0.5098, "members": ["بغغ/بغبغ", "بغو/بغى", "بغت", "بغض", "بغل"]}
+{"binary_root": "جد", "n_members": 6, "coherence": 0.508971, "members": ["جدد-جدجد", "جود-جيد", "وجد", "جدث", "جدر", "جدل"]}
+{"binary_root": "شخ", "n_members": 3, "coherence": 0.50871, "members": ["شخخ", "شيخ", "شخص"]}
+{"binary_root": "تل", "n_members": 2, "coherence": 0.507991, "members": ["تلل-تلتل", "تلو-تلي"]}
+{"binary_root": "عن", "n_members": 10, "coherence": 0.507025, "members": ["عنن-عن", "عنو-عني", "عون", "عين", "عنب", "عنت", "عند", "عنق", "عنك", "عنكبوت"]}
+{"binary_root": "سن", "n_members": 11, "coherence": 0.506471, "members": ["سنن-سنسن", "سنو-سنى", "سين", "وسن", "أسن", "سنب", "سنبل", "سند", "سندس", "سنم", "سنهـ"]}
+{"binary_root": "أج", "n_members": 3, "coherence": 0.506409, "members": ["أجج", "جوو-جوى", "جيأ"]}
+{"binary_root": "جح", "n_members": 3, "coherence": 0.505079, "members": ["جحح-جحجح", "جحد", "جحم"]}
+{"binary_root": "فهـ", "n_members": 3, "coherence": 0.504988, "members": ["فوهـ", "فهه-فهفه", "فهم"]}
+{"binary_root": "كع", "n_members": 2, "coherence": 0.504772, "members": ["كعع-كعكع", "كعب"]}
+{"binary_root": "نك", "n_members": 9, "coherence": 0.504591, "members": ["نكب", "نكث", "نكح", "نكد", "نكر", "نكس", "نكص", "نكف", "نكل"]}
+{"binary_root": "غز", "n_members": 3, "coherence": 0.503739, "members": ["غزز/غزغز", "غزو", "غزل"]}
+{"binary_root": "حب", "n_members": 7, "coherence": 0.503561, "members": ["حبب-حبحب", "حوب", "حبر", "حبس", "حبط", "حبك", "حبل"]}
+{"binary_root": "طع", "n_members": 4, "coherence": 0.502906, "members": ["طعع-طعطع", "طوع-طيع", "طعم", "طعن"]}
+{"binary_root": "كل", "n_members": 10, "coherence": 0.502557, "members": ["كلل-كلكل", "كلو", "كلأ", "كيل", "وكل", "أكل", "كلب", "كلح", "كلف", "كلم"]}
+{"binary_root": "خب", "n_members": 9, "coherence": 0.502031, "members": ["خبب/خبخب", "خبو", "خبأ", "خبت", "خبث", "خبر", "خبز", "خبط", "خبل"]}
+{"binary_root": "رج", "n_members": 9, "coherence": 0.501816, "members": ["رجج-رجرج", "رجو", "رجأ", "رجز", "رجس", "رجع", "رجف", "رجل", "رجم"]}
+{"binary_root": "ثق", "n_members": 5, "coherence": 0.501586, "members": ["ثقق-ثقثق", "وثق", "ثقب", "ثقف", "ثقل"]}
+{"binary_root": "صف", "n_members": 9, "coherence": 0.501525, "members": ["صفف-صفصف", "صفو", "صوف", "صيف", "وصف", "صفح", "صفد", "صفر", "صفن"]}
+{"binary_root": "تب", "n_members": 5, "coherence": 0.501197, "members": ["تبب-تبتب", "توب", "تبت", "تبر", "تبع"]}
+{"binary_root": "زهـ", "n_members": 5, "coherence": 0.501011, "members": ["زهزه", "زهو-زهي", "زهد", "زهر", "زهق"]}
+{"binary_root": "قب", "n_members": 8, "coherence": 0.500825, "members": ["قبب-قبقب", "قوب", "وقب", "قبح", "قبر", "قبس", "قبض", "قبل"]}
+{"binary_root": "مس", "n_members": 7, "coherence": 0.500654, "members": ["مسس-مسمس", "مسو-مسى", "أمس", "مسح", "مسخ", "مسد", "مسك"]}
+{"binary_root": "بهـ", "n_members": 5, "coherence": 0.500573, "members": ["بهـهـ/بهـبهـ", "بهـت", "بهـج", "بهـل", "بهـم"]}
+{"binary_root": "حج", "n_members": 5, "coherence": 0.500515, "members": ["حجج-حجحج", "حوج-حيج", "حجب", "حجر", "حجز"]}
+{"binary_root": "خم", "n_members": 7, "coherence": 0.500411, "members": ["خمم/خمخم", "خيم", "خمد", "خمر", "خمس", "خمص", "خمط"]}
+{"binary_root": "شف", "n_members": 5, "coherence": 0.500173, "members": ["شفف-شفشف", "شفو-شفي", "شفع", "شفق", "شفه"]}
+{"binary_root": "له", "n_members": 6, "coherence": 0.50017, "members": ["لهله", "لهو-لهى", "أله", "لهب", "لهث", "لهم"]}
+{"binary_root": "حل", "n_members": 7, "coherence": 0.499846, "members": ["حلل-حلحل", "حلو-حلى", "حول", "حلف", "حلق", "حلقم", "حلم"]}
+{"binary_root": "هـن", "n_members": 5, "coherence": 0.498873, "members": ["هنن", "هنو-هنى", "هون-هين", "وهن", "هنأ"]}
+{"binary_root": "لح", "n_members": 8, "coherence": 0.498472, "members": ["لحح-لحلح", "لحى", "لوح", "لحد", "لحف", "لحق", "لحن", "لحم"]}
+{"binary_root": "خض", "n_members": 5, "coherence": 0.49646, "members": ["خضض/خضخض", "خوض", "خضد", "خضر", "خضع"]}
+{"binary_root": "فش", "n_members": 2, "coherence": 0.496218, "members": ["فشش", "فشل"]}
+{"binary_root": "لت", "n_members": 3, "coherence": 0.496127, "members": ["لتت", "لوت-ليت", "ألت-ولت"]}
+{"binary_root": "بق", "n_members": 7, "coherence": 0.495921, "members": ["بقق/بقبق", "بقو/بقى", "وبق", "أبق", "بقر", "بقع", "بقل"]}
+{"binary_root": "هـ", "n_members": 7, "coherence": 0.495654, "members": ["ههه", "هوه-هيه", "هو-هي", "وهى", "هوو-هوى", "هوا-هيأ", "أوه"]}
+{"binary_root": "بب", "n_members": 2, "coherence": 0.495518, "members": ["بوب", "بيب"]}
+{"binary_root": "هـط", "n_members": 2, "coherence": 0.495371, "members": ["هطط-هطهط", "هطع"]}
+{"binary_root": "نخ", "n_members": 3, "coherence": 0.495182, "members": ["نخخ-نخنخ", "نخر", "نخل"]}
+{"binary_root": "حط", "n_members": 4, "coherence": 0.493786, "members": ["حطط-حطحط", "حوط", "حطب", "حطم"]}
+{"binary_root": "طف", "n_members": 5, "coherence": 0.493723, "members": ["طفف-طفطف", "طوف-طيف", "طفأ", "طفق", "طفل"]}
+{"binary_root": "سخ", "n_members": 3, "coherence": 0.493586, "members": ["سخخ", "سخر", "سخط"]}
+{"binary_root": "من", "n_members": 5, "coherence": 0.492939, "members": ["منن", "منو-منى", "أمن", "يمن", "منع"]}
+{"binary_root": "صن", "n_members": 4, "coherence": 0.492785, "members": ["صنن", "صنو", "صنع", "صنم"]}
+{"binary_root": "نث", "n_members": 3, "coherence": 0.49258, "members": ["نثث-نثنث", "نثر", "أنث"]}
+{"binary_root": "قو", "n_members": 2, "coherence": 0.492254, "members": ["قوو", "وقي"]}
+{"binary_root": "غن", "n_members": 3, "coherence": 0.490028, "members": ["غنن", "غنى", "غنم"]}
+{"binary_root": "عج", "n_members": 7, "coherence": 0.489258, "members": ["عجج-عجعج", "عوج-عيج", "عجب", "عجز", "عجف", "عجل", "عجم"]}
+{"binary_root": "أث", "n_members": 2, "coherence": 0.489103, "members": ["أثث", "ثوى"]}
+{"binary_root": "كظ", "n_members": 2, "coherence": 0.489096, "members": ["كظظ", "كظم"]}
+{"binary_root": "حش", "n_members": 4, "coherence": 0.489089, "members": ["حشش-حشحش", "حوش", "وحش", "حشر"]}
+{"binary_root": "دم", "n_members": 7, "coherence": 0.488605, "members": ["دمم-دمدم", "دمى-دمو", "دوم-ديم", "أدم", "دمر", "دمع", "دمغ"]}
+{"binary_root": "زم", "n_members": 5, "coherence": 0.488213, "members": ["زمم-زمزم", "زمر", "زمل", "زمه", "زمهرير"]}
+{"binary_root": "جذ", "n_members": 3, "coherence": 0.48774, "members": ["جذذ", "جذو-جذى", "جذع"]}
+{"binary_root": "كن", "n_members": 6, "coherence": 0.487727, "members": ["كنن", "كون", "كين", "كند", "كنز", "كنس"]}
+{"binary_root": "دع", "n_members": 3, "coherence": 0.48733, "members": ["دعع-دعدع", "دعو", "ودع"]}
+{"binary_root": "ثر", "n_members": 5, "coherence": 0.486424, "members": ["ثرر-ثرثر", "ثرى", "ثور", "أثر", "ثرب"]}
+{"binary_root": "قت", "n_members": 6, "coherence": 0.486405, "members": ["قتت", "قوت", "وقت", "يقت", "قتر", "قتل"]}
+{"binary_root": "هـل", "n_members": 5, "coherence": 0.486389, "members": ["هلل-هلهل", "هيل", "أهل", "هلع", "هلك"]}
+{"binary_root": "دن", "n_members": 5, "coherence": 0.485722, "members": ["دنن-دندن", "دنو", "دون", "دين", "دنر"]}
+{"binary_root": "جل", "n_members": 7, "coherence": 0.485536, "members": ["جلل-جلجل", "جلو-جلى", "وجل", "أجل", "جلب", "جلد", "جلس"]}
+{"binary_root": "زن", "n_members": 7, "coherence": 0.4853, "members": ["زنن", "زني", "زين", "وزن", "زنج", "زنجبيل", "زنم"]}
+{"binary_root": "لس", "n_members": 3, "coherence": 0.485264, "members": ["لسس", "ليس", "لسن"]}
+{"binary_root": "بط", "n_members": 6, "coherence": 0.484934, "members": ["بطط", "بطأ", "بطر", "بطش", "بطل", "بطن"]}
+{"binary_root": "ضع", "n_members": 4, "coherence": 0.484027, "members": ["ضعع/ضعضع", "ضوع/ضيع", "وضع", "ضعف"]}
+{"binary_root": "لب", "n_members": 5, "coherence": 0.483877, "members": ["لبب-لبلب", "لبث", "لبد", "لبس", "لبن"]}
+{"binary_root": "قط", "n_members": 7, "coherence": 0.480244, "members": ["قطط-قطقط", "قطر", "قطع", "قطف", "قطم", "قطمر", "قطن"]}
+{"binary_root": "فض", "n_members": 7, "coherence": 0.479875, "members": ["فضض-فضفض", "فضو", "فوض", "فيض", "وفض", "فضح", "فضل"]}
+{"binary_root": "حك", "n_members": 2, "coherence": 0.479145, "members": ["حكك", "حكم"]}
+{"binary_root": "رع", "n_members": 7, "coherence": 0.477565, "members": ["رعع-رعرع", "رعى", "رعو", "روع", "ريع", "رعب", "رعد"]}
+{"binary_root": "قس", "n_members": 7, "coherence": 0.47701, "members": ["قسس-قسقس", "قسو", "قوس", "قسر", "قسط", "قسطس", "قسم"]}
+{"binary_root": "لق", "n_members": 7, "coherence": 0.476118, "members": ["لقق-لقلق", "لقى", "لقب", "لقح", "لقط", "لقف", "لقم"]}
+{"binary_root": "لظ", "n_members": 2, "coherence": 0.476015, "members": ["لظظ-لظلظ", "لظى"]}
+{"binary_root": "سس", "n_members": 2, "coherence": 0.475549, "members": ["أسس", "وسوس"]}
+{"binary_root": "شك", "n_members": 6, "coherence": 0.475085, "members": ["شكك", "شكو", "شوك", "شكر", "شكس", "شكل"]}
+{"binary_root": "شج", "n_members": 2, "coherence": 0.474605, "members": ["شجج", "شجر"]}
+{"binary_root": "جر", "n_members": 11, "coherence": 0.474216, "members": ["جرر-جرجر", "جرى", "جور", "جأر", "أجر", "جرح", "جرد", "جرز", "جرع", "جرف", "جرم"]}
+{"binary_root": "قل", "n_members": 8, "coherence": 0.474079, "members": ["قلل-قلقل", "قلى", "قول", "قيل", "قلب", "قلد", "قلع", "قلم"]}
+{"binary_root": "طن", "n_members": 3, "coherence": 0.470546, "members": ["طنن-طنطن", "طين", "وطن"]}
+{"binary_root": "فل", "n_members": 7, "coherence": 0.468659, "members": ["فلل-فلفل", "فيل", "أفل", "فلح", "فلق", "فلك", "فلن"]}
+{"binary_root": "هـد", "n_members": 4, "coherence": 0.468336, "members": ["هدد-هدهد", "هدى", "هود", "هدم"]}
+{"binary_root": "قف", "n_members": 4, "coherence": 0.466216, "members": ["قفف-قفقف", "قفو", "وقف", "قفل"]}
+{"binary_root": "أي", "n_members": 2, "coherence": 0.465837, "members": ["أين", "أيى-إي"]}
+{"binary_root": "شح", "n_members": 3, "coherence": 0.46583, "members": ["شحح-شحشح", "شحم", "شحن"]}
+{"binary_root": "ذخ", "n_members": 2, "coherence": 0.465293, "members": ["ذخر", "ذخخ-ذخذخ"]}
+{"binary_root": "لع", "n_members": 3, "coherence": 0.464754, "members": ["لعع-لعلع", "لعب", "لعن"]}
+{"binary_root": "غث", "n_members": 4, "coherence": 0.464333, "members": ["غثث", "غثو/غثى", "غوث", "غيث"]}
+{"binary_root": "غد", "n_members": 4, "coherence": 0.462793, "members": ["غدد", "غدو", "غدر", "غدق"]}
+{"binary_root": "شظ", "n_members": 2, "coherence": 0.461915, "members": ["شظظ", "شوظ"]}
+{"binary_root": "زغ", "n_members": 2, "coherence": 0.459184, "members": ["زغغ-زغزغ", "زوغ-زيغ"]}
+{"binary_root": "رت", "n_members": 4, "coherence": 0.458485, "members": ["رتت-رترت", "رتع", "رتق", "رتل"]}
+{"binary_root": "رث", "n_members": 2, "coherence": 0.457826, "members": ["رثث", "ورث"]}
+{"binary_root": "جب", "n_members": 9, "coherence": 0.457437, "members": ["جبب-جبجب", "جبو-جبى", "جوب-جيب", "وجب", "جبت", "جبر", "جبل", "جبن", "جبه"]}
+{"binary_root": "بح", "n_members": 3, "coherence": 0.456979, "members": ["بحح/بحبح", "بحث", "بحر"]}
+{"binary_root": "شب", "n_members": 4, "coherence": 0.455545, "members": ["شبب", "شوب", "شيب", "شبه"]}
+{"binary_root": "ذهـ", "n_members": 3, "coherence": 0.453593, "members": ["ذهه", "ذهب", "ذهل"]}
+{"binary_root": "ذع", "n_members": 3, "coherence": 0.452916, "members": ["ذعع-ذعذع", "ذيع", "ذعن"]}
+{"binary_root": "سغ", "n_members": 3, "coherence": 0.452791, "members": ["[سغغ]سغسغ", "سوغ-سيغ", "سغب"]}
+{"binary_root": "نل", "n_members": 2, "coherence": 0.45277, "members": ["نلنل", "نول-نيل"]}
+{"binary_root": "مق", "n_members": 2, "coherence": 0.451842, "members": ["مقق-مقمق", "مقت"]}
+{"binary_root": "رذ", "n_members": 2, "coherence": 0.446973, "members": ["رذذ", "رذل"]}
+{"binary_root": "زع", "n_members": 3, "coherence": 0.441542, "members": ["زعع-زعزع", "وزع", "زعم"]}
+{"binary_root": "ثم", "n_members": 5, "coherence": 0.44005, "members": ["ثمم-ثمثم", "أثم", "ثمد", "ثمر", "ثمن"]}
+{"binary_root": "فخ", "n_members": 2, "coherence": 0.439957, "members": ["فخخ-فخفخ", "فخر"]}
+{"binary_root": "كهـ", "n_members": 4, "coherence": 0.437476, "members": ["كهه-كهكه", "كهـف", "كهـل", "كهـن"]}
+{"binary_root": "ضج", "n_members": 2, "coherence": 0.437268, "members": ["ضجج", "ضجع"]}
+{"binary_root": "تع", "n_members": 2, "coherence": 0.432758, "members": ["تعع-تعتع", "تعس"]}
+{"binary_root": "زت", "n_members": 2, "coherence": 0.429595, "members": ["زتت", "زيت"]}
+{"binary_root": "لغ", "n_members": 3, "coherence": 0.427763, "members": ["لغلغ", "لغو", "لغب"]}
+{"binary_root": "عث", "n_members": 3, "coherence": 0.425641, "members": ["عثث-عثعث", "عثو-عثى", "عثر"]}
+{"binary_root": "ذأ/ء", "n_members": 2, "coherence": 0.423749, "members": ["أذذ/إذ", "أذى"]}
+{"binary_root": "أو", "n_members": 2, "coherence": 0.423306, "members": ["أون", "أوو-أوى"]}
+{"binary_root": "عش", "n_members": 4, "coherence": 0.423069, "members": ["عشش", "عشو", "عيش", "عشر"]}
+{"binary_root": "مد", "n_members": 4, "coherence": 0.422642, "members": ["مدد", "ميد", "أمد", "مدن"]}
+{"binary_root": "جع", "n_members": 3, "coherence": 0.422133, "members": ["جعع-جعجع", "جوع", "جعل"]}
+{"binary_root": "ضغ", "n_members": 3, "coherence": 0.42186, "members": ["ضغغ", "ضغث", "ضغن"]}
+{"binary_root": "رز", "n_members": 2, "coherence": 0.42147, "members": ["رزز", "رزق"]}
+{"binary_root": "شت", "n_members": 2, "coherence": 0.418618, "members": ["شتت", "شتو/شتى"]}
+{"binary_root": "هـب", "n_members": 4, "coherence": 0.398827, "members": ["هبب", "هبو", "وهب", "هبط"]}
+{"binary_root": "ءب", "n_members": 3, "coherence": 0.396564, "members": ["أبب", "أبو", "أبي"]}
+{"binary_root": "شق", "n_members": 2, "coherence": 0.396344, "members": ["شقق", "شقو"]}
+{"binary_root": "عه", "n_members": 3, "coherence": 0.386001, "members": ["عهه", "عهد", "عهن"]}
+{"binary_root": "تأ", "n_members": 2, "coherence": 0.379768, "members": ["أتت", "أتو/أتى"]}
+{"binary_root": "ءم", "n_members": 2, "coherence": 0.337674, "members": ["أوم-أيم", "أمو"]}
+{"binary_root": "زد", "n_members": 2, "coherence": 0.320172, "members": ["زود", "زيد"]}

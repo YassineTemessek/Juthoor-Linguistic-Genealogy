@@ -1,0 +1,14 @@
+{
+  "experiment_id": "1.1",
+  "experiment_name": "letter_similarity_matrix",
+  "status": "completed",
+  "start_time": "2026-03-14T00:02:28.943502+00:00",
+  "end_time": "2026-03-14T00:02:33.218824+00:00",
+  "duration_seconds": 4.275322,
+  "metrics": {
+    "mantel_r": -0.152215,
+    "p_value": 0.161,
+    "n_letters": 28
+  },
+  "error": null
+}
