@@ -1,0 +1,8 @@
+{
+  "n_examples": 1881,
+  "ari": 0.000221,
+  "supports_h11": false,
+  "n_clusters": 2,
+  "n_noise": 539,
+  "noise_share": 0.28655
+}

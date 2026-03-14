@@ -1,0 +1,330 @@
+{
+  "n_candidates": 34944,
+  "n_absent_candidates": 30670,
+  "test_auc": 0.739392,
+  "supports_h12_generative": true,
+  "top_20_phantom_roots": [
+    {
+      "binary_root": "رد",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "ردر",
+      "exists": 0,
+      "predicted_existence_probability": 0.56725
+    },
+    {
+      "binary_root": "لح",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "لحر",
+      "exists": 0,
+      "predicted_existence_probability": 0.551401
+    },
+    {
+      "binary_root": "سن",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "سنر",
+      "exists": 0,
+      "predicted_existence_probability": 0.547471
+    },
+    {
+      "binary_root": "ضع",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "ضعر",
+      "exists": 0,
+      "predicted_existence_probability": 0.545173
+    },
+    {
+      "binary_root": "حد",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "حدر",
+      "exists": 0,
+      "predicted_existence_probability": 0.544966
+    },
+    {
+      "binary_root": "عل",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "علر",
+      "exists": 0,
+      "predicted_existence_probability": 0.542872
+    },
+    {
+      "binary_root": "رب",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "ربر",
+      "exists": 0,
+      "predicted_existence_probability": 0.542458
+    },
+    {
+      "binary_root": "رد",
+      "added_letter": "ر",
+      "position": 2,
+      "candidate_root": "ررد",
+      "exists": 0,
+      "predicted_existence_probability": 0.540359
+    },
+    {
+      "binary_root": "كل",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "كلر",
+      "exists": 0,
+      "predicted_existence_probability": 0.53953
+    },
+    {
+      "binary_root": "صر",
+      "added_letter": "د",
+      "position": 3,
+      "candidate_root": "صرد",
+      "exists": 0,
+      "predicted_existence_probability": 0.525744
+    },
+    {
+      "binary_root": "قم",
+      "added_letter": "ر",
+      "position": 2,
+      "candidate_root": "قرم",
+      "exists": 0,
+      "predicted_existence_probability": 0.523373
+    },
+    {
+      "binary_root": "لح",
+      "added_letter": "و",
+      "position": 3,
+      "candidate_root": "لحو",
+      "exists": 0,
+      "predicted_existence_probability": 0.518021
+    },
+    {
+      "binary_root": "لم",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "لمر",
+      "exists": 0,
+      "predicted_existence_probability": 0.516175
+    },
+    {
+      "binary_root": "غل",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "غلر",
+      "exists": 0,
+      "predicted_existence_probability": 0.515011
+    },
+    {
+      "binary_root": "مم",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "ممر",
+      "exists": 0,
+      "predicted_existence_probability": 0.513723
+    },
+    {
+      "binary_root": "صح",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "صحر",
+      "exists": 0,
+      "predicted_existence_probability": 0.512512
+    },
+    {
+      "binary_root": "كل",
+      "added_letter": "ر",
+      "position": 2,
+      "candidate_root": "كرل",
+      "exists": 0,
+      "predicted_existence_probability": 0.51074
+    },
+    {
+      "binary_root": "كد",
+      "added_letter": "ر",
+      "position": 2,
+      "candidate_root": "كرد",
+      "exists": 0,
+      "predicted_existence_probability": 0.505847
+    },
+    {
+      "binary_root": "عن",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "عنر",
+      "exists": 0,
+      "predicted_existence_probability": 0.505534
+    },
+    {
+      "binary_root": "ود",
+      "added_letter": "ر",
+      "position": 3,
+      "candidate_root": "ودر",
+      "exists": 0,
+      "predicted_existence_probability": 0.505374
+    }
+  ],
+  "bottom_20_phantom_roots": [
+    {
+      "binary_root": "كز",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظكز",
+      "exists": 0,
+      "predicted_existence_probability": 0.003388
+    },
+    {
+      "binary_root": "ثع",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظثع",
+      "exists": 0,
+      "predicted_existence_probability": 0.003682
+    },
+    {
+      "binary_root": "لغ",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظلغ",
+      "exists": 0,
+      "predicted_existence_probability": 0.003783
+    },
+    {
+      "binary_root": "دث",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظدث",
+      "exists": 0,
+      "predicted_existence_probability": 0.004074
+    },
+    {
+      "binary_root": "غظ",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظغظ",
+      "exists": 0,
+      "predicted_existence_probability": 0.004186
+    },
+    {
+      "binary_root": "كز",
+      "added_letter": "ي",
+      "position": 1,
+      "candidate_root": "يكز",
+      "exists": 0,
+      "predicted_existence_probability": 0.00439
+    },
+    {
+      "binary_root": "ءث",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظءث",
+      "exists": 0,
+      "predicted_existence_probability": 0.004459
+    },
+    {
+      "binary_root": "طد",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظطد",
+      "exists": 0,
+      "predicted_existence_probability": 0.005132
+    },
+    {
+      "binary_root": "ثع",
+      "added_letter": "ي",
+      "position": 1,
+      "candidate_root": "يثع",
+      "exists": 0,
+      "predicted_existence_probability": 0.005217
+    },
+    {
+      "binary_root": "ذم",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظذم",
+      "exists": 0,
+      "predicted_existence_probability": 0.005324
+    },
+    {
+      "binary_root": "شخ",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظشخ",
+      "exists": 0,
+      "predicted_existence_probability": 0.0055
+    },
+    {
+      "binary_root": "ءث",
+      "added_letter": "ي",
+      "position": 1,
+      "candidate_root": "يءث",
+      "exists": 0,
+      "predicted_existence_probability": 0.005574
+    },
+    {
+      "binary_root": "غظ",
+      "added_letter": "ظ",
+      "position": 3,
+      "candidate_root": "غظظ",
+      "exists": 0,
+      "predicted_existence_probability": 0.005703
+    },
+    {
+      "binary_root": "تس",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظتس",
+      "exists": 0,
+      "predicted_existence_probability": 0.00574
+    },
+    {
+      "binary_root": "لغ",
+      "added_letter": "ي",
+      "position": 1,
+      "candidate_root": "يلغ",
+      "exists": 0,
+      "predicted_existence_probability": 0.005936
+    },
+    {
+      "binary_root": "ضب",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظضب",
+      "exists": 0,
+      "predicted_existence_probability": 0.005955
+    },
+    {
+      "binary_root": "دث",
+      "added_letter": "ظ",
+      "position": 3,
+      "candidate_root": "دثظ",
+      "exists": 0,
+      "predicted_existence_probability": 0.006148
+    },
+    {
+      "binary_root": "خش",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظخش",
+      "exists": 0,
+      "predicted_existence_probability": 0.006393
+    },
+    {
+      "binary_root": "قش",
+      "added_letter": "ظ",
+      "position": 1,
+      "candidate_root": "ظقش",
+      "exists": 0,
+      "predicted_existence_probability": 0.006425
+    },
+    {
+      "binary_root": "غظ",
+      "added_letter": "ظ",
+      "position": 2,
+      "candidate_root": "غظظ",
+      "exists": 0,
+      "predicted_existence_probability": 0.006427
+    }
+  ]
+}

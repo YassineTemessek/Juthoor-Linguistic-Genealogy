@@ -1,0 +1,12 @@
+{
+  "n_examples": 1721,
+  "test_fraction": 0.2,
+  "variants": {
+    "binary_only": 0.716345,
+    "binary_plus_letter": 0.716448,
+    "binary_plus_letter_plus_position": 0.716121
+  },
+  "best_variant": "binary_plus_letter",
+  "best_mean_cosine": 0.716448,
+  "supports_h12": true
+}
