@@ -55,6 +55,24 @@ EN_RECORD = json.dumps({
     "sounds": [{"ipa": "/haʊs/"}],
 })
 
+HE_RECORD = json.dumps({
+    "word": "שלום", "lang_code": "he", "pos": "noun",
+    "senses": [{"glosses": ["peace"]}],
+    "sounds": [{"ipa": "/ʃaˈlom/"}],
+})
+
+FA_RECORD = json.dumps({
+    "word": "خانه", "lang_code": "fa", "pos": "noun",
+    "senses": [{"glosses": ["house, home"]}],
+    "sounds": [{"ipa": "/xɒːˈne/"}],
+})
+
+ARC_RECORD = json.dumps({
+    "word": "כתב", "lang_code": "arc", "pos": "verb",
+    "senses": [{"glosses": ["to write"]}],
+    "sounds": [{"ipa": "/kəθaḇ/"}],
+})
+
 
 # ---------------------------------------------------------------------------
 # Helper
@@ -69,7 +87,7 @@ def _parse(raw_json: str) -> dict | None:
 # ---------------------------------------------------------------------------
 
 def test_lang_map_covers_all_targets():
-    assert set(ingest_kaikki.LANG_MAP.keys()) == {"grc", "la", "ang", "enm", "en"}
+    assert set(ingest_kaikki.LANG_MAP.keys()) == {"grc", "la", "ang", "enm", "en", "he", "fa", "arc"}
 
 
 def test_parse_greek_record():
@@ -108,6 +126,33 @@ def test_parse_modern_english():
     assert rec is not None
     assert rec["language"] == "eng"
     assert rec["stage"] == "modern"
+
+
+def test_parse_hebrew():
+    rec = _parse(HE_RECORD)
+    assert rec is not None
+    assert rec["language"] == "heb"
+    assert rec["stage"] == "modern"
+    assert rec["script"] == "Hebr"
+    assert rec["gloss_plain"] == "peace"
+
+
+def test_parse_persian():
+    rec = _parse(FA_RECORD)
+    assert rec is not None
+    assert rec["language"] == "fas"
+    assert rec["stage"] == "modern"
+    assert rec["script"] == "Arab"
+    assert rec["gloss_plain"] == "house, home"
+
+
+def test_parse_aramaic():
+    rec = _parse(ARC_RECORD)
+    assert rec is not None
+    assert rec["language"] == "arc"
+    assert rec["stage"] == "classical"
+    assert rec["script"] == "Hebr"
+    assert rec["gloss_plain"] == "to write"
 
 
 def test_ingest_lines_deduplicates_ids(tmp_path):
