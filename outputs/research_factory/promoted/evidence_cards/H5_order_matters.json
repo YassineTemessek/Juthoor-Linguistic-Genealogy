@@ -1,0 +1,13 @@
+{
+  "hypothesis_id": "H5",
+  "hypothesis_name": "metathesis_order_matters",
+  "claim": "The order of consonants in the binary root determines meaning; reversal changes semantic field",
+  "source": "Jabal",
+  "experiment_id": "4.1",
+  "experiment_name": "binary_metathesis",
+  "status": "supported",
+  "key_metric": "metathesis mean=0.526 vs random=0.502, Wilcoxon p=0.014, Cohen d=0.28",
+  "families_tested": 166,
+  "promotion_date": "2026-03-14",
+  "data_file": "promoted_features/metathesis_pairs.jsonl"
+}

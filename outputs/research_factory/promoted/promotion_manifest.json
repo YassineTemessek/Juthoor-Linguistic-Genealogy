@@ -1,0 +1,23 @@
+{
+  "promotion_date": "2026-03-14T01:54:28.572581+00:00",
+  "promoted_hypotheses": [
+    "H2",
+    "H5",
+    "H8"
+  ],
+  "evidence_cards": [
+    "evidence_cards/H2_field_coherence.json",
+    "evidence_cards/H5_order_matters.json",
+    "evidence_cards/H8_positional_semantics.json"
+  ],
+  "promoted_features": [
+    "promoted_features/field_coherence_scores.jsonl",
+    "promoted_features/positional_profiles.jsonl",
+    "promoted_features/metathesis_pairs.jsonl"
+  ],
+  "source_experiments": [
+    "2.3",
+    "4.1",
+    "1.2"
+  ]
+}
