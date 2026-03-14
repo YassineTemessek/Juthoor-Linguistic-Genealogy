@@ -1,0 +1,9 @@
+{
+  "real_mean": 0.540139,
+  "real_std": 0.064493,
+  "baseline_mean": 0.518127,
+  "baseline_std": 0.001942,
+  "families_scored": 396,
+  "baseline_iterations": 1000,
+  "passes_two_sigma": true
+}

@@ -1,0 +1,383 @@
+{
+  "top_20": [
+    {
+      "binary_root": "غظ",
+      "n_members": 2,
+      "coherence": 0.766433,
+      "members": [
+        "غظغظ",
+        "غيظ"
+      ]
+    },
+    {
+      "binary_root": "تف",
+      "n_members": 2,
+      "coherence": 0.746377,
+      "members": [
+        "تفف-تفتف",
+        "تفث"
+      ]
+    },
+    {
+      "binary_root": "طح",
+      "n_members": 2,
+      "coherence": 0.745144,
+      "members": [
+        "طحح-طحطح",
+        "طحو-طحى"
+      ]
+    },
+    {
+      "binary_root": "بش",
+      "n_members": 2,
+      "coherence": 0.726421,
+      "members": [
+        "بشش/بشبش",
+        "بشر"
+      ]
+    },
+    {
+      "binary_root": "ثخ",
+      "n_members": 2,
+      "coherence": 0.721123,
+      "members": [
+        "ثخخ",
+        "ثخن"
+      ]
+    },
+    {
+      "binary_root": "لز",
+      "n_members": 3,
+      "coherence": 0.702714,
+      "members": [
+        "لزز",
+        "لزب",
+        "لزم"
+      ]
+    },
+    {
+      "binary_root": "تم",
+      "n_members": 2,
+      "coherence": 0.698701,
+      "members": [
+        "تمم",
+        "يتم"
+      ]
+    },
+    {
+      "binary_root": "نن",
+      "n_members": 2,
+      "coherence": 0.693661,
+      "members": [
+        "نون",
+        "أنن"
+      ]
+    },
+    {
+      "binary_root": "مص",
+      "n_members": 2,
+      "coherence": 0.689812,
+      "members": [
+        "مصص-مصمص",
+        "مصر"
+      ]
+    },
+    {
+      "binary_root": "رط",
+      "n_members": 2,
+      "coherence": 0.684394,
+      "members": [
+        "رطط-رطرط",
+        "رطب"
+      ]
+    },
+    {
+      "binary_root": "زح",
+      "n_members": 2,
+      "coherence": 0.68296,
+      "members": [
+        "زحح-زحزح",
+        "زحف"
+      ]
+    },
+    {
+      "binary_root": "رخ",
+      "n_members": 2,
+      "coherence": 0.671866,
+      "members": [
+        "رخخ-رخرخ",
+        "رخو-رخى"
+      ]
+    },
+    {
+      "binary_root": "مم",
+      "n_members": 2,
+      "coherence": 0.66491,
+      "members": [
+        "أمم",
+        "يمم"
+      ]
+    },
+    {
+      "binary_root": "بز",
+      "n_members": 2,
+      "coherence": 0.663748,
+      "members": [
+        "بزز/بزبز",
+        "بزغ"
+      ]
+    },
+    {
+      "binary_root": "نت",
+      "n_members": 2,
+      "coherence": 0.660235,
+      "members": [
+        "نتت-نتنت",
+        "نتق"
+      ]
+    },
+    {
+      "binary_root": "جث",
+      "n_members": 3,
+      "coherence": 0.656612,
+      "members": [
+        "جثث-جثجث",
+        "جثو-جثى",
+        "جثم"
+      ]
+    },
+    {
+      "binary_root": "رن",
+      "n_members": 4,
+      "coherence": 0.654421,
+      "members": [
+        "رنن",
+        "رين",
+        "رنن",
+        "رين"
+      ]
+    },
+    {
+      "binary_root": "ضز",
+      "n_members": 2,
+      "coherence": 0.653135,
+      "members": [
+        "ضزز",
+        "ضوز/ضيز"
+      ]
+    },
+    {
+      "binary_root": "دس",
+      "n_members": 3,
+      "coherence": 0.649673,
+      "members": [
+        "دسس",
+        "دسو-دسي",
+        "دسر"
+      ]
+    },
+    {
+      "binary_root": "عك",
+      "n_members": 2,
+      "coherence": 0.648095,
+      "members": [
+        "عكك",
+        "عكف"
+      ]
+    }
+  ],
+  "bottom_20": [
+    {
+      "binary_root": "زد",
+      "n_members": 2,
+      "coherence": 0.320172,
+      "members": [
+        "زود",
+        "زيد"
+      ]
+    },
+    {
+      "binary_root": "ءم",
+      "n_members": 2,
+      "coherence": 0.337674,
+      "members": [
+        "أوم-أيم",
+        "أمو"
+      ]
+    },
+    {
+      "binary_root": "تأ",
+      "n_members": 2,
+      "coherence": 0.379768,
+      "members": [
+        "أتت",
+        "أتو/أتى"
+      ]
+    },
+    {
+      "binary_root": "عه",
+      "n_members": 3,
+      "coherence": 0.386001,
+      "members": [
+        "عهه",
+        "عهد",
+        "عهن"
+      ]
+    },
+    {
+      "binary_root": "شق",
+      "n_members": 2,
+      "coherence": 0.396344,
+      "members": [
+        "شقق",
+        "شقو"
+      ]
+    },
+    {
+      "binary_root": "ءب",
+      "n_members": 3,
+      "coherence": 0.396564,
+      "members": [
+        "أبب",
+        "أبو",
+        "أبي"
+      ]
+    },
+    {
+      "binary_root": "هـب",
+      "n_members": 4,
+      "coherence": 0.398827,
+      "members": [
+        "هبب",
+        "هبو",
+        "وهب",
+        "هبط"
+      ]
+    },
+    {
+      "binary_root": "شت",
+      "n_members": 2,
+      "coherence": 0.418618,
+      "members": [
+        "شتت",
+        "شتو/شتى"
+      ]
+    },
+    {
+      "binary_root": "رز",
+      "n_members": 2,
+      "coherence": 0.42147,
+      "members": [
+        "رزز",
+        "رزق"
+      ]
+    },
+    {
+      "binary_root": "ضغ",
+      "n_members": 3,
+      "coherence": 0.42186,
+      "members": [
+        "ضغغ",
+        "ضغث",
+        "ضغن"
+      ]
+    },
+    {
+      "binary_root": "جع",
+      "n_members": 3,
+      "coherence": 0.422133,
+      "members": [
+        "جعع-جعجع",
+        "جوع",
+        "جعل"
+      ]
+    },
+    {
+      "binary_root": "مد",
+      "n_members": 4,
+      "coherence": 0.422642,
+      "members": [
+        "مدد",
+        "ميد",
+        "أمد",
+        "مدن"
+      ]
+    },
+    {
+      "binary_root": "عش",
+      "n_members": 4,
+      "coherence": 0.423069,
+      "members": [
+        "عشش",
+        "عشو",
+        "عيش",
+        "عشر"
+      ]
+    },
+    {
+      "binary_root": "أو",
+      "n_members": 2,
+      "coherence": 0.423306,
+      "members": [
+        "أون",
+        "أوو-أوى"
+      ]
+    },
+    {
+      "binary_root": "ذأ/ء",
+      "n_members": 2,
+      "coherence": 0.423749,
+      "members": [
+        "أذذ/إذ",
+        "أذى"
+      ]
+    },
+    {
+      "binary_root": "عث",
+      "n_members": 3,
+      "coherence": 0.425641,
+      "members": [
+        "عثث-عثعث",
+        "عثو-عثى",
+        "عثر"
+      ]
+    },
+    {
+      "binary_root": "لغ",
+      "n_members": 3,
+      "coherence": 0.427763,
+      "members": [
+        "لغلغ",
+        "لغو",
+        "لغب"
+      ]
+    },
+    {
+      "binary_root": "زت",
+      "n_members": 2,
+      "coherence": 0.429595,
+      "members": [
+        "زتت",
+        "زيت"
+      ]
+    },
+    {
+      "binary_root": "تع",
+      "n_members": 2,
+      "coherence": 0.432758,
+      "members": [
+        "تعع-تعتع",
+        "تعس"
+      ]
+    },
+    {
+      "binary_root": "ضج",
+      "n_members": 2,
+      "coherence": 0.437268,
+      "members": [
+        "ضجج",
+        "ضجع"
+      ]
+    }
+  ]
+}

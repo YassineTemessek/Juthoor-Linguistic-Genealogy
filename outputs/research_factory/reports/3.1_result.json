@@ -1,0 +1,16 @@
+{
+  "experiment_id": "3.1",
+  "experiment_name": "modifier_personality",
+  "status": "completed",
+  "start_time": "2026-03-14T00:02:26.300487+00:00",
+  "end_time": "2026-03-14T00:02:30.188722+00:00",
+  "duration_seconds": 3.888235,
+  "metrics": {
+    "letters_profiled": 28,
+    "letters_with_data": 27,
+    "mean_consistency": 0.033516,
+    "letters_above_0_5": 0,
+    "share_above_0_5": 0.0
+  },
+  "error": null
+}
