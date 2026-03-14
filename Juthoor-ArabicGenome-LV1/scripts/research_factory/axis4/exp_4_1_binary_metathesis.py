@@ -91,8 +91,8 @@ def run_binary_metathesis() -> dict:
                 "pair_type": "metathesis",
                 "binary_root_a": a,
                 "binary_root_b": b,
-                "meaning_a": binary_map[a].binary_root_meaning,
-                "meaning_b": binary_map[b].binary_root_meaning,
+                "meaning_a": binary_map[a].meaning,
+                "meaning_b": binary_map[b].meaning,
                 "cosine_similarity": round(score, 6),
                 "classification": classify_similarity(score),
             }
@@ -108,8 +108,8 @@ def run_binary_metathesis() -> dict:
                 "pair_type": "control",
                 "binary_root_a": a,
                 "binary_root_b": b,
-                "meaning_a": binary_map[a].binary_root_meaning,
-                "meaning_b": binary_map[b].binary_root_meaning,
+                "meaning_a": binary_map[a].meaning,
+                "meaning_b": binary_map[b].meaning,
                 "cosine_similarity": round(score, 6),
                 "classification": classify_similarity(score),
             }
@@ -152,7 +152,7 @@ def main() -> int:
         run_fn=run_binary_metathesis,
     )
     result = run_experiment(config)
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    print(json.dumps(result, ensure_ascii=True, indent=2))
     return 0
 
 

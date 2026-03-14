@@ -45,11 +45,11 @@ NORMALIZE_MAP = str.maketrans({"أ": "ء", "إ": "ء", "آ": "ء", "ى": "ي"})
 
 
 def canonical_tri_root(value: str) -> str | None:
-    candidate = SPLIT_RE.split(value.strip())[0]
+    candidate = SPLIT_RE.split(value.strip())[0].translate(NORMALIZE_MAP)
     letters = ARABIC_RE.findall(candidate)
     if len(letters) != 3:
         return None
-    return "".join(letter.translate(NORMALIZE_MAP) for letter in letters)
+    return "".join(letters)
 
 
 def cosine_distance(a: np.ndarray, b: np.ndarray) -> float:
@@ -156,7 +156,7 @@ def main() -> int:
         run_fn=run_phonetic_substitution,
     )
     result = run_experiment(config)
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    print(json.dumps(result, ensure_ascii=True, indent=2))
     return 0
 
 

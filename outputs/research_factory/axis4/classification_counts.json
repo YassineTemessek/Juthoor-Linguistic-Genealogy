@@ -1,6 +1,18 @@
 {
-  "similar": 7,
-  "divergent": 0,
-  "middle": 159,
-  "total_pairs": 166
+  "metathesis": {
+    "similar": 7,
+    "middle": 159,
+    "divergent": 0
+  },
+  "control": {
+    "similar": 0,
+    "middle": 166,
+    "divergent": 0
+  },
+  "n_pairs": 166,
+  "mean_metathesis": 0.526308,
+  "mean_control": 0.502288,
+  "effect_size_d": 0.278819,
+  "rank_sum_statistic": 2.467811,
+  "p_value": 0.013594
 }
