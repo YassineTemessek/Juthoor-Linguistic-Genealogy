@@ -1,0 +1,304 @@
+{
+  "generated": "2026-03-14T01:30:38.463451+00:00",
+  "total_experiments_run": 7,
+  "hypotheses": [
+    {
+      "id": "H1",
+      "name": "phonetic_semantic_proximity",
+      "claim": "Letters with similar articulation points (makhaarij) have similar meanings",
+      "source": "Al-Khalil (implicit)",
+      "status": "inconclusive",
+      "experiments": [
+        {
+          "id": "1.1",
+          "name": "letter_similarity_matrix",
+          "status": "completed",
+          "metrics": {
+            "mantel_r": -0.152215,
+            "p_value": 0.161,
+            "n_letters": 28
+          }
+        },
+        {
+          "id": "5.1",
+          "name": "sound_meaning_matrix",
+          "status": "completed",
+          "metrics": {
+            "n_letters": 28,
+            "articulatory_dims": 25,
+            "semantic_dims": 1024,
+            "semantic_pca_dims": 2,
+            "first_canonical_correlation": 0.962009,
+            "permutation_mean": 0.918038,
+            "permutation_p_value": 0.149,
+            "permutation_ci_low": 0.818164,
+            "permutation_ci_high": 0.98144,
+            "success_threshold": 0.4,
+            "supports_h1_via_cca": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "H2",
+      "name": "binary_root_field_stability",
+      "claim": "The binary root consistently determines a stable semantic field across all its triliteral derivations",
+      "source": "Jabal (al-fasl al-mu'jami)",
+      "status": "supported",
+      "experiments": [
+        {
+          "id": "2.3",
+          "name": "field_coherence",
+          "status": "completed",
+          "metrics": {
+            "real_mean": 0.540139,
+            "real_std": 0.064493,
+            "baseline_mean": 0.518127,
+            "baseline_std": 0.001942,
+            "families_scored": 396,
+            "baseline_iterations": 1000,
+            "passes_two_sigma": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "H3",
+      "name": "third_letter_modifier_personality",
+      "claim": "The third letter has a stable and consistent modifying personality across all roots where it appears as the third consonant",
+      "source": "Jabal (al-tarkib al-tatabi'i)",
+      "status": "weak_signal",
+      "experiments": [
+        {
+          "id": "3.1",
+          "name": "modifier_personality",
+          "status": "completed",
+          "metrics": {
+            "letters_profiled": 28,
+            "letters_with_data": 28,
+            "mean_consistency": 0.033302,
+            "letters_above_0_5": 0,
+            "share_above_0_5": 0.0,
+            "shuffled_baseline_mean": 0.028915,
+            "shuffled_baseline_std": 0.001249,
+            "z_score_vs_shuffled": 3.513558
+          }
+        }
+      ]
+    },
+    {
+      "id": "H4",
+      "name": "metathesis_preserves_core_meaning",
+      "claim": "Binary metathesis (swapping the two letters) preserves part of the semantic core",
+      "source": "Ibn Jinni (al-ishtiqaq al-akbar)",
+      "status": "weakly_supported",
+      "experiments": [
+        {
+          "id": "4.1",
+          "name": "binary_metathesis",
+          "status": "completed",
+          "metrics": {
+            "metathesis": {
+              "similar": 7,
+              "middle": 159,
+              "divergent": 0
+            },
+            "control": {
+              "similar": 0,
+              "middle": 166,
+              "divergent": 0
+            },
+            "n_pairs": 166,
+            "mean_metathesis": 0.526308,
+            "mean_control": 0.502288,
+            "effect_size_d": 0.278819,
+            "rank_sum_statistic": 2.467811,
+            "p_value": 0.013594
+          }
+        }
+      ]
+    },
+    {
+      "id": "H5",
+      "name": "metathesis_changes_meaning",
+      "claim": "Binary metathesis changes the meaning (letter order is semantically significant)",
+      "source": "Jabal (contra Ibn Jinni)",
+      "status": "supported",
+      "experiments": [
+        {
+          "id": "4.1",
+          "name": "binary_metathesis",
+          "status": "completed",
+          "metrics": {
+            "metathesis": {
+              "similar": 7,
+              "middle": 159,
+              "divergent": 0
+            },
+            "control": {
+              "similar": 0,
+              "middle": 166,
+              "divergent": 0
+            },
+            "n_pairs": 166,
+            "mean_metathesis": 0.526308,
+            "mean_control": 0.502288,
+            "effect_size_d": 0.278819,
+            "rank_sum_statistic": 2.467811,
+            "p_value": 0.013594
+          }
+        }
+      ]
+    },
+    {
+      "id": "H6",
+      "name": "same_makhraj_substitution_closer",
+      "claim": "Phonetic substitution from the same articulation point (makhraj) produces semantically closer roots",
+      "source": "Ibn Jinni (his three conditions)",
+      "status": "not_supported",
+      "experiments": [
+        {
+          "id": "4.3",
+          "name": "phonetic_substitution",
+          "status": "completed",
+          "metrics": {
+            "n_pairs": 14309,
+            "spearman_rho": -0.021008,
+            "p_value": 0.011968,
+            "mean_articulatory_distance": 2.041741,
+            "mean_semantic_distance": 0.467261,
+            "supports_h6": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "H7",
+      "name": "missing_combinations_semantic_conflict",
+      "claim": "Some missing binary combinations are absent due to semantic contradiction between the two letters",
+      "source": "An-Najah University",
+      "status": "pending",
+      "experiments": [
+        {
+          "id": "2.2",
+          "name": null,
+          "status": "pending",
+          "metrics": null
+        }
+      ]
+    },
+    {
+      "id": "H8",
+      "name": "positional_meaning_shift",
+      "claim": "A letter's meaning changes depending on its position (first, second, or third) within the root",
+      "source": "Al-Aqqad",
+      "status": "supported",
+      "experiments": [
+        {
+          "id": "1.2",
+          "name": "positional_semantics",
+          "status": "completed",
+          "metrics": {
+            "letters_profiled": 28,
+            "letters_with_significant_position_effect": 24,
+            "significant_letters": [
+              "ء",
+              "ب",
+              "ت",
+              "ث",
+              "ج",
+              "ح",
+              "خ",
+              "د",
+              "ر",
+              "ز",
+              "س",
+              "ش",
+              "ص",
+              "ض",
+              "ط",
+              "ع",
+              "ف",
+              "ق",
+              "ل",
+              "م",
+              "ن",
+              "ه",
+              "و",
+              "ي"
+            ],
+            "mean_position_coherence": 0.520929
+          }
+        }
+      ]
+    },
+    {
+      "id": "H9",
+      "name": "emphatic_letters_stronger_semantics",
+      "claim": "Emphatic (mutbaq) letters are semantically stronger than their non-emphatic counterparts",
+      "source": "Ibn Jinni + Ohala",
+      "status": "pending",
+      "experiments": [
+        {
+          "id": "5.2",
+          "name": null,
+          "status": "pending",
+          "metrics": null
+        }
+      ]
+    },
+    {
+      "id": "H10",
+      "name": "root_meaning_compositionality",
+      "claim": "The meaning of a triliteral root equals the compositional combination of its individual letter meanings",
+      "source": "Jabal (al-mu'adalat al-kimiyaiya)",
+      "status": "pending",
+      "experiments": [
+        {
+          "id": "3.2",
+          "name": null,
+          "status": "pending",
+          "metrics": null
+        }
+      ]
+    },
+    {
+      "id": "H11",
+      "name": "unsupervised_binary_structure_discovery",
+      "claim": "A machine learning model can discover the binary root structure without supervision",
+      "source": "Independent empirical test",
+      "status": "pending",
+      "experiments": [
+        {
+          "id": "6.2",
+          "name": null,
+          "status": "pending",
+          "metrics": null
+        }
+      ]
+    },
+    {
+      "id": "H12",
+      "name": "root_meaning_predictability",
+      "claim": "The axial meaning of a new root can be predicted from its binary root meaning and third letter meaning",
+      "source": "Al-quwwa al-tawlidiya (generative power)",
+      "status": "pending",
+      "experiments": [
+        {
+          "id": "6.1",
+          "name": null,
+          "status": "pending",
+          "metrics": null
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "inconclusive": 1,
+    "supported": 3,
+    "weak_signal": 1,
+    "weakly_supported": 1,
+    "not_supported": 1,
+    "pending": 5
+  }
+}
