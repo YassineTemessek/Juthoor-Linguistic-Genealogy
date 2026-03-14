@@ -1,6 +1,6 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-14
+**Last updated:** 2026-03-14 (after A.6+A.7 completion)
 
 ---
 
@@ -12,13 +12,13 @@
 
 | Task | Owner | Status | Commit | Notes |
 |------|-------|--------|--------|-------|
-| A.1 Download Hebrew Kaikki | Codex | IN PROGRESS | — | Codex working on it |
-| A.2 Extend adapter + ingest Hebrew | Codex | BLOCKED on A.1 | — | Add `"he"` to LANG_MAP |
-| A.3 Aramaic/Syriac download + ingest | Codex | IN PROGRESS | — | Check Kaikki availability first |
-| A.4 Persian download + ingest | Codex | IN PROGRESS | — | Same Kaikki pattern |
+| A.1 Download Hebrew Kaikki | Codex | DONE | `c133aa6` | 17,034 rows |
+| A.2 Extend adapter + ingest Hebrew | Codex | DONE | `c133aa6` | Added he, fa, arc to LANG_MAP |
+| A.3 Aramaic/Syriac download + ingest | Codex | DONE | `c133aa6` | 2,176 rows; Syriac (TEI) deferred |
+| A.4 Persian download + ingest | Codex | DONE | `c133aa6` | 19,361 rows |
 | A.5 Run LV0 mergers | Sonnet | DONE (nothing needed) | `1a55505` | Arabic already merged, Latin/Greek use kaikki.jsonl |
-| A.6 Hebrew ingest tests | Sonnet | BLOCKED on A.2 | — | Test schema, row count |
-| A.7 Expand benchmark (Arabic-Hebrew pairs) | Sonnet | BLOCKED on A.2 | — | 20+ gold pairs, 10 negatives |
+| A.6 Hebrew ingest tests | Sonnet | DONE | `8402308` | 22 tests (Hebrew+Persian+Aramaic), all pass |
+| A.7 Expand benchmark (Arabic-Hebrew pairs) | Sonnet | DONE | `8402308` | 15 gold cognates, 10 negatives added |
 
 ### Phase B: LV2 Genome Integration
 
@@ -26,7 +26,7 @@
 |------|-------|--------|--------|-------|
 | B.1 GenomeScorer module | Sonnet | DONE | `1a55505` | 396 coherence, 166 metathesis pairs, 13 tests |
 | B.2 Wire into scoring pipeline | Sonnet | DONE | `6c95e8e` | Optional genome_scorer param, 226 LV2 tests pass |
-| B.3 First Hebrew-Arabic discovery run | Codex | BLOCKED on A.2 + B.2 | — | Genome-enabled run |
+| B.3 First Hebrew-Arabic discovery run | Codex | UNBLOCKED — ready to go | — | Genome-enabled run |
 | B.4 Genome vs blind comparison | Codex | BLOCKED on B.3 | — | Compare metrics |
 | B.5 Review & analysis | Opus | BLOCKED on B.4 | — | Final review |
 
