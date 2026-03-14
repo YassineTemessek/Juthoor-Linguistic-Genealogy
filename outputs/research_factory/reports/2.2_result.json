@@ -1,0 +1,184 @@
+{
+  "experiment_id": "2.2",
+  "experiment_name": "missing_combinations",
+  "status": "completed",
+  "start_time": "2026-03-14T01:47:21.367380+00:00",
+  "end_time": "2026-03-14T01:47:21.487711+00:00",
+  "duration_seconds": 0.120331,
+  "metrics": {
+    "n_letters": 28,
+    "n_observed": 440,
+    "n_missing": 371,
+    "mean_observed_compatibility": 0.540041,
+    "mean_missing_compatibility": 0.565585,
+    "rank_sum_statistic": -2.483498,
+    "p_value": 0.01301,
+    "effect_size_d": -0.193367,
+    "supports_h7": false,
+    "lowest_20_missing": [
+      {
+        "binary_root": "سه",
+        "compatibility_score": 0.206869
+      },
+      {
+        "binary_root": "هس",
+        "compatibility_score": 0.206869
+      },
+      {
+        "binary_root": "هي",
+        "compatibility_score": 0.22073
+      },
+      {
+        "binary_root": "يه",
+        "compatibility_score": 0.22073
+      },
+      {
+        "binary_root": "ءه",
+        "compatibility_score": 0.243994
+      },
+      {
+        "binary_root": "هء",
+        "compatibility_score": 0.243994
+      },
+      {
+        "binary_root": "هو",
+        "compatibility_score": 0.248454
+      },
+      {
+        "binary_root": "وه",
+        "compatibility_score": 0.248454
+      },
+      {
+        "binary_root": "ره",
+        "compatibility_score": 0.266116
+      },
+      {
+        "binary_root": "هر",
+        "compatibility_score": 0.266116
+      },
+      {
+        "binary_root": "زه",
+        "compatibility_score": 0.27708
+      },
+      {
+        "binary_root": "هز",
+        "compatibility_score": 0.27708
+      },
+      {
+        "binary_root": "مه",
+        "compatibility_score": 0.28022
+      },
+      {
+        "binary_root": "هم",
+        "compatibility_score": 0.28022
+      },
+      {
+        "binary_root": "ده",
+        "compatibility_score": 0.291978
+      },
+      {
+        "binary_root": "هد",
+        "compatibility_score": 0.291978
+      },
+      {
+        "binary_root": "طه",
+        "compatibility_score": 0.294505
+      },
+      {
+        "binary_root": "هط",
+        "compatibility_score": 0.294505
+      },
+      {
+        "binary_root": "به",
+        "compatibility_score": 0.303066
+      },
+      {
+        "binary_root": "هب",
+        "compatibility_score": 0.303066
+      }
+    ],
+    "highest_20_missing": [
+      {
+        "binary_root": "يي",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "وو",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "هه",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "لل",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "قق",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "فف",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "غغ",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "عع",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "ظظ",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "طط",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "ضض",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "صص",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "شش",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "زز",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "رر",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "ذذ",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "دد",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "خخ",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "حح",
+        "compatibility_score": 1.0
+      },
+      {
+        "binary_root": "جج",
+        "compatibility_score": 1.0
+      }
+    ]
+  },
+  "error": null
+}

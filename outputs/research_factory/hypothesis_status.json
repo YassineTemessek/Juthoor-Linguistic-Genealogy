@@ -40,5 +40,23 @@
     "last_experiment_name": "binary_metathesis",
     "last_run_status": "completed",
     "last_run_time": "2026-03-14T00:25:41.264690+00:00"
+  },
+  "H12": {
+    "last_experiment_id": "6.4",
+    "last_experiment_name": "phantom_roots",
+    "last_run_status": "completed",
+    "last_run_time": "2026-03-14T01:46:57.626404+00:00"
+  },
+  "H11": {
+    "last_experiment_id": "6.2",
+    "last_experiment_name": "unsupervised_discovery",
+    "last_run_status": "completed",
+    "last_run_time": "2026-03-14T01:42:33.996188+00:00"
+  },
+  "H7": {
+    "last_experiment_id": "2.2",
+    "last_experiment_name": "missing_combinations",
+    "last_run_status": "completed",
+    "last_run_time": "2026-03-14T01:47:21.487711+00:00"
   }
 }
