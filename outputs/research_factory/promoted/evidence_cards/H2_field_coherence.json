@@ -1,0 +1,13 @@
+{
+  "hypothesis_id": "H2",
+  "hypothesis_name": "binary_root_field_stability",
+  "claim": "The binary root defines a stable semantic field",
+  "source": "Jabal",
+  "experiment_id": "2.3",
+  "experiment_name": "field_coherence",
+  "status": "supported",
+  "key_metric": "real_mean=0.540 vs baseline=0.518, >11 sigma",
+  "families_tested": 396,
+  "promotion_date": "2026-03-14",
+  "data_file": "promoted_features/field_coherence_scores.jsonl"
+}

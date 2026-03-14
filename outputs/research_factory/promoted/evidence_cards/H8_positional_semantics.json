@@ -1,0 +1,13 @@
+{
+  "hypothesis_id": "H8",
+  "hypothesis_name": "positional_meaning_shift",
+  "claim": "A letter's semantic contribution changes with its position in the root",
+  "source": "Al-Aqqad",
+  "experiment_id": "1.2",
+  "experiment_name": "positional_semantics",
+  "status": "supported",
+  "key_metric": "24/28 letters significant (86%), Kruskal-Wallis p<0.05, mean coherence=0.521",
+  "families_tested": 28,
+  "promotion_date": "2026-03-14",
+  "data_file": "promoted_features/positional_profiles.jsonl"
+}

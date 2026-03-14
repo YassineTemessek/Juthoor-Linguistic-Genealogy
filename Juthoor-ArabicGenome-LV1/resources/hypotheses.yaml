@@ -70,7 +70,11 @@ hypotheses:
     claim: "Some missing binary combinations are absent due to semantic contradiction between the two letters"
     source: "An-Najah University"
     experiments: ["2.2"]
-    status: "pending"
+    status: "not_supported"
+    evidence:
+      experiment_id: "2.2"
+      key_metric: "missing roots MORE compatible (0.566) than existing (0.540) — inverted, likely phonological not semantic"
+      verdict_date: "2026-03-14"
 
   - id: "H8"
     name: "positional_meaning_shift"
@@ -102,11 +106,19 @@ hypotheses:
     claim: "A machine learning model can discover the binary root structure without supervision"
     source: "Independent empirical test"
     experiments: ["6.2"]
-    status: "pending"
+    status: "not_supported"
+    evidence:
+      experiment_id: "6.2"
+      key_metric: "HDBSCAN ARI=0.0002, only 2 clusters found — binary structure is structural, not a semantic cluster"
+      verdict_date: "2026-03-14"
 
   - id: "H12"
     name: "root_meaning_predictability"
     claim: "The axial meaning of a new root can be predicted from its binary root meaning and third letter meaning"
     source: "Al-quwwa al-tawlidiya (generative power)"
-    experiments: ["6.1"]
-    status: "pending"
+    experiments: ["6.1", "6.4"]
+    status: "supported"
+    evidence:
+      experiment_id: "6.1"
+      key_metric: "MLP cosine=0.716 on test set; phantom root AUC=0.739 — meaning is predictable and theory is generative"
+      verdict_date: "2026-03-14"
