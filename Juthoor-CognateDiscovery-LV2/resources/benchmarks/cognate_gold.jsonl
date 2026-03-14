@@ -24,3 +24,18 @@
 {"source": {"lang": "ara", "lemma": "اسم", "gloss": "name"}, "target": {"lang": "eng", "lemma": "name", "gloss": "name"}, "relation": "cognate", "confidence": 0.7, "notes": "Common human word, etymology debated but likely common origin"}
 {"source": {"lang": "ara", "lemma": "بيت", "gloss": "house"}, "target": {"lang": "eng", "lemma": "booth", "gloss": "booth/stall"}, "relation": "cognate", "confidence": 0.6}
 {"source": {"lang": "ara", "lemma": "طريق", "gloss": "path/track"}, "target": {"lang": "eng", "lemma": "track", "gloss": "track"}, "relation": "cognate", "confidence": 0.5}
+{"source": {"lang": "ara", "lemma": "كتب", "gloss": "to write"}, "target": {"lang": "heb", "lemma": "כתב", "gloss": "to write"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root k-t-b"}
+{"source": {"lang": "ara", "lemma": "سلام", "gloss": "peace"}, "target": {"lang": "heb", "lemma": "שלום", "gloss": "peace"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root sh/s-l-m"}
+{"source": {"lang": "ara", "lemma": "ملك", "gloss": "king/rule"}, "target": {"lang": "heb", "lemma": "מלך", "gloss": "king/rule"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root m-l-k"}
+{"source": {"lang": "ara", "lemma": "يوم", "gloss": "day"}, "target": {"lang": "heb", "lemma": "יום", "gloss": "day"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root y-w-m"}
+{"source": {"lang": "ara", "lemma": "أكل", "gloss": "to eat"}, "target": {"lang": "heb", "lemma": "אכל", "gloss": "to eat"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root aleph-k-l"}
+{"source": {"lang": "ara", "lemma": "سمع", "gloss": "to hear"}, "target": {"lang": "heb", "lemma": "שמע", "gloss": "to hear"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root sh/s-m-ayin"}
+{"source": {"lang": "ara", "lemma": "أب", "gloss": "father"}, "target": {"lang": "heb", "lemma": "אב", "gloss": "father"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root aleph-b"}
+{"source": {"lang": "ara", "lemma": "أم", "gloss": "mother"}, "target": {"lang": "heb", "lemma": "אם", "gloss": "mother"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root aleph-m"}
+{"source": {"lang": "ara", "lemma": "ابن", "gloss": "son"}, "target": {"lang": "heb", "lemma": "בן", "gloss": "son"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root b-n"}
+{"source": {"lang": "ara", "lemma": "شمس", "gloss": "sun"}, "target": {"lang": "heb", "lemma": "שמש", "gloss": "sun"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root sh-m-sh"}
+{"source": {"lang": "ara", "lemma": "ليل", "gloss": "night"}, "target": {"lang": "heb", "lemma": "לילה", "gloss": "night"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root l-y-l"}
+{"source": {"lang": "ara", "lemma": "قرب", "gloss": "to be near/approach"}, "target": {"lang": "heb", "lemma": "קרב", "gloss": "to approach/draw near"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root q-r-b"}
+{"source": {"lang": "ara", "lemma": "كلب", "gloss": "dog"}, "target": {"lang": "heb", "lemma": "כלב", "gloss": "dog"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root k-l-b"}
+{"source": {"lang": "ara", "lemma": "ثلاثة", "gloss": "three"}, "target": {"lang": "heb", "lemma": "שלוש", "gloss": "three"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root th/sh-l-th/sh"}
+{"source": {"lang": "ara", "lemma": "سبعة", "gloss": "seven"}, "target": {"lang": "heb", "lemma": "שבע", "gloss": "seven"}, "relation": "cognate", "confidence": 1.0, "notes": "Common Semitic root sh/s-b-ayin"}
