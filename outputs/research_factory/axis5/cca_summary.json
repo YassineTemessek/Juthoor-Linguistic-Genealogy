@@ -1,0 +1,13 @@
+{
+  "n_letters": 28,
+  "articulatory_dims": 25,
+  "semantic_dims": 1024,
+  "semantic_pca_dims": 2,
+  "first_canonical_correlation": 0.962009,
+  "permutation_mean": 0.918038,
+  "permutation_p_value": 0.149,
+  "permutation_ci_low": 0.818164,
+  "permutation_ci_high": 0.98144,
+  "success_threshold": 0.4,
+  "supports_h1_via_cca": false
+}
