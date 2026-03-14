@@ -2,7 +2,8 @@
 Ingest Kaikki.org Wiktionary JSONL dumps into LV0 canonical JSONL.
 
 Supports: Ancient Greek (grc), Latin (la), Old English (ang),
-          Middle English (enm), Modern English (en).
+          Middle English (enm), Modern English (en), Hebrew (he),
+          Persian/Farsi (fa), Aramaic (arc).
 
 Default input locations (relative to repo root, or under LC_RESOURCES_DIR):
   grc  -> Resources/ancient_greek/kaikki.org-dictionary-AncientGreek.jsonl
@@ -10,6 +11,9 @@ Default input locations (relative to repo root, or under LC_RESOURCES_DIR):
   ang  -> Resources/english_old/kaikki.org-dictionary-OldEnglish.jsonl
   enm  -> Resources/english_middle/kaikki.org-dictionary-MiddleEnglish.jsonl
   en   -> Resources/english_modern/kaikki.org-dictionary-English.jsonl
+  he   -> Resources/hebrew/kaikki.org-dictionary-Hebrew.jsonl
+  fa   -> Resources/persian/kaikki.org-dictionary-Persian.jsonl
+  arc  -> Resources/aramaic/kaikki.org-dictionary-Aramaic.jsonl
 
 Default output locations (relative to repo root):
   grc  -> data/processed/ancient_greek/sources/kaikki.jsonl
@@ -17,6 +21,9 @@ Default output locations (relative to repo root):
   ang  -> data/processed/english_old/sources/kaikki.jsonl
   enm  -> data/processed/english_middle/sources/kaikki.jsonl
   en   -> data/processed/english_modern/sources/kaikki.jsonl
+  he   -> data/processed/hebrew/sources/kaikki.jsonl
+  fa   -> data/processed/persian/modern/sources/kaikki.jsonl
+  arc  -> data/processed/aramaic/classical/sources/kaikki.jsonl
 """
 
 from __future__ import annotations
@@ -51,6 +58,9 @@ LANG_MAP: dict[str, tuple[str, str, str]] = {
     "ang": ("ang", "old", "Latn"),
     "enm": ("enm", "middle", "Latn"),
     "en":  ("eng", "modern", "Latn"),
+    "he":  ("heb", "modern", "Hebr"),
+    "fa":  ("fas", "modern", "Arab"),
+    "arc": ("arc", "classical", "Hebr"),
 }
 
 # lang_code -> relative path WITHIN Resources/ (no Resources/ prefix)
@@ -60,6 +70,9 @@ LANG_CODE_TO_FILE: dict[str, str] = {
     "ang": "english_old/kaikki.org-dictionary-OldEnglish.jsonl",
     "enm": "english_middle/kaikki.org-dictionary-MiddleEnglish.jsonl",
     "en":  "english_modern/kaikki.org-dictionary-English.jsonl",
+    "he":  "hebrew/kaikki.org-dictionary-Hebrew.jsonl",
+    "fa":  "persian/kaikki.org-dictionary-Persian.jsonl",
+    "arc": "aramaic/kaikki.org-dictionary-Aramaic.jsonl",
 }
 
 _DEFAULT_OUTPUT: dict[str, str] = {
@@ -68,6 +81,9 @@ _DEFAULT_OUTPUT: dict[str, str] = {
     "ang": "data/processed/english_old/sources/kaikki.jsonl",
     "enm": "data/processed/english_middle/sources/kaikki.jsonl",
     "en":  "data/processed/english_modern/sources/kaikki.jsonl",
+    "he":  "data/processed/hebrew/sources/kaikki.jsonl",
+    "fa":  "data/processed/persian/modern/sources/kaikki.jsonl",
+    "arc": "data/processed/aramaic/classical/sources/kaikki.jsonl",
 }
 
 
