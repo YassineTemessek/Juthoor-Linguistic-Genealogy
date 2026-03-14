@@ -1,10 +1,10 @@
 {
   "letters_profiled": 28,
-  "letters_with_data": 27,
-  "mean_consistency": 0.033516,
+  "letters_with_data": 28,
+  "mean_consistency": 0.033302,
   "letters_above_0_5": 0,
   "share_above_0_5": 0.0,
-  "shuffled_baseline_mean": 0.02886,
-  "shuffled_baseline_std": 0.001233,
-  "z_score_vs_shuffled": 3.775729
+  "shuffled_baseline_mean": 0.028915,
+  "shuffled_baseline_std": 0.001249,
+  "z_score_vs_shuffled": 3.513558
 }
