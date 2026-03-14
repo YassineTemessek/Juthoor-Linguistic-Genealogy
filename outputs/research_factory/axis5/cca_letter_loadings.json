@@ -1,0 +1,142 @@
+[
+  {
+    "letter": "ء",
+    "articulatory_score": 0.150999,
+    "semantic_score": 0.367465
+  },
+  {
+    "letter": "ب",
+    "articulatory_score": -1.542479,
+    "semantic_score": -1.772988
+  },
+  {
+    "letter": "ت",
+    "articulatory_score": 0.91677,
+    "semantic_score": 0.675939
+  },
+  {
+    "letter": "ث",
+    "articulatory_score": 0.732114,
+    "semantic_score": 0.835759
+  },
+  {
+    "letter": "ج",
+    "articulatory_score": -1.404092,
+    "semantic_score": -1.377881
+  },
+  {
+    "letter": "ح",
+    "articulatory_score": -1.152914,
+    "semantic_score": -0.927543
+  },
+  {
+    "letter": "خ",
+    "articulatory_score": -0.025142,
+    "semantic_score": 0.24631
+  },
+  {
+    "letter": "د",
+    "articulatory_score": 0.090443,
+    "semantic_score": 0.418201
+  },
+  {
+    "letter": "ذ",
+    "articulatory_score": 0.742275,
+    "semantic_score": 1.147913
+  },
+  {
+    "letter": "ر",
+    "articulatory_score": -1.213075,
+    "semantic_score": -1.208453
+  },
+  {
+    "letter": "ز",
+    "articulatory_score": 0.195524,
+    "semantic_score": 0.336632
+  },
+  {
+    "letter": "س",
+    "articulatory_score": 0.185363,
+    "semantic_score": -0.564518
+  },
+  {
+    "letter": "ش",
+    "articulatory_score": 0.264115,
+    "semantic_score": 0.262854
+  },
+  {
+    "letter": "ص",
+    "articulatory_score": 1.185541,
+    "semantic_score": 1.786318
+  },
+  {
+    "letter": "ض",
+    "articulatory_score": 1.482497,
+    "semantic_score": 1.476798
+  },
+  {
+    "letter": "ط",
+    "articulatory_score": 1.090621,
+    "semantic_score": 0.994498
+  },
+  {
+    "letter": "ظ",
+    "articulatory_score": 1.742453,
+    "semantic_score": 1.221577
+  },
+  {
+    "letter": "ع",
+    "articulatory_score": -1.142752,
+    "semantic_score": -1.358005
+  },
+  {
+    "letter": "غ",
+    "articulatory_score": -0.014981,
+    "semantic_score": -0.284421
+  },
+  {
+    "letter": "ف",
+    "articulatory_score": 1.436656,
+    "semantic_score": 1.430574
+  },
+  {
+    "letter": "ق",
+    "articulatory_score": 0.109265,
+    "semantic_score": 0.108213
+  },
+  {
+    "letter": "ك",
+    "articulatory_score": 0.433044,
+    "semantic_score": 0.431593
+  },
+  {
+    "letter": "ل",
+    "articulatory_score": -1.136786,
+    "semantic_score": -1.132993
+  },
+  {
+    "letter": "م",
+    "articulatory_score": -0.581737,
+    "semantic_score": -0.580055
+  },
+  {
+    "letter": "ن",
+    "articulatory_score": -0.895177,
+    "semantic_score": -0.89177
+  },
+  {
+    "letter": "ه",
+    "articulatory_score": 0.247737,
+    "semantic_score": 0.031021
+  },
+  {
+    "letter": "و",
+    "articulatory_score": -0.599091,
+    "semantic_score": -0.360148
+  },
+  {
+    "letter": "ي",
+    "articulatory_score": -1.297192,
+    "semantic_score": -1.31289
+  }
+]

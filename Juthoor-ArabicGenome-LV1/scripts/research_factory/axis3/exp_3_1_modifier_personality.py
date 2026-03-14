@@ -37,11 +37,12 @@ plot_scatter_with_labels = _visualization.plot_scatter_with_labels
 OUTPUT_DIR = REPO_ROOT / "outputs" / "research_factory" / "axis3"
 ARABIC_LETTERS = "ءابتثجحخدذرزسشصضطظعغفقكلمنهويى"
 ARABIC_RE = re.compile(f"[{ARABIC_LETTERS}]")
+SPLIT_RE = re.compile(r"(?:/|-|←|\s)+")
 NORMALIZE_MAP = str.maketrans({"أ": "ء", "إ": "ء", "آ": "ء", "ى": "ي"})
 
 
 def canonical_added_letter(tri_root: str) -> str | None:
-    candidate = re.split(r"[/\-← ]+", tri_root.strip())[0]
+    candidate = SPLIT_RE.split(tri_root.strip())[0]
     letters = ARABIC_RE.findall(candidate)
     if not letters:
         return None
@@ -64,6 +65,36 @@ def cosine(a: np.ndarray, b: np.ndarray) -> float:
     if denom == 0:
         return 0.0
     return float(np.dot(a, b) / denom)
+
+
+def shuffled_consistency_baseline(
+    grouped_vectors: dict[str, list[np.ndarray]],
+    *,
+    n_iter: int = 500,
+    random_state: int = 42,
+) -> tuple[float, float, float]:
+    rng = np.random.default_rng(random_state)
+    counts = {letter: len(vectors) for letter, vectors in grouped_vectors.items() if vectors}
+    all_vectors = [vector for vectors in grouped_vectors.values() for vector in vectors]
+    if not all_vectors:
+        return 0.0, 0.0, 1.0
+    matrix = np.asarray(all_vectors, dtype=np.float32)
+    scores = []
+    for _ in range(n_iter):
+        perm = matrix[rng.permutation(matrix.shape[0])]
+        pos = 0
+        iter_scores = []
+        for count in counts.values():
+            group = perm[pos : pos + count]
+            pos += count
+            consistency = pairwise_consistency(group)
+            if consistency is not None:
+                iter_scores.append(consistency)
+        if iter_scores:
+            scores.append(float(np.mean(iter_scores)))
+    score_arr = np.asarray(scores, dtype=np.float32)
+    observed_placeholder = 0.0
+    return float(np.mean(score_arr)), float(np.std(score_arr)), observed_placeholder
 
 
 def run_modifier_personality() -> dict:
@@ -133,15 +164,21 @@ def run_modifier_personality() -> dict:
     plot_scatter_with_labels(consistencies, alignments, labels, "Modifier Consistency vs Letter Alignment", OUTPUT_DIR / "personality_vs_letter_meaning.png")
 
     consistencies_non_null = [row["consistency"] for row in profile_rows if row["consistency"] is not None]
+    observed_mean = float(np.mean(consistencies_non_null)) if consistencies_non_null else 0.0
+    baseline_mean, baseline_std, _ = shuffled_consistency_baseline(grouped_vectors)
+    z_score = (observed_mean - baseline_mean) / baseline_std if baseline_std > 0 else 0.0
     summary = {
         "letters_profiled": len(profile_rows),
         "letters_with_data": sum(1 for row in profile_rows if row["n_roots"] > 0),
-        "mean_consistency": round(float(np.mean(consistencies_non_null)), 6) if consistencies_non_null else None,
+        "mean_consistency": round(observed_mean, 6) if consistencies_non_null else None,
         "letters_above_0_5": sum(1 for row in profile_rows if row["consistency"] is not None and float(row["consistency"]) > 0.5),
         "share_above_0_5": round(
             float(sum(1 for row in profile_rows if row["consistency"] is not None and float(row["consistency"]) > 0.5) / max(1, len(consistencies_non_null))),
             6,
         ) if consistencies_non_null else 0.0,
+        "shuffled_baseline_mean": round(baseline_mean, 6),
+        "shuffled_baseline_std": round(baseline_std, 6),
+        "z_score_vs_shuffled": round(float(z_score), 6),
     }
     (OUTPUT_DIR / "consistency_scores.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     return summary

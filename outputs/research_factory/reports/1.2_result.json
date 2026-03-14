@@ -1,0 +1,40 @@
+{
+  "experiment_id": "1.2",
+  "experiment_name": "positional_semantics",
+  "status": "completed",
+  "start_time": "2026-03-14T00:17:07.345968+00:00",
+  "end_time": "2026-03-14T00:17:10.118115+00:00",
+  "duration_seconds": 2.772147,
+  "metrics": {
+    "letters_profiled": 28,
+    "letters_with_significant_position_effect": 24,
+    "significant_letters": [
+      "ء",
+      "ب",
+      "ت",
+      "ث",
+      "ج",
+      "ح",
+      "خ",
+      "د",
+      "ر",
+      "ز",
+      "س",
+      "ش",
+      "ص",
+      "ض",
+      "ط",
+      "ع",
+      "ف",
+      "ق",
+      "ل",
+      "م",
+      "ن",
+      "ه",
+      "و",
+      "ي"
+    ],
+    "mean_position_coherence": 0.520929
+  },
+  "error": null
+}
