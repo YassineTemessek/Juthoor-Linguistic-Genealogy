@@ -162,16 +162,12 @@ jobs:
       - name: Build LV3
         run: python -m build Juthoor-Origins-LV3
 
-      - name: Build QCA
-        run: python -m build Quran-Corpus-Analysis
-
       - name: Check distributions
         run: |
           twine check Juthoor-DataCore-LV0/dist/*
           twine check Juthoor-ArabicGenome-LV1/dist/*
           twine check Juthoor-CognateDiscovery-LV2/dist/*
           twine check Juthoor-Origins-LV3/dist/*
-          twine check Quran-Corpus-Analysis/dist/*
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -182,4 +178,3 @@ jobs:
             Juthoor-ArabicGenome-LV1/dist/*
             Juthoor-CognateDiscovery-LV2/dist/*
             Juthoor-Origins-LV3/dist/*
-            Quran-Corpus-Analysis/dist/*
