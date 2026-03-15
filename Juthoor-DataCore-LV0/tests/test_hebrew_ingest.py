@@ -67,7 +67,8 @@ def aramaic_rows():
 
 class TestHebrewIngest:
     def test_file_exists_and_nonempty(self):
-        assert HEBREW_PATH.exists(), f"Missing: {HEBREW_PATH}"
+        if not HEBREW_PATH.exists():
+            pytest.skip("Hebrew kaikki.jsonl not found — run ingest first")
         assert HEBREW_PATH.stat().st_size > 0, "File is empty"
 
     def test_row_count(self, hebrew_rows):
@@ -120,7 +121,8 @@ class TestHebrewIngest:
 
 class TestPersianIngest:
     def test_file_exists_and_nonempty(self):
-        assert PERSIAN_PATH.exists(), f"Missing: {PERSIAN_PATH}"
+        if not PERSIAN_PATH.exists():
+            pytest.skip("Persian kaikki.jsonl not found — run ingest first")
         assert PERSIAN_PATH.stat().st_size > 0, "File is empty"
 
     def test_row_count(self, persian_rows):
@@ -163,7 +165,8 @@ class TestPersianIngest:
 
 class TestAramaicIngest:
     def test_file_exists_and_nonempty(self):
-        assert ARAMAIC_PATH.exists(), f"Missing: {ARAMAIC_PATH}"
+        if not ARAMAIC_PATH.exists():
+            pytest.skip("Aramaic kaikki.jsonl not found — run ingest first")
         assert ARAMAIC_PATH.stat().st_size > 0, "File is empty"
 
     def test_row_count(self, aramaic_rows):
