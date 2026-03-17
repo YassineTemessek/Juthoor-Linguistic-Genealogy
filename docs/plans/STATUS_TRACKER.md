@@ -1,38 +1,59 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-14 (LV0+LV2 plan COMPLETE)
+**Last updated:** 2026-03-16 (LV2 Evaluation Expansion plan active)
 
 ---
 
-## Active Plan: LV0 Data Expansion + LV2 Genome Integration
-**Plan file:** `docs/plans/LV0_LV2_EXECUTION_ORCHESTRATION.md`
-**Baseline commit:** `1879e32`
+## Active Plan: LV2 Evaluation Expansion
+**Plan file:** `docs/plans/2026-03-16-lv2-evaluation-expansion.md`
+**Baseline commit:** `91c3006`
 
-### Phase A: LV0 Data Expansion
-
-| Task | Owner | Status | Commit | Notes |
-|------|-------|--------|--------|-------|
-| A.1 Download Hebrew Kaikki | Codex | DONE | `c133aa6` | 17,034 rows |
-| A.2 Extend adapter + ingest Hebrew | Codex | DONE | `c133aa6` | Added he, fa, arc to LANG_MAP |
-| A.3 Aramaic/Syriac download + ingest | Codex | DONE | `c133aa6` | 2,176 rows; Syriac (TEI) deferred |
-| A.4 Persian download + ingest | Codex | DONE | `c133aa6` | 19,361 rows |
-| A.5 Run LV0 mergers | Sonnet | DONE (nothing needed) | `1a55505` | Arabic already merged, Latin/Greek use kaikki.jsonl |
-| A.6 Hebrew ingest tests | Sonnet | DONE | `8402308` | 22 tests (Hebrew+Persian+Aramaic), all pass |
-| A.7 Expand benchmark (Arabic-Hebrew pairs) | Sonnet | DONE | `8402308` | 15 gold cognates, 10 negatives added |
-
-### Phase B: LV2 Genome Integration
+### Phase A: Benchmark Expansion to 100+ Pairs
 
 | Task | Owner | Status | Commit | Notes |
 |------|-------|--------|--------|-------|
-| B.1 GenomeScorer module | Sonnet | DONE | `1a55505` | 396 coherence, 166 metathesis pairs, 13 tests |
-| B.2 Wire into scoring pipeline | Sonnet | DONE | `6c95e8e` | Optional genome_scorer param, 226 LV2 tests pass |
-| B.3 First Hebrew-Arabic discovery run | Codex | DONE | `89f812c` | 550 leads, 19 gold pairs, Recall@50=1.0 |
-| B.4 Genome vs blind comparison | Codex | DONE | `89f812c` | MRR +0.040, nDCG +0.032 (genome helps ranking) |
-| B.5 Review & analysis | Opus | DONE | see below | `outputs/reports/lv2_genome_integration_review.md` |
+| A.1 Expand Arabic-Hebrew gold to 50+ | Sonnet | TODO | | |
+| A.2 Add 20+ Arabic-Persian pairs | Sonnet | TODO | | |
+| A.3 Add 15+ Arabic-Aramaic pairs | Sonnet | TODO | | |
+| A.4 Strengthen negatives to 30+ | Sonnet | TODO | | |
+
+### Phase B: Multi-Pair Discovery + Reranker
+
+| Task | Owner | Status | Commit | Notes |
+|------|-------|--------|--------|-------|
+| B.1 Arabic-Persian discovery (blind+genome) | Codex | TODO | | Depends on A.2 |
+| B.2 Arabic-Aramaic discovery (blind+genome) | Codex | TODO | | Depends on A.3 |
+| B.3 Arabic-Hebrew re-eval (50+ pairs) | Codex | TODO | | Depends on A.1 |
+| B.4 Add genome_bonus to reranker features | Sonnet | TODO | | Independent |
+| B.5 Persist genome_bonus in lead components | Sonnet | TODO | | Depends on B.4 |
+| B.6 Train reranker with genome feature | Codex | TODO | | Depends on B.3, B.5 |
+| B.7 Multi-pair evaluation review | Opus | TODO | | Depends on B.1-B.3, B.6 |
+
+### Phase C: GenomeScorer Extension + LV1 Refinements
+
+| Task | Owner | Status | Commit | Notes |
+|------|-------|--------|--------|-------|
+| C.1 Aramaic consonant mapping | Sonnet | TODO | | Depends on B.7 |
+| C.2 Persian consonant mapping | Sonnet | TODO | | Depends on B.7 |
+| C.3 H9 emphatic experiment | Codex | TODO | | Independent |
+| C.4 H10 compositionality experiment | Codex | TODO | | Independent |
+| C.5 Hebrew cross-lingual H2/H5/H8 | Codex | TODO | | Depends on C.3, C.4, B.7 |
 
 ---
 
 ## Completed Plans
+
+### LV0 Data Expansion + LV2 Genome Integration (COMPLETE)
+**Plan file:** `docs/plans/LV0_LV2_EXECUTION_ORCHESTRATION.md`
+**Final commit:** `89f812c`
+**Review:** `outputs/reports/lv2_genome_integration_review.md`
+
+| Phase | Status | Key Results |
+|-------|--------|-------------|
+| Phase A: LV0 Data Expansion | DONE (7/7) | Hebrew 17K, Persian 19K, Aramaic 2.2K ingested |
+| Phase B: LV2 Genome Integration | DONE (5/5) | GenomeScorer works, MRR +0.040, nDCG +0.032 |
+
+---
 
 ### LV1 Research Factory (COMPLETE)
 **Plan file:** `docs/plans/RESEARCH_FACTORY_MASTER_PLAN.md`
@@ -91,10 +112,10 @@
 
 | Level | Tests | Last verified |
 |-------|-------|---------------|
-| LV0 | 145 | 2026-03-14 |
-| LV1 | 227 | 2026-03-14 |
-| LV2 | 226 | 2026-03-14 |
-| **Total** | **598** | |
+| LV0 | 174 | 2026-03-16 |
+| LV1 | 227 | 2026-03-16 |
+| LV2 | 215 | 2026-03-16 |
+| **Total** | **616** | |
 
 ---
 
@@ -115,7 +136,9 @@
 | `1879e32` | LV0+LV2 orchestration plan pushed |
 | `1a55505` | GenomeScorer module + LV0 mergers verified |
 | `6c95e8e` | GenomeScorer wired into LV2 scoring pipeline |
+| `89f812c` | First genome-informed Arabic-Hebrew discovery run |
+| `91c3006` | CI fixes (green), LV2 Evaluation Expansion plan baseline |
 
 ---
 
-*Last updated: 2026-03-14 — after B.2 completion*
+*Last updated: 2026-03-16 — LV2 Evaluation Expansion plan created*
