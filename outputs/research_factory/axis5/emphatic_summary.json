@@ -1,0 +1,42 @@
+{
+  "n_pairs": 19,
+  "mean_emphatic_effect": 0.465104,
+  "mean_plain_effect": 0.479143,
+  "mean_diff": -0.014038,
+  "median_diff": -0.005882,
+  "positive_differences": 9,
+  "negative_differences": 10,
+  "wilcoxon_statistic": 95.0,
+  "p_value": 0.507839,
+  "supports_h9": false,
+  "pair_summaries": [
+    {
+      "pair_id": "ت_ط",
+      "n_pairs": 6,
+      "mean_emphatic_effect": 0.456358,
+      "mean_plain_effect": 0.481901,
+      "mean_diff": -0.025543
+    },
+    {
+      "pair_id": "د_ض",
+      "n_pairs": 10,
+      "mean_emphatic_effect": 0.461746,
+      "mean_plain_effect": 0.474879,
+      "mean_diff": -0.013133
+    },
+    {
+      "pair_id": "س_ص",
+      "n_pairs": 3,
+      "mean_emphatic_effect": 0.493794,
+      "mean_plain_effect": 0.48784,
+      "mean_diff": 0.005954
+    },
+    {
+      "pair_id": "ذ_ظ",
+      "n_pairs": 0,
+      "mean_emphatic_effect": null,
+      "mean_plain_effect": null,
+      "mean_diff": null
+    }
+  ]
+}
