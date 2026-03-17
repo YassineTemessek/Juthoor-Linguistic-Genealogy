@@ -12,10 +12,10 @@
 
 | Task | Owner | Status | Commit | Notes |
 |------|-------|--------|--------|-------|
-| A.1 Expand Arabic-Hebrew gold to 50+ | Sonnet | TODO | | |
-| A.2 Add 20+ Arabic-Persian pairs | Sonnet | TODO | | |
-| A.3 Add 15+ Arabic-Aramaic pairs | Sonnet | TODO | | |
-| A.4 Strengthen negatives to 30+ | Sonnet | TODO | | |
+| A.1 Expand Arabic-Hebrew gold to 50+ | Sonnet | DONE | `9d9e9be` | 50 ara-heb pairs |
+| A.2 Add 20+ Arabic-Persian pairs | Sonnet | DONE | `460f72c` | 20 ara-fa pairs |
+| A.3 Add 15+ Arabic-Aramaic pairs | Sonnet | DONE | `460f72c` | 18 ara-arc pairs |
+| A.4 Strengthen negatives to 30+ | Sonnet | DONE | `460f72c` | 30 negatives, 13 false friends |
 
 ### Phase B: Multi-Pair Discovery + Reranker
 
@@ -24,8 +24,8 @@
 | B.1 Arabic-Persian discovery (blind+genome) | Codex | TODO | | Depends on A.2 |
 | B.2 Arabic-Aramaic discovery (blind+genome) | Codex | TODO | | Depends on A.3 |
 | B.3 Arabic-Hebrew re-eval (50+ pairs) | Codex | TODO | | Depends on A.1 |
-| B.4 Add genome_bonus to reranker features | Sonnet | TODO | | Independent |
-| B.5 Persist genome_bonus in lead components | Sonnet | TODO | | Depends on B.4 |
+| B.4 Add genome_bonus to reranker features | Sonnet | DONE | `37872b6` | 11th feature, backward compatible |
+| B.5 Persist genome_bonus in lead components | Sonnet | DONE | `460f72c` | Fixed: was at hybrid level, now in components |
 | B.6 Train reranker with genome feature | Codex | TODO | | Depends on B.3, B.5 |
 | B.7 Multi-pair evaluation review | Opus | TODO | | Depends on B.1-B.3, B.6 |
 
@@ -114,8 +114,8 @@
 |-------|-------|---------------|
 | LV0 | 174 | 2026-03-16 |
 | LV1 | 227 | 2026-03-16 |
-| LV2 | 215 | 2026-03-16 |
-| **Total** | **616** | |
+| LV2 | 229 | 2026-03-17 |
+| **Total** | **630** | |
 
 ---
 
