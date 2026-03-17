@@ -1,0 +1,20 @@
+{
+  "experiment_id": "3.2",
+  "experiment_name": "compositionality",
+  "status": "completed",
+  "start_time": "2026-03-17T16:57:24.357859+00:00",
+  "end_time": "2026-03-17T16:57:58.147601+00:00",
+  "duration_seconds": 33.789742,
+  "metrics": {
+    "n_examples": 1880,
+    "additive_mean_cosine": 0.598537,
+    "binary_only_mean_cosine": 0.556267,
+    "mean_improvement_over_binary": 0.04227,
+    "shuffle_mean_cosine": 0.586983,
+    "shuffle_std": 0.000736,
+    "permutation_p_value": 0.000999,
+    "supports_compositional_signal": true,
+    "supports_full_compositionality": false
+  },
+  "error": null
+}

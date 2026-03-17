@@ -58,5 +58,17 @@
     "last_experiment_name": "missing_combinations",
     "last_run_status": "completed",
     "last_run_time": "2026-03-14T01:47:21.487711+00:00"
+  },
+  "H9": {
+    "last_experiment_id": "5.2",
+    "last_experiment_name": "emphasis_hypothesis",
+    "last_run_status": "completed",
+    "last_run_time": "2026-03-17T16:57:25.801337+00:00"
+  },
+  "H10": {
+    "last_experiment_id": "3.2",
+    "last_experiment_name": "compositionality",
+    "last_run_status": "completed",
+    "last_run_time": "2026-03-17T16:57:58.147601+00:00"
   }
 }
