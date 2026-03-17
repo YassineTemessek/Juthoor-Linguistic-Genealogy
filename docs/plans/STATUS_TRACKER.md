@@ -33,10 +33,10 @@
 
 | Task | Owner | Status | Commit | Notes |
 |------|-------|--------|--------|-------|
-| C.1 Aramaic consonant mapping | Sonnet | TODO | | Depends on B.7 |
-| C.2 Persian consonant mapping | Sonnet | TODO | | Depends on B.7 |
-| C.3 H9 emphatic experiment | Codex | TODO | | Independent |
-| C.4 H10 compositionality experiment | Codex | TODO | | Independent |
+| C.1 Aramaic consonant mapping | Sonnet | DONE | `f80876a` | All 22 Hebrew-script letters verified |
+| C.2 Persian consonant mapping | Sonnet | DONE | `f80876a` | Added پ/چ/ژ/گ/ک/ی, extended regex range |
+| C.3 H9 emphatic experiment | Codex | DONE | `3355ad5` | Not supported |
+| C.4 H10 compositionality experiment | Codex | DONE | `3355ad5` | Real signal, not full compositionality |
 | C.5 Hebrew cross-lingual H2/H5/H8 | Codex | TODO | | Depends on C.3, C.4, B.7 |
 
 ---
@@ -114,8 +114,8 @@
 |-------|-------|---------------|
 | LV0 | 174 | 2026-03-16 |
 | LV1 | 227 | 2026-03-16 |
-| LV2 | 229 | 2026-03-17 |
-| **Total** | **630** | |
+| LV2 | 246 | 2026-03-18 |
+| **Total** | **647** | |
 
 ---
 
