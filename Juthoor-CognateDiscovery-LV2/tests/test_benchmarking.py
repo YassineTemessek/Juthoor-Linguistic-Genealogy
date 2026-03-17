@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from juthoor_cognatediscovery_lv2.discovery.benchmarking import (
+    _norm_lang,
     apply_gloss_overrides,
     build_root_family_benchmark_source,
     compare_metrics,
@@ -155,3 +156,81 @@ def test_evaluate_leads_against_benchmarks(tmp_path: Path):
     )
     metrics = evaluate_leads_against_benchmarks(leads, [benchmark], top_k=5)
     assert metrics["mrr"] == 1.0
+
+
+# --- ISO 639-1 / 639-3 normalization tests ---
+
+def test_norm_lang_maps_fa_to_fas():
+    assert _norm_lang("fa") == "fas"
+    assert _norm_lang("fas") == "fas"
+    assert _norm_lang("FA") == "fas"   # case insensitive
+
+
+def test_norm_lang_maps_he_to_heb():
+    assert _norm_lang("he") == "heb"
+    assert _norm_lang("heb") == "heb"
+    assert _norm_lang("HEB") == "heb"
+
+
+def test_norm_lang_maps_ar_to_ara():
+    assert _norm_lang("ar") == "ara"
+    assert _norm_lang("ara") == "ara"
+
+
+def test_norm_lang_maps_en_to_eng():
+    assert _norm_lang("en") == "eng"
+    assert _norm_lang("eng") == "eng"
+
+
+def test_norm_lang_passes_through_unknown_codes():
+    assert _norm_lang("grc") == "grc"
+    assert _norm_lang("arc") == "arc"
+    assert _norm_lang("xyz") == "xyz"
+
+
+def test_extract_benchmark_subset_matches_persian_corpus():
+    """Benchmark pairs with lang='fa' must match corpus rows with language='fas'."""
+    pairs = [
+        BenchmarkPair("ara", "باد", "fa", "باد", "cognate", target_gloss="wind"),
+    ]
+    corpus_rows = [
+        {"language": "fas", "lemma": "باد", "lexeme_id": "fas1"},
+        {"language": "fas", "lemma": "آب", "lexeme_id": "fas2"},
+    ]
+    subset = extract_benchmark_subset(corpus_rows, pairs, lang="fa", side="target")
+    assert len(subset) == 1
+    assert subset[0]["lemma"] == "باد"
+    assert subset[0]["short_gloss"] == "wind"
+
+
+def test_extract_benchmark_subset_fa_and_fas_are_equivalent():
+    """Calling with lang='fas' should find the same rows as lang='fa'."""
+    pairs = [
+        BenchmarkPair("ara", "باد", "fa", "باد", "cognate"),
+    ]
+    corpus_rows = [{"language": "fas", "lemma": "باد"}]
+    subset_fa = extract_benchmark_subset(corpus_rows, pairs, lang="fa", side="target")
+    subset_fas = extract_benchmark_subset(corpus_rows, pairs, lang="fas", side="target")
+    assert len(subset_fa) == 1
+    assert len(subset_fas) == 1
+
+
+def test_filter_available_benchmark_pairs_persian_cross_code():
+    """Benchmark pair with target_lang='fa' should match corpus row with language='fas'."""
+    pairs = [
+        BenchmarkPair("ara", "باد", "fa", "باد", "cognate"),
+        BenchmarkPair("ara", "آب", "fa", "آب", "cognate"),
+    ]
+    available = filter_available_benchmark_pairs(
+        pairs,
+        source_rows=[
+            {"lang": "ara", "lemma": "باد"},
+            {"lang": "ara", "lemma": "آب"},
+        ],
+        target_rows=[
+            {"language": "fas", "lemma": "باد"},
+            # آب intentionally absent to test partial match
+        ],
+    )
+    assert len(available) == 1
+    assert available[0]["target"]["lemma"] == "باد"
