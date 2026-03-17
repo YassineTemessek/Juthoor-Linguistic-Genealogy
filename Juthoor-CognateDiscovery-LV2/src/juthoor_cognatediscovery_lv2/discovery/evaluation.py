@@ -131,6 +131,19 @@ def evaluate_pairs(
     return results, build_metrics(results)
 
 
+def recall_at_k(results: Iterable[MatchResult], k: int) -> float:
+    """Compute recall for a specific k, independent of the top_k stored in each MatchResult."""
+    items = list(results)
+    total = len(items)
+    if not total:
+        return 0.0
+    hits = sum(
+        1 for item in items
+        if item.found_rank is not None and item.found_rank <= k
+    )
+    return round(hits / total, 6)
+
+
 def build_metrics(results: Iterable[MatchResult]) -> dict[str, Any]:
     items = list(results)
     total = len(items)
@@ -158,6 +171,9 @@ def build_metrics(results: Iterable[MatchResult]) -> dict[str, Any]:
         "total_pairs": total,
         "hits": hits,
         "recall": round(hits / total, 6) if total else 0.0,
+        "recall@10": recall_at_k(items, 10),
+        "recall@50": recall_at_k(items, 50),
+        "recall@100": recall_at_k(items, 100),
         "mrr": round(mrr / total, 6) if total else 0.0,
         "ndcg": round(ndcg / total, 6) if total else 0.0,
         "weighted_mrr": round(weighted_mrr / weighted_total, 6) if weighted_total else 0.0,
