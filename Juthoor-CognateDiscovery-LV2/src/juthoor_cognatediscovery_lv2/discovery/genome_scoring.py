@@ -27,8 +27,9 @@ _NORMALIZE_MAP = str.maketrans(
         "ך": "כ", "ם": "מ", "ן": "נ", "ף": "פ", "ץ": "צ",
     }
 )
-_SEMITIC_RE = re.compile(r"[\u0621-\u064A\u05D0-\u05EA]")
+_SEMITIC_RE = re.compile(r"[\u0600-\u06FF\u05D0-\u05EA]")
 _LETTER_CLASS = {
+    # Arabic + Hebrew shared consonant classes
     "ا": "ʔ", "א": "ʔ",
     "ب": "b", "ב": "b",
     "ت": "t", "ט": "t", "ת": "t",
@@ -54,6 +55,13 @@ _LETTER_CLASS = {
     "ه": "h", "ה": "h",
     "و": "w", "ו": "w",
     "ي": "y", "י": "y",
+    # Persian-specific letters (U+06xx extended Arabic block)
+    "پ": "p",   # Persian pe  (U+067E) — no Arabic equivalent
+    "چ": "č",   # Persian che (U+0686)
+    "ژ": "ž",   # Persian zhe (U+0698)
+    "گ": "g",   # Persian gaf (U+06AF)
+    "ک": "k",   # Persian keheh (U+06A9) — variant of Arabic ك
+    "ی": "y",   # Persian yeh  (U+06CC) — variant of Arabic ي
 }
 
 
