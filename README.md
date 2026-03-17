@@ -14,7 +14,7 @@ This monorepo consolidates a multi-layered research stack -- from raw data inges
 
 | Level | Module | Description |
 | :--- | :--- | :--- |
-| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** Data engine that ingests, normalizes, and canonizes lexical data from diverse sources (Wiktionary, Lane, Taj al-Arus, Khorsi). Single source of truth for ~2.6M lexemes across 6 languages. |
+| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** Data engine that ingests, normalizes, and canonizes lexical data from diverse sources (Wiktionary, Lane, Taj al-Arus, Khorsi). Single source of truth for ~2.64M lexemes across 9 languages. |
 | **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | **The Genome & Research Factory.** Decodes the biconsonantal root system (457 binary roots, 1,938 triliteral roots, 12,333 genome entries). Houses a computational research factory testing 12 formal hypotheses about Arabic sound-meaning structure across 19 experiments. |
 | **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** Cross-lingual cognate discovery engine using **BGE-M3** (semantic search), **ByT5** (character-level matching), correspondence-aware reranking, benchmark evaluation, and root-family retrieval. |
 | **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | **The Theory.** Synthesis layer testing genealogical hypotheses, mapping global language corridors, and reconstructing the "Origin" model. |
@@ -49,7 +49,7 @@ uv pip install "juthoor-cognatediscovery-lv2[embeddings]"
 ### Running Tests
 
 ```bash
-# Run all tests across all levels (500+ tests, excluding slow model-loading tests)
+# Run all tests across all levels (616 tests, excluding slow model-loading tests)
 pytest Juthoor-DataCore-LV0/tests/ Juthoor-ArabicGenome-LV1/tests/ Juthoor-CognateDiscovery-LV2/tests/ -v -m "not slow"
 
 # Run a single level
@@ -91,15 +91,15 @@ python Juthoor-CognateDiscovery-LV2/scripts/discovery/evaluate.py \
 
 ## Supported Languages
 
-The discovery engine supports **60+ language codes** including:
+The discovery engine can query **any language supported by BGE-M3** (100+ languages). The following languages have validated LV0 data and active benchmark coverage:
 
 | Category | Languages |
 | :--- | :--- |
-| **Modern Semitic** | Arabic (`ara`), Hebrew (`heb`), Amharic (`amh`), Maltese (`mlt`) |
-| **Ancient Semitic** | Akkadian (`akk`), Phoenician (`phn`), Punic (`xpu`), Ugaritic (`uga`), Ge'ez (`gez`) |
-| **Aramaic Variants** | Syriac (`syr`, `syc`), Imperial Aramaic (`arc`), Jewish Palestinian (`jpa`), Talmudic (`tmr`) |
-| **Indo-European** | English (`eng`), Latin (`lat`), Greek (`ell`, `grc`), German (`deu`), French (`fra`), Spanish (`spa`) |
-| **Quranic** | Quranic Arabic (`ar-qur`, `ara-qur`) |
+| **Modern Semitic** | Arabic (`ara`), Hebrew (`heb`) |
+| **Classical/Ancient Semitic** | Quranic Arabic (`ar-qur`), Aramaic (`arc`) |
+| **Indo-Iranian** | Persian (`fa`) |
+| **Indo-European (Ancient)** | Latin (`lat`), Ancient Greek (`grc`) |
+| **Indo-European (Germanic)** | Modern English (`en`), Middle English (`enm`), Old English (`ang`) |
 
 ---
 

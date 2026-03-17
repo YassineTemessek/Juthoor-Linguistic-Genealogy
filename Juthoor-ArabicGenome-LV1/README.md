@@ -55,12 +55,12 @@ Research Factory
 | H4 | Metathesis preserves core meaning | Ibn Jinni | Weakly supported |
 | H5 | Metathesis changes meaning (order matters) | Jabal | **Supported** |
 | H6 | Same-makhraj substitution produces closer meanings | Ibn Jinni | Not supported |
-| H7 | Missing root combinations reflect semantic conflict | Najah Univ. | Pending |
+| H7 | Missing root combinations reflect semantic conflict | Najah Univ. | Not supported |
 | H8 | A letter's meaning shifts by position | Al-Aqqad | **Supported** |
-| H9 | Emphatic letters carry stronger semantics | Ibn Jinni / Ohala | Pending |
-| H10 | Root meaning = composition of letter meanings | Jabal | Pending |
-| H11 | Machines can discover binary structure unsupervised | Independent | Pending |
-| H12 | Root meaning is predictable from components | Generative test | Pending |
+| H9 | Emphatic letters carry stronger semantics | Ibn Jinni / Ohala | Untested |
+| H10 | Root meaning = composition of letter meanings | Jabal | Untested |
+| H11 | Machines can discover binary structure unsupervised | Independent | Not supported |
+| H12 | Root meaning is predictable from components | Generative test | **Supported** |
 
 ## Research Factory Results (Phase 1-2)
 
@@ -111,7 +111,7 @@ Juthoor-ArabicGenome-LV1/
 ├── outputs/
 │   ├── genome_v2/                   -- 30 BAB files (stable core)
 │   └── research_factory/            -- Experiment results & features
-└── tests/                           -- 183 tests
+└── tests/                           -- 227 tests
 ```
 
 ## Numbers
