@@ -3,7 +3,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from juthoor_cognatediscovery_lv2.discovery.genome_scoring import GenomeScorer
+from juthoor_cognatediscovery_lv2.discovery.genome_scoring import (
+    GenomeScorer,
+    _LETTER_CLASS,
+    _extract_binary_root,
+)
 from juthoor_cognatediscovery_lv2.discovery.scoring import apply_hybrid_scoring
 from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights
 
@@ -73,4 +77,56 @@ def test_genome_bonus_defaults_to_zero_in_components_without_scorer():
     components = entry["hybrid"]["components"]
     assert "genome_bonus" in components
     assert components["genome_bonus"] == 0.0
+
+
+def test_aramaic_consonants_mapped():
+    """Aramaic uses Hebrew script — all consonants should resolve to phoneme classes."""
+    # Aramaic shares the Hebrew alphabet, so all 22 Hebrew letters must be present.
+    # Test with representative Aramaic vocabulary:
+    #   כתב (write) — kaf + tav + bet
+    #   מלך (king)  — mem + lamed + kaf
+    ktb_binary = _extract_binary_root("כתב")
+    assert ktb_binary is not None, "כתב (write) must yield a binary root"
+    # kaf → ḫ, tav → t
+    assert ktb_binary == "ḫt", f"Expected 'ḫt', got '{ktb_binary}'"
+
+    mlk_binary = _extract_binary_root("מלך")
+    assert mlk_binary is not None, "מלך (king) must yield a binary root"
+    # mem → m, lamed → l
+    assert mlk_binary == "ml", f"Expected 'ml', got '{mlk_binary}'"
+
+    # Confirm every core Aramaic consonant class is mapped
+    for ch in "אבגדהוזחטיכלמנסעפצקרשת":
+        assert ch in _LETTER_CLASS, f"Hebrew/Aramaic letter {ch!r} (U+{ord(ch):04X}) missing from _LETTER_CLASS"
+
+
+def test_persian_specific_consonants_mapped():
+    """Persian-specific letters (پ, چ, ژ, گ) should resolve to phoneme classes."""
+    assert "پ" in _LETTER_CLASS, "Persian pe (U+067E) missing"
+    assert "چ" in _LETTER_CLASS, "Persian che (U+0686) missing"
+    assert "ژ" in _LETTER_CLASS, "Persian zhe (U+0698) missing"
+    assert "گ" in _LETTER_CLASS, "Persian gaf (U+06AF) missing"
+    assert _LETTER_CLASS["پ"] == "p"
+    assert _LETTER_CLASS["چ"] == "č"
+    assert _LETTER_CLASS["ژ"] == "ž"
+    assert _LETTER_CLASS["گ"] == "g"
+
+
+def test_persian_keheh_and_yeh_mapped():
+    """Persian ک (U+06A9) and ی (U+06CC) should map to same classes as Arabic ك/ي."""
+    assert _LETTER_CLASS.get("ک") == "k", "Persian keheh (U+06A9) must map to 'k'"
+    assert _LETTER_CLASS.get("ی") == "y", "Persian yeh (U+06CC) must map to 'y'"
+
+
+def test_persian_binary_root_extraction():
+    """Persian words should yield binary roots via _extract_binary_root."""
+    # پادشاه (king) — پ + ا → "pʔ"
+    br = _extract_binary_root("پادشاه")
+    assert br is not None, "Persian پادشاه must yield a binary root"
+    assert br == "pʔ", f"Expected 'pʔ', got '{br!r}'"
+
+    # کتاب (book) — ک + ت → "kt"
+    br2 = _extract_binary_root("کتاب")
+    assert br2 is not None, "Persian کتاب must yield a binary root"
+    assert br2 == "kt", f"Expected 'kt', got '{br2!r}'"
 
