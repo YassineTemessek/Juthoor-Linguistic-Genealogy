@@ -11,6 +11,32 @@ def _norm(value: Any) -> str:
     return " ".join(str(value or "").split()).strip().casefold()
 
 
+# ISO 639-1 → ISO 639-3 normalization for benchmark/corpus matching
+_LANG_ALIASES: dict[str, str] = {
+    "fa": "fas",   # Persian
+    "he": "heb",   # Hebrew
+    "ar": "ara",   # Arabic
+    "en": "eng",   # English
+    "la": "lat",   # Latin
+    # The following are already ISO 639-3 — keep as identity mappings
+    "grc": "grc",  # Ancient Greek
+    "arc": "arc",  # Aramaic
+    "ang": "ang",  # Old English
+    "enm": "enm",  # Middle English
+    "fas": "fas",
+    "heb": "heb",
+    "ara": "ara",
+    "eng": "eng",
+    "lat": "lat",
+}
+
+
+def _norm_lang(code: str) -> str:
+    """Normalize a language code to ISO 639-3 (casefold + alias expansion)."""
+    normed = _norm(code)
+    return _LANG_ALIASES.get(normed, normed)
+
+
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     with path.open("r", encoding="utf-8") as handle:
@@ -40,7 +66,7 @@ def load_gloss_overrides(path: Path) -> dict[tuple[str, str], str]:
             lang, lemma = key.split(":", 1)
         else:
             lang, lemma = "ara", key
-        overrides[(_norm(lang), _norm(lemma))] = str(value).strip()
+        overrides[(_norm_lang(lang), _norm(lemma))] = str(value).strip()
     return overrides
 
 
@@ -52,11 +78,14 @@ def _benchmark_gloss_map(
     glosses: dict[tuple[str, str], str] = {}
     for pair in benchmark_pairs:
         if side == "source":
-            key = pair.source_key
+            lang = pair.source_lang
+            lemma = pair.source_lemma
             gloss = pair.source_gloss
         else:
-            key = pair.target_key
+            lang = pair.target_lang
+            lemma = pair.target_lemma
             gloss = pair.target_gloss
+        key = (_norm_lang(lang), _norm(lemma))
         if gloss and key not in glosses:
             glosses[key] = gloss
     return glosses
@@ -73,7 +102,7 @@ def apply_gloss_overrides(
     overrides = overrides or {}
     out: list[dict[str, Any]] = []
     for row in rows:
-        lang = _norm(row.get("lang") or row.get("language"))
+        lang = _norm_lang(row.get("lang") or row.get("language") or "")
         lemma = _norm(row.get("lemma"))
         key = (lang, lemma)
         short_gloss = overrides.get(key) or benchmark_glosses.get(key)
@@ -96,18 +125,18 @@ def extract_benchmark_subset(
         raise ValueError("side must be 'source' or 'target'")
 
     wanted: set[str] = set()
-    lang_norm = _norm(lang)
+    lang_norm = _norm_lang(lang)
     for pair in benchmark_pairs:
         pair_lang = pair.source_lang if side == "source" else pair.target_lang
         pair_lemma = pair.source_lemma if side == "source" else pair.target_lemma
-        if _norm(pair_lang) == lang_norm:
+        if _norm_lang(pair_lang) == lang_norm:
             wanted.add(_norm(pair_lemma))
 
     seen: set[str] = set()
     subset: list[dict[str, Any]] = []
     for row in corpus_rows:
         lemma = _norm(row.get("lemma"))
-        row_lang = _norm(row.get("lang") or row.get("language"))
+        row_lang = _norm_lang(row.get("lang") or row.get("language") or "")
         if lemma in wanted and row_lang == lang_norm and lemma not in seen:
             subset.append(row)
             seen.add(lemma)
@@ -126,17 +155,19 @@ def filter_available_benchmark_pairs(
     target_rows: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
     source_keys = {
-        (_norm(row.get("lang") or row.get("language")), _norm(row.get("lemma")))
+        (_norm_lang(row.get("lang") or row.get("language") or ""), _norm(row.get("lemma")))
         for row in source_rows
     }
     target_keys = {
-        (_norm(row.get("lang") or row.get("language")), _norm(row.get("lemma")))
+        (_norm_lang(row.get("lang") or row.get("language") or ""), _norm(row.get("lemma")))
         for row in target_rows
     }
 
     available: list[dict[str, Any]] = []
     for pair in benchmark_pairs:
-        if pair.source_key in source_keys and pair.target_key in target_keys:
+        pair_src_key = (_norm_lang(pair.source_lang), _norm(pair.source_lemma))
+        pair_tgt_key = (_norm_lang(pair.target_lang), _norm(pair.target_lemma))
+        if pair_src_key in source_keys and pair_tgt_key in target_keys:
             available.append(
                 {
                     "source": {"lang": pair.source_lang, "lemma": pair.source_lemma},
