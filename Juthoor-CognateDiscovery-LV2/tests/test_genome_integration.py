@@ -112,22 +112,22 @@ class TestGenomeBonusApplied:
         assert score_yes > score_no
 
     def test_genome_bonus_recorded_in_hybrid(self):
-        """genome_bonus field is present in hybrid dict when scorer is provided."""
+        """genome_bonus is stored in hybrid.components when scorer is provided."""
         candidates = _make_candidates()
         mock = _make_mock_genome_scorer(bonus=0.10)
         apply_hybrid_scoring(candidates, HybridWeights(), genome_scorer=mock)
         hybrid = candidates["cand1"]["hybrid"]
-        assert "genome_bonus" in hybrid
-        assert hybrid["genome_bonus"] == pytest.approx(0.10)
+        assert "genome_bonus" in hybrid["components"]
+        assert hybrid["components"]["genome_bonus"] == pytest.approx(0.10)
 
     def test_zero_bonus_recorded_when_scorer_returns_zero(self):
-        """Even when genome_bonus returns 0.0, the field is present with value 0."""
+        """Even when genome_bonus returns 0.0, the field is present with value 0 in components."""
         candidates = _make_candidates()
         mock = _make_mock_genome_scorer(bonus=0.0)
         apply_hybrid_scoring(candidates, HybridWeights(), genome_scorer=mock)
         hybrid = candidates["cand1"]["hybrid"]
-        assert "genome_bonus" in hybrid
-        assert hybrid["genome_bonus"] == pytest.approx(0.0)
+        assert "genome_bonus" in hybrid["components"]
+        assert hybrid["components"]["genome_bonus"] == pytest.approx(0.0)
 
     def test_genome_scorer_called_with_source_and_target_fields(self):
         """genome_bonus is called with the _source_fields and _target_fields dicts."""
@@ -170,7 +170,7 @@ class TestGenomeBonusCap:
             genome_scorer=mock,
         )
         assert result["combined_score"] == pytest.approx(1.0)
-        assert result["genome_bonus"] == pytest.approx(0.15)
+        assert result["components"]["genome_bonus"] == pytest.approx(0.15)
 
     def test_apply_genome_bonus_exact_cap(self):
         """1.0 base + any bonus stays exactly 1.0."""
@@ -212,8 +212,8 @@ class TestDiscoveryScorerGenomeIntegration:
         hybrid_without = results_without[0]["hybrid"]
 
         assert hybrid_with["combined_score"] > hybrid_without["combined_score"]
-        assert "genome_bonus" in hybrid_with
-        assert "genome_bonus" not in hybrid_without
+        assert hybrid_with["components"]["genome_bonus"] == pytest.approx(0.08)
+        assert hybrid_without["components"]["genome_bonus"] == pytest.approx(0.0)
 
     def test_discovery_scorer_cleans_temp_fields(self):
         """_source_fields and _target_fields are removed after scoring."""

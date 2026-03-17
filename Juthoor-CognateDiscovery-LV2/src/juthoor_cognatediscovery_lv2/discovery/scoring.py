@@ -68,13 +68,14 @@ def _apply_genome_bonus(
     genome_scorer: "GenomeScorer",
 ) -> dict[str, Any]:
     boosted = dict(hybrid)
+    components = dict(boosted.get("components") or {})
     bonus = genome_scorer.genome_bonus(source_fields, target_fields)
+    components["genome_bonus"] = round(bonus, 6) if bonus != 0.0 else 0.0
+    boosted["components"] = components
     if bonus == 0.0:
-        boosted["genome_bonus"] = 0.0
         return boosted
     base_score = float(boosted.get("combined_score") or 0.0)
     boosted["combined_score"] = round(min(1.0, base_score + bonus), 6)
-    boosted["genome_bonus"] = round(bonus, 6)
     return boosted
 
 
@@ -117,6 +118,12 @@ def apply_hybrid_scoring(
                 target_fields=tgt_fields,
                 genome_scorer=genome_scorer,
             )
+        else:
+            # Ensure genome_bonus is always present in components for reranker
+            components = dict(hybrid.get("components") or {})
+            components.setdefault("genome_bonus", 0.0)
+            hybrid = dict(hybrid)
+            hybrid["components"] = components
         entry["hybrid"] = hybrid
 
 
