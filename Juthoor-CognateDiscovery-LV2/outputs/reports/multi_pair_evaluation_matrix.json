@@ -1,0 +1,113 @@
+{
+  "ara_heb": {
+    "n_pairs": 37,
+    "blind": {
+      "recall@10": 0.891892,
+      "recall@50": 1.0,
+      "recall@100": 1.0,
+      "mrr": 0.758724,
+      "ndcg": 0.811921
+    },
+    "genome": {
+      "recall@10": 1.0,
+      "recall@50": 1.0,
+      "recall@100": 1.0,
+      "mrr": 0.787387,
+      "ndcg": 0.839139
+    },
+    "delta": {
+      "recall@10": 0.108108,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "mrr": 0.028663,
+      "ndcg": 0.027218
+    },
+    "reranker_weights": {
+      "semantic": 0.31804460287094116,
+      "form": 0.0,
+      "orthography": 0.0,
+      "sound": 0.5789982676506042,
+      "skeleton": 1.2987878322601318,
+      "family_boost": -0.5444997549057007,
+      "root_match": 0.0,
+      "correspondence": 0.0,
+      "weak_radical_match": 0.0,
+      "hamza_match": 0.0,
+      "genome_bonus": 0.45891690254211426
+    }
+  },
+  "ara_arc": {
+    "n_pairs": 13,
+    "blind": {
+      "recall@10": 1.0,
+      "recall@50": 1.0,
+      "recall@100": 1.0,
+      "mrr": 0.753419,
+      "ndcg": 0.80929
+    },
+    "genome": {
+      "recall@10": 1.0,
+      "recall@50": 1.0,
+      "recall@100": 1.0,
+      "mrr": 0.862393,
+      "ndcg": 0.891546
+    },
+    "delta": {
+      "recall@10": 0.0,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "mrr": 0.108974,
+      "ndcg": 0.082256
+    },
+    "reranker_weights": {
+      "semantic": -0.06489058583974838,
+      "form": 0.0,
+      "orthography": 0.0,
+      "sound": 0.26998794078826904,
+      "skeleton": 0.38216662406921387,
+      "family_boost": -0.5540930032730103,
+      "root_match": 0.0,
+      "correspondence": 0.0,
+      "weak_radical_match": 0.0,
+      "hamza_match": 0.0,
+      "genome_bonus": 0.1848958432674408
+    }
+  },
+  "ara_fa": {
+    "n_pairs": 20,
+    "blind": {
+      "recall@10": 0.25,
+      "recall@50": 0.25,
+      "recall@100": 0.25,
+      "mrr": 0.25,
+      "ndcg": 0.25
+    },
+    "genome": {
+      "recall@10": 0.25,
+      "recall@50": 0.25,
+      "recall@100": 0.25,
+      "mrr": 0.25,
+      "ndcg": 0.25
+    },
+    "delta": {
+      "recall@10": 0.0,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0
+    },
+    "reranker_weights": {
+      "semantic": -0.22922737896442413,
+      "form": 0.0,
+      "orthography": 0.0,
+      "sound": -0.03511975333094597,
+      "skeleton": 0.056691981852054596,
+      "family_boost": 0.0,
+      "root_match": 0.0,
+      "correspondence": 0.4442150294780731,
+      "weak_radical_match": 1.436779260635376,
+      "hamza_match": 1.4714163541793823,
+      "genome_bonus": 0.11683394759893417
+    }
+  }
+}

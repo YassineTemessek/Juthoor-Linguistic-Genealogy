@@ -1,0 +1,30 @@
+{
+  "model_type": "logistic_regression",
+  "bias": -3.9802525599952787,
+  "weights": {
+    "semantic": -0.22922737896442413,
+    "form": 0.0,
+    "orthography": 0.0,
+    "sound": -0.03511975333094597,
+    "skeleton": 0.056691981852054596,
+    "family_boost": 0.0,
+    "root_match": 0.0,
+    "correspondence": 0.4442150294780731,
+    "weak_radical_match": 1.436779260635376,
+    "hamza_match": 1.4714163541793823,
+    "genome_bonus": 0.11683394759893417
+  },
+  "feature_names": [
+    "semantic",
+    "form",
+    "orthography",
+    "sound",
+    "skeleton",
+    "family_boost",
+    "root_match",
+    "correspondence",
+    "weak_radical_match",
+    "hamza_match",
+    "genome_bonus"
+  ]
+}
