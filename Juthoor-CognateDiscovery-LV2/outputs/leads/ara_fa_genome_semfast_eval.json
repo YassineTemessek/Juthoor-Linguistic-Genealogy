@@ -1,0 +1,19 @@
+{
+  "total_pairs": 20,
+  "hits": 5,
+  "recall": 0.25,
+  "recall@10": 0.25,
+  "recall@50": 0.25,
+  "recall@100": 0.25,
+  "mrr": 0.25,
+  "ndcg": 0.25,
+  "weighted_mrr": 0.253807,
+  "weighted_ndcg": 0.253807,
+  "by_relation": {
+    "cognate": {
+      "total": 20,
+      "hits": 5,
+      "recall": 0.25
+    }
+  }
+}
