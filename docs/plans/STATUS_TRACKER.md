@@ -1,11 +1,33 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-16 (LV2 Evaluation Expansion plan active)
+**Last updated:** 2026-03-18 (Two active plans: LV2 Evaluation + LV1 Core Restructure)
 
 ---
 
-## Active Plan: LV2 Evaluation Expansion
+## Active Plan 1: LV1 Core Restructure (Codex)
+**Plan file:** `docs/plans/2026-03-18-lv1-core-restructure.md`
+**Baseline commit:** `a2a5893`
+**Design:** Structure first, curated theory content later via import inbox
+
+| Phase | Task | Owner | Status | Notes |
+|-------|------|-------|--------|-------|
+| 1 | Registry dataclasses (canon_models.py) | Codex | TODO | 6 frozen dataclasses |
+| 1 | Canon loaders (canon_loaders.py) | Codex | TODO | Load from JSONL |
+| 1 | Seed registries from existing data | Codex | TODO | Muajam + genome + promoted outputs |
+| 1 | Theory content inbox folder | Codex | TODO | Folder structure + SCHEMA.md |
+| 1 | Phase 1 acceptance tests | Codex | TODO | 28 letters, all binary roots |
+| 2 | Import validators | Codex | TODO | Validate before ingestion |
+| 2 | Merge policy | Codex | TODO | Status transitions, no silent overwrite |
+| 2 | Import CLI + reports | Codex | TODO | JSON reports per import |
+| 3 | Processing pipeline | Codex | TODO | 8-step, graceful degradation |
+| 4 | Attach Research Factory outputs | Codex | TODO | H2/H5/H8/H10/H9 → registries |
+| 5 | Quranic bridge + QCA contracts | Codex | TODO | Phase 3 must be stable first |
+
+---
+
+## Active Plan 2: LV2 Evaluation Expansion (Sonnet/Opus)
 **Plan file:** `docs/plans/2026-03-16-lv2-evaluation-expansion.md`
+**Orchestration:** `docs/plans/2026-03-17-parallel-execution-orchestration.md`
 **Baseline commit:** `91c3006`
 
 ### Phase A: Benchmark Expansion to 100+ Pairs
