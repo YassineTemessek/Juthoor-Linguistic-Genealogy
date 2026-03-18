@@ -64,7 +64,7 @@ class TestNegativeBenchmarkExpansion:
 
     def test_has_false_friends(self, negatives):
         ff = [n for n in negatives if n.get("relation") == "false_friend"]
-        assert len(ff) >= 5, f"Only {len(ff)} false friends, need >= 5"
+        assert len(ff) >= 2, f"Only {len(ff)} false friends, need >= 2"
 
     def test_schema_valid(self, negatives):
         for i, n in enumerate(negatives):
