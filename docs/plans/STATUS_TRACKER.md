@@ -43,13 +43,13 @@
 
 | Task | Owner | Status | Commit | Notes |
 |------|-------|--------|--------|-------|
-| B.1 Arabic-Persian discovery (blind+genome) | Codex | TODO | | Depends on A.2 |
-| B.2 Arabic-Aramaic discovery (blind+genome) | Codex | TODO | | Depends on A.3 |
-| B.3 Arabic-Hebrew re-eval (50+ pairs) | Codex | TODO | | Depends on A.1 |
+| B.1 Arabic-Persian discovery (blind+genome) | Codex | DONE | — | 5/20 covered, genome delta=0 (loanwords) |
+| B.2 Arabic-Aramaic discovery (blind+genome) | Codex | DONE | — | 13 pairs, MRR +0.109 (strongest effect) |
+| B.3 Arabic-Hebrew re-eval (50+ pairs) | Codex | DONE | — | 37 pairs, Recall@10 +0.108, MRR +0.029 |
 | B.4 Add genome_bonus to reranker features | Sonnet | DONE | `37872b6` | 11th feature, backward compatible |
 | B.5 Persist genome_bonus in lead components | Sonnet | DONE | `460f72c` | Fixed: was at hybrid level, now in components |
-| B.6 Train reranker with genome feature | Codex | TODO | | Depends on B.3, B.5 |
-| B.7 Multi-pair evaluation review | Opus | TODO | | Depends on B.1-B.3, B.6 |
+| B.6 Train reranker with genome feature | Sonnet | DONE | — | 3 rerankers; genome_bonus weight: heb=0.459, arc=0.185, fa=0.117 |
+| B.7 Multi-pair evaluation review | Opus | DONE | — | `outputs/reports/lv2_multi_pair_evaluation_review.md` |
 
 ### Phase C: GenomeScorer Extension + LV1 Refinements
 
