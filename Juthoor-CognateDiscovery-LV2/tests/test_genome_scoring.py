@@ -7,6 +7,7 @@ from juthoor_cognatediscovery_lv2.discovery.genome_scoring import (
     GenomeScorer,
     _LETTER_CLASS,
     _extract_binary_root,
+    classify_pair,
 )
 from juthoor_cognatediscovery_lv2.discovery.scoring import apply_hybrid_scoring
 from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights
@@ -129,4 +130,70 @@ def test_persian_binary_root_extraction():
     br2 = _extract_binary_root("کتاب")
     assert br2 is not None, "Persian کتاب must yield a binary root"
     assert br2 == "kt", f"Expected 'kt', got '{br2!r}'"
+
+
+# ---------------------------------------------------------------------------
+# Language family classification tests
+# ---------------------------------------------------------------------------
+
+def test_classify_pair_semitic():
+    assert classify_pair("ara", "heb") == "semitic_semitic"
+    assert classify_pair("ara", "arc") == "semitic_semitic"
+    assert classify_pair("heb", "arc") == "semitic_semitic"
+    assert classify_pair("ara", "ar-qur") == "semitic_semitic"
+
+
+def test_classify_pair_cross_family():
+    assert classify_pair("ara", "eng") == "semitic_ie"
+    assert classify_pair("ara", "lat") == "semitic_ie"
+    assert classify_pair("ara", "grc") == "semitic_ie"
+    assert classify_pair("heb", "fa") == "semitic_ie"
+    # reversed order
+    assert classify_pair("eng", "ara") == "semitic_ie"
+    assert classify_pair("lat", "heb") == "semitic_ie"
+
+
+def test_classify_pair_ie():
+    assert classify_pair("lat", "grc") == "same_family"
+    assert classify_pair("eng", "lat") == "same_family"
+    assert classify_pair("fa", "enm") == "same_family"
+
+
+def test_classify_pair_unknown():
+    assert classify_pair("zxx", "zzz") == "unknown"
+
+
+def test_genome_bonus_zero_for_non_semitic(tmp_path: Path):
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    source = {"lang": "ara", "lemma": "عين", "root_norm": "عين"}
+    target = {"lang": "eng", "lemma": "eye", "root_norm": "eye"}
+    bonus = scorer.genome_bonus(source, target)
+    assert bonus == 0.0, f"Expected 0.0 for cross-family pair, got {bonus}"
+
+
+def test_genome_bonus_zero_for_same_family(tmp_path: Path):
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    source = {"lang": "lat", "lemma": "oculus", "root_norm": "oculus"}
+    target = {"lang": "grc", "lemma": "ὀφθαλμός", "root_norm": "ὀφθαλμός"}
+    bonus = scorer.genome_bonus(source, target)
+    assert bonus == 0.0, f"Expected 0.0 for same-family IE pair, got {bonus}"
+
+
+def test_genome_bonus_applies_for_semitic_pair(tmp_path: Path):
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    source = {"lang": "ara", "lemma": "عين", "root_norm": "عين"}
+    target = {"lang": "heb", "lemma": "עין"}
+    bonus = scorer.genome_bonus(source, target)
+    assert bonus == 0.13, f"Expected 0.13 for semitic_semitic pair, got {bonus}"
+
+
+def test_genome_bonus_no_lang_field_falls_through(tmp_path: Path):
+    """When lang fields are absent the guard is skipped and scoring proceeds normally."""
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    # No 'lang' key — existing behaviour is preserved (binary root match applies)
+    bonus = scorer.genome_bonus(
+        {"lemma": "عين", "root_norm": "عين"},
+        {"lemma": "עין"},
+    )
+    assert bonus == 0.13
 
