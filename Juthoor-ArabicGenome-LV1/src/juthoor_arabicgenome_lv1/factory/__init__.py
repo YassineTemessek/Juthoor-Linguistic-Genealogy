@@ -1,6 +1,14 @@
 from .feature_store import save_feature, load_feature, feature_exists, list_features
 from .experiment_runner import ExperimentConfig, MissingFeatureError, run_experiment
 from .promotions import export_promoted_results
+from .canon_feedback import (
+    attach_lv1_support,
+    attach_lv2_cross_lingual_support,
+    is_promotable_binary_field,
+    is_promotable_letter_semantics,
+    is_promotable_positional_profile,
+    is_promotable_quranic_profile,
+)
 
 __all__ = [
     "save_feature",
@@ -11,4 +19,10 @@ __all__ = [
     "MissingFeatureError",
     "run_experiment",
     "export_promoted_results",
+    "attach_lv1_support",
+    "attach_lv2_cross_lingual_support",
+    "is_promotable_binary_field",
+    "is_promotable_letter_semantics",
+    "is_promotable_positional_profile",
+    "is_promotable_quranic_profile",
 ]

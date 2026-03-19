@@ -15,5 +15,7 @@ Analysis scripts live in scripts/qca/:
 - 01_rj_cooc.py           -- KMeans co-occurrence clustering + PCA plot
 """
 
+from .canon_bridge import build_interpretation_evidence_card, build_quranic_profile
+
 __version__ = "0.1.0"
-__all__: list[str] = []
+__all__ = ["build_quranic_profile", "build_interpretation_evidence_card"]
