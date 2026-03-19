@@ -81,7 +81,29 @@ Claude will read this next session and apply your corrections.
 <!-- ADD YOUR ARABIC-ENGLISH PAIRS BELOW THIS LINE -->
 <!-- Format: | # | Arabic word | Arabic meaning | English word | English meaning | confidence 0-1 | notes about the connection | -->
 
+---
 
+## Arabic-English Pairs — New (from Beyond the Word)
+
+| # | Arabic | Gloss | English | Gloss | Conf. | Notes | Your Comment |
+|---|--------|-------|---------|-------|-------|-------|-------------|
+| 1 | رقّ | to stretch/extend flat | rack | shelf/frame | 0.7 | Both revolve around stretching/extending a surface; Proto-Germanic rek/rec | |
+| 2 | برج | tower/fortress | burglar | thief who breaks into buildings | 0.9 | Arabic burj → Latin burgus → Medieval Latin burgator → English; well-documented chain | |
+| 3 | أنجر | anchor/to pull/drag | anchor | device to moor a ship | 0.9 | Classical Arabic anjar = anchor; Arabic anjar → Greek ankyra → Latin ancora → English | |
+| 4 | مدر | cohesive sticky clay | mud | moist soft earth | 0.7 | Direct phonetic match m-d-r / m-d; Proto-Germanic mud- | |
+| 5 | جليد | ice/to freeze | cold | low temperature | 0.7 | ج↔K/C shift (attested: جمل↔camel); Old Germanic kald → English cold | |
+| 6 | فاه | to utter/speak | famous | well-known/celebrated | 0.7 | PIE *bha- (to speak) → Latin fama → famosus; famous = much spoken about | |
+| 7 | قنديل | oil lamp/lantern | chandelier | hanging lamp fixture | 0.9 | Arabic qindeel → Latin candela → Old French chandelier → English; documented chain | |
+| 8 | بنصر | ring finger/finger name | finger | digit of the hand | 0.6 | ب↔F shift + ص↔K/G shift; chain: binsir → finsir → finger; Proto-Germanic fingraz | |
+| 9 | آدم | earthly creature/from soil | human | a person/humanity | 0.8 | Latin humus (earth) → homo → humanus; Arabic adam from adeem al-ard; both = creature of earth | |
+| 10 | كرّار | storehouse/provisions house | garage | shelter for vehicles | 0.6 | Arabic karrar = place to store; French garer = to shelter/store; g↔k consonant equivalence | |
+| 11 | عمّ | paternal uncle | uncle | parent's brother | 0.8 | Old English eam = عمّ, phonetically identical; replaced by Latin avunculus → oncle → uncle | |
+| 12 | انتماء | affiliation/belonging | name | word identifying a person | 0.6 | N-M root shared; in antiquity names indicated tribe/belonging; Old English nama/noma | |
+| 13 | باص | to rush ahead/hurry | bus | public transport vehicle | 0.6 | Arabic bass = move fast; pre-Latin origin of bus listed as unknown | |
+| 14 | قطين | shackles/bound/settled | chain | connected metal links/fetter | 0.8 | Arabic qatin → Latin catena → Old French chaeine → English; ق↔C shift; both = binding | |
+| 15 | قناة | canal/channel/waterway | canyon | narrow deep valley | 0.9 | Arabic qanah → Latin canna → Spanish cañon → English; a canyon = natural channel | |
+| 16 | نفس | breath/soul/life-breath | inspire | to fill with creative impulse | 0.7 | Latin spirare parallels Arabic nafas; inspire = to breathe spirit into; n-f-s ↔ s-p-r | |
+| 17 | دنّ | large barrel/cask | tunnel | underground passage | 0.8 | Arabic dann → Latin tunna → Old French tonne/tonnelle → English tunnel; د↔T shift | |
 
 ---
 
