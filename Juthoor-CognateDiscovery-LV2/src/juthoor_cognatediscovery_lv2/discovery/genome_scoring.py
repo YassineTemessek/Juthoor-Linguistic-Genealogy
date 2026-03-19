@@ -65,6 +65,36 @@ _LETTER_CLASS = {
 }
 
 
+# Language family classifications
+_SEMITIC_LANGS = {"ara", "heb", "arc", "akk", "amh", "ar-qur"}
+_INDO_EUROPEAN_LANGS = {"eng", "lat", "grc", "fa", "de", "fr", "es", "ang", "enm"}
+
+
+def classify_pair(source_lang: str, target_lang: str) -> str:
+    """Classify a language pair for scoring strategy.
+
+    Returns:
+        'semitic_semitic' — both Semitic, genome bonus applies fully
+        'semitic_ie' — cross-family, genome bonus reduced or different scoring
+        'same_family' — both IE, no genome bonus
+        'unknown' — unclassified
+    """
+    src = source_lang.lower()
+    tgt = target_lang.lower()
+    src_semitic = src in _SEMITIC_LANGS
+    tgt_semitic = tgt in _SEMITIC_LANGS
+    src_ie = src in _INDO_EUROPEAN_LANGS
+    tgt_ie = tgt in _INDO_EUROPEAN_LANGS
+
+    if src_semitic and tgt_semitic:
+        return "semitic_semitic"
+    if (src_semitic and tgt_ie) or (src_ie and tgt_semitic):
+        return "semitic_ie"
+    if src_ie and tgt_ie:
+        return "same_family"
+    return "unknown"
+
+
 def _extract_binary_root(root: str) -> str | None:
     """Extract the first two Semitic consonant classes from a root or lemma."""
     letters = _SEMITIC_RE.findall(root.translate(_NORMALIZE_MAP))
@@ -146,7 +176,12 @@ class GenomeScorer:
     def genome_bonus(self, source_entry: dict, target_entry: dict) -> float:
         """Compute a genome-informed bonus for a candidate pair.
 
-        Components:
+        Genome bonuses only apply to Semitic-Semitic pairs (e.g. Arabic↔Hebrew,
+        Arabic↔Aramaic) where shared binary root nuclei are linguistically
+        meaningful.  Cross-family pairs (e.g. Arabic↔Persian loanwords,
+        Arabic↔English) return 0.0 to avoid adding noise.
+
+        Components (semitic_semitic pairs only):
         1. Exact shared binary Semitic nucleus: +0.08
         2. High-coherence Arabic family for an exact binary match (>0.6): +0.05
         3. Metathesis relation between binary nuclei: +0.05
@@ -156,6 +191,14 @@ class GenomeScorer:
         """
         self._ensure_loaded()
         bonus = 0.0
+
+        # Guard: only apply genome bonus to Semitic-Semitic pairs.
+        source_lang = source_entry.get("lang", "")
+        target_lang = target_entry.get("lang", "")
+        if source_lang and target_lang:
+            pair_class = classify_pair(source_lang, target_lang)
+            if pair_class != "semitic_semitic":
+                return 0.0
 
         source_root = source_entry.get("root_norm") or source_entry.get("root", "")
         target_root = target_entry.get("root_norm") or target_entry.get("root", "")
