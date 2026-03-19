@@ -146,6 +146,25 @@ Persian is in a unique position: it borrowed Arabic vocabulary wholesale after t
 
 ---
 
+## Arabic → English Consonant Shifts (Beyond the Word)
+
+These entries document **systematic consonant correspondences** between Arabic and English/Germanic identified in the *Beyond the Word* research. Unlike the merger entries above (which track phonemic collapse of Arabic distinctions), these are **directional sound-shift rules** active across early Semitic–Germanic contact and Proto-Semitic → Proto-IE deep cognates.
+
+| Arabic Sound | English/Germanic Reflex | Attested Examples | Mechanism |
+|-------------|------------------------|-------------------|-----------|
+| ج (jim) | K / C / G | جليد (jaleed, ice) → cold; جمل (jamal) → camel / German Kamel | Jim (palatal affricate) shifts to velar stop; systematic across early Semitic-Germanic contact |
+| ب (ba) | F | بنصر (binsir, finger) → finger | Bilabial stop → labiodental fricative; b/f interchange recurring in Semitic and Germanic |
+| د (dal) | T | دنّ (dann, barrel) → tunnel / tonne | Voiced dental stop → voiceless; parallels Grimm's Law d→t voicing shift |
+| ق (qaf) | C / K (via Latin) | قطين (qatin, shackled) → catena → chain; قناة (qanah) → canna → canyon; قنديل (qindeel) → candela → chandelier | Uvular → velar shift, already documented; these chains add multi-step Latin intermediaries |
+| ع (ayin) | ∅ / vowel | عمّ (amm, uncle) → eam (Old English) → uncle | Pharyngeal lost, replaced by vowel onset; consistent with general ع→∅/V rule |
+| ف (fa) | B / BH / PH | فاه (to utter) ↔ PIE \*bha- (to speak) → fama → famous | Labial fricative ↔ labial stop alternation at Semitic–IE interface; Proto-Semitic ↔ PIE root correspondence |
+
+**Note on ق chains:** The ق → C/K entries above extend the existing qaf correspondence (line 45 of the JSONL) with concrete multi-step borrowing chains that show the full Arabic → Latin → English path.
+
+**Note on ع → uncle:** The consonant skeleton shifts considerably (amm → eam → uncle via nasalization, vowel change, and suffix addition), making this a deep cognate candidate rather than a direct loanword.
+
+---
+
 ## Quick-Reference Cross-Language Merger Matrix
 
 This matrix shows which Arabic consonants are collapsed to a single reflex (or lost) in each target language. "=" means preserved as distinct; "M" means merged with another Arabic sound; "L" means lost/dropped.
