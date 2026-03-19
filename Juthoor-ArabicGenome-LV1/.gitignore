@@ -22,6 +22,19 @@ Desktop.ini
 # Large local datasets (keep only lightweight docs/metadata in git)
 /data/*
 !/data/README.md
+!/data/theory_canon/
+/data/theory_canon/*
+!/data/theory_canon/SCHEMA.md
+!/data/theory_canon/inbox/
+!/data/theory_canon/inbox/**
+!/data/theory_canon/imported/
+!/data/theory_canon/imported/.gitkeep
+!/data/theory_canon/rejected/
+!/data/theory_canon/rejected/.gitkeep
+!/data/theory_canon/import_reports/
+!/data/theory_canon/import_reports/.gitkeep
+!/data/theory_canon/registries/
+!/data/theory_canon/registries/**
 !/data/processed/
 /data/processed/*
 !/data/processed/README.md
