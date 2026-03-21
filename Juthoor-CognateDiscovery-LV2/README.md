@@ -151,9 +151,37 @@ python "scripts/discovery/build_root_family_corpus.py"
 
 ## Current Benchmark Status
 
-- Arabic-English slice: correspondence-aware scoring and reranking improved benchmark metrics over the older baseline.
-- Latin-Greek gold slice: `10/10` gold pairs are currently runnable with existing corpora, and the baseline retrieval is already perfect on that slice.
+**Gold benchmark: 126 pairs across 5 categories**
+
+| Category | Pairs | Notes |
+|----------|-------|-------|
+| Arabic-Hebrew | 55 | Semitic cognates |
+| Arabic-English | 23 | Cross-family, incl. "Beyond the Word" research |
+| Arabic-Persian | 20 | Arabic loanwords into Persian |
+| Arabic-Aramaic | 18 | Sister Semitic languages |
+| Latin-Greek | 10 | Indo-European control group |
+
+**Negative pairs:** 33 (zero-consonant-overlap only)
+
+**GenomeScorer (family-aware):**
+- Cross-lingual consonant mapping for Arabic ↔ Hebrew, Aramaic, and Persian
+- Bonuses are applied only for Semitic-Semitic pairs (family-aware gating)
+- Phonetic merger tables covering 6 languages (66 entries)
+- Arabic→English consonant shifts documented: ج↔K, ب↔F, د↔T, ق↔C
+- Benchmark corrections based on phonetic merger principle (see `BENCHMARK_CORRECTIONS.md`)
+
+**Reranker:** logistic model with 11 features; `genome_bonus` is the 11th feature (backward compatible).
+
+**Multi-pair evaluation results (genome impact):**
+
+| Language pair | MRR delta | Notes |
+|---------------|-----------|-------|
+| Arabic-Hebrew | +0.029 | Recall@10 +0.108 |
+| Arabic-Aramaic | +0.109 | Strongest genome effect |
+| Arabic-Persian | 0 | Expected — loanwords, no consonant drift |
+
 - Reranking is not universally helpful; it should be treated as language-pair-specific and benchmark-gated.
+- Latin-Greek gold slice: `10/10` gold pairs are currently runnable with existing corpora, and the baseline retrieval is already perfect on that slice.
 
 ## Evidence Cards
 
