@@ -16,7 +16,7 @@ This monorepo consolidates a multi-layered research stack -- from raw data inges
 | :--- | :--- | :--- |
 | **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** Data engine that ingests, normalizes, and canonizes lexical data from diverse sources (Wiktionary, Lane, Taj al-Arus, Khorsi). Single source of truth for ~2.64M lexemes across 9 languages. |
 | **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | **The Genome & Research Factory.** Decodes the biconsonantal root system (457 binary roots, 1,938 triliteral roots, 12,333 genome entries). Houses a computational research factory testing 12 formal hypotheses about Arabic sound-meaning structure across 19 experiments. |
-| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** Cross-lingual cognate discovery engine using **BGE-M3** (semantic search), **ByT5** (character-level matching), correspondence-aware reranking, benchmark evaluation, and root-family retrieval. |
+| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** Cross-lingual cognate discovery engine using **BGE-M3** (semantic search), **ByT5** (character-level matching), genome-informed scoring (GenomeScorer with phonetic merger tables across 6 languages), correspondence-aware reranking, and a 126-pair gold benchmark spanning 5 language-pair categories. |
 | **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | **The Theory.** Synthesis layer testing genealogical hypotheses, mapping global language corridors, and reconstructing the "Origin" model. |
 
 ---
@@ -49,7 +49,7 @@ uv pip install "juthoor-cognatediscovery-lv2[embeddings]"
 ### Running Tests
 
 ```bash
-# Run all tests across all levels (616 tests, excluding slow model-loading tests)
+# Run all tests across all levels (711 tests, excluding slow model-loading tests)
 pytest Juthoor-DataCore-LV0/tests/ Juthoor-ArabicGenome-LV1/tests/ Juthoor-CognateDiscovery-LV2/tests/ -v -m "not slow"
 
 # Run a single level
