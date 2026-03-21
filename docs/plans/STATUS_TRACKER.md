@@ -1,6 +1,6 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-18 (Two active plans: LV2 Evaluation + LV1 Core Restructure)
+**Last updated:** 2026-03-21 (LV2 Evaluation Expansion complete; LV1 Core Restructure parked)
 
 ---
 
@@ -61,6 +61,15 @@
 | C.4 H10 compositionality experiment | Codex | DONE | `3355ad5` | Real signal, not full compositionality |
 | C.5 Hebrew cross-lingual H2/H5/H8 | Codex | TODO | | Depends on C.3, C.4, B.7 |
 
+### Orchestration Tasks (from 2026-03-17-parallel-execution-orchestration.md)
+
+| Task | Status | Notes |
+|------|--------|-------|
+| S.5 Multi-pair evaluation harness | DONE | compare_blind_vs_genome.py implemented |
+| S.6 Family-aware GenomeScorer | DONE | `is_semitic_pair()` + family gating live |
+| S.7 Benchmark quality audit script | DONE | audit_benchmark.py implemented |
+| S.8 Recall@10 and Recall@100 metrics | DONE | Added to evaluation.py |
+
 ---
 
 ## Completed Plans
@@ -92,7 +101,7 @@
 | Promotion | DONE | — | H2, H5, H8 evidence cards exported |
 | Final Synthesis | DONE | — | 4 supported, 1 weak, 1 signal, 3 not supported, 1 inconclusive, 2 untested |
 
-**Total LV1 tests:** 227
+**Total LV1 tests:** 275
 
 ### Hypothesis Registry (final)
 | ID | Status | Experiment(s) |
@@ -134,10 +143,10 @@
 
 | Level | Tests | Last verified |
 |-------|-------|---------------|
-| LV0 | 174 | 2026-03-16 |
-| LV1 | 227 | 2026-03-16 |
-| LV2 | 246 | 2026-03-18 |
-| **Total** | **647** | |
+| LV0 | 174 | 2026-03-21 |
+| LV1 | 275 | 2026-03-21 |
+| LV2 | 262 | 2026-03-21 |
+| **Total** | **711** | |
 
 ---
 
@@ -160,7 +169,12 @@
 | `6c95e8e` | GenomeScorer wired into LV2 scoring pipeline |
 | `89f812c` | First genome-informed Arabic-Hebrew discovery run |
 | `91c3006` | CI fixes (green), LV2 Evaluation Expansion plan baseline |
+| `9d9e9be` | Expand Arabic-Hebrew gold benchmark to 50+ pairs |
+| `460f72c` | Add Arabic-Persian + Arabic-Aramaic pairs, expand negatives; persist genome_bonus |
+| `37872b6` | Add genome_bonus as 11th reranker feature |
+| `b9850a8` | Fix stale READMEs + add LV2 evaluation expansion plan |
+| `15e8c70` | Persist genome_bonus in lead components for reranker consumption |
 
 ---
 
-*Last updated: 2026-03-16 — LV2 Evaluation Expansion plan created*
+*Last updated: 2026-03-21 — LV2 Evaluation Expansion complete; test counts updated (LV0=174, LV1=275, LV2=262, Total=711)*
