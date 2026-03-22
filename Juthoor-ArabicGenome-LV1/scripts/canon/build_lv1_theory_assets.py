@@ -1,0 +1,344 @@
+from __future__ import annotations
+
+import json
+import re
+import sys
+from collections import defaultdict
+from pathlib import Path
+from typing import Any
+
+from juthoor_arabicgenome_lv1.core.feature_decomposition import (
+    decompose_semantic_text,
+    feature_categories,
+    invert_features,
+)
+from juthoor_arabicgenome_lv1.factory.scoring import build_nucleus_score_rows
+
+
+LV1_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = LV1_ROOT.parent
+DOC_ROOT = LV1_ROOT / "docs" / "The Arabic Tongue (nature-genome-application)"
+THEORY_ROOT = DOC_ROOT / "Languistic theories"
+MUAJAM_ROOT = LV1_ROOT / "data" / "muajam"
+CANON_ROOT = LV1_ROOT / "data" / "theory_canon"
+LETTERS_OUT = CANON_ROOT / "letters"
+BINARY_OUT = CANON_ROOT / "binary_fields"
+ROOTS_OUT = CANON_ROOT / "roots"
+OUTPUT_ROOT = REPO_ROOT / "outputs" / "lv1_scoring"
+
+
+def _read_jsonl(path: Path) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    with path.open("r", encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if line:
+                rows.append(json.loads(line))
+    return rows
+
+
+def _write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as handle:
+        for row in rows:
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def _write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _load_jabal_letters() -> list[dict[str, Any]]:
+    rows = _read_jsonl(MUAJAM_ROOT / "letter_meanings.jsonl")
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        features = decompose_semantic_text(row["meaning"])
+        out.append(
+            {
+                "letter": row["letter"],
+                "letter_name": row["letter_name"],
+                "scholar": "jabal",
+                "raw_description": row["meaning"],
+                "atomic_features": list(features),
+                "feature_categories": list(feature_categories(features)),
+                "sensory_category": None,
+                "kinetic_gloss": None,
+                "source_document": "data/muajam/letter_meanings.jsonl",
+                "confidence": "high",
+            }
+        )
+    return out
+
+
+def _extract_markdown_table(text: str, start_marker: str) -> list[list[str]]:
+    lines = text.splitlines()
+    capture = False
+    rows: list[list[str]] = []
+    for line in lines:
+        if start_marker in line:
+            capture = True
+            continue
+        if capture and line.startswith("|"):
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if set(cells[0]) == {"-"}:
+                continue
+            rows.append(cells)
+        elif capture and rows:
+            break
+    return rows
+
+
+def _load_neili_letters() -> list[dict[str, Any]]:
+    summary = (DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
+    rows = _extract_markdown_table(summary, "### الحروف العشرة المستكشفة")
+    out: list[dict[str, Any]] = []
+    for row in rows[1:]:
+        letter = row[0].replace("*", "").replace(" ", "")
+        kinetic = row[1]
+        gloss = row[2]
+        features = decompose_semantic_text(gloss)
+        out.append(
+            {
+                "letter": letter,
+                "letter_name": None,
+                "scholar": "neili",
+                "raw_description": gloss,
+                "atomic_features": list(features),
+                "feature_categories": list(feature_categories(features)),
+                "sensory_category": None,
+                "kinetic_gloss": kinetic,
+                "source_document": str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
+                "confidence": "high",
+            }
+        )
+    return out
+
+
+def _load_abbas_letters() -> list[dict[str, Any]]:
+    summary = (DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
+    rows = _extract_markdown_table(summary, "#### نظام التصنيف الحسي الشامل")
+    out: list[dict[str, Any]] = []
+    for row in rows[1:]:
+        category = row[0].replace("*", "")
+        letters = [item.strip() for item in row[1].split("،")]
+        for letter in letters:
+            if not letter:
+                continue
+            features = decompose_semantic_text(row[2])
+            out.append(
+                {
+                    "letter": letter,
+                    "letter_name": None,
+                    "scholar": "hassan_abbas",
+                    "raw_description": row[2],
+                    "atomic_features": list(features),
+                    "feature_categories": list(feature_categories(features)),
+                    "sensory_category": category,
+                    "kinetic_gloss": None,
+                    "source_document": str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
+                    "confidence": "medium",
+                }
+            )
+    return out
+
+
+def _load_asim_letters() -> list[dict[str, Any]]:
+    source = (THEORY_ROOT / "عاصم المصري" / "جدول معاني الحروف _.md").read_text(encoding="utf-8")
+    rows = _extract_markdown_table(source, "# جدول معاني الحروف")
+    out: list[dict[str, Any]] = []
+    for row in rows[1:]:
+        if len(row) < 4 or not row[1] or not row[3]:
+            continue
+        features = decompose_semantic_text(row[3])
+        out.append(
+                {
+                    "letter": row[1],
+                    "letter_name": row[2],
+                    "scholar": "asim_al_masri",
+                    "raw_description": row[3],
+                "atomic_features": list(features),
+                "feature_categories": list(feature_categories(features)),
+                "sensory_category": None,
+                "kinetic_gloss": row[3],
+                "source_document": str(THEORY_ROOT / "عاصم المصري" / "جدول معاني الحروف _.md"),
+                "confidence": "medium",
+            }
+        )
+    return out
+
+
+def _load_anbar_letters() -> list[dict[str, Any]]:
+    summary = (DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
+    pattern = re.compile(r"- \*\*(.+?) \((.)\)\*\*: (.+)")
+    section = summary.split("### دلالات الحروف الأساسية حسب عنبر", 1)[1].split("## ١٨.", 1)[0]
+    out: list[dict[str, Any]] = []
+    for match in pattern.finditer(section):
+        letter_name, letter, gloss = match.groups()
+        features = decompose_semantic_text(gloss)
+        out.append(
+            {
+                "letter": letter,
+                "letter_name": letter_name,
+                "scholar": "anbar",
+                "raw_description": gloss,
+                "atomic_features": list(features),
+                "feature_categories": list(feature_categories(features)),
+                "sensory_category": None,
+                "kinetic_gloss": gloss,
+                "source_document": str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
+                "confidence": "medium",
+            }
+        )
+    return out
+
+
+def _build_jabal_nuclei() -> list[dict[str, Any]]:
+    rows = _read_jsonl(MUAJAM_ROOT / "roots.jsonl")
+    grouped: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        key = row["binary_root"]
+        grouped.setdefault(
+            key,
+            {
+                "binary_root": key,
+                "letter1": row["letter1"],
+                "letter2": row["letter2"],
+                "jabal_shared_meaning": row["binary_root_meaning"],
+                "jabal_features": list(decompose_semantic_text(row["binary_root_meaning"])),
+                "member_roots": [],
+                "member_count": 0,
+                "reverse_exists": False,
+                "reverse_root": None,
+                "model_a_score": None,
+                "model_b_score": None,
+                "model_c_score": None,
+                "model_d_score": None,
+                "best_model": None,
+                "golden_rule_score": None,
+                "status": "empty",
+                "bab": row.get("bab_name") or row.get("bab"),
+                "source": "المعجم الاشتقاقي المؤصل",
+            },
+        )
+        if row["tri_root"] not in grouped[key]["member_roots"]:
+            grouped[key]["member_roots"].append(row["tri_root"])
+    keys = set(grouped)
+    for key, payload in grouped.items():
+        payload["member_count"] = len(payload["member_roots"])
+        payload["reverse_exists"] = key[::-1] in keys and key[::-1] != key
+        payload["reverse_root"] = key[::-1] if payload["reverse_exists"] else None
+    return sorted(grouped.values(), key=lambda item: item["binary_root"])
+
+
+def _build_jabal_roots() -> list[dict[str, Any]]:
+    rows = _read_jsonl(MUAJAM_ROOT / "roots.jsonl")
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        root = row["tri_root"]
+        third_letter = row.get("added_letter", "")
+        if len(third_letter) != 1 and len(root) >= 3:
+            third_letter = root[-1]
+        out.append(
+            {
+                "root": root,
+                "binary_nucleus": row["binary_root"],
+                "third_letter": third_letter,
+                "jabal_axial_meaning": row["axial_meaning"],
+                "jabal_features": list(decompose_semantic_text(row["axial_meaning"])),
+                "predicted_meaning": None,
+                "predicted_features": None,
+                "prediction_score": None,
+                "quranic_verse": row.get("quran_example") or None,
+                "bab": row.get("bab_name") or row.get("bab"),
+                "source": "المعجم الاشتقاقي المؤصل",
+                "status": "empty",
+            }
+        )
+    return out
+
+
+def _scholar_letter_map(rows: list[dict[str, Any]]) -> dict[str, dict[str, dict[str, Any]]]:
+    grouped: dict[str, dict[str, dict[str, Any]]] = defaultdict(dict)
+    for row in rows:
+        grouped[row["scholar"]][row["letter"]] = row
+    return dict(grouped)
+
+
+def _build_golden_rule_report(nuclei_rows: list[dict[str, Any]]) -> dict[str, Any]:
+    lookup = {row["binary_root"]: row for row in nuclei_rows}
+    seen: set[str] = set()
+    pair_rows: list[dict[str, Any]] = []
+    confirmed = 0
+    for root, row in lookup.items():
+        reverse = root[::-1]
+        if reverse not in lookup or root == reverse or reverse in seen:
+            continue
+        seen.add(root)
+        seen.add(reverse)
+        forward_features = tuple(row["jabal_features"])
+        reverse_features = tuple(lookup[reverse]["jabal_features"])
+        inverted_forward = set(invert_features(forward_features))
+        overlap = sorted(inverted_forward & set(reverse_features))
+        is_confirmed = bool(overlap)
+        if is_confirmed:
+            confirmed += 1
+        pair_rows.append(
+            {
+                "forward": root,
+                "reverse": reverse,
+                "forward_features": list(forward_features),
+                "reverse_features": list(reverse_features),
+                "inverted_forward_features": list(inverted_forward),
+                "overlap_with_reverse": overlap,
+                "confirmed": is_confirmed,
+            }
+        )
+    total = len(pair_rows)
+    return {
+        "reversible_pairs": total,
+        "confirmed_pairs": confirmed,
+        "confirmation_rate": round(confirmed / total, 6) if total else 0.0,
+        "pairs": pair_rows,
+    }
+
+
+def main() -> int:
+    sys.stdout.reconfigure(encoding="utf-8")
+
+    scholar_rows = (
+        _load_jabal_letters()
+        + _load_neili_letters()
+        + _load_abbas_letters()
+        + _load_asim_letters()
+        + _load_anbar_letters()
+    )
+    nuclei_rows = _build_jabal_nuclei()
+    root_rows = _build_jabal_roots()
+    scholar_map = _scholar_letter_map(scholar_rows)
+    score_rows = build_nucleus_score_rows(nuclei_rows, scholar_map)
+    golden_rule = _build_golden_rule_report(nuclei_rows)
+
+    by_scholar: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in scholar_rows:
+        by_scholar[row["scholar"]].append(row)
+    for scholar, rows in by_scholar.items():
+        _write_jsonl(LETTERS_OUT / f"{scholar}_letters.jsonl", sorted(rows, key=lambda item: item["letter"]))
+    _write_jsonl(BINARY_OUT / "jabal_nuclei_raw.jsonl", nuclei_rows)
+    _write_jsonl(ROOTS_OUT / "jabal_roots_raw.jsonl", root_rows)
+    _write_json(OUTPUT_ROOT / "nucleus_score_matrix.json", score_rows)
+    _write_json(OUTPUT_ROOT / "golden_rule_report.json", golden_rule)
+
+    summary = {
+        "scholars": {scholar: len(rows) for scholar, rows in by_scholar.items()},
+        "nuclei": len(nuclei_rows),
+        "roots": len(root_rows),
+        "score_rows": len(score_rows),
+        "golden_rule_pairs": golden_rule["reversible_pairs"],
+    }
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
