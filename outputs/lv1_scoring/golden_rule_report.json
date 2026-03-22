@@ -1,0 +1,2589 @@
+{
+  "reversible_pairs": 166,
+  "confirmed_pairs": 15,
+  "confirmation_rate": 0.090361,
+  "pairs": [
+    {
+      "forward": "ءب",
+      "reverse": "بء",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ءل",
+      "reverse": "لء",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ءم",
+      "reverse": "مء",
+      "forward_features": [
+        "نقص"
+      ],
+      "reverse_features": [
+        "اتساع",
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "نقص"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "أف",
+      "reverse": "فأ",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "أن",
+      "reverse": "نأ",
+      "forward_features": [],
+      "reverse_features": [
+        "إبعاد",
+        "قوة"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بت",
+      "reverse": "تب",
+      "forward_features": [
+        "قطع"
+      ],
+      "reverse_features": [
+        "تجمع",
+        "غلظ"
+      ],
+      "inverted_forward_features": [
+        "قطع"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بث",
+      "reverse": "ثب",
+      "forward_features": [],
+      "reverse_features": [
+        "تجمع",
+        "تماسك"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بج",
+      "reverse": "جب",
+      "forward_features": [
+        "رخاوة"
+      ],
+      "reverse_features": [
+        "بروز",
+        "قطع",
+        "استواء"
+      ],
+      "inverted_forward_features": [
+        "رخاوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بح",
+      "reverse": "حب",
+      "forward_features": [
+        "فراغ"
+      ],
+      "reverse_features": [
+        "تجمع",
+        "حيز",
+        "اكتناز",
+        "جفاف",
+        "لطف"
+      ],
+      "inverted_forward_features": [
+        "ضغط"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بخ",
+      "reverse": "خب",
+      "forward_features": [
+        "نقص",
+        "فراغ"
+      ],
+      "reverse_features": [
+        "تخلخل",
+        "باطن",
+        "تجمع"
+      ],
+      "inverted_forward_features": [
+        "ضغط",
+        "نقص"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بد",
+      "reverse": "دب",
+      "forward_features": [
+        "ظهور"
+      ],
+      "reverse_features": [
+        "ثقل",
+        "ضغط"
+      ],
+      "inverted_forward_features": [
+        "ظهور"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بذ",
+      "reverse": "ذب",
+      "forward_features": [
+        "تفرق"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "امتداد",
+        "وحدة",
+        "حدة"
+      ],
+      "inverted_forward_features": [
+        "تجمع"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بر",
+      "reverse": "رب",
+      "forward_features": [
+        "خلوص"
+      ],
+      "reverse_features": [
+        "غلظ",
+        "تماسك",
+        "تجمع"
+      ],
+      "inverted_forward_features": [
+        "خلوص"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بز",
+      "reverse": "زب",
+      "forward_features": [
+        "نفاذ"
+      ],
+      "reverse_features": [
+        "اكتناز"
+      ],
+      "inverted_forward_features": [
+        "نفاذ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بس",
+      "reverse": "سب",
+      "forward_features": [
+        "جفاف"
+      ],
+      "reverse_features": [
+        "امتداد",
+        "دقة",
+        "اتصال"
+      ],
+      "inverted_forward_features": [
+        "جفاف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بش",
+      "reverse": "شب",
+      "forward_features": [
+        "انتشار",
+        "ظاهر"
+      ],
+      "reverse_features": [
+        "تجمع",
+        "انتشار"
+      ],
+      "inverted_forward_features": [
+        "امتساك",
+        "باطن"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بص",
+      "reverse": "صب",
+      "forward_features": [
+        "نفاذ"
+      ],
+      "reverse_features": [
+        "امتداد",
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "نفاذ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بض",
+      "reverse": "ضب",
+      "forward_features": [
+        "تجمع",
+        "رخاوة"
+      ],
+      "reverse_features": [
+        "إمساك"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "رخاوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بط",
+      "reverse": "طب",
+      "forward_features": [
+        "ثقل",
+        "ضغط"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "ثقل",
+        "فراغ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بع",
+      "reverse": "عب",
+      "forward_features": [
+        "خروج",
+        "انتقال"
+      ],
+      "reverse_features": [
+        "رخاوة",
+        "تخلخل",
+        "حيز"
+      ],
+      "inverted_forward_features": [
+        "خروج",
+        "انتقال"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بغ",
+      "reverse": "غب",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بق",
+      "reverse": "قب",
+      "forward_features": [
+        "اتساع"
+      ],
+      "reverse_features": [
+        "جوف",
+        "اتصال"
+      ],
+      "inverted_forward_features": [
+        "اتساع"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بك",
+      "reverse": "كب",
+      "forward_features": [
+        "ضغط",
+        "احتباس"
+      ],
+      "reverse_features": [
+        "تجمع"
+      ],
+      "inverted_forward_features": [
+        "اختراق",
+        "فراغ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بل",
+      "reverse": "لب",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "بن",
+      "reverse": "نب",
+      "forward_features": [
+        "امتداد"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "امتداد"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "تح",
+      "reverse": "حت",
+      "forward_features": [
+        "احتكاك"
+      ],
+      "reverse_features": [
+        "رقة"
+      ],
+      "inverted_forward_features": [
+        "احتكاك"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "تر",
+      "reverse": "رت",
+      "forward_features": [
+        "قوة",
+        "دقة"
+      ],
+      "reverse_features": [
+        "امتساك",
+        "دقة"
+      ],
+      "inverted_forward_features": [
+        "قوة",
+        "دقة"
+      ],
+      "overlap_with_reverse": [
+        "دقة"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "تس",
+      "reverse": "ست",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "تع",
+      "reverse": "عت",
+      "forward_features": [
+        "رخاوة"
+      ],
+      "reverse_features": [
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "رخاوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "تف",
+      "reverse": "فت",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "تق",
+      "reverse": "قت",
+      "forward_features": [
+        "عمق"
+      ],
+      "reverse_features": [
+        "دقة",
+        "قوة",
+        "عمق"
+      ],
+      "inverted_forward_features": [
+        "عمق"
+      ],
+      "overlap_with_reverse": [
+        "عمق"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "تل",
+      "reverse": "لت",
+      "forward_features": [],
+      "reverse_features": [
+        "تماسك",
+        "نقص"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "تم",
+      "reverse": "مت",
+      "forward_features": [
+        "تميز"
+      ],
+      "reverse_features": [
+        "امتداد",
+        "قوة",
+        "دقة"
+      ],
+      "inverted_forward_features": [
+        "تميز"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "تن",
+      "reverse": "نت",
+      "forward_features": [
+        "ضغط",
+        "قوة",
+        "باطن"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "قوة",
+        "فراغ",
+        "ظاهر"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ثج",
+      "reverse": "جث",
+      "forward_features": [
+        "تجمع"
+      ],
+      "reverse_features": [
+        "تجمع"
+      ],
+      "inverted_forward_features": [
+        "تفرق"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ثر",
+      "reverse": "رث",
+      "forward_features": [
+        "نفاذ",
+        "انتشار"
+      ],
+      "reverse_features": [
+        "استواء"
+      ],
+      "inverted_forward_features": [
+        "امتساك",
+        "نفاذ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ثع",
+      "reverse": "عث",
+      "forward_features": [
+        "خروج"
+      ],
+      "reverse_features": [
+        "انتشار"
+      ],
+      "inverted_forward_features": [
+        "خروج"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ثق",
+      "reverse": "قث",
+      "forward_features": [
+        "غلظ"
+      ],
+      "reverse_features": [
+        "هشاشة"
+      ],
+      "inverted_forward_features": [
+        "غلظ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ثم",
+      "reverse": "مث",
+      "forward_features": [
+        "حيز"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "حيز"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ثن",
+      "reverse": "نث",
+      "forward_features": [],
+      "reverse_features": [
+        "تفشي"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جح",
+      "reverse": "حج",
+      "forward_features": [
+        "غلظ",
+        "حدة",
+        "باطن"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "غلظ",
+        "حدة",
+        "ظاهر"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جر",
+      "reverse": "رج",
+      "forward_features": [
+        "استرسال",
+        "امتداد"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "استرسال",
+        "امتداد"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جز",
+      "reverse": "زج",
+      "forward_features": [
+        "تميز"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "تميز"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جس",
+      "reverse": "سج",
+      "forward_features": [
+        "اختراق"
+      ],
+      "reverse_features": [
+        "رقة",
+        "غلظ",
+        "استواء"
+      ],
+      "inverted_forward_features": [
+        "احتباس"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جع",
+      "reverse": "عج",
+      "forward_features": [
+        "جوف",
+        "فراغ"
+      ],
+      "reverse_features": [
+        "تجمع",
+        "هشاشة"
+      ],
+      "inverted_forward_features": [
+        "جوف",
+        "ضغط"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جف",
+      "reverse": "فج",
+      "forward_features": [
+        "جفاف"
+      ],
+      "reverse_features": [
+        "اتساع",
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "جفاف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جل",
+      "reverse": "لج",
+      "forward_features": [
+        "اتساع"
+      ],
+      "reverse_features": [
+        "كثافة"
+      ],
+      "inverted_forward_features": [
+        "اتساع"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جم",
+      "reverse": "مج",
+      "forward_features": [
+        "تجمع"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "تفرق"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "جن",
+      "reverse": "نج",
+      "forward_features": [
+        "كثافة"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "غلظ",
+        "كثافة",
+        "قوة",
+        "احتواء"
+      ],
+      "inverted_forward_features": [
+        "كثافة"
+      ],
+      "overlap_with_reverse": [
+        "كثافة"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "حد",
+      "reverse": "دح",
+      "forward_features": [
+        "امتداد"
+      ],
+      "reverse_features": [
+        "ضغط"
+      ],
+      "inverted_forward_features": [
+        "امتداد"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حر",
+      "reverse": "رح",
+      "forward_features": [
+        "خلوص",
+        "غلظ"
+      ],
+      "reverse_features": [
+        "اتساع",
+        "رقة"
+      ],
+      "inverted_forward_features": [
+        "غلظ",
+        "خلوص"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حز",
+      "reverse": "زح",
+      "forward_features": [
+        "دقة",
+        "تميز"
+      ],
+      "reverse_features": [
+        "انتقال",
+        "احتكاك"
+      ],
+      "inverted_forward_features": [
+        "دقة",
+        "تميز"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حس",
+      "reverse": "سح",
+      "forward_features": [
+        "ظاهر"
+      ],
+      "reverse_features": [
+        "لطف",
+        "دقة"
+      ],
+      "inverted_forward_features": [
+        "باطن"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حش",
+      "reverse": "شح",
+      "forward_features": [
+        "جفاف",
+        "انتشار"
+      ],
+      "reverse_features": [
+        "جفاف"
+      ],
+      "inverted_forward_features": [
+        "امتساك",
+        "جفاف"
+      ],
+      "overlap_with_reverse": [
+        "جفاف"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "حص",
+      "reverse": "صح",
+      "forward_features": [
+        "غلظ",
+        "تجمع",
+        "جفاف",
+        "قطع"
+      ],
+      "reverse_features": [
+        "جفاف"
+      ],
+      "inverted_forward_features": [
+        "غلظ",
+        "تفرق",
+        "قطع",
+        "جفاف"
+      ],
+      "overlap_with_reverse": [
+        "جفاف"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "حض",
+      "reverse": "ضح",
+      "forward_features": [
+        "قوة",
+        "غلظ"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "غلظ",
+        "قوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حط",
+      "reverse": "طح",
+      "forward_features": [
+        "قوة"
+      ],
+      "reverse_features": [
+        "ضغط"
+      ],
+      "inverted_forward_features": [
+        "قوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حف",
+      "reverse": "فح",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حق",
+      "reverse": "قح",
+      "forward_features": [
+        "عمق"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "عمق"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حل",
+      "reverse": "لح",
+      "forward_features": [],
+      "reverse_features": [
+        "التحام",
+        "امتداد"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حم",
+      "reverse": "مح",
+      "forward_features": [
+        "حدة"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "حدة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حن",
+      "reverse": "نح",
+      "forward_features": [
+        "جوف"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "باطن",
+        "قوة",
+        "اتساع"
+      ],
+      "inverted_forward_features": [
+        "جوف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "حو",
+      "reverse": "وح",
+      "forward_features": [
+        "قوة"
+      ],
+      "reverse_features": [
+        "لطف"
+      ],
+      "inverted_forward_features": [
+        "قوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خد",
+      "reverse": "دخ",
+      "forward_features": [
+        "جوف"
+      ],
+      "reverse_features": [
+        "تخلخل"
+      ],
+      "inverted_forward_features": [
+        "جوف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خذ",
+      "reverse": "ذخ",
+      "forward_features": [
+        "نفاذ",
+        "قوة",
+        "غلظ"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "جوف"
+      ],
+      "inverted_forward_features": [
+        "غلظ",
+        "نفاذ",
+        "قوة"
+      ],
+      "overlap_with_reverse": [
+        "نفاذ"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "خر",
+      "reverse": "رخ",
+      "forward_features": [
+        "تخلخل",
+        "نقص"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "نقص",
+        "تماسك"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خز",
+      "reverse": "زخ",
+      "forward_features": [
+        "نفاذ",
+        "حدة"
+      ],
+      "reverse_features": [
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "حدة",
+        "نفاذ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خس",
+      "reverse": "سخ",
+      "forward_features": [
+        "نقص"
+      ],
+      "reverse_features": [
+        "اختراق"
+      ],
+      "inverted_forward_features": [
+        "نقص"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خش",
+      "reverse": "شخ",
+      "forward_features": [
+        "تجمع"
+      ],
+      "reverse_features": [
+        "جفاف"
+      ],
+      "inverted_forward_features": [
+        "تفرق"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خص",
+      "reverse": "صخ",
+      "forward_features": [
+        "دقة"
+      ],
+      "reverse_features": [
+        "حدة"
+      ],
+      "inverted_forward_features": [
+        "دقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خف",
+      "reverse": "فخ",
+      "forward_features": [
+        "تخلخل"
+      ],
+      "reverse_features": [
+        "قوة",
+        "فراغ"
+      ],
+      "inverted_forward_features": [
+        "تماسك"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خم",
+      "reverse": "مخ",
+      "forward_features": [],
+      "reverse_features": [
+        "رخاوة",
+        "خروج"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "خن",
+      "reverse": "نخ",
+      "forward_features": [
+        "تخلخل",
+        "باطن"
+      ],
+      "reverse_features": [
+        "نقص"
+      ],
+      "inverted_forward_features": [
+        "ظاهر",
+        "تماسك"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "در",
+      "reverse": "رد",
+      "forward_features": [
+        "استرسال",
+        "امتداد"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "استرسال",
+        "امتداد"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "دس",
+      "reverse": "سد",
+      "forward_features": [
+        "نفاذ",
+        "دقة",
+        "حدة"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "حدة",
+        "نفاذ",
+        "دقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "دع",
+      "reverse": "عد",
+      "forward_features": [
+        "ضغط",
+        "رخاوة",
+        "تجمع"
+      ],
+      "reverse_features": [
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "رخاوة",
+        "فراغ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "دف",
+      "reverse": "فد",
+      "forward_features": [
+        "ضغط",
+        "ظاهر"
+      ],
+      "reverse_features": [
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "باطن",
+        "فراغ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "دق",
+      "reverse": "قد",
+      "forward_features": [
+        "صدم",
+        "ضغط",
+        "حدة"
+      ],
+      "reverse_features": [
+        "امتداد",
+        "طول",
+        "قطع",
+        "جفاف"
+      ],
+      "inverted_forward_features": [
+        "صدم",
+        "حدة",
+        "فراغ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "دل",
+      "reverse": "لد",
+      "forward_features": [
+        "امتداد",
+        "قوة"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "قوة",
+        "امتداد"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "دم",
+      "reverse": "مد",
+      "forward_features": [
+        "استواء",
+        "ظاهر",
+        "بروز"
+      ],
+      "reverse_features": [
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "استواء",
+        "باطن",
+        "بروز"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "دن",
+      "reverse": "ند",
+      "forward_features": [],
+      "reverse_features": [
+        "إبعاد",
+        "امتداد",
+        "رقة"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ذر",
+      "reverse": "رذ",
+      "forward_features": [
+        "نفاذ",
+        "دقة",
+        "استرسال"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "استرسال",
+        "نفاذ",
+        "دقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ذع",
+      "reverse": "عذ",
+      "forward_features": [
+        "تفرق",
+        "رقة"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "تجمع",
+        "رقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ذق",
+      "reverse": "قذ",
+      "forward_features": [
+        "نفاذ"
+      ],
+      "reverse_features": [
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "نفاذ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ذك",
+      "reverse": "كذ",
+      "forward_features": [
+        "حدة"
+      ],
+      "reverse_features": [
+        "رخاوة"
+      ],
+      "inverted_forward_features": [
+        "حدة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ذل",
+      "reverse": "لذ",
+      "forward_features": [
+        "نقص"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "نقص"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ذن",
+      "reverse": "نذ",
+      "forward_features": [
+        "امتداد"
+      ],
+      "reverse_features": [
+        "خروج",
+        "حيز"
+      ],
+      "inverted_forward_features": [
+        "امتداد"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رز",
+      "reverse": "زر",
+      "forward_features": [],
+      "reverse_features": [
+        "نفاذ",
+        "دقة",
+        "إمساك"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رس",
+      "reverse": "سر",
+      "forward_features": [
+        "نفاذ",
+        "امتداد"
+      ],
+      "reverse_features": [
+        "امتداد",
+        "نفاذ",
+        "دقة"
+      ],
+      "inverted_forward_features": [
+        "نفاذ",
+        "امتداد"
+      ],
+      "overlap_with_reverse": [
+        "امتداد",
+        "نفاذ"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "رش",
+      "reverse": "شر",
+      "forward_features": [
+        "انتشار",
+        "دقة"
+      ],
+      "reverse_features": [
+        "انتشار"
+      ],
+      "inverted_forward_features": [
+        "امتساك",
+        "دقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رص",
+      "reverse": "صر",
+      "forward_features": [
+        "التحام",
+        "غلظ"
+      ],
+      "reverse_features": [
+        "انتشار"
+      ],
+      "inverted_forward_features": [
+        "غلظ",
+        "التحام"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رض",
+      "reverse": "ضر",
+      "forward_features": [
+        "رخاوة",
+        "باطن"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "رخاوة",
+        "ظاهر"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رط",
+      "reverse": "طر",
+      "forward_features": [
+        "رخاوة"
+      ],
+      "reverse_features": [
+        "امتداد",
+        "رقة"
+      ],
+      "inverted_forward_features": [
+        "رخاوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رع",
+      "reverse": "عر",
+      "forward_features": [
+        "امتداد",
+        "رقة",
+        "رخاوة"
+      ],
+      "reverse_features": [
+        "نقص",
+        "ظاهر",
+        "ظهور"
+      ],
+      "inverted_forward_features": [
+        "رخاوة",
+        "امتداد",
+        "رقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رغ",
+      "reverse": "غر",
+      "forward_features": [
+        "رخاوة",
+        "كثافة"
+      ],
+      "reverse_features": [
+        "امتداد",
+        "دقة"
+      ],
+      "inverted_forward_features": [
+        "رخاوة",
+        "كثافة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رف",
+      "reverse": "فر",
+      "forward_features": [
+        "امتداد",
+        "رقة",
+        "رخاوة"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "رخاوة",
+        "امتداد",
+        "رقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رق",
+      "reverse": "قر",
+      "forward_features": [
+        "رقة"
+      ],
+      "reverse_features": [
+        "حيز"
+      ],
+      "inverted_forward_features": [
+        "رقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رك",
+      "reverse": "كر",
+      "forward_features": [
+        "تجمع",
+        "كثافة",
+        "تماسك"
+      ],
+      "reverse_features": [
+        "استرسال"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "تخلخل",
+        "كثافة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رم",
+      "reverse": "مر",
+      "forward_features": [
+        "رخاوة"
+      ],
+      "reverse_features": [
+        "استرسال",
+        "حدة",
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "رخاوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "رن",
+      "reverse": "نر",
+      "forward_features": [
+        "نفاذ"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "لطف"
+      ],
+      "inverted_forward_features": [
+        "نفاذ"
+      ],
+      "overlap_with_reverse": [
+        "نفاذ"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "زع",
+      "reverse": "عز",
+      "forward_features": [],
+      "reverse_features": [
+        "تماسك",
+        "اشتداد"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "زغ",
+      "reverse": "غز",
+      "forward_features": [
+        "دقة"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "حدة",
+        "دقة",
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "دقة"
+      ],
+      "overlap_with_reverse": [
+        "دقة"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "زف",
+      "reverse": "فز",
+      "forward_features": [
+        "تجمع"
+      ],
+      "reverse_features": [
+        "قوة",
+        "نفاذ"
+      ],
+      "inverted_forward_features": [
+        "تفرق"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "زك",
+      "reverse": "كز",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "زل",
+      "reverse": "لز",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "زم",
+      "reverse": "مز",
+      "forward_features": [
+        "اكتناز"
+      ],
+      "reverse_features": [
+        "تجمع"
+      ],
+      "inverted_forward_features": [
+        "اكتناز"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "زن",
+      "reverse": "نز",
+      "forward_features": [
+        "باطن",
+        "قوة",
+        "تجمع"
+      ],
+      "reverse_features": [
+        "دقة",
+        "ضغط",
+        "قوة",
+        "ظاهر"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "قوة",
+        "ظاهر"
+      ],
+      "overlap_with_reverse": [
+        "ظاهر",
+        "قوة"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "سع",
+      "reverse": "عس",
+      "forward_features": [
+        "اتساع",
+        "حيز"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "حيز",
+        "اتساع"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "سغ",
+      "reverse": "غس",
+      "forward_features": [
+        "نفاذ"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "نفاذ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "سف",
+      "reverse": "فس",
+      "forward_features": [
+        "نفاذ",
+        "ظهور"
+      ],
+      "reverse_features": [
+        "غلظ"
+      ],
+      "inverted_forward_features": [
+        "نفاذ",
+        "ظهور"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "سق",
+      "reverse": "قس",
+      "forward_features": [
+        "نفاذ",
+        "غلظ",
+        "جوف"
+      ],
+      "reverse_features": [
+        "امتداد",
+        "حدة"
+      ],
+      "inverted_forward_features": [
+        "غلظ",
+        "نفاذ",
+        "جوف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "سك",
+      "reverse": "كس",
+      "forward_features": [],
+      "reverse_features": [
+        "نقص"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "سل",
+      "reverse": "لس",
+      "forward_features": [
+        "طول"
+      ],
+      "reverse_features": [
+        "رقة"
+      ],
+      "inverted_forward_features": [
+        "طول"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "سم",
+      "reverse": "مس",
+      "forward_features": [],
+      "reverse_features": [
+        "اتصال"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "سن",
+      "reverse": "نس",
+      "forward_features": [
+        "امتداد",
+        "نفاذ",
+        "حدة",
+        "دقة"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "دقة"
+      ],
+      "inverted_forward_features": [
+        "حدة",
+        "نفاذ",
+        "امتداد",
+        "دقة"
+      ],
+      "overlap_with_reverse": [
+        "دقة",
+        "نفاذ"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "شع",
+      "reverse": "عش",
+      "forward_features": [
+        "انتشار",
+        "تفرق",
+        "دقة",
+        "امتداد"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "امتساك",
+        "امتداد",
+        "دقة",
+        "تجمع"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "شغ",
+      "reverse": "غش",
+      "forward_features": [
+        "كثافة"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "كثافة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "شف",
+      "reverse": "فش",
+      "forward_features": [
+        "كثافة"
+      ],
+      "reverse_features": [
+        "خروج",
+        "لطف",
+        "اتساع"
+      ],
+      "inverted_forward_features": [
+        "كثافة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "شق",
+      "reverse": "قش",
+      "forward_features": [],
+      "reverse_features": [
+        "جفاف",
+        "ظاهر"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "شك",
+      "reverse": "كش",
+      "forward_features": [
+        "نفاذ",
+        "حدة",
+        "قوة",
+        "تجمع"
+      ],
+      "reverse_features": [
+        "خروج",
+        "التحام"
+      ],
+      "inverted_forward_features": [
+        "حدة",
+        "نفاذ",
+        "تفرق",
+        "قوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "شم",
+      "reverse": "مش",
+      "forward_features": [
+        "تجمع"
+      ],
+      "reverse_features": [
+        "انتشار",
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "تفرق"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "شن",
+      "reverse": "نش",
+      "forward_features": [
+        "انتشار"
+      ],
+      "reverse_features": [
+        "انتشار",
+        "حدة"
+      ],
+      "inverted_forward_features": [
+        "امتساك"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "صع",
+      "reverse": "عص",
+      "forward_features": [
+        "تفرق",
+        "تجمع",
+        "تماسك"
+      ],
+      "reverse_features": [
+        "اشتداد"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "تجمع",
+        "تخلخل"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "صغ",
+      "reverse": "غص",
+      "forward_features": [],
+      "reverse_features": [
+        "نفاذ",
+        "غلظ"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "صف",
+      "reverse": "فص",
+      "forward_features": [
+        "رقة",
+        "خلوص",
+        "غلظ",
+        "تجمع"
+      ],
+      "reverse_features": [
+        "تميز",
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "غلظ",
+        "تفرق",
+        "خلوص",
+        "رقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "صم",
+      "reverse": "مص",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "صن",
+      "reverse": "نص",
+      "forward_features": [
+        "احتواء",
+        "جوف",
+        "إمساك"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "إفراغ",
+        "إمساك",
+        "جوف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ضع",
+      "reverse": "عض",
+      "forward_features": [
+        "غلظ",
+        "تماسك",
+        "تفرق"
+      ],
+      "reverse_features": [
+        "تجمع",
+        "ضغط",
+        "اشتداد"
+      ],
+      "inverted_forward_features": [
+        "غلظ",
+        "تجمع",
+        "تخلخل"
+      ],
+      "overlap_with_reverse": [
+        "تجمع"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "ضغ",
+      "reverse": "غض",
+      "forward_features": [
+        "تجمع",
+        "رخاوة"
+      ],
+      "reverse_features": [
+        "رخاوة"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "رخاوة"
+      ],
+      "overlap_with_reverse": [
+        "رخاوة"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "ضف",
+      "reverse": "فض",
+      "forward_features": [
+        "تجمع"
+      ],
+      "reverse_features": [
+        "قوة",
+        "غلظ"
+      ],
+      "inverted_forward_features": [
+        "تفرق"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ضق",
+      "reverse": "قض",
+      "forward_features": [],
+      "reverse_features": [
+        "فراغ",
+        "قطع"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ضم",
+      "reverse": "مض",
+      "forward_features": [
+        "تجمع",
+        "ضغط"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "فراغ"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ضن",
+      "reverse": "نض",
+      "forward_features": [
+        "حيز"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "ظاهر"
+      ],
+      "inverted_forward_features": [
+        "حيز"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "طع",
+      "reverse": "عط",
+      "forward_features": [],
+      "reverse_features": [
+        "امتداد",
+        "تعلق"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "طغ",
+      "reverse": "غط",
+      "forward_features": [
+        "قوة"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "قوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "طف",
+      "reverse": "فط",
+      "forward_features": [
+        "وصول"
+      ],
+      "reverse_features": [
+        "ضغط"
+      ],
+      "inverted_forward_features": [
+        "وصول"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "طق",
+      "reverse": "قط",
+      "forward_features": [
+        "قوة"
+      ],
+      "reverse_features": [
+        "قطع",
+        "استواء"
+      ],
+      "inverted_forward_features": [
+        "قوة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "طل",
+      "reverse": "لط",
+      "forward_features": [
+        "امتداد",
+        "ظاهر"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "باطن",
+        "امتداد"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "طم",
+      "reverse": "مط",
+      "forward_features": [],
+      "reverse_features": [
+        "امتداد"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "طن",
+      "reverse": "نط",
+      "forward_features": [],
+      "reverse_features": [
+        "حيز",
+        "قوة"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ظع",
+      "reverse": "عظ",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ظل",
+      "reverse": "لظ",
+      "forward_features": [],
+      "reverse_features": [
+        "حدة"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "ظن",
+      "reverse": "نظ",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "عف",
+      "reverse": "فع",
+      "forward_features": [
+        "ظاهر"
+      ],
+      "reverse_features": [
+        "قوة"
+      ],
+      "inverted_forward_features": [
+        "باطن"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "عق",
+      "reverse": "قع",
+      "forward_features": [
+        "غلظ",
+        "تعقد",
+        "عمق"
+      ],
+      "reverse_features": [
+        "كثافة",
+        "غلظ",
+        "ثقل"
+      ],
+      "inverted_forward_features": [
+        "غلظ",
+        "تعقد",
+        "عمق"
+      ],
+      "overlap_with_reverse": [
+        "غلظ"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "عك",
+      "reverse": "كع",
+      "forward_features": [
+        "انتشار"
+      ],
+      "reverse_features": [
+        "استرسال"
+      ],
+      "inverted_forward_features": [
+        "امتساك"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "عل",
+      "reverse": "لع",
+      "forward_features": [],
+      "reverse_features": [
+        "حدة",
+        "ظهور"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "عم",
+      "reverse": "مع",
+      "forward_features": [
+        "التحام",
+        "تجمع"
+      ],
+      "reverse_features": [
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "التحام"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "عن",
+      "reverse": "نع",
+      "forward_features": [
+        "ظهور",
+        "لطف"
+      ],
+      "reverse_features": [
+        "رخاوة",
+        "رقة"
+      ],
+      "inverted_forward_features": [
+        "ظهور",
+        "لطف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "غل",
+      "reverse": "لغ",
+      "forward_features": [
+        "حدة"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "حدة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "غن",
+      "reverse": "نغ",
+      "forward_features": [
+        "لطف"
+      ],
+      "reverse_features": [
+        "رخاوة",
+        "باطن"
+      ],
+      "inverted_forward_features": [
+        "لطف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "فق",
+      "reverse": "قف",
+      "forward_features": [
+        "عمق",
+        "فراغ"
+      ],
+      "reverse_features": [
+        "امتساك"
+      ],
+      "inverted_forward_features": [
+        "عمق",
+        "ضغط"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "فك",
+      "reverse": "كف",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "فل",
+      "reverse": "لف",
+      "forward_features": [],
+      "reverse_features": [
+        "ظاهر",
+        "كثافة"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "فن",
+      "reverse": "نف",
+      "forward_features": [
+        "امتداد",
+        "رقة"
+      ],
+      "reverse_features": [
+        "نفاذ",
+        "إبعاد",
+        "انتشار"
+      ],
+      "inverted_forward_features": [
+        "امتداد",
+        "رقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "قل",
+      "reverse": "لق",
+      "forward_features": [],
+      "reverse_features": [
+        "صدم",
+        "حيز",
+        "قوة"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "قم",
+      "reverse": "مق",
+      "forward_features": [
+        "تجمع"
+      ],
+      "reverse_features": [
+        "غلظ",
+        "باطن"
+      ],
+      "inverted_forward_features": [
+        "تفرق"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "قن",
+      "reverse": "نق",
+      "forward_features": [
+        "نفاذ",
+        "باطن",
+        "عمق",
+        "امتداد"
+      ],
+      "reverse_features": [
+        "فراغ",
+        "عمق",
+        "غلظ"
+      ],
+      "inverted_forward_features": [
+        "عمق",
+        "نفاذ",
+        "امتداد",
+        "ظاهر"
+      ],
+      "overlap_with_reverse": [
+        "عمق"
+      ],
+      "confirmed": true
+    },
+    {
+      "forward": "كل",
+      "reverse": "لك",
+      "forward_features": [
+        "تجمع",
+        "دقة"
+      ],
+      "reverse_features": [
+        "اكتناز"
+      ],
+      "inverted_forward_features": [
+        "تفرق",
+        "دقة"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "كم",
+      "reverse": "مك",
+      "forward_features": [],
+      "reverse_features": [
+        "احتباس"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "كن",
+      "reverse": "نك",
+      "forward_features": [
+        "جوف"
+      ],
+      "reverse_features": [
+        "وصول",
+        "عمق",
+        "دقة"
+      ],
+      "inverted_forward_features": [
+        "جوف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "لم",
+      "reverse": "مل",
+      "forward_features": [
+        "انتشار",
+        "ظاهر"
+      ],
+      "reverse_features": [
+        "امتداد"
+      ],
+      "inverted_forward_features": [
+        "امتساك",
+        "باطن"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "لن",
+      "reverse": "نل",
+      "forward_features": [],
+      "reverse_features": [
+        "دقة"
+      ],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "لو",
+      "reverse": "ول",
+      "forward_features": [],
+      "reverse_features": [],
+      "inverted_forward_features": [],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "من",
+      "reverse": "نم",
+      "forward_features": [
+        "قوة",
+        "نقص"
+      ],
+      "reverse_features": [
+        "انتشار",
+        "باطن",
+        "ظاهر",
+        "لطف"
+      ],
+      "inverted_forward_features": [
+        "قوة",
+        "نقص"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    },
+    {
+      "forward": "نو",
+      "reverse": "ون",
+      "forward_features": [
+        "احتواء",
+        "جوف"
+      ],
+      "reverse_features": [],
+      "inverted_forward_features": [
+        "إفراغ",
+        "جوف"
+      ],
+      "overlap_with_reverse": [],
+      "confirmed": false
+    }
+  ]
+}
