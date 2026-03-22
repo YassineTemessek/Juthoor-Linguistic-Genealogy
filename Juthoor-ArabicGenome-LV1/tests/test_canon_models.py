@@ -5,12 +5,20 @@ from dataclasses import FrozenInstanceError
 import pytest
 
 from juthoor_arabicgenome_lv1.core.canon_models import (
+    AtomicFeature,
     BinaryFieldEntry,
+    BinaryNucleus,
+    CompositionResult,
+    FEATURE_CATEGORIES,
+    LetterAtom,
+    LetterRegistryEntry,
     LetterSemanticEntry,
     QuranicSemanticProfile,
     RootCompositionEntry,
     SourceEntry,
     TheoryClaim,
+    TriliteralRootEntry,
+    VALID_SCHOLARS,
 )
 
 
@@ -149,3 +157,242 @@ def test_frozen_immutability() -> None:
     )
     with pytest.raises(FrozenInstanceError):
         entry.status = "curated"  # type: ignore[misc]
+
+
+# ---------------------------------------------------------------------------
+# New dataclasses — AtomicFeature, LetterAtom, LetterRegistryEntry,
+# BinaryNucleus, TriliteralRootEntry, CompositionResult + constants
+# ---------------------------------------------------------------------------
+
+def test_valid_scholars_is_tuple_with_expected_values() -> None:
+    assert isinstance(VALID_SCHOLARS, tuple)
+    assert "jabal" in VALID_SCHOLARS
+    assert "hassan_abbas" in VALID_SCHOLARS
+    assert "anbar" in VALID_SCHOLARS
+    assert len(VALID_SCHOLARS) == 8
+
+
+def test_feature_categories_is_tuple_with_9_entries() -> None:
+    assert isinstance(FEATURE_CATEGORIES, tuple)
+    assert len(FEATURE_CATEGORIES) == 9
+    assert "gathering_cohesion" in FEATURE_CATEGORIES
+    assert "pressure_force" in FEATURE_CATEGORIES
+    assert "independence_distinction" in FEATURE_CATEGORIES
+
+
+def test_atomic_feature_minimal() -> None:
+    feat = AtomicFeature(
+        arabic="تجمع",
+        english="gathering",
+        category="gathering_cohesion",
+    )
+    assert feat.arabic == "تجمع"
+    assert feat.category == "gathering_cohesion"
+
+
+def test_atomic_feature_frozen() -> None:
+    feat = AtomicFeature(arabic="تجمع", english="gathering", category="gathering_cohesion")
+    with pytest.raises(FrozenInstanceError):
+        feat.arabic = "ضغط"  # type: ignore[misc]
+
+
+def test_letter_atom_full_fields() -> None:
+    atom = LetterAtom(
+        letter="ب",
+        letter_name="الباء",
+        scholar="hassan_abbas",
+        raw_description="الباء حرف شفوي يدل على الاحتواء والتجمع",
+        atomic_features=("تجمع", "رخاوة", "تلاصق"),
+        feature_categories=("gathering_cohesion", "texture_quality", "gathering_cohesion"),
+        sensory_category="لمسية",
+        kinetic_gloss=None,
+        source_document="خصائص الحروف العربية",
+        confidence="high",
+    )
+    assert atom.scholar == "hassan_abbas"
+    assert atom.sensory_category == "لمسية"
+    assert len(atom.atomic_features) == 3
+    assert atom.kinetic_gloss is None
+
+
+def test_letter_atom_neili_with_kinetic_gloss() -> None:
+    atom = LetterAtom(
+        letter="ر",
+        letter_name="الراء",
+        scholar="neili",
+        raw_description="الراء حرف يدل على الاسترسال والتدفق",
+        atomic_features=("استرسال", "امتداد"),
+        feature_categories=("extension_movement", "extension_movement"),
+        sensory_category=None,
+        kinetic_gloss="تدفق مستمر للأمام",
+        source_document="قصدية الإشارة",
+        confidence="medium",
+    )
+    assert atom.kinetic_gloss == "تدفق مستمر للأمام"
+    assert atom.sensory_category is None
+
+
+def test_letter_atom_frozen() -> None:
+    atom = LetterAtom(
+        letter="ب",
+        letter_name="الباء",
+        scholar="jabal",
+        raw_description="gloss",
+        atomic_features=(),
+        feature_categories=(),
+        sensory_category=None,
+        kinetic_gloss=None,
+        source_document="doc",
+        confidence="stub",
+    )
+    with pytest.raises(FrozenInstanceError):
+        atom.confidence = "high"  # type: ignore[misc]
+
+
+def test_letter_registry_entry_minimal() -> None:
+    atom = LetterAtom(
+        letter="ب",
+        letter_name="الباء",
+        scholar="jabal",
+        raw_description="gloss",
+        atomic_features=("تجمع",),
+        feature_categories=("gathering_cohesion",),
+        sensory_category=None,
+        kinetic_gloss=None,
+        source_document="doc",
+        confidence="stub",
+    )
+    entry = LetterRegistryEntry(
+        letter="ب",
+        letter_name="الباء",
+        scholar_entries=(atom,),
+        consensus_features=("تجمع",),
+        agreement_level="insufficient",
+        articulatory_features=None,
+    )
+    assert entry.letter == "ب"
+    assert len(entry.scholar_entries) == 1
+    assert entry.articulatory_features is None
+
+
+def test_binary_nucleus_without_scoring() -> None:
+    nucleus = BinaryNucleus(
+        binary_root="حس",
+        letter1="ح",
+        letter2="س",
+        jabal_shared_meaning="الإحساس الظاهر",
+        jabal_features=("نفاذ", "ظاهر"),
+        member_roots=("حسد", "حسن", "حسب"),
+        member_count=3,
+        reverse_exists=True,
+        reverse_root="سح",
+        model_a_score=None,
+        model_b_score=None,
+        model_c_score=None,
+        model_d_score=None,
+        best_model=None,
+        golden_rule_score=None,
+        status="empty",
+    )
+    assert nucleus.binary_root == "حس"
+    assert nucleus.reverse_exists is True
+    assert nucleus.model_a_score is None
+    assert nucleus.status == "empty"
+
+
+def test_binary_nucleus_with_scoring() -> None:
+    nucleus = BinaryNucleus(
+        binary_root="كت",
+        letter1="ك",
+        letter2="ت",
+        jabal_shared_meaning="الكتابة والتسجيل",
+        jabal_features=("تجمع", "تلاصق"),
+        member_roots=("كتب", "كتم"),
+        member_count=2,
+        reverse_exists=False,
+        reverse_root=None,
+        model_a_score=0.65,
+        model_b_score=0.72,
+        model_c_score=0.58,
+        model_d_score=0.61,
+        best_model="model_b",
+        golden_rule_score=None,
+        status="scored",
+    )
+    assert nucleus.model_b_score == 0.72
+    assert nucleus.best_model == "model_b"
+    assert nucleus.reverse_root is None
+
+
+def test_trilateral_root_entry_without_prediction() -> None:
+    entry = TriliteralRootEntry(
+        root="كتب",
+        binary_nucleus="كت",
+        third_letter="ب",
+        jabal_axial_meaning="الكتابة والتسجيل",
+        jabal_features=("تجمع", "تلاصق"),
+        predicted_meaning=None,
+        predicted_features=None,
+        prediction_score=None,
+        quranic_verse=None,
+        bab="BAB_01",
+        status="empty",
+    )
+    assert entry.root == "كتب"
+    assert entry.predicted_meaning is None
+    assert entry.prediction_score is None
+
+
+def test_trilateral_root_entry_with_prediction() -> None:
+    entry = TriliteralRootEntry(
+        root="فهم",
+        binary_nucleus="فه",
+        third_letter="م",
+        jabal_axial_meaning="الإدراك والفهم",
+        jabal_features=("نفاذ", "خلوص"),
+        predicted_meaning="اختراق المعنى",
+        predicted_features=("نفاذ", "اختراق"),
+        prediction_score=0.67,
+        quranic_verse="وَلَقَدْ آتَيْنَا دَاوُودَ وَسُلَيْمَانَ عِلْمًا",
+        bab="BAB_05",
+        status="scored",
+    )
+    assert entry.prediction_score == 0.67
+    assert entry.predicted_features == ("نفاذ", "اختراق")
+    assert entry.quranic_verse is not None
+
+
+def test_composition_result_valid_scores() -> None:
+    result = CompositionResult(
+        nucleus="حس",
+        model="model_b",
+        scholar_letters="hassan_abbas",
+        predicted_features=("نفاذ", "ظاهر", "تجمع"),
+        actual_features=("نفاذ", "ظاهر"),
+        jaccard_score=0.667,
+        weighted_score=0.71,
+        matched_features=("نفاذ", "ظاهر"),
+        missed_features=(),
+        extra_features=("تجمع",),
+    )
+    assert result.jaccard_score == pytest.approx(0.667)
+    assert result.matched_features == ("نفاذ", "ظاهر")
+    assert result.missed_features == ()
+    assert result.extra_features == ("تجمع",)
+
+
+def test_composition_result_frozen() -> None:
+    result = CompositionResult(
+        nucleus="حس",
+        model="model_a",
+        scholar_letters="jabal",
+        predicted_features=(),
+        actual_features=(),
+        jaccard_score=0.0,
+        weighted_score=0.0,
+        matched_features=(),
+        missed_features=(),
+        extra_features=(),
+    )
+    with pytest.raises(FrozenInstanceError):
+        result.jaccard_score = 1.0  # type: ignore[misc]
