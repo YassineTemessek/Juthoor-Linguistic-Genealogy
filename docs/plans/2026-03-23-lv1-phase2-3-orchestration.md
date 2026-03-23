@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-23
 **Status:** ACTIVE
-**Last checkpoint:** Sprint 1 scoring fixes landed; next work continues from the task queue below
+**Last checkpoint:** Sprint 3 root prediction checkpoint landed locally; next work continues from the task queue below
 
 ---
 
@@ -14,13 +14,15 @@
 | Abbas letters | 28/28 | Complete |
 | Asim letters | 28/28 | Complete |
 | Neili letters | 10/28 | Complete (he only covered 10) |
-| Anbar letters | 3/28 | Needs extraction |
+| Anbar letters | 3/28 | Main source still too prose-heavy for reliable large-scale extraction |
 | Binary nuclei | 457 | Loaded, scored (first pass) |
-| Trilateral roots | 1,938 | Loaded, NOT predicted yet |
+| Trilateral roots | 1,938 | Loaded, predicted (first pass) |
 | Score matrix rows | 4,792 | 1,005 nonzero (21.0%) |
+| Root prediction rows | 1,938 | 692 nonzero (35.7%) |
+| Root prediction mean Jaccard | 0.1345 | First mechanical pass |
 | Method A estimate | 40-55% real accuracy | Method B undercounts due to vocabulary mismatch |
 | Golden Rule | 19.9% confirmed (33/166) | Improved after extended opposition mapping |
-| Tests passing | 313+ LV1 and growing | Focused Sprint 1 suite currently 26/26 |
+| Tests passing | 313+ LV1 and growing | Focused Sprint 1/3 suite currently 29/29 |
 
 ---
 
@@ -56,22 +58,26 @@ Each task has an owner. Work the next unblocked item and update status directly 
 | S2.3 | **Re-run score matrix with Anbar data** | Codex | S2.1+S1.4 | New Anbar entries in matrix | [ ] |
 | S2.4 | **Cross-scholar comparison report** | Claude | S2.3 | Which scholar's letters predict best per phonetic class? | [ ] |
 
+**Sprint 2 note:** A direct pass on `جدلية الحرف العربي.md` found real semantic clues but not enough explicit letter-level statements to support a reliable canon expansion beyond the current 3 Anbar rows. Sprint 2 remains open, but it is no longer the best use of active Codex time until a better source or a cleaner extraction path appears.
+
 ### SPRINT 3: Phase 3 — Root Prediction (Codex heavy)
 
 | # | Task | Owner | Depends | Output | Done? |
 |---|------|-------|---------|--------|-------|
-| S3.1 | **Build root prediction engine** | Codex | S1.6 (scoring fixes landed) | `src/.../factory/root_predictor.py` | [ ] |
+| S3.1 | **Build root prediction engine** | Codex | S1.6 (scoring fixes landed) | `src/.../factory/root_predictor.py` | [x] |
 | | Strategy: for each of 1,924 roots, get binary nucleus meaning + third letter features → predict المعنى المحوري | | | | |
 | | Use Intersection model primarily, Phonetic-Gestural fallback if empty | | | | |
 | | Apply synonym-aware scoring | | | | |
-| S3.2 | **Run prediction on all 1,924 roots** | Codex | S3.1 | `outputs/lv1_scoring/root_predictions.json` | [ ] |
-| S3.3 | **Score all predictions (Method B)** | Codex | S3.2 | `outputs/lv1_scoring/root_score_matrix.json` | [ ] |
+| S3.2 | **Run prediction on all 1,924 roots** | Codex | S3.1 | `outputs/lv1_scoring/root_predictions.json` | [x] |
+| S3.3 | **Score all predictions (Method B)** | Codex | S3.2 | `outputs/lv1_scoring/root_score_matrix.json` | [x] |
 | | Per-root, per-BAB, overall accuracy | | | | |
-| S3.4 | **Identify top/bottom predictions** | Codex | S3.3 | Top 50 best, bottom 50 worst, with Jabal meanings | [ ] |
+| S3.4 | **Identify top/bottom predictions** | Codex | S3.3 | Top 50 best, bottom 50 worst, with Jabal meanings | [x] |
 | S3.5 | **Push Phase 3 outputs** | Codex | S3.4 | Commit to main | [ ] |
 | S3.6 | **Method A calibration on 50 root predictions** | Claude | S3.5 | `outputs/lv1_scoring/root_method_a_calibration.md` | [ ] |
 | S3.7 | **Failure pattern analysis** | Claude | S3.5 | Which roots fail? Why? Systematic patterns? | [ ] |
 | S3.8 | **Phase 3 verdict** | Claude | S3.6+S3.7 | Root prediction accuracy verdict + recommendations | [ ] |
+
+**Current checkpoint:** First mechanical pass reached `35.7%` nonzero predictions across `1,938` roots, with mean Jaccard `0.1345` and mean weighted Jaccard `0.1316`.
 
 **Target:** Root prediction accuracy >60% Method A, >30% Method B (after synonym fix)
 
@@ -116,11 +122,11 @@ Sprint 1 (NOW):
   S1.2 fix empty features├→ S1.4 re-run matrix ─→ S1.6 PUSH
   S1.3 opposition mapping┘  S1.5 re-run golden rule
 
-Sprint 2 (parallel with S1):
+Sprint 2 (still open, lower priority until source quality improves):
   S2.1+S2.2 Anbar extraction ─→ S2.3 re-run with Anbar
 
-Sprint 3 (after S1.6):
-  S3.1 root predictor ─→ S3.2 run 1924 roots ─→ S3.3 score ─→ S3.4 top/bottom ─→ S3.5 PUSH
+Sprint 3 (active):
+  S3.1 root predictor ─→ S3.2 run 1938 roots ─→ S3.3 score ─→ S3.4 top/bottom ─→ S3.5 PUSH
 
 Sprint 4 (parallel with S3):
   S4.1+S4.2 Abbas sensory tests

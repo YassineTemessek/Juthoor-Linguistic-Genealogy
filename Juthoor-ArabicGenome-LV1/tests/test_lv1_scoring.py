@@ -12,6 +12,12 @@ from juthoor_arabicgenome_lv1.factory.scoring import (
     jaccard_similarity,
     weighted_jaccard_similarity,
 )
+from juthoor_arabicgenome_lv1.factory.root_predictor import (
+    build_root_prediction_rows,
+    choose_root_prediction_model,
+    predict_root_from_parts,
+    summarize_root_predictions,
+)
 
 
 def test_basic_similarity_functions() -> None:
@@ -72,3 +78,50 @@ def test_build_nucleus_score_rows_filters_missing_scholar_letters() -> None:
     rows = build_nucleus_score_rows(nuclei, scholars)
     assert rows
     assert {row["scholar"] for row in rows} == {"jabal"}
+
+
+def test_root_predictor_prefers_intersection_when_overlap_exists() -> None:
+    prediction = predict_root_from_parts(
+        root="حسب",
+        binary_nucleus="حس",
+        third_letter="ب",
+        binary_features=("نفاذ", "حدة", "سطح"),
+        third_letter_features=("تجمع", "نفاذ"),
+        actual_features=("نفاذ", "تجمع"),
+    )
+    assert prediction.model_used == "intersection"
+    assert "نفاذ" in prediction.predicted_features
+
+
+def test_root_predictor_falls_back_when_no_overlap_exists() -> None:
+    assert choose_root_prediction_model(("نفاذ",), ("تجمع",)) == "phonetic_gestural"
+
+
+def test_build_root_prediction_rows_and_summary() -> None:
+    roots = [
+        {
+            "root": "حسب",
+            "binary_nucleus": "حس",
+            "third_letter": "ب",
+            "jabal_features": ("نفاذ", "تجمع"),
+            "bab": "الحاء",
+            "quranic_verse": None,
+        }
+    ]
+    nuclei = [
+        {
+            "binary_root": "حس",
+            "jabal_features": ("نفاذ", "حدة"),
+        }
+    ]
+    scholars = {
+        "jabal": {
+            "ب": {"atomic_features": ("تجمع", "نفاذ"), "articulatory_features": None},
+        }
+    }
+    rows = build_root_prediction_rows(roots, nuclei, scholars, scholar="jabal")
+    assert rows[0]["root"] == "حسب"
+    assert rows[0]["model"] == "intersection"
+    summary = summarize_root_predictions(rows)
+    assert summary["overall"]["roots"] == 1
+    assert summary["by_model"]["intersection"]["count"] == 1
