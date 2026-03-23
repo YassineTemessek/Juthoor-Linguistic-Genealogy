@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -10,6 +11,7 @@ from pathlib import Path
 _LV1_ROOT = Path(__file__).resolve().parents[3]
 _REPO_ROOT = Path(__file__).resolve().parents[4]
 _RF_OUTPUTS = _REPO_ROOT / "outputs" / "research_factory"
+_LV1_SCORING = _REPO_ROOT / "outputs" / "lv1_scoring"
 
 _DEFAULT_OUTPUT_DIR = _RF_OUTPUTS / "promoted"
 
@@ -82,6 +84,83 @@ def _filter_jsonl(src: Path, dst: Path, pair_type: str) -> int:
     return len(kept)
 
 
+def _write_cross_lingual_support(dst: Path) -> int:
+    support: dict[str, dict] = defaultdict(
+        lambda: {
+            "binary_root": None,
+            "semitic_rows": 0,
+            "semitic_exact_hits": 0,
+            "semitic_binary_hits": 0,
+            "semitic_similarity_total": 0.0,
+            "semitic_target_langs": set(),
+            "non_semitic_rows": 0,
+            "non_semitic_exact_hits": 0,
+            "non_semitic_binary_hits": 0,
+            "non_semitic_similarity_total": 0.0,
+            "non_semitic_target_langs": set(),
+        }
+    )
+
+    def consume_rows(path: Path, bucket: str) -> None:
+        if not path.exists():
+            return
+        rows = json.loads(path.read_text(encoding="utf-8"))
+        for row in rows:
+            binary_root = row.get("source_binary_nucleus")
+            if not binary_root:
+                continue
+            entry = support[binary_root]
+            entry["binary_root"] = binary_root
+            entry[f"{bucket}_rows"] += 1
+            entry[f"{bucket}_exact_hits"] += 1 if row.get("exact_projection_hit") else 0
+            entry[f"{bucket}_binary_hits"] += 1 if row.get("binary_prefix_hit") else 0
+            entry[f"{bucket}_similarity_total"] += float(row.get("best_projection_similarity", 0.0) or 0.0)
+            target_lang = row.get("target_lang")
+            if target_lang:
+                entry[f"{bucket}_target_langs"].add(str(target_lang))
+
+    consume_rows(_LV1_SCORING / "benchmark_semitic_scored_projections.json", "semitic")
+    consume_rows(_LV1_SCORING / "benchmark_non_semitic_scored_projections.json", "non_semitic")
+
+    lines: list[str] = []
+    for binary_root in sorted(support):
+        entry = support[binary_root]
+        semitic_rows = entry["semitic_rows"]
+        non_semitic_rows = entry["non_semitic_rows"]
+        record = {
+            "binary_root": binary_root,
+            "semitic_support": {
+                "rows": semitic_rows,
+                "exact_hits": entry["semitic_exact_hits"],
+                "exact_hit_rate": round(entry["semitic_exact_hits"] / semitic_rows, 6) if semitic_rows else 0.0,
+                "binary_hits": entry["semitic_binary_hits"],
+                "binary_hit_rate": round(entry["semitic_binary_hits"] / semitic_rows, 6) if semitic_rows else 0.0,
+                "mean_similarity": round(entry["semitic_similarity_total"] / semitic_rows, 6) if semitic_rows else 0.0,
+                "target_langs": sorted(entry["semitic_target_langs"]),
+            },
+            "non_semitic_support": {
+                "rows": non_semitic_rows,
+                "exact_hits": entry["non_semitic_exact_hits"],
+                "exact_hit_rate": round(entry["non_semitic_exact_hits"] / non_semitic_rows, 6) if non_semitic_rows else 0.0,
+                "binary_hits": entry["non_semitic_binary_hits"],
+                "binary_hit_rate": round(entry["non_semitic_binary_hits"] / non_semitic_rows, 6) if non_semitic_rows else 0.0,
+                "mean_similarity": round(entry["non_semitic_similarity_total"] / non_semitic_rows, 6) if non_semitic_rows else 0.0,
+                "target_langs": sorted(entry["non_semitic_target_langs"]),
+            },
+            "support_score": round(
+                (
+                    (entry["semitic_binary_hits"] / semitic_rows) * 0.7
+                    + (entry["semitic_exact_hits"] / semitic_rows) * 0.3
+                ) if semitic_rows else 0.0,
+                6,
+            ),
+        }
+        lines.append(json.dumps(record, ensure_ascii=False) + "\n")
+
+    dst.write_text("".join(lines), encoding="utf-8")
+    return len(lines)
+
+
 def export_promoted_results(output_dir: Path | None = None) -> dict:
     """Export all promoted (supported) findings to a structured directory.
 
@@ -126,6 +205,7 @@ def export_promoted_results(output_dir: Path | None = None) -> dict:
         features_dir / "metathesis_pairs.jsonl",
         pair_type="metathesis",
     )
+    _write_cross_lingual_support(features_dir / "cross_lingual_support.jsonl")
 
     # --- evidence_cards/ ---
     card_filenames = {
@@ -150,8 +230,9 @@ def export_promoted_results(output_dir: Path | None = None) -> dict:
             "promoted_features/field_coherence_scores.jsonl",
             "promoted_features/positional_profiles.jsonl",
             "promoted_features/metathesis_pairs.jsonl",
+            "promoted_features/cross_lingual_support.jsonl",
         ],
-        "source_experiments": ["2.3", "4.1", "1.2"],
+        "source_experiments": ["2.3", "4.1", "1.2", "5.3", "5.4"],
     }
     (out / "promotion_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"

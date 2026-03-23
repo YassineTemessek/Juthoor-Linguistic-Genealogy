@@ -61,6 +61,16 @@ def _load_coherence_map() -> dict[str, float]:
     }
 
 
+def _load_cross_lingual_support_map() -> dict[str, dict[str, Any]]:
+    preferred = PROMOTED_DIR / "cross_lingual_support.jsonl"
+    rows = _read_jsonl(preferred)
+    return {
+        str(row["binary_root"]): row
+        for row in rows
+        if row.get("binary_root")
+    }
+
+
 def _build_letter_rows() -> list[dict[str, Any]]:
     articulatory = _load_articulatory_features()
     rows: list[dict[str, Any]] = []
@@ -93,6 +103,7 @@ def _build_letter_rows() -> list[dict[str, Any]]:
 
 def _build_binary_rows() -> list[dict[str, Any]]:
     coherence_map = _load_coherence_map()
+    cross_lingual_support_map = _load_cross_lingual_support_map()
     roots_path = LV1_ROOT / "data" / "muajam" / "roots.jsonl"
     roots_rows = _read_jsonl(roots_path)
     members: dict[str, list[str]] = {}
@@ -119,7 +130,7 @@ def _build_binary_rows() -> list[dict[str, Any]]:
                 "member_roots": list(roots),
                 "member_count": len(roots),
                 "coherence_score": coherence_map.get(binary.binary_root),
-                "cross_lingual_support": None,
+                "cross_lingual_support": cross_lingual_support_map.get(binary.binary_root),
                 "status": "draft",
             }
         )

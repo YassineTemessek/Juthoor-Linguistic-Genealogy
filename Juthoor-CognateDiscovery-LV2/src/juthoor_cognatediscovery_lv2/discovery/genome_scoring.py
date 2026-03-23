@@ -111,6 +111,7 @@ class GenomeScorer:
         self._dir = promoted_dir or _DEFAULT_PROMOTED_DIR
         self._coherence: dict[str, float] = {}
         self._metathesis_set: set[tuple[str, str]] = set()
+        self._cross_lingual_support: dict[str, dict] = {}
         self._loaded = False
 
     def _ensure_loaded(self) -> None:
@@ -143,6 +144,16 @@ class GenomeScorer:
                     self._metathesis_set.add((a, b))
                     self._metathesis_set.add((b, a))
 
+        cross_lingual_path = features_dir / "cross_lingual_support.jsonl"
+        if cross_lingual_path.exists():
+            for line in cross_lingual_path.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                row = json.loads(line)
+                br = row.get("binary_root", "")
+                if br:
+                    self._cross_lingual_support[str(br)] = row
+
         self._loaded = True
 
     def root_coherence_score(self, root: str) -> float | None:
@@ -172,6 +183,20 @@ class GenomeScorer:
         if br1 is None or br2 is None:
             return False
         return (br1, br2) in self._metathesis_set
+
+    def cross_lingual_support(self, root: str) -> dict | None:
+        """Return promoted Sprint 5 cross-lingual support for a binary nucleus.
+
+        This is optional evidence exported from LV1's promotion gateway. It does
+        not change the bonus directly; it exposes Semitic/non-Semitic replication
+        statistics so callers can surface them in diagnostics or downstream
+        ranking features.
+        """
+        self._ensure_loaded()
+        br = _extract_binary_root(root)
+        if br is None:
+            return None
+        return self._cross_lingual_support.get(br)
 
     def genome_bonus(self, source_entry: dict, target_entry: dict) -> float:
         """Compute a genome-informed bonus for a candidate pair.

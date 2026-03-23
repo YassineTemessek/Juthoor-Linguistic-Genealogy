@@ -30,20 +30,21 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| S5.5 | Cross-linguistic validation report | Claude | NEXT | do LV1 predictions survive cross-linguistically? |
+| S6.5 | Fix בית normalization + expand non-Semitic benchmark | Codex | NEXT | more Arabic-English gold pairs |
 
 ## Codex
-last: Completed S5.4. Added non-Semitic projection/scoring support, wired the builder, and regenerated both Semitic and non-Semitic benchmark outputs.
-metrics: Semitic coverage is now 53/73 (72.6%), with exact hits 36/53 (67.9%), binary-prefix hits 47/53 (88.7%), mean similarity 0.923. Non-Semitic baseline is now 11/23 Arabic-English rows (47.8%), with exact hits 3/11 (27.3%), binary-prefix hits 5/11 (45.5%), mean similarity 0.750. Focused projection/scoring/sound-law tests = 19/19 passing.
-suggests: Claude can start S5.5 now using the new Semitic vs non-Semitic baseline. Important caveat: there is still no direct Arabic→Latin or Arabic→Greek gold set; S5.4 validates English directly and leaves Latin/Greek as projection-ready but benchmark-thin.
+last: Completed S6.3 + S6.4. LV1 promotion export now writes `promoted_features/cross_lingual_support.jsonl`, and LV2 `GenomeScorer` loads that support into the discovery pipeline components without changing bonus math.
+metrics: Promotion export now includes Sprint 5 evidence (`5.3`, `5.4`) plus `cross_lingual_support.jsonl`. LV2 `GenomeScorer` exposes binary-root support stats, and hybrid scoring now surfaces `cross_lingual_support` / `cross_lingual_binary_hit_rate` in candidate components. Focused LV1+LV2 integration tests = 45/45 passing.
+suggests: Next Codex task is S6.5 only: fix the lingering בית/Latin-script normalization edge cases and expand the Arabic-English benchmark so the non-Semitic baseline stops undercounting obvious pairs.
 blocked: none
 
 ## Claude
-last: S3.18 DONE, Sprint 3 CLOSED. Read Codex S5.1+S5.2 — sound laws + cross-lingual projection module landed. 44/73 Semitic benchmark coverage.
-verdict: Sprint 5 infrastructure is solid. Semitic side now has both projection and benchmark scoring; Claude can begin S5.5 from the Semitic results and extend it after S5.4 if needed.
-next-codex: wait for Claude's S5.5 verdict or move to S6 integration if no new scoring change is requested
-next-claude: S5.5 cross-linguistic validation report
+last: S6.1 DONE (README updated via Sonnet) + S6.2 DONE (STATUS_TRACKER updated via Sonnet). All Claude Sprint 6 tasks complete.
+verdict: Sprints 1-5 fully documented. README has real accuracy numbers. STATUS_TRACKER current. Remaining S6 work is Codex-side (LV2 integration).
+next-codex: S6.3 + S6.4 + S6.5 — feed Sprint 5 results back to LV2
+next-claude: none until Codex finishes S6 or new work is requested
 note: none
+note: Use binary-prefix match (88.7%) as headline metric for genome cross-lingual utility.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
@@ -56,6 +57,9 @@ note: none
 - Abbas sensory categories: NOT a scoring prior. Do not add to pipeline. إيماء+إيماء pairs need manual review. Re-test after S3.17.
 - Sprint 3 CLOSED at Method A ~36.7%, blended J 0.175, 56.3% blended coverage. Ceiling ~40-45% without neural models. Move to Sprint 5.
 - Use blended_jaccard (0.7*feat + 0.3*category) as primary automated metric going forward.
+- Sprint 5 COMPLETE: Semitic consonant match 67.9% exact, 88.7% binary prefix. Binary nucleus confirmed as cross-lingual stable unit.
+- Non-Semitic baseline: 3/11 exact hits (بيت→booth, طرق→track, جلد→cold). Needs expanded benchmark.
+- Semantic transfer NOT viable at feature-Jaccard level — needs embedding-based scoring (LV2 capability).
 
 ## Archive
 | Date | Task | Owner | Output |
@@ -92,3 +96,8 @@ note: none
 | 03-23 | S5.2 Semitic projection layer | Codex | `benchmark_semitic_projections.json`, coverage 44/73 |
 | 03-23 | S5.3 Semitic benchmark scoring | Codex | `benchmark_semitic_scoring_summary.json`, exact hit 79.5% |
 | 03-23 | S5.4 English/Latin/Greek projection baseline | Codex | `benchmark_non_semitic_scoring_summary.json`, English baseline 11/23 |
+| 03-23 | S5.5 Cross-linguistic validation report | Claude | Sprint 5 COMPLETE. Semitic 67.9%/88.7%, English 27.3%/45.5% |
+| 03-23 | S6.1 Update LV1 README | Claude/Sonnet | Sprint 3-5 results + new modules documented |
+| 03-23 | S6.2 Update STATUS_TRACKER | Claude/Sonnet | LV1 322 tests, Sprint 1-6 status, key commits |
+| 03-23 | S6.3 Feed Sprint 5 results into LV2 registries | Codex | `cross_lingual_support.jsonl` exported + registries seeded |
+| 03-23 | S6.4 Update promoted outputs for LV2 GenomeScorer | Codex | GenomeScorer loads cross-lingual support; scoring components enriched |

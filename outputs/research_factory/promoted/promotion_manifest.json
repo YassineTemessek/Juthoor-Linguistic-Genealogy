@@ -1,5 +1,5 @@
 {
-  "promotion_date": "2026-03-14T01:54:28.572581+00:00",
+  "promotion_date": "2026-03-23T20:01:51.906870+00:00",
   "promoted_hypotheses": [
     "H2",
     "H5",
@@ -13,11 +13,14 @@
   "promoted_features": [
     "promoted_features/field_coherence_scores.jsonl",
     "promoted_features/positional_profiles.jsonl",
-    "promoted_features/metathesis_pairs.jsonl"
+    "promoted_features/metathesis_pairs.jsonl",
+    "promoted_features/cross_lingual_support.jsonl"
   ],
   "source_experiments": [
     "2.3",
     "4.1",
-    "1.2"
+    "1.2",
+    "5.3",
+    "5.4"
   ]
 }

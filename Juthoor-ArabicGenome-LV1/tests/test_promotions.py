@@ -40,6 +40,7 @@ def test_promoted_feature_files_exist(tmp_path):
     assert (features_dir / "field_coherence_scores.jsonl").is_file()
     assert (features_dir / "positional_profiles.jsonl").is_file()
     assert (features_dir / "metathesis_pairs.jsonl").is_file()
+    assert (features_dir / "cross_lingual_support.jsonl").is_file()
 
 
 def test_evidence_card_files_exist(tmp_path):
@@ -131,12 +132,12 @@ def test_manifest_lists_three_evidence_cards(tmp_path):
 
 def test_manifest_lists_three_promoted_features(tmp_path):
     manifest = export_promoted_results(tmp_path)
-    assert len(manifest["promoted_features"]) == 3
+    assert len(manifest["promoted_features"]) == 4
 
 
 def test_manifest_lists_source_experiments(tmp_path):
     manifest = export_promoted_results(tmp_path)
-    assert set(manifest["source_experiments"]) == {"2.3", "4.1", "1.2"}
+    assert set(manifest["source_experiments"]) == {"2.3", "4.1", "1.2", "5.3", "5.4"}
 
 
 def test_manifest_has_promotion_date(tmp_path):
@@ -209,3 +210,13 @@ def test_positional_profiles_have_positions_key(tmp_path):
     rows = _lines(tmp_path / "promoted_features" / "positional_profiles.jsonl")
     for row in rows[:5]:
         assert "positions" in row
+
+
+def test_cross_lingual_support_rows_have_binary_root(tmp_path):
+    export_promoted_results(tmp_path)
+    rows = _lines(tmp_path / "promoted_features" / "cross_lingual_support.jsonl")
+    assert len(rows) > 0
+    for row in rows[:5]:
+        assert "binary_root" in row
+        assert "semitic_support" in row
+        assert "support_score" in row
