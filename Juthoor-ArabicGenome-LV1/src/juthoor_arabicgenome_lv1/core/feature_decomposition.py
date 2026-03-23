@@ -97,31 +97,26 @@ FEATURE_TO_CATEGORY = {
     for feature in features
 }
 
-FEATURE_SYNONYMS: dict[str, tuple[str, ...]] = {
+FEATURE_VOCAB = tuple(FEATURE_TO_CATEGORY.keys())
+
+# Keep a very small synonym layer on top of the direct vocabulary scan.
+FEATURE_ALIASES: dict[str, tuple[str, ...]] = {
     "تفشي": ("تفش", "تفشٍ", "تفشٍّ"),
+    "انتشار": ("نشر", "النشر"),
+    "تفرق": ("تفريق", "التفريق"),
     "رخاوة": ("رخو",),
-    "غلظ": ("غليظ", "استغلاظ", "استغلظ", "غلظة"),
+    "غلظ": ("غليظ", "غلظة", "استغلاظ"),
     "دقة": ("دقيق",),
     "رقة": ("رقيق",),
-    "احتواء": ("يحتوي",),
-    "تأكيد": ("تؤكد", "تأكيداً"),
-    "تقوية": ("يقوي",),
-    "اتصال": ("وصل", "الوصل"),
-    "تجمع": ("جمع", "تراكمي", "التئام"),
-    "إمساك": ("يمسك",),
-    "امتساك": ("ممسك",),
-    "تخلخل": ("خلخلة",),
-    "بروز": ("برز",),
-    "ظهور": ("ظهر", "اتضاح"),
-    "اتساع": ("انفتاح", "اتسع"),
-    "استرسال": ("جريان", "تكرار", "منتظم"),
+    "تأكيد": ("تؤكد",),
     "خروج": ("انبثاق", "انطلاق"),
-    "احتكاك": ("احتكاكي",),
-    "نفاذ": ("نافذ",),
-    "حِدة": ("حدة",),
-    "لطف": ("لطيف",),
+    "ظهور": ("اتضاح", "كشف"),
+    "اتصال": ("وصل",),
     "تلاصق": ("التصاق",),
-    "استواء": ("مستوي",),
+    "اتساع": ("انفتاح",),
+    "نفاذ": ("منفذ", "المنفذ"),
+    "إفراغ": ("افراز", "إفراز"),
+    "إبعاد": ("نفي", "نفيه"),
 }
 
 FEATURE_POLARITIES: dict[str, str] = {
@@ -146,7 +141,7 @@ FEATURE_POLARITIES: dict[str, str] = {
 }
 
 _DIACRITICS = re.compile(r"[\u064B-\u065F\u0670\u0640]")
-_NON_ARABIC_WORD = re.compile(r"[^\u0621-\u064A0-9\s/]+")
+_NON_ARABIC = re.compile(r"[^\u0621-\u064A0-9\s/]+")
 
 
 def normalize_arabic_text(text: str | None) -> str:
@@ -154,7 +149,7 @@ def normalize_arabic_text(text: str | None) -> str:
     value = _DIACRITICS.sub("", value)
     value = value.replace("أ", "ا").replace("إ", "ا").replace("آ", "ا")
     value = value.replace("ؤ", "و").replace("ئ", "ي").replace("ى", "ي").replace("ة", "ه")
-    value = _NON_ARABIC_WORD.sub(" ", value)
+    value = _NON_ARABIC.sub(" ", value)
     return re.sub(r"\s+", " ", value).strip()
 
 
@@ -162,19 +157,21 @@ def _iter_feature_matches(text: str) -> Iterable[str]:
     normalized = normalize_arabic_text(text)
     if not normalized:
         return ()
+
     matches: list[tuple[int, str]] = []
-    for feature in FEATURE_TO_CATEGORY:
+    for feature in FEATURE_VOCAB:
         feature_norm = normalize_arabic_text(feature)
         position = normalized.find(feature_norm)
         if position >= 0:
             matches.append((position, feature))
             continue
-        for synonym in FEATURE_SYNONYMS.get(feature, ()):
-            synonym_norm = normalize_arabic_text(synonym)
-            position = normalized.find(synonym_norm)
+        for alias in FEATURE_ALIASES.get(feature, ()):
+            alias_norm = normalize_arabic_text(alias)
+            position = normalized.find(alias_norm)
             if position >= 0:
                 matches.append((position, feature))
                 break
+
     matches.sort(key=lambda item: (item[0], item[1]))
     return tuple(dict.fromkeys(feature for _, feature in matches))
 
@@ -193,7 +190,4 @@ def weighted_feature_vector(features: Iterable[str]) -> dict[str, float]:
 
 
 def invert_features(features: Iterable[str]) -> tuple[str, ...]:
-    inverted: list[str] = []
-    for feature in features:
-        inverted.append(FEATURE_POLARITIES.get(feature, feature))
-    return tuple(inverted)
+    return tuple(FEATURE_POLARITIES.get(feature, feature) for feature in features)

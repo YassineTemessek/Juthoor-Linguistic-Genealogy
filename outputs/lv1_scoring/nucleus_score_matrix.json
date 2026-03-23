@@ -525,8 +525,14 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "إفراغ",
+      "إبعاد"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -540,8 +546,14 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "إفراغ",
+      "إبعاد"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -555,8 +567,14 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "إفراغ",
+      "إبعاد"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -570,8 +588,14 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "إفراغ",
+      "إبعاد"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -730,10 +754,12 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -751,10 +777,12 @@
       "texture_quality"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -772,10 +800,12 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -791,10 +821,12 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -812,10 +844,12 @@
       "extension_movement"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -833,10 +867,12 @@
       "extension_movement"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -852,10 +888,12 @@
       "extension_movement"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -871,10 +909,12 @@
       "extension_movement"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -890,10 +930,12 @@
       "sharpness_cutting"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -909,10 +951,12 @@
       "sharpness_cutting"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -928,10 +972,12 @@
       "sharpness_cutting"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -947,10 +993,12 @@
       "sharpness_cutting"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -966,10 +1014,12 @@
       "extension_movement"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -985,10 +1035,12 @@
       "extension_movement"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -1004,10 +1056,12 @@
       "extension_movement"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -1023,10 +1077,12 @@
       "extension_movement"
     ],
     "actual_features": [
-      "اتساع"
+      "اتساع",
+      "نفاذ"
     ],
     "actual_categories": [
-      "extension_movement"
+      "extension_movement",
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -1136,12 +1192,10 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "ظهور",
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "قطع"
@@ -1158,13 +1212,11 @@
     "model": "sequence",
     "predicted_features": [
       "ظهور",
-      "خروج",
-      "تجمع"
+      "خروج"
     ],
     "predicted_categories": [
       "extension_movement",
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "قطع"
@@ -1181,13 +1233,11 @@
     "model": "dialectical",
     "predicted_features": [
       "ظهور",
-      "خروج",
-      "تجمع"
+      "خروج"
     ],
     "predicted_categories": [
       "extension_movement",
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "قطع"
@@ -1203,12 +1253,10 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "ظهور",
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "قطع"
@@ -1313,8 +1361,14 @@
     "predicted_categories": [
       "texture_quality"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -1334,8 +1388,14 @@
       "texture_quality",
       "texture_quality"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -1361,10 +1421,16 @@
       "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "actual_features": [],
-    "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "actual_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
+    "jaccard": 0.125,
+    "weighted_jaccard": 0.125
   },
   {
     "binary_root": "بث",
@@ -1378,8 +1444,14 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -1395,8 +1467,14 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -1412,8 +1490,14 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -1429,8 +1513,14 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -1446,8 +1536,14 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -1618,12 +1714,10 @@
     "scholar": "asim_al_masri",
     "model": "intersection",
     "predicted_features": [
-      "خروج",
-      "تجمع"
+      "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رخاوة"
@@ -1639,12 +1733,10 @@
     "scholar": "asim_al_masri",
     "model": "sequence",
     "predicted_features": [
-      "خروج",
-      "تجمع"
+      "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رخاوة"
@@ -1660,12 +1752,10 @@
     "scholar": "asim_al_masri",
     "model": "dialectical",
     "predicted_features": [
-      "خروج",
-      "تجمع"
+      "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رخاوة"
@@ -1681,12 +1771,10 @@
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "خروج",
-      "تجمع"
+      "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رخاوة"
@@ -1708,9 +1796,11 @@
       "texture_quality"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1733,9 +1823,11 @@
       "texture_quality"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1762,9 +1854,11 @@
       "spatial_orientation"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1783,9 +1877,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1804,13 +1900,15 @@
       "extension_movement"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "بح",
@@ -1827,13 +1925,15 @@
       "extension_movement"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
   },
   {
     "binary_root": "بح",
@@ -1850,13 +1950,15 @@
       "extension_movement"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
   },
   {
     "binary_root": "بح",
@@ -1871,13 +1973,15 @@
       "extension_movement"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "بح",
@@ -1890,9 +1994,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1909,9 +2015,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1928,9 +2036,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1947,9 +2057,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1966,9 +2078,11 @@
       "extension_movement"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -1985,9 +2099,11 @@
       "extension_movement"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -2004,9 +2120,11 @@
       "extension_movement"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -2023,9 +2141,11 @@
       "extension_movement"
     ],
     "actual_features": [
+      "ظهور",
       "فراغ"
     ],
     "actual_categories": [
+      "extension_movement",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -2826,6 +2946,25 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
+    "actual_features": [
+      "خلوص"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "بر",
+    "scholar": "neili",
+    "model": "sequence",
+    "predicted_features": [
       "ظهور",
       "خروج"
     ],
@@ -2845,37 +2984,12 @@
   {
     "binary_root": "بر",
     "scholar": "neili",
-    "model": "sequence",
-    "predicted_features": [
-      "ظهور",
-      "خروج",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "extension_movement",
-      "extension_movement"
-    ],
-    "actual_features": [
-      "خلوص"
-    ],
-    "actual_categories": [
-      "penetration_passage"
-    ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
-  },
-  {
-    "binary_root": "بر",
-    "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
       "ظهور",
-      "خروج",
-      "استرسال"
+      "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement",
       "extension_movement"
     ],
@@ -2893,11 +3007,9 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "ظهور",
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -3187,11 +3299,9 @@
     "scholar": "asim_al_masri",
     "model": "sequence",
     "predicted_features": [
-      "خروج",
-      "استرسال"
+      "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -3208,11 +3318,9 @@
     "scholar": "asim_al_masri",
     "model": "dialectical",
     "predicted_features": [
-      "خروج",
-      "استرسال"
+      "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -3229,11 +3337,9 @@
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "خروج",
-      "استرسال"
+      "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -4380,11 +4486,9 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "ظهور",
       "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -4395,8 +4499,8 @@
       "extension_movement",
       "extension_movement"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "بع",
@@ -4732,9 +4836,11 @@
       "pressure_force"
     ],
     "actual_features": [
+      "ظهور",
       "اتساع"
     ],
     "actual_categories": [
+      "extension_movement",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -4757,9 +4863,11 @@
       "pressure_force"
     ],
     "actual_features": [
+      "ظهور",
       "اتساع"
     ],
     "actual_categories": [
+      "extension_movement",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -4786,9 +4894,11 @@
       "spatial_orientation"
     ],
     "actual_features": [
+      "ظهور",
       "اتساع"
     ],
     "actual_categories": [
+      "extension_movement",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -4807,9 +4917,11 @@
       "pressure_force"
     ],
     "actual_features": [
+      "ظهور",
       "اتساع"
     ],
     "actual_categories": [
+      "extension_movement",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -4826,9 +4938,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "اتساع"
     ],
     "actual_categories": [
+      "extension_movement",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -4845,9 +4959,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "اتساع"
     ],
     "actual_categories": [
+      "extension_movement",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -4864,9 +4980,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "اتساع"
     ],
     "actual_categories": [
+      "extension_movement",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -4883,9 +5001,11 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "ظهور",
       "اتساع"
     ],
     "actual_categories": [
+      "extension_movement",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -5414,10 +5534,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "رخاوة"
+      "تجمع",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "gathering_cohesion",
+      "extension_movement"
     ],
     "actual_features": [
       "امتداد"
@@ -5425,8 +5547,8 @@
     "actual_categories": [
       "extension_movement"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "بن",
@@ -5436,13 +5558,13 @@
       "تجمع",
       "رخاوة",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "gathering_cohesion",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "امتداد"
@@ -5462,7 +5584,6 @@
       "رخاوة",
       "تلاصق",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -5470,7 +5591,6 @@
       "texture_quality",
       "gathering_cohesion",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -5479,8 +5599,8 @@
     "actual_categories": [
       "extension_movement"
     ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
   },
   {
     "binary_root": "بن",
@@ -6136,11 +6256,9 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "تجمع",
       "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -6151,20 +6269,18 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "تب",
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "تجمع",
       "ظهور",
       "خروج"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement",
       "extension_movement"
     ],
@@ -6176,20 +6292,18 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "تب",
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع",
       "ظهور",
       "خروج"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement",
       "extension_movement"
     ],
@@ -6201,19 +6315,17 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "تب",
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع",
       "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -6224,8 +6336,8 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "تب",
@@ -6574,11 +6686,9 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "تجمع",
       "اتساع"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -6595,11 +6705,9 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "تجمع",
       "اتساع"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -6616,11 +6724,9 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع",
       "اتساع"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -6637,11 +6743,9 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع",
       "اتساع"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -6815,61 +6919,45 @@
     "binary_root": "تد",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "تد",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "تد",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "تد",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "تد",
@@ -7043,14 +7131,8 @@
     "binary_root": "تر",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "قوة",
       "دقة"
@@ -7066,14 +7148,8 @@
     "binary_root": "تر",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "قوة",
       "دقة"
@@ -7089,14 +7165,8 @@
     "binary_root": "تر",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "قوة",
       "دقة"
@@ -7112,14 +7182,8 @@
     "binary_root": "تر",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "قوة",
       "دقة"
@@ -7470,10 +7534,10 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رخاوة"
@@ -7489,10 +7553,10 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رخاوة"
@@ -7508,10 +7572,10 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رخاوة"
@@ -7527,10 +7591,10 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رخاوة"
@@ -8042,7 +8106,7 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "تجمع"
+      "تلاصق"
     ],
     "predicted_categories": [
       "gathering_cohesion"
@@ -8057,12 +8121,10 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "تجمع",
       "تلاصق",
       "اتصال"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "gathering_cohesion",
       "gathering_cohesion"
     ],
@@ -8076,12 +8138,10 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع",
       "تلاصق",
       "اتصال"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "gathering_cohesion",
       "gathering_cohesion"
     ],
@@ -8095,11 +8155,9 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع",
       "تلاصق"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "gathering_cohesion"
     ],
     "actual_features": [],
@@ -8283,12 +8341,8 @@
     "binary_root": "تم",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تميز"
     ],
@@ -8302,12 +8356,8 @@
     "binary_root": "تم",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تميز"
     ],
@@ -8321,12 +8371,8 @@
     "binary_root": "تم",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تميز"
     ],
@@ -8340,12 +8386,8 @@
     "binary_root": "تم",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تميز"
     ],
@@ -8436,10 +8478,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "دقة"
+      "ضغط",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "pressure_force",
+      "extension_movement"
     ],
     "actual_features": [
       "ضغط",
@@ -8451,8 +8495,8 @@
       "pressure_force",
       "spatial_orientation"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
   },
   {
     "binary_root": "تن",
@@ -8462,13 +8506,13 @@
       "ضغط",
       "دقة",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "pressure_force",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "ضغط",
@@ -8480,8 +8524,8 @@
       "pressure_force",
       "spatial_orientation"
     ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "jaccard": 0.4,
+    "weighted_jaccard": 0.4
   },
   {
     "binary_root": "تن",
@@ -8495,7 +8539,6 @@
       "إمساك",
       "قطع",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -8506,7 +8549,6 @@
       "pressure_force",
       "sharpness_cutting",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -8519,8 +8561,8 @@
       "pressure_force",
       "spatial_orientation"
     ],
-    "jaccard": 0.2,
-    "weighted_jaccard": 0.2
+    "jaccard": 0.222222,
+    "weighted_jaccard": 0.222222
   },
   {
     "binary_root": "تن",
@@ -10199,11 +10241,11 @@
     "model": "intersection",
     "predicted_features": [
       "كثافة",
-      "غلظ"
+      "امتداد"
     ],
     "predicted_categories": [
       "texture_quality",
-      "texture_quality"
+      "extension_movement"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -10218,13 +10260,13 @@
       "كثافة",
       "غلظ",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "texture_quality",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -10241,7 +10283,6 @@
       "تفشي",
       "انتشار",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -10250,7 +10291,6 @@
       "spreading_dispersal",
       "spreading_dispersal",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [],
@@ -10534,11 +10574,9 @@
     "scholar": "asim_al_masri",
     "model": "intersection",
     "predicted_features": [
-      "تجمع",
       "خروج"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -10559,11 +10597,9 @@
     "scholar": "asim_al_masri",
     "model": "sequence",
     "predicted_features": [
-      "تجمع",
       "خروج"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -10584,11 +10620,9 @@
     "scholar": "asim_al_masri",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع",
       "خروج"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -10609,11 +10643,9 @@
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع",
       "خروج"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -11013,12 +11045,8 @@
     "binary_root": "جح",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "غلظ",
       "حدة",
@@ -11036,12 +11064,8 @@
     "binary_root": "جح",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "غلظ",
       "حدة",
@@ -11059,12 +11083,8 @@
     "binary_root": "جح",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "غلظ",
       "حدة",
@@ -11082,12 +11102,8 @@
     "binary_root": "جح",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "غلظ",
       "حدة",
@@ -11285,12 +11301,8 @@
     "binary_root": "جد",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتداد"
     ],
@@ -11304,12 +11316,8 @@
     "binary_root": "جد",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتداد"
     ],
@@ -11323,12 +11331,8 @@
     "binary_root": "جد",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتداد"
     ],
@@ -11342,12 +11346,8 @@
     "binary_root": "جد",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتداد"
     ],
@@ -11911,14 +11911,8 @@
     "binary_root": "جز",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تميز"
     ],
@@ -11932,14 +11926,8 @@
     "binary_root": "جز",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تميز"
     ],
@@ -11953,14 +11941,8 @@
     "binary_root": "جز",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تميز"
     ],
@@ -11974,14 +11956,8 @@
     "binary_root": "جز",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع",
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تميز"
     ],
@@ -12343,12 +12319,8 @@
     "binary_root": "جع",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "جوف",
       "فراغ"
@@ -12364,12 +12336,8 @@
     "binary_root": "جع",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "جوف",
       "فراغ"
@@ -12385,12 +12353,8 @@
     "binary_root": "جع",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "جوف",
       "فراغ"
@@ -12406,12 +12370,8 @@
     "binary_root": "جع",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "جوف",
       "فراغ"
@@ -12982,13 +12942,13 @@
       "تجمع",
       "حدة",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "gathering_cohesion",
       "sharpness_cutting",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "كثافة"
@@ -13007,14 +12967,12 @@
       "تجمع",
       "حدة",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
       "gathering_cohesion",
       "sharpness_cutting",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -13204,11 +13162,9 @@
     "scholar": "asim_al_masri",
     "model": "intersection",
     "predicted_features": [
-      "تجمع",
       "انتقال"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -13225,11 +13181,9 @@
     "scholar": "asim_al_masri",
     "model": "sequence",
     "predicted_features": [
-      "تجمع",
       "انتقال"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -13246,11 +13200,9 @@
     "scholar": "asim_al_masri",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع",
       "انتقال"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -13267,11 +13219,9 @@
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع",
       "انتقال"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "actual_features": [
@@ -13850,12 +13800,10 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "اتساع",
-      "تجمع"
+      "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رقة"
@@ -13871,12 +13819,10 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "اتساع",
-      "تجمع"
+      "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رقة"
@@ -13892,12 +13838,10 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "اتساع",
-      "تجمع"
+      "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رقة"
@@ -13913,12 +13857,10 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "اتساع",
-      "تجمع"
+      "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "رقة"
@@ -14317,61 +14259,45 @@
     "binary_root": "حج",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "حج",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "حج",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "حج",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "حد",
@@ -14981,11 +14907,9 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "اتساع",
-      "استرسال"
+      "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -15004,11 +14928,9 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "اتساع",
-      "استرسال"
+      "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -15027,11 +14949,9 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "اتساع",
-      "استرسال"
+      "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -15303,12 +15223,8 @@
     "binary_root": "حز",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "دقة",
       "تميز"
@@ -15324,12 +15240,8 @@
     "binary_root": "حز",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "دقة",
       "تميز"
@@ -15345,12 +15257,8 @@
     "binary_root": "حز",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "دقة",
       "تميز"
@@ -15366,12 +15274,8 @@
     "binary_root": "حز",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "دقة",
       "تميز"
@@ -17606,13 +17510,13 @@
       "احتكاك",
       "جفاف",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "sharpness_cutting",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "جوف"
@@ -17631,15 +17535,13 @@
       "احتكاك",
       "جفاف",
       "باطن",
-      "امتداد",
-      "لطف"
+      "امتداد"
     ],
     "predicted_categories": [
       "sharpness_cutting",
       "texture_quality",
       "spatial_orientation",
-      "extension_movement",
-      "texture_quality"
+      "extension_movement"
     ],
     "actual_features": [
       "جوف"
@@ -20270,15 +20172,13 @@
       "independence_distinction"
     ],
     "actual_features": [
-      "تخلخل",
       "فراغ"
     ],
     "actual_categories": [
-      "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "خل",
@@ -20297,15 +20197,13 @@
       "extension_movement"
     ],
     "actual_features": [
-      "تخلخل",
       "فراغ"
     ],
     "actual_categories": [
-      "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "jaccard": 0.2,
-    "weighted_jaccard": 0.2
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "خل",
@@ -20330,15 +20228,13 @@
       "independence_distinction"
     ],
     "actual_features": [
-      "تخلخل",
       "فراغ"
     ],
     "actual_categories": [
-      "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "jaccard": 0.125,
-    "weighted_jaccard": 0.125
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "خل",
@@ -20353,15 +20249,13 @@
       "independence_distinction"
     ],
     "actual_features": [
-      "تخلخل",
       "فراغ"
     ],
     "actual_categories": [
-      "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "خل",
@@ -20374,11 +20268,9 @@
       "texture_quality"
     ],
     "actual_features": [
-      "تخلخل",
       "فراغ"
     ],
     "actual_categories": [
-      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -20395,11 +20287,9 @@
       "texture_quality"
     ],
     "actual_features": [
-      "تخلخل",
       "فراغ"
     ],
     "actual_categories": [
-      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -20416,11 +20306,9 @@
       "texture_quality"
     ],
     "actual_features": [
-      "تخلخل",
       "فراغ"
     ],
     "actual_categories": [
-      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -20437,11 +20325,9 @@
       "texture_quality"
     ],
     "actual_features": [
-      "تخلخل",
       "فراغ"
     ],
     "actual_categories": [
-      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -20592,70 +20478,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "جفاف",
-      "غلظ"
-    ],
-    "predicted_categories": [
-      "texture_quality",
-      "texture_quality"
-    ],
-    "actual_features": [
       "تخلخل",
-      "باطن"
-    ],
-    "actual_categories": [
-      "spreading_dispersal",
-      "spatial_orientation"
-    ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
-  },
-  {
-    "binary_root": "خن",
-    "scholar": "jabal",
-    "model": "sequence",
-    "predicted_features": [
-      "تخلخل",
-      "جفاف",
-      "امتداد",
-      "لطف"
+      "امتداد"
     ],
     "predicted_categories": [
       "spreading_dispersal",
-      "texture_quality",
-      "extension_movement",
-      "texture_quality"
-    ],
-    "actual_features": [
-      "تخلخل",
-      "باطن"
-    ],
-    "actual_categories": [
-      "spreading_dispersal",
-      "spatial_orientation"
-    ],
-    "jaccard": 0.2,
-    "weighted_jaccard": 0.2
-  },
-  {
-    "binary_root": "خن",
-    "scholar": "jabal",
-    "model": "dialectical",
-    "predicted_features": [
-      "تخلخل",
-      "جفاف",
-      "غلظ",
-      "امتداد",
-      "لطف",
-      "باطن"
-    ],
-    "predicted_categories": [
-      "spreading_dispersal",
-      "texture_quality",
-      "texture_quality",
-      "extension_movement",
-      "texture_quality",
-      "spatial_orientation"
+      "extension_movement"
     ],
     "actual_features": [
       "تخلخل",
@@ -20667,6 +20495,62 @@
     ],
     "jaccard": 0.333333,
     "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "خن",
+    "scholar": "jabal",
+    "model": "sequence",
+    "predicted_features": [
+      "تخلخل",
+      "جفاف",
+      "امتداد",
+      "باطن"
+    ],
+    "predicted_categories": [
+      "spreading_dispersal",
+      "texture_quality",
+      "extension_movement",
+      "spatial_orientation"
+    ],
+    "actual_features": [
+      "تخلخل",
+      "باطن"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spatial_orientation"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "خن",
+    "scholar": "jabal",
+    "model": "dialectical",
+    "predicted_features": [
+      "تخلخل",
+      "جفاف",
+      "غلظ",
+      "امتداد",
+      "باطن"
+    ],
+    "predicted_categories": [
+      "spreading_dispersal",
+      "texture_quality",
+      "texture_quality",
+      "extension_movement",
+      "spatial_orientation"
+    ],
+    "actual_features": [
+      "تخلخل",
+      "باطن"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spatial_orientation"
+    ],
+    "jaccard": 0.4,
+    "weighted_jaccard": 0.4
   },
   {
     "binary_root": "خن",
@@ -22338,12 +22222,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "رخاوة",
-      "غلظ"
+      "نفاذ",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality",
-      "texture_quality"
+      "penetration_passage",
+      "extension_movement"
     ],
     "actual_features": [
       "امتداد"
@@ -22351,8 +22235,8 @@
     "actual_categories": [
       "extension_movement"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "ذن",
@@ -22362,13 +22246,13 @@
       "نفاذ",
       "رخاوة",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "penetration_passage",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "امتداد"
@@ -22388,7 +22272,6 @@
       "رخاوة",
       "غلظ",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -22396,7 +22279,6 @@
       "texture_quality",
       "texture_quality",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -22405,8 +22287,8 @@
     "actual_categories": [
       "extension_movement"
     ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
   },
   {
     "binary_root": "ذن",
@@ -22673,12 +22555,10 @@
     ],
     "actual_features": [
       "نفاذ",
-      "لطف",
       "حيز"
     ],
     "actual_categories": [
       "penetration_passage",
-      "texture_quality",
       "spatial_orientation"
     ],
     "jaccard": 0.0,
@@ -22698,12 +22578,10 @@
     ],
     "actual_features": [
       "نفاذ",
-      "لطف",
       "حيز"
     ],
     "actual_categories": [
       "penetration_passage",
-      "texture_quality",
       "spatial_orientation"
     ],
     "jaccard": 0.0,
@@ -22723,12 +22601,10 @@
     ],
     "actual_features": [
       "نفاذ",
-      "لطف",
       "حيز"
     ],
     "actual_categories": [
       "penetration_passage",
-      "texture_quality",
       "spatial_orientation"
     ],
     "jaccard": 0.0,
@@ -22748,12 +22624,10 @@
     ],
     "actual_features": [
       "نفاذ",
-      "لطف",
       "حيز"
     ],
     "actual_categories": [
       "penetration_passage",
-      "texture_quality",
       "spatial_orientation"
     ],
     "jaccard": 0.0,
@@ -22872,7 +22746,7 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -22895,12 +22769,10 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "استرسال",
       "ظهور",
       "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement",
       "extension_movement"
     ],
@@ -22922,12 +22794,10 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "استرسال",
       "ظهور",
       "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement",
       "extension_movement"
     ],
@@ -22949,11 +22819,9 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "استرسال",
       "ظهور"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -23181,14 +23049,8 @@
     "binary_root": "رت",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال",
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتساك",
       "دقة"
@@ -23204,14 +23066,8 @@
     "binary_root": "رت",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال",
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتساك",
       "دقة"
@@ -23227,14 +23083,8 @@
     "binary_root": "رت",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال",
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتساك",
       "دقة"
@@ -23250,14 +23100,8 @@
     "binary_root": "رت",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال",
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتساك",
       "دقة"
@@ -23373,12 +23217,8 @@
       "extension_movement",
       "texture_quality"
     ],
-    "actual_features": [
-      "استواء"
-    ],
-    "actual_categories": [
-      "independence_distinction"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -23398,12 +23238,8 @@
       "texture_quality",
       "texture_quality"
     ],
-    "actual_features": [
-      "استواء"
-    ],
-    "actual_categories": [
-      "independence_distinction"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -23427,12 +23263,8 @@
       "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "actual_features": [
-      "استواء"
-    ],
-    "actual_categories": [
-      "independence_distinction"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -23448,12 +23280,8 @@
       "extension_movement",
       "texture_quality"
     ],
-    "actual_features": [
-      "استواء"
-    ],
-    "actual_categories": [
-      "independence_distinction"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -23469,12 +23297,8 @@
       "texture_quality",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "استواء"
-    ],
-    "actual_categories": [
-      "independence_distinction"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -23490,12 +23314,8 @@
       "texture_quality",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "استواء"
-    ],
-    "actual_categories": [
-      "independence_distinction"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -23511,12 +23331,8 @@
       "texture_quality",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "استواء"
-    ],
-    "actual_categories": [
-      "independence_distinction"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -23532,12 +23348,8 @@
       "texture_quality",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "استواء"
-    ],
-    "actual_categories": [
-      "independence_distinction"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -23790,7 +23602,7 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "استرسال"
+      "اتساع"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -23803,19 +23615,17 @@
       "extension_movement",
       "texture_quality"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "رح",
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "استرسال",
       "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -23826,19 +23636,17 @@
       "extension_movement",
       "texture_quality"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "رح",
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "استرسال",
       "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -23849,19 +23657,17 @@
       "extension_movement",
       "texture_quality"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "رح",
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "استرسال",
       "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -23872,8 +23678,8 @@
       "extension_movement",
       "texture_quality"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "رح",
@@ -24175,61 +23981,45 @@
     "binary_root": "رد",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "رد",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "رد",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "رد",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "رد",
@@ -25632,7 +25422,7 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -25655,7 +25445,7 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -25678,7 +25468,7 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -25701,7 +25491,7 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -26500,11 +26290,9 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "استرسال",
       "تجمع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
@@ -26517,19 +26305,17 @@
       "texture_quality",
       "gathering_cohesion"
     ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "رك",
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "استرسال",
       "تجمع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
@@ -26542,19 +26328,17 @@
       "texture_quality",
       "gathering_cohesion"
     ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "رك",
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "استرسال",
       "تجمع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
@@ -26567,19 +26351,17 @@
       "texture_quality",
       "gathering_cohesion"
     ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "رك",
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "استرسال",
       "تجمع"
     ],
     "predicted_categories": [
-      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
@@ -26592,8 +26374,8 @@
       "texture_quality",
       "gathering_cohesion"
     ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "رك",
@@ -26793,12 +26575,8 @@
     "binary_root": "رم",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "رخاوة"
     ],
@@ -26812,12 +26590,8 @@
     "binary_root": "رم",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "رخاوة"
     ],
@@ -26831,12 +26605,8 @@
     "binary_root": "رم",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "رخاوة"
     ],
@@ -26850,12 +26620,8 @@
     "binary_root": "رم",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "رخاوة"
     ],
@@ -26976,39 +26742,37 @@
       "استرسال",
       "تماسك",
       "امتداد",
-      "لطف"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion",
-      "extension_movement",
-      "texture_quality"
-    ],
-    "actual_features": [
-      "نفاذ"
-    ],
-    "actual_categories": [
-      "penetration_passage"
-    ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
-  },
-  {
-    "binary_root": "رن",
-    "scholar": "jabal",
-    "model": "dialectical",
-    "predicted_features": [
-      "استرسال",
-      "تماسك",
-      "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
       "extension_movement",
       "gathering_cohesion",
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation"
+    ],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "رن",
+    "scholar": "jabal",
+    "model": "dialectical",
+    "predicted_features": [
+      "استرسال",
+      "تماسك",
+      "امتداد",
+      "باطن"
+    ],
+    "predicted_categories": [
+      "extension_movement",
+      "gathering_cohesion",
+      "extension_movement",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -27213,12 +26977,10 @@
     ],
     "actual_features": [
       "نفاذ",
-      "لطف",
       "حيز"
     ],
     "actual_categories": [
       "penetration_passage",
-      "texture_quality",
       "spatial_orientation"
     ],
     "jaccard": 0.0,
@@ -27242,12 +27004,10 @@
     ],
     "actual_features": [
       "نفاذ",
-      "لطف",
       "حيز"
     ],
     "actual_categories": [
       "penetration_passage",
-      "texture_quality",
       "spatial_orientation"
     ],
     "jaccard": 0.0,
@@ -27271,12 +27031,10 @@
     ],
     "actual_features": [
       "نفاذ",
-      "لطف",
       "حيز"
     ],
     "actual_categories": [
       "penetration_passage",
-      "texture_quality",
       "spatial_orientation"
     ],
     "jaccard": 0.0,
@@ -27296,12 +27054,10 @@
     ],
     "actual_features": [
       "نفاذ",
-      "لطف",
       "حيز"
     ],
     "actual_categories": [
       "penetration_passage",
-      "texture_quality",
       "spatial_orientation"
     ],
     "jaccard": 0.0,
@@ -27482,7 +27238,7 @@
     "scholar": "asim_al_masri",
     "model": "intersection",
     "predicted_features": [
-      "استرسال"
+      "خروج"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -27501,11 +27257,9 @@
     "scholar": "asim_al_masri",
     "model": "sequence",
     "predicted_features": [
-      "استرسال",
       "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -27522,11 +27276,9 @@
     "scholar": "asim_al_masri",
     "model": "dialectical",
     "predicted_features": [
-      "استرسال",
       "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -27543,11 +27295,9 @@
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "استرسال",
       "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -27843,69 +27593,45 @@
     "binary_root": "زج",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال",
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "زج",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال",
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "زج",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال",
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "زج",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال",
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "زح",
@@ -28081,12 +27807,8 @@
     "binary_root": "زح",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "انتقال",
       "احتكاك"
@@ -28102,12 +27824,8 @@
     "binary_root": "زح",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "انتقال",
       "احتكاك"
@@ -28123,12 +27841,8 @@
     "binary_root": "زح",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "انتقال",
       "احتكاك"
@@ -28144,12 +27858,8 @@
     "binary_root": "زح",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "انتقال",
       "احتكاك"
@@ -28491,12 +28201,8 @@
     "binary_root": "زد",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "حيز"
     ],
@@ -28510,12 +28216,8 @@
     "binary_root": "زد",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "حيز"
     ],
@@ -28529,12 +28231,8 @@
     "binary_root": "زد",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "حيز"
     ],
@@ -28548,12 +28246,8 @@
     "binary_root": "زد",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "حيز"
     ],
@@ -28891,61 +28585,45 @@
     "binary_root": "زع",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "زع",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "زع",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "زع",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [],
     "actual_categories": [],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "زغ",
@@ -29129,12 +28807,8 @@
       "gathering_cohesion",
       "spreading_dispersal"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -29154,12 +28828,8 @@
       "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -29183,12 +28853,8 @@
       "penetration_passage",
       "pressure_force"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -29204,12 +28870,8 @@
       "gathering_cohesion",
       "spreading_dispersal"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -29223,12 +28885,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -29242,12 +28900,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -29261,12 +28915,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -29280,12 +28930,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -29875,13 +29521,11 @@
     ],
     "actual_features": [
       "باطن",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "spatial_orientation",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -29894,26 +29538,24 @@
       "اكتناز",
       "ازدحام",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "gathering_cohesion",
       "gathering_cohesion",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "باطن",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "spatial_orientation",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
   },
   {
     "binary_root": "زن",
@@ -29923,28 +29565,24 @@
       "اكتناز",
       "ازدحام",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
       "gathering_cohesion",
       "gathering_cohesion",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
       "باطن",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "spatial_orientation",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
-    "jaccard": 0.142857,
-    "weighted_jaccard": 0.142857
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
   },
   {
     "binary_root": "زن",
@@ -29960,13 +29598,11 @@
     ],
     "actual_features": [
       "باطن",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "spatial_orientation",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -29979,13 +29615,11 @@
     "predicted_categories": [],
     "actual_features": [
       "باطن",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "spatial_orientation",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -29998,13 +29632,11 @@
     "predicted_categories": [],
     "actual_features": [
       "باطن",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "spatial_orientation",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -30017,13 +29649,11 @@
     "predicted_categories": [],
     "actual_features": [
       "باطن",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "spatial_orientation",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -30036,13 +29666,11 @@
     "predicted_categories": [],
     "actual_features": [
       "باطن",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "spatial_orientation",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -30128,7 +29756,7 @@
     "scholar": "asim_al_masri",
     "model": "intersection",
     "predicted_features": [
-      "استرسال"
+      "انتقال"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -30151,11 +29779,9 @@
     "scholar": "asim_al_masri",
     "model": "sequence",
     "predicted_features": [
-      "استرسال",
       "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -30176,11 +29802,9 @@
     "scholar": "asim_al_masri",
     "model": "dialectical",
     "predicted_features": [
-      "استرسال",
       "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -30201,11 +29825,9 @@
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "استرسال",
       "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -32617,8 +32239,12 @@
     "predicted_categories": [
       "texture_quality"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -32636,8 +32262,12 @@
       "texture_quality",
       "pressure_force"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -32661,8 +32291,12 @@
       "pressure_force",
       "sharpness_cutting"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -32678,8 +32312,12 @@
       "extension_movement",
       "pressure_force"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -32695,8 +32333,12 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -32712,8 +32354,12 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -32729,8 +32375,12 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -32746,8 +32396,12 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -33107,12 +32761,12 @@
     "predicted_features": [
       "امتداد",
       "دقة",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "extension_movement",
       "texture_quality",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "امتداد",
@@ -33137,14 +32791,12 @@
       "دقة",
       "وحدة",
       "حدة",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
       "texture_quality",
       "independence_distinction",
       "sharpness_cutting",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -33159,8 +32811,8 @@
       "sharpness_cutting",
       "texture_quality"
     ],
-    "jaccard": 0.285714,
-    "weighted_jaccard": 0.285714
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "سن",
@@ -35706,14 +35358,12 @@
     "actual_features": [
       "نفاذ",
       "حدة",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "sharpness_cutting",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -35737,14 +35387,12 @@
     "actual_features": [
       "نفاذ",
       "حدة",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "sharpness_cutting",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -35766,14 +35414,12 @@
     "actual_features": [
       "نفاذ",
       "حدة",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "sharpness_cutting",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -35793,14 +35439,12 @@
     "actual_features": [
       "نفاذ",
       "حدة",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "sharpness_cutting",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -35820,14 +35464,12 @@
     "actual_features": [
       "نفاذ",
       "حدة",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "sharpness_cutting",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -35847,14 +35489,12 @@
     "actual_features": [
       "نفاذ",
       "حدة",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "sharpness_cutting",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -35874,14 +35514,12 @@
     "actual_features": [
       "نفاذ",
       "حدة",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "sharpness_cutting",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -35901,14 +35539,12 @@
     "actual_features": [
       "نفاذ",
       "حدة",
-      "قوة",
-      "تجمع"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "sharpness_cutting",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -35925,12 +35561,8 @@
       "spreading_dispersal",
       "pressure_force"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -35950,12 +35582,8 @@
       "pressure_force",
       "independence_distinction"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -35975,12 +35603,8 @@
       "independence_distinction",
       "spatial_orientation"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -35996,12 +35620,8 @@
       "spreading_dispersal",
       "pressure_force"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -36017,12 +35637,8 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -36038,12 +35654,8 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -36059,12 +35671,8 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -36080,12 +35688,8 @@
       "sharpness_cutting",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -36094,10 +35698,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "دقة"
+      "تفشي",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "spreading_dispersal",
+      "extension_movement"
     ],
     "actual_features": [
       "انتشار"
@@ -36116,13 +35722,13 @@
       "تفشي",
       "انتشار",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "spreading_dispersal",
       "spreading_dispersal",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "انتشار"
@@ -36142,7 +35748,6 @@
       "انتشار",
       "دقة",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -36150,7 +35755,6 @@
       "spreading_dispersal",
       "texture_quality",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -36159,8 +35763,8 @@
     "actual_categories": [
       "spreading_dispersal"
     ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
   },
   {
     "binary_root": "شن",
@@ -38518,10 +38122,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "غلظ"
+      "نفاذ",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "penetration_passage",
+      "extension_movement"
     ],
     "actual_features": [
       "احتواء",
@@ -38544,13 +38150,13 @@
       "نفاذ",
       "غلظ",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "penetration_passage",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "احتواء",
@@ -38575,7 +38181,6 @@
       "قوة",
       "خلوص",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -38584,7 +38189,6 @@
       "pressure_force",
       "penetration_passage",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -40554,15 +40158,13 @@
       "pressure_force"
     ],
     "actual_features": [
-      "تجمع",
       "ضغط"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "pressure_force"
     ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "ضم",
@@ -40581,15 +40183,13 @@
       "independence_distinction"
     ],
     "actual_features": [
-      "تجمع",
       "ضغط"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "pressure_force"
     ],
-    "jaccard": 0.2,
-    "weighted_jaccard": 0.2
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
   },
   {
     "binary_root": "ضم",
@@ -40612,15 +40212,13 @@
       "spatial_orientation"
     ],
     "actual_features": [
-      "تجمع",
       "ضغط"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "pressure_force"
     ],
-    "jaccard": 0.142857,
-    "weighted_jaccard": 0.142857
+    "jaccard": 0.166667,
+    "weighted_jaccard": 0.166667
   },
   {
     "binary_root": "ضم",
@@ -40635,15 +40233,13 @@
       "pressure_force"
     ],
     "actual_features": [
-      "تجمع",
       "ضغط"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "pressure_force"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "ضم",
@@ -40656,11 +40252,9 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "تجمع",
       "ضغط"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "pressure_force"
     ],
     "jaccard": 0.0,
@@ -40677,11 +40271,9 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "تجمع",
       "ضغط"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "pressure_force"
     ],
     "jaccard": 0.0,
@@ -40698,11 +40290,9 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "تجمع",
       "ضغط"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "pressure_force"
     ],
     "jaccard": 0.0,
@@ -40719,11 +40309,9 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "تجمع",
       "ضغط"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "pressure_force"
     ],
     "jaccard": 0.0,
@@ -40734,12 +40322,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "كثافة",
-      "غلظ"
+      "ضغط",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality",
-      "texture_quality"
+      "pressure_force",
+      "extension_movement"
     ],
     "actual_features": [
       "حيز"
@@ -40758,13 +40346,13 @@
       "ضغط",
       "كثافة",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "pressure_force",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "حيز"
@@ -40784,7 +40372,6 @@
       "كثافة",
       "غلظ",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -40792,7 +40379,6 @@
       "texture_quality",
       "texture_quality",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -42858,12 +42444,10 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "اتساع",
-      "غلظ"
+      "اتساع"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "texture_quality"
+      "extension_movement"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -42878,13 +42462,13 @@
       "ضغط",
       "اتساع",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "pressure_force",
       "extension_movement",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -42900,7 +42484,6 @@
       "اتساع",
       "غلظ",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -42908,7 +42491,6 @@
       "extension_movement",
       "texture_quality",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [],
@@ -43399,12 +42981,8 @@
     "predicted_categories": [
       "penetration_passage"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -43424,12 +43002,8 @@
       "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -43453,12 +43027,8 @@
       "spreading_dispersal",
       "pressure_force"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -43474,12 +43044,8 @@
       "penetration_passage",
       "spreading_dispersal"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -43493,12 +43059,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -43512,12 +43074,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -43531,12 +43089,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -43550,12 +43104,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -43866,12 +43416,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "غلظ",
-      "كثافة"
+      "نفاذ",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality",
-      "texture_quality"
+      "penetration_passage",
+      "extension_movement"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -43886,13 +43436,13 @@
       "نفاذ",
       "غلظ",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "penetration_passage",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -43909,7 +43459,6 @@
       "حدة",
       "كثافة",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -43918,7 +43467,6 @@
       "sharpness_cutting",
       "texture_quality",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [],
@@ -44224,11 +43772,9 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "ظهور",
       "خروج"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [
@@ -44554,10 +44100,10 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "امتداد"
@@ -44573,10 +44119,10 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "امتداد"
@@ -44592,10 +44138,10 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "امتداد"
@@ -44611,10 +44157,10 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع"
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "امتداد"
@@ -45063,12 +44609,8 @@
     "binary_root": "عج",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تجمع",
       "هشاشة"
@@ -45077,19 +44619,15 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "عج",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تجمع",
       "هشاشة"
@@ -45098,19 +44636,15 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "عج",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تجمع",
       "هشاشة"
@@ -45119,19 +44653,15 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "عج",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تجمع",
       "هشاشة"
@@ -45140,8 +44670,8 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "عد",
@@ -45247,8 +44777,12 @@
     "binary_root": "عد",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "امتداد"
     ],
@@ -45262,8 +44796,12 @@
     "binary_root": "عد",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "امتداد"
     ],
@@ -45277,8 +44815,12 @@
     "binary_root": "عد",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "امتداد"
     ],
@@ -45292,8 +44834,12 @@
     "binary_root": "عد",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "امتداد"
     ],
@@ -45690,7 +45236,7 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -45705,15 +45251,15 @@
       "spatial_orientation",
       "extension_movement"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "عر",
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -45728,15 +45274,15 @@
       "spatial_orientation",
       "extension_movement"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "عر",
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -45751,15 +45297,15 @@
       "spatial_orientation",
       "extension_movement"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "عر",
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "استرسال"
+      "ظهور"
     ],
     "predicted_categories": [
       "extension_movement"
@@ -45774,8 +45320,8 @@
       "spatial_orientation",
       "extension_movement"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "عر",
@@ -46043,12 +45589,8 @@
     "binary_root": "عز",
     "scholar": "asim_al_masri",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تماسك",
       "اشتداد"
@@ -46064,12 +45606,8 @@
     "binary_root": "عز",
     "scholar": "asim_al_masri",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تماسك",
       "اشتداد"
@@ -46085,12 +45623,8 @@
     "binary_root": "عز",
     "scholar": "asim_al_masri",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تماسك",
       "اشتداد"
@@ -46106,12 +45640,8 @@
     "binary_root": "عز",
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "تماسك",
       "اشتداد"
@@ -47670,9 +47200,11 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
+      "ظهور",
       "تجمع"
     ],
     "predicted_categories": [
+      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
@@ -47689,9 +47221,11 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
+      "ظهور",
       "تجمع"
     ],
     "predicted_categories": [
+      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
@@ -47708,9 +47242,11 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
+      "ظهور",
       "تجمع"
     ],
     "predicted_categories": [
+      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
@@ -47727,9 +47263,11 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
+      "ظهور",
       "تجمع"
     ],
     "predicted_categories": [
+      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
@@ -47906,9 +47444,11 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
+      "ظهور",
       "تلاصق"
     ],
     "predicted_categories": [
+      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [],
@@ -47921,10 +47461,12 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
+      "ظهور",
       "تلاصق",
       "اتصال"
     ],
     "predicted_categories": [
+      "extension_movement",
       "gathering_cohesion",
       "gathering_cohesion"
     ],
@@ -47938,10 +47480,12 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
+      "ظهور",
       "تلاصق",
       "اتصال"
     ],
     "predicted_categories": [
+      "extension_movement",
       "gathering_cohesion",
       "gathering_cohesion"
     ],
@@ -47955,9 +47499,11 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
+      "ظهور",
       "تلاصق"
     ],
     "predicted_categories": [
+      "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [],
@@ -48135,8 +47681,12 @@
     "binary_root": "عم",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "التحام",
       "تجمع"
@@ -48152,8 +47702,12 @@
     "binary_root": "عم",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "التحام",
       "تجمع"
@@ -48169,8 +47723,12 @@
     "binary_root": "عم",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "التحام",
       "تجمع"
@@ -48186,8 +47744,12 @@
     "binary_root": "عم",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "التحام",
       "تجمع"
@@ -48288,12 +47850,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "رقة",
-      "رخاوة"
+      "التحام",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality",
-      "texture_quality"
+      "gathering_cohesion",
+      "extension_movement"
     ],
     "actual_features": [
       "ظهور",
@@ -48314,13 +47876,13 @@
       "التحام",
       "رقة",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "gathering_cohesion",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "ظهور",
@@ -48330,8 +47892,8 @@
       "extension_movement",
       "texture_quality"
     ],
-    "jaccard": 0.2,
-    "weighted_jaccard": 0.2
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "عن",
@@ -48343,7 +47905,6 @@
       "حدة",
       "رخاوة",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -48352,7 +47913,6 @@
       "sharpness_cutting",
       "texture_quality",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -48363,8 +47923,8 @@
       "extension_movement",
       "texture_quality"
     ],
-    "jaccard": 0.125,
-    "weighted_jaccard": 0.125
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "عن",
@@ -48651,8 +48211,12 @@
     "binary_root": "عي",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "فراغ"
     ],
@@ -48666,8 +48230,12 @@
     "binary_root": "عي",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "فراغ"
     ],
@@ -48681,8 +48249,12 @@
     "binary_root": "عي",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "فراغ"
     ],
@@ -48696,8 +48268,12 @@
     "binary_root": "عي",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "فراغ"
     ],
@@ -51120,19 +50696,15 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "رخاوة",
-      "كثافة"
+      "تخلخل",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality",
-      "texture_quality"
+      "spreading_dispersal",
+      "extension_movement"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -51144,22 +50716,18 @@
       "تخلخل",
       "رخاوة",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "spreading_dispersal",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "غن",
@@ -51170,7 +50738,6 @@
       "رخاوة",
       "كثافة",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -51178,17 +50745,12 @@
       "texture_quality",
       "texture_quality",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "غن",
@@ -51202,12 +50764,8 @@
       "spreading_dispersal",
       "extension_movement"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -51221,12 +50779,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -51240,12 +50794,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -51259,12 +50809,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -51278,12 +50824,8 @@
     "predicted_categories": [
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52293,8 +51835,12 @@
       "spreading_dispersal",
       "extension_movement"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52314,8 +51860,12 @@
       "extension_movement",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52339,8 +51889,12 @@
       "extension_movement",
       "gathering_cohesion"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52356,8 +51910,12 @@
       "spreading_dispersal",
       "extension_movement"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52373,8 +51931,12 @@
       "sharpness_cutting",
       "texture_quality"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52390,8 +51952,12 @@
       "sharpness_cutting",
       "texture_quality"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52407,8 +51973,12 @@
       "sharpness_cutting",
       "texture_quality"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52424,8 +51994,12 @@
       "sharpness_cutting",
       "texture_quality"
     ],
-    "actual_features": [],
-    "actual_categories": [],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -52807,12 +52381,10 @@
     ],
     "actual_features": [
       "خروج",
-      "لطف",
       "اتساع"
     ],
     "actual_categories": [
       "extension_movement",
-      "texture_quality",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -52836,12 +52408,10 @@
     ],
     "actual_features": [
       "خروج",
-      "لطف",
       "اتساع"
     ],
     "actual_categories": [
       "extension_movement",
-      "texture_quality",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -52871,12 +52441,10 @@
     ],
     "actual_features": [
       "خروج",
-      "لطف",
       "اتساع"
     ],
     "actual_categories": [
       "extension_movement",
-      "texture_quality",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -52896,12 +52464,10 @@
     ],
     "actual_features": [
       "خروج",
-      "لطف",
       "اتساع"
     ],
     "actual_categories": [
       "extension_movement",
-      "texture_quality",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -52919,12 +52485,10 @@
     ],
     "actual_features": [
       "خروج",
-      "لطف",
       "اتساع"
     ],
     "actual_categories": [
       "extension_movement",
-      "texture_quality",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -52942,12 +52506,10 @@
     ],
     "actual_features": [
       "خروج",
-      "لطف",
       "اتساع"
     ],
     "actual_categories": [
       "extension_movement",
-      "texture_quality",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -52965,12 +52527,10 @@
     ],
     "actual_features": [
       "خروج",
-      "لطف",
       "اتساع"
     ],
     "actual_categories": [
       "extension_movement",
-      "texture_quality",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -52988,12 +52548,10 @@
     ],
     "actual_features": [
       "خروج",
-      "لطف",
       "اتساع"
     ],
     "actual_categories": [
       "extension_movement",
-      "texture_quality",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -53194,15 +52752,17 @@
       "pressure_force"
     ],
     "actual_features": [
+      "تفرق",
       "قوة",
       "غلظ"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "pressure_force",
       "texture_quality"
     ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "فض",
@@ -53221,10 +52781,12 @@
       "texture_quality"
     ],
     "actual_features": [
+      "تفرق",
       "قوة",
       "غلظ"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "pressure_force",
       "texture_quality"
     ],
@@ -53254,15 +52816,17 @@
       "texture_quality"
     ],
     "actual_features": [
+      "تفرق",
       "قوة",
       "غلظ"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "pressure_force",
       "texture_quality"
     ],
-    "jaccard": 0.285714,
-    "weighted_jaccard": 0.285714
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
   },
   {
     "binary_root": "فض",
@@ -53277,10 +52841,12 @@
       "pressure_force"
     ],
     "actual_features": [
+      "تفرق",
       "قوة",
       "غلظ"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "pressure_force",
       "texture_quality"
     ],
@@ -53298,10 +52864,12 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "تفرق",
       "قوة",
       "غلظ"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "pressure_force",
       "texture_quality"
     ],
@@ -53319,10 +52887,12 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "تفرق",
       "قوة",
       "غلظ"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "pressure_force",
       "texture_quality"
     ],
@@ -53340,10 +52910,12 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "تفرق",
       "قوة",
       "غلظ"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "pressure_force",
       "texture_quality"
     ],
@@ -53361,10 +52933,12 @@
       "sharpness_cutting"
     ],
     "actual_features": [
+      "تفرق",
       "قوة",
       "غلظ"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "pressure_force",
       "texture_quality"
     ],
@@ -54532,13 +54106,13 @@
       "طرد",
       "إبعاد",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "spreading_dispersal",
       "spreading_dispersal",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "امتداد",
@@ -54561,7 +54135,6 @@
       "نفاذ",
       "قوة",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -54570,7 +54143,6 @@
       "penetration_passage",
       "pressure_force",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -54581,8 +54153,8 @@
       "extension_movement",
       "texture_quality"
     ],
-    "jaccard": 0.125,
-    "weighted_jaccard": 0.125
+    "jaccard": 0.142857,
+    "weighted_jaccard": 0.142857
   },
   {
     "binary_root": "فن",
@@ -58026,47 +57598,12 @@
       "تعقد",
       "اشتداد",
       "امتداد",
-      "لطف"
-    ],
-    "predicted_categories": [
-      "pressure_force",
-      "pressure_force",
-      "extension_movement",
-      "texture_quality"
-    ],
-    "actual_features": [
-      "نفاذ",
-      "باطن",
-      "عمق",
-      "امتداد"
-    ],
-    "actual_categories": [
-      "penetration_passage",
-      "spatial_orientation",
-      "spatial_orientation",
-      "extension_movement"
-    ],
-    "jaccard": 0.142857,
-    "weighted_jaccard": 0.142857
-  },
-  {
-    "binary_root": "قن",
-    "scholar": "jabal",
-    "model": "dialectical",
-    "predicted_features": [
-      "تعقد",
-      "اشتداد",
-      "عمق",
-      "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
       "pressure_force",
       "pressure_force",
-      "spatial_orientation",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -58081,8 +57618,41 @@
       "spatial_orientation",
       "extension_movement"
     ],
-    "jaccard": 0.428571,
-    "weighted_jaccard": 0.428571
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "قن",
+    "scholar": "jabal",
+    "model": "dialectical",
+    "predicted_features": [
+      "تعقد",
+      "اشتداد",
+      "عمق",
+      "امتداد",
+      "باطن"
+    ],
+    "predicted_categories": [
+      "pressure_force",
+      "pressure_force",
+      "spatial_orientation",
+      "extension_movement",
+      "spatial_orientation"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "باطن",
+      "عمق",
+      "امتداد"
+    ],
+    "actual_categories": [
+      "penetration_passage",
+      "spatial_orientation",
+      "spatial_orientation",
+      "extension_movement"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "قن",
@@ -58276,11 +57846,9 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "تجمع",
       "امتداد"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -58303,11 +57871,9 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "تجمع",
       "امتداد"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -58332,11 +57898,9 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "تجمع",
       "امتداد"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -58355,11 +57919,9 @@
       "gathering_cohesion"
     ],
     "actual_features": [
-      "تجمع",
       "امتداد"
     ],
     "actual_categories": [
-      "gathering_cohesion",
       "extension_movement"
     ],
     "jaccard": 0.0,
@@ -59463,14 +59025,10 @@
       "pressure_force",
       "extension_movement"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "كر",
@@ -59488,14 +59046,10 @@
       "extension_movement",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "كر",
@@ -59517,14 +59071,10 @@
       "extension_movement",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "كر",
@@ -59538,98 +59088,70 @@
       "pressure_force",
       "extension_movement"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "كر",
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "تجمع",
-      "استرسال"
+      "تجمع"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
+      "gathering_cohesion"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "كر",
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "تجمع",
-      "استرسال"
+      "تجمع"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
+      "gathering_cohesion"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "كر",
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع",
-      "استرسال"
+      "تجمع"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
+      "gathering_cohesion"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "كر",
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع",
-      "استرسال"
+      "تجمع"
     ],
     "predicted_categories": [
-      "gathering_cohesion",
-      "extension_movement"
+      "gathering_cohesion"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
-    "jaccard": 0.5,
-    "weighted_jaccard": 0.5
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "كر",
@@ -59643,12 +59165,8 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -59664,12 +59182,8 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -59685,12 +59199,8 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -59706,12 +59216,8 @@
       "gathering_cohesion",
       "texture_quality"
     ],
-    "actual_features": [
-      "استرسال"
-    ],
-    "actual_categories": [
-      "extension_movement"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -60508,10 +60014,12 @@
     "scholar": "neili",
     "model": "intersection",
     "predicted_features": [
-      "تجمع"
+      "تجمع",
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "gathering_cohesion",
+      "extension_movement"
     ],
     "actual_features": [
       "استرسال"
@@ -60527,10 +60035,12 @@
     "scholar": "neili",
     "model": "sequence",
     "predicted_features": [
-      "تجمع"
+      "تجمع",
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "gathering_cohesion",
+      "extension_movement"
     ],
     "actual_features": [
       "استرسال"
@@ -60546,10 +60056,12 @@
     "scholar": "neili",
     "model": "dialectical",
     "predicted_features": [
-      "تجمع"
+      "تجمع",
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "gathering_cohesion",
+      "extension_movement"
     ],
     "actual_features": [
       "استرسال"
@@ -60565,10 +60077,12 @@
     "scholar": "neili",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "تجمع"
+      "تجمع",
+      "ظهور"
     ],
     "predicted_categories": [
-      "gathering_cohesion"
+      "gathering_cohesion",
+      "extension_movement"
     ],
     "actual_features": [
       "استرسال"
@@ -61494,10 +61008,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "دقة"
+      "ضغط",
+      "امتداد"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "pressure_force",
+      "extension_movement"
     ],
     "actual_features": [
       "جوف"
@@ -61516,13 +61032,13 @@
       "ضغط",
       "دقة",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "pressure_force",
       "texture_quality",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "جوف"
@@ -61543,7 +61059,6 @@
       "امتساك",
       "قطع",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
@@ -61552,7 +61067,6 @@
       "pressure_force",
       "sharpness_cutting",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -61969,12 +61483,8 @@
     "binary_root": "مت",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتداد",
       "قوة",
@@ -61992,12 +61502,8 @@
     "binary_root": "مت",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتداد",
       "قوة",
@@ -62015,12 +61521,8 @@
     "binary_root": "مت",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتداد",
       "قوة",
@@ -62038,12 +61540,8 @@
     "binary_root": "مت",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "تجمع"
-    ],
-    "predicted_categories": [
-      "gathering_cohesion"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "امتداد",
       "قوة",
@@ -63161,12 +62659,8 @@
     "binary_root": "مر",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "استرسال",
       "حدة",
@@ -63177,19 +62671,15 @@
       "sharpness_cutting",
       "pressure_force"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "مر",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "استرسال",
       "حدة",
@@ -63200,19 +62690,15 @@
       "sharpness_cutting",
       "pressure_force"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "مر",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "استرسال",
       "حدة",
@@ -63223,19 +62709,15 @@
       "sharpness_cutting",
       "pressure_force"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "مر",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [
-      "استرسال"
-    ],
-    "predicted_categories": [
-      "extension_movement"
-    ],
+    "predicted_features": [],
+    "predicted_categories": [],
     "actual_features": [
       "استرسال",
       "حدة",
@@ -63246,8 +62728,8 @@
       "sharpness_cutting",
       "pressure_force"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "مر",
@@ -63361,12 +62843,8 @@
       "pressure_force",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -63386,12 +62864,8 @@
       "gathering_cohesion",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -63413,12 +62887,8 @@
       "gathering_cohesion",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -63434,12 +62904,8 @@
       "pressure_force",
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -63453,12 +62919,8 @@
     "predicted_categories": [
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -63472,12 +62934,8 @@
     "predicted_categories": [
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -63491,12 +62949,8 @@
     "predicted_categories": [
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -63510,12 +62964,8 @@
     "predicted_categories": [
       "gathering_cohesion"
     ],
-    "actual_features": [
-      "تجمع"
-    ],
-    "actual_categories": [
-      "gathering_cohesion"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -64497,8 +63947,12 @@
     "binary_root": "مع",
     "scholar": "neili",
     "model": "intersection",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "امتداد"
     ],
@@ -64512,8 +63966,12 @@
     "binary_root": "مع",
     "scholar": "neili",
     "model": "sequence",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "امتداد"
     ],
@@ -64527,8 +63985,12 @@
     "binary_root": "مع",
     "scholar": "neili",
     "model": "dialectical",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "امتداد"
     ],
@@ -64542,8 +64004,12 @@
     "binary_root": "مع",
     "scholar": "neili",
     "model": "phonetic_gestural",
-    "predicted_features": [],
-    "predicted_categories": [],
+    "predicted_features": [
+      "ظهور"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
     "actual_features": [
       "امتداد"
     ],
@@ -65740,13 +65206,13 @@
       "امتساك",
       "استواء",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "pressure_force",
       "independence_distinction",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "قوة",
@@ -65766,14 +65232,12 @@
     "predicted_features": [
       "امتساك",
       "استواء",
-      "امتداد",
-      "لطف"
+      "امتداد"
     ],
     "predicted_categories": [
       "pressure_force",
       "independence_distinction",
-      "extension_movement",
-      "texture_quality"
+      "extension_movement"
     ],
     "actual_features": [
       "قوة",
@@ -66066,10 +65530,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "تجمع"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "gathering_cohesion"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -66082,13 +65548,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "تجمع",
       "رخاوة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "gathering_cohesion",
       "texture_quality"
     ],
@@ -66103,7 +65569,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "تجمع",
       "رخاوة",
@@ -66111,7 +65576,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "gathering_cohesion",
       "texture_quality",
@@ -66204,10 +65668,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "ضغط"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "pressure_force"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -66220,13 +65686,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "ضغط",
       "دقة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "pressure_force",
       "texture_quality"
     ],
@@ -66241,7 +65707,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "ضغط",
       "دقة",
@@ -66252,7 +65717,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "pressure_force",
       "texture_quality",
@@ -66348,15 +65812,19 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "كثافة"
     ],
     "predicted_categories": [
+      "extension_movement",
       "texture_quality"
     ],
     "actual_features": [
+      "انتشار",
       "تفشي"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -66368,20 +65836,22 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "كثافة",
       "غلظ"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "texture_quality",
       "texture_quality"
     ],
     "actual_features": [
+      "انتشار",
       "تفشي"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -66393,7 +65863,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "كثافة",
       "غلظ",
@@ -66402,7 +65871,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "texture_quality",
       "texture_quality",
@@ -66410,13 +65878,15 @@
       "spreading_dispersal"
     ],
     "actual_features": [
+      "انتشار",
       "تفشي"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "jaccard": 0.142857,
-    "weighted_jaccard": 0.142857
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "نث",
@@ -66431,9 +65901,11 @@
       "texture_quality"
     ],
     "actual_features": [
+      "انتشار",
       "تفشي"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -66450,9 +65922,11 @@
       "gathering_cohesion"
     ],
     "actual_features": [
+      "انتشار",
       "تفشي"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -66469,9 +65943,11 @@
       "gathering_cohesion"
     ],
     "actual_features": [
+      "انتشار",
       "تفشي"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -66488,9 +65964,11 @@
       "gathering_cohesion"
     ],
     "actual_features": [
+      "انتشار",
       "تفشي"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -66507,9 +65985,11 @@
       "gathering_cohesion"
     ],
     "actual_features": [
+      "انتشار",
       "تفشي"
     ],
     "actual_categories": [
+      "spreading_dispersal",
       "spreading_dispersal"
     ],
     "jaccard": 0.0,
@@ -66531,15 +66011,13 @@
       "نفاذ",
       "غلظ",
       "كثافة",
-      "قوة",
-      "احتواء"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "texture_quality",
       "texture_quality",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -66550,47 +66028,12 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
-      "تجمع",
-      "حدة"
-    ],
-    "predicted_categories": [
-      "extension_movement",
-      "texture_quality",
-      "gathering_cohesion",
-      "sharpness_cutting"
-    ],
-    "actual_features": [
-      "نفاذ",
-      "غلظ",
-      "كثافة",
-      "قوة",
-      "احتواء"
-    ],
-    "actual_categories": [
-      "penetration_passage",
-      "texture_quality",
-      "texture_quality",
-      "pressure_force",
-      "gathering_cohesion"
-    ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
-  },
-  {
-    "binary_root": "نج",
-    "scholar": "jabal",
-    "model": "dialectical",
-    "predicted_features": [
-      "امتداد",
-      "لطف",
       "باطن",
       "تجمع",
       "حدة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "gathering_cohesion",
       "sharpness_cutting"
@@ -66599,15 +66042,44 @@
       "نفاذ",
       "غلظ",
       "كثافة",
-      "قوة",
-      "احتواء"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "texture_quality",
       "texture_quality",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "نج",
+    "scholar": "jabal",
+    "model": "dialectical",
+    "predicted_features": [
+      "امتداد",
+      "باطن",
+      "تجمع",
+      "حدة"
+    ],
+    "predicted_categories": [
+      "extension_movement",
+      "spatial_orientation",
+      "gathering_cohesion",
+      "sharpness_cutting"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "غلظ",
+      "كثافة",
+      "قوة"
+    ],
+    "actual_categories": [
+      "penetration_passage",
+      "texture_quality",
+      "texture_quality",
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -66628,15 +66100,13 @@
       "نفاذ",
       "غلظ",
       "كثافة",
-      "قوة",
-      "احتواء"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "texture_quality",
       "texture_quality",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -66655,15 +66125,13 @@
       "نفاذ",
       "غلظ",
       "كثافة",
-      "قوة",
-      "احتواء"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "texture_quality",
       "texture_quality",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -66682,15 +66150,13 @@
       "نفاذ",
       "غلظ",
       "كثافة",
-      "قوة",
-      "احتواء"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "texture_quality",
       "texture_quality",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -66709,15 +66175,13 @@
       "نفاذ",
       "غلظ",
       "كثافة",
-      "قوة",
-      "احتواء"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "texture_quality",
       "texture_quality",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -66736,15 +66200,13 @@
       "نفاذ",
       "غلظ",
       "كثافة",
-      "قوة",
-      "احتواء"
+      "قوة"
     ],
     "actual_categories": [
       "penetration_passage",
       "texture_quality",
       "texture_quality",
-      "pressure_force",
-      "gathering_cohesion"
+      "pressure_force"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -66780,13 +66242,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "احتكاك",
       "جفاف"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "sharpness_cutting",
       "texture_quality"
     ],
@@ -66802,8 +66264,8 @@
       "pressure_force",
       "extension_movement"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 0.142857,
+    "weighted_jaccard": 0.142857
   },
   {
     "binary_root": "نح",
@@ -66811,14 +66273,12 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "احتكاك",
       "جفاف"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "sharpness_cutting",
       "texture_quality"
@@ -66835,8 +66295,8 @@
       "pressure_force",
       "extension_movement"
     ],
-    "jaccard": 0.125,
-    "weighted_jaccard": 0.125
+    "jaccard": 0.142857,
+    "weighted_jaccard": 0.142857
   },
   {
     "binary_root": "نح",
@@ -66954,10 +66414,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "تخلخل"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "spreading_dispersal"
     ],
     "actual_features": [
       "نقص"
@@ -66974,13 +66436,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "تخلخل",
       "جفاف"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "spreading_dispersal",
       "texture_quality"
     ],
@@ -66999,7 +66461,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "تخلخل",
       "جفاف",
@@ -67007,7 +66468,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "spreading_dispersal",
       "texture_quality",
@@ -67132,13 +66592,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "احتباس",
       "ضغط"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "pressure_force",
       "pressure_force"
     ],
@@ -67160,14 +66620,12 @@
     "scholar": "jabal",
     "model": "dialectical",
     "predicted_features": [
-      "لطف",
       "باطن",
       "احتباس",
       "ضغط",
       "طول"
     ],
     "predicted_categories": [
-      "texture_quality",
       "spatial_orientation",
       "pressure_force",
       "pressure_force",
@@ -67308,10 +66766,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "نفاذ"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "penetration_passage"
     ],
     "actual_features": [
       "خروج",
@@ -67330,13 +66790,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "نفاذ",
       "رخاوة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "penetration_passage",
       "texture_quality"
     ],
@@ -67357,7 +66817,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "نفاذ",
       "رخاوة",
@@ -67365,7 +66824,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "penetration_passage",
       "texture_quality",
@@ -67500,12 +66958,10 @@
       "extension_movement"
     ],
     "actual_features": [
-      "نفاذ",
-      "لطف"
+      "نفاذ"
     ],
     "actual_categories": [
-      "penetration_passage",
-      "texture_quality"
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -67516,26 +66972,24 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "استرسال",
       "تماسك"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
-      "نفاذ",
-      "لطف"
+      "نفاذ"
     ],
     "actual_categories": [
-      "penetration_passage",
-      "texture_quality"
+      "penetration_passage"
     ],
-    "jaccard": 0.2,
-    "weighted_jaccard": 0.2
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "نر",
@@ -67543,28 +66997,24 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "استرسال",
       "تماسك"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "extension_movement",
       "gathering_cohesion"
     ],
     "actual_features": [
-      "نفاذ",
-      "لطف"
+      "نفاذ"
     ],
     "actual_categories": [
-      "penetration_passage",
-      "texture_quality"
+      "penetration_passage"
     ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "نر",
@@ -67579,12 +67029,10 @@
       "extension_movement"
     ],
     "actual_features": [
-      "نفاذ",
-      "لطف"
+      "نفاذ"
     ],
     "actual_categories": [
-      "penetration_passage",
-      "texture_quality"
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -67600,12 +67048,10 @@
       "texture_quality"
     ],
     "actual_features": [
-      "نفاذ",
-      "لطف"
+      "نفاذ"
     ],
     "actual_categories": [
-      "penetration_passage",
-      "texture_quality"
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -67621,12 +67067,10 @@
       "texture_quality"
     ],
     "actual_features": [
-      "نفاذ",
-      "لطف"
+      "نفاذ"
     ],
     "actual_categories": [
-      "penetration_passage",
-      "texture_quality"
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -67642,12 +67086,10 @@
       "texture_quality"
     ],
     "actual_features": [
-      "نفاذ",
-      "لطف"
+      "نفاذ"
     ],
     "actual_categories": [
-      "penetration_passage",
-      "texture_quality"
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -67663,12 +67105,10 @@
       "texture_quality"
     ],
     "actual_features": [
-      "نفاذ",
-      "لطف"
+      "نفاذ"
     ],
     "actual_categories": [
-      "penetration_passage",
-      "texture_quality"
+      "penetration_passage"
     ],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
@@ -67706,13 +67146,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "اكتناز",
       "ازدحام"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "gathering_cohesion",
       "gathering_cohesion"
     ],
@@ -67737,14 +67177,12 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "اكتناز",
       "ازدحام"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "gathering_cohesion",
       "gathering_cohesion"
@@ -67902,12 +67340,12 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "دقة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "texture_quality"
     ],
     "actual_features": [
@@ -67926,14 +67364,12 @@
     "scholar": "jabal",
     "model": "dialectical",
     "predicted_features": [
-      "لطف",
       "باطن",
       "دقة",
       "وحدة",
       "حدة"
     ],
     "predicted_categories": [
-      "texture_quality",
       "spatial_orientation",
       "texture_quality",
       "independence_distinction",
@@ -67947,8 +67383,8 @@
       "penetration_passage",
       "texture_quality"
     ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
   },
   {
     "binary_root": "نس",
@@ -68060,10 +67496,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "تفشي"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "spreading_dispersal"
     ],
     "actual_features": [
       "انتشار",
@@ -68082,13 +67520,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "تفشي",
       "انتشار"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "spreading_dispersal",
       "spreading_dispersal"
     ],
@@ -68109,7 +67547,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "تفشي",
       "انتشار",
@@ -68117,7 +67554,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "spreading_dispersal",
       "spreading_dispersal",
@@ -68131,8 +67567,8 @@
       "spreading_dispersal",
       "sharpness_cutting"
     ],
-    "jaccard": 0.142857,
-    "weighted_jaccard": 0.142857
+    "jaccard": 0.166667,
+    "weighted_jaccard": 0.166667
   },
   {
     "binary_root": "نش",
@@ -68246,10 +67682,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "نفاذ"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "penetration_passage"
     ],
     "actual_features": [
       "نفاذ",
@@ -68259,8 +67697,8 @@
       "penetration_passage",
       "extension_movement"
     ],
-    "jaccard": 0.0,
-    "weighted_jaccard": 0.0
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
   },
   {
     "binary_root": "نص",
@@ -68268,13 +67706,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "نفاذ",
       "غلظ"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "penetration_passage",
       "texture_quality"
     ],
@@ -68295,7 +67733,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "نفاذ",
       "غلظ",
@@ -68304,7 +67741,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "penetration_passage",
       "texture_quality",
@@ -68319,8 +67755,8 @@
       "penetration_passage",
       "extension_movement"
     ],
-    "jaccard": 0.285714,
-    "weighted_jaccard": 0.285714
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "نص",
@@ -68418,10 +67854,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "ضغط"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "pressure_force"
     ],
     "actual_features": [
       "نفاذ",
@@ -68440,13 +67878,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "ضغط",
       "كثافة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "pressure_force",
       "texture_quality"
     ],
@@ -68467,7 +67905,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "ضغط",
       "كثافة",
@@ -68475,7 +67912,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "pressure_force",
       "texture_quality",
@@ -68588,12 +68024,10 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "امتداد",
-      "لطف"
+      "امتداد"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "texture_quality"
+      "extension_movement"
     ],
     "actual_features": [
       "حيز",
@@ -68612,13 +68046,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "ضغط",
       "اتساع"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "pressure_force",
       "extension_movement"
     ],
@@ -68639,7 +68073,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "ضغط",
       "اتساع",
@@ -68647,7 +68080,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "pressure_force",
       "extension_movement",
@@ -68776,10 +68208,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "نفاذ"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "penetration_passage"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -68792,13 +68226,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "نفاذ",
       "غلظ"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "penetration_passage",
       "texture_quality"
     ],
@@ -68813,7 +68247,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "نفاذ",
       "غلظ",
@@ -68822,7 +68255,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "penetration_passage",
       "texture_quality",
@@ -68916,10 +68348,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "التحام"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "gathering_cohesion"
     ],
     "actual_features": [
       "رخاوة",
@@ -68938,13 +68372,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "التحام",
       "رقة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "gathering_cohesion",
       "texture_quality"
     ],
@@ -68965,7 +68399,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "التحام",
       "رقة",
@@ -68974,7 +68407,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "gathering_cohesion",
       "texture_quality",
@@ -68989,8 +68421,8 @@
       "texture_quality",
       "texture_quality"
     ],
-    "jaccard": 0.285714,
-    "weighted_jaccard": 0.285714
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
   },
   {
     "binary_root": "نع",
@@ -69088,10 +68520,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "تخلخل"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "spreading_dispersal"
     ],
     "actual_features": [
       "رخاوة",
@@ -69110,13 +68544,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "تخلخل",
       "رخاوة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "spreading_dispersal",
       "texture_quality"
     ],
@@ -69128,8 +68562,8 @@
       "texture_quality",
       "spatial_orientation"
     ],
-    "jaccard": 0.2,
-    "weighted_jaccard": 0.2
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
   },
   {
     "binary_root": "نغ",
@@ -69137,7 +68571,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "تخلخل",
       "رخاوة",
@@ -69145,7 +68578,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "spreading_dispersal",
       "texture_quality",
@@ -69159,8 +68591,8 @@
       "texture_quality",
       "spatial_orientation"
     ],
-    "jaccard": 0.333333,
-    "weighted_jaccard": 0.333333
+    "jaccard": 0.4,
+    "weighted_jaccard": 0.4
   },
   {
     "binary_root": "نغ",
@@ -69300,13 +68732,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "طرد",
       "إبعاد"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "spreading_dispersal",
       "spreading_dispersal"
     ],
@@ -69329,7 +68761,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "طرد",
       "إبعاد",
@@ -69338,7 +68769,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "spreading_dispersal",
       "spreading_dispersal",
@@ -69355,8 +68785,8 @@
       "spreading_dispersal",
       "spreading_dispersal"
     ],
-    "jaccard": 0.25,
-    "weighted_jaccard": 0.25
+    "jaccard": 0.285714,
+    "weighted_jaccard": 0.285714
   },
   {
     "binary_root": "نف",
@@ -69504,13 +68934,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "تعقد",
       "اشتداد"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "pressure_force",
       "pressure_force"
     ],
@@ -69533,7 +68963,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "تعقد",
       "اشتداد",
@@ -69541,7 +68970,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "pressure_force",
       "pressure_force",
@@ -69557,8 +68985,8 @@
       "spatial_orientation",
       "texture_quality"
     ],
-    "jaccard": 0.125,
-    "weighted_jaccard": 0.125
+    "jaccard": 0.142857,
+    "weighted_jaccard": 0.142857
   },
   {
     "binary_root": "نق",
@@ -69666,10 +69094,12 @@
     "scholar": "jabal",
     "model": "intersection",
     "predicted_features": [
-      "لطف"
+      "امتداد",
+      "ضغط"
     ],
     "predicted_categories": [
-      "texture_quality"
+      "extension_movement",
+      "pressure_force"
     ],
     "actual_features": [
       "وصول",
@@ -69690,13 +69120,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "ضغط",
       "دقة"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "pressure_force",
       "texture_quality"
     ],
@@ -69719,7 +69149,6 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "ضغط",
       "دقة",
@@ -69728,7 +69157,6 @@
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "pressure_force",
       "texture_quality",
@@ -69745,8 +69173,8 @@
       "spatial_orientation",
       "texture_quality"
     ],
-    "jaccard": 0.111111,
-    "weighted_jaccard": 0.111111
+    "jaccard": 0.125,
+    "weighted_jaccard": 0.125
   },
   {
     "binary_root": "نك",
@@ -69890,12 +69318,12 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "تعلق"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "independence_distinction"
     ],
     "actual_features": [
@@ -69912,14 +69340,12 @@
     "scholar": "jabal",
     "model": "dialectical",
     "predicted_features": [
-      "لطف",
       "باطن",
       "تعلق",
       "استقلال",
       "تميز"
     ],
     "predicted_categories": [
-      "texture_quality",
       "spatial_orientation",
       "independence_distinction",
       "independence_distinction",
@@ -70062,13 +69488,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "امتساك",
       "استواء"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "pressure_force",
       "independence_distinction"
     ],
@@ -70093,13 +69519,11 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "امتساك",
       "استواء"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "pressure_force",
       "independence_distinction"
     ],
@@ -70115,8 +69539,8 @@
       "spatial_orientation",
       "texture_quality"
     ],
-    "jaccard": 0.142857,
-    "weighted_jaccard": 0.142857
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
   },
   {
     "binary_root": "نم",
@@ -70251,12 +69675,10 @@
     "model": "intersection",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [
@@ -70274,11 +69696,11 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [
       "جوف"
@@ -70476,13 +69898,13 @@
     "model": "sequence",
     "predicted_features": [
       "امتداد",
-      "لطف",
+      "باطن",
       "اشتمال",
       "احتواء"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
+      "spatial_orientation",
       "gathering_cohesion",
       "gathering_cohesion"
     ],
@@ -70503,14 +69925,12 @@
     "model": "dialectical",
     "predicted_features": [
       "امتداد",
-      "لطف",
       "باطن",
       "اشتمال",
       "احتواء"
     ],
     "predicted_categories": [
       "extension_movement",
-      "texture_quality",
       "spatial_orientation",
       "gathering_cohesion",
       "gathering_cohesion"
@@ -70523,8 +69943,8 @@
       "gathering_cohesion",
       "spatial_orientation"
     ],
-    "jaccard": 0.166667,
-    "weighted_jaccard": 0.166667
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
   },
   {
     "binary_root": "نو",
@@ -70920,12 +70340,10 @@
     "scholar": "asim_al_masri",
     "model": "intersection",
     "predicted_features": [
-      "انتقال",
-      "تجمع"
+      "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "عمق",
@@ -70945,12 +70363,10 @@
     "scholar": "asim_al_masri",
     "model": "sequence",
     "predicted_features": [
-      "انتقال",
-      "تجمع"
+      "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "عمق",
@@ -70970,12 +70386,10 @@
     "scholar": "asim_al_masri",
     "model": "dialectical",
     "predicted_features": [
-      "انتقال",
-      "تجمع"
+      "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "عمق",
@@ -70995,12 +70409,10 @@
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "انتقال",
-      "تجمع"
+      "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
-      "gathering_cohesion"
+      "extension_movement"
     ],
     "actual_features": [
       "عمق",
@@ -71275,11 +70687,9 @@
     "scholar": "asim_al_masri",
     "model": "sequence",
     "predicted_features": [
-      "انتقال",
-      "استرسال"
+      "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [],
@@ -71292,11 +70702,9 @@
     "scholar": "asim_al_masri",
     "model": "dialectical",
     "predicted_features": [
-      "انتقال",
-      "استرسال"
+      "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [],
@@ -71309,11 +70717,9 @@
     "scholar": "asim_al_masri",
     "model": "phonetic_gestural",
     "predicted_features": [
-      "انتقال",
-      "استرسال"
+      "انتقال"
     ],
     "predicted_categories": [
-      "extension_movement",
       "extension_movement"
     ],
     "actual_features": [],
@@ -71825,12 +71231,8 @@
       "gathering_cohesion",
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -71850,12 +71252,8 @@
       "sharpness_cutting",
       "texture_quality"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -71877,12 +71275,8 @@
       "texture_quality",
       "spatial_orientation"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -71898,12 +71292,8 @@
       "gathering_cohesion",
       "sharpness_cutting"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -71917,12 +71307,8 @@
     "predicted_categories": [
       "spatial_orientation"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -71936,12 +71322,8 @@
     "predicted_categories": [
       "spatial_orientation"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -71955,12 +71337,8 @@
     "predicted_categories": [
       "spatial_orientation"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -71974,12 +71352,8 @@
     "predicted_categories": [
       "spatial_orientation"
     ],
-    "actual_features": [
-      "لطف"
-    ],
-    "actual_categories": [
-      "texture_quality"
-    ],
+    "actual_features": [],
+    "actual_categories": [],
     "jaccard": 0.0,
     "weighted_jaccard": 0.0
   },
@@ -72260,13 +71634,13 @@
       "اشتمال",
       "احتواء",
       "امتداد",
-      "لطف"
+      "باطن"
     ],
     "predicted_categories": [
       "gathering_cohesion",
       "gathering_cohesion",
       "extension_movement",
-      "texture_quality"
+      "spatial_orientation"
     ],
     "actual_features": [],
     "actual_categories": [],
@@ -72281,14 +71655,12 @@
       "اشتمال",
       "احتواء",
       "امتداد",
-      "لطف",
       "باطن"
     ],
     "predicted_categories": [
       "gathering_cohesion",
       "gathering_cohesion",
       "extension_movement",
-      "texture_quality",
       "spatial_orientation"
     ],
     "actual_features": [],
