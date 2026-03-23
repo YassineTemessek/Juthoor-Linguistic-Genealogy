@@ -1,0 +1,9 @@
+{
+  "benchmark_semitic_pairs": 73,
+  "matched_source_roots": 44,
+  "coverage": 0.6027,
+  "by_target_lang": {
+    "heb": 32,
+    "arc": 12
+  }
+}

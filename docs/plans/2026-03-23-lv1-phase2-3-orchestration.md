@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-23
 **Status:** ACTIVE
-**Last checkpoint:** Sprint 3 root prediction checkpoint landed locally; next work continues from the task queue below
+**Last checkpoint:** Sprint 5 projection work is active; Sprint 3 is closed and Sprint 5 evaluation is underway
 
 ---
 
@@ -85,13 +85,11 @@ Each task has an owner. Work the next unblocked item and update status directly 
 | S3.15 | **R9: Targeted empty-actual Quranic extraction** | Codex | S3.13 | 50 high-value roots | [x] |
 | S3.16 | **R10: Category-level blended_jaccard** | Claude | S3.13 | `scoring.py` — 0.7*feat + 0.3*category | [x] |
 | S3.17 | **Re-run predictions after S3.14-S3.16** | Codex | S3.14+S3.15+S3.16 | Updated outputs | [x] |
-| S3.18 | **Method A v3 calibration** | Claude | S3.17 | Final Sprint 3 verdict | [ ] |
+| S3.18 | **Method A v3 calibration** | Claude | S3.17 | Method A ~36.7%, blended 0.175, 56.3% coverage. **SPRINT 3 CLOSED.** | [x] |
 
-**Current checkpoint:** The S3.14+S3.15+S3.16 rerun is now landed locally: `1,938` roots, `782` nonzero exact-Jaccard predictions (`40.4%`), `1092` nonzero blended predictions (`56.3%`), mean Jaccard `0.1457`, mean weighted Jaccard `0.1407`, mean blended Jaccard `0.1752`. Targeted Quranic-empty extraction recovered `26` roots, dropping empty-actual roots from `139` to `113`.
+**Sprint 3 final result:** Method A ~36.7% (target was >55%). Blended Jaccard 0.175 with 56.3% nonzero blended coverage. Precision cap improved partial-low band from 42→52 Method A. 310 category-only matches revealed by blended metric. Ceiling ~40-45% without neural/embedding models. Sprint 3 closed — LV1 genome accepted as hypothesis generator for Sprint 5 cross-lingual projection.
 
-**Sprint 3 note before S3.18:** The new rerun trades some raw nonzero Jaccard for better precision and much better coverage. The decisive question is now semantic: does the S3.14 precision cap improve Method A despite the lower exact-match count? Claude's S3.18 calibration is the next decision point.
-
-**Target:** Root prediction accuracy >60% Method A, >30% Method B (after synonym fix)
+**Report:** `outputs/lv1_scoring/root_method_a_calibration_v3.md`
 
 ### SPRINT 4: Abbas Sensory Validation (parallel with Sprint 3)
 
@@ -109,12 +107,12 @@ Each task has an owner. Work the next unblocked item and update status directly 
 |---|------|-------|---------|--------|-------|
 | S5.1 | **Implement Khashim's 9 sound laws** | Codex | S3.8 (Phase 3 done) | `src/.../factory/sound_laws.py` | [x] |
 | | ف↔P, ق↔C/K/G, ط↔T, ص↔S, ش↔S, ح↔K/C/H, ع→drop, غ→G, خ→H/G | | | | |
-| S5.2 | **Project Arabic root meanings → Hebrew/Aramaic** | Codex | S5.1 | Predicted cognate meanings via sound laws | [ ] |
+| S5.2 | **Project Arabic root meanings → Hebrew/Aramaic** | Codex | S5.1 | Predicted cognate meanings via sound laws | [x] |
 | S5.3 | **Score projections against LV2 benchmark** | Codex | S5.2 | Cross-validation: do LV1 meanings predict LV2 cognates? | [ ] |
 | S5.4 | **Project Arabic root meanings → English/Latin/Greek** | Codex | S5.1 | Using Khashim's + Beyond the Word consonant shifts | [ ] |
 | S5.5 | **Cross-linguistic validation report** | Claude | S5.3+S5.4 | Do Arabic root predictions survive cross-linguistically? | [ ] |
 
-**Sprint 5 checkpoint:** `factory/sound_laws.py` is now live with Khashim's 9 primary substitutions, the 6 succession groups, Arabic-root normalization, and constrained projection helpers for Semitic vs European targets. Focused coverage for this layer is in `tests/test_sound_laws.py`, and the initial Sprint 5 slice is green.
+**Sprint 5 checkpoint:** `factory/sound_laws.py` is now live, and `factory/cross_lingual_projection.py` materializes the first benchmark-aligned Semitic projection set. Current direct Arabic benchmark coverage is `44/73` pairs (`60.3%`): `32` Hebrew and `12` Aramaic rows written to `outputs/lv1_scoring/benchmark_semitic_projections.json`.
 
 ### SPRINT 6: Integration + Cleanup
 
@@ -204,8 +202,9 @@ Sprint 6:
 |--------|---------|--------|--------|
 | Nonzero Jaccard (nuclei) | 21.0% | 30-40% | Sprint 1 |
 | Golden Rule confirmation | 19.9% | 25-35% | Sprint 1 |
-| Root prediction (Method B) | 13.5% | >30% | Sprint 3 |
-| Root prediction (Method A) | ~32% | >55% | Sprint 3 |
+| Root prediction (Method B) | 14.6% (40.4% nonzero) | >30% | Sprint 3 — CLOSED |
+| Root prediction (Method A) | ~36.7% | >55% | Sprint 3 — CLOSED, ceiling ~40-45% |
+| Root prediction (blended) | 17.5% (56.3% nonzero) | — | Sprint 3 — new primary metric |
 | Abbas sensory significance | — | p < 0.05 | Sprint 4 |
 | Cross-lingual projection accuracy | — | >40% | Sprint 5 |
 | Scholar coverage | 78 letters / 5 scholars | 100+ / 5 scholars | Sprint 2 |
