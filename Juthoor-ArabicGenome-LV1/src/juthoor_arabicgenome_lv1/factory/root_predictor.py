@@ -12,6 +12,7 @@ from juthoor_arabicgenome_lv1.factory.scoring import (
     jaccard_similarity,
     weighted_jaccard_similarity,
 )
+from juthoor_arabicgenome_lv1.core.feature_decomposition import FEATURE_TO_CATEGORY
 
 
 @dataclass(frozen=True)
@@ -44,6 +45,19 @@ def _features_to_gloss(features: tuple[str, ...]) -> str | None:
     return " + ".join(features)
 
 
+LETTER_ALIASES = {
+    "أ": "ء",
+    "إ": "ء",
+    "آ": "ء",
+    "ى": "ي",
+    "ه": "هـ",
+}
+
+
+def _normalize_letter_token(letter: str) -> str:
+    return LETTER_ALIASES.get(letter, letter)
+
+
 def choose_root_prediction_model(
     binary_features: tuple[str, ...],
     third_letter_features: tuple[str, ...],
@@ -56,6 +70,10 @@ def choose_root_prediction_model(
     """
     if binary_features and third_letter_features:
         if jaccard_similarity(binary_features, third_letter_features) > 0.0:
+            return "intersection"
+        binary_categories = {FEATURE_TO_CATEGORY.get(feature) for feature in binary_features}
+        third_categories = {FEATURE_TO_CATEGORY.get(feature) for feature in third_letter_features}
+        if binary_categories & third_categories:
             return "intersection"
         return "phonetic_gestural"
     if binary_features or third_letter_features:
@@ -120,12 +138,13 @@ def build_root_prediction_rows(
 
     for row in root_rows:
         nucleus = nucleus_map.get(row["binary_nucleus"], {})
-        third_letter_entry = letters.get(row["third_letter"], {})
+        third_letter = _normalize_letter_token(row["third_letter"])
+        third_letter_entry = letters.get(third_letter, {})
 
         prediction = predict_root_from_parts(
             root=row["root"],
             binary_nucleus=row["binary_nucleus"],
-            third_letter=row["third_letter"],
+            third_letter=third_letter,
             binary_features=_as_tuple(nucleus.get("jabal_features")),
             third_letter_features=_as_tuple(third_letter_entry.get("atomic_features")),
             actual_features=_as_tuple(row.get("jabal_features")),

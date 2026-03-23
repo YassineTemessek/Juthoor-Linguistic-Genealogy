@@ -34,6 +34,13 @@ def test_similarity_functions_collapse_synonym_groups() -> None:
     assert weighted_jaccard_similarity(predicted, actual) == 2 / 4
 
 
+def test_similarity_functions_use_extended_root_synonym_groups() -> None:
+    predicted = ("قوة", "ضغط", "خلوص", "استقلال", "ظاهر")
+    actual = ("ثقل", "إمساك", "فراغ", "قطع", "ظهور")
+    assert jaccard_similarity(predicted, actual) == 1.0
+    assert weighted_jaccard_similarity(predicted, actual) == 1.0
+
+
 def test_invert_features_extended_uses_sprint1_opposites() -> None:
     assert invert_features_extended(("قوة", "غلظ", "امتداد", "نقص")) == {
         "رخاوة",
@@ -53,8 +60,7 @@ def test_composition_models_return_features() -> None:
         articulatory1={"sifaat": {"shidda": True}, "makhraj": {"makhraj_en": "between_lips"}},
         articulatory2={"sifaat": {"takrir": True}, "makhraj": {"makhraj_en": "deepest_throat"}},
     )
-    assert "ضغط" in gestural.predicted_features
-    assert "عمق" in gestural.predicted_features
+    assert gestural.predicted_features == ("تجمع", "استرسال")
 
 
 def test_build_nucleus_score_rows_filters_missing_scholar_letters() -> None:
@@ -97,6 +103,10 @@ def test_root_predictor_falls_back_when_no_overlap_exists() -> None:
     assert choose_root_prediction_model(("نفاذ",), ("تجمع",)) == "phonetic_gestural"
 
 
+def test_root_predictor_uses_intersection_for_category_overlap() -> None:
+    assert choose_root_prediction_model(("ظهور",), ("اتساع",)) == "intersection"
+
+
 def test_build_root_prediction_rows_and_summary() -> None:
     roots = [
         {
@@ -125,3 +135,39 @@ def test_build_root_prediction_rows_and_summary() -> None:
     summary = summarize_root_predictions(rows)
     assert summary["overall"]["roots"] == 1
     assert summary["by_model"]["intersection"]["count"] == 1
+
+
+def test_build_root_prediction_rows_normalizes_letter_aliases() -> None:
+    roots = [
+        {
+            "root": "بدأ",
+            "binary_nucleus": "بد",
+            "third_letter": "أ",
+            "jabal_features": ("ظهور", "ضغط"),
+            "bab": "الباء",
+            "quranic_verse": None,
+        },
+        {
+            "root": "بكى",
+            "binary_nucleus": "بك",
+            "third_letter": "ى",
+            "jabal_features": ("اتصال",),
+            "bab": "الباء",
+            "quranic_verse": None,
+        },
+    ]
+    nuclei = [
+        {"binary_root": "بد", "jabal_features": ("ظهور",)},
+        {"binary_root": "بك", "jabal_features": ("إمساك",)},
+    ]
+    scholars = {
+        "jabal": {
+            "ء": {"atomic_features": ("ضغط",), "articulatory_features": None},
+            "ي": {"atomic_features": ("اتصال",), "articulatory_features": None},
+        }
+    }
+    rows = build_root_prediction_rows(roots, nuclei, scholars, scholar="jabal")
+    assert rows[0]["third_letter"] == "ء"
+    assert rows[1]["third_letter"] == "ي"
+    assert rows[0]["predicted_features"]
+    assert rows[1]["predicted_features"]
