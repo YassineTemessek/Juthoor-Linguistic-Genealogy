@@ -1,0 +1,1134 @@
+[
+  {
+    "binary_root": "ثن",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "كثافة",
+      "غلظ"
+    ],
+    "predicted_categories": [
+      "texture_quality",
+      "texture_quality"
+    ],
+    "actual_features": [
+      "كثافة"
+    ],
+    "actual_categories": [
+      "texture_quality"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "بض",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "رخاوة"
+    ],
+    "predicted_categories": [
+      "texture_quality"
+    ],
+    "actual_features": [
+      "تجمع",
+      "رخاوة"
+    ],
+    "actual_categories": [
+      "gathering_cohesion",
+      "texture_quality"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "زم",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "اكتناز",
+      "امتساك"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "pressure_force"
+    ],
+    "actual_features": [
+      "اكتناز"
+    ],
+    "actual_categories": [
+      "gathering_cohesion"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "جث",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تجمع",
+      "كثافة"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "texture_quality"
+    ],
+    "actual_features": [
+      "تجمع",
+      "كثافة"
+    ],
+    "actual_categories": [
+      "gathering_cohesion",
+      "texture_quality"
+    ],
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
+  },
+  {
+    "binary_root": "فد",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "قوة"
+    ],
+    "predicted_categories": [
+      "pressure_force"
+    ],
+    "actual_features": [
+      "قوة"
+    ],
+    "actual_categories": [
+      "pressure_force"
+    ],
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
+  },
+  {
+    "binary_root": "سط",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "امتداد",
+      "دقة"
+    ],
+    "predicted_categories": [
+      "extension_movement",
+      "texture_quality"
+    ],
+    "actual_features": [
+      "امتداد",
+      "دقة",
+      "غلظ"
+    ],
+    "actual_categories": [
+      "extension_movement",
+      "texture_quality",
+      "texture_quality"
+    ],
+    "jaccard": 0.666667,
+    "weighted_jaccard": 0.666667
+  },
+  {
+    "binary_root": "ثخ",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "غلظ"
+    ],
+    "predicted_categories": [
+      "texture_quality"
+    ],
+    "actual_features": [
+      "كثافة",
+      "غلظ"
+    ],
+    "actual_categories": [
+      "texture_quality",
+      "texture_quality"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "ثج",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "كثافة",
+      "تجمع"
+    ],
+    "predicted_categories": [
+      "texture_quality",
+      "gathering_cohesion"
+    ],
+    "actual_features": [
+      "تجمع"
+    ],
+    "actual_categories": [
+      "gathering_cohesion"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "ذر",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "نفاذ",
+      "استرسال"
+    ],
+    "predicted_categories": [
+      "penetration_passage",
+      "extension_movement"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "دقة",
+      "استرسال"
+    ],
+    "actual_categories": [
+      "penetration_passage",
+      "texture_quality",
+      "extension_movement"
+    ],
+    "jaccard": 0.666667,
+    "weighted_jaccard": 0.666667
+  },
+  {
+    "binary_root": "ذق",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "نفاذ",
+      "تعقد"
+    ],
+    "predicted_categories": [
+      "penetration_passage",
+      "pressure_force"
+    ],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "ضز",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "ضغط",
+      "اكتناز"
+    ],
+    "predicted_categories": [
+      "pressure_force",
+      "gathering_cohesion"
+    ],
+    "actual_features": [
+      "ضغط",
+      "قوة",
+      "اكتناز"
+    ],
+    "actual_categories": [
+      "pressure_force",
+      "pressure_force",
+      "gathering_cohesion"
+    ],
+    "jaccard": 0.666667,
+    "weighted_jaccard": 0.666667
+  },
+  {
+    "binary_root": "ضم",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "ضغط"
+    ],
+    "predicted_categories": [
+      "pressure_force"
+    ],
+    "actual_features": [
+      "ضغط"
+    ],
+    "actual_categories": [
+      "pressure_force"
+    ],
+    "jaccard": 1.0,
+    "weighted_jaccard": 1.0
+  },
+  {
+    "binary_root": "عه",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "التحام",
+      "فراغ"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "spreading_dispersal"
+    ],
+    "actual_features": [
+      "فراغ"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "حش",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "جفاف"
+    ],
+    "predicted_categories": [
+      "texture_quality"
+    ],
+    "actual_features": [
+      "جفاف",
+      "انتشار"
+    ],
+    "actual_categories": [
+      "texture_quality",
+      "spreading_dispersal"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "حت",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "احتكاك",
+      "جفاف"
+    ],
+    "predicted_categories": [
+      "sharpness_cutting",
+      "texture_quality"
+    ],
+    "actual_features": [
+      "رقة",
+      "جفاف",
+      "احتكاك",
+      "تخلخل"
+    ],
+    "actual_categories": [
+      "texture_quality",
+      "texture_quality",
+      "sharpness_cutting",
+      "spreading_dispersal"
+    ],
+    "jaccard": 0.5,
+    "weighted_jaccard": 0.5
+  },
+  {
+    "binary_root": "سح",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "دقة",
+      "حدة"
+    ],
+    "predicted_categories": [
+      "texture_quality",
+      "sharpness_cutting"
+    ],
+    "actual_features": [
+      "تخلخل",
+      "استقلال",
+      "لطف",
+      "دقة",
+      "جوف"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "independence_distinction",
+      "texture_quality",
+      "texture_quality",
+      "spatial_orientation"
+    ],
+    "jaccard": 0.166667,
+    "weighted_jaccard": 0.166667
+  },
+  {
+    "binary_root": "سر",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "امتداد"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
+    "actual_features": [
+      "امتداد",
+      "نفاذ",
+      "دقة"
+    ],
+    "actual_categories": [
+      "extension_movement",
+      "penetration_passage",
+      "texture_quality"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "مر",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "امتساك",
+      "استرسال"
+    ],
+    "predicted_categories": [
+      "pressure_force",
+      "extension_movement"
+    ],
+    "actual_features": [
+      "استرسال",
+      "حدة",
+      "قوة"
+    ],
+    "actual_categories": [
+      "extension_movement",
+      "sharpness_cutting",
+      "pressure_force"
+    ],
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
+  },
+  {
+    "binary_root": "جم",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تجمع",
+      "امتساك"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "pressure_force"
+    ],
+    "actual_features": [
+      "تجمع",
+      "كثافة"
+    ],
+    "actual_categories": [
+      "gathering_cohesion",
+      "texture_quality"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "سب",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "دقة"
+    ],
+    "predicted_categories": [
+      "texture_quality"
+    ],
+    "actual_features": [
+      "امتداد",
+      "دقة",
+      "اتصال"
+    ],
+    "actual_categories": [
+      "extension_movement",
+      "texture_quality",
+      "gathering_cohesion"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "فض",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "قوة"
+    ],
+    "predicted_categories": [
+      "pressure_force"
+    ],
+    "actual_features": [
+      "تفرق",
+      "قوة",
+      "غلظ"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "pressure_force",
+      "texture_quality"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "خر",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تخلخل",
+      "استرسال"
+    ],
+    "predicted_categories": [
+      "spreading_dispersal",
+      "extension_movement"
+    ],
+    "actual_features": [
+      "تخلخل",
+      "استواء",
+      "نقص"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "independence_distinction",
+      "penetration_passage"
+    ],
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
+  },
+  {
+    "binary_root": "ند",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "امتداد"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
+    "actual_features": [
+      "إبعاد",
+      "امتداد",
+      "رقة"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "extension_movement",
+      "texture_quality"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "ضع",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "كثافة",
+      "غلظ"
+    ],
+    "predicted_categories": [
+      "texture_quality",
+      "texture_quality"
+    ],
+    "actual_features": [
+      "غلظ",
+      "قوة",
+      "تماسك",
+      "تفرق"
+    ],
+    "actual_categories": [
+      "texture_quality",
+      "pressure_force",
+      "gathering_cohesion",
+      "spreading_dispersal"
+    ],
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
+  },
+  {
+    "binary_root": "خوب/خيب",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تخلخل",
+      "اشتمال"
+    ],
+    "predicted_categories": [
+      "spreading_dispersal",
+      "gathering_cohesion"
+    ],
+    "actual_features": [
+      "تخلخل",
+      "باطن",
+      "تجمع"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spatial_orientation",
+      "gathering_cohesion"
+    ],
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
+  },
+  {
+    "binary_root": "فص",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "نفاذ",
+      "قوة"
+    ],
+    "predicted_categories": [
+      "penetration_passage",
+      "pressure_force"
+    ],
+    "actual_features": [
+      "تميز",
+      "قوة"
+    ],
+    "actual_categories": [
+      "independence_distinction",
+      "pressure_force"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "جح",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "حدة"
+    ],
+    "predicted_categories": [
+      "sharpness_cutting"
+    ],
+    "actual_features": [
+      "غلظ",
+      "حدة",
+      "باطن"
+    ],
+    "actual_categories": [
+      "texture_quality",
+      "sharpness_cutting",
+      "spatial_orientation"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "غش",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تخلخل",
+      "رخاوة",
+      "كثافة"
+    ],
+    "predicted_categories": [
+      "spreading_dispersal",
+      "texture_quality",
+      "texture_quality"
+    ],
+    "actual_features": [
+      "كثافة"
+    ],
+    "actual_categories": [
+      "texture_quality"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "حك",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "احتكاك",
+      "جفاف"
+    ],
+    "predicted_categories": [
+      "sharpness_cutting",
+      "texture_quality"
+    ],
+    "actual_features": [
+      "احتكاك",
+      "ضغط",
+      "غلظ"
+    ],
+    "actual_categories": [
+      "sharpness_cutting",
+      "pressure_force",
+      "texture_quality"
+    ],
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
+  },
+  {
+    "binary_root": "عم",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "التحام",
+      "امتساك"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "pressure_force"
+    ],
+    "actual_features": [
+      "التحام",
+      "تجمع"
+    ],
+    "actual_categories": [
+      "gathering_cohesion",
+      "gathering_cohesion"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "نم",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "باطن"
+    ],
+    "predicted_categories": [
+      "spatial_orientation"
+    ],
+    "actual_features": [
+      "انتشار",
+      "باطن",
+      "ظاهر",
+      "لطف"
+    ],
+    "actual_categories": [
+      "spreading_dispersal",
+      "spatial_orientation",
+      "spatial_orientation",
+      "texture_quality"
+    ],
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
+  },
+  {
+    "binary_root": "رب",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تماسك"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion"
+    ],
+    "actual_features": [
+      "غلظ",
+      "تماسك",
+      "تجمع"
+    ],
+    "actual_categories": [
+      "texture_quality",
+      "gathering_cohesion",
+      "gathering_cohesion"
+    ],
+    "jaccard": 0.333333,
+    "weighted_jaccard": 0.333333
+  },
+  {
+    "binary_root": "فن",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "طرد",
+      "امتداد"
+    ],
+    "predicted_categories": [
+      "spreading_dispersal",
+      "extension_movement"
+    ],
+    "actual_features": [
+      "امتداد",
+      "رقة",
+      "نقص"
+    ],
+    "actual_categories": [
+      "extension_movement",
+      "texture_quality",
+      "penetration_passage"
+    ],
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
+  },
+  {
+    "binary_root": "حص",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "جفاف"
+    ],
+    "predicted_categories": [
+      "texture_quality"
+    ],
+    "actual_features": [
+      "غلظ",
+      "تجمع",
+      "جفاف",
+      "قطع"
+    ],
+    "actual_categories": [
+      "texture_quality",
+      "gathering_cohesion",
+      "texture_quality",
+      "sharpness_cutting"
+    ],
+    "jaccard": 0.25,
+    "weighted_jaccard": 0.25
+  },
+  {
+    "binary_root": "خذ",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "غلظ"
+    ],
+    "predicted_categories": [
+      "texture_quality"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "قوة",
+      "اتساع",
+      "حيز",
+      "غلظ"
+    ],
+    "actual_categories": [
+      "penetration_passage",
+      "pressure_force",
+      "extension_movement",
+      "spatial_orientation",
+      "texture_quality"
+    ],
+    "jaccard": 0.2,
+    "weighted_jaccard": 0.2
+  },
+  {
+    "binary_root": "ضو",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "ضغط",
+      "اشتمال"
+    ],
+    "predicted_categories": [
+      "pressure_force",
+      "gathering_cohesion"
+    ],
+    "actual_features": [],
+    "actual_categories": [],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "جن",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تجمع",
+      "امتداد"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "extension_movement"
+    ],
+    "actual_features": [
+      "كثافة"
+    ],
+    "actual_categories": [
+      "texture_quality"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "جز",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تجمع"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion"
+    ],
+    "actual_features": [
+      "تميز",
+      "استقلال"
+    ],
+    "actual_categories": [
+      "independence_distinction",
+      "independence_distinction"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "عذ",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "رخاوة"
+    ],
+    "predicted_categories": [
+      "texture_quality"
+    ],
+    "actual_features": [
+      "تلاصق"
+    ],
+    "actual_categories": [
+      "gathering_cohesion"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "جع",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "حدة"
+    ],
+    "predicted_categories": [
+      "sharpness_cutting"
+    ],
+    "actual_features": [
+      "جوف",
+      "فراغ"
+    ],
+    "actual_categories": [
+      "spatial_orientation",
+      "spreading_dispersal"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "طن",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "اتساع",
+      "غلظ"
+    ],
+    "predicted_categories": [
+      "extension_movement",
+      "texture_quality"
+    ],
+    "actual_features": [
+      "تعلق"
+    ],
+    "actual_categories": [
+      "independence_distinction"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "طر",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "اتساع"
+    ],
+    "predicted_categories": [
+      "extension_movement"
+    ],
+    "actual_features": [
+      "امتداد",
+      "رقة"
+    ],
+    "actual_categories": [
+      "extension_movement",
+      "texture_quality"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "وع",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "اشتمال",
+      "احتواء"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "gathering_cohesion"
+    ],
+    "actual_features": [
+      "اتساع",
+      "جوف"
+    ],
+    "actual_categories": [
+      "extension_movement",
+      "spatial_orientation"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "شت",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "دقة"
+    ],
+    "predicted_categories": [
+      "texture_quality"
+    ],
+    "actual_features": [
+      "تفرق"
+    ],
+    "actual_categories": [
+      "spreading_dispersal"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "بل",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "تجمع",
+      "تعلق"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "independence_distinction"
+    ],
+    "actual_features": [
+      "امتساك",
+      "اتساع",
+      "قوة"
+    ],
+    "actual_categories": [
+      "pressure_force",
+      "extension_movement",
+      "pressure_force"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "فم",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "قوة"
+    ],
+    "predicted_categories": [
+      "pressure_force"
+    ],
+    "actual_features": [
+      "اختراق"
+    ],
+    "actual_categories": [
+      "penetration_passage"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "مد",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "امتساك"
+    ],
+    "predicted_categories": [
+      "pressure_force"
+    ],
+    "actual_features": [
+      "امتداد"
+    ],
+    "actual_categories": [
+      "extension_movement"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "حق",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "باطن"
+    ],
+    "predicted_categories": [
+      "spatial_orientation"
+    ],
+    "actual_features": [
+      "امتساك",
+      "عمق",
+      "جوف"
+    ],
+    "actual_categories": [
+      "pressure_force",
+      "spatial_orientation",
+      "spatial_orientation"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "عد",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "التحام",
+      "احتباس"
+    ],
+    "predicted_categories": [
+      "gathering_cohesion",
+      "pressure_force"
+    ],
+    "actual_features": [
+      "امتداد"
+    ],
+    "actual_categories": [
+      "extension_movement"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  },
+  {
+    "binary_root": "ثق",
+    "scholar": "jabal",
+    "model": "intersection",
+    "predicted_features": [
+      "كثافة",
+      "تعقد"
+    ],
+    "predicted_categories": [
+      "texture_quality",
+      "pressure_force"
+    ],
+    "actual_features": [
+      "غلظ",
+      "قوة"
+    ],
+    "actual_categories": [
+      "texture_quality",
+      "pressure_force"
+    ],
+    "jaccard": 0.0,
+    "weighted_jaccard": 0.0
+  }
+]
