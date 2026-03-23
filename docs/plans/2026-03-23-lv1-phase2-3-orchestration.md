@@ -18,8 +18,8 @@
 | Binary nuclei | 457 | Loaded, scored (first pass) |
 | Trilateral roots | 1,938 | Loaded, predicted (first pass) |
 | Score matrix rows | 4,792 | 1,005 nonzero (21.0%) |
-| Root prediction rows | 1,938 | 692 nonzero (35.7%) |
-| Root prediction mean Jaccard | 0.1345 | First mechanical pass |
+| Root prediction rows | 1,938 | 899 nonzero (46.4%) |
+| Root prediction mean Jaccard | 0.1496 | Improved after S3.9-S3.12 |
 | Method A estimate | 40-55% real accuracy | Method B undercounts due to vocabulary mismatch |
 | Golden Rule | 19.9% confirmed (33/166) | Improved after extended opposition mapping |
 | Tests passing | 313+ LV1 and growing | Focused Sprint 1/3 suite currently 29/29 |
@@ -73,11 +73,18 @@ Each task has an owner. Work the next unblocked item and update status directly 
 | | Per-root, per-BAB, overall accuracy | | | | |
 | S3.4 | **Identify top/bottom predictions** | Codex | S3.3 | Top 50 best, bottom 50 worst, with Jabal meanings | [x] |
 | S3.5 | **Push Phase 3 outputs** | Codex | S3.4 | Commit to main | [ ] |
-| S3.6 | **Method A calibration on 50 root predictions** | Claude | S3.5 | `outputs/lv1_scoring/root_method_a_calibration.md` | [ ] |
-| S3.7 | **Failure pattern analysis** | Claude | S3.5 | Which roots fail? Why? Systematic patterns? | [ ] |
-| S3.8 | **Phase 3 verdict** | Claude | S3.6+S3.7 | Root prediction accuracy verdict + recommendations | [ ] |
+| S3.6 | **Method A calibration on 60 root predictions** | Claude | S3.5 | `outputs/lv1_scoring/root_method_a_calibration.md` | [x] |
+| S3.7 | **Failure pattern analysis** | Claude | S3.5 | 6 patterns: phon_gest dominance, feature truncation, sifaat contamination, empty actuals, synonym gaps, BAB variance | [x] |
+| S3.8 | **Phase 3 verdict** | Claude | S3.6+S3.7 | Method A ~32% (target >55%). Bottleneck = composition model. 6 recommendations (R1-R6). | [x] |
+| S3.9 | **Implement R1+R3 (fix phonetic_gestural)** | Codex | S3.8 | Use all features, drop sifaat, weight nucleus 0.7 | [x] |
+| S3.10 | **Implement R2 (expand synonyms)** | Codex | S3.8 | 5 new synonym groups | [x] |
+| S3.11 | **Implement R4 (recover empty-actual)** | Codex | S3.8 | 207 roots need second extraction pass | [x] |
+| S3.12 | **Re-run predictions after fixes** | Codex | S3.9+S3.10+S3.11 | Updated root_predictions.json + root_score_matrix.json | [x] |
+| S3.13 | **Method A re-calibration v2** | Claude | S3.12 | Compare improvement, decide if Sprint 4 or another fix pass | [ ] |
 
-**Current checkpoint:** First mechanical pass reached `35.7%` nonzero predictions across `1,938` roots, with mean Jaccard `0.1345` and mean weighted Jaccard `0.1316`.
+**Current checkpoint:** Improved pass reached `46.4%` nonzero predictions across `1,938` roots, with mean Jaccard `0.1496` and mean weighted Jaccard `0.1424`. Empty-actual roots fell from `207` to `139`.
+
+**Sprint 3 verdict (Claude):** Method A ~32%, Method B 13.5%. Below target. Root cause: phonetic_gestural model (61.6% of predictions) truncates to single features and injects articulatory noise. Fix pass S3.9-S3.12 expected to reach Method A ~45-50%.
 
 **Target:** Root prediction accuracy >60% Method A, >30% Method B (after synonym fix)
 
@@ -163,7 +170,7 @@ Sprint 6:
 
 ## Communication Protocol
 
-1. Update the shared board in `docs/plans/AGENT_COORDINATION.md`
+1. Update the dispatch board in `docs/plans/BOARD.md` (old board archived at `AGENT_COORDINATION_ARCHIVE.md`)
 2. Push completed work to `main`
 3. Read the board at the next session start and continue from the next unblocked task
 4. Document unexpected results in the relevant output/report file
@@ -188,8 +195,8 @@ Sprint 6:
 |--------|---------|--------|--------|
 | Nonzero Jaccard (nuclei) | 21.0% | 30-40% | Sprint 1 |
 | Golden Rule confirmation | 19.9% | 25-35% | Sprint 1 |
-| Root prediction (Method B) | — | >30% | Sprint 3 |
-| Root prediction (Method A) | — | >55% | Sprint 3 |
+| Root prediction (Method B) | 13.5% | >30% | Sprint 3 |
+| Root prediction (Method A) | ~32% | >55% | Sprint 3 |
 | Abbas sensory significance | — | p < 0.05 | Sprint 4 |
 | Cross-lingual projection accuracy | — | >40% | Sprint 5 |
 | Scholar coverage | 78 letters / 5 scholars | 100+ / 5 scholars | Sprint 2 |

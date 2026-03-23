@@ -1,178 +1,178 @@
 {
   "overall": {
     "roots": 1938,
-    "nonzero_predictions": 692,
-    "nonzero_rate": 0.357069,
-    "mean_jaccard": 0.134517,
-    "mean_weighted_jaccard": 0.131558
+    "nonzero_predictions": 899,
+    "nonzero_rate": 0.46388,
+    "mean_jaccard": 0.149552,
+    "mean_weighted_jaccard": 0.1424
   },
   "by_model": {
     "empty": {
-      "count": 9,
-      "mean_jaccard": 0.222222,
-      "mean_weighted_jaccard": 0.222222
+      "count": 1,
+      "mean_jaccard": 1.0,
+      "mean_weighted_jaccard": 1.0
     },
     "intersection": {
-      "count": 518,
-      "mean_jaccard": 0.185448,
-      "mean_weighted_jaccard": 0.178656
+      "count": 1085,
+      "mean_jaccard": 0.156168,
+      "mean_weighted_jaccard": 0.149807
     },
     "phonetic_gestural": {
-      "count": 1193,
-      "mean_jaccard": 0.104845,
-      "mean_weighted_jaccard": 0.10342
+      "count": 781,
+      "mean_jaccard": 0.139233,
+      "mean_weighted_jaccard": 0.13032
     },
     "sequence": {
-      "count": 218,
-      "mean_jaccard": 0.172259,
-      "mean_weighted_jaccard": 0.169889
+      "count": 71,
+      "mean_jaccard": 0.15,
+      "mean_weighted_jaccard": 0.15
     }
   },
   "by_bab": {
     "الباء": {
       "count": 114,
-      "mean_jaccard": 0.125,
-      "mean_weighted_jaccard": 0.124269
+      "mean_jaccard": 0.151594,
+      "mean_weighted_jaccard": 0.145447
     },
     "التاء": {
       "count": 34,
-      "mean_jaccard": 0.175,
-      "mean_weighted_jaccard": 0.175
+      "mean_jaccard": 0.205801,
+      "mean_weighted_jaccard": 0.19902
     },
     "الثاء": {
       "count": 34,
-      "mean_jaccard": 0.168627,
-      "mean_weighted_jaccard": 0.166176
+      "mean_jaccard": 0.195588,
+      "mean_weighted_jaccard": 0.199673
     },
     "الجيم": {
       "count": 82,
-      "mean_jaccard": 0.132927,
-      "mean_weighted_jaccard": 0.130285
+      "mean_jaccard": 0.132612,
+      "mean_weighted_jaccard": 0.127957
     },
     "الحاء": {
       "count": 109,
-      "mean_jaccard": 0.106728,
-      "mean_weighted_jaccard": 0.102446
+      "mean_jaccard": 0.112789,
+      "mean_weighted_jaccard": 0.103932
     },
     "الخاء": {
       "count": 87,
-      "mean_jaccard": 0.173946,
-      "mean_weighted_jaccard": 0.164368
+      "mean_jaccard": 0.16299,
+      "mean_weighted_jaccard": 0.152737
     },
     "الدال": {
       "count": 65,
-      "mean_jaccard": 0.109231,
-      "mean_weighted_jaccard": 0.109231
+      "mean_jaccard": 0.129298,
+      "mean_weighted_jaccard": 0.126435
     },
     "الذال": {
       "count": 31,
-      "mean_jaccard": 0.133871,
-      "mean_weighted_jaccard": 0.133871
+      "mean_jaccard": 0.125653,
+      "mean_weighted_jaccard": 0.122965
     },
     "الراء": {
       "count": 130,
-      "mean_jaccard": 0.137692,
-      "mean_weighted_jaccard": 0.137308
+      "mean_jaccard": 0.140824,
+      "mean_weighted_jaccard": 0.13746
     },
     "الزاي": {
       "count": 62,
-      "mean_jaccard": 0.121505,
-      "mean_weighted_jaccard": 0.118817
+      "mean_jaccard": 0.16922,
+      "mean_weighted_jaccard": 0.15384
     },
     "السين": {
       "count": 133,
-      "mean_jaccard": 0.117884,
-      "mean_weighted_jaccard": 0.11374
+      "mean_jaccard": 0.149081,
+      "mean_weighted_jaccard": 0.140378
     },
     "الشين": {
       "count": 74,
-      "mean_jaccard": 0.117568,
-      "mean_weighted_jaccard": 0.11464
+      "mean_jaccard": 0.145812,
+      "mean_weighted_jaccard": 0.139516
     },
     "الصاد": {
       "count": 71,
-      "mean_jaccard": 0.090661,
-      "mean_weighted_jaccard": 0.087609
+      "mean_jaccard": 0.096602,
+      "mean_weighted_jaccard": 0.090225
     },
     "الضاد": {
       "count": 35,
-      "mean_jaccard": 0.178095,
-      "mean_weighted_jaccard": 0.175714
+      "mean_jaccard": 0.150034,
+      "mean_weighted_jaccard": 0.143639
     },
     "الطاء": {
       "count": 45,
-      "mean_jaccard": 0.133704,
-      "mean_weighted_jaccard": 0.133704
+      "mean_jaccard": 0.158854,
+      "mean_weighted_jaccard": 0.154137
     },
     "الظاء": {
       "count": 8,
-      "mean_jaccard": 0.177083,
-      "mean_weighted_jaccard": 0.177083
+      "mean_jaccard": 0.123214,
+      "mean_weighted_jaccard": 0.102381
     },
     "العين": {
       "count": 119,
-      "mean_jaccard": 0.133473,
-      "mean_weighted_jaccard": 0.133473
+      "mean_jaccard": 0.168674,
+      "mean_weighted_jaccard": 0.164152
     },
     "الغين": {
       "count": 60,
-      "mean_jaccard": 0.182222,
-      "mean_weighted_jaccard": 0.173611
+      "mean_jaccard": 0.218809,
+      "mean_weighted_jaccard": 0.21494
     },
     "الفاء": {
       "count": 95,
-      "mean_jaccard": 0.141429,
-      "mean_weighted_jaccard": 0.137393
+      "mean_jaccard": 0.139946,
+      "mean_weighted_jaccard": 0.129269
     },
     "القاف": {
       "count": 107,
-      "mean_jaccard": 0.132176,
-      "mean_weighted_jaccard": 0.129372
+      "mean_jaccard": 0.146411,
+      "mean_weighted_jaccard": 0.134338
     },
     "الكاف": {
       "count": 77,
-      "mean_jaccard": 0.139177,
-      "mean_weighted_jaccard": 0.137013
+      "mean_jaccard": 0.166687,
+      "mean_weighted_jaccard": 0.157751
     },
     "اللام": {
       "count": 80,
-      "mean_jaccard": 0.13375,
-      "mean_weighted_jaccard": 0.1275
+      "mean_jaccard": 0.138904,
+      "mean_weighted_jaccard": 0.130799
     },
     "الميم": {
       "count": 94,
-      "mean_jaccard": 0.152482,
-      "mean_weighted_jaccard": 0.14805
+      "mean_jaccard": 0.164995,
+      "mean_weighted_jaccard": 0.154893
     },
     "النون": {
       "count": 135,
-      "mean_jaccard": 0.112099,
-      "mean_weighted_jaccard": 0.109259
+      "mean_jaccard": 0.14376,
+      "mean_weighted_jaccard": 0.136367
     },
     "الهاء": {
       "count": 57,
-      "mean_jaccard": 0.186842,
-      "mean_weighted_jaccard": 0.185088
+      "mean_jaccard": 0.150334,
+      "mean_weighted_jaccard": 0.148044
     }
   },
   "top_predictions": [
     {
-      "root": "بدأ",
-      "binary_nucleus": "بد",
-      "third_letter": "أ",
+      "root": "يبس",
+      "binary_nucleus": "بس",
+      "third_letter": "ي",
       "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "ظهور",
+      "model": "intersection",
+      "predicted_meaning": "جفاف",
       "predicted_features": [
-        "ظهور"
+        "جفاف"
       ],
       "actual_features": [
-        "ظهور"
+        "جفاف"
       ],
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
       "bab": "الباء",
-      "quranic_verse": "يبدأ - \"اللَّهُ يَبْدَأُ الْخَلْقَ ثُمَّ يُعِيدُهُ\" / بدأ - \"وَبَدَأَ خَلْقَ الْإِنسَانِ مِن طِينٍ\""
+      "quranic_verse": "يبسا - \"فَاضْرِبْ لَهُمْ طَرِيقًا فِي الْبَحْرِ يَبَسًا\" / يابسات - \"وَأُخَرَ يَابِسَاتٍ\""
     },
     {
       "root": "تلو-تلي",
@@ -193,6 +193,24 @@
       "quranic_verse": "يتلونه / تلاها - \"يَتْلُونَهُ حَقَّ تِلَاوَتِهِ\""
     },
     {
+      "root": "تمم",
+      "binary_nucleus": "تم",
+      "third_letter": "م",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "تميز",
+      "predicted_features": [
+        "تميز"
+      ],
+      "actual_features": [
+        "تميز"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "bab": "التاء",
+      "quranic_verse": "أتمم / تمت - \"رَبَّنَا أَتْمِمْ لَنَا نُورَنَا\""
+    },
+    {
       "root": "تيهـ/توهـ",
       "binary_nucleus": "تهـ",
       "third_letter": "ـ",
@@ -211,51 +229,47 @@
       "quranic_verse": "يتيهون - \"يَتِيهُونَ فِي الْأَرْضِ\""
     },
     {
-      "root": "وثن",
-      "binary_nucleus": "ثن",
-      "third_letter": "ن",
+      "root": "ثمر",
+      "binary_nucleus": "ثم",
+      "third_letter": "ر",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "كثافة + امتداد",
+      "model": "intersection",
+      "predicted_meaning": "تجمع",
       "predicted_features": [
-        "كثافة",
-        "امتداد"
+        "تجمع"
       ],
       "actual_features": [
-        "كثافة",
-        "امتداد"
+        "تجمع"
       ],
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
       "bab": "الثاء",
-      "quranic_verse": "الأوثان - ﴿فَاجْتَنِبُوا الرِّجْسَ مِنَ الْأَوْثَانِ﴾"
+      "quranic_verse": "ثمره - ﴿كُلُوا مِن ثَمَرِهِ إِذَا أَثْمَرَ﴾"
     },
     {
-      "root": "جند",
-      "binary_nucleus": "جن",
-      "third_letter": "د",
+      "root": "جنن-جنجن",
+      "binary_nucleus": "جn",
+      "third_letter": "ن",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "كثافة + احتباس",
+      "model": "intersection",
+      "predicted_meaning": "كثافة",
       "predicted_features": [
-        "كثافة",
-        "احتباس"
+        "كثافة"
       ],
       "actual_features": [
-        "غلظ",
-        "ضغط"
+        "كثافة"
       ],
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
       "bab": "الجيم",
-      "quranic_verse": "جند - ﴿هُوَ جُندٌ لَّكُمْ﴾"
+      "quranic_verse": "الجنة - ﴿ادْخُلِي جَنَّتِي﴾"
     },
     {
       "root": "خوو/خوى",
       "binary_nucleus": "التراكيبالخائية",
-      "third_letter": "ى",
+      "third_letter": "ي",
       "scholar": "jabal",
-      "model": "sequence",
+      "model": "intersection",
       "predicted_meaning": "فراغ",
       "predicted_features": [
         "فراغ"
@@ -287,29 +301,9 @@
       "quranic_verse": "أخدان - \"وَلَا مُتَّخِذِي أَخْدَانٍ\""
     },
     {
-      "root": "خصص",
-      "binary_nucleus": "خص",
-      "third_letter": "ص",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "دقة + نفاذ",
-      "predicted_features": [
-        "دقة",
-        "نفاذ"
-      ],
-      "actual_features": [
-        "نفاذ",
-        "دقة"
-      ],
-      "jaccard": 1.0,
-      "weighted_jaccard": 1.0,
-      "bab": "الخاء",
-      "quranic_verse": "خصاصة - \"وَلَوْ كَانَ بِهِمْ خَصَاصَةٌ\""
-    },
-    {
-      "root": "خضع",
+      "root": "خضض/خضخض",
       "binary_nucleus": "خض",
-      "third_letter": "ع",
+      "third_letter": "ض",
       "scholar": "jabal",
       "model": "intersection",
       "predicted_meaning": "رخاوة",
@@ -322,7 +316,25 @@
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
       "bab": "الخاء",
-      "quranic_verse": "تخضعن - \"فَلَا تَخْضَعْنَ بِالْقَوْلِ\""
+      "quranic_verse": null
+    },
+    {
+      "root": "خطو",
+      "binary_nucleus": "خط",
+      "third_letter": "و",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "تلاصق",
+      "predicted_features": [
+        "تلاصق"
+      ],
+      "actual_features": [
+        "تلاصق"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "bab": "الخاء",
+      "quranic_verse": "خطوات - \"وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ\""
     },
     {
       "root": "أدد",
@@ -345,6 +357,24 @@
       "quranic_verse": "﴿لَقَدْ جِئْتُمْ شَيْئًا إِدًّا﴾"
     },
     {
+      "root": "دون",
+      "binary_nucleus": "دن",
+      "third_letter": "ن",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "باطن",
+      "predicted_features": [
+        "باطن"
+      ],
+      "actual_features": [
+        "باطن"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "bab": "الدال",
+      "quranic_verse": "﴿وَيَغْفِرُ مَا دُونَ ذَلِكَ لِمَن يَشَاءُ﴾"
+    },
+    {
       "root": "رشش-رشرش",
       "binary_nucleus": "رش",
       "third_letter": "ش",
@@ -365,27 +395,27 @@
       "quranic_verse": null
     },
     {
-      "root": "زرع",
-      "binary_nucleus": "زر",
-      "third_letter": "ع",
+      "root": "روض-ريض",
+      "binary_nucleus": "رض",
+      "third_letter": "ض",
       "scholar": "jabal",
       "model": "intersection",
-      "predicted_meaning": "دقة",
+      "predicted_meaning": "رخاوة",
       "predicted_features": [
-        "دقة"
+        "رخاوة"
       ],
       "actual_features": [
-        "دقة"
+        "رخاوة"
       ],
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
-      "bab": "الزاي",
-      "quranic_verse": "الزرع - ﴿يُنبِتُ لَكُم بِهِ الزَّرْعَ﴾"
+      "bab": "الراء",
+      "quranic_verse": "﴿فَهُمْ فِي رَوْضَةٍ يُحْبَرُونَ﴾"
     },
     {
-      "root": "سنبل",
-      "binary_nucleus": "سن",
-      "third_letter": "ل",
+      "root": "سرمد",
+      "binary_nucleus": "سر",
+      "third_letter": "د",
       "scholar": "jabal",
       "model": "intersection",
       "predicted_meaning": "امتداد",
@@ -398,12 +428,12 @@
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
       "bab": "السين",
-      "quranic_verse": "﴿كَمَثَلِ حَبَّةٍ أَنبَتَتْ سَبْعَ سَنَابِلَ...﴾"
+      "quranic_verse": "﴿قُلْ أَرَأَيْتُمْ إِن جَعَلَ اللَّهُ عَلَيْكُمُ النَّهَارَ سَرْمَدًا إِلَىٰ يَوْمِ الْقِيَامَةِ ...﴾"
     },
     {
-      "root": "شطن",
-      "binary_nucleus": "شط",
-      "third_letter": "ن",
+      "root": "شعر",
+      "binary_nucleus": "شع",
+      "third_letter": "ر",
       "scholar": "jabal",
       "model": "intersection",
       "predicted_meaning": "امتداد",
@@ -416,27 +446,7 @@
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
       "bab": "الشين",
-      "quranic_verse": "﴿وَقُل رَّبِّ أَعُوذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِينِ﴾"
-    },
-    {
-      "root": "ضحو/ضحى",
-      "binary_nucleus": "ضح",
-      "third_letter": "ى",
-      "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "اتساع + ظهور",
-      "predicted_features": [
-        "اتساع",
-        "ظهور"
-      ],
-      "actual_features": [
-        "ظهور",
-        "اتساع"
-      ],
-      "jaccard": 1.0,
-      "weighted_jaccard": 1.0,
-      "bab": "الضاد",
-      "quranic_verse": "الضحى - ﴿وَالضُّحَىٰ﴾"
+      "quranic_verse": "﴿إِنَّ الصَّفَا وَالْمَرْوَةَ مِن شَعَائِرِ اللَّهِ﴾"
     },
     {
       "root": "طوع-طيع",
@@ -475,22 +485,60 @@
       "quranic_verse": "تعودون - \"كَمَا بَدَأَكُمْ تَعُودُونَ\""
     },
     {
-      "root": "عصف",
-      "binary_nucleus": "عص",
-      "third_letter": "ف",
+      "root": "عسو-عسي",
+      "binary_nucleus": "عs",
+      "third_letter": "ي",
       "scholar": "jabal",
       "model": "intersection",
-      "predicted_meaning": "قوة",
+      "predicted_meaning": "كثافة",
       "predicted_features": [
-        "قوة"
+        "كثافة"
       ],
       "actual_features": [
-        "قوة"
+        "غلظ"
       ],
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
       "bab": "العين",
-      "quranic_verse": "كعصف - \"فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ\""
+      "quranic_verse": "عسى - \"فَعَسَى اللَّهُ أَن يَأْتِيَ بِالْفَتْحِ\""
+    },
+    {
+      "root": "عقب",
+      "binary_nucleus": "عق",
+      "third_letter": "ب",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "غلظ",
+      "predicted_features": [
+        "غلظ"
+      ],
+      "actual_features": [
+        "غلظ"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "bab": "العين",
+      "quranic_verse": "معقبات - \"لَهُ مُعَقِّبَاتٌ\""
+    },
+    {
+      "root": "عكف",
+      "binary_nucleus": "عك",
+      "third_letter": "ف",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "ضغط + انتشار",
+      "predicted_features": [
+        "ضغط",
+        "انتشار"
+      ],
+      "actual_features": [
+        "ضغط",
+        "انتشار"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "bab": "العين",
+      "quranic_verse": "عاكفون - \"وَأَنتُمْ عَاكِفُونَ فِي الْمَسَاجِدِ\""
     },
     {
       "root": "عنكبوت",
@@ -509,20 +557,6 @@
       "weighted_jaccard": 1.0,
       "bab": "العين",
       "quranic_verse": "العنكبوت - \"لَبَيْتُ الْعَنكَبُوتِ\""
-    },
-    {
-      "root": "غوى",
-      "binary_nucleus": "غو",
-      "third_letter": "ى",
-      "scholar": "jabal",
-      "model": "empty",
-      "predicted_meaning": null,
-      "predicted_features": [],
-      "actual_features": [],
-      "jaccard": 1.0,
-      "weighted_jaccard": 1.0,
-      "bab": "الغين",
-      "quranic_verse": "الغي - ﴿قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ﴾"
     },
     {
       "root": "غرق",
@@ -581,47 +615,63 @@
       "quranic_verse": "غصة - ﴿وَطَعَامًا ذَا غُصَّةٍ﴾"
     },
     {
-      "root": "فرث",
-      "binary_nucleus": "فر",
-      "third_letter": "ث",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "تفرق + كثافة",
-      "predicted_features": [
-        "تفرق",
-        "كثافة"
-      ],
-      "actual_features": [
-        "تخلخل",
-        "غلظ"
-      ],
-      "jaccard": 1.0,
-      "weighted_jaccard": 1.0,
-      "bab": "الفاء",
-      "quranic_verse": "مِّن بَيْنِ فَرْثٍ وَدَمٍ"
-    },
-    {
-      "root": "فطط-فطفط",
-      "binary_nucleus": "فط",
-      "third_letter": "ط",
+      "root": "غفف",
+      "binary_nucleus": "غف",
+      "third_letter": "ف",
       "scholar": "jabal",
       "model": "intersection",
-      "predicted_meaning": "ضغط",
+      "predicted_meaning": "نقص",
       "predicted_features": [
-        "ضغط"
+        "نقص"
       ],
       "actual_features": [
-        "ضغط"
+        "نقص"
       ],
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
-      "bab": "الفاء",
+      "bab": "الغين",
       "quranic_verse": null
+    },
+    {
+      "root": "غمم/غمغم",
+      "binary_nucleus": "غم",
+      "third_letter": "م",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "باطن",
+      "predicted_features": [
+        "باطن"
+      ],
+      "actual_features": [
+        "باطن"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "bab": "الغين",
+      "quranic_verse": "الغمام / الغم - ﴿وَظَلَّلْنَا عَلَيْكُمُ الْغَمَامَ﴾"
     },
     {
       "root": "قحح",
       "binary_nucleus": "قح",
       "third_letter": "ح",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "جفاف",
+      "predicted_features": [
+        "جفاف"
+      ],
+      "actual_features": [
+        "جفاف"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "bab": "القاف",
+      "quranic_verse": null
+    },
+    {
+      "root": "قشع",
+      "binary_nucleus": "قش",
+      "third_letter": "ع",
       "scholar": "jabal",
       "model": "intersection",
       "predicted_meaning": "جفاف",
@@ -655,6 +705,26 @@
       "quranic_verse": "فَكُبْكِبُوا فِيهَا هُمْ وَالْغَاوُونَ"
     },
     {
+      "root": "كفف-كفكف",
+      "binary_nucleus": "كف",
+      "third_letter": "ف",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "تعقد + إمساك",
+      "predicted_features": [
+        "تعقد",
+        "إمساك"
+      ],
+      "actual_features": [
+        "إمساك",
+        "تعقد"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "bab": "الكاف",
+      "quranic_verse": "فَكَفَّ أَيْدِيَهُمْ عَنكُمْ"
+    },
+    {
       "root": "كنن",
       "binary_nucleus": "كن",
       "third_letter": "ن",
@@ -673,26 +743,6 @@
       "quranic_verse": "كَأَنَّهُنَّ بَيْضٌ مَّكْنُونٌ"
     },
     {
-      "root": "كند",
-      "binary_nucleus": "كن",
-      "third_letter": "د",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "باطن + احتباس",
-      "predicted_features": [
-        "باطن",
-        "احتباس"
-      ],
-      "actual_features": [
-        "ضغط",
-        "باطن"
-      ],
-      "jaccard": 1.0,
-      "weighted_jaccard": 1.0,
-      "bab": "الكاف",
-      "quranic_verse": "إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ"
-    },
-    {
       "root": "ويل",
       "binary_nucleus": "ويل",
       "third_letter": "—",
@@ -707,24 +757,22 @@
       "quranic_verse": "﴿وَيْلٌ لِّلْمُطَفِّفِينَ﴾"
     },
     {
-      "root": "متو-متى",
-      "binary_nucleus": "مت",
-      "third_letter": "ى",
+      "root": "لهو-لهى",
+      "binary_nucleus": "له",
+      "third_letter": "ي",
       "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "تلاصق + امتداد",
+      "model": "intersection",
+      "predicted_meaning": "فراغ",
       "predicted_features": [
-        "تلاصق",
-        "امتداد"
+        "فراغ"
       ],
       "actual_features": [
-        "تلاصق",
-        "امتداد"
+        "فراغ"
       ],
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
-      "bab": "الميم",
-      "quranic_verse": "متى - \"مَتَىٰ نَصْرُ اللَّهِ\""
+      "bab": "اللام",
+      "quranic_verse": "﴿لَّا تُلْهِيهِمْ تِجَٰرَةٌ﴾ / ﴿أَلْهَىٰكُمُ ٱلتَّكَاثُرُ﴾"
     },
     {
       "root": "مصص-مصمص",
@@ -745,44 +793,22 @@
       "quranic_verse": null
     },
     {
-      "root": "ونى",
-      "binary_nucleus": "ون",
-      "third_letter": "ى",
+      "root": "مقت",
+      "binary_nucleus": "مق",
+      "third_letter": "ت",
       "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "نقص + انتقال",
+      "model": "intersection",
+      "predicted_meaning": "غلظ",
       "predicted_features": [
-        "نقص",
-        "انتقال"
+        "غلظ"
       ],
       "actual_features": [
-        "نقص",
-        "انتقال"
+        "غلظ"
       ],
       "jaccard": 1.0,
       "weighted_jaccard": 1.0,
-      "bab": "النون",
-      "quranic_verse": "تنيا - \"وَلَا تَنِيَا فِي ذِكْرِي\""
-    },
-    {
-      "root": "نأو-نأى",
-      "binary_nucleus": "نأ",
-      "third_letter": "ى",
-      "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "إبعاد + قوة",
-      "predicted_features": [
-        "إبعاد",
-        "قوة"
-      ],
-      "actual_features": [
-        "إبعاد",
-        "قوة"
-      ],
-      "jaccard": 1.0,
-      "weighted_jaccard": 1.0,
-      "bab": "النون",
-      "quranic_verse": "ينأون / نأى - \"وَيَنْأَوْنَ عَنْهُ\""
+      "bab": "الميم",
+      "quranic_verse": "مقتا - \"كَبُرَ مَقْتًا عِندَ اللَّهِ\""
     },
     {
       "root": "نعع-نعنع",
@@ -803,44 +829,6 @@
       "weighted_jaccard": 1.0,
       "bab": "النون",
       "quranic_verse": "النعنع"
-    },
-    {
-      "root": "ههه",
-      "binary_nucleus": "هـ",
-      "third_letter": "ه",
-      "scholar": "jabal",
-      "model": "intersection",
-      "predicted_meaning": "فراغ",
-      "predicted_features": [
-        "فراغ"
-      ],
-      "actual_features": [
-        "فراغ"
-      ],
-      "jaccard": 1.0,
-      "weighted_jaccard": 1.0,
-      "bab": "الهاء",
-      "quranic_verse": null
-    },
-    {
-      "root": "هزأ",
-      "binary_nucleus": "هـز",
-      "third_letter": "أ",
-      "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "انتقال + رخاوة",
-      "predicted_features": [
-        "انتقال",
-        "رخاوة"
-      ],
-      "actual_features": [
-        "انتقال",
-        "رخاوة"
-      ],
-      "jaccard": 1.0,
-      "weighted_jaccard": 1.0,
-      "bab": "الهاء",
-      "quranic_verse": "هزوا - \"أَتَتَّخِذُنَا هُزُوًا\""
     },
     {
       "root": "هضض-هضهض",
@@ -881,25 +869,27 @@
       "quranic_verse": null
     },
     {
-      "root": "بخس",
-      "binary_nucleus": "بخ",
-      "third_letter": "س",
+      "root": "أون",
+      "binary_nucleus": "أو",
+      "third_letter": "ن",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "نقص + امتداد",
+      "model": "intersection",
+      "predicted_meaning": "اتساع + حيز + كثافة",
       "predicted_features": [
-        "نقص",
-        "امتداد"
+        "اتساع",
+        "حيز",
+        "كثافة"
       ],
       "actual_features": [
-        "نقص",
-        "نفاذ",
-        "امتداد"
+        "اتساع",
+        "حيز",
+        "تجمع",
+        "كثافة"
       ],
-      "jaccard": 0.666667,
-      "weighted_jaccard": 0.666667,
-      "bab": "الباء",
-      "quranic_verse": "بخس - \"وَشَرَوْهُ بِثَمَنٍ بَخْسٍ\" / تبخسوا - \"وَلَا تَبْخَسُوا النَّاسَ أَشْيَاءَهُمْ\""
+      "jaccard": 0.75,
+      "weighted_jaccard": 0.75,
+      "bab": "النون",
+      "quranic_verse": "الآن - \"الْآنَ حَصْحَصَ الْحَقُّ\""
     },
     {
       "root": "بهـهـ/بهـبهـ",
@@ -923,46 +913,46 @@
       "quranic_verse": null
     },
     {
-      "root": "أتو/أتى",
-      "binary_nucleus": "تأ",
-      "third_letter": "ى",
+      "root": "ثخن",
+      "binary_nucleus": "ثخ",
+      "third_letter": "ن",
       "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "وصول + إمساك",
+      "model": "intersection",
+      "predicted_meaning": "كثافة + غلظ",
       "predicted_features": [
-        "وصول",
-        "إمساك"
+        "كثافة",
+        "غلظ"
       ],
       "actual_features": [
-        "وصول",
-        "قوة",
-        "إمساك"
+        "كثافة",
+        "غلظ",
+        "رخاوة"
       ],
-      "jaccard": 0.666667,
+      "jaccard": 0.5,
       "weighted_jaccard": 0.666667,
-      "bab": "التاء",
-      "quranic_verse": "أتى / آتى - \"هَلْ أَتَاكَ\" / \"فَلَمَّا أَتَاهَا\" / \"وَآتَيْنَاهُ الْحُكْمَ\""
+      "bab": "الثاء",
+      "quranic_verse": "يثخن - ﴿حَتَّىٰ يُثْخِنَ فِي الْأَرْضِ﴾"
     },
     {
-      "root": "يدى",
-      "binary_nucleus": "يد",
-      "third_letter": "ى",
+      "root": "حثث-حثحث",
+      "binary_nucleus": "حث",
+      "third_letter": "ث",
       "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "تلاصق + امتداد",
+      "model": "intersection",
+      "predicted_meaning": "تخلخل + جفاف",
       "predicted_features": [
-        "تلاصق",
-        "امتداد"
+        "تخلخل",
+        "جفاف"
       ],
       "actual_features": [
-        "امتداد",
-        "تلاصق",
-        "إمساك"
+        "تخلخل",
+        "قطع",
+        "جفاف"
       ],
       "jaccard": 0.666667,
       "weighted_jaccard": 0.666667,
-      "bab": "الدال",
-      "quranic_verse": "﴿وَالسَّارِقُ وَالسَّارِقَةُ فَاقْطَعُوا أَيْدِيَهُمَا﴾"
+      "bab": "الحاء",
+      "quranic_verse": "﴿يُغْشِي اللَّيْلَ النَّهَارَ يَطْلُبُهُ حَثِيثًا﴾"
     },
     {
       "root": "رغغ-رغرغ",
@@ -984,6 +974,27 @@
       "weighted_jaccard": 0.666667,
       "bab": "الراء",
       "quranic_verse": null
+    },
+    {
+      "root": "زوج",
+      "binary_nucleus": "زج",
+      "third_letter": "ج",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "تلاصق + اتصال + اشتمال",
+      "predicted_features": [
+        "تلاصق",
+        "اتصال",
+        "اشتمال"
+      ],
+      "actual_features": [
+        "اتصال",
+        "اشتمال"
+      ],
+      "jaccard": 0.666667,
+      "weighted_jaccard": 0.666667,
+      "bab": "الزاي",
+      "quranic_verse": "زوج / أزواج - ﴿خَلَقْنَا زَوْجَيْنِ﴾"
     },
     {
       "root": "سلل-سلسل-سلسبيل",
@@ -1028,53 +1039,11 @@
       "quranic_verse": "الصبر - \"اسْتَعِينُوا بِالصَّبْرِ\""
     },
     {
-      "root": "ضبب",
-      "binary_nucleus": "ضب",
-      "third_letter": "ب",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "تعلق + تجمع",
-      "predicted_features": [
-        "تعلق",
-        "تجمع"
-      ],
-      "actual_features": [
-        "تجمع",
-        "كثافة",
-        "تعلق"
-      ],
-      "jaccard": 0.666667,
-      "weighted_jaccard": 0.666667,
-      "bab": "الضاد",
-      "quranic_verse": "الضباب / الضَبّ"
-    },
-    {
-      "root": "ظلم",
-      "binary_nucleus": "ظل",
-      "third_letter": "م",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "باطن + امتساك",
-      "predicted_features": [
-        "باطن",
-        "امتساك"
-      ],
-      "actual_features": [
-        "باطن",
-        "إمساك",
-        "ضغط"
-      ],
-      "jaccard": 0.666667,
-      "weighted_jaccard": 0.666667,
-      "bab": "الظاء",
-      "quranic_verse": "مِّنَ الظُّلُمَاتِ إِلَى النُّورِ"
-    },
-    {
       "root": "قضى",
       "binary_nucleus": "قض",
-      "third_letter": "ى",
+      "third_letter": "ي",
       "scholar": "jabal",
-      "model": "sequence",
+      "model": "intersection",
       "predicted_meaning": "استقلال + فراغ",
       "predicted_features": [
         "استقلال",
@@ -1085,64 +1054,72 @@
         "فراغ",
         "قطع"
       ],
-      "jaccard": 0.666667,
+      "jaccard": 1.0,
       "weighted_jaccard": 0.666667,
       "bab": "القاف",
       "quranic_verse": "قضى - \"وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ\""
     },
     {
-      "root": "قمر",
-      "binary_nucleus": "قم",
-      "third_letter": "ر",
+      "root": "كهه-كهكه",
+      "binary_nucleus": "كهـ",
+      "third_letter": "هـ",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "تجمع + استرسال",
+      "model": "sequence",
+      "predicted_meaning": "جوف + إبعاد",
       "predicted_features": [
-        "تجمع",
-        "استرسال"
+        "جوف",
+        "إبعاد"
       ],
       "actual_features": [
-        "امتداد",
-        "استرسال",
-        "تجمع"
+        "جوف",
+        "قوة",
+        "إبعاد"
       ],
       "jaccard": 0.666667,
       "weighted_jaccard": 0.666667,
-      "bab": "القاف",
-      "quranic_verse": "قمرا - \"وَقَمَرًا مُّنِيرًا\""
+      "bab": "الكاف",
+      "quranic_verse": null
+    },
+    {
+      "root": "صرر",
+      "binary_nucleus": "صر",
+      "third_letter": "ر",
+      "scholar": "jabal",
+      "model": "phonetic_gestural",
+      "predicted_meaning": "قوة + إمساك + ضغط + انتشار + استرسال + تماسك",
+      "predicted_features": [
+        "قوة",
+        "إمساك",
+        "ضغط",
+        "انتشار",
+        "استرسال",
+        "تماسك"
+      ],
+      "actual_features": [
+        "تلاصق",
+        "اتصال",
+        "اشتمال",
+        "قوة",
+        "إمساك",
+        "ضغط",
+        "انتشار"
+      ],
+      "jaccard": 0.571429,
+      "weighted_jaccard": 0.625,
+      "bab": "الصاد",
+      "quranic_verse": "صر / يصروا - \"كَمَثَلِ رِيحٍ فِيهَا صِرٌّ\""
     }
   ],
   "bottom_predictions": [
-    {
-      "root": "بيب",
-      "binary_nucleus": "بب",
-      "third_letter": "ي",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "اتساع + اتصال",
-      "predicted_features": [
-        "اتساع",
-        "اتصال"
-      ],
-      "actual_features": [
-        "نفاذ",
-        "دقة"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": null
-    },
     {
       "root": "أبو",
       "binary_nucleus": "ءب",
       "third_letter": "و",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "تلاصق + اشتمال",
+      "model": "intersection",
+      "predicted_meaning": "تلاصق",
       "predicted_features": [
-        "تلاصق",
-        "اشتمال"
+        "تلاصق"
       ],
       "actual_features": [],
       "jaccard": 0.0,
@@ -1155,11 +1132,10 @@
       "binary_nucleus": "بت",
       "third_letter": "ي",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "قطع + اتصال",
+      "model": "intersection",
+      "predicted_meaning": "استقلال",
       "predicted_features": [
-        "قطع",
-        "اتصال"
+        "استقلال"
       ],
       "actual_features": [
         "حيز"
@@ -1170,55 +1146,14 @@
       "quranic_verse": "بيوت - \"وَتَنْحِتُونَ الْجِبَالَ بُيُوتًا\" / يبيتون - \"وَالَّذِينَ يَبِيتُونَ لِرَبِّهِمْ سُجَّدًا\""
     },
     {
-      "root": "بجج/بجبج",
-      "binary_nucleus": "بج",
-      "third_letter": "ج",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خروج + تجمع",
-      "predicted_features": [
-        "خروج",
-        "تجمع"
-      ],
-      "actual_features": [
-        "اختراق",
-        "اتساع",
-        "رخاوة"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": null
-    },
-    {
-      "root": "بحح/بحبح",
-      "binary_nucleus": "بح",
-      "third_letter": "ح",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + احتكاك",
-      "predicted_features": [
-        "ظهور",
-        "احتكاك"
-      ],
-      "actual_features": [
-        "فراغ"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": null
-    },
-    {
       "root": "بحث",
       "binary_nucleus": "بح",
       "third_letter": "ث",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + كثافة",
+      "model": "intersection",
+      "predicted_meaning": "فراغ",
       "predicted_features": [
-        "ظهور",
-        "كثافة"
+        "فراغ"
       ],
       "actual_features": [
         "تماسك",
@@ -1234,11 +1169,10 @@
       "binary_nucleus": "بح",
       "third_letter": "ر",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + استرسال",
+      "model": "intersection",
+      "predicted_meaning": "ظهور",
       "predicted_features": [
-        "ظهور",
-        "استرسال"
+        "ظهور"
       ],
       "actual_features": [
         "اختراق",
@@ -1251,25 +1185,25 @@
       "quranic_verse": "البحر - \"مَرَجَ الْبَحْرَيْنِ يَلْتَقِيَانِ\" / بحيرة - \"مَا جَعَلَ اللَّهُ مِنْ بَحِيرَةٍ\""
     },
     {
-      "root": "بخع",
+      "root": "بخخ/بخبخ",
       "binary_nucleus": "بخ",
-      "third_letter": "ع",
+      "third_letter": "خ",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "نقص + التحام",
+      "model": "intersection",
+      "predicted_meaning": "فراغ",
       "predicted_features": [
-        "نقص",
-        "التحام"
+        "فراغ"
       ],
       "actual_features": [
-        "فراغ",
         "قوة",
-        "باطن"
+        "ظاهر",
+        "تخلخل",
+        "غلظ"
       ],
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
       "bab": "الباء",
-      "quranic_verse": "باخع - \"فَلَعَلَّكَ بَاخِعٌ نَّفْسَكَ عَلَى ءَاثَارِهِمْ\""
+      "quranic_verse": null
     },
     {
       "root": "بخل",
@@ -1277,10 +1211,14 @@
       "third_letter": "ل",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "نقص + تعلق",
+      "predicted_meaning": "نقص + فراغ + تعلق + امتداد + استقلال + تميز",
       "predicted_features": [
         "نقص",
-        "تعلق"
+        "فراغ",
+        "تعلق",
+        "امتداد",
+        "استقلال",
+        "تميز"
       ],
       "actual_features": [
         "إمساك"
@@ -1295,11 +1233,10 @@
       "binary_nucleus": "بد",
       "third_letter": "د",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + احتباس",
+      "model": "intersection",
+      "predicted_meaning": "ظهور",
       "predicted_features": [
-        "ظهور",
-        "احتباس"
+        "ظهور"
       ],
       "actual_features": [
         "تفرق",
@@ -1312,36 +1249,44 @@
       "quranic_verse": null
     },
     {
-      "root": "بيد",
+      "root": "بدو",
       "binary_nucleus": "بد",
-      "third_letter": "ي",
+      "third_letter": "و",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + اتصال",
+      "predicted_meaning": "ظهور + اشتمال + احتواء",
       "predicted_features": [
         "ظهور",
-        "اتصال"
+        "اشتمال",
+        "احتواء"
       ],
       "actual_features": [
-        "فراغ",
-        "ظاهر"
+        "بروز",
+        "قوة",
+        "امتداد",
+        "اتساع"
       ],
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
       "bab": "الباء",
-      "quranic_verse": "تبيد - \"مَا أَظُنُّ أَن تَبِيدَ هَذِهِ أَبَدًا\""
+      "quranic_verse": "البدو - \"وَجَاءَ بِكُم مِّنَ الْبَدْوِ\" / تبدون - \"وَأَعْلَمُ مَا تُبْدُونَ\""
     },
     {
       "root": "أبد",
       "binary_nucleus": "بد",
-      "third_letter": "أ",
+      "third_letter": "ء",
       "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "ظهور",
+      "model": "phonetic_gestural",
+      "predicted_meaning": "ظهور + تأكيد + ضغط + تقوية",
       "predicted_features": [
-        "ظهور"
+        "ظهور",
+        "تأكيد",
+        "ضغط",
+        "تقوية"
       ],
-      "actual_features": [],
+      "actual_features": [
+        "امتداد"
+      ],
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
       "bab": "الباء",
@@ -1352,13 +1297,14 @@
       "binary_nucleus": "بد",
       "third_letter": "ر",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + استرسال",
+      "model": "intersection",
+      "predicted_meaning": "ظهور",
       "predicted_features": [
-        "ظهور",
-        "استرسال"
+        "ظهور"
       ],
-      "actual_features": [],
+      "actual_features": [
+        "امتداد"
+      ],
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
       "bab": "الباء",
@@ -1370,10 +1316,13 @@
       "third_letter": "ع",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + التحام",
+      "predicted_meaning": "ظهور + التحام + رقة + حدة + رخاوة",
       "predicted_features": [
         "ظهور",
-        "التحام"
+        "التحام",
+        "رقة",
+        "حدة",
+        "رخاوة"
       ],
       "actual_features": [],
       "jaccard": 0.0,
@@ -1386,13 +1335,14 @@
       "binary_nucleus": "بد",
       "third_letter": "ل",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + تعلق",
+      "model": "intersection",
+      "predicted_meaning": "ظهور",
       "predicted_features": [
-        "ظهور",
-        "تعلق"
+        "ظهور"
       ],
-      "actual_features": [],
+      "actual_features": [
+        "انتقال"
+      ],
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
       "bab": "الباء",
@@ -1403,11 +1353,10 @@
       "binary_nucleus": "بد",
       "third_letter": "ن",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ظهور + امتداد",
+      "model": "intersection",
+      "predicted_meaning": "ظهور",
       "predicted_features": [
-        "ظهور",
-        "امتداد"
+        "ظهور"
       ],
       "actual_features": [
         "قوة"
@@ -1423,10 +1372,12 @@
       "third_letter": "ذ",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "تفرق + نفاذ",
+      "predicted_meaning": "تفرق + نفاذ + رخاوة + غلظ",
       "predicted_features": [
         "تفرق",
-        "نفاذ"
+        "نفاذ",
+        "رخاوة",
+        "غلظ"
       ],
       "actual_features": [
         "تماسك"
@@ -1442,10 +1393,12 @@
       "third_letter": "ر",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + استرسال",
+      "predicted_meaning": "خلوص + فراغ + استرسال + تماسك",
       "predicted_features": [
         "خلوص",
-        "استرسال"
+        "فراغ",
+        "استرسال",
+        "تماسك"
       ],
       "actual_features": [
         "اتساع",
@@ -1460,12 +1413,11 @@
     {
       "root": "برو/برى",
       "binary_nucleus": "بر",
-      "third_letter": "ى",
+      "third_letter": "ي",
       "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "خلوص + فراغ",
+      "model": "intersection",
+      "predicted_meaning": "فراغ",
       "predicted_features": [
-        "خلوص",
         "فراغ"
       ],
       "actual_features": [
@@ -1482,10 +1434,12 @@
       "third_letter": "و",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + اشتمال",
+      "predicted_meaning": "خلوص + فراغ + اشتمال + احتواء",
       "predicted_features": [
         "خلوص",
-        "اشتمال"
+        "فراغ",
+        "اشتمال",
+        "احتواء"
       ],
       "actual_features": [],
       "jaccard": 0.0,
@@ -1496,13 +1450,16 @@
     {
       "root": "بأر",
       "binary_nucleus": "بر",
-      "third_letter": "أ",
+      "third_letter": "ء",
       "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "خلوص + فراغ",
+      "model": "phonetic_gestural",
+      "predicted_meaning": "خلوص + فراغ + تأكيد + ضغط + تقوية",
       "predicted_features": [
         "خلوص",
-        "فراغ"
+        "فراغ",
+        "تأكيد",
+        "ضغط",
+        "تقوية"
       ],
       "actual_features": [
         "ظاهر",
@@ -1519,10 +1476,12 @@
       "third_letter": "ج",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + تجمع",
+      "predicted_meaning": "خلوص + فراغ + تجمع + حدة",
       "predicted_features": [
         "خلوص",
-        "تجمع"
+        "فراغ",
+        "تجمع",
+        "حدة"
       ],
       "actual_features": [
         "بروز",
@@ -1534,37 +1493,19 @@
       "quranic_verse": "البروج - \"وَالسَّمَاءِ ذَاتِ الْبُرُوجِ\" / تبرجن - \"وَلَا تَبَرَّجْنَ تَبَرُّجَ الْجَاهِلِيَّةِ\""
     },
     {
-      "root": "برح",
-      "binary_nucleus": "بر",
-      "third_letter": "ح",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + احتكاك",
-      "predicted_features": [
-        "خلوص",
-        "احتكاك"
-      ],
-      "actual_features": [
-        "جوف",
-        "اتساع",
-        "جفاف",
-        "قوة"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "أبرح - \"فَلَنْ أَبْرَحَ الْأَرْضَ\" / لن نبرح - \"لَن نَّبْرَحَ عَلَيْهِ عَاكِفِينَ\""
-    },
-    {
       "root": "برد",
       "binary_nucleus": "بر",
       "third_letter": "د",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + احتباس",
+      "predicted_meaning": "خلوص + فراغ + احتباس + ضغط + امتداد + طول",
       "predicted_features": [
         "خلوص",
-        "احتباس"
+        "فراغ",
+        "احتباس",
+        "ضغط",
+        "امتداد",
+        "طول"
       ],
       "actual_features": [
         "تخلخل",
@@ -1615,59 +1556,18 @@
       "quranic_verse": "الأبرص - \"وَأُبْرِئُ الْأَكْمَهَ وَالْأَبْرَصَ\""
     },
     {
-      "root": "برق",
-      "binary_nucleus": "بر",
-      "third_letter": "ق",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + تعقد",
-      "predicted_features": [
-        "خلوص",
-        "تعقد"
-      ],
-      "actual_features": [
-        "بروز",
-        "عمق",
-        "ظاهر",
-        "حدة",
-        "دقة",
-        "تميز"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "برق - \"فَإِذَا بَرِقَ الْبَصَرُ\" / أباريق - \"بِأَكْوَابٍ وَأَبَارِيقَ\""
-    },
-    {
-      "root": "برك",
-      "binary_nucleus": "بر",
-      "third_letter": "ك",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + ضغط",
-      "predicted_features": [
-        "خلوص",
-        "ضغط"
-      ],
-      "actual_features": [
-        "امتساك",
-        "لطف"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "مباركة - \"تَحِيَّةً مِّنْ عِندِ اللَّهِ مُبَارَكَةً\" / بارك - \"وَبَارَكَ فِيهَا\""
-    },
-    {
       "root": "برم",
       "binary_nucleus": "بر",
       "third_letter": "م",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + امتساك",
+      "predicted_meaning": "خلوص + فراغ + امتساك + استواء + ظاهر",
       "predicted_features": [
         "خلوص",
-        "امتساك"
+        "فراغ",
+        "امتساك",
+        "استواء",
+        "ظاهر"
       ],
       "actual_features": [
         "تلاصق",
@@ -1680,37 +1580,16 @@
       "quranic_verse": "أبرموا - \"أَمْ أَبْرَمُوا أَمْرًا فَإِنَّا مُبْرِمُونَ\""
     },
     {
-      "root": "بره/برهن",
-      "binary_nucleus": "بر",
-      "third_letter": "ن",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خلوص + امتداد",
-      "predicted_features": [
-        "خلوص",
-        "امتداد"
-      ],
-      "actual_features": [
-        "كثافة",
-        "باطن",
-        "لطف",
-        "ظاهر"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "برهانكم - \"قُلْ هَاتُوا بُرْهَانَكُمْ\" / برهانان - \"فَذَانِكَ بُرْهَانَانِ مِن رَّبِّكَ\""
-    },
-    {
       "root": "بسر",
       "binary_nucleus": "بس",
       "third_letter": "ر",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "جفاف + استرسال",
+      "predicted_meaning": "جفاف + استرسال + تماسك",
       "predicted_features": [
         "جفاف",
-        "استرسال"
+        "استرسال",
+        "تماسك"
       ],
       "actual_features": [
         "اتساع",
@@ -1726,11 +1605,10 @@
       "binary_nucleus": "بس",
       "third_letter": "ط",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "جفاف + ضغط",
+      "model": "intersection",
+      "predicted_meaning": "جفاف",
       "predicted_features": [
-        "جفاف",
-        "ضغط"
+        "جفاف"
       ],
       "actual_features": [
         "اتساع",
@@ -1742,35 +1620,18 @@
       "quranic_verse": "يبسط - \"اللَّهُ يَبْسُطُ الرِّزْقَ لِمَن يَشَاءُ\" / بساطا - \"وَاللَّهُ جَعَلَ لَكُمُ الْأَرْضَ بِسَاطًا\""
     },
     {
-      "root": "بسق",
-      "binary_nucleus": "بس",
-      "third_letter": "ق",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "جفاف + تعقد",
-      "predicted_features": [
-        "جفاف",
-        "تعقد"
-      ],
-      "actual_features": [
-        "انتقال",
-        "عمق"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "باسقات - \"وَالنَّخْلَ بَاسِقَاتٍ لَّهَا طَلْعٌ نَّضِيدٌ\""
-    },
-    {
       "root": "بسل",
       "binary_nucleus": "بس",
       "third_letter": "ل",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "جفاف + تعلق",
+      "predicted_meaning": "جفاف + تعلق + امتداد + استقلال + تميز",
       "predicted_features": [
         "جفاف",
-        "تعلق"
+        "تعلق",
+        "امتداد",
+        "استقلال",
+        "تميز"
       ],
       "actual_features": [
         "احتباس"
@@ -1786,10 +1647,12 @@
       "third_letter": "م",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "جفاف + امتساك",
+      "predicted_meaning": "جفاف + امتساك + استواء + ظاهر",
       "predicted_features": [
         "جفاف",
-        "امتساك"
+        "امتساك",
+        "استواء",
+        "ظاهر"
       ],
       "actual_features": [],
       "jaccard": 0.0,
@@ -1822,10 +1685,11 @@
       "third_letter": "ر",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "نفاذ + استرسال",
+      "predicted_meaning": "نفاذ + استرسال + تماسك",
       "predicted_features": [
         "نفاذ",
-        "استرسال"
+        "استرسال",
+        "تماسك"
       ],
       "actual_features": [
         "إمساك",
@@ -1842,10 +1706,13 @@
       "third_letter": "ل",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "نفاذ + تعلق",
+      "predicted_meaning": "نفاذ + تعلق + امتداد + استقلال + تميز",
       "predicted_features": [
         "نفاذ",
-        "تعلق"
+        "تعلق",
+        "امتداد",
+        "استقلال",
+        "تميز"
       ],
       "actual_features": [
         "تجمع"
@@ -1856,15 +1723,36 @@
       "quranic_verse": "بصلها - \"وَعَدَسِهَا وَبَصَلِهَا\""
     },
     {
+      "root": "بضض",
+      "binary_nucleus": "بض",
+      "third_letter": "ض",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "رخاوة",
+      "predicted_features": [
+        "رخاوة"
+      ],
+      "actual_features": [
+        "اكتناز",
+        "باطن",
+        "ظاهر",
+        "رقة"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": null
+    },
+    {
       "root": "بيض",
       "binary_nucleus": "بض",
       "third_letter": "ي",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "تجمع + اتصال",
+      "model": "intersection",
+      "predicted_meaning": "تجمع + رخاوة",
       "predicted_features": [
         "تجمع",
-        "اتصال"
+        "رخاوة"
       ],
       "actual_features": [
         "ظاهر",
@@ -1898,15 +1786,36 @@
       "quranic_verse": null
     },
     {
+      "root": "بطأ",
+      "binary_nucleus": "بط",
+      "third_letter": "ء",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "ضغط",
+      "predicted_features": [
+        "ضغط"
+      ],
+      "actual_features": [
+        "ثقل",
+        "انتقال"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "ليبطئن - \"وَإِنَّ مِنكُمْ لَمَن لَّيُبَطِّئَنَّ\""
+    },
+    {
       "root": "بطر",
       "binary_nucleus": "بط",
       "third_letter": "ر",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "ثقل + استرسال",
+      "predicted_meaning": "ثقل + ضغط + استرسال + تماسك",
       "predicted_features": [
         "ثقل",
-        "استرسال"
+        "ضغط",
+        "استرسال",
+        "تماسك"
       ],
       "actual_features": [
         "تجمع",
@@ -1919,74 +1828,21 @@
       "quranic_verse": "بطرا - \"وَلَا تَكُونُوا كَالَّذِينَ خَرَجُوا مِن دِيَارِهِم بَطَرًا\" / بطرت - \"بَطِرَتْ مَعِيشَتَهَا\""
     },
     {
-      "root": "بطل",
-      "binary_nucleus": "بط",
-      "third_letter": "ل",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ثقل + تعلق",
-      "predicted_features": [
-        "ثقل",
-        "تعلق"
-      ],
-      "actual_features": [
-        "قوة"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "الباطل - \"بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ\" / تبطلوا - \"لَا تُبْطِلُوا صَدَقَاتِكُم\""
-    },
-    {
-      "root": "بطن",
-      "binary_nucleus": "بط",
-      "third_letter": "ن",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "ثقل + امتداد",
-      "predicted_features": [
-        "ثقل",
-        "امتداد"
-      ],
-      "actual_features": [
-        "جوف"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "بطني - \"نَذَرْتُ لَكَ مَا فِي بَطْنِي مُحَرَّرًا\" / باطنة - \"وَأَسْبَغَ عَلَيْكُمْ نِعَمَهُ ظَاهِرَةً وَبَاطِنَةً\""
-    },
-    {
-      "root": "بيع",
-      "binary_nucleus": "بع",
-      "third_letter": "ي",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خروج + اتصال",
-      "predicted_features": [
-        "خروج",
-        "اتصال"
-      ],
-      "actual_features": [
-        "انتقال",
-        "اتساع",
-        "حيز"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "البيع - \"وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَوا\" / يبايعونك - \"إِنَّ الَّذِينَ يُبَايِعُونَكَ\""
-    },
-    {
       "root": "بعث",
       "binary_nucleus": "بع",
       "third_letter": "ث",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "خروج + كثافة",
+      "predicted_meaning": "خروج + انتقال + اتساع + حيز + كثافة + غلظ + تفشي + انتشار",
       "predicted_features": [
         "خروج",
-        "كثافة"
+        "انتقال",
+        "اتساع",
+        "حيز",
+        "كثافة",
+        "غلظ",
+        "تفشي",
+        "انتشار"
       ],
       "actual_features": [
         "قوة",
@@ -2002,11 +1858,12 @@
       "binary_nucleus": "بع",
       "third_letter": "ر",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خروج + استرسال",
+      "model": "intersection",
+      "predicted_meaning": "خروج + انتقال + اتساع",
       "predicted_features": [
         "خروج",
-        "استرسال"
+        "انتقال",
+        "اتساع"
       ],
       "actual_features": [
         "تفرق",
@@ -2022,11 +1879,12 @@
       "binary_nucleus": "بع",
       "third_letter": "د",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خروج + احتباس",
+      "model": "intersection",
+      "predicted_meaning": "خروج + انتقال + اتساع",
       "predicted_features": [
         "خروج",
-        "احتباس"
+        "انتقال",
+        "اتساع"
       ],
       "actual_features": [
         "رقة"
@@ -2041,11 +1899,12 @@
       "binary_nucleus": "بع",
       "third_letter": "ر",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خروج + استرسال",
+      "model": "intersection",
+      "predicted_meaning": "خروج + انتقال + اتساع",
       "predicted_features": [
         "خروج",
-        "استرسال"
+        "انتقال",
+        "اتساع"
       ],
       "actual_features": [
         "رقة",
@@ -2059,34 +1918,16 @@
       "quranic_verse": "بعير - \"وَنَزْدَادُ كَيْلَ بَعِيرٍ\""
     },
     {
-      "root": "بعض",
-      "binary_nucleus": "بع",
-      "third_letter": "ض",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خروج + ضغط",
-      "predicted_features": [
-        "خروج",
-        "ضغط"
-      ],
-      "actual_features": [
-        "إمساك"
-      ],
-      "jaccard": 0.0,
-      "weighted_jaccard": 0.0,
-      "bab": "الباء",
-      "quranic_verse": "بعضكم من بعض - \"بَعْضُكُم مِّن بَعْضٍ\" / ببعض - \"أَفَتُؤْمِنُونَ بِبَعْضِ الْكِتَابِ\""
-    },
-    {
       "root": "بعل",
       "binary_nucleus": "بع",
       "third_letter": "ل",
       "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "خروج + تعلق",
+      "model": "intersection",
+      "predicted_meaning": "خروج + انتقال + اتساع",
       "predicted_features": [
         "خروج",
-        "تعلق"
+        "انتقال",
+        "اتساع"
       ],
       "actual_features": [
         "استقلال"
@@ -2095,6 +1936,216 @@
       "weighted_jaccard": 0.0,
       "bab": "الباء",
       "quranic_verse": "بعلا - \"أَتَدْعُونَ بَعْلًا وَتَذَرُونَ أَحْسَنَ الْخَالِقِينَ\" / بعلها - \"خَافَتْ مِن بَعْلِهَا نُشُورًا\""
+    },
+    {
+      "root": "بغت",
+      "binary_nucleus": "بغ",
+      "third_letter": "ت",
+      "scholar": "jabal",
+      "model": "phonetic_gestural",
+      "predicted_meaning": "امتداد + خروج + ضغط + دقة + وحدة + حدة + إمساك + قطع",
+      "predicted_features": [
+        "امتداد",
+        "خروج",
+        "ضغط",
+        "دقة",
+        "وحدة",
+        "حدة",
+        "إمساك",
+        "قطع"
+      ],
+      "actual_features": [
+        "قوة"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "بغتة - \"لَا تَأْتِيكُمْ إِلَّا بَغْتَةً\""
+    },
+    {
+      "root": "بغل",
+      "binary_nucleus": "بغ",
+      "third_letter": "ل",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "امتداد",
+      "predicted_features": [
+        "امتداد"
+      ],
+      "actual_features": [
+        "غلظ"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "البغال - \"وَالْخَيْلَ وَالْبِغَالَ وَالْحَمِيرَ لِتَرْكَبُوهَا\""
+    },
+    {
+      "root": "بقق/بقبق",
+      "binary_nucleus": "بق",
+      "third_letter": "ق",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "امتساك",
+      "predicted_features": [
+        "امتساك"
+      ],
+      "actual_features": [
+        "كثافة",
+        "ظاهر",
+        "جوف"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": null
+    },
+    {
+      "root": "بقو/بقى",
+      "binary_nucleus": "بق",
+      "third_letter": "ي",
+      "scholar": "jabal",
+      "model": "phonetic_gestural",
+      "predicted_meaning": "امتساك + ظهور + اتساع + اتصال + وحدة + تفرق + رقة",
+      "predicted_features": [
+        "امتساك",
+        "ظهور",
+        "اتساع",
+        "اتصال",
+        "وحدة",
+        "تفرق",
+        "رقة"
+      ],
+      "actual_features": [
+        "امتداد",
+        "جوف"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "يبقى - \"وَيَبْقَى وَجْهُ رَبِّكَ\" / بقيت - \"بَقِيَّتُ اللَّهِ خَيْرٌ لَّكُمْ\""
+    },
+    {
+      "root": "وبق",
+      "binary_nucleus": "بق",
+      "third_letter": "و",
+      "scholar": "jabal",
+      "model": "phonetic_gestural",
+      "predicted_meaning": "امتساك + ظهور + اتساع + اشتمال + احتواء",
+      "predicted_features": [
+        "امتساك",
+        "ظهور",
+        "اتساع",
+        "اشتمال",
+        "احتواء"
+      ],
+      "actual_features": [],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "يوبقهن - \"أَوْ يُوبِقْهُنَّ بِمَا كَسَبُوا\" / موبقا - \"وَجَعَلْنَا بَيْنَهُم مَّوْبِقًا\""
+    },
+    {
+      "root": "بكى",
+      "binary_nucleus": "بك",
+      "third_letter": "ي",
+      "scholar": "jabal",
+      "model": "phonetic_gestural",
+      "predicted_meaning": "ضغط + احتباس + اتصال + وحدة + تفرق + رقة",
+      "predicted_features": [
+        "ضغط",
+        "احتباس",
+        "اتصال",
+        "وحدة",
+        "تفرق",
+        "رقة"
+      ],
+      "actual_features": [
+        "خروج",
+        "جوف"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "أبكى - \"وَأَنَّهُ هُوَ أَضْحَكَ وَأَبْكَى\" / بكيا - \"خَرُّوا سُجَّدًا وَبُكِيًّا\""
+    },
+    {
+      "root": "بلل/بلبل",
+      "binary_nucleus": "بل",
+      "third_letter": "ل",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "اتساع",
+      "predicted_features": [
+        "اتساع"
+      ],
+      "actual_features": [
+        "لطف",
+        "امتساك"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "بل - \"بَلْ أَحْيَاءٌ عِندَ رَبِّهِمْ يُرْزَقُونَ\""
+    },
+    {
+      "root": "أبل",
+      "binary_nucleus": "بل",
+      "third_letter": "ء",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "امتساك + قوة",
+      "predicted_features": [
+        "امتساك",
+        "قوة"
+      ],
+      "actual_features": [
+        "احتواء",
+        "باطن"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "أبابيل - \"وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ\" / الإبل - \"أَفَلَا يَنظُرُونَ إِلَى الْإِبِلِ\""
+    },
+    {
+      "root": "بلد",
+      "binary_nucleus": "بن",
+      "third_letter": "د",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "امتداد",
+      "predicted_features": [
+        "امتداد"
+      ],
+      "actual_features": [
+        "ظاهر",
+        "نفاذ"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "بلد - \"وَتَحْمِلُ أَثْقَالَكُمْ إِلَى بَلَدٍ\" / البلد - \"وَهَذَا الْبَلَدِ الْأَمِينِ\""
+    },
+    {
+      "root": "بلس",
+      "binary_nucleus": "بن",
+      "third_letter": "س",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "امتداد",
+      "predicted_features": [
+        "امتداد"
+      ],
+      "actual_features": [
+        "اشتمال",
+        "باطن",
+        "حدة"
+      ],
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "bab": "الباء",
+      "quranic_verse": "إبليس - \"فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَى وَاسْتَكْبَرَ\" / مبلسون - \"فَإِذَا هُم مُّبْلِسُونَ\""
     }
   ]
 }

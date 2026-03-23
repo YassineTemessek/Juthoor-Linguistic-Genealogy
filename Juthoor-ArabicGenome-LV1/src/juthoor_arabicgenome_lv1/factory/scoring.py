@@ -44,6 +44,11 @@ SYNONYM_GROUPS: tuple[frozenset[str], ...] = (
     frozenset({"تفرق", "تخلخل"}),                          # dispersal / loosening
     frozenset({"فراغ", "تخلخل"}),                          # void / loosening
     frozenset({"باطن", "عمق", "جوف"}),                     # inner / depth / hollow
+    frozenset({"قوة", "ثقل"}),                             # force / heaviness
+    frozenset({"ضغط", "إمساك"}),                           # pressure / holding
+    frozenset({"خلوص", "فراغ"}),                           # release / cleared emptiness
+    frozenset({"استقلال", "قطع"}),                         # separation / severing
+    frozenset({"ظاهر", "ظهور"}),                           # manifest surface / appearance
 )
 
 # Build a canonical-form lookup: feature -> canonical (first in frozenset, sorted)

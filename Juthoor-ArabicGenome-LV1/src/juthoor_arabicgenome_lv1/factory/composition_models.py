@@ -68,26 +68,11 @@ def model_phonetic_gestural(
     articulatory1: dict[str, Any] | None = None,
     articulatory2: dict[str, Any] | None = None,
 ) -> CompositionResult:
-    features = list(_as_features(letter1)[:1] + _as_features(letter2)[:1])
-    for articulatory in (articulatory1 or {}, articulatory2 or {}):
-        sifaat = articulatory.get("sifaat") or {}
-        if sifaat.get("shidda"):
-            features.append("ضغط")
-        if sifaat.get("safeer"):
-            features.append("دقة")
-        if sifaat.get("takrir"):
-            features.append("استرسال")
-        if sifaat.get("itbaq"):
-            features.append("كثافة")
-        if sifaat.get("ghunna"):
-            features.append("باطن")
-        makhraj = articulatory.get("makhraj") or {}
-        makhraj_name = str(makhraj.get("makhraj_en") or "")
-        if "throat" in makhraj_name:
-            features.append("عمق")
-        if "lips" in makhraj_name or "lip" in makhraj_name:
-            features.append("اتصال")
-    ordered = _ordered_unique(features)
+    del articulatory1, articulatory2
+    # For Phase 3 root prediction this fallback should stay semantic.
+    # We preserve the full nucleus field and the full modifier field rather than
+    # injecting pronunciation metadata such as sifaat.
+    ordered = _ordered_unique(list(_as_features(letter1)) + list(_as_features(letter2)))
     return CompositionResult("phonetic_gestural", ordered, _categories(ordered))
 
 

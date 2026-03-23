@@ -40,3 +40,11 @@ def test_decompose_extended_synonym_groups() -> None:
     assert decompose_semantic_text("الارتفاع الشاهق") == ("صعود",)
     assert decompose_semantic_text("الاستقرار والرجوع") == ("جوف", "انتقال")
     assert decompose_semantic_text("الحسن والنقاء") == ("خلوص",)
+
+
+def test_decompose_root_meaning_aliases_for_empty_actual_recovery() -> None:
+    assert "امتداد" in decompose_semantic_text("البقاء الدائم أو الإقامة الدائمة بلا حد")
+    assert "احتواء" in decompose_semantic_text("غلاف للشيء العظيم أو المهم يسعه ويغطيه")
+    assert "انتقال" in decompose_semantic_text("تحول عن الاتجاه إلى عكسه")
+    assert "استرسال" in decompose_semantic_text("جريان الشيء أو سريانه بلا نهاية")
+    assert "تعقد" in decompose_semantic_text("انحناء الشيء أو استدارته حول غيره")
