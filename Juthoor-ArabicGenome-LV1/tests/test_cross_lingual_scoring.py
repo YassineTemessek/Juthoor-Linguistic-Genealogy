@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from juthoor_arabicgenome_lv1.factory.cross_lingual_scoring import (
     best_similarity,
+    latin_target_variants,
     score_projection_row,
     summarize_projection_scores,
     target_variants,
@@ -30,6 +31,25 @@ def test_best_similarity_finds_close_variant() -> None:
     score, variant = best_similarity(["mlk"], "מלך")
     assert score > 0.5
     assert variant is not None
+
+
+def test_latin_target_variants_expand_common_spelling_equivalents() -> None:
+    variants = latin_target_variants("rack")
+    assert "rack" in variants
+    assert "rak" in variants
+    assert "rck" in variants
+
+
+def test_score_projection_row_detects_latin_script_exact_hit_after_normalization() -> None:
+    row = {
+        "target_lang": "eng",
+        "target_lemma": "rack",
+        "projected_variants": ["rak", "raq"],
+    }
+    scored = score_projection_row(row)
+    assert scored["exact_projection_hit"] is True
+    assert "rak" in scored["target_variants"]
+    assert "rak" in scored["normalized_projected_variants"]
 
 
 def test_summarize_projection_scores_aggregates_by_language() -> None:

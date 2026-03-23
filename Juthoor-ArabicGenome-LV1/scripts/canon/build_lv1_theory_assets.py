@@ -19,6 +19,17 @@ from juthoor_arabicgenome_lv1.factory.root_predictor import (
     build_root_prediction_rows,
     summarize_root_predictions,
 )
+from juthoor_arabicgenome_lv1.factory.cross_lingual_projection import (
+    build_non_semitic_projection_rows,
+    build_semitic_projection_rows,
+    load_benchmark_rows,
+    non_semitic_projection_summary,
+    projection_summary,
+)
+from juthoor_arabicgenome_lv1.factory.cross_lingual_scoring import (
+    score_projection_row,
+    summarize_projection_scores,
+)
 
 
 LV1_ROOT = Path(__file__).resolve().parents[2]
@@ -31,6 +42,7 @@ LETTERS_OUT = CANON_ROOT / "letters"
 BINARY_OUT = CANON_ROOT / "binary_fields"
 ROOTS_OUT = CANON_ROOT / "roots"
 OUTPUT_ROOT = REPO_ROOT / "outputs" / "lv1_scoring"
+LV2_BENCHMARK = REPO_ROOT / "Juthoor-CognateDiscovery-LV2" / "resources" / "benchmarks" / "cognate_gold.jsonl"
 
 LETTER_NAME_TO_CHAR = {
     "الهمزة": "ء",
@@ -401,6 +413,18 @@ def main() -> int:
     golden_rule = _build_golden_rule_report(nuclei_rows)
     root_prediction_rows = build_root_prediction_rows(root_rows, nuclei_rows, scholar_map, scholar="jabal")
     root_score_matrix = summarize_root_predictions(root_prediction_rows)
+    benchmark_rows = load_benchmark_rows(LV2_BENCHMARK)
+    semitic_projection_rows = build_semitic_projection_rows(root_prediction_rows, benchmark_rows)
+    semitic_projection_summary = projection_summary(semitic_projection_rows, benchmark_rows)
+    semitic_scored_rows = [score_projection_row(row) for row in semitic_projection_rows]
+    semitic_scoring_summary = summarize_projection_scores(semitic_scored_rows)
+    non_semitic_projection_rows = build_non_semitic_projection_rows(root_prediction_rows, benchmark_rows)
+    non_semitic_projection_summary_payload = non_semitic_projection_summary(
+        non_semitic_projection_rows,
+        benchmark_rows,
+    )
+    non_semitic_scored_rows = [score_projection_row(row) for row in non_semitic_projection_rows]
+    non_semitic_scoring_summary = summarize_projection_scores(non_semitic_scored_rows)
 
     prediction_by_root = {row["root"]: row for row in root_prediction_rows}
     for row in root_rows:
@@ -423,6 +447,14 @@ def main() -> int:
     _write_json(OUTPUT_ROOT / "golden_rule_report.json", golden_rule)
     _write_json(OUTPUT_ROOT / "root_predictions.json", root_prediction_rows)
     _write_json(OUTPUT_ROOT / "root_score_matrix.json", root_score_matrix)
+    _write_json(OUTPUT_ROOT / "benchmark_semitic_projections.json", semitic_projection_rows)
+    _write_json(OUTPUT_ROOT / "benchmark_semitic_projection_summary.json", semitic_projection_summary)
+    _write_json(OUTPUT_ROOT / "benchmark_semitic_scored_projections.json", semitic_scored_rows)
+    _write_json(OUTPUT_ROOT / "benchmark_semitic_scoring_summary.json", semitic_scoring_summary)
+    _write_json(OUTPUT_ROOT / "benchmark_non_semitic_projections.json", non_semitic_projection_rows)
+    _write_json(OUTPUT_ROOT / "benchmark_non_semitic_projection_summary.json", non_semitic_projection_summary_payload)
+    _write_json(OUTPUT_ROOT / "benchmark_non_semitic_scored_projections.json", non_semitic_scored_rows)
+    _write_json(OUTPUT_ROOT / "benchmark_non_semitic_scoring_summary.json", non_semitic_scoring_summary)
 
     summary = {
         "scholars": {scholar: len(rows) for scholar, rows in by_scholar.items()},
@@ -431,6 +463,8 @@ def main() -> int:
         "score_rows": len(score_rows),
         "root_prediction_rows": len(root_prediction_rows),
         "golden_rule_pairs": golden_rule["reversible_pairs"],
+        "benchmark_semitic_rows": len(semitic_projection_rows),
+        "benchmark_non_semitic_rows": len(non_semitic_projection_rows),
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
