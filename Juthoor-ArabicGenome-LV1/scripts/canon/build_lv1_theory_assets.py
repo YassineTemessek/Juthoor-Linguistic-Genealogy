@@ -15,6 +15,10 @@ from juthoor_arabicgenome_lv1.factory.scoring import (
     build_nucleus_score_rows,
     invert_features_extended,
 )
+from juthoor_arabicgenome_lv1.factory.root_predictor import (
+    build_root_prediction_rows,
+    summarize_root_predictions,
+)
 
 
 LV1_ROOT = Path(__file__).resolve().parents[2]
@@ -395,6 +399,18 @@ def main() -> int:
     scholar_map = _scholar_letter_map(scholar_rows)
     score_rows = build_nucleus_score_rows(nuclei_rows, scholar_map)
     golden_rule = _build_golden_rule_report(nuclei_rows)
+    root_prediction_rows = build_root_prediction_rows(root_rows, nuclei_rows, scholar_map, scholar="jabal")
+    root_score_matrix = summarize_root_predictions(root_prediction_rows)
+
+    prediction_by_root = {row["root"]: row for row in root_prediction_rows}
+    for row in root_rows:
+        prediction = prediction_by_root.get(row["root"])
+        if not prediction:
+            continue
+        row["predicted_meaning"] = prediction["predicted_meaning"]
+        row["predicted_features"] = prediction["predicted_features"]
+        row["prediction_score"] = prediction["weighted_jaccard"]
+        row["status"] = "predicted" if prediction["predicted_features"] else "empty"
 
     by_scholar: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in scholar_rows:
@@ -405,12 +421,15 @@ def main() -> int:
     _write_jsonl(ROOTS_OUT / "jabal_roots_raw.jsonl", root_rows)
     _write_json(OUTPUT_ROOT / "nucleus_score_matrix.json", score_rows)
     _write_json(OUTPUT_ROOT / "golden_rule_report.json", golden_rule)
+    _write_json(OUTPUT_ROOT / "root_predictions.json", root_prediction_rows)
+    _write_json(OUTPUT_ROOT / "root_score_matrix.json", root_score_matrix)
 
     summary = {
         "scholars": {scholar: len(rows) for scholar, rows in by_scholar.items()},
         "nuclei": len(nuclei_rows),
         "roots": len(root_rows),
         "score_rows": len(score_rows),
+        "root_prediction_rows": len(root_prediction_rows),
         "golden_rule_pairs": golden_rule["reversible_pairs"],
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
