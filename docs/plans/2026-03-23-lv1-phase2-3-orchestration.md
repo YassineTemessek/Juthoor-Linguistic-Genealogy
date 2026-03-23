@@ -18,11 +18,11 @@
 | Binary nuclei | 457 | Loaded, scored (first pass) |
 | Trilateral roots | 1,938 | Loaded, predicted (first pass) |
 | Score matrix rows | 4,792 | 1,005 nonzero (21.0%) |
-| Root prediction rows | 1,938 | 899 nonzero (46.4%) |
-| Root prediction mean Jaccard | 0.1496 | Improved after S3.9-S3.12 |
+| Root prediction rows | 1,938 | 782 nonzero Jaccard (40.4%), 1092 nonzero blended (56.3%) |
+| Root prediction mean Jaccard | 0.1457 | Precision-capped rerun after S3.14-S3.17 |
 | Method A estimate | 40-55% real accuracy | Method B undercounts due to vocabulary mismatch |
 | Golden Rule | 19.9% confirmed (33/166) | Improved after extended opposition mapping |
-| Tests passing | 313+ LV1 and growing | Focused Sprint 1/3 suite currently 29/29 |
+| Tests passing | 313+ LV1 and growing | Focused Sprint 1/3 suite currently 34/34 |
 
 ---
 
@@ -82,14 +82,14 @@ Each task has an owner. Work the next unblocked item and update status directly 
 | S3.12 | **Re-run predictions after fixes** | Codex | S3.9+S3.10+S3.11 | nonzero 692→899, mean_J 0.135→0.150 | [x] |
 | S3.13 | **Method A re-calibration v2** | Claude | S3.12 | Method A ~33.8% (+1.4pp). Phon_gest over-predicts. | [x] |
 | S3.14 | **R7: Cap phonetic_gestural to 2+1 features** | Claude | S3.13 | `composition_models.py` — precision filter | [x] |
-| S3.15 | **R9: Targeted empty-actual Quranic extraction** | Codex | S3.13 | 50 high-value roots | [ ] |
+| S3.15 | **R9: Targeted empty-actual Quranic extraction** | Codex | S3.13 | 50 high-value roots | [x] |
 | S3.16 | **R10: Category-level blended_jaccard** | Claude | S3.13 | `scoring.py` — 0.7*feat + 0.3*category | [x] |
-| S3.17 | **Re-run predictions after S3.14-S3.16** | Codex | S3.14+S3.15+S3.16 | Updated outputs | [ ] |
+| S3.17 | **Re-run predictions after S3.14-S3.16** | Codex | S3.14+S3.15+S3.16 | Updated outputs | [x] |
 | S3.18 | **Method A v3 calibration** | Claude | S3.17 | Final Sprint 3 verdict | [ ] |
 
-**Current checkpoint:** Improved pass reached `46.4%` nonzero predictions across `1,938` roots, with mean Jaccard `0.1496` and mean weighted Jaccard `0.1424`. Empty-actual roots fell from `207` to `139`.
+**Current checkpoint:** The S3.14+S3.15+S3.16 rerun is now landed locally: `1,938` roots, `782` nonzero exact-Jaccard predictions (`40.4%`), `1092` nonzero blended predictions (`56.3%`), mean Jaccard `0.1457`, mean weighted Jaccard `0.1407`, mean blended Jaccard `0.1752`. Targeted Quranic-empty extraction recovered `26` roots, dropping empty-actual roots from `139` to `113`.
 
-**Sprint 3 verdict (Claude):** Method A ~32%, Method B 13.5%. Below target. Root cause: phonetic_gestural model (61.6% of predictions) truncates to single features and injects articulatory noise. Fix pass S3.9-S3.12 expected to reach Method A ~45-50%.
+**Sprint 3 note before S3.18:** The new rerun trades some raw nonzero Jaccard for better precision and much better coverage. The decisive question is now semantic: does the S3.14 precision cap improve Method A despite the lower exact-match count? Claude's S3.18 calibration is the next decision point.
 
 **Target:** Root prediction accuracy >60% Method A, >30% Method B (after synonym fix)
 
@@ -99,7 +99,7 @@ Each task has an owner. Work the next unblocked item and update status directly 
 |---|------|-------|---------|--------|-------|
 | S4.1 | **Group nuclei by Abbas sensory categories** | Codex | S1.6 | Analysis: do same-category nuclei score differently? | [x] |
 | S4.2 | **Test إيماء vs إيحاء composition accuracy** | Codex | S1.6 | Does mechanism type predict which model works best? | [x] |
-| S4.3 | **Sensory validation report** | Claude | S4.1+S4.2 | Does Abbas's classification predict composition behavior? | [ ] |
+| S4.3 | **Sensory validation report** | Claude | S4.1+S4.2 | Abbas NOT a scoring prior; ذوقية+لمسية strongest; إيماء+إيماء weakest. Parked. | [x] |
 
 **Sprint 4 checkpoint:** `outputs/lv1_scoring/abbas_sensory_validation.md` is now written. Current result does **not** support a simple Abbas same-category advantage in the mechanical nucleus matrix: same-category rows underperform mixed rows (`0.0234` vs `0.0311` mean Jaccard), and pure `إيماء + إيماء` rows scored `0/36` nonzero in this pass.
 

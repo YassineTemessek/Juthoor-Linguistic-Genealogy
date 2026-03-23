@@ -9,6 +9,7 @@ from juthoor_arabicgenome_lv1.factory.composition_models import (
     model_sequence,
 )
 from juthoor_arabicgenome_lv1.factory.scoring import (
+    blended_jaccard,
     jaccard_similarity,
     weighted_jaccard_similarity,
 )
@@ -164,6 +165,9 @@ def build_root_prediction_rows(
                 "actual_features": list(prediction.actual_features),
                 "jaccard": round(prediction.jaccard, 6),
                 "weighted_jaccard": round(prediction.weighted_jaccard, 6),
+                "blended_jaccard": round(blended_jaccard(
+                    prediction.predicted_features, prediction.actual_features,
+                ), 6),
                 "bab": row.get("bab"),
                 "quranic_verse": row.get("quranic_verse"),
             }
@@ -184,6 +188,8 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
     def _mean(values: list[float]) -> float:
         return sum(values) / len(values) if values else 0.0
 
+    nonzero_blended = [row for row in rows if row.get("blended_jaccard", 0.0) > 0.0]
+
     return {
         "overall": {
             "roots": total,
@@ -191,12 +197,16 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
             "nonzero_rate": round(len(nonzero) / total, 6) if total else 0.0,
             "mean_jaccard": round(_mean([row["jaccard"] for row in rows]), 6),
             "mean_weighted_jaccard": round(_mean([row["weighted_jaccard"] for row in rows]), 6),
+            "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in rows]), 6),
+            "nonzero_blended": len(nonzero_blended),
+            "nonzero_blended_rate": round(len(nonzero_blended) / total, 6) if total else 0.0,
         },
         "by_model": {
             model: {
                 "count": len(model_rows),
                 "mean_jaccard": round(_mean([row["jaccard"] for row in model_rows]), 6),
                 "mean_weighted_jaccard": round(_mean([row["weighted_jaccard"] for row in model_rows]), 6),
+                "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in model_rows]), 6),
             }
             for model, model_rows in sorted(by_model.items())
         },
@@ -205,6 +215,7 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
                 "count": len(bab_rows),
                 "mean_jaccard": round(_mean([row["jaccard"] for row in bab_rows]), 6),
                 "mean_weighted_jaccard": round(_mean([row["weighted_jaccard"] for row in bab_rows]), 6),
+                "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in bab_rows]), 6),
             }
             for bab, bab_rows in sorted(by_bab.items())
             if bab

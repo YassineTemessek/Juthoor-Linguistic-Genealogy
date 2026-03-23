@@ -5,6 +5,7 @@ from typing import Any
 
 from juthoor_arabicgenome_lv1.core.feature_decomposition import (
     FEATURE_POLARITIES,
+    FEATURE_TO_CATEGORY,
     feature_categories,
     weighted_feature_vector,
 )
@@ -110,6 +111,37 @@ def weighted_jaccard_similarity(predicted: tuple[str, ...], actual: tuple[str, .
     numerator = sum(min(pred_weights.get(key, 0.0), actual_weights.get(key, 0.0)) for key in keys)
     denominator = sum(max(pred_weights.get(key, 0.0), actual_weights.get(key, 0.0)) for key in keys)
     return numerator / denominator if denominator else 0.0
+
+
+# ---------------------------------------------------------------------------
+# S3.16 — Category-level partial scoring
+# When exact feature Jaccard is 0 but predicted and actual features share a
+# semantic category (e.g. both in "pressure_force"), award partial credit.
+# Blended score: 0.7 * feature_jaccard + 0.3 * category_jaccard
+# ---------------------------------------------------------------------------
+
+def _feature_to_categories(features: tuple[str, ...]) -> frozenset[str]:
+    """Map features to their semantic categories, canonicalizing first."""
+    canon = _canonicalize(features)
+    return frozenset(FEATURE_TO_CATEGORY.get(f, "unknown") for f in canon) - {"unknown"}
+
+
+def category_jaccard(predicted: tuple[str, ...], actual: tuple[str, ...]) -> float:
+    """Jaccard similarity at the semantic category level."""
+    p_cats = _feature_to_categories(predicted)
+    a_cats = _feature_to_categories(actual)
+    if not p_cats and not a_cats:
+        return 1.0
+    if not p_cats or not a_cats:
+        return 0.0
+    return len(p_cats & a_cats) / len(p_cats | a_cats)
+
+
+def blended_jaccard(predicted: tuple[str, ...], actual: tuple[str, ...]) -> float:
+    """Feature-level Jaccard (70%) + category-level Jaccard (30%)."""
+    feat_j = jaccard_similarity(predicted, actual)
+    cat_j = category_jaccard(predicted, actual)
+    return 0.7 * feat_j + 0.3 * cat_j
 
 
 def score_prediction(

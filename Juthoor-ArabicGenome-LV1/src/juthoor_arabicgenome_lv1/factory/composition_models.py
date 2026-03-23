@@ -69,10 +69,15 @@ def model_phonetic_gestural(
     articulatory2: dict[str, Any] | None = None,
 ) -> CompositionResult:
     del articulatory1, articulatory2
-    # For Phase 3 root prediction this fallback should stay semantic.
-    # We preserve the full nucleus field and the full modifier field rather than
-    # injecting pronunciation metadata such as sifaat.
-    ordered = _ordered_unique(list(_as_features(letter1)) + list(_as_features(letter2)))
+    # S3.14 — Precision-capped semantic fallback.
+    # Take up to 2 features from the nucleus (letter1, dominant) and up to 1
+    # from the modifier (letter2). This avoids the over-prediction problem
+    # where concatenating all features from both sides (4-7 total) floods the
+    # output with noise and tanks Jaccard precision.
+    f1 = _as_features(letter1)
+    f2 = _as_features(letter2)
+    combined = list(f1[:2]) + list(f2[:1])
+    ordered = _ordered_unique(combined)
     return CompositionResult("phonetic_gestural", ordered, _categories(ordered))
 
 
