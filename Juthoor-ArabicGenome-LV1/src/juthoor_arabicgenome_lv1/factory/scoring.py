@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from typing import Any
 
 from juthoor_arabicgenome_lv1.core.feature_decomposition import (
+    FEATURE_POLARITIES,
     feature_categories,
     weighted_feature_vector,
 )
@@ -20,9 +21,71 @@ class ScoredPrediction:
     weighted_jaccard: float
 
 
+# ---------------------------------------------------------------------------
+# S1.1 — Synonym groups for Jaccard scoring
+# Features within the same group are treated as identical during scoring.
+# This collapses near-synonymous Arabic terms that appear in Jabal's corpus
+# and the prediction vocabulary but differ lexically.
+# ---------------------------------------------------------------------------
+
+SYNONYM_GROUPS: tuple[frozenset[str], ...] = (
+    frozenset({"امتداد", "طول"}),                          # extension / length
+    frozenset({"تفشي", "انتشار"}),                         # spreading / diffusion
+    frozenset({"دقة", "رقة", "لطف"}),                      # fineness / delicacy
+    frozenset({"تعقد", "كثافة"}),                          # density / complexity
+    frozenset({"اكتناز", "تجمع"}),                         # compaction / gathering
+    frozenset({"خروج", "بروز", "ظهور"}),                   # emergence / protrusion
+    frozenset({"احتباس", "ضغط"}),                          # retention / pressure
+    frozenset({"نفاذ", "اختراق"}),                         # passage / penetration
+    frozenset({"غلظ", "كثافة", "ثخانة"}),                  # thickness / density
+    frozenset({"إمساك", "امتساك"}),                        # holding / gripping
+    frozenset({"التحام", "تلاصق", "تماسك"}),              # fusion / cohesion / adhesion
+    frozenset({"اشتمال", "احتواء"}),                       # containment / enveloping
+    frozenset({"تفرق", "تخلخل"}),                          # dispersal / loosening
+    frozenset({"فراغ", "تخلخل"}),                          # void / loosening
+    frozenset({"باطن", "عمق", "جوف"}),                     # inner / depth / hollow
+)
+
+# Build a canonical-form lookup: feature -> canonical (first in frozenset, sorted)
+_SYNONYM_CANONICAL: dict[str, str] = {}
+for _group in SYNONYM_GROUPS:
+    _canon = min(_group)  # deterministic canonical form
+    for _feat in _group:
+        _SYNONYM_CANONICAL[_feat] = _canon
+
+
+def _canonicalize(features: tuple[str, ...]) -> frozenset[str]:
+    """Map each feature to its synonym-group canonical form, return as a set."""
+    return frozenset(_SYNONYM_CANONICAL.get(f, f) for f in features)
+
+
+# ---------------------------------------------------------------------------
+# S1.3 — Semantic opposition mapping for Golden Rule scoring
+# Extends FEATURE_POLARITIES with the additional pairs from the task spec.
+# ---------------------------------------------------------------------------
+
+SEMANTIC_OPPOSITES: dict[str, str] = {
+    **FEATURE_POLARITIES,
+    # Additional opposites not already in FEATURE_POLARITIES
+    "قوة": "رخاوة",
+    "رخاوة": "قوة",
+    "غلظ": "رقة",
+    "رقة": "غلظ",
+    "امتداد": "انحسار",
+    "انحسار": "امتداد",
+    "نقص": "اتساع",
+    "اتساع": "نقص",
+}
+
+
+def invert_features_extended(features: tuple[str, ...]) -> frozenset[str]:
+    """Invert features using the extended SEMANTIC_OPPOSITES map."""
+    return frozenset(SEMANTIC_OPPOSITES.get(f, f) for f in features)
+
+
 def jaccard_similarity(predicted: tuple[str, ...], actual: tuple[str, ...]) -> float:
-    p = set(predicted)
-    a = set(actual)
+    p = _canonicalize(predicted)
+    a = _canonicalize(actual)
     if not p and not a:
         return 1.0
     if not p or not a:
@@ -31,8 +94,11 @@ def jaccard_similarity(predicted: tuple[str, ...], actual: tuple[str, ...]) -> f
 
 
 def weighted_jaccard_similarity(predicted: tuple[str, ...], actual: tuple[str, ...]) -> float:
-    pred_weights = weighted_feature_vector(predicted)
-    actual_weights = weighted_feature_vector(actual)
+    # Canonicalize before weighting so synonym variants collapse
+    pred_canon = tuple(_SYNONYM_CANONICAL.get(f, f) for f in predicted)
+    actual_canon = tuple(_SYNONYM_CANONICAL.get(f, f) for f in actual)
+    pred_weights = weighted_feature_vector(pred_canon)
+    actual_weights = weighted_feature_vector(actual_canon)
     keys = set(pred_weights) | set(actual_weights)
     if not keys:
         return 1.0
