@@ -1,0 +1,541 @@
+[
+  {
+    "binary_root": "خف",
+    "predicted_features": [
+      "تخلخل"
+    ],
+    "actual_features": [
+      "تخلخل"
+    ],
+    "method_b_jaccard": 1.0
+  },
+  {
+    "binary_root": "ضم",
+    "predicted_features": [
+      "ضغط"
+    ],
+    "actual_features": [
+      "ضغط"
+    ],
+    "method_b_jaccard": 1.0
+  },
+  {
+    "binary_root": "فد",
+    "predicted_features": [
+      "قوة"
+    ],
+    "actual_features": [
+      "قوة"
+    ],
+    "method_b_jaccard": 1.0
+  },
+  {
+    "binary_root": "نص",
+    "predicted_features": [
+      "امتداد",
+      "نفاذ"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "امتداد"
+    ],
+    "method_b_jaccard": 1.0
+  },
+  {
+    "binary_root": "ذر",
+    "predicted_features": [
+      "نفاذ",
+      "استرسال"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "دقة",
+      "استرسال"
+    ],
+    "method_b_jaccard": 0.666667
+  },
+  {
+    "binary_root": "سط",
+    "predicted_features": [
+      "امتداد",
+      "دقة"
+    ],
+    "actual_features": [
+      "امتداد",
+      "دقة",
+      "غلظ"
+    ],
+    "method_b_jaccard": 0.666667
+  },
+  {
+    "binary_root": "بض",
+    "predicted_features": [
+      "رخاوة"
+    ],
+    "actual_features": [
+      "تجمع",
+      "رخاوة"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "بن",
+    "predicted_features": [
+      "تجمع",
+      "امتداد"
+    ],
+    "actual_features": [
+      "امتداد"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "ثج",
+    "predicted_features": [
+      "كثافة",
+      "تجمع"
+    ],
+    "actual_features": [
+      "تجمع"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "ثخ",
+    "predicted_features": [
+      "غلظ"
+    ],
+    "actual_features": [
+      "كثافة",
+      "غلظ"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "جث",
+    "predicted_features": [
+      "تجمع",
+      "كثافة"
+    ],
+    "actual_features": [
+      "تجمع"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "جم",
+    "predicted_features": [
+      "تجمع",
+      "امتساك"
+    ],
+    "actual_features": [
+      "تجمع"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "حش",
+    "predicted_features": [
+      "جفاف"
+    ],
+    "actual_features": [
+      "جفاف",
+      "انتشار"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "ذق",
+    "predicted_features": [
+      "نفاذ",
+      "تعقد"
+    ],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "ذن",
+    "predicted_features": [
+      "نفاذ",
+      "امتداد"
+    ],
+    "actual_features": [
+      "امتداد"
+    ],
+    "method_b_jaccard": 0.5
+  },
+  {
+    "binary_root": "سخ",
+    "predicted_features": [
+      "دقة"
+    ],
+    "actual_features": [
+      "اختراق"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سد",
+    "predicted_features": [
+      "امتداد"
+    ],
+    "actual_features": [],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سس",
+    "predicted_features": [
+      "امتداد",
+      "دقة",
+      "وحدة",
+      "حدة"
+    ],
+    "actual_features": [
+      "عمق"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سع",
+    "predicted_features": [
+      "حدة"
+    ],
+    "actual_features": [
+      "اتساع",
+      "حيز"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سغ",
+    "predicted_features": [
+      "دقة"
+    ],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سف",
+    "predicted_features": [
+      "امتداد",
+      "طرد"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "ظهور"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سق",
+    "predicted_features": [
+      "امتداد",
+      "تعقد"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "غلظ",
+      "جوف"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سك",
+    "predicted_features": [
+      "دقة"
+    ],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سل",
+    "predicted_features": [
+      "امتداد"
+    ],
+    "actual_features": [
+      "طول"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سم",
+    "predicted_features": [
+      "وحدة"
+    ],
+    "actual_features": [],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "سو",
+    "predicted_features": [
+      "امتداد",
+      "اشتمال"
+    ],
+    "actual_features": [
+      "ظاهر",
+      "استواء"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شب",
+    "predicted_features": [
+      "دقة"
+    ],
+    "actual_features": [
+      "تجمع",
+      "انتشار"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شت",
+    "predicted_features": [
+      "دقة"
+    ],
+    "actual_features": [
+      "تفرق"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شج",
+    "predicted_features": [
+      "تفشي",
+      "تجمع"
+    ],
+    "actual_features": [],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شح",
+    "predicted_features": [
+      "دقة"
+    ],
+    "actual_features": [
+      "جفاف"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شخ",
+    "predicted_features": [
+      "تفشي",
+      "انتشار",
+      "دقة"
+    ],
+    "actual_features": [
+      "جفاف"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شد",
+    "predicted_features": [
+      "تفشي",
+      "احتباس"
+    ],
+    "actual_features": [],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شر",
+    "predicted_features": [
+      "تفشي",
+      "استرسال"
+    ],
+    "actual_features": [
+      "انتشار"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شط",
+    "predicted_features": [
+      "دقة"
+    ],
+    "actual_features": [
+      "امتداد"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "شظ",
+    "predicted_features": [
+      "دقة"
+    ],
+    "actual_features": [
+      "نفاذ"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نط",
+    "predicted_features": [
+      "امتداد"
+    ],
+    "actual_features": [
+      "حيز",
+      "قوة"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نظ",
+    "predicted_features": [
+      "امتداد",
+      "نفاذ"
+    ],
+    "actual_features": [],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نع",
+    "predicted_features": [
+      "امتداد",
+      "التحام"
+    ],
+    "actual_features": [
+      "رخاوة",
+      "رقة"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نغ",
+    "predicted_features": [
+      "امتداد",
+      "تخلخل"
+    ],
+    "actual_features": [
+      "رخاوة",
+      "باطن"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نف",
+    "predicted_features": [
+      "امتداد",
+      "طرد"
+    ],
+    "actual_features": [
+      "نفاذ",
+      "إبعاد",
+      "انتشار"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نق",
+    "predicted_features": [
+      "باطن"
+    ],
+    "actual_features": [
+      "فراغ",
+      "عمق",
+      "غلظ"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نك",
+    "predicted_features": [
+      "امتداد",
+      "ضغط"
+    ],
+    "actual_features": [
+      "وصول",
+      "عمق",
+      "دقة"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نل",
+    "predicted_features": [
+      "امتداد"
+    ],
+    "actual_features": [
+      "دقة"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نن",
+    "predicted_features": [
+      "امتداد",
+      "باطن"
+    ],
+    "actual_features": [
+      "جوف"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "نو",
+    "predicted_features": [
+      "امتداد",
+      "اشتمال"
+    ],
+    "actual_features": [
+      "احتواء",
+      "جوف"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "وح",
+    "predicted_features": [
+      "اشتمال",
+      "احتكاك"
+    ],
+    "actual_features": [],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "وع",
+    "predicted_features": [
+      "اشتمال",
+      "احتواء"
+    ],
+    "actual_features": [
+      "جوف"
+    ],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "وف",
+    "predicted_features": [
+      "اشتمال",
+      "طرد"
+    ],
+    "actual_features": [],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "ون",
+    "predicted_features": [
+      "اشتمال",
+      "امتداد"
+    ],
+    "actual_features": [],
+    "method_b_jaccard": 0.0
+  },
+  {
+    "binary_root": "يوم",
+    "predicted_features": [
+      "اتصال"
+    ],
+    "actual_features": [
+      "امتداد"
+    ],
+    "method_b_jaccard": 0.0
+  }
+]
