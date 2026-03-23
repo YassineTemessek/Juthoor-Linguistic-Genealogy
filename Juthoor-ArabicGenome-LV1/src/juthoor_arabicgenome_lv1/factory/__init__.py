@@ -9,6 +9,16 @@ from .canon_feedback import (
     is_promotable_positional_profile,
     is_promotable_quranic_profile,
 )
+from .sound_laws import (
+    KHASHIM_SOUND_LAWS,
+    PHONETIC_SUCCESSION_GROUPS,
+    are_in_same_succession_group,
+    normalize_arabic_root,
+    project_root_by_target,
+    project_root_sound_laws,
+    substitution_options,
+    succession_group,
+)
 
 __all__ = [
     "save_feature",
@@ -25,4 +35,12 @@ __all__ = [
     "is_promotable_letter_semantics",
     "is_promotable_positional_profile",
     "is_promotable_quranic_profile",
+    "KHASHIM_SOUND_LAWS",
+    "PHONETIC_SUCCESSION_GROUPS",
+    "are_in_same_succession_group",
+    "normalize_arabic_root",
+    "project_root_by_target",
+    "project_root_sound_laws",
+    "substitution_options",
+    "succession_group",
 ]

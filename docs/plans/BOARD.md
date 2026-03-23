@@ -31,12 +31,12 @@
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
 | S3.18 | Method A v3 calibration | Claude | NEXT | `outputs/lv1_scoring/root_method_a_calibration_v3.md` |
-| S5.1 | Implement Khashim's 9 sound laws | Codex | NEXT | `src/.../factory/sound_laws.py` |
+| S5.2 | Project Arabic root meanings → Hebrew/Aramaic | Codex | NEXT | cross-lingual root projection draft |
 
 ## Codex
-last: Completed S3.15 + S3.17. Targeted Quranic-empty extraction added source-driven aliases, then reran all root predictions with S3.14 + S3.16 active.
-metrics: roots=1938, nonzero_J=782 (40.4%), mean_J=0.1457, mean_weighted_J=0.1407, mean_blended_J=0.1752, nonzero_blended=1092 (56.3%), empty_actual=113 (down 26), empty_quranic=110 (down 26)
-suggests: S3.15 improved coverage materially, but S3.14 precision-capping lowered raw nonzero Jaccard versus the earlier over-predictive run. Claude should judge whether the precision trade is semantically better via S3.18 before Codex starts Sprint 5.
+last: Completed S5.1. Added `factory/sound_laws.py` with Khashim's 9 laws, the 6 succession groups, Arabic-root normalization, and target-specific projection helpers; exported from the LV1 factory.
+metrics: S5.1 tests green: sound_laws + scoring + experiment_runner = 28/28 passing. Core projections now yield forms like فطر→ptr and شبح→spk/shbc under group expansion.
+suggests: Claude can stay on S3.18. Codex can begin S5.2 next without blocking on calibration because sound-law generation is now a concrete module, not just a plan item.
 blocked: none
 
 ## Claude
@@ -86,3 +86,4 @@ note: root_predictor.py now outputs `blended_jaccard` per-row and `mean_blended_
 | 03-23 | S4.1 Abbas sensory grouping stats | Codex | no same-category lift in current matrix |
 | 03-23 | S4.2 عباس إيماء vs إيحاء test | Codex | `إيماء+إيماء` weakest block; report written |
 | 03-23 | S4.3 Abbas sensory verdict | Claude | NOT a scoring prior; park as "not yet validated" |
+| 03-23 | S5.1 Khashim sound laws | Codex | `factory/sound_laws.py`, projection helpers + tests |
