@@ -24,6 +24,7 @@ docs/PROGRESS_LOG.md
 
 # Python/Environment
 __pycache__/
+**/__pycache__/
 *.pyc
 *.egg-info/
 .pytest_cache/
@@ -32,12 +33,19 @@ __pycache__/
 .env
 .claude/
 nul
+uv.lock
+
+# Local build artifacts
+**/dist/
 
 # LV0 processed data (large, regenerate locally)
 Juthoor-DataCore-LV0/data/processed/**
 
 # Muajam XLSX source (duplicated in LV1)
 Muajam Ishtiqaqi/
+
+# Local LV1 raw theory corpus used for extraction scripts
+Juthoor-ArabicGenome-LV1/docs/The Arabic Tongue (nature-genome-application)/
 
 # Legacy generated outputs
 Quran-Corpus-Analysis/
