@@ -25,6 +25,17 @@ def _write_promoted(tmp_path: Path) -> Path:
         json.dumps({"binary_root_a": "qb", "binary_root_b": "bq"}) + "\n",
         encoding="utf-8",
     )
+    (features / "cross_lingual_support.jsonl").write_text(
+        json.dumps(
+            {
+                "binary_root": "ʕy",
+                "semitic_support": {"rows": 2, "exact_hit_rate": 0.5, "binary_hit_rate": 1.0},
+                "non_semitic_support": {"rows": 0, "exact_hit_rate": 0.0, "binary_hit_rate": 0.0},
+                "support_score": 0.85,
+            }
+        ) + "\n",
+        encoding="utf-8",
+    )
     return tmp_path
 
 
@@ -187,6 +198,14 @@ def test_genome_bonus_applies_for_semitic_pair(tmp_path: Path):
     assert bonus == 0.13, f"Expected 0.13 for semitic_semitic pair, got {bonus}"
 
 
+def test_cross_lingual_support_loaded_for_binary_root(tmp_path: Path):
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    support = scorer.cross_lingual_support("عين")
+    assert support is not None
+    assert support["binary_root"] == "ʕy"
+    assert support["support_score"] == 0.85
+
+
 def test_genome_bonus_no_lang_field_falls_through(tmp_path: Path):
     """When lang fields are absent the guard is skipped and scoring proceeds normally."""
     scorer = GenomeScorer(_write_promoted(tmp_path))
@@ -196,4 +215,3 @@ def test_genome_bonus_no_lang_field_falls_through(tmp_path: Path):
         {"lemma": "עין"},
     )
     assert bonus == 0.13
-

@@ -70,7 +70,18 @@ def _apply_genome_bonus(
     boosted = dict(hybrid)
     components = dict(boosted.get("components") or {})
     bonus = genome_scorer.genome_bonus(source_fields, target_fields)
+    source_root = source_fields.get("root_norm") or source_fields.get("root") or source_fields.get("lemma", "")
+    support = genome_scorer.cross_lingual_support(str(source_root)) if source_root else None
     components["genome_bonus"] = round(bonus, 6) if bonus != 0.0 else 0.0
+    if support is not None:
+        components["cross_lingual_support"] = round(float(support.get("support_score", 0.0) or 0.0), 6)
+        semitic = support.get("semitic_support") or {}
+        non_semitic = support.get("non_semitic_support") or {}
+        components["cross_lingual_binary_hit_rate"] = round(float(semitic.get("binary_hit_rate", 0.0) or 0.0), 6)
+        components["cross_lingual_exact_hit_rate"] = round(float(semitic.get("exact_hit_rate", 0.0) or 0.0), 6)
+        components["non_semitic_binary_hit_rate"] = round(float(non_semitic.get("binary_hit_rate", 0.0) or 0.0), 6)
+    else:
+        components.setdefault("cross_lingual_support", 0.0)
     boosted["components"] = components
     if bonus == 0.0:
         return boosted
