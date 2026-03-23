@@ -38,3 +38,5 @@ def test_decompose_extended_synonym_groups() -> None:
     assert decompose_semantic_text("الثبات والرسوخ") == ("امتساك", "تماسك")
     assert decompose_semantic_text("التغطية والإخفاء") == ("اشتمال", "باطن")
     assert decompose_semantic_text("الارتفاع الشاهق") == ("صعود",)
+    assert decompose_semantic_text("الاستقرار والرجوع") == ("جوف", "انتقال")
+    assert decompose_semantic_text("الحسن والنقاء") == ("خلوص",)
