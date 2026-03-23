@@ -30,22 +30,21 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| S5.3 | Score projections against LV2 benchmark (73 Semitic gold pairs) | Codex | NEXT | cross-validation output |
 | S5.4 | Project Arabic root meanings → English/Latin/Greek | Codex | NEXT | Khashim + Beyond the Word shifts |
-| S5.5 | Cross-linguistic validation report | Claude | BLOCKED | do LV1 predictions survive cross-linguistically? |
+| S5.5 | Cross-linguistic validation report | Claude | NEXT | do LV1 predictions survive cross-linguistically? |
 
 ## Codex
-last: Completed S5.2. Added `factory/cross_lingual_projection.py` and materialized benchmark Semitic projections at `outputs/lv1_scoring/benchmark_semitic_projections.json`.
-metrics: direct Semitic benchmark coverage = 44/73 (60.3%) = 32 Hebrew + 12 Aramaic; `test_cross_lingual_projection.py` + `test_sound_laws.py` = 10/10 passing.
-suggests: Sprint 5 is now in evaluation mode. Next Codex step is S5.3 scoring on the 44 matched Semitic rows, while S5.4 can begin in parallel if the Semitic scorer is straightforward.
+last: Completed S5.3. Added `factory/cross_lingual_scoring.py` and scored the 44 matched Semitic benchmark projections.
+metrics: 44 scored rows; exact projection hits = 35/44 (79.5%), binary-prefix hits = 38/44 (86.4%), mean similarity = 0.937. Hebrew exact = 25/32 (78.1%), Aramaic exact = 10/12 (83.3%). Scoring + projection + sound-law tests = 14/14 passing.
+suggests: Claude can start S5.5 now from the Semitic scoring summary. Codex should move to S5.4 next to see how far the non-Semitic side lags behind the Semitic projection quality.
 blocked: none
 
 ## Claude
-last: S3.18 DONE — Sprint 3 CLOSED. Method A v3 ~36.7% (target was >55%). Report at `root_method_a_calibration_v3.md`. Recommended closing Sprint 3 and moving to Sprint 5 cross-lingual validation.
-verdict: LV1 genome is a hypothesis generator, not a proof engine. 37% Method A + 56% blended coverage = majority of roots have directionally correct predictions. Strong enough to project cross-linguistically.
-next-codex: S5.2 → S5.3 → S5.4 (project Arabic roots to Hebrew/Aramaic/English via sound laws, score against LV2 benchmark)
-next-claude: S5.5 cross-linguistic validation report after S5.3+S5.4.
-note: Use `mean_blended_jaccard` (0.175) as primary automated metric going forward. Sprint 3 ceiling ~40-45% without neural/embedding models.
+last: S3.18 DONE, Sprint 3 CLOSED. Read Codex S5.1+S5.2 — sound laws + cross-lingual projection module landed. 44/73 Semitic benchmark coverage.
+verdict: Sprint 5 infrastructure is solid. Semitic side now has both projection and benchmark scoring; Claude can begin S5.5 from the Semitic results and extend it after S5.4 if needed.
+next-codex: S5.4 English/Latin/Greek projections
+next-claude: S5.5 cross-linguistic validation report
+note: none
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
@@ -91,3 +90,5 @@ note: Use `mean_blended_jaccard` (0.175) as primary automated metric going forwa
 | 03-23 | S4.3 Abbas sensory verdict | Claude | NOT a scoring prior; park as "not yet validated" |
 | 03-23 | S3.18 Method A v3 calibration | Claude | Sprint 3 CLOSED. Method A ~36.7%, blended 0.175 |
 | 03-23 | S5.1 Khashim sound laws | Codex | `factory/sound_laws.py`, projection helpers + tests |
+| 03-23 | S5.2 Semitic projection layer | Codex | `benchmark_semitic_projections.json`, coverage 44/73 |
+| 03-23 | S5.3 Semitic benchmark scoring | Codex | `benchmark_semitic_scoring_summary.json`, exact hit 79.5% |

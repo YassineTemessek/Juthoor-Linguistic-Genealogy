@@ -25,6 +25,12 @@ from .cross_lingual_projection import (
     normalize_arabic_lemma,
     projection_summary,
 )
+from .cross_lingual_scoring import (
+    best_similarity,
+    score_projection_row,
+    summarize_projection_scores,
+    target_variants,
+)
 
 __all__ = [
     "save_feature",
@@ -53,4 +59,8 @@ __all__ = [
     "load_benchmark_rows",
     "normalize_arabic_lemma",
     "projection_summary",
+    "best_similarity",
+    "score_projection_row",
+    "summarize_projection_scores",
+    "target_variants",
 ]

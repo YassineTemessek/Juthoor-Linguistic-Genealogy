@@ -1,0 +1,26 @@
+{
+  "rows": 44,
+  "exact_hits": 35,
+  "exact_hit_rate": 0.795455,
+  "binary_hits": 38,
+  "binary_hit_rate": 0.863636,
+  "mean_similarity": 0.937446,
+  "by_target_lang": {
+    "arc": {
+      "count": 12,
+      "exact_hits": 10,
+      "exact_hit_rate": 0.833333,
+      "binary_hits": 11,
+      "binary_hit_rate": 0.916667,
+      "mean_similarity": 0.966667
+    },
+    "heb": {
+      "count": 32,
+      "exact_hits": 25,
+      "exact_hit_rate": 0.78125,
+      "binary_hits": 27,
+      "binary_hit_rate": 0.84375,
+      "mean_similarity": 0.926488
+    }
+  }
+}

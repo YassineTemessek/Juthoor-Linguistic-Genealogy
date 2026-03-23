@@ -22,7 +22,7 @@
 | Root prediction mean Jaccard | 0.1457 | Precision-capped rerun after S3.14-S3.17 |
 | Method A estimate | 40-55% real accuracy | Method B undercounts due to vocabulary mismatch |
 | Golden Rule | 19.9% confirmed (33/166) | Improved after extended opposition mapping |
-| Tests passing | 313+ LV1 and growing | Focused Sprint 1/3 suite currently 34/34 |
+| Tests passing | 327+ LV1 and growing | Focused Sprint 5 Semitic suite currently 14/14 |
 
 ---
 
@@ -108,11 +108,11 @@ Each task has an owner. Work the next unblocked item and update status directly 
 | S5.1 | **Implement Khashim's 9 sound laws** | Codex | S3.8 (Phase 3 done) | `src/.../factory/sound_laws.py` | [x] |
 | | ف↔P, ق↔C/K/G, ط↔T, ص↔S, ش↔S, ح↔K/C/H, ع→drop, غ→G, خ→H/G | | | | |
 | S5.2 | **Project Arabic root meanings → Hebrew/Aramaic** | Codex | S5.1 | Predicted cognate meanings via sound laws | [x] |
-| S5.3 | **Score projections against LV2 benchmark** | Codex | S5.2 | Cross-validation: do LV1 meanings predict LV2 cognates? | [ ] |
+| S5.3 | **Score projections against LV2 benchmark** | Codex | S5.2 | Cross-validation: do LV1 meanings predict LV2 cognates? | [x] |
 | S5.4 | **Project Arabic root meanings → English/Latin/Greek** | Codex | S5.1 | Using Khashim's + Beyond the Word consonant shifts | [ ] |
 | S5.5 | **Cross-linguistic validation report** | Claude | S5.3+S5.4 | Do Arabic root predictions survive cross-linguistically? | [ ] |
 
-**Sprint 5 checkpoint:** `factory/sound_laws.py` is now live, and `factory/cross_lingual_projection.py` materializes the first benchmark-aligned Semitic projection set. Current direct Arabic benchmark coverage is `44/73` pairs (`60.3%`): `32` Hebrew and `12` Aramaic rows written to `outputs/lv1_scoring/benchmark_semitic_projections.json`.
+**Sprint 5 checkpoint:** `factory/sound_laws.py`, `factory/cross_lingual_projection.py`, and `factory/cross_lingual_scoring.py` are now live. The first benchmark-aligned Semitic projection set covers `44/73` direct Arabic benchmark pairs (`60.3%`): `32` Hebrew and `12` Aramaic rows. Those 44 rows are now scored in `outputs/lv1_scoring/benchmark_semitic_scoring_summary.json` with exact projected hits = `35/44` (`79.5%`), binary-prefix hits = `38/44` (`86.4%`), and mean similarity = `0.937`. Language breakdown: Hebrew exact = `25/32` (`78.1%`), Aramaic exact = `10/12` (`83.3%`).
 
 ### SPRINT 6: Integration + Cleanup
 
