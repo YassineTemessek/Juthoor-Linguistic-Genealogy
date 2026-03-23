@@ -25,9 +25,16 @@ def test_decompose_handles_synonyms_and_normalization() -> None:
 
 def test_invert_features_maps_polarities() -> None:
     assert invert_features(("تجمع", "باطن", "ضغط")) == ("تفرق", "ظاهر", "فراغ")
+    assert invert_features(("خروج", "وصول", "تعلق")) == ("احتواء", "إبعاد", "استقلال")
 
 
 def test_decompose_compound_jabal_nucleus_meanings() -> None:
     assert decompose_semantic_text("النشر والتفريق") == ("انتشار", "تفرق")
     assert decompose_semantic_text("الانفتاح والمنفذ") == ("اتساع", "نفاذ")
     assert decompose_semantic_text("إفراز شيء مكروه ونفيه") == ("إفراغ", "إبعاد")
+
+
+def test_decompose_extended_synonym_groups() -> None:
+    assert decompose_semantic_text("الثبات والرسوخ") == ("امتساك", "تماسك")
+    assert decompose_semantic_text("التغطية والإخفاء") == ("اشتمال", "باطن")
+    assert decompose_semantic_text("الارتفاع الشاهق") == ("صعود",)
