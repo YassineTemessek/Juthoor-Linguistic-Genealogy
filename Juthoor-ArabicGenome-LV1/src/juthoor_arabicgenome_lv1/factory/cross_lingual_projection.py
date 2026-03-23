@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +17,7 @@ TARGET_FAMILIES = {
     "grc": "greek",
 }
 WEAK_ARABIC_LETTERS = {"ا", "و", "ي"}
+ROOT_TOKEN_SPLIT_RE = re.compile(r"[-/]")
 
 ARABIC_NORMALIZE_MAP = str.maketrans(
     {
@@ -52,6 +54,18 @@ def _candidate_root_keys(lemma: str) -> tuple[str, ...]:
     return tuple(ordered)
 
 
+def _root_index_keys(root: str) -> tuple[str, ...]:
+    ordered: dict[str, None] = {}
+    normalized = normalize_arabic_lemma(root)
+    if normalized:
+        ordered[normalized] = None
+    for part in ROOT_TOKEN_SPLIT_RE.split(root):
+        part_normalized = normalize_arabic_lemma(part)
+        if part_normalized:
+            ordered[part_normalized] = None
+    return tuple(ordered)
+
+
 def load_benchmark_rows(path: Path) -> list[dict[str, Any]]:
     return [
         json.loads(line)
@@ -66,10 +80,10 @@ def build_projection_rows(
     *,
     target_langs: set[str],
 ) -> list[dict[str, Any]]:
-    root_by_lemma = {
-        normalize_arabic_lemma(row["root"]): row
-        for row in root_prediction_rows
-    }
+    root_by_lemma: dict[str, dict[str, Any]] = {}
+    for row in root_prediction_rows:
+        for key in _root_index_keys(row["root"]):
+            root_by_lemma.setdefault(key, row)
 
     projected_rows: list[dict[str, Any]] = []
     for bench in benchmark_rows:
@@ -80,7 +94,8 @@ def build_projection_rows(
             continue
 
         root_row = None
-        for key in _candidate_root_keys(source.get("lemma", "")):
+        source_root_hint = source.get("root_norm") or source.get("root") or source.get("lemma", "")
+        for key in _candidate_root_keys(source_root_hint):
             root_row = root_by_lemma.get(key)
             if root_row is not None:
                 break
