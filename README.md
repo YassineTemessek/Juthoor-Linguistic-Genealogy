@@ -177,12 +177,41 @@ Success means the system can:
 
 ---
 
+## Repository Structure
+
+```
+Juthoor-Linguistic-Genealogy/
+├── Juthoor-DataCore-LV0/         # LV0: Data ingestion and canonization
+├── Juthoor-ArabicGenome-LV1/     # LV1: Arabic root system + research factory
+├── Juthoor-CognateDiscovery-LV2/ # LV2: Cross-lingual cognate discovery
+├── Juthoor-Origins-LV3/          # LV3: Theory synthesis (docs only)
+├── Resources/                    # Raw data sources (gitignored)
+├── outputs/                      # Generated outputs (scoring, reports)
+│   ├── lv1_scoring/             # LV1 composition scores and calibration
+│   ├── reports/                 # LV2 evaluation reports
+│   └── research_factory/        # LV1 research factory results
+├── docs/                        # Project-level documentation
+│   ├── plans/                   # Active execution plans
+│   │   ├── STATUS_TRACKER.md    # <- START HERE after any interruption
+│   │   ├── NEXT_STEPS_ROADMAP.md
+│   │   ├── 2026-03-22-lv1-execution-orchestration.md
+│   │   └── 2026-03-23-lv1-phase2-3-orchestration.md
+│   ├── archive/                 # Completed/superseded docs
+│   ├── LV1_COMPLETE_OVERVIEW.md
+│   ├── PROGRESS_LOG.md
+│   └── RAW_DATA_FLOW.md
+└── README.md                    # This file
+```
+
+---
+
 ## Documentation
 
-- **[Project Overview](./docs/PROJECT_OVERVIEW.md)**: Detailed breakdown of the workspace and logic.
+- **[LV1 Complete Overview](./docs/LV1_COMPLETE_OVERVIEW.md)**: Full breakdown of the Arabic genome and research factory.
 - **[Data Flow](./docs/RAW_DATA_FLOW.md)**: How data moves from raw resources to canonical JSONL.
 - **[Progress Log](./docs/PROGRESS_LOG.md)**: Tracking the development milestones.
 - **[LV2 Benchmarks](./Juthoor-CognateDiscovery-LV2/resources/benchmarks/README.md)**: Evaluation assets, coverage checks, and slice-generation workflow.
+- **[Status Tracker](./docs/plans/STATUS_TRACKER.md)**: Resume point after any interruption.
 
 ---
 
