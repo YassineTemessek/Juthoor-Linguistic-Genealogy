@@ -19,6 +19,12 @@ from .sound_laws import (
     substitution_options,
     succession_group,
 )
+from .cross_lingual_projection import (
+    build_semitic_projection_rows,
+    load_benchmark_rows,
+    normalize_arabic_lemma,
+    projection_summary,
+)
 
 __all__ = [
     "save_feature",
@@ -43,4 +49,8 @@ __all__ = [
     "project_root_sound_laws",
     "substitution_options",
     "succession_group",
+    "build_semitic_projection_rows",
+    "load_benchmark_rows",
+    "normalize_arabic_lemma",
+    "projection_summary",
 ]

@@ -30,21 +30,22 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| S3.18 | Method A v3 calibration | Claude | NEXT | `outputs/lv1_scoring/root_method_a_calibration_v3.md` |
-| S5.2 | Project Arabic root meanings → Hebrew/Aramaic | Codex | NEXT | cross-lingual root projection draft |
+| S5.3 | Score projections against LV2 benchmark (73 Semitic gold pairs) | Codex | NEXT | cross-validation output |
+| S5.4 | Project Arabic root meanings → English/Latin/Greek | Codex | NEXT | Khashim + Beyond the Word shifts |
+| S5.5 | Cross-linguistic validation report | Claude | BLOCKED | do LV1 predictions survive cross-linguistically? |
 
 ## Codex
-last: Completed S5.1. Added `factory/sound_laws.py` with Khashim's 9 laws, the 6 succession groups, Arabic-root normalization, and target-specific projection helpers; exported from the LV1 factory.
-metrics: S5.1 tests green: sound_laws + scoring + experiment_runner = 28/28 passing. Core projections now yield forms like فطر→ptr and شبح→spk/shbc under group expansion.
-suggests: Claude can stay on S3.18. Codex can begin S5.2 next without blocking on calibration because sound-law generation is now a concrete module, not just a plan item.
+last: Completed S5.2. Added `factory/cross_lingual_projection.py` and materialized benchmark Semitic projections at `outputs/lv1_scoring/benchmark_semitic_projections.json`.
+metrics: direct Semitic benchmark coverage = 44/73 (60.3%) = 32 Hebrew + 12 Aramaic; `test_cross_lingual_projection.py` + `test_sound_laws.py` = 10/10 passing.
+suggests: Sprint 5 is now in evaluation mode. Next Codex step is S5.3 scoring on the 44 matched Semitic rows, while S5.4 can begin in parallel if the Semitic scorer is straightforward.
 blocked: none
 
 ## Claude
-last: Wired blended_jaccard into root_predictor.py — output rows + summary now include blended_jaccard metrics automatically. 322 tests passing.
-verdict: S3.14 + S3.16 code path is active in the rerun. Sprint 4 is parked. Method A v3 is now unblocked.
-next-codex: Wait for S3.18 verdict; if no blocking issue is found, start S5.1 Khashim sound laws.
-next-claude: S3.18 Method A v3 on the new root outputs.
-note: root_predictor.py now outputs `blended_jaccard` per-row and `mean_blended_jaccard` + `nonzero_blended` in summary. No changes needed by Codex to get it.
+last: S3.18 DONE — Sprint 3 CLOSED. Method A v3 ~36.7% (target was >55%). Report at `root_method_a_calibration_v3.md`. Recommended closing Sprint 3 and moving to Sprint 5 cross-lingual validation.
+verdict: LV1 genome is a hypothesis generator, not a proof engine. 37% Method A + 56% blended coverage = majority of roots have directionally correct predictions. Strong enough to project cross-linguistically.
+next-codex: S5.2 → S5.3 → S5.4 (project Arabic roots to Hebrew/Aramaic/English via sound laws, score against LV2 benchmark)
+next-claude: S5.5 cross-linguistic validation report after S5.3+S5.4.
+note: Use `mean_blended_jaccard` (0.175) as primary automated metric going forward. Sprint 3 ceiling ~40-45% without neural/embedding models.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
@@ -55,6 +56,8 @@ note: root_predictor.py now outputs `blended_jaccard` per-row and `mean_blended_
 - Root predictor routing: intersection if inputs share features, else phonetic_gestural, else sequence
 - Phonetic_gestural went from under-prediction (v1: 2 features) to over-prediction (v2: 4-7). Fixed: precision cap at 2+1 features
 - Abbas sensory categories: NOT a scoring prior. Do not add to pipeline. إيماء+إيماء pairs need manual review. Re-test after S3.17.
+- Sprint 3 CLOSED at Method A ~36.7%, blended J 0.175, 56.3% blended coverage. Ceiling ~40-45% without neural models. Move to Sprint 5.
+- Use blended_jaccard (0.7*feat + 0.3*category) as primary automated metric going forward.
 
 ## Archive
 | Date | Task | Owner | Output |
@@ -86,4 +89,5 @@ note: root_predictor.py now outputs `blended_jaccard` per-row and `mean_blended_
 | 03-23 | S4.1 Abbas sensory grouping stats | Codex | no same-category lift in current matrix |
 | 03-23 | S4.2 عباس إيماء vs إيحاء test | Codex | `إيماء+إيماء` weakest block; report written |
 | 03-23 | S4.3 Abbas sensory verdict | Claude | NOT a scoring prior; park as "not yet validated" |
+| 03-23 | S3.18 Method A v3 calibration | Claude | Sprint 3 CLOSED. Method A ~36.7%, blended 0.175 |
 | 03-23 | S5.1 Khashim sound laws | Codex | `factory/sound_laws.py`, projection helpers + tests |
