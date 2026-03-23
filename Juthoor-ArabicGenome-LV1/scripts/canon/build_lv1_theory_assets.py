@@ -26,6 +26,40 @@ BINARY_OUT = CANON_ROOT / "binary_fields"
 ROOTS_OUT = CANON_ROOT / "roots"
 OUTPUT_ROOT = REPO_ROOT / "outputs" / "lv1_scoring"
 
+LETTER_NAME_TO_CHAR = {
+    "الهمزة": "ء",
+    "ألف المد": "ا",
+    "ألف": "ا",
+    "باء": "ب",
+    "تاء": "ت",
+    "ثاء": "ث",
+    "جيم": "ج",
+    "حاء": "ح",
+    "خاء": "خ",
+    "دال": "د",
+    "ذال": "ذ",
+    "راء": "ر",
+    "زاء": "ز",
+    "زاي": "ز",
+    "سين": "س",
+    "شين": "ش",
+    "صاد": "ص",
+    "ضاد": "ض",
+    "طاء": "ط",
+    "ظاء": "ظ",
+    "عين": "ع",
+    "غين": "غ",
+    "فاء": "ف",
+    "قاف": "ق",
+    "كاف": "ك",
+    "لام": "ل",
+    "ميم": "م",
+    "نون": "ن",
+    "هاء": "هـ",
+    "واو": "و",
+    "ياء": "ي",
+}
+
 
 def _read_jsonl(path: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
@@ -49,24 +83,45 @@ def _write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def _letter_row(
+    *,
+    letter: str,
+    scholar: str,
+    raw_description: str,
+    source_document: str,
+    letter_name: str | None = None,
+    sensory_category: str | None = None,
+    kinetic_gloss: str | None = None,
+    confidence: str = "medium",
+) -> dict[str, Any]:
+    features = decompose_semantic_text(raw_description)
+    return {
+        "letter": letter,
+        "letter_name": letter_name,
+        "scholar": scholar,
+        "raw_description": raw_description,
+        "atomic_features": list(features),
+        "feature_categories": list(feature_categories(features)),
+        "sensory_category": sensory_category,
+        "kinetic_gloss": kinetic_gloss,
+        "source_document": source_document,
+        "confidence": confidence,
+    }
+
+
 def _load_jabal_letters() -> list[dict[str, Any]]:
     rows = _read_jsonl(MUAJAM_ROOT / "letter_meanings.jsonl")
     out: list[dict[str, Any]] = []
     for row in rows:
-        features = decompose_semantic_text(row["meaning"])
         out.append(
-            {
-                "letter": row["letter"],
-                "letter_name": row["letter_name"],
-                "scholar": "jabal",
-                "raw_description": row["meaning"],
-                "atomic_features": list(features),
-                "feature_categories": list(feature_categories(features)),
-                "sensory_category": None,
-                "kinetic_gloss": None,
-                "source_document": "data/muajam/letter_meanings.jsonl",
-                "confidence": "high",
-            }
+            _letter_row(
+                letter=row["letter"],
+                letter_name=row["letter_name"],
+                scholar="jabal",
+                raw_description=row["meaning"],
+                source_document="data/muajam/letter_meanings.jsonl",
+                confidence="high",
+            )
         )
     return out
 
@@ -97,73 +152,98 @@ def _load_neili_letters() -> list[dict[str, Any]]:
         letter = row[0].replace("*", "").replace(" ", "")
         kinetic = row[1]
         gloss = row[2]
-        features = decompose_semantic_text(gloss)
         out.append(
-            {
-                "letter": letter,
-                "letter_name": None,
-                "scholar": "neili",
-                "raw_description": gloss,
-                "atomic_features": list(features),
-                "feature_categories": list(feature_categories(features)),
-                "sensory_category": None,
-                "kinetic_gloss": kinetic,
-                "source_document": str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
-                "confidence": "high",
-            }
+            _letter_row(
+                letter=letter,
+                scholar="neili",
+                raw_description=gloss,
+                kinetic_gloss=kinetic,
+                source_document=str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
+                confidence="high",
+            )
         )
     return out
 
 
 def _load_abbas_letters() -> list[dict[str, Any]]:
     summary = (DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
+    source_document = str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md")
     rows = _extract_markdown_table(summary, "#### نظام التصنيف الحسي الشامل")
-    out: list[dict[str, Any]] = []
+    out: dict[str, dict[str, Any]] = {}
     for row in rows[1:]:
         category = row[0].replace("*", "")
         letters = [item.strip() for item in row[1].split("،")]
         for letter in letters:
             if not letter:
                 continue
-            features = decompose_semantic_text(row[2])
-            out.append(
-                {
-                    "letter": letter,
-                    "letter_name": None,
-                    "scholar": "hassan_abbas",
-                    "raw_description": row[2],
-                    "atomic_features": list(features),
-                    "feature_categories": list(feature_categories(features)),
-                    "sensory_category": category,
-                    "kinetic_gloss": None,
-                    "source_document": str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
-                    "confidence": "medium",
-                }
+            out[letter] = _letter_row(
+                letter=letter,
+                scholar="hassan_abbas",
+                raw_description=row[2],
+                sensory_category=category,
+                source_document=source_document,
             )
-    return out
+
+    # The summary table omits Abbas's separate treatment of الواو and الياء.
+    out["و"] = _letter_row(
+        letter="و",
+        letter_name="الواو",
+        scholar="hassan_abbas",
+        raw_description="فعالية وامتداد إلى الأمام من غير إحساس حسي آخر.",
+        sensory_category="بصرية",
+        source_document=str(THEORY_ROOT / "حسن عباس" / "خصائص الحروف العربية ومعانيها - حسن عباس.md"),
+        confidence="medium",
+    )
+    out["ي"] = _letter_row(
+        letter="ي",
+        letter_name="الياء",
+        scholar="hassan_abbas",
+        raw_description="جوف وباطن واستقرار في الصميم أو في حفرة.",
+        sensory_category="بصرية",
+        source_document=str(THEORY_ROOT / "حسن عباس" / "خصائص الحروف العربية ومعانيها - حسن عباس.md"),
+        confidence="medium",
+    )
+    return list(out.values())
+
+
+def _extract_asim_full_table_rows(text: str) -> list[list[str]]:
+    rows: list[list[str]] = []
+    for line in text.splitlines():
+        if not line.startswith("|"):
+            continue
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if len(cells) != 4:
+            continue
+        if cells[0] in {"الترتيب", "---"}:
+            continue
+        if not re.fullmatch(r"[١٢٣٤٥٦٧٨٩٠]+", cells[0]):
+            continue
+        rows.append(cells)
+    return rows
+
+
+def _normalize_letter_name(name: str) -> str:
+    return re.sub(r"\s+", " ", name.strip())
 
 
 def _load_asim_letters() -> list[dict[str, Any]]:
-    source = (THEORY_ROOT / "عاصم المصري" / "جدول معاني الحروف _.md").read_text(encoding="utf-8")
-    rows = _extract_markdown_table(source, "# جدول معاني الحروف")
+    source_path = THEORY_ROOT / "عاصم المصري" / "الأبجدية-ودلالاتها-عاصم-المصري.md"
+    rows = _extract_asim_full_table_rows(source_path.read_text(encoding="utf-8"))
     out: list[dict[str, Any]] = []
-    for row in rows[1:]:
-        if len(row) < 4 or not row[1] or not row[3]:
+    for _, _, raw_name, raw_gloss in rows:
+        letter_name = _normalize_letter_name(raw_name)
+        letter = LETTER_NAME_TO_CHAR.get(letter_name)
+        if not letter:
             continue
-        features = decompose_semantic_text(row[3])
         out.append(
-                {
-                    "letter": row[1],
-                    "letter_name": row[2],
-                    "scholar": "asim_al_masri",
-                    "raw_description": row[3],
-                "atomic_features": list(features),
-                "feature_categories": list(feature_categories(features)),
-                "sensory_category": None,
-                "kinetic_gloss": row[3],
-                "source_document": str(THEORY_ROOT / "عاصم المصري" / "جدول معاني الحروف _.md"),
-                "confidence": "medium",
-            }
+            _letter_row(
+                letter=letter,
+                letter_name=letter_name,
+                scholar="asim_al_masri",
+                raw_description=raw_gloss,
+                kinetic_gloss=raw_gloss,
+                source_document=str(source_path),
+            )
         )
     return out
 
@@ -175,20 +255,15 @@ def _load_anbar_letters() -> list[dict[str, Any]]:
     out: list[dict[str, Any]] = []
     for match in pattern.finditer(section):
         letter_name, letter, gloss = match.groups()
-        features = decompose_semantic_text(gloss)
         out.append(
-            {
-                "letter": letter,
-                "letter_name": letter_name,
-                "scholar": "anbar",
-                "raw_description": gloss,
-                "atomic_features": list(features),
-                "feature_categories": list(feature_categories(features)),
-                "sensory_category": None,
-                "kinetic_gloss": gloss,
-                "source_document": str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
-                "confidence": "medium",
-            }
+            _letter_row(
+                letter=letter,
+                letter_name=letter_name,
+                scholar="anbar",
+                raw_description=gloss,
+                kinetic_gloss=gloss,
+                source_document=str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
+            )
         )
     return out
 
