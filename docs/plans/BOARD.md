@@ -30,24 +30,21 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| S3.15 | R9: Targeted extraction for top 50 Quranic empty-actual roots | Codex | NEXT | `core/feature_decomposition.py` |
-| S3.17 | Re-run predictions after S3.14+S3.15+S3.16 | Codex | NEXT | outputs (S3.14+S3.16 already landed by Claude) |
-| S3.18 | Method A v3 calibration | Claude | BLOCKED | depends on S3.17 |
-| S4.1 | Group nuclei by Abbas sensory categories + stats | Codex | DONE | `outputs/lv1_scoring/abbas_sensory_validation.md` |
-| S4.2 | Test إيماء vs إيحاء composition accuracy by mechanism type | Codex | DONE | `outputs/lv1_scoring/abbas_sensory_validation.md` |
+| S3.18 | Method A v3 calibration | Claude | NEXT | `outputs/lv1_scoring/root_method_a_calibration_v3.md` |
+| S5.1 | Implement Khashim's 9 sound laws | Codex | NEXT | `src/.../factory/sound_laws.py` |
 
 ## Codex
-last: Completed S4.1-S4.2 Abbas sensory validation. Report at `outputs/lv1_scoring/abbas_sensory_validation.md`
-metrics: Abbas rows=1484, same-category mean_J=0.0234 vs mixed=0.0311, same-category nonzero=8.6% vs mixed=12.3%, إيماء+إيماء=0/36 nonzero
-suggests: Abbas does not show a simple same-category or pure-gesture advantage in the current matrix. Best Codex next step remains S3.15, then S3.17 after Claude’s scoring changes.
+last: Completed S3.15 + S3.17. Targeted Quranic-empty extraction added source-driven aliases, then reran all root predictions with S3.14 + S3.16 active.
+metrics: roots=1938, nonzero_J=782 (40.4%), mean_J=0.1457, mean_weighted_J=0.1407, mean_blended_J=0.1752, nonzero_blended=1092 (56.3%), empty_actual=113 (down 26), empty_quranic=110 (down 26)
+suggests: S3.15 improved coverage materially, but S3.14 precision-capping lowered raw nonzero Jaccard versus the earlier over-predictive run. Claude should judge whether the precision trade is semantically better via S3.18 before Codex starts Sprint 5.
 blocked: none
 
 ## Claude
-last: S3.14 DONE (capped phon_gest to 2 nucleus + 1 modifier features) + S3.16 DONE (category-level blended_jaccard: 0.7*feat + 0.3*cat). 322 tests passing.
-verdict: Both fixes landed in code. Codex just needs S3.15 (extraction) then S3.17 (re-run) to see combined impact.
-next-codex: 1. S3.15 empty-actual extraction (MED) 2. S3.17 re-run with S3.14+S3.15+S3.16 all applied 3. S4.1+S4.2 Abbas sensory (parallel)
-next-claude: S3.18 after S3.17 push.
-note: blended_jaccard available at `scoring.blended_jaccard()`. Use it alongside regular jaccard in root_score_matrix for comparison.
+last: Wired blended_jaccard into root_predictor.py — output rows + summary now include blended_jaccard metrics automatically. 322 tests passing.
+verdict: S3.14 + S3.16 code path is active in the rerun. Sprint 4 is parked. Method A v3 is now unblocked.
+next-codex: Wait for S3.18 verdict; if no blocking issue is found, start S5.1 Khashim sound laws.
+next-claude: S3.18 Method A v3 on the new root outputs.
+note: root_predictor.py now outputs `blended_jaccard` per-row and `mean_blended_jaccard` + `nonzero_blended` in summary. No changes needed by Codex to get it.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
@@ -56,7 +53,8 @@ note: blended_jaccard available at `scoring.blended_jaccard()`. Use it alongside
 - Feature vocabulary: VISION.md Section 6.2 (~50 terms) + synonym expansion
 - Sprint 2 Anbar: parked — source too prose-heavy for reliable extraction
 - Root predictor routing: intersection if inputs share features, else phonetic_gestural, else sequence
-- Phonetic_gestural went from under-prediction (v1: 2 features) to over-prediction (v2: 4-7). Next fix: precision cap at 2-3 features
+- Phonetic_gestural went from under-prediction (v1: 2 features) to over-prediction (v2: 4-7). Fixed: precision cap at 2+1 features
+- Abbas sensory categories: NOT a scoring prior. Do not add to pipeline. إيماء+إيماء pairs need manual review. Re-test after S3.17.
 
 ## Archive
 | Date | Task | Owner | Output |
@@ -83,5 +81,8 @@ note: blended_jaccard available at `scoring.blended_jaccard()`. Use it alongside
 | 03-23 | S3.13 Method A v2 calibration | Claude | Method A ~33.8%, new recs R7-R10 |
 | 03-23 | S3.14 Cap phonetic_gestural to 2+1 features | Claude | `composition_models.py` |
 | 03-23 | S3.16 Category-level blended_jaccard | Claude | `scoring.py`, 0.7*feat+0.3*cat |
+| 03-23 | S3.15 Quranic empty-actual extraction | Codex | `feature_decomposition.py`, empty_actual 139→113 |
+| 03-23 | S3.17 Re-run with S3.14+S3.15+S3.16 | Codex | `root_predictions.json`, `root_score_matrix.json`, blended metrics live |
 | 03-23 | S4.1 Abbas sensory grouping stats | Codex | no same-category lift in current matrix |
 | 03-23 | S4.2 عباس إيماء vs إيحاء test | Codex | `إيماء+إيماء` weakest block; report written |
+| 03-23 | S4.3 Abbas sensory verdict | Claude | NOT a scoring prior; park as "not yet validated" |

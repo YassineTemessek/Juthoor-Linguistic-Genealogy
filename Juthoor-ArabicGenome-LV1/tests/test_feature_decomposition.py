@@ -48,3 +48,21 @@ def test_decompose_root_meaning_aliases_for_empty_actual_recovery() -> None:
     assert "انتقال" in decompose_semantic_text("تحول عن الاتجاه إلى عكسه")
     assert "استرسال" in decompose_semantic_text("جريان الشيء أو سريانه بلا نهاية")
     assert "تعقد" in decompose_semantic_text("انحناء الشيء أو استدارته حول غيره")
+
+
+def test_decompose_quranic_empty_root_glosses() -> None:
+    thara = decompose_semantic_text("تخلل الندى ونحوه أثناء جرم باستر سال")
+    assert "نفاذ" in thara
+    assert "استرسال" in thara
+    assert decompose_semantic_text("طي الشيء وإدخال أجزاء منه في أحنائه") == ("تعقد",)
+    hifz = decompose_semantic_text("حياطة قوية ضابطة للشيء؛ فلا يضيع، ولا يتفلت")
+    assert "احتواء" in hifz
+    assert "قوة" in hifz
+    assert "امتساك" in hifz
+    sabgh = decompose_semantic_text("أن يمتد من الشيء ما يصير كالغشاء الساتر لما وراءه")
+    assert "امتداد" in sabgh
+    assert "اشتمال" in sabgh
+    assert "باطن" in sabgh
+    assert decompose_semantic_text("استجلاب الشيء من بعيد") == ("وصول", "امتداد")
+    assert decompose_semantic_text("توقف ما يجري في الأثناء - أو منها - سكونًا أو انقطاعًا") == ("احتباس",)
+    assert decompose_semantic_text("الطعن من بعيد") == ("اختراق", "امتداد")
