@@ -8,6 +8,7 @@ from juthoor_arabicgenome_lv1.factory.composition_models import (
 )
 from juthoor_arabicgenome_lv1.factory.scoring import (
     build_nucleus_score_rows,
+    invert_features_extended,
     jaccard_similarity,
     weighted_jaccard_similarity,
 )
@@ -18,6 +19,22 @@ def test_basic_similarity_functions() -> None:
     actual = ("تجمع", "تلاصق")
     assert jaccard_similarity(predicted, actual) == 1 / 3
     assert weighted_jaccard_similarity(predicted, actual) == 1 / 3
+
+
+def test_similarity_functions_collapse_synonym_groups() -> None:
+    predicted = ("امتداد", "نفاذ", "رخاوة")
+    actual = ("طول", "اختراق", "قوة")
+    assert jaccard_similarity(predicted, actual) == 2 / 4
+    assert weighted_jaccard_similarity(predicted, actual) == 2 / 4
+
+
+def test_invert_features_extended_uses_sprint1_opposites() -> None:
+    assert invert_features_extended(("قوة", "غلظ", "امتداد", "نقص")) == {
+        "رخاوة",
+        "رقة",
+        "انحسار",
+        "اتساع",
+    }
 
 
 def test_composition_models_return_features() -> None:

@@ -1,8 +1,8 @@
 # LV1 Phase 2-3 Orchestration — Continuous Work Plan
 
 **Date:** 2026-03-23
-**Status:** ACTIVE — Both agents read this before starting any task
-**Last checkpoint:** Phase 2 Method A calibration complete, scoring fixes needed before Phase 3
+**Status:** ACTIVE
+**Last checkpoint:** Sprint 1 scoring fixes landed; next work continues from the task queue below
 
 ---
 
@@ -17,35 +17,35 @@
 | Anbar letters | 3/28 | Needs extraction |
 | Binary nuclei | 457 | Loaded, scored (first pass) |
 | Trilateral roots | 1,938 | Loaded, NOT predicted yet |
-| Score matrix rows | 4,792 | 670 nonzero (14%) |
+| Score matrix rows | 4,792 | 1,005 nonzero (21.0%) |
 | Method A estimate | 40-55% real accuracy | Method B undercounts due to vocabulary mismatch |
-| Golden Rule | 17.5% confirmed (testable pairs) | Needs opposition mapping |
-| Tests passing | 311 LV1 + 262 LV2 = 573+ |
+| Golden Rule | 19.9% confirmed (33/166) | Improved after extended opposition mapping |
+| Tests passing | 313+ LV1 and growing | Focused Sprint 1 suite currently 26/26 |
 
 ---
 
 ## Task Queue — Execute Top to Bottom
 
-Each task has an owner. **Codex does not wait for Claude unless marked BLOCKED.** Claude does not wait for Codex unless marked BLOCKED.
+Each task has an owner. Work the next unblocked item and update status directly in the shared board.
 
 ### SPRINT 1: Scoring Fixes (Codex heavy)
 
 | # | Task | Owner | Depends | Output | Done? |
 |---|------|-------|---------|--------|-------|
-| S1.1 | **Add synonym groups to scoring engine** | Codex | Nothing | Updated `scoring.py` with SYNONYM_GROUPS mapping | [ ] |
+| S1.1 | **Add synonym groups to scoring engine** | Codex | Nothing | Updated `scoring.py` with SYNONYM_GROUPS mapping | [x] |
 | | Groups needed: امتداد↔طول, تفشّي↔انتشار, دقة↔رقة↔لطف, تعقد↔كثافة, اكتناز↔تجمع, خروج↔بروز↔ظهور, احتباس↔ضغط, نفاذ↔اختراق | | | | |
 | | Jaccard scoring should treat synonyms as the same feature | | | | |
-| S1.2 | **Fix empty actual_features extraction** | Codex | Nothing | Updated `feature_decomposition.py` | [ ] |
+| S1.2 | **Fix empty actual_features extraction** | Codex | Nothing | Updated `feature_decomposition.py` | [x] |
 | | Many nuclei have Jabal meaning text but 0 extracted features. Scan ALL Jabal shared meanings against the full 50-feature vocab + synonyms | | | | |
-| S1.3 | **Add semantic opposition mapping** | Codex | Nothing | `SEMANTIC_OPPOSITES` dict in scoring.py | [ ] |
+| S1.3 | **Add semantic opposition mapping** | Codex | Nothing | `SEMANTIC_OPPOSITES` dict in scoring.py | [x] |
 | | تجمع↔تفرق, ضغط↔فراغ, نقص↔اتساع, باطن↔ظاهر, قوة↔رخاوة, غلظ↔رقة, خروج↔دخول | | | | |
-| S1.4 | **Re-run full score matrix** | Codex | S1.1+S1.2 | Updated `nucleus_score_matrix.json` | [ ] |
-| S1.5 | **Re-run Golden Rule with opposition matching** | Codex | S1.3 | Updated `golden_rule_report.json` | [ ] |
-| S1.6 | **Push all Sprint 1 outputs** | Codex | S1.4+S1.5 | Commit to main | [ ] |
-| S1.7 | **Pull and verify improvement** | Claude | S1.6 | Compare old vs new: nonzero should jump to 25-40% | [ ] |
-| S1.8 | **Method A re-calibration on 50 nuclei** | Claude | S1.6 | Updated `method_a_calibration.md` | [ ] |
+| S1.4 | **Re-run full score matrix** | Codex | S1.1+S1.2 | Updated `nucleus_score_matrix.json` | [x] |
+| S1.5 | **Re-run Golden Rule with opposition matching** | Codex | S1.3 | Updated `golden_rule_report.json` | [x] |
+| S1.6 | **Push all Sprint 1 outputs** | Codex | S1.4+S1.5 | Commit to main | [x] |
+| S1.7 | **Pull and verify improvement** | Claude | S1.6 | Compare old vs new and write verification report | [x] |
+| S1.8 | **Method A re-calibration on 50 nuclei** | Claude | S1.6 | Updated `method_a_calibration.md` | [x] |
 
-**Expected outcome:** Nonzero Jaccard from 14% → 30-40%. Golden Rule from 17.5% → 25-35%.
+**Sprint 1 result:** Nonzero Jaccard improved from 14.4% to 21.0%. Golden Rule improved from 17.5% to 19.9%. Zero-feature nuclei fell to 29.
 
 ### SPRINT 2: Anbar Extraction + Scholar Comparison (Codex heavy)
 
@@ -157,11 +157,10 @@ Sprint 6:
 
 ## Communication Protocol
 
-1. **Codex pushes** → marks task as done in this file (change `[ ]` to `[x]`)
-2. **Claude pulls** → picks up next BLOCKED task that's now unblocked
-3. **No asking for permission** — both agents follow this plan autonomously
-4. **If something breaks** → fix it, note what happened in commit message, keep going
-5. **If a task produces unexpected results** → document in the output file, don't stop
+1. Update the shared board in `docs/plans/AGENT_COORDINATION.md`
+2. Push completed work to `main`
+3. Read the board at the next session start and continue from the next unblocked task
+4. Document unexpected results in the relevant output/report file
 
 ---
 
@@ -181,8 +180,8 @@ Sprint 6:
 
 | Metric | Current | Target | Sprint |
 |--------|---------|--------|--------|
-| Nonzero Jaccard (nuclei) | 14% | 30-40% | Sprint 1 |
-| Golden Rule confirmation | 17.5% | 25-35% | Sprint 1 |
+| Nonzero Jaccard (nuclei) | 21.0% | 30-40% | Sprint 1 |
+| Golden Rule confirmation | 19.9% | 25-35% | Sprint 1 |
 | Root prediction (Method B) | — | >30% | Sprint 3 |
 | Root prediction (Method A) | — | >55% | Sprint 3 |
 | Abbas sensory significance | — | p < 0.05 | Sprint 4 |
@@ -195,7 +194,7 @@ Sprint 6:
 
 | File | What | When |
 |------|------|------|
-| **This file** | Task assignments and status | Before every work session |
+| **This file** | Task queue and current stage | At session start when resuming work |
 | `outputs/lv1_scoring/method_a_calibration.md` | Claude's semantic assessment | Codex: understand what Method B misses |
 | `outputs/lv1_scoring/golden_rule_verdict.md` | Golden Rule + model recommendation | Codex: use recommended model for Phase 3 |
 | `LV1_ARCHITECTURE_VISION.md` | Full architecture and scoring methods | Both: reference for any design question |

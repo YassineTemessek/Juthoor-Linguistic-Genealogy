@@ -10,9 +10,11 @@ from typing import Any
 from juthoor_arabicgenome_lv1.core.feature_decomposition import (
     decompose_semantic_text,
     feature_categories,
-    invert_features,
 )
-from juthoor_arabicgenome_lv1.factory.scoring import build_nucleus_score_rows
+from juthoor_arabicgenome_lv1.factory.scoring import (
+    build_nucleus_score_rows,
+    invert_features_extended,
+)
 
 
 LV1_ROOT = Path(__file__).resolve().parents[2]
@@ -353,7 +355,7 @@ def _build_golden_rule_report(nuclei_rows: list[dict[str, Any]]) -> dict[str, An
         seen.add(reverse)
         forward_features = tuple(row["jabal_features"])
         reverse_features = tuple(lookup[reverse]["jabal_features"])
-        inverted_forward = set(invert_features(forward_features))
+        inverted_forward = set(invert_features_extended(forward_features))
         overlap = sorted(inverted_forward & set(reverse_features))
         is_confirmed = bool(overlap)
         if is_confirmed:
