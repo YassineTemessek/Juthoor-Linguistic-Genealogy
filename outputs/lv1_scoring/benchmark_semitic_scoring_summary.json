@@ -1,26 +1,26 @@
 {
-  "rows": 44,
-  "exact_hits": 35,
-  "exact_hit_rate": 0.795455,
-  "binary_hits": 38,
-  "binary_hit_rate": 0.863636,
-  "mean_similarity": 0.937446,
+  "rows": 53,
+  "exact_hits": 36,
+  "exact_hit_rate": 0.679245,
+  "binary_hits": 47,
+  "binary_hit_rate": 0.886792,
+  "mean_similarity": 0.92339,
   "by_target_lang": {
     "arc": {
-      "count": 12,
+      "count": 14,
       "exact_hits": 10,
-      "exact_hit_rate": 0.833333,
-      "binary_hits": 11,
-      "binary_hit_rate": 0.916667,
-      "mean_similarity": 0.966667
+      "exact_hit_rate": 0.714286,
+      "binary_hits": 13,
+      "binary_hit_rate": 0.928571,
+      "mean_similarity": 0.942857
     },
     "heb": {
-      "count": 32,
-      "exact_hits": 25,
-      "exact_hit_rate": 0.78125,
-      "binary_hits": 27,
-      "binary_hit_rate": 0.84375,
-      "mean_similarity": 0.926488
+      "count": 39,
+      "exact_hits": 26,
+      "exact_hit_rate": 0.666667,
+      "binary_hits": 34,
+      "binary_hit_rate": 0.871795,
+      "mean_similarity": 0.916402
     }
   }
 }

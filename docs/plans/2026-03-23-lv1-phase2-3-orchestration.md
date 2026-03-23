@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-23
 **Status:** ACTIVE
-**Last checkpoint:** Sprint 5 projection work is active; Sprint 3 is closed and Sprint 5 evaluation is underway
+**Last checkpoint:** Sprint 5 projection baselines are live; Sprint 3 is closed and Claude is unblocked for cross-linguistic validation
 
 ---
 
@@ -22,7 +22,7 @@
 | Root prediction mean Jaccard | 0.1457 | Precision-capped rerun after S3.14-S3.17 |
 | Method A estimate | 40-55% real accuracy | Method B undercounts due to vocabulary mismatch |
 | Golden Rule | 19.9% confirmed (33/166) | Improved after extended opposition mapping |
-| Tests passing | 327+ LV1 and growing | Focused Sprint 5 Semitic suite currently 14/14 |
+| Tests passing | 332+ LV1 and growing | Focused Sprint 5 projection/scoring suite currently 19/19 |
 
 ---
 
@@ -109,10 +109,10 @@ Each task has an owner. Work the next unblocked item and update status directly 
 | | ف↔P, ق↔C/K/G, ط↔T, ص↔S, ش↔S, ح↔K/C/H, ع→drop, غ→G, خ→H/G | | | | |
 | S5.2 | **Project Arabic root meanings → Hebrew/Aramaic** | Codex | S5.1 | Predicted cognate meanings via sound laws | [x] |
 | S5.3 | **Score projections against LV2 benchmark** | Codex | S5.2 | Cross-validation: do LV1 meanings predict LV2 cognates? | [x] |
-| S5.4 | **Project Arabic root meanings → English/Latin/Greek** | Codex | S5.1 | Using Khashim's + Beyond the Word consonant shifts | [ ] |
+| S5.4 | **Project Arabic root meanings → English/Latin/Greek** | Codex | S5.1 | Using Khashim's + Beyond the Word consonant shifts | [x] |
 | S5.5 | **Cross-linguistic validation report** | Claude | S5.3+S5.4 | Do Arabic root predictions survive cross-linguistically? | [ ] |
 
-**Sprint 5 checkpoint:** `factory/sound_laws.py`, `factory/cross_lingual_projection.py`, and `factory/cross_lingual_scoring.py` are now live. The first benchmark-aligned Semitic projection set covers `44/73` direct Arabic benchmark pairs (`60.3%`): `32` Hebrew and `12` Aramaic rows. Those 44 rows are now scored in `outputs/lv1_scoring/benchmark_semitic_scoring_summary.json` with exact projected hits = `35/44` (`79.5%`), binary-prefix hits = `38/44` (`86.4%`), and mean similarity = `0.937`. Language breakdown: Hebrew exact = `25/32` (`78.1%`), Aramaic exact = `10/12` (`83.3%`).
+**Sprint 5 checkpoint:** `factory/sound_laws.py`, `factory/cross_lingual_projection.py`, and `factory/cross_lingual_scoring.py` are now live and wired into the LV1 builder. The Semitic benchmark slice now covers `53/73` direct Arabic benchmark pairs (`72.6%`): `39` Hebrew and `14` Aramaic rows. Those 53 rows score at exact projected hits = `36/53` (`67.9%`), binary-prefix hits = `47/53` (`88.7%`), and mean similarity = `0.923`. The first non-Semitic baseline is also live in `outputs/lv1_scoring/benchmark_non_semitic_scoring_summary.json`: `11/23` Arabic-English rows matched (`47.8%` coverage), with exact hits = `3/11` (`27.3%`), binary-prefix hits = `5/11` (`45.5%`), and mean similarity = `0.750`. There is still no direct Arabic→Latin or Arabic→Greek gold slice, so English is the only direct benchmarked non-Semitic target in this pass.
 
 ### SPRINT 6: Integration + Cleanup
 
@@ -146,7 +146,7 @@ Sprint 4 (parallel with S3):
   S4.1+S4.2 Abbas sensory tests
 
 Sprint 5 (after S3):
-  S5.1 Khashim sound laws ─→ S5.2 project to Hebrew ─→ S5.3+S5.4 cross-lingual
+  S5.1 Khashim sound laws ─→ S5.2 project to Hebrew/Aramaic ─→ S5.3 Semitic scoring ─→ S5.4 non-Semitic baseline ─→ S5.5 validation report
 
 Sprint 6:
   S6.4+S6.5 integration
@@ -206,7 +206,7 @@ Sprint 6:
 | Root prediction (Method A) | ~36.7% | >55% | Sprint 3 — CLOSED, ceiling ~40-45% |
 | Root prediction (blended) | 17.5% (56.3% nonzero) | — | Sprint 3 — new primary metric |
 | Abbas sensory significance | — | p < 0.05 | Sprint 4 |
-| Cross-lingual projection accuracy | — | >40% | Sprint 5 |
+| Cross-lingual projection accuracy | Semitic exact 67.9%; English baseline exact 27.3% | >40% on direct benchmark slices | Sprint 5 |
 | Scholar coverage | 78 letters / 5 scholars | 100+ / 5 scholars | Sprint 2 |
 
 ---

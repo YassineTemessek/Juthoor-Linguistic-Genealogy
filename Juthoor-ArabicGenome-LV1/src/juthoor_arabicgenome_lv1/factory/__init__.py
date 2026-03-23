@@ -20,8 +20,10 @@ from .sound_laws import (
     succession_group,
 )
 from .cross_lingual_projection import (
+    build_non_semitic_projection_rows,
     build_semitic_projection_rows,
     load_benchmark_rows,
+    non_semitic_projection_summary,
     normalize_arabic_lemma,
     projection_summary,
 )
@@ -55,8 +57,10 @@ __all__ = [
     "project_root_sound_laws",
     "substitution_options",
     "succession_group",
+    "build_non_semitic_projection_rows",
     "build_semitic_projection_rows",
     "load_benchmark_rows",
+    "non_semitic_projection_summary",
     "normalize_arabic_lemma",
     "projection_summary",
     "best_similarity",
