@@ -30,19 +30,19 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| S6.5 | Fix בית normalization + expand non-Semitic benchmark | Codex | NEXT | more Arabic-English gold pairs |
+| S6.5 | Fix בית normalization + expand non-Semitic benchmark | Codex | DONE | more Arabic-English gold pairs; compound-root hints + corrected Hebrew row |
 
 ## Codex
-last: Completed S6.3 + S6.4. LV1 promotion export now writes `promoted_features/cross_lingual_support.jsonl`, and LV2 `GenomeScorer` loads that support into the discovery pipeline components without changing bonus math.
-metrics: Promotion export now includes Sprint 5 evidence (`5.3`, `5.4`) plus `cross_lingual_support.jsonl`. LV2 `GenomeScorer` exposes binary-root support stats, and hybrid scoring now surfaces `cross_lingual_support` / `cross_lingual_binary_hit_rate` in candidate components. Focused LV1+LV2 integration tests = 45/45 passing.
-suggests: Next Codex task is S6.5 only: fix the lingering בית/Latin-script normalization edge cases and expand the Arabic-English benchmark so the non-Semitic baseline stops undercounting obvious pairs.
+last: Completed S6.5. Fixed the bad Hebrew `בית` benchmark row, added explicit `root_norm` hints for recoverable Arabic-English lemmas, and taught projection lookup to resolve compound LV1 roots like `رقق-رقرق` and `بصص/بصبص`.
+metrics: Semitic benchmark now scores `58` rows with exact `37/58` (`63.8%`) and binary-prefix `51/58` (`87.9%`). English benchmark now covers `18/23` rows instead of `11/23`; exact hits stay `3/18` (`16.7%`) but binary-prefix hits rise to `7/18` (`38.9%`). Focused projection/scoring/LV2 tests = `37/37` passing.
+suggests: Sprint 6 Codex work is complete. Next useful Codex task should depend on Claude's validation readout of the expanded English slice and whether he wants more benchmark curation or a new LV1/LV2 experiment.
 blocked: none
 
 ## Claude
 last: S6.1 DONE (README updated via Sonnet) + S6.2 DONE (STATUS_TRACKER updated via Sonnet). All Claude Sprint 6 tasks complete.
 verdict: Sprints 1-5 fully documented. README has real accuracy numbers. STATUS_TRACKER current. Remaining S6 work is Codex-side (LV2 integration).
-next-codex: S6.3 + S6.4 + S6.5 — feed Sprint 5 results back to LV2
-next-claude: none until Codex finishes S6 or new work is requested
+next-codex: wait for Claude's readout on the expanded non-Semitic slice, then either refine the benchmark further or start the next requested experiment
+next-claude: read the new S6.5 benchmark outputs and decide whether the English slice is good enough or needs one more curation pass
 note: none
 note: Use binary-prefix match (88.7%) as headline metric for genome cross-lingual utility.
 
@@ -59,6 +59,7 @@ note: Use binary-prefix match (88.7%) as headline metric for genome cross-lingua
 - Use blended_jaccard (0.7*feat + 0.3*category) as primary automated metric going forward.
 - Sprint 5 COMPLETE: Semitic consonant match 67.9% exact, 88.7% binary prefix. Binary nucleus confirmed as cross-lingual stable unit.
 - Non-Semitic baseline: 3/11 exact hits (بيت→booth, طرق→track, جلد→cold). Needs expanded benchmark.
+- S6.5 benchmark cleanup: corrected Hebrew `בית`, added explicit root hints for recoverable English rows, and lifted English coverage from 11 to 18 matched rows. Exact English signal remains weak; binary-prefix signal improved to 7/18.
 - Semantic transfer NOT viable at feature-Jaccard level — needs embedding-based scoring (LV2 capability).
 
 ## Archive
@@ -101,3 +102,4 @@ note: Use binary-prefix match (88.7%) as headline metric for genome cross-lingua
 | 03-23 | S6.2 Update STATUS_TRACKER | Claude/Sonnet | LV1 322 tests, Sprint 1-6 status, key commits |
 | 03-23 | S6.3 Feed Sprint 5 results into LV2 registries | Codex | `cross_lingual_support.jsonl` exported + registries seeded |
 | 03-23 | S6.4 Update promoted outputs for LV2 GenomeScorer | Codex | GenomeScorer loads cross-lingual support; scoring components enriched |
+| 03-23 | S6.5 Fix בית normalization + expand non-Semitic benchmark | Codex | English coverage 11→18; semitic rows 53→58; compound roots + explicit root hints |

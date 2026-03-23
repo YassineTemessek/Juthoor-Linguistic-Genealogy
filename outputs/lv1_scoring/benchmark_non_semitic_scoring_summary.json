@@ -1,18 +1,18 @@
 {
-  "rows": 11,
+  "rows": 18,
   "exact_hits": 3,
-  "exact_hit_rate": 0.272727,
-  "binary_hits": 5,
-  "binary_hit_rate": 0.454545,
-  "mean_similarity": 0.750433,
+  "exact_hit_rate": 0.166667,
+  "binary_hits": 7,
+  "binary_hit_rate": 0.388889,
+  "mean_similarity": 0.707628,
   "by_target_lang": {
     "eng": {
-      "count": 11,
+      "count": 18,
       "exact_hits": 3,
-      "exact_hit_rate": 0.272727,
-      "binary_hits": 5,
-      "binary_hit_rate": 0.454545,
-      "mean_similarity": 0.750433
+      "exact_hit_rate": 0.166667,
+      "binary_hits": 7,
+      "binary_hit_rate": 0.388889,
+      "mean_similarity": 0.707628
     }
   }
 }

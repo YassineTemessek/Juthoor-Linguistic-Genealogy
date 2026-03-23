@@ -129,6 +129,34 @@ def test_build_non_semitic_projection_rows_resolves_simple_surface_form_to_root(
     assert rows[0]["source_root"] == "طرق"
 
 
+def test_build_non_semitic_projection_rows_prefers_explicit_root_hint_for_compound_root() -> None:
+    root_rows = [
+        {
+            "root": "رقق-رقرق",
+            "binary_nucleus": "رق",
+            "predicted_meaning": "امتداد + سطح",
+            "predicted_features": ["امتداد", "سطح"],
+            "actual_features": ["امتداد"],
+            "jaccard": 0.5,
+            "weighted_jaccard": 0.5,
+            "blended_jaccard": 0.65,
+            "quranic_verse": "رق",
+        }
+    ]
+    benchmark_rows = [
+        {
+            "source": {"lang": "ara", "lemma": "رقّ", "gloss": "stretch", "root_norm": "رقق"},
+            "target": {"lang": "eng", "lemma": "rack", "gloss": "rack"},
+            "relation": "cognate",
+            "confidence": 0.7,
+        }
+    ]
+
+    rows = build_non_semitic_projection_rows(root_rows, benchmark_rows)
+    assert len(rows) == 1
+    assert rows[0]["source_root"] == "رقق-رقرق"
+
+
 def test_non_semitic_projection_summary_reports_coverage() -> None:
     benchmark_rows = [
         {"source": {"lang": "ara", "lemma": "برج"}, "target": {"lang": "eng", "lemma": "burglar"}},
