@@ -107,12 +107,14 @@ Each task has an owner. Work the next unblocked item and update status directly 
 
 | # | Task | Owner | Depends | Output | Done? |
 |---|------|-------|---------|--------|-------|
-| S5.1 | **Implement Khashim's 9 sound laws** | Codex | S3.8 (Phase 3 done) | `src/.../factory/sound_laws.py` | [ ] |
+| S5.1 | **Implement Khashim's 9 sound laws** | Codex | S3.8 (Phase 3 done) | `src/.../factory/sound_laws.py` | [x] |
 | | ف↔P, ق↔C/K/G, ط↔T, ص↔S, ش↔S, ح↔K/C/H, ع→drop, غ→G, خ→H/G | | | | |
 | S5.2 | **Project Arabic root meanings → Hebrew/Aramaic** | Codex | S5.1 | Predicted cognate meanings via sound laws | [ ] |
 | S5.3 | **Score projections against LV2 benchmark** | Codex | S5.2 | Cross-validation: do LV1 meanings predict LV2 cognates? | [ ] |
 | S5.4 | **Project Arabic root meanings → English/Latin/Greek** | Codex | S5.1 | Using Khashim's + Beyond the Word consonant shifts | [ ] |
 | S5.5 | **Cross-linguistic validation report** | Claude | S5.3+S5.4 | Do Arabic root predictions survive cross-linguistically? | [ ] |
+
+**Sprint 5 checkpoint:** `factory/sound_laws.py` is now live with Khashim's 9 primary substitutions, the 6 succession groups, Arabic-root normalization, and constrained projection helpers for Semitic vs European targets. Focused coverage for this layer is in `tests/test_sound_laws.py`, and the initial Sprint 5 slice is green.
 
 ### SPRINT 6: Integration + Cleanup
 
