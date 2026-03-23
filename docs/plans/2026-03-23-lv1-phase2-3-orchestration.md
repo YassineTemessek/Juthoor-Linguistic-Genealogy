@@ -78,9 +78,14 @@ Each task has an owner. Work the next unblocked item and update status directly 
 | S3.8 | **Phase 3 verdict** | Claude | S3.6+S3.7 | Method A ~32% (target >55%). Bottleneck = composition model. 6 recommendations (R1-R6). | [x] |
 | S3.9 | **Implement R1+R3 (fix phonetic_gestural)** | Codex | S3.8 | Use all features, drop sifaat, weight nucleus 0.7 | [x] |
 | S3.10 | **Implement R2 (expand synonyms)** | Codex | S3.8 | 5 new synonym groups | [x] |
-| S3.11 | **Implement R4 (recover empty-actual)** | Codex | S3.8 | 207 roots need second extraction pass | [x] |
-| S3.12 | **Re-run predictions after fixes** | Codex | S3.9+S3.10+S3.11 | Updated root_predictions.json + root_score_matrix.json | [x] |
-| S3.13 | **Method A re-calibration v2** | Claude | S3.12 | Compare improvement, decide if Sprint 4 or another fix pass | [ ] |
+| S3.11 | **Implement R4 (recover empty-actual)** | Codex | S3.8 | 207→139 roots recovered | [x] |
+| S3.12 | **Re-run predictions after fixes** | Codex | S3.9+S3.10+S3.11 | nonzero 692→899, mean_J 0.135→0.150 | [x] |
+| S3.13 | **Method A re-calibration v2** | Claude | S3.12 | Method A ~33.8% (+1.4pp). Phon_gest over-predicts. | [x] |
+| S3.14 | **R7: Cap phonetic_gestural to 2+1 features** | Claude | S3.13 | `composition_models.py` — precision filter | [x] |
+| S3.15 | **R9: Targeted empty-actual Quranic extraction** | Codex | S3.13 | 50 high-value roots | [ ] |
+| S3.16 | **R10: Category-level blended_jaccard** | Claude | S3.13 | `scoring.py` — 0.7*feat + 0.3*category | [x] |
+| S3.17 | **Re-run predictions after S3.14-S3.16** | Codex | S3.14+S3.15+S3.16 | Updated outputs | [ ] |
+| S3.18 | **Method A v3 calibration** | Claude | S3.17 | Final Sprint 3 verdict | [ ] |
 
 **Current checkpoint:** Improved pass reached `46.4%` nonzero predictions across `1,938` roots, with mean Jaccard `0.1496` and mean weighted Jaccard `0.1424`. Empty-actual roots fell from `207` to `139`.
 
@@ -92,9 +97,11 @@ Each task has an owner. Work the next unblocked item and update status directly 
 
 | # | Task | Owner | Depends | Output | Done? |
 |---|------|-------|---------|--------|-------|
-| S4.1 | **Group nuclei by Abbas sensory categories** | Codex | S1.6 | Analysis: do same-category nuclei score differently? | [ ] |
-| S4.2 | **Test إيماء vs إيحاء composition accuracy** | Codex | S1.6 | Does mechanism type predict which model works best? | [ ] |
+| S4.1 | **Group nuclei by Abbas sensory categories** | Codex | S1.6 | Analysis: do same-category nuclei score differently? | [x] |
+| S4.2 | **Test إيماء vs إيحاء composition accuracy** | Codex | S1.6 | Does mechanism type predict which model works best? | [x] |
 | S4.3 | **Sensory validation report** | Claude | S4.1+S4.2 | Does Abbas's classification predict composition behavior? | [ ] |
+
+**Sprint 4 checkpoint:** `outputs/lv1_scoring/abbas_sensory_validation.md` is now written. Current result does **not** support a simple Abbas same-category advantage in the mechanical nucleus matrix: same-category rows underperform mixed rows (`0.0234` vs `0.0311` mean Jaccard), and pure `إيماء + إيماء` rows scored `0/36` nonzero in this pass.
 
 ### SPRINT 5: Intra-Semitic Extension (after Sprint 3)
 

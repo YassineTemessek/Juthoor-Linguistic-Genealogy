@@ -1,31 +1,53 @@
 # Board
-<!-- Claude: read Codex section, update Claude section, update Tasks -->
-<!-- Codex: read Claude section, update Codex section, pick NEXT tasks -->
-<!-- Rules: overwrite your section (don't append), one line per field, link reports for details -->
-<!-- Tasks: max 15 active rows, done tasks move to Archive. Status: NEXT / WIP / DONE / BLOCKED -->
-<!-- Archive: append-only, one line per done task. If >50 lines, move oldest to AGENT_COORDINATION_ARCHIVE.md -->
+<!-- ============================================================ -->
+<!-- PROTOCOL — both agents MUST follow on EVERY task completion   -->
+<!--                                                              -->
+<!-- 1. MICRO-UPDATE after EACH task (not batch):                 -->
+<!--    - Move your finished task to DONE in Tasks table          -->
+<!--    - Overwrite your section (last, metrics, suggests, etc.)  -->
+<!--    - Update the orchestration plan if metrics/status changed -->
+<!--    - git add BOARD.md + orchestration plan, commit, push     -->
+<!--                                                              -->
+<!-- 2. BEFORE starting work, ALWAYS:                             -->
+<!--    - git pull                                                -->
+<!--    - Read BOARD.md — check the OTHER agent's section         -->
+<!--    - Pick the top NEXT task assigned to you                  -->
+<!--    - If the other agent's output unblocks you, start it      -->
+<!--                                                              -->
+<!-- 3. Your role (Yassin): just pull, read board, say "ok" or    -->
+<!--    redirect. No need to explain what the other AI did.       -->
+<!--                                                              -->
+<!-- 4. Files to micro-update together:                           -->
+<!--    - docs/plans/BOARD.md (always)                            -->
+<!--    - docs/plans/2026-03-23-lv1-phase2-3-orchestration.md     -->
+<!--      (if metrics, status, or checkpoint text changed)        -->
+<!--                                                              -->
+<!-- 5. Status values: NEXT / WIP / DONE / BLOCKED               -->
+<!-- 6. Max 15 active rows. DONE tasks move to Archive.           -->
+<!-- 7. Archive is append-only safety trail.                      -->
+<!-- ============================================================ -->
 
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| S3.9 | Fix phonetic_gestural: use all features, drop sifaat, weight nucleus 0.7 | Codex | DONE | `factory/composition_models.py` + `root_predictor.py` |
-| S3.10 | Add 5 synonym groups: قوة↔ثقل, ضغط↔إمساك, خلوص↔فراغ, استقلال↔قطع, ظاهر↔ظهور | Codex | DONE | `factory/scoring.py` |
-| S3.11 | Recover 207 empty-actual roots — second extraction pass against BAB text | Codex | DONE | `core/feature_decomposition.py` |
-| S3.12 | Re-run all root predictions + score matrix after S3.9-S3.11 | Codex | DONE | `outputs/lv1_scoring/root_predictions.json` + `root_score_matrix.json` |
-| S3.13 | Method A re-calibration v2 on improved predictions | Claude | BLOCKED | `outputs/lv1_scoring/root_method_a_calibration_v2.md` |
+| S3.15 | R9: Targeted extraction for top 50 Quranic empty-actual roots | Codex | NEXT | `core/feature_decomposition.py` |
+| S3.17 | Re-run predictions after S3.14+S3.15+S3.16 | Codex | NEXT | outputs (S3.14+S3.16 already landed by Claude) |
+| S3.18 | Method A v3 calibration | Claude | BLOCKED | depends on S3.17 |
+| S4.1 | Group nuclei by Abbas sensory categories + stats | Codex | DONE | `outputs/lv1_scoring/abbas_sensory_validation.md` |
+| S4.2 | Test إيماء vs إيحاء composition accuracy by mechanism type | Codex | DONE | `outputs/lv1_scoring/abbas_sensory_validation.md` |
 
 ## Codex
-last: Completed S3.9-S3.12 locally: fixed phonetic_gestural semantics, expanded root synonyms, recovered empty-actual roots, reran all root outputs
-metrics: roots=1938, nonzero=899 (46.4%), mean_J=0.1496, mean_wJ=0.1424, empty_actual=139, tests=17/17 targeted
-suggests: Claude should run S3.13 on the improved root outputs now; if Method A is still under 45%, next Codex pass should target the remaining 139 empty-actual roots by BAB cluster
+last: Completed S4.1-S4.2 Abbas sensory validation. Report at `outputs/lv1_scoring/abbas_sensory_validation.md`
+metrics: Abbas rows=1484, same-category mean_J=0.0234 vs mixed=0.0311, same-category nonzero=8.6% vs mixed=12.3%, إيماء+إيماء=0/36 nonzero
+suggests: Abbas does not show a simple same-category or pure-gesture advantage in the current matrix. Best Codex next step remains S3.15, then S3.17 after Claude’s scoring changes.
 blocked: none
 
 ## Claude
-last: Method A calibration on 60 roots + failure analysis + verdict (S3.6-S3.8)
-verdict: Method A ~32% (target >55%). Bottleneck is composition model, not data. Phonetic_gestural drops features + injects articulatory noise.
-next-codex: 1. S3.9 (high impact) 2. S3.10 (medium) 3. S3.11 (medium) — do all three then S3.12
-next-claude: S3.13 after Codex pushes S3.12
-note: Expected improvement with fixes: Method B 0.135→~0.19-0.22, Method A 32%→~45-50%
+last: S3.14 DONE (capped phon_gest to 2 nucleus + 1 modifier features) + S3.16 DONE (category-level blended_jaccard: 0.7*feat + 0.3*cat). 322 tests passing.
+verdict: Both fixes landed in code. Codex just needs S3.15 (extraction) then S3.17 (re-run) to see combined impact.
+next-codex: 1. S3.15 empty-actual extraction (MED) 2. S3.17 re-run with S3.14+S3.15+S3.16 all applied 3. S4.1+S4.2 Abbas sensory (parallel)
+next-claude: S3.18 after S3.17 push.
+note: blended_jaccard available at `scoring.blended_jaccard()`. Use it alongside regular jaccard in root_score_matrix for comparison.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
@@ -34,6 +56,7 @@ note: Expected improvement with fixes: Method B 0.135→~0.19-0.22, Method A 32%
 - Feature vocabulary: VISION.md Section 6.2 (~50 terms) + synonym expansion
 - Sprint 2 Anbar: parked — source too prose-heavy for reliable extraction
 - Root predictor routing: intersection if inputs share features, else phonetic_gestural, else sequence
+- Phonetic_gestural went from under-prediction (v1: 2 features) to over-prediction (v2: 4-7). Next fix: precision cap at 2-3 features
 
 ## Archive
 | Date | Task | Owner | Output |
@@ -57,3 +80,8 @@ note: Expected improvement with fixes: Method B 0.135→~0.19-0.22, Method A 32%
 | 03-23 | S3.10 Expand root synonyms | Codex | updated `scoring.py` |
 | 03-23 | S3.11 Recover empty-actual roots | Codex | `feature_decomposition.py`, 207→139 |
 | 03-23 | S3.12 Re-run improved root predictions | Codex | nonzero 692→899, `root_score_matrix.json` |
+| 03-23 | S3.13 Method A v2 calibration | Claude | Method A ~33.8%, new recs R7-R10 |
+| 03-23 | S3.14 Cap phonetic_gestural to 2+1 features | Claude | `composition_models.py` |
+| 03-23 | S3.16 Category-level blended_jaccard | Claude | `scoring.py`, 0.7*feat+0.3*cat |
+| 03-23 | S4.1 Abbas sensory grouping stats | Codex | no same-category lift in current matrix |
+| 03-23 | S4.2 عباس إيماء vs إيحاء test | Codex | `إيماء+إيماء` weakest block; report written |
