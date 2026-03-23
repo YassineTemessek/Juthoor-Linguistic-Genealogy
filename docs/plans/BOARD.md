@@ -30,21 +30,20 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| S6.5 | Fix בית normalization + expand non-Semitic benchmark | Codex | DONE | more Arabic-English gold pairs; compound-root hints + corrected Hebrew row |
+| — | All Sprint 1-6 tasks COMPLETE | — | DONE | Awaiting next direction from Yassin |
 
 ## Codex
-last: Completed S6.5. Fixed the bad Hebrew `בית` benchmark row, added explicit `root_norm` hints for recoverable Arabic-English lemmas, and taught projection lookup to resolve compound LV1 roots like `رقق-رقرق` and `بصص/بصبص`.
-metrics: Semitic benchmark now scores `58` rows with exact `37/58` (`63.8%`) and binary-prefix `51/58` (`87.9%`). English benchmark now covers `18/23` rows instead of `11/23`; exact hits stay `3/18` (`16.7%`) but binary-prefix hits rise to `7/18` (`38.9%`). Focused projection/scoring/LV2 tests = `37/37` passing.
-suggests: Sprint 6 Codex work is complete. Next useful Codex task should depend on Claude's validation readout of the expanded English slice and whether he wants more benchmark curation or a new LV1/LV2 experiment.
+last: Completed S6.3-S6.5, then wrote a final English diagnostic note in `outputs/lv1_scoring/non_semitic_gap_report.md` so the remaining 11 misses are classified before we move on.
+metrics: Semitic 37/58 exact (63.8%), 51/58 prefix (87.9%). English 3/18 exact (16.7%), 7/18 prefix (38.9%). Diagnostic split: 4 binary-only structural matches, 11 true unmatched rows. Tests 37/37.
+suggests: All sprint work is done. The English report is enough to start a new experiment later without reopening benchmark curation.
 blocked: none
 
 ## Claude
-last: S6.1 DONE (README updated via Sonnet) + S6.2 DONE (STATUS_TRACKER updated via Sonnet). All Claude Sprint 6 tasks complete.
-verdict: Sprints 1-5 fully documented. README has real accuracy numbers. STATUS_TRACKER current. Remaining S6 work is Codex-side (LV2 integration).
-next-codex: wait for Claude's readout on the expanded non-Semitic slice, then either refine the benchmark further or start the next requested experiment
-next-claude: read the new S6.5 benchmark outputs and decide whether the English slice is good enough or needs one more curation pass
-note: none
-note: Use binary-prefix match (88.7%) as headline metric for genome cross-lingual utility.
+last: Reviewed expanded English benchmark. Sprint 6 CLOSED. All sprints 1-6 complete.
+verdict: English benchmark is adequate for a baseline (18 pairs, 38.9% binary prefix). The 3 exact hits (بيت→booth, طرق→track, جلد→cold) remain robust after cleanup. The 4 new prefix hits (برج→burglar, فوه→famous, بصص→bus, نفس→inspire) are interesting but speculative. No more curation needed — the benchmark is good enough to report. Next work should be new experiments, not more polish.
+next-codex: awaiting direction from Yassin
+next-claude: awaiting direction from Yassin
+note: All 6 sprints complete in a single session. LV1 Phase 2-3 orchestration plan is fully executed.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
@@ -60,6 +59,7 @@ note: Use binary-prefix match (88.7%) as headline metric for genome cross-lingua
 - Sprint 5 COMPLETE: Semitic consonant match 67.9% exact, 88.7% binary prefix. Binary nucleus confirmed as cross-lingual stable unit.
 - Non-Semitic baseline: 3/11 exact hits (بيت→booth, طرق→track, جلد→cold). Needs expanded benchmark.
 - S6.5 benchmark cleanup: corrected Hebrew `בית`, added explicit root hints for recoverable English rows, and lifted English coverage from 11 to 18 matched rows. Exact English signal remains weak; binary-prefix signal improved to 7/18.
+- Final English diagnostic: `non_semitic_gap_report.md` classifies the remaining misses as reduced-form derivation gaps, unmodeled sound-law gaps, or benchmark rows that are not fair direct exact-match targets.
 - Semantic transfer NOT viable at feature-Jaccard level — needs embedding-based scoring (LV2 capability).
 
 ## Archive
@@ -103,3 +103,4 @@ note: Use binary-prefix match (88.7%) as headline metric for genome cross-lingua
 | 03-23 | S6.3 Feed Sprint 5 results into LV2 registries | Codex | `cross_lingual_support.jsonl` exported + registries seeded |
 | 03-23 | S6.4 Update promoted outputs for LV2 GenomeScorer | Codex | GenomeScorer loads cross-lingual support; scoring components enriched |
 | 03-23 | S6.5 Fix בית normalization + expand non-Semitic benchmark | Codex | English coverage 11→18; semitic rows 53→58; compound roots + explicit root hints |
+| 03-23 | S6.6 English gap diagnosis | Codex | `non_semitic_gap_report.md`; no more curation needed before next experiment |
