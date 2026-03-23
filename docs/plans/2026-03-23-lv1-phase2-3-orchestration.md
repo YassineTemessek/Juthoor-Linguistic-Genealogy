@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-23
 **Status:** ACTIVE
-**Last checkpoint:** Sprint 6 benchmark cleanup landed; Semitic coverage is up to 58 rows and the English baseline now covers 18/23 rows
+**Last checkpoint:** Sprint 6 is closed. The benchmark cleanup is live, and the remaining English misses are classified in `outputs/lv1_scoring/non_semitic_gap_report.md`.
 
 ---
 
@@ -123,6 +123,7 @@ Each task has an owner. Work the next unblocked item and update status directly 
 | S6.3 | **Feed LV1 results back to LV2 registries** | Codex | S5.5 | Export `cross_lingual_support.jsonl` + seed binary-field support | [x] |
 | S6.4 | **Update promoted outputs for LV2 GenomeScorer** | Codex | S6.3 | GenomeScorer loads Sprint 5 support and surfaces it in components | [x] |
 | S6.5 | **Fix בית normalization + expand non-Semitic benchmark** | Codex | S6.4 | More Arabic-English gold coverage, cleaner Latin-script normalization | [x] |
+| S6.6 | **Diagnose remaining English misses** | Codex | S6.5 | `outputs/lv1_scoring/non_semitic_gap_report.md` | [x] |
 
 ---
 
@@ -149,7 +150,7 @@ Sprint 5 (after S3):
   S5.1 Khashim sound laws ─→ S5.2 project to Hebrew/Aramaic ─→ S5.3 Semitic scoring ─→ S5.4 non-Semitic baseline ─→ S5.5 validation report
 
 Sprint 6:
-  S6.3+S6.4 integration ─→ S6.5 benchmark cleanup ─→ await Claude readout / next experiment
+  S6.3+S6.4 integration ─→ S6.5 benchmark cleanup ─→ S6.6 English gap diagnosis ─→ CLOSED
 
 
 CLAUDE (semantic review, architecture) ─────────────────────────────
@@ -208,7 +209,7 @@ Sprint 6:
 | Abbas sensory significance | — | p < 0.05 | Sprint 4 |
 | Cross-lingual projection accuracy | Semitic exact 63.8% / binary 87.9%; English baseline exact 16.7% / binary 38.9% | >40% on direct benchmark slices | Sprint 5 |
 
-**Sprint 6 checkpoint:** The LV1 promotion gateway now exports `outputs/research_factory/promoted/promoted_features/cross_lingual_support.jsonl`, grouped by binary nucleus from the Sprint 5 scored projections. LV2 `GenomeScorer` loads that promoted support, and LV2 hybrid scoring now exposes `cross_lingual_support`, `cross_lingual_binary_hit_rate`, and `non_semitic_binary_hit_rate` in candidate components. The Sprint 6 cleanup pass also fixed benchmark normalization drift (`בית`) and added explicit root hints plus compound-root indexing for recoverable English rows. Integration logic is unchanged; this pass improves benchmark recall, not scoring weights.
+**Sprint 6 checkpoint:** The LV1 promotion gateway now exports `outputs/research_factory/promoted/promoted_features/cross_lingual_support.jsonl`, grouped by binary nucleus from the Sprint 5 scored projections. LV2 `GenomeScorer` loads that promoted support, and LV2 hybrid scoring now exposes `cross_lingual_support`, `cross_lingual_binary_hit_rate`, and `non_semitic_binary_hit_rate` in candidate components. The Sprint 6 cleanup pass also fixed benchmark normalization drift (`בית`) and added explicit root hints plus compound-root indexing for recoverable English rows. The final diagnostic note `outputs/lv1_scoring/non_semitic_gap_report.md` confirms that the remaining English misses are no longer mostly data-loading failures; they are mainly reduced-form derivation gaps, sound-law gaps, or benchmark rows that are not fair exact-match targets.
 | Scholar coverage | 78 letters / 5 scholars | 100+ / 5 scholars | Sprint 2 |
 
 ---
@@ -227,4 +228,4 @@ Sprint 6:
 
 *LV1 Phase 2-3 Orchestration*
 *Updated: 2026-03-23*
-*Next update: after Claude's readout on the expanded English benchmark*
+*Next update: after Yassin chooses the next experiment*
