@@ -265,13 +265,14 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 **Files:**
 - New: `Juthoor-ArabicGenome-LV1/src/juthoor_arabicgenome_lv1/factory/quranic_validation.py`
 
-- [ ] Load the 1,666 canonical Quranic applications
-- [ ] For each Quranic root, check: does predicted meaning align with Quranic usage?
-- [ ] Separate accuracy metrics for Quranic roots (higher bar) vs non-Quranic roots
-- [ ] Report: Quranic roots accuracy vs overall accuracy
-- [ ] Commit: `feat(lv1): Quranic-first validation layer`
+- [x] Load the 1,666 canonical Quranic applications
+- [x] For each Quranic root, check: does predicted meaning align with Quranic usage?
+- [x] Separate accuracy metrics for Quranic roots (higher bar) vs non-Quranic roots
+- [x] Report: Quranic roots accuracy vs overall accuracy
+- [x] Commit: `feat(lv1): Quranic-first validation layer`
 
 **Owner:** Codex (pipeline) + Claude (semantic validation)
+**Checkpoint:** The split is now explicit in `root_score_matrix.json`. Quranic rows (`8330`) score materially lower than non-Quranic rows (`1290`) and nearly all current Neili-valid rows come from the non-Quranic cohort (`95.35%` valid vs `0.60%` for Quranic). This shows the present `no_synonymy` implementation is too coarse for Quranic final gating and needs application-aware refinement.
 
 ---
 

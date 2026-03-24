@@ -1955,6 +1955,32 @@
       }
     ]
   },
+  "quranic_validation": {
+    "quranic": {
+      "count": 8330,
+      "mean_jaccard": 0.137957,
+      "mean_weighted_jaccard": 0.133932,
+      "mean_blended_jaccard": 0.167628,
+      "nonzero_predictions": 3214,
+      "nonzero_rate": 0.385834,
+      "nonzero_blended": 4638,
+      "nonzero_blended_rate": 0.556783,
+      "neili_valid_predictions": 50,
+      "neili_valid_rate": 0.006002
+    },
+    "non_quranic": {
+      "count": 1290,
+      "mean_jaccard": 0.231814,
+      "mean_weighted_jaccard": 0.224395,
+      "mean_blended_jaccard": 0.25222,
+      "nonzero_predictions": 766,
+      "nonzero_rate": 0.593798,
+      "nonzero_blended": 864,
+      "nonzero_blended_rate": 0.669767,
+      "neili_valid_predictions": 1230,
+      "neili_valid_rate": 0.953488
+    }
+  },
   "by_bab": {
     "الباء": {
       "count": 570,

@@ -320,3 +320,37 @@ def test_summarize_root_predictions_includes_neili_summary() -> None:
     summary = summarize_root_predictions(rows)
     assert summary["overall"]["neili_hard_rejections"] == 2
     assert summary["neili_summary"]["constraint_counts"]["no_synonymy"] == 2
+
+
+def test_summarize_root_predictions_includes_quranic_validation_split() -> None:
+    rows = apply_neili_filters_to_prediction_rows(
+        [
+            {
+                "root": "كتب",
+                "scholar": "jabal",
+                "model": "intersection",
+                "predicted_features": ["تجمع"],
+                "actual_features": ["تجمع"],
+                "jaccard": 1.0,
+                "weighted_jaccard": 1.0,
+                "blended_jaccard": 1.0,
+                "quranic_verse": "sample",
+                "bab": "الكاف",
+            },
+            {
+                "root": "غرب",
+                "scholar": "jabal",
+                "model": "sequence",
+                "predicted_features": ["تفرق"],
+                "actual_features": ["اتصال"],
+                "jaccard": 0.0,
+                "weighted_jaccard": 0.0,
+                "blended_jaccard": 0.0,
+                "quranic_verse": None,
+                "bab": "الغين",
+            },
+        ]
+    )
+    summary = summarize_root_predictions(rows)
+    assert summary["quranic_validation"]["quranic"]["count"] == 1
+    assert summary["quranic_validation"]["non_quranic"]["count"] == 1

@@ -234,6 +234,8 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
     by_scholar: dict[str, list[dict[str, Any]]] = {}
     by_bab: dict[str, list[dict[str, Any]]] = {}
     by_constraint: dict[str, int] = {}
+    quranic_rows: list[dict[str, Any]] = []
+    non_quranic_rows: list[dict[str, Any]] = []
 
     for row in rows:
         by_model.setdefault(row["model"], []).append(row)
@@ -241,6 +243,10 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
         by_bab.setdefault(row.get("bab") or "", []).append(row)
         for flag in row.get("neili_flags", []):
             by_constraint[flag["constraint"]] = by_constraint.get(flag["constraint"], 0) + 1
+        if row.get("is_quranic"):
+            quranic_rows.append(row)
+        else:
+            non_quranic_rows.append(row)
 
     def _mean(values: list[float]) -> float:
         return sum(values) / len(values) if values else 0.0
@@ -249,6 +255,23 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
     neili_valid_rows = [row for row in rows if row.get("neili_valid", True)]
     neili_hard_rejected = [row for row in rows if row.get("neili_hard_flag_count", 0) > 0]
     neili_soft_flagged = [row for row in rows if row.get("neili_soft_flag_count", 0) > 0]
+
+    def _cohort_summary(cohort_rows: list[dict[str, Any]]) -> dict[str, Any]:
+        nonzero_rows = [row for row in cohort_rows if row["jaccard"] > 0.0]
+        nonzero_blended_rows = [row for row in cohort_rows if row.get("blended_jaccard", 0.0) > 0.0]
+        valid_rows = [row for row in cohort_rows if row.get("neili_valid", True)]
+        return {
+            "count": len(cohort_rows),
+            "mean_jaccard": round(_mean([row["jaccard"] for row in cohort_rows]), 6),
+            "mean_weighted_jaccard": round(_mean([row["weighted_jaccard"] for row in cohort_rows]), 6),
+            "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in cohort_rows]), 6),
+            "nonzero_predictions": len(nonzero_rows),
+            "nonzero_rate": round(len(nonzero_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
+            "nonzero_blended": len(nonzero_blended_rows),
+            "nonzero_blended_rate": round(len(nonzero_blended_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
+            "neili_valid_predictions": len(valid_rows),
+            "neili_valid_rate": round(len(valid_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
+        }
 
     return {
         "overall": {
@@ -300,6 +323,10 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
                 }
                 for row in neili_hard_rejected[:50]
             ],
+        },
+        "quranic_validation": {
+            "quranic": _cohort_summary(quranic_rows),
+            "non_quranic": _cohort_summary(non_quranic_rows),
         },
         "by_bab": {
             bab: {
