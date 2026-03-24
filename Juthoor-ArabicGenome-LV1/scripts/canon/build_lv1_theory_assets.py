@@ -20,7 +20,6 @@ from juthoor_arabicgenome_lv1.factory.scoring import (
     invert_features_extended,
 )
 from juthoor_arabicgenome_lv1.factory.root_predictor import (
-    apply_neili_filters_to_prediction_rows,
     build_root_prediction_rows,
     build_root_prediction_rows_all_scholars,
     summarize_root_predictions,
@@ -690,7 +689,6 @@ def main() -> int:
             "consensus_weighted",
         ),
     )
-    root_prediction_rows = apply_neili_filters_to_prediction_rows(root_prediction_rows)
     root_score_matrix = summarize_root_predictions(root_prediction_rows)
     jabal_root_prediction_rows = [row for row in root_prediction_rows if row["scholar"] == "jabal"]
     benchmark_rows = load_benchmark_rows(LV2_BENCHMARK)

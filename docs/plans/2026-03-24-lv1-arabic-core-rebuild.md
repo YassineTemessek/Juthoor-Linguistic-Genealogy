@@ -256,7 +256,7 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 
 **Owner:** Claude/Sonnet
 **Tests:** Test with known Quranic root pairs
-**Checkpoint:** The filter works technically, but corpus-wide `no_synonymy` currently dominates and leaves only `1280/9620` rows (`13.31%`) Neili-valid. Treat this as a diagnostic layer, not a final hard gate, until Quranic-first validation isolates true application-level collisions from global family overlap.
+**Checkpoint:** This was implemented and tested as a diagnostic experiment, then explicitly parked. User direction is to keep Neili's no-synonymy for a later Quran-word interpretation stage, not active LV1 genome scoring.
 
 ---
 
@@ -273,6 +273,8 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 
 **Owner:** Codex (pipeline) + Claude (semantic validation)
 **Checkpoint:** The split is now explicit in `root_score_matrix.json`. Quranic rows (`8330`) score materially lower than non-Quranic rows (`1290`) and nearly all current Neili-valid rows come from the non-Quranic cohort (`95.35%` valid vs `0.60%` for Quranic). This shows the present `no_synonymy` implementation is too coarse for Quranic final gating and needs application-aware refinement.
+
+**Decision update:** Neili no-synonymy is no longer part of the active LV1 acceptance/scoring path. Keep the Quranic split, but reserve Neili for a later Quranic explanation layer.
 
 ---
 
