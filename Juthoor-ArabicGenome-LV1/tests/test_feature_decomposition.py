@@ -38,7 +38,7 @@ def test_decompose_extended_synonym_groups() -> None:
     assert decompose_semantic_text("الثبات والرسوخ") == ("امتساك", "تماسك")
     assert decompose_semantic_text("التغطية والإخفاء") == ("اشتمال", "باطن")
     assert decompose_semantic_text("الارتفاع الشاهق") == ("صعود",)
-    assert decompose_semantic_text("الاستقرار والرجوع") == ("جوف", "انتقال")
+    assert decompose_semantic_text("الاستقرار والرجوع") == ("استقرار", "رجوع")
     assert decompose_semantic_text("الحسن والنقاء") == ("خلوص",)
 
 
@@ -66,3 +66,11 @@ def test_decompose_quranic_empty_root_glosses() -> None:
     assert decompose_semantic_text("استجلاب الشيء من بعيد") == ("وصول", "امتداد")
     assert decompose_semantic_text("توقف ما يجري في الأثناء - أو منها - سكونًا أو انقطاعًا") == ("احتباس",)
     assert decompose_semantic_text("الطعن من بعيد") == ("اختراق", "امتداد")
+
+
+def test_decompose_modulation_semantics_from_gap_audit() -> None:
+    assert "فوران" in decompose_semantic_text("فوران الشيء أو امتلاؤه بما هو غض")
+    assert "امتلاء" in decompose_semantic_text("امتلاء باطن الشيء بلطيف يصلحه")
+    assert "صلابة" in decompose_semantic_text("اندفاع مع صلابة في الشيء المجتمع")
+    assert "فجوة" in decompose_semantic_text("شق عظيم أو فجوة عظيمة في جرم شديد")
+    assert "نصاعة" in decompose_semantic_text("ينضح على الظاهر نصاعة أو رقة")

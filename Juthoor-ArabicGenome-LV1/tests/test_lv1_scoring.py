@@ -18,6 +18,7 @@ from juthoor_arabicgenome_lv1.factory.root_predictor import (
     build_root_prediction_rows_all_scholars,
     build_root_prediction_rows,
     choose_root_prediction_model,
+    filter_third_letter_features,
     predict_root_from_parts,
     summarize_root_predictions,
 )
@@ -144,6 +145,18 @@ def test_root_predictor_prefers_intersection_when_overlap_exists() -> None:
     assert "نفاذ" in prediction.predicted_features
 
 
+def test_filter_third_letter_features_blocks_poison_and_opposites() -> None:
+    kept, dropped = filter_third_letter_features(
+        ("تجمع", "تفرق"),
+        ("التحام", "تجمع", "تجمع", "تفرق", "امتداد"),
+    )
+    assert "التحام" in dropped
+    assert "تفرق" not in dropped
+    assert "تجمع" in kept
+    assert "تفرق" in kept
+    assert "امتداد" in kept
+
+
 def test_root_predictor_falls_back_when_no_overlap_exists() -> None:
     assert choose_root_prediction_model(("نفاذ",), ("تجمع",)) == "phonetic_gestural"
 
@@ -254,6 +267,19 @@ def test_build_root_prediction_rows_all_scholars() -> None:
     summary = summarize_root_predictions(rows)
     assert summary["by_scholar"]["jabal"]["count"] == 1
     assert summary["by_scholar"]["consensus_strict"]["count"] == 1
+
+
+def test_root_predictor_uses_nucleus_only_fallback_when_intersection_over_prunes() -> None:
+    prediction = predict_root_from_parts(
+        root="وسع",
+        binary_nucleus="وس",
+        third_letter="ع",
+        binary_features=("ظهور", "حدة"),
+        third_letter_features=("اتساع",),
+        actual_features=("ظهور",),
+    )
+    assert prediction.model_used == "nucleus_only"
+    assert prediction.predicted_features == ("ظهور", "حدة")
 
 
 def test_apply_neili_filters_to_prediction_rows_adds_serialized_flags() -> None:

@@ -217,7 +217,7 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 - [x] Commit: `feat(lv1): multi-scholar nucleus scoring`
 
 **Owner:** Codex (computation) + Claude (analysis)
-**Checkpoint:** `consensus_strict` currently has the best mean Jaccard (`0.1207`), while `consensus_weighted` has the best nonzero coverage (`648/1580`).
+**Checkpoint:** `consensus_strict` currently has the best mean Jaccard (`0.1207`), while `consensus_weighted` has the best nonzero coverage (`648/1580`). After the later vocabulary + third-letter rerun, the root layer improved more than the nucleus layer; see Phase 3 checkpoints below.
 
 ---
 
@@ -237,7 +237,7 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 
 **Owner:** Codex
 **Tests:** Run predictions with each scholar, compare results
-**Checkpoint:** `consensus_strict` currently leads on root means (`mean_blended_jaccard = 0.187543`), while `hassan_abbas` is marginally highest on nonzero count (`1129` vs `1128` for strict consensus).
+**Checkpoint:** Initial scholar-aware rebuild: `consensus_strict` led on root means (`0.187543`), while `hassan_abbas` was marginally highest on nonzero count (`1129` vs `1128` for strict consensus).
 
 ---
 
@@ -257,6 +257,33 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 **Owner:** Claude/Sonnet
 **Tests:** Test with known Quranic root pairs
 **Checkpoint:** This was implemented and tested as a diagnostic experiment, then explicitly parked. User direction is to keep Neili's no-synonymy for a later Quran-word interpretation stage, not active LV1 genome scoring.
+
+### Phase 3A/3B: Feature-vocabulary expansion and third-letter correction
+
+- [x] Expand the semantic vocabulary around modulation/substance/location terms and re-extract all `jabal_features`
+- [x] Audit the post-expansion gaps in `outputs/lv1_scoring/feature_vocab_gap_report.md`
+- [x] Add a third-letter compatibility filter, including a blacklist for `التحام` as a third-letter poison feature
+- [x] Add `nucleus_only` fallback for category-only pseudo-overlap cases where intersection collapses back to the nucleus
+- [x] Re-run root predictions and score matrix after both fixes
+
+**Current checkpoint after A/B rerun (2026-03-24):**
+- Canonical counts remain fixed: `1,924` roots, `456` nuclei, `1,666` Quranic applications
+- Root empty-actual improved modestly: `113 -> 107`
+- Mean actual features per root: `2.5333`
+- Root layer improved materially after B.2-B.3:
+  - overall blended Jaccard: `0.195562`
+  - nonzero predictions: `4550 / 9620` (`47.3%`)
+  - `consensus_weighted`: `0.201593`
+  - `consensus_strict`: `0.201172`
+  - `jabal`: `0.195026`
+  - `asim_al_masri`: `0.190801`
+  - `hassan_abbas`: `0.189219`
+- Third-letter compatibility filter impact:
+  - rows with dropped third-letter features: `1551`
+  - rows dropping blacklisted `التحام`: `1156`
+  - `nucleus_only` fallback rows: `3178`
+
+**Interpretation:** vocab expansion alone had diminishing returns, but the third-letter correction materially improved the root layer and moved both consensus models above `0.20` blended Jaccard.
 
 ---
 
