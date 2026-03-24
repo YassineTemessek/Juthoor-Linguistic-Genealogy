@@ -181,18 +181,21 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 ### Task 2.2: Build consensus letter features
 
 **Files:**
-- New: `Juthoor-ArabicGenome-LV1/data/theory_canon/letters/consensus_letters.jsonl`
+- Modify: `Juthoor-ArabicGenome-LV1/src/juthoor_arabicgenome_lv1/factory/scoring.py`
+- Modify: `Juthoor-ArabicGenome-LV1/scripts/canon/build_lv1_theory_assets.py`
 
-- [ ] For each letter, produce a consensus feature set using this logic:
+- [x] For each letter, produce generated consensus feature sets using this logic:
   - Features agreed by 3+ scholars → high confidence
   - Features from 2 scholars → medium confidence
-  - Features from 1 scholar only → low confidence (keep but flag)
-- [ ] Each entry: letter, consensus_features, confidence_per_feature, scholar_sources
-- [ ] This becomes an additional "consensus" scholar option alongside individual scholars
-- [ ] Commit: `feat(lv1): consensus letter features across 5 scholars`
+  - Features from 1 scholar only → low confidence (retained only in weighted mode)
+- [x] Emit two generated consensus scholar options:
+  - `consensus_strict` = shared features only
+  - `consensus_weighted` = Jabal base + shared features
+- [x] This becomes an additional consensus scoring layer alongside individual scholars
+- [x] Commit: `feat(lv1): consensus letter features across 5 scholars`
 
 **Owner:** Claude (design consensus logic) + Codex (implementation)
-**Tests:** Assert 28 entries, each feature tagged with confidence + sources
+**Tests:** Assert generated consensus scholar maps rebuild successfully and score against all nuclei
 
 ---
 
@@ -201,16 +204,20 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 **Files:**
 - Modify: `outputs/lv1_scoring/nucleus_score_matrix.json`
 
-- [ ] Re-run score matrix using:
+- [x] Re-run score matrix using:
   - Jabal letters (baseline)
   - Asim letters (full alternative)
   - Abbas letters (sensory validation)
-  - Consensus letters (integrated)
-- [ ] Compare: which scholar's letters produce best prediction of Jabal's binary nucleus meanings?
-- [ ] Report: per-scholar accuracy on binary nuclei
-- [ ] Commit: `feat(lv1): multi-scholar nucleus scoring`
+  - Neili letters (where available)
+  - Anbar letters (25-entry verified rebuild)
+  - `consensus_strict`
+  - `consensus_weighted`
+- [x] Compare: which scholar's letters produce best prediction of Jabal's binary nucleus meanings?
+- [x] Report: per-scholar accuracy on binary nuclei
+- [x] Commit: `feat(lv1): multi-scholar nucleus scoring`
 
 **Owner:** Codex (computation) + Claude (analysis)
+**Checkpoint:** `consensus_strict` currently has the best mean Jaccard (`0.1207`), while `consensus_weighted` has the best nonzero coverage (`648/1580`).
 
 ---
 

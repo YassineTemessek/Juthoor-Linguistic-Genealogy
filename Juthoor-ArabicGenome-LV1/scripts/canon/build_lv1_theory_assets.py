@@ -15,6 +15,7 @@ from juthoor_arabicgenome_lv1.core.feature_decomposition import (
     feature_categories,
 )
 from juthoor_arabicgenome_lv1.factory.scoring import (
+    build_consensus_scholar_letters,
     build_nucleus_score_rows,
     invert_features_extended,
 )
@@ -506,6 +507,34 @@ def _scholar_letter_map(rows: list[dict[str, Any]]) -> dict[str, dict[str, dict[
     return dict(grouped)
 
 
+def _consensus_rows_from_map(
+    scholar_map: dict[str, dict[str, dict[str, Any]]],
+    *,
+    scholar_name: str,
+    mode: str,
+) -> list[dict[str, Any]]:
+    consensus_map = build_consensus_scholar_letters(scholar_map, mode=mode)
+    rows: list[dict[str, Any]] = []
+    for letter, payload in sorted(consensus_map.items()):
+        if letter not in CORE_REGISTRY_LETTERS:
+            continue
+        rows.append(
+            {
+                "letter": letter,
+                "letter_name": payload.get("letter_name"),
+                "scholar": scholar_name,
+                "raw_description": " / ".join(payload.get("atomic_features") or ()) or None,
+                "atomic_features": payload.get("atomic_features") or (),
+                "source_document": f"generated:{scholar_name}",
+                "articulatory_features": payload.get("articulatory_features"),
+                "confidence": "generated",
+                "mode": mode,
+                "support_counts": payload.get("support_counts"),
+            }
+        )
+    return rows
+
+
 def _confidence_tier(agreement_level: str, source_count: int) -> str:
     if agreement_level == "consensus":
         return "high"
@@ -623,7 +652,7 @@ def _build_golden_rule_report(nuclei_rows: list[dict[str, Any]]) -> dict[str, An
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
 
-    scholar_rows = (
+    base_scholar_rows = (
         _load_jabal_letters()
         + _load_neili_letters()
         + _load_abbas_letters()
@@ -632,10 +661,22 @@ def main() -> int:
     )
     nuclei_rows = _build_jabal_nuclei()
     root_rows = _build_jabal_roots()
-    scholar_map = _scholar_letter_map(scholar_rows)
+    base_scholar_map = _scholar_letter_map(base_scholar_rows)
+    consensus_strict_rows = _consensus_rows_from_map(
+        base_scholar_map,
+        scholar_name="consensus_strict",
+        mode="strict",
+    )
+    consensus_weighted_rows = _consensus_rows_from_map(
+        base_scholar_map,
+        scholar_name="consensus_weighted",
+        mode="weighted",
+    )
+    scoring_scholar_rows = base_scholar_rows + consensus_strict_rows + consensus_weighted_rows
+    scholar_map = _scholar_letter_map(scoring_scholar_rows)
     score_rows = build_nucleus_score_rows(nuclei_rows, scholar_map)
     golden_rule = _build_golden_rule_report(nuclei_rows)
-    root_prediction_rows = build_root_prediction_rows(root_rows, nuclei_rows, scholar_map, scholar="jabal")
+    root_prediction_rows = build_root_prediction_rows(root_rows, nuclei_rows, base_scholar_map, scholar="jabal")
     root_score_matrix = summarize_root_predictions(root_prediction_rows)
     benchmark_rows = load_benchmark_rows(LV2_BENCHMARK)
     semitic_projection_rows = build_semitic_projection_rows(root_prediction_rows, benchmark_rows)
@@ -661,9 +702,9 @@ def main() -> int:
         row["status"] = "predicted" if prediction["predicted_features"] else "empty"
 
     by_scholar: dict[str, list[dict[str, Any]]] = defaultdict(list)
-    for row in scholar_rows:
+    for row in scoring_scholar_rows:
         by_scholar[row["scholar"]].append(row)
-    letter_registry_rows = _build_letter_registry_rows(scholar_rows)
+    letter_registry_rows = _build_letter_registry_rows(base_scholar_rows)
     for scholar, rows in by_scholar.items():
         _write_jsonl(LETTERS_OUT / f"{scholar}_letters.jsonl", sorted(rows, key=lambda item: item["letter"]))
     _write_jsonl(BINARY_OUT / "jabal_nuclei_raw.jsonl", nuclei_rows)

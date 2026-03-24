@@ -7,6 +7,7 @@ from juthoor_arabicgenome_lv1.factory.composition_models import (
     model_sequence,
 )
 from juthoor_arabicgenome_lv1.factory.scoring import (
+    build_consensus_scholar_letters,
     build_nucleus_score_rows,
     invert_features_extended,
     jaccard_similarity,
@@ -84,6 +85,48 @@ def test_build_nucleus_score_rows_filters_missing_scholar_letters() -> None:
     rows = build_nucleus_score_rows(nuclei, scholars)
     assert rows
     assert {row["scholar"] for row in rows} == {"jabal"}
+
+
+def test_build_consensus_scholar_letters_supports_strict_and_weighted_modes() -> None:
+    scholars = {
+        "jabal": {
+            "ب": {"letter_name": "الباء", "atomic_features": ("تجمع", "رخاوة"), "articulatory_features": None},
+        },
+        "asim_al_masri": {
+            "ب": {"letter_name": "الباء", "atomic_features": ("خروج", "تجمع"), "articulatory_features": None},
+        },
+        "hassan_abbas": {
+            "ب": {"letter_name": "الباء", "atomic_features": ("بروز",), "articulatory_features": None},
+        },
+    }
+    strict = build_consensus_scholar_letters(scholars, mode="strict")
+    weighted = build_consensus_scholar_letters(scholars, mode="weighted")
+    assert strict["ب"]["atomic_features"] == ("اكتناز", "بروز")
+    assert weighted["ب"]["atomic_features"] == ("اكتناز", "بروز", "رخاوة")
+
+
+def test_build_nucleus_score_rows_includes_consensus_scholars_when_provided() -> None:
+    nuclei = [
+        {
+            "binary_root": "بر",
+            "letter1": "ب",
+            "letter2": "ر",
+            "actual_features": ("تجمع", "استرسال"),
+        }
+    ]
+    scholars = {
+        "jabal": {
+            "ب": {"letter_name": "الباء", "atomic_features": ("تجمع", "رخاوة"), "articulatory_features": None},
+            "ر": {"letter_name": "الراء", "atomic_features": ("استرسال",), "articulatory_features": None},
+        },
+        "asim_al_masri": {
+            "ب": {"letter_name": "الباء", "atomic_features": ("تجمع", "خروج"), "articulatory_features": None},
+            "ر": {"letter_name": "الراء", "atomic_features": ("انتقال",), "articulatory_features": None},
+        },
+    }
+    scholars["consensus_strict"] = build_consensus_scholar_letters(scholars, mode="strict")
+    rows = build_nucleus_score_rows(nuclei, scholars)
+    assert "consensus_strict" in {row["scholar"] for row in rows}
 
 
 def test_root_predictor_prefers_intersection_when_overlap_exists() -> None:

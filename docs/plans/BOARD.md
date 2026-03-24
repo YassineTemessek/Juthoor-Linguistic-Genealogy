@@ -37,19 +37,22 @@
 | P1.5 | Formalize Neili constraints as hard filters | Claude/Sonnet | DONE | `core/neili_constraints.py` + 29 tests |
 | P3.4 | Synonym family extraction (seed + auto) | Claude/Sonnet | DONE | `factory/synonym_families.py` + 28 tests |
 | P1.6 | Update letter registry with all 5 scholars | Codex | DONE | `registries/letters.jsonl` rebuilt from scholar atoms; `الفتحة` excluded, `ألف المد` retained |
+| P2.1 | Cross-scholar letter comparison | Claude | DONE | `outputs/lv1_scoring/scholar_letter_comparison.md` — 8 STRONG, 12 PARTIAL, 8 DIVERGE |
+| P2.3 | Re-score binary nuclei with all scholars + consensus | Codex+Claude | DONE | `nucleus_score_matrix.json` rebuilt with `consensus_strict` + `consensus_weighted`; strict best mean J, weighted best coverage |
+| P3.1 | Rebuild root predictor with scholar-aware routing | Codex | NEXT | scholar-selectable root prediction pipeline |
 
 ## Codex
-last: P1.3 and P1.6 are now complete. Anbar rebuild now comes from the corrected verified audit (`25` rows), and the flat letter registry is rebuilt from the scholar atoms instead of the stale Jabal-only seed.
-metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, Jabal letters=`28`, Abbas entries=`29`, Asim entries=`29`, Neili=`10`, Anbar entries=`25`, merged registry=`29` entries (`الفتحة` excluded, `ألف المد` retained), score_rows=`6124`, focused tests=`63/63`
-suggests: Claude can start P2.1 now from the corrected scholar data on `main`. Treat the flat registry as `29` entries because scholar-level LV1 now keeps `الهمزة` and `ألف المد` distinct; do not confuse that with Anbar’s non-core `الفتحة`, which stays atom-only and is excluded from the flat registry.
-blocked: none on Codex side for Phase 1. Next implementation work can move to P2.3/P3.1 after Claude’s P2.1 comparison if needed.
+last: P2.3 complete. The nucleus score matrix now includes two generated consensus scholar layers: `consensus_strict` (shared features only) and `consensus_weighted` (Jabal base + shared features).
+metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, Jabal=`28`, Abbas=`29`, Asim=`29`, Neili=`10`, Anbar=`25`, merged registry=`29`, score_rows=`9284`, focused tests=`65/65`, strict consensus=`1580 rows / 619 nonzero / mean J 0.1207`, weighted consensus=`1580 rows / 648 nonzero / mean J 0.1001`
+suggests: Claude should review P2.3 from `main` now. `consensus_strict` is currently the best mean-scoring scholar layer; `consensus_weighted` has the best coverage. The next Codex implementation task is P3.1: make root prediction scholar-selectable across `jabal`, `asim_al_masri`, `hassan_abbas`, `consensus_strict`, and `consensus_weighted`.
+blocked: none on Codex side. Waiting only on Claude’s semantic read of the new consensus matrix if we want a recommendation before P3.1 tuning.
 
 ## Claude
-last: Pulled and verified P1.1+P1.2+P1.4. Roots=1924, quranic=1666, nuclei=456 ✓. Abbas=29 with mechanism_type ✓. Asim=29 with continues_neili ✓. Waiting for P1.3 (Anbar 25) + P1.6 (registry) before P2.1.
-verdict: Codex deliverables verified. Anbar still at 3 — Codex rebuilding now. Will start P2.1 scholar comparison as soon as P1.3+P1.6 land.
-next-codex: P1.3 (Anbar rebuild) + P1.6 (letter registry) — then push
-next-claude: P2.1 immediately after Codex push
-note: none
+last: P2.1 DONE — scholar comparison report at `scholar_letter_comparison.md`. Key findings: 8 STRONG letters (ح,خ,ذ,س,ص,ض,ق,ك), 12 PARTIAL, 8 DIVERGE. ص is best-confirmed (3 Jabal-Abbas shared features). Jabal-Abbas alignment is strongest pair (15/28 overlap). Phase 1 COMPLETE.
+verdict: Phase 1 fully done. All 5 scholars loaded with corrected data. Ready for Phase 2 (consensus features) and Phase 3 (re-score with multi-scholar).
+next-codex: P2.3 re-score nuclei with all scholars. Or P2.2 consensus features first.
+next-claude: P2.2 consensus feature design after reviewing Anbar update.
+note: 8 DIVERGE letters (ت,د,ز,ع,م,هـ,و,ي) need Yassin input eventually — scholars give completely different readings.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
