@@ -39,20 +39,20 @@
 | P1.6 | Update letter registry with all 5 scholars | Codex | DONE | `registries/letters.jsonl` rebuilt from scholar atoms; `الفتحة` excluded, `ألف المد` retained |
 | P2.1 | Cross-scholar letter comparison | Claude | DONE | `outputs/lv1_scoring/scholar_letter_comparison.md` — 8 STRONG, 12 PARTIAL, 8 DIVERGE |
 | P2.3 | Re-score binary nuclei with all scholars + consensus | Codex+Claude | DONE | `nucleus_score_matrix.json` rebuilt with `consensus_strict` + `consensus_weighted`; strict best mean J, weighted best coverage |
-| P3.1 | Rebuild root predictor with scholar-aware routing | Codex | NEXT | scholar-selectable root prediction pipeline |
+| P3.1 | Rebuild root predictor with scholar-aware routing | Codex | DONE | `root_predictions.json` / `root_score_matrix.json` rebuilt for `jabal`, `asim_al_masri`, `hassan_abbas`, `consensus_strict`, `consensus_weighted` |
 
 ## Codex
-last: P2.3 complete. The nucleus score matrix now includes two generated consensus scholar layers: `consensus_strict` (shared features only) and `consensus_weighted` (Jabal base + shared features).
-metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, Jabal=`28`, Abbas=`29`, Asim=`29`, Neili=`10`, Anbar=`25`, merged registry=`29`, score_rows=`9284`, focused tests=`65/65`, strict consensus=`1580 rows / 619 nonzero / mean J 0.1207`, weighted consensus=`1580 rows / 648 nonzero / mean J 0.1001`
-suggests: Claude should review P2.3 from `main` now. `consensus_strict` is currently the best mean-scoring scholar layer; `consensus_weighted` has the best coverage. The next Codex implementation task is P3.1: make root prediction scholar-selectable across `jabal`, `asim_al_masri`, `hassan_abbas`, `consensus_strict`, and `consensus_weighted`.
-blocked: none on Codex side. Waiting only on Claude’s semantic read of the new consensus matrix if we want a recommendation before P3.1 tuning.
+last: P3.1 complete. Root prediction is now scholar-selectable across `jabal`, `asim_al_masri`, `hassan_abbas`, `consensus_strict`, and `consensus_weighted`, while Jabal nuclei/root meanings remain the scoring ground truth.
+metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, score_rows=`9284`, root_prediction_rows=`9620`, focused tests=`66/66`; root mean blended: strict consensus=`0.1875`, weighted consensus=`0.1797`, Abbas=`0.1787`, Jabal=`0.1756`, Asim=`0.1734`; root nonzero: Abbas=`1129`, strict consensus=`1128`, Asim=`1109`, Jabal=`1072`, weighted consensus=`1064`
+suggests: Claude should review the new scholar-by-root breakdown on `main`. `consensus_strict` is now best on root means as well, while Abbas slightly edges it on raw nonzero count. Next Codex task can be P3.2 Neili-filtered validation or scholar-specific routing refinement after Claude’s read.
+blocked: none on Codex side.
 
 ## Claude
-last: P2.1 DONE — scholar comparison report at `scholar_letter_comparison.md`. Key findings: 8 STRONG letters (ح,خ,ذ,س,ص,ض,ق,ك), 12 PARTIAL, 8 DIVERGE. ص is best-confirmed (3 Jabal-Abbas shared features). Jabal-Abbas alignment is strongest pair (15/28 overlap). Phase 1 COMPLETE.
-verdict: Phase 1 fully done. All 5 scholars loaded with corrected data. Ready for Phase 2 (consensus features) and Phase 3 (re-score with multi-scholar).
-next-codex: P2.3 re-score nuclei with all scholars. Or P2.2 consensus features first.
-next-claude: P2.2 consensus feature design after reviewing Anbar update.
-note: 8 DIVERGE letters (ت,د,ز,ع,م,هـ,و,ي) need Yassin input eventually — scholars give completely different readings.
+last: Verified P1.3+P1.6+P2.3. All Phase 1+2 complete. Reviewed multi-scholar nucleus scores: consensus_strict is NEW BEST (mean_J=0.121, 39.2% nonzero) beating Jabal alone (0.104). Abbas is strong (0.103, 33.9%). Anbar surprisingly good (0.083, 31.2% on fewer rows).
+verdict: Multi-scholar consensus WORKS — 17% improvement over Jabal-only. Ready for P3.1 (scholar-selectable root prediction). Codex should proceed.
+next-codex: P3.1 scholar-selectable root predictor
+next-claude: Review P3.1 output when it lands. Start P4.1 (Method A at scale) with consensus predictions.
+note: Ranking: consensus_strict > jabal > consensus_weighted > abbas > anbar > neili > asim. Asim alone is weakest — his kinetic vocabulary doesn't map well to Jabal's binary features.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1

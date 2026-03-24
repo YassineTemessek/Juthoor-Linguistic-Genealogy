@@ -228,14 +228,16 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 **Files:**
 - Modify: `Juthoor-ArabicGenome-LV1/src/juthoor_arabicgenome_lv1/factory/root_predictor.py`
 
-- [ ] Add `scholar` parameter to prediction pipeline
-- [ ] Support running predictions with: jabal, asim, abbas, consensus letter sets
-- [ ] Keep Jabal's binary nucleus meanings as ground truth (they define المعنى المحوري)
-- [ ] Third letter features come from the selected scholar's letter meanings
-- [ ] Commit: `feat(lv1): scholar-aware root prediction pipeline`
+- [x] Add `scholar` parameter to prediction pipeline
+- [x] Support running predictions with: `jabal`, `asim_al_masri`, `hassan_abbas`, `consensus_strict`, `consensus_weighted`
+- [x] Keep Jabal's binary nucleus meanings as ground truth (they define المعنى المحوري)
+- [x] Third letter features come from the selected scholar's letter meanings
+- [x] Add scholar-level summary metrics to `root_score_matrix.json`
+- [x] Commit: `feat(lv1): scholar-aware root prediction pipeline`
 
 **Owner:** Codex
 **Tests:** Run predictions with each scholar, compare results
+**Checkpoint:** `consensus_strict` currently leads on root means (`mean_blended_jaccard = 0.187543`), while `hassan_abbas` is marginally highest on nonzero count (`1129` vs `1128` for strict consensus).
 
 ---
 

@@ -21,6 +21,7 @@ from juthoor_arabicgenome_lv1.factory.scoring import (
 )
 from juthoor_arabicgenome_lv1.factory.root_predictor import (
     build_root_prediction_rows,
+    build_root_prediction_rows_all_scholars,
     summarize_root_predictions,
 )
 from juthoor_arabicgenome_lv1.factory.cross_lingual_projection import (
@@ -676,14 +677,26 @@ def main() -> int:
     scholar_map = _scholar_letter_map(scoring_scholar_rows)
     score_rows = build_nucleus_score_rows(nuclei_rows, scholar_map)
     golden_rule = _build_golden_rule_report(nuclei_rows)
-    root_prediction_rows = build_root_prediction_rows(root_rows, nuclei_rows, base_scholar_map, scholar="jabal")
+    root_prediction_rows = build_root_prediction_rows_all_scholars(
+        root_rows,
+        nuclei_rows,
+        scholar_map,
+        scholars=(
+            "jabal",
+            "asim_al_masri",
+            "hassan_abbas",
+            "consensus_strict",
+            "consensus_weighted",
+        ),
+    )
     root_score_matrix = summarize_root_predictions(root_prediction_rows)
+    jabal_root_prediction_rows = [row for row in root_prediction_rows if row["scholar"] == "jabal"]
     benchmark_rows = load_benchmark_rows(LV2_BENCHMARK)
-    semitic_projection_rows = build_semitic_projection_rows(root_prediction_rows, benchmark_rows)
+    semitic_projection_rows = build_semitic_projection_rows(jabal_root_prediction_rows, benchmark_rows)
     semitic_projection_summary = projection_summary(semitic_projection_rows, benchmark_rows)
     semitic_scored_rows = [score_projection_row(row) for row in semitic_projection_rows]
     semitic_scoring_summary = summarize_projection_scores(semitic_scored_rows)
-    non_semitic_projection_rows = build_non_semitic_projection_rows(root_prediction_rows, benchmark_rows)
+    non_semitic_projection_rows = build_non_semitic_projection_rows(jabal_root_prediction_rows, benchmark_rows)
     non_semitic_projection_summary_payload = non_semitic_projection_summary(
         non_semitic_projection_rows,
         benchmark_rows,
@@ -691,7 +704,7 @@ def main() -> int:
     non_semitic_scored_rows = [score_projection_row(row) for row in non_semitic_projection_rows]
     non_semitic_scoring_summary = summarize_projection_scores(non_semitic_scored_rows)
 
-    prediction_by_root = {row["root"]: row for row in root_prediction_rows}
+    prediction_by_root = {row["root"]: row for row in jabal_root_prediction_rows}
     for row in root_rows:
         prediction = prediction_by_root.get(row["root"])
         if not prediction:
