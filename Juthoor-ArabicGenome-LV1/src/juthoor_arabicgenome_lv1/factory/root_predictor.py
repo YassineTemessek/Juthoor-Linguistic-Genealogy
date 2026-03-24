@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any
 
+from juthoor_arabicgenome_lv1.core.neili_constraints import apply_neili_constraints
 from juthoor_arabicgenome_lv1.factory.composition_models import (
     model_intersection,
     model_phonetic_gestural,
@@ -196,22 +197,58 @@ def build_root_prediction_rows_all_scholars(
     return rows
 
 
+def apply_neili_filters_to_prediction_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    prepared: list[dict[str, Any]] = []
+    for row in rows:
+        payload = dict(row)
+        payload["is_quranic"] = bool(payload.get("quranic_verse"))
+        prepared.append(payload)
+
+    constrained = apply_neili_constraints(prepared)
+    enriched: list[dict[str, Any]] = []
+    for row in constrained:
+        flags = row.get("neili_flags", [])
+        serializable_flags = [
+            {
+                "constraint": flag.constraint,
+                "root": flag.root,
+                "description": flag.description,
+                "severity": flag.severity,
+            }
+            for flag in flags
+        ]
+        enriched_row = dict(row)
+        enriched_row["neili_flags"] = serializable_flags
+        enriched_row["neili_flag_count"] = len(serializable_flags)
+        enriched_row["neili_hard_flag_count"] = sum(1 for flag in serializable_flags if flag["severity"] == "hard")
+        enriched_row["neili_soft_flag_count"] = sum(1 for flag in serializable_flags if flag["severity"] == "soft")
+        enriched_row["neili_valid"] = enriched_row["neili_hard_flag_count"] == 0
+        enriched.append(enriched_row)
+    return enriched
+
+
 def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
     total = len(rows)
     nonzero = [row for row in rows if row["jaccard"] > 0.0]
     by_model: dict[str, list[dict[str, Any]]] = {}
     by_scholar: dict[str, list[dict[str, Any]]] = {}
     by_bab: dict[str, list[dict[str, Any]]] = {}
+    by_constraint: dict[str, int] = {}
 
     for row in rows:
         by_model.setdefault(row["model"], []).append(row)
         by_scholar.setdefault(row["scholar"], []).append(row)
         by_bab.setdefault(row.get("bab") or "", []).append(row)
+        for flag in row.get("neili_flags", []):
+            by_constraint[flag["constraint"]] = by_constraint.get(flag["constraint"], 0) + 1
 
     def _mean(values: list[float]) -> float:
         return sum(values) / len(values) if values else 0.0
 
     nonzero_blended = [row for row in rows if row.get("blended_jaccard", 0.0) > 0.0]
+    neili_valid_rows = [row for row in rows if row.get("neili_valid", True)]
+    neili_hard_rejected = [row for row in rows if row.get("neili_hard_flag_count", 0) > 0]
+    neili_soft_flagged = [row for row in rows if row.get("neili_soft_flag_count", 0) > 0]
 
     return {
         "overall": {
@@ -223,6 +260,10 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
             "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in rows]), 6),
             "nonzero_blended": len(nonzero_blended),
             "nonzero_blended_rate": round(len(nonzero_blended) / total, 6) if total else 0.0,
+            "neili_valid_predictions": len(neili_valid_rows),
+            "neili_valid_rate": round(len(neili_valid_rows) / total, 6) if total else 0.0,
+            "neili_hard_rejections": len(neili_hard_rejected),
+            "neili_soft_flagged": len(neili_soft_flagged),
         },
         "by_model": {
             model: {
@@ -246,6 +287,19 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
                 ),
             }
             for scholar, scholar_rows in sorted(by_scholar.items())
+        },
+        "neili_summary": {
+            "constraint_counts": dict(sorted(by_constraint.items())),
+            "top_hard_rejections": [
+                {
+                    "root": row["root"],
+                    "scholar": row["scholar"],
+                    "model": row["model"],
+                    "predicted_features": row["predicted_features"],
+                    "flags": row["neili_flags"],
+                }
+                for row in neili_hard_rejected[:50]
+            ],
         },
         "by_bab": {
             bab: {

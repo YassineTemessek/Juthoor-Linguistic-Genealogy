@@ -245,15 +245,18 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 
 **Files:**
 - Modify: `Juthoor-ArabicGenome-LV1/src/juthoor_arabicgenome_lv1/factory/root_predictor.py`
+- Modify: `Juthoor-ArabicGenome-LV1/src/juthoor_arabicgenome_lv1/core/neili_constraints.py`
 
-- [ ] After prediction, apply Neili filters:
+- [x] After prediction, apply Neili filters:
   - Flag predictions that violate no-synonymy (two roots predicted with identical meanings)
   - Flag predictions where meaning is instance-specific rather than conceptual
-- [ ] Add `neili_flags` field to prediction output
-- [ ] Commit: `feat(lv1): apply Neili constraints as post-prediction filters`
+- [x] Add `neili_flags` field to prediction output
+- [x] Add Neili validity summary to `root_score_matrix.json`
+- [x] Commit: `feat(lv1): apply Neili constraints as post-prediction filters`
 
 **Owner:** Claude/Sonnet
 **Tests:** Test with known Quranic root pairs
+**Checkpoint:** The filter works technically, but corpus-wide `no_synonymy` currently dominates and leaves only `1280/9620` rows (`13.31%`) Neili-valid. Treat this as a diagnostic layer, not a final hard gate, until Quranic-first validation isolates true application-level collisions from global family overlap.
 
 ---
 

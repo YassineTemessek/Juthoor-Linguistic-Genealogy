@@ -14,6 +14,7 @@ from juthoor_arabicgenome_lv1.factory.scoring import (
     weighted_jaccard_similarity,
 )
 from juthoor_arabicgenome_lv1.factory.root_predictor import (
+    apply_neili_filters_to_prediction_rows,
     build_root_prediction_rows_all_scholars,
     build_root_prediction_rows,
     choose_root_prediction_model,
@@ -253,3 +254,69 @@ def test_build_root_prediction_rows_all_scholars() -> None:
     summary = summarize_root_predictions(rows)
     assert summary["by_scholar"]["jabal"]["count"] == 1
     assert summary["by_scholar"]["consensus_strict"]["count"] == 1
+
+
+def test_apply_neili_filters_to_prediction_rows_adds_serialized_flags() -> None:
+    rows = [
+        {
+            "root": "كتب",
+            "scholar": "jabal",
+            "model": "intersection",
+            "predicted_features": ["تجمع", "اتصال"],
+            "actual_features": ["تجمع"],
+            "jaccard": 0.5,
+            "weighted_jaccard": 0.5,
+            "blended_jaccard": 0.5,
+            "quranic_verse": "sample",
+        },
+        {
+            "root": "جمع",
+            "scholar": "jabal",
+            "model": "intersection",
+            "predicted_features": ["تجمع", "اتصال"],
+            "actual_features": ["اتصال"],
+            "jaccard": 0.5,
+            "weighted_jaccard": 0.5,
+            "blended_jaccard": 0.5,
+            "quranic_verse": "sample",
+        },
+    ]
+    enriched = apply_neili_filters_to_prediction_rows(rows)
+    assert all("neili_flags" in row for row in enriched)
+    assert all(isinstance(row["neili_flags"], list) for row in enriched)
+    assert all(row["neili_hard_flag_count"] >= 1 for row in enriched)
+    assert all(row["neili_valid"] is False for row in enriched)
+
+
+def test_summarize_root_predictions_includes_neili_summary() -> None:
+    rows = apply_neili_filters_to_prediction_rows(
+        [
+            {
+                "root": "كتب",
+                "scholar": "jabal",
+                "model": "intersection",
+                "predicted_features": ["تجمع", "اتصال"],
+                "actual_features": ["تجمع"],
+                "jaccard": 0.5,
+                "weighted_jaccard": 0.5,
+                "blended_jaccard": 0.5,
+                "quranic_verse": "sample",
+                "bab": "الكاف",
+            },
+            {
+                "root": "جمع",
+                "scholar": "jabal",
+                "model": "intersection",
+                "predicted_features": ["تجمع", "اتصال"],
+                "actual_features": ["اتصال"],
+                "jaccard": 0.5,
+                "weighted_jaccard": 0.5,
+                "blended_jaccard": 0.5,
+                "quranic_verse": "sample",
+                "bab": "الجيم",
+            },
+        ]
+    )
+    summary = summarize_root_predictions(rows)
+    assert summary["overall"]["neili_hard_rejections"] == 2
+    assert summary["neili_summary"]["constraint_counts"]["no_synonymy"] == 2
