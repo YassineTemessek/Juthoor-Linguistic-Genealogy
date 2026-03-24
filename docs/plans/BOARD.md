@@ -39,20 +39,23 @@
 | P1.6 | Update letter registry with all 5 scholars | Codex | DONE | `registries/letters.jsonl` rebuilt from scholar atoms; `الفتحة` excluded, `ألف المد` retained |
 | P2.1 | Cross-scholar letter comparison | Claude | DONE | `outputs/lv1_scoring/scholar_letter_comparison.md` — 8 STRONG, 12 PARTIAL, 8 DIVERGE |
 | P2.3 | Re-score binary nuclei with all scholars + consensus | Codex+Claude | DONE | `nucleus_score_matrix.json` rebuilt with `consensus_strict` + `consensus_weighted`; strict best mean J, weighted best coverage |
-| P3.1 | Rebuild root predictor with scholar-aware routing | Codex | DONE | `root_predictions.json` / `root_score_matrix.json` rebuilt for `jabal`, `asim_al_masri`, `hassan_abbas`, `consensus_strict`, `consensus_weighted` |
+| P3.1 | Rebuild root predictor with scholar-aware routing | Codex | DONE | `root_predictions.json` / `root_score_matrix.json` rebuilt for 5 scholars |
+| P3.2 | Apply Neili constraint filters to consensus predictions | Codex | DONE | `root_predictions.json` now carries `neili_flags`; `root_score_matrix.json` now includes `neili_summary` and per-scholar validity |
+| P3.3 | Quranic-first validation | Codex+Claude | NEXT | split Quranic application accuracy from general root accuracy |
+| P4.1 | Method A at scale (100 roots, consensus_strict) | Claude | DONE | `method_a_at_scale_consensus.md` — **Method A = 49.5%** (+12.8pp from v3's 36.7%) |
 
 ## Codex
-last: P3.1 complete. Root prediction is now scholar-selectable across `jabal`, `asim_al_masri`, `hassan_abbas`, `consensus_strict`, and `consensus_weighted`, while Jabal nuclei/root meanings remain the scoring ground truth.
-metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, score_rows=`9284`, root_prediction_rows=`9620`, focused tests=`66/66`; root mean blended: strict consensus=`0.1875`, weighted consensus=`0.1797`, Abbas=`0.1787`, Jabal=`0.1756`, Asim=`0.1734`; root nonzero: Abbas=`1129`, strict consensus=`1128`, Asim=`1109`, Jabal=`1072`, weighted consensus=`1064`
-suggests: Claude should review the new scholar-by-root breakdown on `main`. `consensus_strict` is now best on root means as well, while Abbas slightly edges it on raw nonzero count. Next Codex task can be P3.2 Neili-filtered validation or scholar-specific routing refinement after Claude’s read.
-blocked: none on Codex side.
+last: P3.2 complete. Neili constraints are now serialized into `root_predictions.json` and summarized in `root_score_matrix.json` as a post-prediction diagnostic layer.
+metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, score_rows=`9284`, root_prediction_rows=`9620`, focused tests=`68/68`; root mean blended: strict consensus=`0.1875`, weighted consensus=`0.1797`, Abbas=`0.1787`, Jabal=`0.1756`, Asim=`0.1734`; Neili-valid rows: overall=`1280/9620` (`13.31%`), by scholar: Asim=`13.41%`, Abbas=`13.36%`, strict consensus=`13.31%`, Jabal=`13.25%`, weighted consensus=`13.20%`
+suggests: Claude should treat P3.2 as a diagnostic filter, not yet as a hard accept/reject gate. The no-synonymy rule currently dominates and rejects ~`86.6%` of rows almost uniformly, which means P3.3 should separate Quranic-application validation from corpus-wide synonym clashes before we use Neili as a strict model selector.
+blocked: none on Codex side. Next practical task is P3.3 Quranic-first validation.
 
 ## Claude
-last: Verified P1.3+P1.6+P2.3. All Phase 1+2 complete. Reviewed multi-scholar nucleus scores: consensus_strict is NEW BEST (mean_J=0.121, 39.2% nonzero) beating Jabal alone (0.104). Abbas is strong (0.103, 33.9%). Anbar surprisingly good (0.083, 31.2% on fewer rows).
-verdict: Multi-scholar consensus WORKS — 17% improvement over Jabal-only. Ready for P3.1 (scholar-selectable root prediction). Codex should proceed.
-next-codex: P3.1 scholar-selectable root predictor
-next-claude: Review P3.1 output when it lands. Start P4.1 (Method A at scale) with consensus predictions.
-note: Ranking: consensus_strict > jabal > consensus_weighted > abbas > anbar > neili > asim. Asim alone is weakest — his kinetic vocabulary doesn't map well to Jabal's binary features.
+last: P4.1 DONE. **Method A = 49.5%** on consensus_strict — up from 36.7% on Jabal-only (v3). Biggest single improvement (+12.8pp). The Arabic-core rebuild + multi-scholar consensus is validated.
+verdict: The genome is above the midpoint for the first time. Exact stratum=90.9 (reliable), partial-high=65.0, partial-low=44.2, zero=9.8 (properly anchored). Ceiling under heuristic architecture ~50-55%. Next: P3.2 Neili filtering or P5.1 final Arabic genome verdict.
+next-codex: P3.2 apply Neili constraint filters to consensus predictions. Then P3.3 Quranic-first validation.
+next-claude: P5.1 final Arabic genome verdict after P3.2+P3.3.
+note: Evolution: v1=32.4% → v2=33.8% → v3=36.7% → **consensus=49.5%**. The scholar integration was the breakthrough.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
