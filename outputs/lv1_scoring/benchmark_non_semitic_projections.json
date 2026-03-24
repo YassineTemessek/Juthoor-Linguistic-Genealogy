@@ -86,7 +86,7 @@
       "khnd"
     ],
     "projection_family": "english",
-    "quranic_verse": "﴿يَعِبَادِيَ الَّذِينَ ءَامَنُوا إِنَّ أَرْضِي وَاسِعَةٌ فَإِيَّايَ فَاعْبُدُونِ﴾"
+    "quranic_verse": "أَرْضِي -\"يَعِبَادِيَ الَّذِينَ ءَامَنُوا إِنَّ أَرْضِي وَاسِعَةٌ فَإِيَّايَ فَاعْبُدُونِ\""
   },
   {
     "source_root": "ثور",
@@ -158,7 +158,7 @@
       "sfn"
     ],
     "projection_family": "english",
-    "quranic_verse": "فتثير - ﴿فَتُثِيرُ سَحَابًا﴾"
+    "quranic_verse": "فتثير - \"فَتُثِيرُ سَحَابًا\""
   },
   {
     "source_root": "قرن",
@@ -245,9 +245,9 @@
     "target_gloss": "booth/stall",
     "relation": "cognate",
     "confidence": 0.6,
-    "predicted_meaning": "استقلال",
+    "predicted_meaning": "قطع",
     "predicted_features": [
-      "استقلال"
+      "قطع"
     ],
     "actual_features": [
       "حيز"
@@ -537,7 +537,7 @@
       "rqqlglk"
     ],
     "projection_family": "english",
-    "quranic_verse": "﴿فِي رَقٍّ مَّنشُورٍ﴾"
+    "quranic_verse": "رَقٍّ -\"فِي رَقٍّ مَّنشُورٍ\""
   },
   {
     "source_root": "برج",
@@ -749,7 +749,7 @@
       "krṭ"
     ],
     "projection_family": "english",
-    "quranic_verse": "جلود - ﴿جُلُودُ الَّذِينَ يَخْشَوْنَ رَبَّهُمْ﴾"
+    "quranic_verse": "جلود - \"جُلُودُ الَّذِينَ يَخْشَوْنَ رَبَّهُمْ\""
   },
   {
     "source_root": "فوهـ",
@@ -761,11 +761,10 @@
     "target_gloss": "well-known/celebrated",
     "relation": "cognate",
     "confidence": 0.7,
-    "predicted_meaning": "فراغ + عمق + اشتمال",
+    "predicted_meaning": "فراغ + عمق",
     "predicted_features": [
       "فراغ",
-      "عمق",
-      "اشتمال"
+      "عمق"
     ],
     "actual_features": [
       "اختراق",
@@ -774,7 +773,7 @@
     "meanings_score": {
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
-      "blended_jaccard": 0.2
+      "blended_jaccard": 0.3
     },
     "projected_variants": [
       "fwhـ",
@@ -907,7 +906,7 @@
       "pmgـ"
     ],
     "projection_family": "english",
-    "quranic_verse": "يُرِيدُونَ لِيُطْفِئُوا نُورَ اللَّهِ بِأَفْوَاهِهِمْ"
+    "quranic_verse": "أفواههم - \"يُرِيدُونَ لِيُطْفِئُوا نُورَ اللَّهِ بِأَفْوَاهِهِمْ\""
   },
   {
     "source_root": "بصر",
@@ -1178,7 +1177,7 @@
       "cdb"
     ],
     "projection_family": "english",
-    "quranic_verse": "﴿وَعَلَّمَ ءَادَمَ الْأَسْمَاءَ كُلَّهَا﴾"
+    "quranic_verse": "ءَادَمَ -\"وَعَلَّمَ ءَادَمَ الْأَسْمَاءَ كُلَّهَا\""
   },
   {
     "source_root": "كرر-كركر",
@@ -1334,7 +1333,7 @@
       "krrqnql"
     ],
     "projection_family": "english",
-    "quranic_verse": "ثُمَّ رَدَدْنَا لَكُمُ الْكَرَّةَ عَلَيْهِمْ"
+    "quranic_verse": "الكرة - \"ثُمَّ رَدَدْنَا لَكُمُ الْكَرَّةَ عَلَيْهِمْ\""
   },
   {
     "source_root": "عمم",
@@ -1494,7 +1493,7 @@
     "quranic_verse": "أعمامكم - \"أَوْ بُيُوتِ أَعْمَامِكُمْ\""
   },
   {
-    "source_root": "بصص/بصبص",
+    "source_root": "بصص-بصبص",
     "source_binary_nucleus": "بص",
     "source_lemma": "باص",
     "source_gloss": "to rush ahead/hurry",
