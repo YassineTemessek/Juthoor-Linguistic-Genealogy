@@ -41,14 +41,15 @@
 | P2.3 | Re-score binary nuclei with all scholars + consensus | Codex+Claude | DONE | `nucleus_score_matrix.json` rebuilt with `consensus_strict` + `consensus_weighted`; strict best mean J, weighted best coverage |
 | P3.1 | Rebuild root predictor with scholar-aware routing | Codex | DONE | `root_predictions.json` / `root_score_matrix.json` rebuilt for 5 scholars |
 | P3.2 | Apply Neili constraint filters to consensus predictions | Codex | DONE | `root_predictions.json` now carries `neili_flags`; `root_score_matrix.json` now includes `neili_summary` and per-scholar validity |
-| P3.3 | Quranic-first validation | Codex+Claude | NEXT | split Quranic application accuracy from general root accuracy |
+| P3.3 | Quranic-first validation | Codex+Claude | DONE | `root_score_matrix.json` now splits Quranic vs non-Quranic accuracy and Neili-validity |
+| P5.1 | Final Arabic genome verdict | Claude | NEXT | final LV1 Arabic-core verdict from rebuilt scholar + Quranic metrics |
 | P4.1 | Method A at scale (100 roots, consensus_strict) | Claude | DONE | `method_a_at_scale_consensus.md` — **Method A = 49.5%** (+12.8pp from v3's 36.7%) |
 
 ## Codex
-last: P3.2 complete. Neili constraints are now serialized into `root_predictions.json` and summarized in `root_score_matrix.json` as a post-prediction diagnostic layer.
-metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, score_rows=`9284`, root_prediction_rows=`9620`, focused tests=`68/68`; root mean blended: strict consensus=`0.1875`, weighted consensus=`0.1797`, Abbas=`0.1787`, Jabal=`0.1756`, Asim=`0.1734`; Neili-valid rows: overall=`1280/9620` (`13.31%`), by scholar: Asim=`13.41%`, Abbas=`13.36%`, strict consensus=`13.31%`, Jabal=`13.25%`, weighted consensus=`13.20%`
-suggests: Claude should treat P3.2 as a diagnostic filter, not yet as a hard accept/reject gate. The no-synonymy rule currently dominates and rejects ~`86.6%` of rows almost uniformly, which means P3.3 should separate Quranic-application validation from corpus-wide synonym clashes before we use Neili as a strict model selector.
-blocked: none on Codex side. Next practical task is P3.3 Quranic-first validation.
+last: P3.3 complete. `root_score_matrix.json` now separates Quranic and non-Quranic root performance, which shows where the current Neili filtering is actually breaking.
+metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, score_rows=`9284`, root_prediction_rows=`9620`, focused tests=`69/69`; Quranic cohort=`8330` rows, mean blended=`0.1676`, nonzero blended=`55.68%`, Neili-valid=`0.60%`; non-Quranic cohort=`1290` rows, mean blended=`0.2522`, nonzero blended=`66.98%`, Neili-valid=`95.35%`
+suggests: Claude should use this split in P5.1. The current Neili `no_synonymy` implementation is not a usable global hard gate for Quranic evaluation yet; it is mostly detecting family-level collisions across the Quranic cohort. The rebuilt Arabic genome itself is still strong, but Neili filtering needs Quran-aware refinement before it can be used as a final exclusion rule.
+blocked: none on Codex side. Next practical task is whatever Claude needs for P5.1, most likely a refinement of Neili no-synonymy from corpus-wide to Quran-application-aware comparison.
 
 ## Claude
 last: P4.1 DONE. **Method A = 49.5%** on consensus_strict — up from 36.7% on Jabal-only (v3). Biggest single improvement (+12.8pp). The Arabic-core rebuild + multi-scholar consensus is validated.
