@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any
 
@@ -157,6 +158,56 @@ def score_prediction(
         jaccard=jaccard_similarity(result.predicted_features, actual_features),
         weighted_jaccard=weighted_jaccard_similarity(result.predicted_features, actual_features),
     )
+
+
+def build_consensus_scholar_letters(
+    scholar_letters: dict[str, dict[str, dict[str, Any]]],
+    *,
+    mode: str = "strict",
+) -> dict[str, dict[str, Any]]:
+    if mode not in {"strict", "weighted"}:
+        raise ValueError(f"Unsupported consensus mode: {mode}")
+
+    by_letter: dict[str, dict[str, dict[str, Any]]] = defaultdict(dict)
+    for scholar, letters in scholar_letters.items():
+        if scholar.startswith("consensus"):
+            continue
+        for letter, payload in letters.items():
+            by_letter[letter][scholar] = payload
+
+    consensus_letters: dict[str, dict[str, Any]] = {}
+    for letter, sources in by_letter.items():
+        feature_support: dict[str, set[str]] = defaultdict(set)
+        for scholar, payload in sources.items():
+            features = payload.get("atomic_features") or ()
+            for feature in _canonicalize(tuple(features)):
+                feature_support[feature].add(scholar)
+
+        shared_features = {feature for feature, scholars in feature_support.items() if len(scholars) >= 2}
+        jabal_payload = sources.get("jabal") or next(iter(sources.values()))
+        jabal_features = tuple(_canonicalize(tuple(jabal_payload.get("atomic_features") or ())))
+
+        if mode == "strict":
+            selected = tuple(sorted(shared_features))
+        else:
+            selected = tuple(
+                sorted(
+                    {
+                        *shared_features,
+                        *jabal_features,
+                    }
+                )
+            )
+
+        consensus_letters[letter] = {
+            "letter": letter,
+            "letter_name": jabal_payload.get("letter_name"),
+            "atomic_features": selected,
+            "articulatory_features": jabal_payload.get("articulatory_features"),
+            "support_counts": {feature: len(scholars) for feature, scholars in sorted(feature_support.items())},
+            "mode": mode,
+        }
+    return consensus_letters
 
 
 def build_nucleus_score_rows(
