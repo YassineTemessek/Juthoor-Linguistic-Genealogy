@@ -761,10 +761,9 @@
     "target_gloss": "well-known/celebrated",
     "relation": "cognate",
     "confidence": 0.7,
-    "predicted_meaning": "فراغ + عمق",
+    "predicted_meaning": "فراغ",
     "predicted_features": [
-      "فراغ",
-      "عمق"
+      "فراغ"
     ],
     "actual_features": [
       "اختراق",
@@ -773,7 +772,7 @@
     "meanings_score": {
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
-      "blended_jaccard": 0.3
+      "blended_jaccard": 0.15
     },
     "projected_variants": [
       "fwhـ",
