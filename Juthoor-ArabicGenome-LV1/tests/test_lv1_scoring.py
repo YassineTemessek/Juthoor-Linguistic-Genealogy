@@ -14,6 +14,7 @@ from juthoor_arabicgenome_lv1.factory.scoring import (
     weighted_jaccard_similarity,
 )
 from juthoor_arabicgenome_lv1.factory.root_predictor import (
+    build_root_prediction_rows_all_scholars,
     build_root_prediction_rows,
     choose_root_prediction_model,
     predict_root_from_parts,
@@ -178,6 +179,7 @@ def test_build_root_prediction_rows_and_summary() -> None:
     summary = summarize_root_predictions(rows)
     assert summary["overall"]["roots"] == 1
     assert summary["by_model"]["intersection"]["count"] == 1
+    assert summary["by_scholar"]["jabal"]["count"] == 1
 
 
 def test_build_root_prediction_rows_normalizes_letter_aliases() -> None:
@@ -214,3 +216,40 @@ def test_build_root_prediction_rows_normalizes_letter_aliases() -> None:
     assert rows[1]["third_letter"] == "ي"
     assert rows[0]["predicted_features"]
     assert rows[1]["predicted_features"]
+
+
+def test_build_root_prediction_rows_all_scholars() -> None:
+    roots = [
+        {
+            "root": "حسب",
+            "binary_nucleus": "حس",
+            "third_letter": "ب",
+            "jabal_features": ("نفاذ", "تجمع"),
+            "bab": "الحاء",
+            "quranic_verse": None,
+        }
+    ]
+    nuclei = [
+        {
+            "binary_root": "حس",
+            "jabal_features": ("نفاذ", "حدة"),
+        }
+    ]
+    scholars = {
+        "jabal": {
+            "ب": {"atomic_features": ("تجمع", "نفاذ"), "articulatory_features": None},
+        },
+        "consensus_strict": {
+            "ب": {"atomic_features": ("تجمع",), "articulatory_features": None},
+        },
+    }
+    rows = build_root_prediction_rows_all_scholars(
+        roots,
+        nuclei,
+        scholars,
+        scholars=("jabal", "consensus_strict"),
+    )
+    assert {row["scholar"] for row in rows} == {"jabal", "consensus_strict"}
+    summary = summarize_root_predictions(rows)
+    assert summary["by_scholar"]["jabal"]["count"] == 1
+    assert summary["by_scholar"]["consensus_strict"]["count"] == 1

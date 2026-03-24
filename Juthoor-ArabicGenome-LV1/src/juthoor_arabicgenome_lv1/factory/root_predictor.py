@@ -175,14 +175,37 @@ def build_root_prediction_rows(
     return out
 
 
+def build_root_prediction_rows_all_scholars(
+    root_rows: list[dict[str, Any]],
+    nucleus_rows: list[dict[str, Any]],
+    scholar_letters: dict[str, dict[str, dict[str, Any]]],
+    *,
+    scholars: tuple[str, ...] | None = None,
+) -> list[dict[str, Any]]:
+    selected = scholars or tuple(sorted(scholar_letters))
+    rows: list[dict[str, Any]] = []
+    for scholar in selected:
+        rows.extend(
+            build_root_prediction_rows(
+                root_rows,
+                nucleus_rows,
+                scholar_letters,
+                scholar=scholar,
+            )
+        )
+    return rows
+
+
 def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
     total = len(rows)
     nonzero = [row for row in rows if row["jaccard"] > 0.0]
     by_model: dict[str, list[dict[str, Any]]] = {}
+    by_scholar: dict[str, list[dict[str, Any]]] = {}
     by_bab: dict[str, list[dict[str, Any]]] = {}
 
     for row in rows:
         by_model.setdefault(row["model"], []).append(row)
+        by_scholar.setdefault(row["scholar"], []).append(row)
         by_bab.setdefault(row.get("bab") or "", []).append(row)
 
     def _mean(values: list[float]) -> float:
@@ -209,6 +232,20 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
                 "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in model_rows]), 6),
             }
             for model, model_rows in sorted(by_model.items())
+        },
+        "by_scholar": {
+            scholar: {
+                "count": len(scholar_rows),
+                "mean_jaccard": round(_mean([row["jaccard"] for row in scholar_rows]), 6),
+                "mean_weighted_jaccard": round(_mean([row["weighted_jaccard"] for row in scholar_rows]), 6),
+                "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in scholar_rows]), 6),
+                "nonzero_predictions": sum(
+                    1
+                    for row in scholar_rows
+                    if row["jaccard"] > 0.0 or row["weighted_jaccard"] > 0.0 or row.get("blended_jaccard", 0.0) > 0.0
+                ),
+            }
+            for scholar, scholar_rows in sorted(by_scholar.items())
         },
         "by_bab": {
             bab: {
