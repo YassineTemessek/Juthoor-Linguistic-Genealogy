@@ -40,23 +40,23 @@
 | P2.1 | Cross-scholar letter comparison | Claude | DONE | `outputs/lv1_scoring/scholar_letter_comparison.md` — 8 STRONG, 12 PARTIAL, 8 DIVERGE |
 | P2.3 | Re-score binary nuclei with all scholars + consensus | Codex+Claude | DONE | `nucleus_score_matrix.json` rebuilt with `consensus_strict` + `consensus_weighted`; strict best mean J, weighted best coverage |
 | P3.1 | Rebuild root predictor with scholar-aware routing | Codex | DONE | `root_predictions.json` / `root_score_matrix.json` rebuilt for 5 scholars |
-| P3.2 | Apply Neili constraint filters to consensus predictions | Codex | DONE | `root_predictions.json` now carries `neili_flags`; `root_score_matrix.json` now includes `neili_summary` and per-scholar validity |
+| P3.2 | Apply Neili constraint filters to consensus predictions | Codex | DONE | implemented as a diagnostic experiment, then parked; not part of active LV1 scoring |
 | P3.3 | Quranic-first validation | Codex+Claude | DONE | `root_score_matrix.json` now splits Quranic vs non-Quranic accuracy and Neili-validity |
-| P5.1 | Final Arabic genome verdict | Claude | NEXT | final LV1 Arabic-core verdict from rebuilt scholar + Quranic metrics |
+| P5.1 | Final Arabic genome verdict | Claude | DONE | `arabic_genome_verdict.md` — Method A 49.5%, genome validated structurally |
 | P4.1 | Method A at scale (100 roots, consensus_strict) | Claude | DONE | `method_a_at_scale_consensus.md` — **Method A = 49.5%** (+12.8pp from v3's 36.7%) |
 
 ## Codex
-last: P3.3 complete. `root_score_matrix.json` now separates Quranic and non-Quranic root performance, which shows where the current Neili filtering is actually breaking.
-metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, score_rows=`9284`, root_prediction_rows=`9620`, focused tests=`69/69`; Quranic cohort=`8330` rows, mean blended=`0.1676`, nonzero blended=`55.68%`, Neili-valid=`0.60%`; non-Quranic cohort=`1290` rows, mean blended=`0.2522`, nonzero blended=`66.98%`, Neili-valid=`95.35%`
-suggests: Claude should use this split in P5.1. The current Neili `no_synonymy` implementation is not a usable global hard gate for Quranic evaluation yet; it is mostly detecting family-level collisions across the Quranic cohort. The rebuilt Arabic genome itself is still strong, but Neili filtering needs Quran-aware refinement before it can be used as a final exclusion rule.
-blocked: none on Codex side. Next practical task is whatever Claude needs for P5.1, most likely a refinement of Neili no-synonymy from corpus-wide to Quran-application-aware comparison.
+last: Neili filtering has been removed from the active LV1 build path and explicitly parked for a later Quranic exegesis stage. The active outputs now reflect Arabic-genome scoring without Neili gating.
+metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, score_rows=`9284`, root_prediction_rows=`9620`, focused tests=`69/69`; active root leaderboard remains: strict consensus mean blended=`0.1875`, weighted consensus=`0.1797`, Abbas=`0.1787`, Jabal=`0.1756`, Asim=`0.1734`; Quranic cohort=`8330` rows, mean blended=`0.1676`; non-Quranic cohort=`1290` rows, mean blended=`0.2522`
+suggests: Claude should write P5.1 without treating Neili no-synonymy as an LV1 acceptance rule. Neili remains relevant as a later Quran-word interpretation constraint, not as a current genome-construction gate.
+blocked: none on Codex side. Next practical task is whatever Claude needs for P5.1.
 
 ## Claude
-last: P4.1 DONE. **Method A = 49.5%** on consensus_strict — up from 36.7% on Jabal-only (v3). Biggest single improvement (+12.8pp). The Arabic-core rebuild + multi-scholar consensus is validated.
-verdict: The genome is above the midpoint for the first time. Exact stratum=90.9 (reliable), partial-high=65.0, partial-low=44.2, zero=9.8 (properly anchored). Ceiling under heuristic architecture ~50-55%. Next: P3.2 Neili filtering or P5.1 final Arabic genome verdict.
-next-codex: P3.2 apply Neili constraint filters to consensus predictions. Then P3.3 Quranic-first validation.
-next-claude: P5.1 final Arabic genome verdict after P3.2+P3.3.
-note: Evolution: v1=32.4% → v2=33.8% → v3=36.7% → **consensus=49.5%**. The scholar integration was the breakthrough.
+last: P5.1 DONE. Neili no-synonymy DEMOTED per Yassin — it's for Quranic exegesis, not genome construction. Arabic Core Rebuild fully complete.
+verdict: LV1 Arabic genome validated at Method A 49.5%. All P1-P5 tasks done. Neili module kept in code for future Quranic layer but removed from scoring path.
+next-codex: awaiting Yassin direction
+next-claude: awaiting Yassin direction
+note: Arabic Core Rebuild complete. Quranic/non-Quranic split kept (useful). Neili filtering parked (not useful at this stage).
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
@@ -74,6 +74,7 @@ note: Evolution: v1=32.4% → v2=33.8% → v3=36.7% → **consensus=49.5%**. The
 - S6.5 benchmark cleanup: corrected Hebrew `בית`, added explicit root hints for recoverable English rows, and lifted English coverage from 11 to 18 matched rows. Exact English signal remains weak; binary-prefix signal improved to 7/18.
 - Final English diagnostic: `non_semitic_gap_report.md` classifies the remaining misses as reduced-form derivation gaps, unmodeled sound-law gaps, or benchmark rows that are not fair direct exact-match targets.
 - Semantic transfer NOT viable at feature-Jaccard level — needs embedding-based scoring (LV2 capability).
+- Neili no-synonymy is parked for a later Quranic interpretation layer. It is not part of active LV1 scoring or model acceptance.
 
 ## Archive
 | Date | Task | Owner | Output |
