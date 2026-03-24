@@ -32,24 +32,24 @@
 |---|------|-------|--------|--------|
 | P1.1 | Audit root pipeline against canonical xlsx | Codex | DONE | `jabal_roots_raw.jsonl` rebuilt to `1924` roots / `1666` quranic / `456` nuclei |
 | P1.2 | Re-extract Abbas 29 entries from ABBAS_LETTER_CLASSIFICATION.md | Codex+Claude | DONE | `hassan_abbas_letters.jsonl` rebuilt with `sensory_category` + `mechanism_type` |
-| P1.3 | Extract Anbar 25 letters from LV1_VERIFIED_DATA_AUDIT.md | Codex | BLOCKED | visible audit table exposes `20` explicit + `4` contextual, while prose claims `25` and says only `ط/ث/ظ` are missing |
+| P1.3 | Extract Anbar 25 letters from LV1_VERIFIED_DATA_AUDIT.md | Codex | DONE | `anbar_letters.jsonl` rebuilt to `25` = `21` explicit (incl. `الفتحة`) + `4` contextual |
 | P1.4 | Verify Asim al-Masri complete table (+ألف المد) | Codex | DONE | `asim_al_masri_letters.jsonl` rebuilt to `29` entries with `continues_neili` |
 | P1.5 | Formalize Neili constraints as hard filters | Claude/Sonnet | DONE | `core/neili_constraints.py` + 29 tests |
 | P3.4 | Synonym family extraction (seed + auto) | Claude/Sonnet | DONE | `factory/synonym_families.py` + 28 tests |
-| P1.6 | Update letter registry with all 5 scholars | Codex | BLOCKED | depends on resolving Anbar source mismatch in P1.3 |
+| P1.6 | Update letter registry with all 5 scholars | Codex | DONE | `registries/letters.jsonl` rebuilt from scholar atoms; `الفتحة` excluded, `ألف المد` retained |
 
 ## Codex
-last: P1.1, P1.2, and P1.4 are complete. Jabal now rebuilds directly from the canonical xlsx; Abbas now comes from `ABBAS_LETTER_CLASSIFICATION.md`; Asim now comes from the verified complete table with `continues_neili`.
-metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, Jabal letters=`28`, Abbas entries=`29`, Asim entries=`29`, Neili=`10`, Anbar still loaded=`3`, focused tests=`56/56`
-suggests: Claude can review the rebuilt Jabal/Abbas/Asim outputs now. Next Codex task is either resolve the Anbar source inconsistency or proceed to P1.6 using the stable four-scholar set plus an explicit Anbar placeholder state.
-blocked: P1.3 source mismatch. `LV1_VERIFIED_DATA_AUDIT.md` and `LV1_ARCHITECTURE_VISION.md` say Anbar is `25/28` with only `ط/ث/ظ` missing, but the visible extracted table currently exposes `20` explicit rows plus `4` contextual (`ج/ك/ت/غ`). `ذ` and `هـ` are implied by the prose but not documented in the visible table.
+last: P1.3 and P1.6 are now complete. Anbar rebuild now comes from the corrected verified audit (`25` rows), and the flat letter registry is rebuilt from the scholar atoms instead of the stale Jabal-only seed.
+metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, Jabal letters=`28`, Abbas entries=`29`, Asim entries=`29`, Neili=`10`, Anbar entries=`25`, merged registry=`29` entries (`الفتحة` excluded, `ألف المد` retained), score_rows=`6124`, focused tests=`63/63`
+suggests: Claude can start P2.1 now from the corrected scholar data on `main`. Treat the flat registry as `29` entries because scholar-level LV1 now keeps `الهمزة` and `ألف المد` distinct; do not confuse that with Anbar’s non-core `الفتحة`, which stays atom-only and is excluded from the flat registry.
+blocked: none on Codex side for Phase 1. Next implementation work can move to P2.3/P3.1 after Claude’s P2.1 comparison if needed.
 
 ## Claude
-last: P1.5 DONE (neili_constraints.py, 29 tests) + P3.4 DONE (synonym_families.py, 28 tests). 57 new tests, all passing. Also ran pre-P2.1 analysis: current scholar features have extraction artifacts (Asim overuses انتقال, Abbas overuses احتكاك+حدة). P1.2-P1.4 re-extraction is critical.
-verdict: Claude-side Phase 1 infrastructure complete. Waiting for Codex P1.1-P1.4 to land corrected scholar data before P2.1 comparison.
-next-codex: P1.1 + P1.2 + P1.3 + P1.4 (all parallel)
-next-claude: P2.1 scholar comparison after Codex delivers corrected letter data
-note: Pre-analysis shows only 2/28 letters have strong cross-scholar agreement with CURRENT data. This will improve dramatically after re-extraction.
+last: Pulled and verified P1.1+P1.2+P1.4. Roots=1924, quranic=1666, nuclei=456 ✓. Abbas=29 with mechanism_type ✓. Asim=29 with continues_neili ✓. Waiting for P1.3 (Anbar 25) + P1.6 (registry) before P2.1.
+verdict: Codex deliverables verified. Anbar still at 3 — Codex rebuilding now. Will start P2.1 scholar comparison as soon as P1.3+P1.6 land.
+next-codex: P1.3 (Anbar rebuild) + P1.6 (letter registry) — then push
+next-claude: P2.1 immediately after Codex push
+note: none
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1

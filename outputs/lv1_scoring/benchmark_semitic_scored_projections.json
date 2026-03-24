@@ -5864,18 +5864,17 @@
     "target_gloss": "hundred",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "فراغ + رقة",
+    "predicted_meaning": "فراغ",
     "predicted_features": [
-      "فراغ",
-      "رقة"
+      "فراغ"
     ],
     "actual_features": [
       "رقة"
     ],
     "meanings_score": {
-      "jaccard": 0.5,
-      "weighted_jaccard": 0.5,
-      "blended_jaccard": 0.5
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "blended_jaccard": 0.0
     },
     "projected_variants": [
       "mwhـmyh",

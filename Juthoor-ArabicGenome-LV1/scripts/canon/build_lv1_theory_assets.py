@@ -49,6 +49,7 @@ CANON_ROOT = LV1_ROOT / "data" / "theory_canon"
 LETTERS_OUT = CANON_ROOT / "letters"
 BINARY_OUT = CANON_ROOT / "binary_fields"
 ROOTS_OUT = CANON_ROOT / "roots"
+REGISTRIES_OUT = CANON_ROOT / "registries"
 OUTPUT_ROOT = REPO_ROOT / "outputs" / "lv1_scoring"
 LV2_BENCHMARK = REPO_ROOT / "Juthoor-CognateDiscovery-LV2" / "resources" / "benchmarks" / "cognate_gold.jsonl"
 
@@ -117,6 +118,7 @@ CHAR_TO_LETTER_NAME = {
     "و": "الواو",
     "ي": "الياء",
 }
+CORE_REGISTRY_LETTERS = frozenset(CHAR_TO_LETTER_NAME.keys())
 
 NEILI_LETTERS = frozenset({"د", "ح", "ر", "ت", "ك", "م", "ب", "ع", "ل", "ي"})
 ASIM_FEATURE_OVERRIDES = {
@@ -226,9 +228,10 @@ def _load_jabal_letters() -> list[dict[str, Any]]:
     for letter_name, letter, meaning in ws.iter_rows(min_row=2, values_only=True):
         if not letter:
             continue
+        normalized_letter = _normalize_letter_symbol(str(letter).strip())
         out.append(
             _letter_row(
-                letter=str(letter).strip(),
+                letter=normalized_letter,
                 letter_name=str(letter_name).strip(),
                 scholar="jabal",
                 raw_description=str(meaning or "").strip(),
@@ -262,7 +265,7 @@ def _load_neili_letters() -> list[dict[str, Any]]:
     rows = _extract_markdown_table(summary, "### الحروف العشرة المستكشفة")
     out: list[dict[str, Any]] = []
     for row in rows[1:]:
-        letter = row[0].replace("*", "").replace(" ", "")
+        letter = _normalize_letter_symbol(row[0].replace("*", "").replace(" ", ""))
         kinetic = row[1]
         gloss = row[2]
         out.append(
@@ -399,21 +402,31 @@ def _load_asim_letters() -> list[dict[str, Any]]:
 
 
 def _load_anbar_letters() -> list[dict[str, Any]]:
-    summary = (SOURCE_DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
-    pattern = re.compile(r"- \*\*(.+?) \((.)\)\*\*: (.+)")
-    section = summary.split("### دلالات الحروف الأساسية حسب عنبر", 1)[1].split("## ١٨.", 1)[0]
+    source_path = SOURCE_DOC_ROOT / "LV1_VERIFIED_DATA_AUDIT.md"
+    rows = _extract_markdown_table(
+        source_path.read_text(encoding="utf-8"),
+        "**عنبر's complete extracted letter meanings:**",
+    )
     out: list[dict[str, Any]] = []
-    for match in pattern.finditer(section):
-        letter_name, letter, gloss = match.groups()
+    for row in rows[1:]:
+        if len(row) < 3:
+            continue
+        raw_letter, phonetic_group, gloss = row[:3]
+        letter = raw_letter.replace("*", "").strip()
+        is_contextual = "سياقية" in phonetic_group or "⚠" in gloss
+        normalized_letter = _normalize_letter_symbol(letter) if len(letter) == 1 else letter
         payload = _letter_row(
-            letter=letter,
-            letter_name=letter_name,
+            letter=normalized_letter,
+            letter_name=CHAR_TO_LETTER_NAME.get(normalized_letter, letter),
             scholar="anbar",
-            raw_description=gloss,
-            kinetic_gloss=gloss,
-            source_document=str(SOURCE_DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
+            raw_description=gloss.replace("⚠️", "").replace("⚠", "").strip(),
+            kinetic_gloss=None,
+            source_document=f"{source_path}#anbar-complete-table",
+            confidence="medium" if is_contextual else "high",
         )
-        payload["phonetic_group"] = "summary_fallback"
+        payload["phonetic_group"] = phonetic_group.replace("**", "").strip()
+        if is_contextual:
+            payload["derivation"] = "contextual"
         out.append(payload)
     return out
 
@@ -491,6 +504,82 @@ def _scholar_letter_map(rows: list[dict[str, Any]]) -> dict[str, dict[str, dict[
     for row in rows:
         grouped[row["scholar"]][row["letter"]] = row
     return dict(grouped)
+
+
+def _confidence_tier(agreement_level: str, source_count: int) -> str:
+    if agreement_level == "consensus":
+        return "high"
+    if agreement_level == "majority":
+        return "medium"
+    if source_count >= 2:
+        return "low"
+    return "stub"
+
+
+def _build_letter_registry_rows(scholar_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    core_rows = [
+        row
+        for row in scholar_rows
+        if row.get("letter") in CORE_REGISTRY_LETTERS
+    ]
+    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in core_rows:
+        grouped[row["letter"]].append(row)
+
+    registry_rows: list[dict[str, Any]] = []
+    for letter, rows in sorted(grouped.items()):
+        feature_counts: defaultdict[str, set[str]] = defaultdict(set)
+        for row in rows:
+            for feature in row.get("atomic_features") or []:
+                feature_counts[feature].add(row["scholar"])
+        consensus = sorted(feature for feature, scholars in feature_counts.items() if len(scholars) >= 2)
+        scholar_count = len({row["scholar"] for row in rows})
+        if scholar_count <= 1:
+            agreement_level = "unknown"
+        elif scholar_count >= 3 and consensus:
+            agreement_level = "consensus"
+        elif consensus:
+            agreement_level = "majority"
+        else:
+            agreement_level = "contested"
+
+        jabal_row = next((row for row in rows if row["scholar"] == "jabal"), None)
+        asim_row = next((row for row in rows if row["scholar"] == "asim_al_masri"), None)
+        abbas_row = next((row for row in rows if row["scholar"] == "hassan_abbas"), None)
+
+        source_entries = []
+        for row in rows:
+            claim_type = "semantic"
+            if row["scholar"] == "asim_al_masri":
+                claim_type = "kinetic"
+            elif row["scholar"] == "hassan_abbas":
+                claim_type = "sensory"
+            source_entries.append(
+                {
+                    "source_id": f"{row['scholar']}-{letter}",
+                    "scholar": row["scholar"],
+                    "claim_type": claim_type,
+                    "claim_text": row["raw_description"],
+                    "document_ref": row["source_document"],
+                    "curation_status": "reviewed",
+                }
+            )
+
+        registry_rows.append(
+            {
+                "letter": letter,
+                "letter_name": (jabal_row or rows[0]).get("letter_name"),
+                "canonical_semantic_gloss": (jabal_row or rows[0]).get("raw_description"),
+                "canonical_kinetic_gloss": (asim_row or {}).get("kinetic_gloss"),
+                "canonical_sensory_gloss": (abbas_row or {}).get("sensory_category"),
+                "articulatory_features": None,
+                "sources": source_entries,
+                "agreement_level": agreement_level,
+                "confidence_tier": _confidence_tier(agreement_level, scholar_count),
+                "status": "draft",
+            }
+        )
+    return registry_rows
 
 
 def _build_golden_rule_report(nuclei_rows: list[dict[str, Any]]) -> dict[str, Any]:
@@ -574,10 +663,12 @@ def main() -> int:
     by_scholar: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in scholar_rows:
         by_scholar[row["scholar"]].append(row)
+    letter_registry_rows = _build_letter_registry_rows(scholar_rows)
     for scholar, rows in by_scholar.items():
         _write_jsonl(LETTERS_OUT / f"{scholar}_letters.jsonl", sorted(rows, key=lambda item: item["letter"]))
     _write_jsonl(BINARY_OUT / "jabal_nuclei_raw.jsonl", nuclei_rows)
     _write_jsonl(ROOTS_OUT / "jabal_roots_raw.jsonl", root_rows)
+    _write_jsonl(REGISTRIES_OUT / "letters.jsonl", letter_registry_rows)
     _write_json(OUTPUT_ROOT / "nucleus_score_matrix.json", score_rows)
     _write_json(OUTPUT_ROOT / "golden_rule_report.json", golden_rule)
     _write_json(OUTPUT_ROOT / "root_predictions.json", root_prediction_rows)

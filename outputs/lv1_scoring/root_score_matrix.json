@@ -1,40 +1,40 @@
 {
   "overall": {
     "roots": 1924,
-    "nonzero_predictions": 777,
-    "nonzero_rate": 0.403846,
-    "mean_jaccard": 0.147992,
-    "mean_weighted_jaccard": 0.142945,
-    "mean_blended_jaccard": 0.176796,
-    "nonzero_blended": 1079,
-    "nonzero_blended_rate": 0.560811
+    "nonzero_predictions": 773,
+    "nonzero_rate": 0.401767,
+    "mean_jaccard": 0.147247,
+    "mean_weighted_jaccard": 0.1422,
+    "mean_blended_jaccard": 0.175552,
+    "nonzero_blended": 1072,
+    "nonzero_blended_rate": 0.557173
   },
   "by_model": {
     "intersection": {
-      "count": 1165,
-      "mean_jaccard": 0.156617,
-      "mean_weighted_jaccard": 0.149464,
-      "mean_blended_jaccard": 0.181666
+      "count": 1195,
+      "mean_jaccard": 0.156939,
+      "mean_weighted_jaccard": 0.149965,
+      "mean_blended_jaccard": 0.181577
     },
     "phonetic_gestural": {
-      "count": 689,
-      "mean_jaccard": 0.132381,
-      "mean_weighted_jaccard": 0.130503,
-      "mean_blended_jaccard": 0.166245
+      "count": 695,
+      "mean_jaccard": 0.133349,
+      "mean_weighted_jaccard": 0.131487,
+      "mean_blended_jaccard": 0.167114
     },
     "sequence": {
-      "count": 70,
-      "mean_jaccard": 0.158095,
-      "mean_weighted_jaccard": 0.156905,
-      "mean_blended_jaccard": 0.199595
+      "count": 34,
+      "mean_jaccard": 0.090686,
+      "mean_weighted_jaccard": 0.088235,
+      "mean_blended_jaccard": 0.136275
     }
   },
   "by_bab": {
     "الباء": {
       "count": 114,
-      "mean_jaccard": 0.154908,
-      "mean_weighted_jaccard": 0.152945,
-      "mean_blended_jaccard": 0.187427
+      "mean_jaccard": 0.151984,
+      "mean_weighted_jaccard": 0.150021,
+      "mean_blended_jaccard": 0.184503
     },
     "التاء": {
       "count": 34,
@@ -50,15 +50,15 @@
     },
     "الجيم": {
       "count": 82,
-      "mean_jaccard": 0.129878,
-      "mean_weighted_jaccard": 0.127555,
-      "mean_blended_jaccard": 0.160915
+      "mean_jaccard": 0.125203,
+      "mean_weighted_jaccard": 0.12288,
+      "mean_blended_jaccard": 0.156118
     },
     "الحاء": {
       "count": 109,
-      "mean_jaccard": 0.115913,
-      "mean_weighted_jaccard": 0.109021,
-      "mean_blended_jaccard": 0.147424
+      "mean_jaccard": 0.113772,
+      "mean_weighted_jaccard": 0.106881,
+      "mean_blended_jaccard": 0.144962
     },
     "الخاء": {
       "count": 87,
@@ -70,7 +70,7 @@
       "count": 65,
       "mean_jaccard": 0.136923,
       "mean_weighted_jaccard": 0.133626,
-      "mean_blended_jaccard": 0.169769
+      "mean_blended_jaccard": 0.169
     },
     "الذال": {
       "count": 31,
@@ -82,7 +82,7 @@
       "count": 115,
       "mean_jaccard": 0.153561,
       "mean_weighted_jaccard": 0.152836,
-      "mean_blended_jaccard": 0.189754
+      "mean_blended_jaccard": 0.188449
     },
     "الزاي": {
       "count": 62,
@@ -92,9 +92,9 @@
     },
     "السين": {
       "count": 133,
-      "mean_jaccard": 0.145131,
-      "mean_weighted_jaccard": 0.139008,
-      "mean_blended_jaccard": 0.173133
+      "mean_jaccard": 0.149517,
+      "mean_weighted_jaccard": 0.143394,
+      "mean_blended_jaccard": 0.176466
     },
     "الشين": {
       "count": 74,
@@ -140,45 +140,45 @@
     },
     "الفاء": {
       "count": 95,
-      "mean_jaccard": 0.119474,
-      "mean_weighted_jaccard": 0.113333,
-      "mean_blended_jaccard": 0.146316
+      "mean_jaccard": 0.113333,
+      "mean_weighted_jaccard": 0.107193,
+      "mean_blended_jaccard": 0.138333
     },
     "القاف": {
       "count": 107,
-      "mean_jaccard": 0.15623,
-      "mean_weighted_jaccard": 0.144481,
-      "mean_blended_jaccard": 0.181978
+      "mean_jaccard": 0.151558,
+      "mean_weighted_jaccard": 0.139809,
+      "mean_blended_jaccard": 0.177305
     },
     "الكاف": {
       "count": 77,
-      "mean_jaccard": 0.164286,
-      "mean_weighted_jaccard": 0.154978,
-      "mean_blended_jaccard": 0.19461
+      "mean_jaccard": 0.159091,
+      "mean_weighted_jaccard": 0.149784,
+      "mean_blended_jaccard": 0.188312
     },
     "اللام": {
       "count": 80,
       "mean_jaccard": 0.124375,
       "mean_weighted_jaccard": 0.118125,
-      "mean_blended_jaccard": 0.161875
+      "mean_blended_jaccard": 0.160937
     },
     "الميم": {
       "count": 94,
-      "mean_jaccard": 0.157371,
-      "mean_weighted_jaccard": 0.14886,
-      "mean_blended_jaccard": 0.18516
+      "mean_jaccard": 0.153825,
+      "mean_weighted_jaccard": 0.145314,
+      "mean_blended_jaccard": 0.179326
     },
     "النون": {
       "count": 136,
-      "mean_jaccard": 0.135189,
-      "mean_weighted_jaccard": 0.12844,
-      "mean_blended_jaccard": 0.15739
+      "mean_jaccard": 0.136415,
+      "mean_weighted_jaccard": 0.129666,
+      "mean_blended_jaccard": 0.158248
     },
     "الهاء": {
       "count": 57,
-      "mean_jaccard": 0.158772,
-      "mean_weighted_jaccard": 0.158772,
-      "mean_blended_jaccard": 0.187807
+      "mean_jaccard": 0.169006,
+      "mean_weighted_jaccard": 0.169006,
+      "mean_blended_jaccard": 0.198479
     }
   },
   "top_predictions": [
@@ -244,7 +244,7 @@
       "binary_nucleus": "تهـ",
       "third_letter": "هـ",
       "scholar": "jabal",
-      "model": "sequence",
+      "model": "intersection",
       "predicted_meaning": "فراغ",
       "predicted_features": [
         "فراغ"
@@ -862,6 +862,25 @@
       "quranic_verse": null
     },
     {
+      "root": "ههه",
+      "binary_nucleus": "هـ",
+      "third_letter": "هـ",
+      "scholar": "jabal",
+      "model": "intersection",
+      "predicted_meaning": "فراغ",
+      "predicted_features": [
+        "فراغ"
+      ],
+      "actual_features": [
+        "فراغ"
+      ],
+      "jaccard": 1.0,
+      "weighted_jaccard": 1.0,
+      "blended_jaccard": 1.0,
+      "bab": "الهاء",
+      "quranic_verse": null
+    },
+    {
       "root": "هضض-هضهض",
       "binary_nucleus": "هـض",
       "third_letter": "ض",
@@ -900,6 +919,30 @@
       "blended_jaccard": 1.0,
       "bab": "الهاء",
       "quranic_verse": null
+    },
+    {
+      "root": "سفه",
+      "binary_nucleus": "سف",
+      "third_letter": "هـ",
+      "scholar": "jabal",
+      "model": "phonetic_gestural",
+      "predicted_meaning": "نفاذ + جفاف + فراغ",
+      "predicted_features": [
+        "نفاذ",
+        "جفاف",
+        "فراغ"
+      ],
+      "actual_features": [
+        "رخاوة",
+        "فراغ",
+        "جفاف",
+        "نفاذ"
+      ],
+      "jaccard": 0.75,
+      "weighted_jaccard": 0.75,
+      "blended_jaccard": 0.825,
+      "bab": "السين",
+      "quranic_verse": "سفاهة- \"قَالَ يَا قَوْمِ لَيْسَ بِي سَفَاهَةٌ وَلَٰكِنِّي رَسُولٌ مِّن رَّبِّ الْعَالَمِينَ\""
     },
     {
       "root": "أون",
@@ -946,28 +989,6 @@
       "blended_jaccard": 0.666667,
       "bab": "الباء",
       "quranic_verse": "إيابهم - \"إِنَّ إِلَيْنَا إِيَابَهُمْ\" / أوّاب - \"كُلٌّ لَّهُ أَوَّابٌ\""
-    },
-    {
-      "root": "بهـهـ-بهـبهـ",
-      "binary_nucleus": "بهـ",
-      "third_letter": "هـ",
-      "scholar": "jabal",
-      "model": "sequence",
-      "predicted_meaning": "فراغ + ظاهر",
-      "predicted_features": [
-        "فراغ",
-        "ظاهر"
-      ],
-      "actual_features": [
-        "قوة",
-        "فراغ",
-        "ظاهر"
-      ],
-      "jaccard": 0.666667,
-      "weighted_jaccard": 0.666667,
-      "blended_jaccard": 0.666667,
-      "bab": "الباء",
-      "quranic_verse": null
     },
     {
       "root": "جوع",
@@ -1146,48 +1167,26 @@
       "quranic_verse": "سلالة- \"وَلَقَدْ خَلَقْنَا الْإِنسَانَ مِن سُلَالَةٍ مِّن طِينٍ\""
     },
     {
-      "root": "غبب",
-      "binary_nucleus": "غب",
-      "third_letter": "ب",
+      "root": "سنهـ",
+      "binary_nucleus": "سن",
+      "third_letter": "هـ",
       "scholar": "jabal",
       "model": "phonetic_gestural",
-      "predicted_meaning": "عمق + باطن + تجمع",
+      "predicted_meaning": "تلاصق + امتداد + فراغ",
       "predicted_features": [
-        "عمق",
-        "باطن",
-        "تجمع"
+        "تلاصق",
+        "امتداد",
+        "فراغ"
       ],
       "actual_features": [
-        "باطن",
-        "عمق"
-      ],
-      "jaccard": 0.5,
-      "weighted_jaccard": 0.666667,
-      "blended_jaccard": 0.5,
-      "bab": "الغين",
-      "quranic_verse": null
-    },
-    {
-      "root": "غظغظ",
-      "binary_nucleus": "غظ",
-      "third_letter": "ظ",
-      "scholar": "jabal",
-      "model": "phonetic_gestural",
-      "predicted_meaning": "قوة + جوف + نفاذ",
-      "predicted_features": [
-        "قوة",
-        "جوف",
-        "نفاذ"
-      ],
-      "actual_features": [
-        "جوف",
-        "قوة"
+        "امتداد",
+        "فراغ"
       ],
       "jaccard": 0.666667,
       "weighted_jaccard": 0.666667,
       "blended_jaccard": 0.666667,
-      "bab": "الغين",
-      "quranic_verse": null
+      "bab": "السين",
+      "quranic_verse": "يَتَسَنَّهْ- \"فَانظُرْ إِلَىٰ طَعَامِكَ وَشَرَابِكَ لَمْ يَتَسَنَّهْ\""
     }
   ],
   "bottom_predictions": [
