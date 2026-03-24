@@ -14,7 +14,7 @@ from juthoor_arabicgenome_lv1.factory.scoring import (
     jaccard_similarity,
     weighted_jaccard_similarity,
 )
-from juthoor_arabicgenome_lv1.core.feature_decomposition import FEATURE_TO_CATEGORY
+from juthoor_arabicgenome_lv1.core.feature_decomposition import FEATURE_POLARITIES, FEATURE_TO_CATEGORY
 
 
 @dataclass(frozen=True)
@@ -55,9 +55,30 @@ LETTER_ALIASES = {
     "ه": "هـ",
 }
 
+THIRD_LETTER_BLOCKED_FEATURES = frozenset({"التحام"})
+
 
 def _normalize_letter_token(letter: str) -> str:
     return LETTER_ALIASES.get(letter, letter)
+
+
+def filter_third_letter_features(
+    binary_features: tuple[str, ...],
+    third_letter_features: tuple[str, ...],
+) -> tuple[tuple[str, ...], tuple[str, ...]]:
+    binary_set = set(binary_features)
+    kept: list[str] = []
+    dropped: list[str] = []
+    for feature in third_letter_features:
+        if feature in THIRD_LETTER_BLOCKED_FEATURES and feature not in binary_set:
+            dropped.append(feature)
+            continue
+        opposite = FEATURE_POLARITIES.get(feature)
+        if opposite and opposite in binary_set and feature not in binary_set:
+            dropped.append(feature)
+            continue
+        kept.append(feature)
+    return tuple(kept), tuple(dropped)
 
 
 def choose_root_prediction_model(
@@ -95,11 +116,28 @@ def predict_root_from_parts(
     third_letter_articulatory: dict[str, Any] | None = None,
 ) -> RootPrediction:
     model_name = choose_root_prediction_model(binary_features, third_letter_features)
+    filtered_third_letter_features, dropped_third_letter_features = filter_third_letter_features(
+        binary_features,
+        third_letter_features,
+    )
+    if filtered_third_letter_features != third_letter_features:
+        third_letter_features = filtered_third_letter_features
+        model_name = choose_root_prediction_model(binary_features, third_letter_features)
     predicted_features: tuple[str, ...]
 
     if model_name == "intersection":
         result = model_intersection(binary_features, third_letter_features)
-        predicted_features = result.predicted_features
+        exact_overlap = set(binary_features) & set(third_letter_features)
+        if (
+            binary_features
+            and third_letter_features
+            and not exact_overlap
+            and set(result.predicted_features).issubset(set(binary_features))
+        ):
+            model_name = "nucleus_only"
+            predicted_features = tuple(dict.fromkeys(binary_features))
+        else:
+            predicted_features = result.predicted_features
     elif model_name == "phonetic_gestural":
         result = model_phonetic_gestural(
             binary_features,
@@ -110,6 +148,8 @@ def predict_root_from_parts(
     elif model_name == "sequence":
         result = model_sequence(binary_features, third_letter_features)
         predicted_features = result.predicted_features
+    elif model_name == "nucleus_only":
+        predicted_features = tuple(dict.fromkeys(binary_features))
     else:
         predicted_features = ()
 
@@ -142,13 +182,17 @@ def build_root_prediction_rows(
         nucleus = nucleus_map.get(row["binary_nucleus"], {})
         third_letter = _normalize_letter_token(row["third_letter"])
         third_letter_entry = letters.get(third_letter, {})
+        filtered_third_letter_features, dropped_third_letter_features = filter_third_letter_features(
+            _as_tuple(nucleus.get("jabal_features")),
+            _as_tuple(third_letter_entry.get("atomic_features")),
+        )
 
         prediction = predict_root_from_parts(
             root=row["root"],
             binary_nucleus=row["binary_nucleus"],
             third_letter=third_letter,
             binary_features=_as_tuple(nucleus.get("jabal_features")),
-            third_letter_features=_as_tuple(third_letter_entry.get("atomic_features")),
+            third_letter_features=filtered_third_letter_features,
             actual_features=_as_tuple(row.get("jabal_features")),
             scholar=scholar,
             third_letter_articulatory=third_letter_entry.get("articulatory_features"),
@@ -163,6 +207,8 @@ def build_root_prediction_rows(
                 "model": prediction.model_used,
                 "predicted_meaning": prediction.predicted_meaning,
                 "predicted_features": list(prediction.predicted_features),
+                "filtered_third_letter_features": list(filtered_third_letter_features),
+                "dropped_third_letter_features": list(dropped_third_letter_features),
                 "actual_features": list(prediction.actual_features),
                 "jaccard": round(prediction.jaccard, 6),
                 "weighted_jaccard": round(prediction.weighted_jaccard, 6),

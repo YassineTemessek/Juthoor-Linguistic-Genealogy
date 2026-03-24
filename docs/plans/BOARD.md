@@ -30,33 +30,31 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| P1.1 | Audit root pipeline against canonical xlsx | Codex | DONE | `jabal_roots_raw.jsonl` rebuilt to `1924` roots / `1666` quranic / `456` nuclei |
-| P1.2 | Re-extract Abbas 29 entries from ABBAS_LETTER_CLASSIFICATION.md | Codex+Claude | DONE | `hassan_abbas_letters.jsonl` rebuilt with `sensory_category` + `mechanism_type` |
-| P1.3 | Extract Anbar 25 letters from LV1_VERIFIED_DATA_AUDIT.md | Codex | DONE | `anbar_letters.jsonl` rebuilt to `25` = `21` explicit (incl. `الفتحة`) + `4` contextual |
-| P1.4 | Verify Asim al-Masri complete table (+ألف المد) | Codex | DONE | `asim_al_masri_letters.jsonl` rebuilt to `29` entries with `continues_neili` |
-| P1.5 | Formalize Neili constraints as hard filters | Claude/Sonnet | DONE | `core/neili_constraints.py` + 29 tests |
-| P3.4 | Synonym family extraction (seed + auto) | Claude/Sonnet | DONE | `factory/synonym_families.py` + 28 tests |
-| P1.6 | Update letter registry with all 5 scholars | Codex | DONE | `registries/letters.jsonl` rebuilt from scholar atoms; `الفتحة` excluded, `ألف المد` retained |
-| P2.1 | Cross-scholar letter comparison | Claude | DONE | `outputs/lv1_scoring/scholar_letter_comparison.md` — 8 STRONG, 12 PARTIAL, 8 DIVERGE |
-| P2.3 | Re-score binary nuclei with all scholars + consensus | Codex+Claude | DONE | `nucleus_score_matrix.json` rebuilt with `consensus_strict` + `consensus_weighted`; strict best mean J, weighted best coverage |
-| P3.1 | Rebuild root predictor with scholar-aware routing | Codex | DONE | `root_predictions.json` / `root_score_matrix.json` rebuilt for 5 scholars |
-| P3.2 | Apply Neili constraint filters to consensus predictions | Codex | DONE | implemented as a diagnostic experiment, then parked; not part of active LV1 scoring |
-| P3.3 | Quranic-first validation | Codex+Claude | DONE | `root_score_matrix.json` now splits Quranic vs non-Quranic accuracy and Neili-validity |
-| P5.1 | Final Arabic genome verdict | Claude | DONE | `arabic_genome_verdict.md` — Method A 49.5%, genome validated structurally |
-| P4.1 | Method A at scale (100 roots, consensus_strict) | Claude | DONE | `method_a_at_scale_consensus.md` — **Method A = 49.5%** (+12.8pp from v3's 36.7%) |
+| A.1 | Audit unrecognized tokens in jabal_axial_meaning — frequency clusters | Codex | DONE | `feature_vocab_gap_report.md` |
+| A.2 | Expand FEATURE_VOCAB from 65 to ~85 features (modulation semantics) | Codex | DONE | `feature_decomposition.py` expanded with modulation/substance/location terms |
+| A.3 | Re-extract jabal_features for all 1,924 roots with expanded vocab | Codex | DONE | roots rebuilt with expanded decomposition |
+| A.4 | Recover empty-actual roots (target: 113→<50) | Codex | DONE | improved only modestly: `113 -> 107` |
+| A.5 | Re-run all predictions + score matrix with expanded features | Codex | DONE | outputs rebuilt; coverage improved slightly but scores softened |
+| A.6 | Spot check: did vocab expansion improve Method B? | Claude | NEXT | A.1-A.5 landed; review `feature_vocab_gap_report.md` |
+| B.1 | Classify 495 nucleus-correct-but-root-wrong failures | Claude | DONE | `third_letter_failure_analysis.md` — 53% contradicts, 20% wrong model, 15% weak nucleus, 13% too generic |
+| C.1 | Present 8 DIVERGE letters to Yassin for resolution | Claude | DONE | `diverge_letters_for_yassin.md` — awaiting Yassin's decisions |
+| B.2 | Build semantic compatibility filter + blacklist التحام from third-letter | Codex | DONE | `root_predictor.py` filter + dropped feature tracking |
+| B.3 | Add nucleus-only fallback when intersection over-prunes | Codex | DONE | `root_predictor.py` category-only pseudo-overlap -> nucleus fallback |
+| B.6 | Spot check: did third-letter fixes recover the poisoned roots? | Claude | NEXT | review rerun after B.2-B.3 |
+| C.2 | Yassin reviews 8 DIVERGE letters | Yassin | NEXT | decisions in the doc |
 
 ## Codex
-last: Neili filtering has been removed from the active LV1 build path and explicitly parked for a later Quranic exegesis stage. The active outputs now reflect Arabic-genome scoring without Neili gating.
-metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, score_rows=`9284`, root_prediction_rows=`9620`, focused tests=`69/69`; active root leaderboard remains: strict consensus mean blended=`0.1875`, weighted consensus=`0.1797`, Abbas=`0.1787`, Jabal=`0.1756`, Asim=`0.1734`; Quranic cohort=`8330` rows, mean blended=`0.1676`; non-Quranic cohort=`1290` rows, mean blended=`0.2522`
-suggests: Claude should write P5.1 without treating Neili no-synonymy as an LV1 acceptance rule. Neili remains relevant as a later Quran-word interpretation constraint, not as a current genome-construction gate.
-blocked: none on Codex side. Next practical task is whatever Claude needs for P5.1.
+last: A.1-A.5 and B.2-B.3 complete. Expanded vocab is landed, compatibility filtering is live, and the full rerun is on main.
+metrics: roots=1924, quranic=1666, nuclei=456, Method A=49.5%, root empty-actual=107 (from 113), mean actual features/root=2.5333, overall blended=0.1956, nonzero=4550/9620 (47.3%), strict consensus blended=0.2012, weighted=0.2016, Jabal=0.1950, Asim=0.1908, Abbas=0.1892, dropped-third-feature rows=1551, dropped-التحام rows=1156, nucleus-only rows=3178
+suggests: Claude should do A.6 and B.6 next. `feature_vocab_gap_report.md` shows vocab-only gains are modest, while the B.2-B.3 rerun materially lifted the root layer. After Claude's spot checks, the next useful move is final calibration/verdict or targeted follow-up on the 8 DIVERGE letters if they still dominate.
+blocked: none
 
 ## Claude
-last: P5.1 DONE. Neili no-synonymy DEMOTED per Yassin — it's for Quranic exegesis, not genome construction. Arabic Core Rebuild fully complete.
-verdict: LV1 Arabic genome validated at Method A 49.5%. All P1-P5 tasks done. Neili module kept in code for future Quranic layer but removed from scoring path.
-next-codex: awaiting Yassin direction
-next-claude: awaiting Yassin direction
-note: Arabic Core Rebuild complete. Quranic/non-Quranic split kept (useful). Neili filtering parked (not useful at this stage).
+last: B.1 DONE (495 failures classified: 53% contradicts, 20% wrong model, 15% weak, 13% generic. التحام is #1 poison feature. ر is top polluting letter). C.1 DONE (8 DIVERGE letters presented to Yassin with response template).
+verdict: Third-letter fix path is clear: blacklist التحام from third-letter contributions, add intersection→phon_gest fallback when over-pruning, nucleus-only fallback for weak cases. Expected recovery: ~120 roots.
+next-codex: A.1-A.5 (vocab expansion) + B.2-B.3 (third-letter fixes) — can be parallel
+next-claude: A.6 spot check after A.5. B.6 spot check after B.5. D.1-D.4 after all sprints.
+note: C.2 needs Yassin to review `diverge_letters_for_yassin.md` and fill in decisions. م is highest priority (44 nuclei, 294 roots).
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
