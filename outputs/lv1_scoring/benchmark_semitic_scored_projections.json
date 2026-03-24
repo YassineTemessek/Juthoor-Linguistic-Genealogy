@@ -279,7 +279,7 @@
       "khdr"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "فأذنوا / بإذن - ﴿فَإِن لَّمْ تَفْعَلُوا فَأْذَنُوا بِحَرْبٍ مِّنَ اللَّهِ وَرَسُولِهِ﴾",
+    "quranic_verse": "فأذنوا / بإذن - \"فَإِن لَّمْ تَفْعَلُوا فَأْذَنُوا بِحَرْبٍ مِّنَ اللَّهِ وَرَسُولِهِ\"",
     "target_variants": [
       "aozn",
       "auzn",
@@ -510,7 +510,7 @@
       "snnṣlshr"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿فَلَن تَجِدَ لِسُنَّتِ اللَّهِ تَبْدِيلًا ۖ وَلَن تَجِدَ لِسُنَّتِ اللَّهِ تَحْوِيلًا﴾",
+    "quranic_verse": "سنت- \"فَلَن تَجِدَ لِسُنَّتِ اللَّهِ تَبْدِيلًا ۖ وَلَن تَجِدَ لِسُنَّتِ اللَّهِ تَحْوِيلًا\"",
     "target_variants": [
       "shn",
       "sn"
@@ -628,9 +628,9 @@
     "target_gloss": "house",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "استقلال",
+    "predicted_meaning": "قطع",
     "predicted_features": [
-      "استقلال"
+      "قطع"
     ],
     "actual_features": [
       "حيز"
@@ -862,7 +862,7 @@
       "nhsh"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿لَتَدْخُلُنَّ الْمَسْجِدَ الْحَرَامَ إِن شَاءَ اللَّهُ ءَامِنِينَ مُحَلِّقِينَ رُءُوسَكُمْ﴾",
+    "quranic_verse": "رُءُوسَكُمْ -\"لَتَدْخُلُنَّ الْمَسْجِدَ الْحَرَامَ إِن شَاءَ اللَّهُ ءَامِنِينَ مُحَلِّقِينَ رُءُوسَكُمْ\"",
     "target_variants": [
       "ras",
       "rash",
@@ -1325,7 +1325,7 @@
       "dmmdwtw"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنْبِهِمْ فَسَوَّاهَا﴾",
+    "quranic_verse": "دَمْدَمَ -\"فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنْبِهِمْ فَسَوَّاهَا\"",
     "target_variants": [
       "دم"
     ],
@@ -1519,7 +1519,7 @@
       "khnd"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿يَعِبَادِيَ الَّذِينَ ءَامَنُوا إِنَّ أَرْضِي وَاسِعَةٌ فَإِيَّايَ فَاعْبُدُونِ﴾",
+    "quranic_verse": "أَرْضِي -\"يَعِبَادِيَ الَّذِينَ ءَامَنُوا إِنَّ أَرْضِي وَاسِعَةٌ فَإِيَّايَ فَاعْبُدُونِ\"",
     "target_variants": [
       "ars",
       "arṣ",
@@ -1716,7 +1716,7 @@
       "jdw"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "كُتِبَ عَلَيْكُمُ الصِّيَامُ",
+    "quranic_verse": "كتب - \"كُتِبَ عَلَيْكُمُ الصِّيَامُ\"",
     "target_variants": [
       "ctb",
       "ctv",
@@ -1942,7 +1942,7 @@
       "shru"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ...﴾",
+    "quranic_verse": "السلام- \"هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ...\"",
     "target_variants": [
       "shlom",
       "shlum",
@@ -2288,9 +2288,10 @@
     "target_gloss": "day",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "امتداد",
+    "predicted_meaning": "امتداد + امتساك",
     "predicted_features": [
-      "امتداد"
+      "امتداد",
+      "امتساك"
     ],
     "actual_features": [],
     "meanings_score": {
@@ -2521,11 +2522,11 @@
     "target_gloss": "to eat",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تجمع + دقة + تأكيد",
+    "predicted_meaning": "تجمع + دقة + تعلق",
     "predicted_features": [
       "تجمع",
       "دقة",
-      "تأكيد"
+      "تعلق"
     ],
     "actual_features": [],
     "meanings_score": {
@@ -2632,7 +2633,7 @@
       "ccr"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "وَمَا أَكَلَ السَّبُعُ",
+    "quranic_verse": "أكل- \"وَمَا أَكَلَ السَّبُعُ\"",
     "target_variants": [
       "acl",
       "akhl",
@@ -2867,7 +2868,7 @@
       "zpc"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ﴾",
+    "quranic_verse": "السميع- \"إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ\"",
     "target_variants": [
       "shm",
       "shma",
@@ -3221,10 +3222,10 @@
     "target_gloss": "mother",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تجمع + تأكيد",
+    "predicted_meaning": "تجمع + امتساك",
     "predicted_features": [
       "تجمع",
-      "تأكيد"
+      "امتساك"
     ],
     "actual_features": [
       "حيز",
@@ -3565,7 +3566,7 @@
       "ṣpsh"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَّهَا﴾",
+    "quranic_verse": "الشمس - وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَّهَا",
     "target_variants": [
       "shms",
       "shmsh",
@@ -3721,7 +3722,7 @@
       "rir"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿وَٱلَّيْلِ إِذَا سَجَىٰ﴾",
+    "quranic_verse": "الليل - \"وَٱلَّيْلِ إِذَا سَجَىٰ\"",
     "target_variants": [
       "lilh",
       "lylh"
@@ -4109,7 +4110,7 @@
       "jnw"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "فَمَثَلُهُ كَمَثَلِ الْكَلْبِ",
+    "quranic_verse": "الكلب - \"فَمَثَلُهُ كَمَثَلِ الْكَلْبِ\"",
     "target_variants": [
       "clb",
       "clv",
@@ -4231,11 +4232,10 @@
     "target_gloss": "nose/anger",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "نفاذ + إبعاد + تأكيد",
+    "predicted_meaning": "نفاذ + إبعاد",
     "predicted_features": [
       "نفاذ",
-      "إبعاد",
-      "تأكيد"
+      "إبعاد"
     ],
     "actual_features": [
       "تلاصق",
@@ -4519,7 +4519,7 @@
       "rshr"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿وَلِسَانًا وَشَفَتَيْنِ﴾",
+    "quranic_verse": "لسان - \"وَلِسَانًا وَشَفَتَيْنِ\" / ألسنة - \"وَٱخْتِلَٰفُ أَلْسِنَتِكُمْ\"",
     "target_variants": [
       "lshon",
       "lshun",
@@ -5137,7 +5137,7 @@
       "hzw"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿حَسْبُنَا اللَّهُ﴾",
+    "quranic_verse": "حسبُنا-\"حَسْبُنَا اللَّهُ\"",
     "target_variants": [
       "hsb",
       "hshb",
@@ -5376,7 +5376,7 @@
       "mt"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا",
+    "quranic_verse": "فتحاً - \"إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا\"",
     "target_variants": [
       "fth",
       "ftḥ",
@@ -5559,7 +5559,7 @@
       "djn"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "الذكر / ذكرك - ﴿ وَلَيْسَ الذَّكَرُ كَالْأُنثَىٰ﴾",
+    "quranic_verse": "الذكر / ذكرك - \"وَلَيْسَ الذَّكَرُ كَالْأُنثَىٰ\"",
     "target_variants": [
       "zcr",
       "zkhr",
@@ -6446,7 +6446,7 @@
       "nhw"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿ثُمَّ نَكْسُوهَا لَحْمًا﴾",
+    "quranic_verse": "لحن القول - \"وَلَتَعْرِفَنَّهُمْ فِى لَحْنِ ٱلْقَوْلِ\"",
     "target_variants": [
       "lhm",
       "lḥm"
@@ -6910,7 +6910,7 @@
       "zḥw"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "ذهب / أذهب - ﴿وَقَالُوا الْحَمْدُ لِلَّهِ الَّذِي أَذْهَبَ عَنَّا الْحَزَنَ﴾",
+    "quranic_verse": "ذهب / أذهب - \"وَقَالُوا الْحَمْدُ لِلَّهِ الَّذِي أَذْهَبَ عَنَّا الْحَزَنَ\"",
     "target_variants": [
       "zhb",
       "zhv"
@@ -7264,7 +7264,7 @@
       "shuṭ"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿وَجَعَلْنَا نَوْمَكُمْ سُبَاتًا﴾",
+    "quranic_verse": "سباتًا- \"وَجَعَلْنَا نَوْمَكُمْ سُبَاتًا\"",
     "target_variants": [
       "sbt",
       "shbt",
@@ -7411,7 +7411,7 @@
       "shiṭ"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "زيتون - ﴿وَزَيْتُونًا وَنَخْلًا﴾",
+    "quranic_verse": "زيتون - \"وَزَيْتُونًا وَنَخْلًا\"",
     "target_variants": [
       "zit",
       "zyt"
@@ -7805,7 +7805,7 @@
       "kfr"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "الجبال - ﴿وَالْجِبَالَ أَرْسَاهَا﴾",
+    "quranic_verse": "الجبال - \"وَالْجِبَالَ أَرْسَاهَا\"",
     "target_variants": [
       "gbl",
       "gvl"
@@ -7914,7 +7914,7 @@
     "best_projection_similarity": 1.0
   },
   {
-    "source_root": "بنو/بني",
+    "source_root": "بنو-بني",
     "source_binary_nucleus": "بن",
     "source_lemma": "بنى",
     "source_gloss": "to build",
@@ -8266,7 +8266,7 @@
       "jdw"
     ],
     "projection_family": "aramaic",
-    "quranic_verse": "كُتِبَ عَلَيْكُمُ الصِّيَامُ",
+    "quranic_verse": "كتب - \"كُتِبَ عَلَيْكُمُ الصِّيَامُ\"",
     "target_variants": [
       "ctb",
       "ctv",
@@ -8622,9 +8622,9 @@
     "target_gloss": "house",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "استقلال",
+    "predicted_meaning": "قطع",
     "predicted_features": [
-      "استقلال"
+      "قطع"
     ],
     "actual_features": [
       "حيز"
@@ -8981,10 +8981,10 @@
     "target_gloss": "mother",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تجمع + تأكيد",
+    "predicted_meaning": "تجمع + امتساك",
     "predicted_features": [
       "تجمع",
-      "تأكيد"
+      "امتساك"
     ],
     "actual_features": [
       "حيز",
@@ -9215,9 +9215,10 @@
     "target_gloss": "day",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "امتداد",
+    "predicted_meaning": "امتداد + امتساك",
     "predicted_features": [
-      "امتداد"
+      "امتداد",
+      "امتساك"
     ],
     "actual_features": [],
     "meanings_score": {
@@ -9484,7 +9485,7 @@
       "rir"
     ],
     "projection_family": "aramaic",
-    "quranic_verse": "﴿وَٱلَّيْلِ إِذَا سَجَىٰ﴾",
+    "quranic_verse": "الليل - \"وَٱلَّيْلِ إِذَا سَجَىٰ\"",
     "target_variants": [
       "lil",
       "lyl"
@@ -9601,7 +9602,7 @@
       "khnd"
     ],
     "projection_family": "aramaic",
-    "quranic_verse": "﴿يَعِبَادِيَ الَّذِينَ ءَامَنُوا إِنَّ أَرْضِي وَاسِعَةٌ فَإِيَّايَ فَاعْبُدُونِ﴾",
+    "quranic_verse": "أَرْضِي -\"يَعِبَادِيَ الَّذِينَ ءَامَنُوا إِنَّ أَرْضِي وَاسِعَةٌ فَإِيَّايَ فَاعْبُدُونِ\"",
     "target_variants": [
       "ar",
       "ara",
@@ -9799,7 +9800,7 @@
       "ṣpsh"
     ],
     "projection_family": "aramaic",
-    "quranic_verse": "﴿وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَّهَا﴾",
+    "quranic_verse": "الشمس - وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَّهَا",
     "target_variants": [
       "shms",
       "shmsa",
@@ -10268,7 +10269,7 @@
       "zpc"
     ],
     "projection_family": "aramaic",
-    "quranic_verse": "﴿إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ﴾",
+    "quranic_verse": "السميع- \"إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ\"",
     "target_variants": [
       "shm",
       "shma",
@@ -10390,11 +10391,11 @@
     "target_gloss": "to eat",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تجمع + دقة + تأكيد",
+    "predicted_meaning": "تجمع + دقة + تعلق",
     "predicted_features": [
       "تجمع",
       "دقة",
-      "تأكيد"
+      "تعلق"
     ],
     "actual_features": [],
     "meanings_score": {
@@ -10501,7 +10502,7 @@
       "ccr"
     ],
     "projection_family": "aramaic",
-    "quranic_verse": "وَمَا أَكَلَ السَّبُعُ",
+    "quranic_verse": "أكل- \"وَمَا أَكَلَ السَّبُعُ\"",
     "target_variants": [
       "acl",
       "akhl",
@@ -10736,7 +10737,7 @@
       "dmmdwtw"
     ],
     "projection_family": "aramaic",
-    "quranic_verse": "﴿فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنْبِهِمْ فَسَوَّاهَا﴾",
+    "quranic_verse": "دَمْدَمَ -\"فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنْبِهِمْ فَسَوَّاهَا\"",
     "target_variants": [
       "dm"
     ],
@@ -11205,7 +11206,7 @@
       "zḥw"
     ],
     "projection_family": "aramaic",
-    "quranic_verse": "ذهب / أذهب - ﴿وَقَالُوا الْحَمْدُ لِلَّهِ الَّذِي أَذْهَبَ عَنَّا الْحَزَنَ﴾",
+    "quranic_verse": "ذهب / أذهب - \"وَقَالُوا الْحَمْدُ لِلَّهِ الَّذِي أَذْهَبَ عَنَّا الْحَزَنَ\"",
     "target_variants": [
       "dhb",
       "dhv"
@@ -11436,7 +11437,7 @@
       "ʕlw"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "﴿فَإِمَّا تَثْقَفَنَّهُمْ فِي الْحَرْبِ﴾",
+    "quranic_verse": "حرب -\"فَإِمَّا تَثْقَفَنَّهُمْ فِي الْحَرْبِ\"",
     "target_variants": [
       "hrb",
       "hrv",
@@ -12077,7 +12078,7 @@
       "jfn"
     ],
     "projection_family": "hebrew",
-    "quranic_verse": "وَأَصَابَهُ الْكِبَرُ",
+    "quranic_verse": "الكبر - \"وَأَصَابَهُ الْكِبَرُ\"",
     "target_variants": [
       "cbir",
       "cbyr",

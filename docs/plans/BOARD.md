@@ -19,7 +19,7 @@
 <!--                                                              -->
 <!-- 4. Files to micro-update together:                           -->
 <!--    - docs/plans/BOARD.md (always)                            -->
-<!--    - docs/plans/2026-03-23-lv1-phase2-3-orchestration.md     -->
+<!--    - docs/plans/2026-03-24-lv1-arabic-core-rebuild.md        -->
 <!--      (if metrics, status, or checkpoint text changed)        -->
 <!--                                                              -->
 <!-- 5. Status values: NEXT / WIP / DONE / BLOCKED               -->
@@ -30,20 +30,26 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| — | All Sprint 1-6 tasks COMPLETE | — | DONE | Awaiting next direction from Yassin |
+| P1.1 | Audit root pipeline against canonical xlsx | Codex | DONE | `jabal_roots_raw.jsonl` rebuilt to `1924` roots / `1666` quranic / `456` nuclei |
+| P1.2 | Re-extract Abbas 29 entries from ABBAS_LETTER_CLASSIFICATION.md | Codex+Claude | DONE | `hassan_abbas_letters.jsonl` rebuilt with `sensory_category` + `mechanism_type` |
+| P1.3 | Extract Anbar 25 letters from LV1_VERIFIED_DATA_AUDIT.md | Codex | BLOCKED | visible audit table exposes `20` explicit + `4` contextual, while prose claims `25` and says only `ط/ث/ظ` are missing |
+| P1.4 | Verify Asim al-Masri complete table (+ألف المد) | Codex | DONE | `asim_al_masri_letters.jsonl` rebuilt to `29` entries with `continues_neili` |
+| P1.5 | Formalize Neili constraints as hard filters | Claude/Sonnet | DONE | `core/neili_constraints.py` + 29 tests |
+| P3.4 | Synonym family extraction (seed + auto) | Claude/Sonnet | DONE | `factory/synonym_families.py` + 28 tests |
+| P1.6 | Update letter registry with all 5 scholars | Codex | BLOCKED | depends on resolving Anbar source mismatch in P1.3 |
 
 ## Codex
-last: Completed S6.3-S6.5, then wrote a final English diagnostic note in `outputs/lv1_scoring/non_semitic_gap_report.md` so the remaining 11 misses are classified before we move on.
-metrics: Semitic 37/58 exact (63.8%), 51/58 prefix (87.9%). English 3/18 exact (16.7%), 7/18 prefix (38.9%). Diagnostic split: 4 binary-only structural matches, 11 true unmatched rows. Tests 37/37.
-suggests: All sprint work is done. The English report is enough to start a new experiment later without reopening benchmark curation.
-blocked: none
+last: P1.1, P1.2, and P1.4 are complete. Jabal now rebuilds directly from the canonical xlsx; Abbas now comes from `ABBAS_LETTER_CLASSIFICATION.md`; Asim now comes from the verified complete table with `continues_neili`.
+metrics: roots=`1924`, quranic=`1666`, nuclei=`456`, Jabal letters=`28`, Abbas entries=`29`, Asim entries=`29`, Neili=`10`, Anbar still loaded=`3`, focused tests=`56/56`
+suggests: Claude can review the rebuilt Jabal/Abbas/Asim outputs now. Next Codex task is either resolve the Anbar source inconsistency or proceed to P1.6 using the stable four-scholar set plus an explicit Anbar placeholder state.
+blocked: P1.3 source mismatch. `LV1_VERIFIED_DATA_AUDIT.md` and `LV1_ARCHITECTURE_VISION.md` say Anbar is `25/28` with only `ط/ث/ظ` missing, but the visible extracted table currently exposes `20` explicit rows plus `4` contextual (`ج/ك/ت/غ`). `ذ` and `هـ` are implied by the prose but not documented in the visible table.
 
 ## Claude
-last: Reviewed expanded English benchmark. Sprint 6 CLOSED. All sprints 1-6 complete.
-verdict: English benchmark is adequate for a baseline (18 pairs, 38.9% binary prefix). The 3 exact hits (بيت→booth, طرق→track, جلد→cold) remain robust after cleanup. The 4 new prefix hits (برج→burglar, فوه→famous, بصص→bus, نفس→inspire) are interesting but speculative. No more curation needed — the benchmark is good enough to report. Next work should be new experiments, not more polish.
-next-codex: awaiting direction from Yassin
-next-claude: awaiting direction from Yassin
-note: All 6 sprints complete in a single session. LV1 Phase 2-3 orchestration plan is fully executed.
+last: P1.5 DONE (neili_constraints.py, 29 tests) + P3.4 DONE (synonym_families.py, 28 tests). 57 new tests, all passing. Also ran pre-P2.1 analysis: current scholar features have extraction artifacts (Asim overuses انتقال, Abbas overuses احتكاك+حدة). P1.2-P1.4 re-extraction is critical.
+verdict: Claude-side Phase 1 infrastructure complete. Waiting for Codex P1.1-P1.4 to land corrected scholar data before P2.1 comparison.
+next-codex: P1.1 + P1.2 + P1.3 + P1.4 (all parallel)
+next-claude: P2.1 scholar comparison after Codex delivers corrected letter data
+note: Pre-analysis shows only 2/28 letters have strong cross-scholar agreement with CURRENT data. This will improve dramatically after re-extraction.
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1

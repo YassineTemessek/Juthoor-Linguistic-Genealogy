@@ -4,8 +4,11 @@ import json
 import re
 import sys
 from collections import defaultdict
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
+
+from openpyxl import load_workbook
 
 from juthoor_arabicgenome_lv1.core.feature_decomposition import (
     decompose_semantic_text,
@@ -36,6 +39,11 @@ LV1_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = LV1_ROOT.parent
 DOC_ROOT = LV1_ROOT / "docs" / "The Arabic Tongue (nature-genome-application)"
 THEORY_ROOT = DOC_ROOT / "Languistic theories"
+SOURCE_DOC_ROOT = REPO_ROOT.parent / "The Arabic Tongue (nature-genome-application)"
+if not SOURCE_DOC_ROOT.exists():
+    SOURCE_DOC_ROOT = DOC_ROOT
+SOURCE_THEORY_ROOT = SOURCE_DOC_ROOT / "Languistic theories"
+SOURCE_MUAJAM_XLSX = SOURCE_DOC_ROOT / "Muajam Ishtiqaqi" / "المعجم_الاشتقاقي_Juthoor_v2.xlsx"
 MUAJAM_ROOT = LV1_ROOT / "data" / "muajam"
 CANON_ROOT = LV1_ROOT / "data" / "theory_canon"
 LETTERS_OUT = CANON_ROOT / "letters"
@@ -78,6 +86,52 @@ LETTER_NAME_TO_CHAR = {
     "ياء": "ي",
 }
 
+CHAR_TO_LETTER_NAME = {
+    "ء": "الهمزة",
+    "ا": "ألف المد",
+    "ب": "الباء",
+    "ت": "التاء",
+    "ث": "الثاء",
+    "ج": "الجيم",
+    "ح": "الحاء",
+    "خ": "الخاء",
+    "د": "الدال",
+    "ذ": "الذال",
+    "ر": "الراء",
+    "ز": "الزاي",
+    "س": "السين",
+    "ش": "الشين",
+    "ص": "الصاد",
+    "ض": "الضاد",
+    "ط": "الطاء",
+    "ظ": "الظاء",
+    "ع": "العين",
+    "غ": "الغين",
+    "ف": "الفاء",
+    "ق": "القاف",
+    "ك": "الكاف",
+    "ل": "اللام",
+    "م": "الميم",
+    "ن": "النون",
+    "هـ": "الهاء",
+    "و": "الواو",
+    "ي": "الياء",
+}
+
+NEILI_LETTERS = frozenset({"د", "ح", "ر", "ت", "ك", "م", "ب", "ع", "ل", "ي"})
+ASIM_FEATURE_OVERRIDES = {
+    "ا": ("اتصال", "وحدة"),
+    "س": ("امتداد", "ظهور"),
+    "ك": ("تجمع", "احتواء"),
+}
+ABBAS_FALLBACK_DETAILS = {
+    "هـ": {
+        "raw_description": "اهتزاز واضطراب وفراغ",
+        "sensory_category": "شعورية (حلقية)",
+        "mechanism_type": "إيحائية",
+    }
+}
+
 
 def _read_jsonl(path: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
@@ -99,6 +153,45 @@ def _write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
 def _write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+@lru_cache(maxsize=1)
+def _source_workbook():
+    return load_workbook(SOURCE_MUAJAM_XLSX, read_only=True, data_only=True)
+
+
+def _normalize_compact_text(value: Any) -> str:
+    return re.sub(r"\s+", "", str(value or ""))
+
+
+def _normalize_letter_symbol(symbol: str | None) -> str:
+    value = _normalize_compact_text(symbol)
+    if value in {"ه", "هة"}:
+        return "هـ"
+    if value in {"أ", "إ", "آ"}:
+        return "ء"
+    if value == "ى":
+        return "ي"
+    return value
+
+
+def _extract_last_arabic_letter(text: str) -> str:
+    matches = re.findall(r"[ءاأإآبتثجحخدذرزسشصضطظعغفقكلمنهويى]", text)
+    if not matches:
+        return ""
+    last = matches[-1]
+    if last == "ه":
+        return "هـ"
+    if last in {"أ", "إ", "آ"}:
+        return "ء"
+    if last == "ى":
+        return "ي"
+    return last
+
+
+def _iter_jabal_xlsx_rows() -> list[tuple[Any, ...]]:
+    ws = _source_workbook()["المعجم الكامل"]
+    return [row for row in ws.iter_rows(min_row=2, values_only=True) if any(row)]
 
 
 def _letter_row(
@@ -128,16 +221,18 @@ def _letter_row(
 
 
 def _load_jabal_letters() -> list[dict[str, Any]]:
-    rows = _read_jsonl(MUAJAM_ROOT / "letter_meanings.jsonl")
+    ws = _source_workbook()["معاني الحروف"]
     out: list[dict[str, Any]] = []
-    for row in rows:
+    for letter_name, letter, meaning in ws.iter_rows(min_row=2, values_only=True):
+        if not letter:
+            continue
         out.append(
             _letter_row(
-                letter=row["letter"],
-                letter_name=row["letter_name"],
+                letter=str(letter).strip(),
+                letter_name=str(letter_name).strip(),
                 scholar="jabal",
-                raw_description=row["meaning"],
-                source_document="data/muajam/letter_meanings.jsonl",
+                raw_description=str(meaning or "").strip(),
+                source_document=f"{SOURCE_MUAJAM_XLSX}#معاني الحروف",
                 confidence="high",
             )
         )
@@ -163,7 +258,7 @@ def _extract_markdown_table(text: str, start_marker: str) -> list[list[str]]:
 
 
 def _load_neili_letters() -> list[dict[str, Any]]:
-    summary = (DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
+    summary = (SOURCE_DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
     rows = _extract_markdown_table(summary, "### الحروف العشرة المستكشفة")
     out: list[dict[str, Any]] = []
     for row in rows[1:]:
@@ -176,7 +271,7 @@ def _load_neili_letters() -> list[dict[str, Any]]:
                 scholar="neili",
                 raw_description=gloss,
                 kinetic_gloss=kinetic,
-                source_document=str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
+                source_document=str(SOURCE_DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
                 confidence="high",
             )
         )
@@ -184,44 +279,74 @@ def _load_neili_letters() -> list[dict[str, Any]]:
 
 
 def _load_abbas_letters() -> list[dict[str, Any]]:
-    summary = (DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
-    source_document = str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md")
-    rows = _extract_markdown_table(summary, "#### نظام التصنيف الحسي الشامل")
-    out: dict[str, dict[str, Any]] = {}
-    for row in rows[1:]:
-        category = row[0].replace("*", "")
-        letters = [item.strip() for item in row[1].split("،")]
-        for letter in letters:
-            if not letter:
-                continue
-            out[letter] = _letter_row(
-                letter=letter,
-                scholar="hassan_abbas",
-                raw_description=row[2],
-                sensory_category=category,
-                source_document=source_document,
-            )
+    source_path = SOURCE_DOC_ROOT / "ABBAS_LETTER_CLASSIFICATION.md"
+    text = source_path.read_text(encoding="utf-8")
 
-    # The summary table omits Abbas's separate treatment of الواو and الياء.
-    out["و"] = _letter_row(
-        letter="و",
-        letter_name="الواو",
-        scholar="hassan_abbas",
-        raw_description="فعالية وامتداد إلى الأمام من غير إحساس حسي آخر.",
-        sensory_category="بصرية",
-        source_document=str(THEORY_ROOT / "حسن عباس" / "خصائص الحروف العربية ومعانيها - حسن عباس.md"),
-        confidence="medium",
-    )
-    out["ي"] = _letter_row(
-        letter="ي",
-        letter_name="الياء",
-        scholar="hassan_abbas",
-        raw_description="جوف وباطن واستقرار في الصميم أو في حفرة.",
-        sensory_category="بصرية",
-        source_document=str(THEORY_ROOT / "حسن عباس" / "خصائص الحروف العربية ومعانيها - حسن عباس.md"),
-        confidence="medium",
-    )
-    return list(out.values())
+    detail_map: dict[str, dict[str, str]] = {}
+    for row in _extract_markdown_table(text, "### A. الحروف الهيجانية"):
+        if len(row) < 4 or row[0] == "Letter":
+            continue
+        letter = re.search(r"\*\*(.+?)\*\*", row[0])
+        if not letter:
+            continue
+        detail_map[_normalize_letter_symbol(letter.group(1))] = {
+            "sensory_category": row[1].strip(),
+            "raw_description": row[2].strip(),
+            "mechanism_type": "هيجانية",
+            "source_certainty": "يقيناً",
+            "note": row[3].strip(),
+        }
+    for row in _extract_markdown_table(text, "### B. الحروف الإيمائية"):
+        if len(row) < 4 or row[0] == "Letter":
+            continue
+        letter = re.search(r"\*\*(.+?)\*\*", row[0])
+        if not letter:
+            continue
+        detail_map[_normalize_letter_symbol(letter.group(1))] = {
+            "sensory_category": row[1].strip(),
+            "raw_description": row[2].strip(),
+            "mechanism_type": "إيمائية",
+            "source_certainty": "ترجيح شديد",
+            "kinetic_gloss": row[3].strip(),
+        }
+    for row in _extract_markdown_table(text, "### C. الحروف الإيحائية"):
+        if len(row) < 3 or row[0] == "Letter":
+            continue
+        letter = re.search(r"\*\*(.+?)\*\*", row[0])
+        if not letter:
+            continue
+        detail_map[_normalize_letter_symbol(letter.group(1))] = {
+            "sensory_category": row[1].strip(),
+            "raw_description": row[2].strip(),
+            "mechanism_type": "إيحائية",
+            "source_certainty": "reviewed",
+        }
+
+    out: list[dict[str, Any]] = []
+    for row in _extract_markdown_table(text, "## Summary Table — All 28 Letters"):
+        if len(row) < 5 or row[0] == "#" or row[0].startswith("---"):
+            continue
+        _, letter, sensory_category, mechanism_type, source_certainty = row
+        letter = _normalize_letter_symbol(letter)
+        detail = detail_map.get(letter, {})
+        if not detail and letter in ABBAS_FALLBACK_DETAILS:
+            detail = ABBAS_FALLBACK_DETAILS[letter]
+        payload = _letter_row(
+            letter=letter,
+            letter_name=CHAR_TO_LETTER_NAME.get(letter),
+            scholar="hassan_abbas",
+            raw_description=detail.get("raw_description") or sensory_category,
+            sensory_category=detail.get("sensory_category") or sensory_category,
+            kinetic_gloss=detail.get("kinetic_gloss"),
+            source_document=str(source_path),
+            confidence="high" if source_certainty.strip() == "يقيناً" else "medium",
+        )
+        payload["mechanism_type"] = detail.get("mechanism_type") or mechanism_type.strip()
+        payload["source_certainty"] = source_certainty.strip()
+        if detail.get("note"):
+            payload["note"] = detail["note"]
+        out.append(payload)
+    return out
 
 
 def _extract_asim_full_table_rows(text: str) -> list[list[str]]:
@@ -245,60 +370,70 @@ def _normalize_letter_name(name: str) -> str:
 
 
 def _load_asim_letters() -> list[dict[str, Any]]:
-    source_path = THEORY_ROOT / "عاصم المصري" / "الأبجدية-ودلالاتها-عاصم-المصري.md"
-    rows = _extract_asim_full_table_rows(source_path.read_text(encoding="utf-8"))
+    source_path = SOURCE_DOC_ROOT / "LV1_VERIFIED_DATA_AUDIT.md"
+    rows = _extract_markdown_table(source_path.read_text(encoding="utf-8"), "**عاصم's complete 28-letter table:**")
     out: list[dict[str, Any]] = []
-    for _, _, raw_name, raw_gloss in rows:
+    for row in rows[1:]:
+        if len(row) < 3:
+            continue
+        _, raw_name, raw_gloss = row[:3]
         letter_name = _normalize_letter_name(raw_name)
         letter = LETTER_NAME_TO_CHAR.get(letter_name)
         if not letter:
             continue
-        out.append(
-            _letter_row(
-                letter=letter,
-                letter_name=letter_name,
-                scholar="asim_al_masri",
-                raw_description=raw_gloss,
-                kinetic_gloss=raw_gloss,
-                source_document=str(source_path),
-            )
+        payload = _letter_row(
+            letter=letter,
+            letter_name=letter_name,
+            scholar="asim_al_masri",
+            raw_description=raw_gloss.strip(),
+            kinetic_gloss=raw_gloss.strip(),
+            source_document=f"{source_path}#asim-complete-table",
         )
+        if not payload["atomic_features"] and letter in ASIM_FEATURE_OVERRIDES:
+            features = ASIM_FEATURE_OVERRIDES[letter]
+            payload["atomic_features"] = list(features)
+            payload["feature_categories"] = list(feature_categories(features))
+        payload["continues_neili"] = letter in NEILI_LETTERS
+        out.append(payload)
     return out
 
 
 def _load_anbar_letters() -> list[dict[str, Any]]:
-    summary = (DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
+    summary = (SOURCE_DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md").read_text(encoding="utf-8")
     pattern = re.compile(r"- \*\*(.+?) \((.)\)\*\*: (.+)")
     section = summary.split("### دلالات الحروف الأساسية حسب عنبر", 1)[1].split("## ١٨.", 1)[0]
     out: list[dict[str, Any]] = []
     for match in pattern.finditer(section):
         letter_name, letter, gloss = match.groups()
-        out.append(
-            _letter_row(
-                letter=letter,
-                letter_name=letter_name,
-                scholar="anbar",
-                raw_description=gloss,
-                kinetic_gloss=gloss,
-                source_document=str(DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
-            )
+        payload = _letter_row(
+            letter=letter,
+            letter_name=letter_name,
+            scholar="anbar",
+            raw_description=gloss,
+            kinetic_gloss=gloss,
+            source_document=str(SOURCE_DOC_ROOT / "ملخص_الدلالة_الصوتية_العربية.md"),
         )
+        payload["phonetic_group"] = "summary_fallback"
+        out.append(payload)
     return out
 
 
 def _build_jabal_nuclei() -> list[dict[str, Any]]:
-    rows = _read_jsonl(MUAJAM_ROOT / "roots.jsonl")
     grouped: dict[str, dict[str, Any]] = {}
-    for row in rows:
-        key = row["binary_root"]
+    for row in _iter_jabal_xlsx_rows():
+        key = _normalize_compact_text(row[2])
+        letter1 = _normalize_compact_text(row[3])
+        letter2 = _normalize_compact_text(row[5])
+        tri_root = _normalize_compact_text(row[8])
+        shared_meaning = str(row[7] or "").strip()
         grouped.setdefault(
             key,
             {
                 "binary_root": key,
-                "letter1": row["letter1"],
-                "letter2": row["letter2"],
-                "jabal_shared_meaning": row["binary_root_meaning"],
-                "jabal_features": list(decompose_semantic_text(row["binary_root_meaning"])),
+                "letter1": letter1,
+                "letter2": letter2,
+                "jabal_shared_meaning": shared_meaning,
+                "jabal_features": list(decompose_semantic_text(shared_meaning)),
                 "member_roots": [],
                 "member_count": 0,
                 "reverse_exists": False,
@@ -310,12 +445,12 @@ def _build_jabal_nuclei() -> list[dict[str, Any]]:
                 "best_model": None,
                 "golden_rule_score": None,
                 "status": "empty",
-                "bab": row.get("bab_name") or row.get("bab"),
-                "source": "المعجم الاشتقاقي المؤصل",
+                "bab": str(row[0] or ""),
+                "source": str(SOURCE_MUAJAM_XLSX),
             },
         )
-        if row["tri_root"] not in grouped[key]["member_roots"]:
-            grouped[key]["member_roots"].append(row["tri_root"])
+        if tri_root and tri_root not in grouped[key]["member_roots"]:
+            grouped[key]["member_roots"].append(tri_root)
     keys = set(grouped)
     for key, payload in grouped.items():
         payload["member_count"] = len(payload["member_roots"])
@@ -325,26 +460,26 @@ def _build_jabal_nuclei() -> list[dict[str, Any]]:
 
 
 def _build_jabal_roots() -> list[dict[str, Any]]:
-    rows = _read_jsonl(MUAJAM_ROOT / "roots.jsonl")
     out: list[dict[str, Any]] = []
-    for row in rows:
-        root = row["tri_root"]
-        third_letter = row.get("added_letter", "")
-        if len(third_letter) != 1 and len(root) >= 3:
-            third_letter = root[-1]
+    for row in _iter_jabal_xlsx_rows():
+        root = _normalize_compact_text(row[8])
+        third_letter = _extract_last_arabic_letter(root)
+        axial_meaning = str(row[10] or "").strip()
+        quranic_verse = str(row[11] or "").strip() or None
         out.append(
             {
                 "root": root,
-                "binary_nucleus": row["binary_root"],
+                "binary_nucleus": _normalize_compact_text(row[2]),
                 "third_letter": third_letter,
-                "jabal_axial_meaning": row["axial_meaning"],
-                "jabal_features": list(decompose_semantic_text(row["axial_meaning"])),
+                "jabal_axial_meaning": axial_meaning,
+                "jabal_features": list(decompose_semantic_text(axial_meaning)),
                 "predicted_meaning": None,
                 "predicted_features": None,
                 "prediction_score": None,
-                "quranic_verse": row.get("quran_example") or None,
-                "bab": row.get("bab_name") or row.get("bab"),
-                "source": "المعجم الاشتقاقي المؤصل",
+                "quranic_verse": quranic_verse,
+                "is_quranic": bool(quranic_verse),
+                "bab": str(row[0] or ""),
+                "source": str(SOURCE_MUAJAM_XLSX),
                 "status": "empty",
             }
         )
