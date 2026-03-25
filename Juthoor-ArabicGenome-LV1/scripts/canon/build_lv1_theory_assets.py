@@ -35,6 +35,10 @@ from juthoor_arabicgenome_lv1.factory.cross_lingual_scoring import (
     score_projection_row,
     summarize_projection_scores,
 )
+from juthoor_arabicgenome_lv1.factory.independent_letter_derivation import (
+    derive_independent_letter_meanings,
+    render_independent_letter_genome_markdown,
+)
 
 
 LV1_ROOT = Path(__file__).resolve().parents[2]
@@ -157,6 +161,11 @@ def _write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
 def _write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
 
 
 @lru_cache(maxsize=1)
@@ -650,6 +659,37 @@ def _build_golden_rule_report(nuclei_rows: list[dict[str, Any]]) -> dict[str, An
     }
 
 
+def _build_full_letter_nucleus_evidence(nuclei_rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    out: dict[str, dict[str, Any]] = {}
+    for row in nuclei_rows:
+        letters = re.findall(r"[ءاأإآبتثجحخدذرزسشصضطظعغفقكلمنهويى]", row["binary_root"])
+        if len(letters) != 2:
+            continue
+        letter1 = _normalize_letter_symbol(letters[0])
+        letter2 = _normalize_letter_symbol(letters[1])
+        entry = {
+            "nucleus": row["binary_root"],
+            "shared_meaning": row["jabal_shared_meaning"],
+            "features": list(row["jabal_features"]),
+            "member_count": int(row["member_count"]),
+        }
+        out.setdefault(
+            letter1,
+            {"letter": letter1, "as_letter1": [], "as_letter2": [], "count_l1": 0, "count_l2": 0, "total": 0},
+        )
+        out.setdefault(
+            letter2,
+            {"letter": letter2, "as_letter1": [], "as_letter2": [], "count_l1": 0, "count_l2": 0, "total": 0},
+        )
+        out[letter1]["as_letter1"].append(entry)
+        out[letter2]["as_letter2"].append(entry)
+    for payload in out.values():
+        payload["count_l1"] = len(payload["as_letter1"])
+        payload["count_l2"] = len(payload["as_letter2"])
+        payload["total"] = payload["count_l1"] + payload["count_l2"]
+    return dict(sorted(out.items()))
+
+
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -677,6 +717,12 @@ def main() -> int:
     scholar_map = _scholar_letter_map(scoring_scholar_rows)
     score_rows = build_nucleus_score_rows(nuclei_rows, scholar_map)
     golden_rule = _build_golden_rule_report(nuclei_rows)
+    full_letter_nucleus_evidence = _build_full_letter_nucleus_evidence(nuclei_rows)
+    independent_letter_derivations = derive_independent_letter_meanings(
+        full_letter_nucleus_evidence,
+        base_scholar_rows,
+    )
+    independent_letter_genome_md = render_independent_letter_genome_markdown(independent_letter_derivations)
     root_prediction_rows = build_root_prediction_rows_all_scholars(
         root_rows,
         nuclei_rows,
@@ -725,6 +771,9 @@ def main() -> int:
     _write_jsonl(REGISTRIES_OUT / "letters.jsonl", letter_registry_rows)
     _write_json(OUTPUT_ROOT / "nucleus_score_matrix.json", score_rows)
     _write_json(OUTPUT_ROOT / "golden_rule_report.json", golden_rule)
+    _write_json(OUTPUT_ROOT / "full_letter_nucleus_evidence.json", full_letter_nucleus_evidence)
+    _write_json(OUTPUT_ROOT / "independent_letter_derivations.json", independent_letter_derivations)
+    _write_text(OUTPUT_ROOT / "INDEPENDENT_ARABIC_LETTER_GENOME.md", independent_letter_genome_md)
     _write_json(OUTPUT_ROOT / "root_predictions.json", root_prediction_rows)
     _write_json(OUTPUT_ROOT / "root_score_matrix.json", root_score_matrix)
     _write_json(OUTPUT_ROOT / "benchmark_semitic_projections.json", semitic_projection_rows)

@@ -1,0 +1,8568 @@
+{
+  "ء": {
+    "letter": "ء",
+    "as_letter1": [
+      {
+        "nucleus": "ءب",
+        "shared_meaning": "الغَذْو والتهيؤ والامتناع",
+        "features": [
+          "تلاصق",
+          "احتباس"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ءل",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ءم",
+        "shared_meaning": "النقص والانفراد",
+        "features": [
+          "نقص",
+          "استقلال"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ءو",
+        "shared_meaning": "الرجوع إلى مستقر",
+        "features": [
+          "رجوع",
+          "استقرار"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "أث",
+        "shared_meaning": "تجمع الدقائق بكثافة",
+        "features": [
+          "تجمع",
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "أج",
+        "shared_meaning": "الحدة والتجوف",
+        "features": [
+          "حدة",
+          "جوف"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "أس",
+        "shared_meaning": "نفاذ شعور أو أثر حاد في عمق أو فجوة",
+        "features": [
+          "نفاذ",
+          "حدة",
+          "عمق",
+          "فجوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "أف",
+        "shared_meaning": "إفراز شيء مكروه ونفيه",
+        "features": [
+          "إفراغ",
+          "إبعاد"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "أن",
+        "shared_meaning": "التهيؤ والصلاح للبلوغ والاستعمال",
+        "features": [
+          "وصول",
+          "احتواء"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "أو",
+        "shared_meaning": "اتساع الحيز والامتلاء",
+        "features": [
+          "اتساع",
+          "حيز",
+          "تلاصق",
+          "امتلاء",
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "أي",
+        "shared_meaning": "لزوم الأرض وبطء المفارقة",
+        "features": [
+          "تعلق",
+          "رقة"
+        ],
+        "member_count": 2
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بء",
+        "shared_meaning": "الاستقرار والرجوع",
+        "features": [
+          "استقرار",
+          "رجوع"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "تأ",
+        "shared_meaning": "الوصول والصدم",
+        "features": [
+          "وصول",
+          "إمساك",
+          "صدم"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رأ",
+        "shared_meaning": "نفاذ شيء لطيف أو خفي من حيز إلى آخر",
+        "features": [
+          "نفاذ",
+          "لطف",
+          "حيز"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "فأ",
+        "shared_meaning": "فجوة أو شق في شيء صلب",
+        "features": [
+          "فجوة",
+          "شق",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "كأ",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 4
+      },
+      {
+        "nucleus": "لء",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "مء",
+        "shared_meaning": "الاتساع والامتداد",
+        "features": [
+          "اتساع",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "نأ",
+        "shared_meaning": "الصرف والإبعاد بقوة",
+        "features": [
+          "إبعاد",
+          "قوة"
+        ],
+        "member_count": 1
+      }
+    ],
+    "count_l1": 11,
+    "count_l2": 8,
+    "total": 19
+  },
+  "ب": {
+    "letter": "ب",
+    "as_letter1": [
+      {
+        "nucleus": "بء",
+        "shared_meaning": "الاستقرار والرجوع",
+        "features": [
+          "استقرار",
+          "رجوع"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "بب",
+        "shared_meaning": "الانفتاح والمنفذ",
+        "features": [
+          "اتساع",
+          "نفاذ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "بت",
+        "shared_meaning": "القطع والانفصال",
+        "features": [
+          "قطع",
+          "استقلال"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "بث",
+        "shared_meaning": "النشر والتفريق",
+        "features": [
+          "انتشار",
+          "تفرق"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "بج",
+        "shared_meaning": "التفتق والتفجر الرخو",
+        "features": [
+          "خروج",
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "بح",
+        "shared_meaning": "الكشف والفراغ",
+        "features": [
+          "ظهور",
+          "فراغ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "بخ",
+        "shared_meaning": "النقص والاستفراغ",
+        "features": [
+          "نقص",
+          "فراغ"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "بد",
+        "shared_meaning": "الظهور والتكوين الأول",
+        "features": [
+          "ظهور"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "بذ",
+        "shared_meaning": "التفرق والنثر",
+        "features": [
+          "تفرق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "بر",
+        "shared_meaning": "التجرد والخلوص",
+        "features": [
+          "خلوص",
+          "فراغ"
+        ],
+        "member_count": 16
+      },
+      {
+        "nucleus": "بز",
+        "shared_meaning": "النفاذ من مضيق",
+        "features": [
+          "نفاذ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "بس",
+        "shared_meaning": "الجفاف واليبوسة",
+        "features": [
+          "جفاف"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "بش",
+        "shared_meaning": "الانتشار الظاهر",
+        "features": [
+          "انتشار",
+          "ظاهر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "بص",
+        "shared_meaning": "النفاذ والإدراك",
+        "features": [
+          "نفاذ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "بض",
+        "shared_meaning": "التجمع الرخو مع نصاعة",
+        "features": [
+          "تجمع",
+          "رخاوة",
+          "نصاعة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "بط",
+        "shared_meaning": "الثقل والضغط الداخلي",
+        "features": [
+          "ثقل",
+          "ضغط"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "بع",
+        "shared_meaning": "الخروج والانتقال من حوزة",
+        "features": [
+          "خروج",
+          "انتقال",
+          "اتساع",
+          "حيز"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "بغ",
+        "shared_meaning": "التزايد والفوران الداخلي",
+        "features": [
+          "امتداد",
+          "خروج",
+          "فوران"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "بق",
+        "shared_meaning": "الثبات والكشف باتساع",
+        "features": [
+          "امتساك",
+          "ظهور",
+          "اتساع"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "بك",
+        "shared_meaning": "الضغط والاحتباس",
+        "features": [
+          "ضغط",
+          "احتباس"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "بل",
+        "shared_meaning": "التمكن والحَوْز بشدة",
+        "features": [
+          "امتساك",
+          "اتساع",
+          "قوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "بن",
+        "shared_meaning": "الامتداد والبناء",
+        "features": [
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "بهـ",
+        "shared_meaning": "الخلو والفراغ الظاهري",
+        "features": [
+          "فراغ",
+          "ظاهر"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "بو",
+        "shared_meaning": "الوصول",
+        "features": [
+          "وصول"
+        ],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "ءب",
+        "shared_meaning": "الغَذْو والتهيؤ والامتناع",
+        "features": [
+          "تلاصق",
+          "احتباس"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "بب",
+        "shared_meaning": "الانفتاح والمنفذ",
+        "features": [
+          "اتساع",
+          "نفاذ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تب",
+        "shared_meaning": "ضعف الشيء المتجمع أو ذهاب غلظه",
+        "features": [
+          "نقص",
+          "تجمع",
+          "غلظ"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ثب",
+        "shared_meaning": "التجمع والتماسك",
+        "features": [
+          "تجمع",
+          "تماسك"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "جب",
+        "shared_meaning": "التجسم والبروز مع القطع أو الاستواء",
+        "features": [
+          "بروز",
+          "قطع",
+          "استواء"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "حب",
+        "shared_meaning": "التجمع في حيز باكتناز مع جفاف أو لطف",
+        "features": [
+          "تجمع",
+          "حيز",
+          "اكتناز",
+          "جفاف",
+          "لطف"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "خب",
+        "shared_meaning": "تخلخل باطن الشيء المتجمع",
+        "features": [
+          "تخلخل",
+          "باطن",
+          "تجمع"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "دب",
+        "shared_meaning": "الثقل أو الضغط والحركة البطيئة، ويلزمها التخلف",
+        "features": [
+          "ثقل",
+          "ضغط",
+          "انتقال"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذب",
+        "shared_meaning": "النفاذ والامتداد باندفاع وحِدّة",
+        "features": [
+          "نفاذ",
+          "تلاصق",
+          "امتداد",
+          "اندفاع",
+          "وحدة",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رب",
+        "shared_meaning": "الاستغلاظ وما إليه من تماسك وتجمع",
+        "features": [
+          "غلظ",
+          "تماسك",
+          "تجمع"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "زب",
+        "shared_meaning": "الاكتناز أو أثره في الانتصاب أو النضح",
+        "features": [
+          "اكتناز",
+          "نضح"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "سب",
+        "shared_meaning": "الامتداد الدقيق مع الاتصال بشيء",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "دقة",
+          "اتصال"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "شب",
+        "shared_meaning": "هو تجمع (عن انتشار أو ضعف) مع تركز",
+        "features": [
+          "تجمع",
+          "انتشار",
+          "نقص",
+          "امتساك"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "صب",
+        "shared_meaning": "الحدر أو الامتداد إلى أسفل بقوة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "باطن",
+          "قوة"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "ضب",
+        "shared_meaning": "هو اللزوم الشديد غشيانًا أو إمساكا في الأثناء",
+        "features": [
+          "تعلق",
+          "قوة",
+          "اشتمال",
+          "إمساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "طب",
+        "shared_meaning": "الجودة والإحكام والتغطية",
+        "features": [
+          "احتكاك",
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "عب",
+        "shared_meaning": "اجتماع الرخو، أو المائع، أو التخلخل في الحيز",
+        "features": [
+          "رخاوة",
+          "تخلخل",
+          "حيز"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "غب",
+        "shared_meaning": "الغئور والغياب أو الاستتار",
+        "features": [
+          "عمق",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "قب",
+        "shared_meaning": "النتوء مع تجوف وصلابة تحيط بنصف الشيء",
+        "features": [
+          "ظاهر",
+          "جوف",
+          "اتصال",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "كب",
+        "shared_meaning": "التجمع كتلة متضاغطة أو كالكتلة المتضاغطة",
+        "features": [
+          "تجمع"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "لب",
+        "shared_meaning": "اللزوم أي التلازم والتداخل",
+        "features": [
+          "تعلق",
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "نب",
+        "shared_meaning": "النُّبُوُّ ارتفاعًا أو ابتعادًا",
+        "features": [
+          "صعود"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "هـب",
+        "shared_meaning": "مفارقة المقرّ باندفاع وقوة مع شيء من التجمع",
+        "features": [
+          "رقة",
+          "مقر",
+          "اندفاع",
+          "قوة",
+          "تجمع"
+        ],
+        "member_count": 4
+      }
+    ],
+    "count_l1": 24,
+    "count_l2": 23,
+    "total": 47
+  },
+  "ت": {
+    "letter": "ت",
+    "as_letter1": [
+      {
+        "nucleus": "تأ",
+        "shared_meaning": "الوصول والصدم",
+        "features": [
+          "وصول",
+          "إمساك",
+          "صدم"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تب",
+        "shared_meaning": "ضعف الشيء المتجمع أو ذهاب غلظه",
+        "features": [
+          "نقص",
+          "تجمع",
+          "غلظ"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "تج",
+        "shared_meaning": "العمل طلبًا للأجر",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "تح",
+        "shared_meaning": "الاحتكاك من أسفل",
+        "features": [
+          "احتكاك",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تد",
+        "shared_meaning": "الثبات والرسوخ",
+        "features": [
+          "امتساك",
+          "تماسك"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "تر",
+        "shared_meaning": "الابتعاد بقوة مع دقة",
+        "features": [
+          "قوة",
+          "دقة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "تس",
+        "shared_meaning": "ما دل على العدد تسعة",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "تع",
+        "shared_meaning": "الرخاوة التي يرتطم فيها",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تف",
+        "shared_meaning": "الوسخ على الجلد أو نحو ذلك",
+        "features": [],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تق",
+        "shared_meaning": "هوّي الشيء إلى العمق: كالهوّي إلى الأسفل",
+        "features": [
+          "عمق",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تل",
+        "shared_meaning": "التكديس والاتباع",
+        "features": [
+          "تجمع",
+          "اتصال"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تم",
+        "shared_meaning": "التميز الشيء مستقلا",
+        "features": [
+          "تميز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تن",
+        "shared_meaning": "الضغط على القوة الباطنية للشيء",
+        "features": [
+          "ضغط",
+          "قوة",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "تهـ",
+        "shared_meaning": "الفراغ وما هو من جنسه كالباطل",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 2
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بت",
+        "shared_meaning": "القطع والانفصال",
+        "features": [
+          "قطع",
+          "استقلال"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "حت",
+        "shared_meaning": "تفتت الرقيق الجاف حكًا أو تسيبه",
+        "features": [
+          "رقة",
+          "جفاف",
+          "احتكاك",
+          "تخلخل"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "خت",
+        "shared_meaning": "نقص الحدة أو الجرم",
+        "features": [
+          "نقص",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رت",
+        "shared_meaning": "الامتساك الدقيق وما إليه",
+        "features": [
+          "تلاصق",
+          "امتساك",
+          "دقة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "زت",
+        "shared_meaning": "شيء يعلق زائدًا بشيء",
+        "features": [
+          "تعلق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ست",
+        "shared_meaning": "التغطية والإخفاء",
+        "features": [
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "شت",
+        "shared_meaning": "هو التفرق",
+        "features": [
+          "تفرق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "صت",
+        "shared_meaning": "الصدم والطرق وما بمعناهما من الضغط الشديد",
+        "features": [
+          "إمساك",
+          "صدم",
+          "ضغط",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عت",
+        "shared_meaning": "الامتداد مع شدة ما",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "قوة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "فت",
+        "shared_meaning": "تكسير الهش وما يلزمه من انفصال",
+        "features": [
+          "استقلال"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "قت",
+        "shared_meaning": "الدقة وقلة ما به القوة في العمق",
+        "features": [
+          "دقة",
+          "نقص",
+          "قوة",
+          "عمق"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "كت",
+        "shared_meaning": "تداخل الشيء بعضه في بعض فيدق وينحصر",
+        "features": [
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "لت",
+        "shared_meaning": "التماسك واللزوق وما إليه وهو تداخل يلزمه النقص",
+        "features": [
+          "تماسك",
+          "اتصال",
+          "اشتمال",
+          "نقص"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مت",
+        "shared_meaning": "الامتداد مع صفة (قوة، دقة، ضعف...)",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "قوة",
+          "دقة",
+          "نقص"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "نت",
+        "shared_meaning": "الاندفاع الجزئي القوي انتبارًا أو انتثارًا",
+        "features": [
+          "اندفاع",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "هـت",
+        "shared_meaning": "دفع الشيء المتجمع إنهاء لتجمعه بامتداد",
+        "features": [
+          "إبعاد",
+          "تجمع",
+          "امتداد"
+        ],
+        "member_count": 3
+      }
+    ],
+    "count_l1": 14,
+    "count_l2": 16,
+    "total": 30
+  },
+  "ث": {
+    "letter": "ث",
+    "as_letter1": [
+      {
+        "nucleus": "ثب",
+        "shared_meaning": "التجمع والتماسك",
+        "features": [
+          "تجمع",
+          "تماسك"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "ثج",
+        "shared_meaning": "غزارة المائع وتجمعه",
+        "features": [
+          "غزارة",
+          "تجمع"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ثخ",
+        "shared_meaning": "الكثافة والغلظ",
+        "features": [
+          "كثافة",
+          "غلظ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ثر",
+        "shared_meaning": "نفاذ المائع وما يشبهه بغزارة وانتشار",
+        "features": [
+          "نفاذ",
+          "غزارة",
+          "انتشار"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ثع",
+        "shared_meaning": "خروج المائع أو شبهه من مصدره",
+        "features": [
+          "خروج",
+          "إمساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ثق",
+        "shared_meaning": "الغلظ والشدة",
+        "features": [
+          "غلظ",
+          "قوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ثل",
+        "shared_meaning": "تجمع الدقائق وتماسكها",
+        "features": [
+          "تجمع",
+          "تماسك"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ثم",
+        "shared_meaning": "ضم الدقائق أو ما يشبهها في حيز",
+        "features": [
+          "تجمع",
+          "حيز"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ثن",
+        "shared_meaning": "التبطن والكثرة في الداخل",
+        "features": [
+          "كثافة"
+        ],
+        "member_count": 3
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "أث",
+        "shared_meaning": "تجمع الدقائق بكثافة",
+        "features": [
+          "تجمع",
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "بث",
+        "shared_meaning": "النشر والتفريق",
+        "features": [
+          "انتشار",
+          "تفرق"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "جث",
+        "shared_meaning": "تجمع الكتلة الكثيفة",
+        "features": [
+          "تجمع",
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "حث",
+        "shared_meaning": "تسيب الشيء قطعًا جافة صغيرة، كحبيبات الرمل الخشن",
+        "features": [
+          "تخلخل",
+          "قطع",
+          "جفاف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "دث",
+        "shared_meaning": "غشيان الشيء بضغط أو كثافة",
+        "features": [
+          "اشتمال",
+          "ضغط",
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رث",
+        "shared_meaning": "مستوى من البلى",
+        "features": [
+          "استواء"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عث",
+        "shared_meaning": "تشعث ما كان ممتسكاً وانتشاره",
+        "features": [
+          "انتشار"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غث",
+        "shared_meaning": "جنس من التجمع أو التراكم لمادة هشة خفيفة الكثافة أو القيمة",
+        "features": [
+          "تجمع",
+          "تماسك",
+          "كثافة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "قث",
+        "shared_meaning": "هشاشة الشيء ورخاوته",
+        "features": [
+          "هشاشة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "كث",
+        "shared_meaning": "التجمع الكثيف لأشياء دقيقة",
+        "features": [
+          "تجمع",
+          "كثافة",
+          "دقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مث",
+        "shared_meaning": "تشخص الشيء أو رشحه",
+        "features": [
+          "ظاهر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نث",
+        "shared_meaning": "الانتثار أو النشر بتفشٍّ واندفاع ما",
+        "features": [
+          "انتشار",
+          "تفشي",
+          "اندفاع"
+        ],
+        "member_count": 3
+      }
+    ],
+    "count_l1": 9,
+    "count_l2": 12,
+    "total": 21
+  },
+  "ج": {
+    "letter": "ج",
+    "as_letter1": [
+      {
+        "nucleus": "جب",
+        "shared_meaning": "التجسم والبروز مع القطع أو الاستواء",
+        "features": [
+          "بروز",
+          "قطع",
+          "استواء"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "جث",
+        "shared_meaning": "تجمع الكتلة الكثيفة",
+        "features": [
+          "تجمع",
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "جح",
+        "shared_meaning": "الغلظ والحدة في الباطن",
+        "features": [
+          "غلظ",
+          "حدة",
+          "باطن"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "جد",
+        "shared_meaning": "العظم والامتداد",
+        "features": [
+          "قوة",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "جذ",
+        "shared_meaning": "الاستغلاظ والقطع الجزئي",
+        "features": [
+          "غلظ",
+          "قطع"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "جر",
+        "shared_meaning": "الاسترسال والامتداد",
+        "features": [
+          "استرسال",
+          "باطن",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 11
+      },
+      {
+        "nucleus": "جز",
+        "shared_meaning": "التميز والانفصال في الكتلة",
+        "features": [
+          "تميز",
+          "استقلال"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "جس",
+        "shared_meaning": "الاختراق الحسي أو المعنوي",
+        "features": [
+          "اختراق"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "جع",
+        "shared_meaning": "التجوف والفراغ",
+        "features": [
+          "جوف",
+          "فراغ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "جف",
+        "shared_meaning": "الجفاف والتباعد",
+        "features": [
+          "جفاف",
+          "إبعاد"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "جل",
+        "shared_meaning": "الاتساع والانكشاف",
+        "features": [
+          "اتساع",
+          "ظهور"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "جم",
+        "shared_meaning": "التجمع والكثرة",
+        "features": [
+          "تجمع",
+          "كثافة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "جن",
+        "shared_meaning": "الستر والكثافة",
+        "features": [
+          "باطن",
+          "كثافة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "جهـ",
+        "shared_meaning": "الانكشاف والفراغ",
+        "features": [
+          "ظهور",
+          "فراغ"
+        ],
+        "member_count": 7
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "أج",
+        "shared_meaning": "الحدة والتجوف",
+        "features": [
+          "حدة",
+          "جوف"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "بج",
+        "shared_meaning": "التفتق والتفجر الرخو",
+        "features": [
+          "خروج",
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تج",
+        "shared_meaning": "العمل طلبًا للأجر",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ثج",
+        "shared_meaning": "غزارة المائع وتجمعه",
+        "features": [
+          "غزارة",
+          "تجمع"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "حج",
+        "shared_meaning": "الحيلولة بصلب أو شديد",
+        "features": [
+          "صلابة",
+          "غلظ",
+          "قوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "رج",
+        "shared_meaning": "الاضطراب المادي، أي اضطراب الجِرْم وتردده",
+        "features": [
+          "تخلخل",
+          "انتقال"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "زج",
+        "shared_meaning": "الدفع للأمام وما قد يلزمه من التداخل",
+        "features": [
+          "إبعاد",
+          "تلاصق",
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "سج",
+        "shared_meaning": "اعتدال ورقة وعدم غلظ واستواء",
+        "features": [
+          "رقة",
+          "غلظ",
+          "استواء"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "شج",
+        "shared_meaning": "حدوث الشقّ أو الفتح في الجرم أو وجوده فيه",
+        "features": [
+          "شق",
+          "اختراق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ضج",
+        "shared_meaning": "هو ذوبان تماسك الأثناء أو ما لصق وأمسك فيها",
+        "features": [
+          "تماسك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عج",
+        "shared_meaning": "التجمع مع نوع من الهشاشة أو الضعف",
+        "features": [
+          "تجمع",
+          "هشاشة",
+          "نقص"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "فج",
+        "shared_meaning": "انفتاح في الشيء بقوة مع عدم الالتزام بحد",
+        "features": [
+          "اتساع",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "لج",
+        "shared_meaning": "التراكم ثم ما قد يلزمه من كثافة وشدة مادية",
+        "features": [
+          "تماسك",
+          "كثافة",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مج",
+        "shared_meaning": "الامتلاء والاندفاع",
+        "features": [
+          "تلاصق",
+          "امتلاء",
+          "كثافة",
+          "اندفاع"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "نج",
+        "shared_meaning": "النفاذ بغلظ وكثافة أو قوة مما يحتوي",
+        "features": [
+          "نفاذ",
+          "غلظ",
+          "كثافة",
+          "قوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "هـج",
+        "shared_meaning": "غور في العمق مع حدة أو فراغ ما",
+        "features": [
+          "عمق",
+          "حدة",
+          "فراغ"
+        ],
+        "member_count": 6
+      }
+    ],
+    "count_l1": 14,
+    "count_l2": 16,
+    "total": 30
+  },
+  "ح": {
+    "letter": "ح",
+    "as_letter1": [
+      {
+        "nucleus": "حب",
+        "shared_meaning": "التجمع في حيز باكتناز مع جفاف أو لطف",
+        "features": [
+          "تجمع",
+          "حيز",
+          "اكتناز",
+          "جفاف",
+          "لطف"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "حت",
+        "shared_meaning": "تفتت الرقيق الجاف حكًا أو تسيبه",
+        "features": [
+          "رقة",
+          "جفاف",
+          "احتكاك",
+          "تخلخل"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "حث",
+        "shared_meaning": "تسيب الشيء قطعًا جافة صغيرة، كحبيبات الرمل الخشن",
+        "features": [
+          "تخلخل",
+          "قطع",
+          "جفاف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "حج",
+        "shared_meaning": "الحيلولة بصلب أو شديد",
+        "features": [
+          "صلابة",
+          "غلظ",
+          "قوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "حد",
+        "shared_meaning": "إيقاف الامتداد والتخطي للشيء، أي إنهاؤه، أو منعه",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "إمساك",
+          "ضغط"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "حذ",
+        "shared_meaning": "القصر أو الانقطاع مع الغلظ",
+        "features": [
+          "نقص",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "حر",
+        "shared_meaning": "الخلوص من الغلظ",
+        "features": [
+          "خلوص",
+          "فراغ",
+          "غلظ"
+        ],
+        "member_count": 15
+      },
+      {
+        "nucleus": "حز",
+        "shared_meaning": "ما يشبه الشق الدقيق في شيء صلب وما يلزمه من التميز",
+        "features": [
+          "شق",
+          "دقة",
+          "صلابة",
+          "غلظ",
+          "تميز"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "حس",
+        "shared_meaning": "انكشاف الظاهر وبدوه من زوال ما يعروه",
+        "features": [
+          "ظهور",
+          "ظاهر",
+          "اتصال"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "حش",
+        "shared_meaning": "الجفاف والخشونة مع الانتشار",
+        "features": [
+          "جفاف",
+          "انتشار"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "حص",
+        "shared_meaning": "الغلظ وما إليه من تجمع مع التئام أو جفاف مع الجزئية قطعًا أو صغرًا",
+        "features": [
+          "غلظ",
+          "تجمع",
+          "تلاصق",
+          "جفاف",
+          "قطع"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "حض",
+        "shared_meaning": "الانحدار بقوة وغِلَظ",
+        "features": [
+          "نقص",
+          "قوة",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "حط",
+        "shared_meaning": "الانضغاط بقوة إلى أسفل",
+        "features": [
+          "ضغط",
+          "قوة",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "حظ",
+        "shared_meaning": "النفاذ بغلظ وكثافة مع تميز",
+        "features": [
+          "نفاذ",
+          "غلظ",
+          "كثافة",
+          "تميز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "حف",
+        "shared_meaning": "الإحاطة بالشيء من خارج",
+        "features": [
+          "اشتمال",
+          "ظاهر"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "حق",
+        "shared_meaning": "تمكن الشيء في عُمق مَقَرَّه، أو وسط مقره",
+        "features": [
+          "امتساك",
+          "عمق",
+          "مقر"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "حك",
+        "shared_meaning": "الدلك بضغط على الصلب",
+        "features": [
+          "احتكاك",
+          "ضغط",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "حل",
+        "shared_meaning": "التسيب والتفكك وما هو من لوازمه كالزيادة",
+        "features": [
+          "تخلخل",
+          "امتداد"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "حم",
+        "shared_meaning": "حدة تسري في الشيء حتى تعمه",
+        "features": [
+          "حدة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "حن",
+        "shared_meaning": "جوف الشيء القوي أو أثنائه",
+        "features": [
+          "جوف",
+          "قوة"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "حو",
+        "shared_meaning": "الامتلاء والحيازة بقوة وحياة",
+        "features": [
+          "تلاصق",
+          "امتلاء",
+          "كثافة",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "حي",
+        "shared_meaning": "الامتلاء والحيازة بقوة وحياة",
+        "features": [
+          "تلاصق",
+          "امتلاء",
+          "كثافة",
+          "قوة"
+        ],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بح",
+        "shared_meaning": "الكشف والفراغ",
+        "features": [
+          "ظهور",
+          "فراغ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "تح",
+        "shared_meaning": "الاحتكاك من أسفل",
+        "features": [
+          "احتكاك",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "جح",
+        "shared_meaning": "الغلظ والحدة في الباطن",
+        "features": [
+          "غلظ",
+          "حدة",
+          "باطن"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "دح",
+        "shared_meaning": "الضغط القوي على الشيء",
+        "features": [
+          "ضغط",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "رح",
+        "shared_meaning": "الاتساع والانبساط مع نوع من الرقة",
+        "features": [
+          "اتساع",
+          "رقة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "زح",
+        "shared_meaning": "الانتقال البطيء مع الاحتكاك بالمقر",
+        "features": [
+          "انتقال",
+          "تعقد",
+          "احتكاك",
+          "مقر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "سح",
+        "shared_meaning": "تسيُّب الشيء أو انفصاله بلطف أو دقة عن مقره",
+        "features": [
+          "تخلخل",
+          "استقلال",
+          "لطف",
+          "دقة",
+          "مقر"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "شح",
+        "shared_meaning": "هو جفاف الجرم أو حدته مع عرض أو تجسم",
+        "features": [
+          "جفاف"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "صح",
+        "shared_meaning": "كون الشيء على حاله الأصلي مع عرضه وجفافه",
+        "features": [
+          "جفاف"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ضح",
+        "shared_meaning": "هو الانبساط مع الانكشاف أو الشفافية",
+        "features": [
+          "اتساع",
+          "ظهور"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "طح",
+        "shared_meaning": "الانبساط عن ضغط",
+        "features": [
+          "اتساع",
+          "ضغط"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فح",
+        "shared_meaning": "صدور أثر حاد منتشر عن كائن حي",
+        "features": [
+          "إمساك",
+          "حدة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "قح",
+        "shared_meaning": "اصطحاب الجفاء أي الاتصاف به",
+        "features": [
+          "اتصال",
+          "جفاف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لح",
+        "shared_meaning": "الالتحام وما يلزمه من عرض وامتداد",
+        "features": [
+          "التحام",
+          "امتداد"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "مح",
+        "shared_meaning": "ذهاب الشيء أو خلاصته",
+        "features": [
+          "خلوص"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "نح",
+        "shared_meaning": "النفاذ من الباطن بقوة واتساع",
+        "features": [
+          "نفاذ",
+          "باطن",
+          "قوة",
+          "اتساع"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "وح",
+        "shared_meaning": "التحصيل اللطيف والقوي",
+        "features": [
+          "لطف",
+          "قوة"
+        ],
+        "member_count": 1
+      }
+    ],
+    "count_l1": 22,
+    "count_l2": 17,
+    "total": 39
+  },
+  "خ": {
+    "letter": "خ",
+    "as_letter1": [
+      {
+        "nucleus": "خب",
+        "shared_meaning": "تخلخل باطن الشيء المتجمع",
+        "features": [
+          "تخلخل",
+          "باطن",
+          "تجمع"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "خت",
+        "shared_meaning": "نقص الحدة أو الجرم",
+        "features": [
+          "نقص",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "خد",
+        "shared_meaning": "التجوف الممتد",
+        "features": [
+          "جوف"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "خذ",
+        "shared_meaning": "النفاذ بقوة من الحوزة أو إليها بغلظ",
+        "features": [
+          "نفاذ",
+          "قوة",
+          "اتساع",
+          "حيز",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "خر",
+        "shared_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص",
+        "features": [
+          "تخلخل",
+          "استواء",
+          "نقص"
+        ],
+        "member_count": 11
+      },
+      {
+        "nucleus": "خز",
+        "shared_meaning": "نفاذ الحاد أو النفاذ بحدة في أثناء الشيء",
+        "features": [
+          "نفاذ",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "خس",
+        "shared_meaning": "القلة والنقص",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "خش",
+        "shared_meaning": "تجمع الدقاق الخشنة أو الحادّة في أثناء الشيء",
+        "features": [
+          "تجمع",
+          "حدة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "خص",
+        "shared_meaning": "دقة الشيء ومحدوديته",
+        "features": [
+          "دقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "خض",
+        "shared_meaning": "رخاوة الأثناء مع خثورتها",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "خط",
+        "shared_meaning": "الامتداد السطحي الخفيف مع أخذ ما",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "سطح",
+          "إمساك"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "خف",
+        "shared_meaning": "تخلخل أثناء الشيء وقلة كثافته",
+        "features": [
+          "تخلخل",
+          "نقص"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "خل",
+        "shared_meaning": "الخلخلة أي الفراغ في الأثناء",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "خم",
+        "shared_meaning": "الاضطمام على مائع كثير أو خَوَرٍ",
+        "features": [
+          "احتواء"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "خن",
+        "shared_meaning": "التخلخل الممتد في الباطن",
+        "features": [
+          "تخلخل",
+          "باطن"
+        ],
+        "member_count": 6
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بخ",
+        "shared_meaning": "النقص والاستفراغ",
+        "features": [
+          "نقص",
+          "فراغ"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ثخ",
+        "shared_meaning": "الكثافة والغلظ",
+        "features": [
+          "كثافة",
+          "غلظ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "دخ",
+        "shared_meaning": "تخلخل مادة الشيء وأثنائه",
+        "features": [
+          "تخلخل"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ذخ",
+        "shared_meaning": "النثر والنفاذ بدقة واسترسال",
+        "features": [
+          "نفاذ",
+          "دقة",
+          "استرسال",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رخ",
+        "shared_meaning": "طراءة الشيء المتجسم لتندى أثنائه",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "زخ",
+        "shared_meaning": "اندفاع الشيء بقوة من أثناء أو فيها",
+        "features": [
+          "اندفاع",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "سخ",
+        "shared_meaning": "لين الجسم وعدم صلادته مما يسمح بالاختراق أو الانقياد",
+        "features": [
+          "رخاوة",
+          "اختراق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "شخ",
+        "shared_meaning": "هو الجفاف مع التجسم",
+        "features": [
+          "جفاف"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "صخ",
+        "shared_meaning": "الدخول في الأثناء بحدة بالغة",
+        "features": [
+          "حدة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فخ",
+        "shared_meaning": "النفخ أو الانتفاخ بقوة مع احتمال فراغ",
+        "features": [
+          "قوة",
+          "فراغ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "مخ",
+        "shared_meaning": "توسط مادة رخوة أو خروجها",
+        "features": [
+          "رخاوة",
+          "خروج"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "نخ",
+        "shared_meaning": "نقص في انتصاب الشيء أو في إصمات بنائه",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 3
+      }
+    ],
+    "count_l1": 15,
+    "count_l2": 12,
+    "total": 27
+  },
+  "د": {
+    "letter": "د",
+    "as_letter1": [
+      {
+        "nucleus": "دب",
+        "shared_meaning": "الثقل أو الضغط والحركة البطيئة، ويلزمها التخلف",
+        "features": [
+          "ثقل",
+          "ضغط",
+          "انتقال"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "دث",
+        "shared_meaning": "غشيان الشيء بضغط أو كثافة",
+        "features": [
+          "اشتمال",
+          "ضغط",
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "دح",
+        "shared_meaning": "الضغط القوي على الشيء",
+        "features": [
+          "ضغط",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "دخ",
+        "shared_meaning": "تخلخل مادة الشيء وأثنائه",
+        "features": [
+          "تخلخل"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "در",
+        "shared_meaning": "الجريان باسترسال، أو الامتداد بتوال",
+        "features": [
+          "استرسال",
+          "باطن",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "دس",
+        "shared_meaning": "النفاذ بدفع مع دقة أو حدة في أثناء شيء",
+        "features": [
+          "نفاذ",
+          "إبعاد",
+          "دقة",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "دع",
+        "shared_meaning": "الدفع بضغط على رخو فيتداخل ويتجمع",
+        "features": [
+          "إبعاد",
+          "ضغط",
+          "رخاوة",
+          "اتصال",
+          "اشتمال",
+          "تجمع"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "دف",
+        "shared_meaning": "الضغط من الظاهر أو إليه",
+        "features": [
+          "ضغط",
+          "ظاهر"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "دق",
+        "shared_meaning": "الصدم أو الضغط الشديد والحدة",
+        "features": [
+          "إمساك",
+          "صدم",
+          "ضغط",
+          "قوة",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "دل",
+        "shared_meaning": "الامتداد (من أعلى) اتجاهاً إلى شيء أو مقر بقوة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "ظاهر",
+          "مقر",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "دم",
+        "shared_meaning": "استواء الظاهر وبروزه كذلك",
+        "features": [
+          "استواء",
+          "ظاهر",
+          "بروز"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "دن",
+        "shared_meaning": "اندساس الشيء في أثناء أو ثباته فيه",
+        "features": [
+          "باطن",
+          "امتساك"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "دهـ",
+        "shared_meaning": "الحدر أو الدفع في فراغ أو مهواة",
+        "features": [
+          "إبعاد",
+          "فراغ",
+          "باطن"
+        ],
+        "member_count": 6
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بد",
+        "shared_meaning": "الظهور والتكوين الأول",
+        "features": [
+          "ظهور"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "تد",
+        "shared_meaning": "الثبات والرسوخ",
+        "features": [
+          "امتساك",
+          "تماسك"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "جد",
+        "shared_meaning": "العظم والامتداد",
+        "features": [
+          "قوة",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "حد",
+        "shared_meaning": "إيقاف الامتداد والتخطي للشيء، أي إنهاؤه، أو منعه",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "إمساك",
+          "ضغط"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "خد",
+        "shared_meaning": "التجوف الممتد",
+        "features": [
+          "جوف"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رد",
+        "shared_meaning": "التراكم المترتب على صدّ الشيء المسترسل",
+        "features": [
+          "تماسك",
+          "إمساك",
+          "باطن"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "زد",
+        "shared_meaning": "إضافة شيء إلى الحيز",
+        "features": [
+          "حيز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "سد",
+        "shared_meaning": "مادة جامدة أو كثيفة تقوم معترضة أو متراكمة",
+        "features": [
+          "كثافة",
+          "تماسك"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "شد",
+        "shared_meaning": "هو صلابة الشيء أو وثاقة بعضه ببعض",
+        "features": [
+          "صلابة",
+          "غلظ",
+          "امتساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "صد",
+        "shared_meaning": "شيء كثيف أو صلب قوي يعترض فيوقف النفاذ",
+        "features": [
+          "كثافة",
+          "صلابة",
+          "غلظ",
+          "قوة",
+          "نفاذ"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "ضد",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "طد",
+        "shared_meaning": "الارتفاع الشاهق",
+        "features": [
+          "صعود"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "عد",
+        "shared_meaning": "الامتداد بالتوالي ونحوه",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "اتصال"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "غد",
+        "shared_meaning": "تجمع الرخو تجمعًا شديدًا",
+        "features": [
+          "تجمع",
+          "رخاوة",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "فد",
+        "shared_meaning": "التهيؤ بقوة لتحصيل أمر",
+        "features": [
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "قد",
+        "shared_meaning": "الامتداد الطولي بالقطع ونحوه مع تحدد وجفاف",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "طول",
+          "قطع",
+          "جفاف"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "كد",
+        "shared_meaning": "التعامل مع ما يشبه القشر الشديد اللصوق بأصله",
+        "features": [
+          "قوة",
+          "تلاصق"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "لد",
+        "shared_meaning": "الضم الشديد، أي الحوز بلا إفلات",
+        "features": [
+          "تجمع",
+          "قوة",
+          "اتساع"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "مد",
+        "shared_meaning": "الامتداد والغاية",
+        "features": [
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ند",
+        "shared_meaning": "الإبعاد امتدادا أو مفارقة",
+        "features": [
+          "إبعاد",
+          "امتداد",
+          "رقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "هـد",
+        "shared_meaning": "تفكك القائم المنتصب وتضعضعه أو تسيبه",
+        "features": [
+          "تخلخل"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ود",
+        "shared_meaning": "الامتداد مع الضغط أو التماسك",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "ضغط",
+          "تماسك"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "يد",
+        "shared_meaning": "الامتداد بقوة للتمكين أو الضغط",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "قوة",
+          "ضغط"
+        ],
+        "member_count": 5
+      }
+    ],
+    "count_l1": 13,
+    "count_l2": 23,
+    "total": 36
+  },
+  "ذ": {
+    "letter": "ذ",
+    "as_letter1": [
+      {
+        "nucleus": "ذب",
+        "shared_meaning": "النفاذ والامتداد باندفاع وحِدّة",
+        "features": [
+          "نفاذ",
+          "تلاصق",
+          "امتداد",
+          "اندفاع",
+          "وحدة",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذخ",
+        "shared_meaning": "النثر والنفاذ بدقة واسترسال",
+        "features": [
+          "نفاذ",
+          "دقة",
+          "استرسال",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ذر",
+        "shared_meaning": "النثر والنفاذ بدقة واسترسال",
+        "features": [
+          "نفاذ",
+          "دقة",
+          "استرسال",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ذع",
+        "shared_meaning": "التفرق والانقياد برقة",
+        "features": [
+          "تفرق",
+          "رقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذق",
+        "shared_meaning": "النفاذ الحاد والأثر العميق",
+        "features": [
+          "نفاذ",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذك",
+        "shared_meaning": "الحِدّة والصلابة البالغة",
+        "features": [
+          "حدة",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذل",
+        "shared_meaning": "النقص والانخفاض والتيسير",
+        "features": [
+          "نقص",
+          "فيض"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ذم",
+        "shared_meaning": "ضعف قدر المذءوم",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ذن",
+        "shared_meaning": "الامتداد الخلفي والتبعية",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "تعلق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذهـ",
+        "shared_meaning": "الخفاء والخلو والفراغ",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذو",
+        "shared_meaning": "الدفع والحماية",
+        "features": [
+          "إبعاد",
+          "إمساك"
+        ],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بذ",
+        "shared_meaning": "التفرق والنثر",
+        "features": [
+          "تفرق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "جذ",
+        "shared_meaning": "الاستغلاظ والقطع الجزئي",
+        "features": [
+          "غلظ",
+          "قطع"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "حذ",
+        "shared_meaning": "القصر أو الانقطاع مع الغلظ",
+        "features": [
+          "نقص",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "خذ",
+        "shared_meaning": "النفاذ بقوة من الحوزة أو إليها بغلظ",
+        "features": [
+          "نفاذ",
+          "قوة",
+          "اتساع",
+          "حيز",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رذ",
+        "shared_meaning": "قلة القدر وضعف الأثر والقيمة",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عذ",
+        "shared_meaning": "لصوق الغض بشيء",
+        "features": [
+          "تلاصق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "قذ",
+        "shared_meaning": "الدفع بقوة",
+        "features": [
+          "إبعاد",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "كذ",
+        "shared_meaning": "الرخاوة النسبية",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لذ",
+        "shared_meaning": "مماسة مستطابة",
+        "features": [
+          "اتصال",
+          "لطف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نذ",
+        "shared_meaning": "خروج كثيف من الأثناء أو الحيز",
+        "features": [
+          "خروج",
+          "كثافة",
+          "حيز"
+        ],
+        "member_count": 2
+      }
+    ],
+    "count_l1": 11,
+    "count_l2": 10,
+    "total": 21
+  },
+  "ر": {
+    "letter": "ر",
+    "as_letter1": [
+      {
+        "nucleus": "رأ",
+        "shared_meaning": "نفاذ شيء لطيف أو خفي من حيز إلى آخر",
+        "features": [
+          "نفاذ",
+          "لطف",
+          "حيز"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "رب",
+        "shared_meaning": "الاستغلاظ وما إليه من تماسك وتجمع",
+        "features": [
+          "غلظ",
+          "تماسك",
+          "تجمع"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "رت",
+        "shared_meaning": "الامتساك الدقيق وما إليه",
+        "features": [
+          "تلاصق",
+          "امتساك",
+          "دقة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "رث",
+        "shared_meaning": "مستوى من البلى",
+        "features": [
+          "استواء"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رج",
+        "shared_meaning": "الاضطراب المادي، أي اضطراب الجِرْم وتردده",
+        "features": [
+          "تخلخل",
+          "انتقال"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "رح",
+        "shared_meaning": "الاتساع والانبساط مع نوع من الرقة",
+        "features": [
+          "اتساع",
+          "رقة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "رخ",
+        "shared_meaning": "طراءة الشيء المتجسم لتندى أثنائه",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رد",
+        "shared_meaning": "التراكم المترتب على صدّ الشيء المسترسل",
+        "features": [
+          "تماسك",
+          "إمساك",
+          "باطن"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "رذ",
+        "shared_meaning": "قلة القدر وضعف الأثر والقيمة",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رز",
+        "shared_meaning": "التداخل الشديد",
+        "features": [
+          "اتصال",
+          "اشتمال",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رس",
+        "shared_meaning": "النفاذ بامتداد",
+        "features": [
+          "نفاذ",
+          "امتداد"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "رش",
+        "shared_meaning": "انتشار الأشياء الدقيقة الطرية",
+        "features": [
+          "انتشار",
+          "دقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رص",
+        "shared_meaning": "الالتحام بغلظ أو متانة",
+        "features": [
+          "التحام",
+          "غلظ",
+          "امتساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رض",
+        "shared_meaning": "تضخم الجرم مع رخاوة باطنه",
+        "features": [
+          "رخاوة",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "رط",
+        "shared_meaning": "رخاوة أثناء الشيء الكثيف أو تنديها",
+        "features": [
+          "رخاوة",
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رع",
+        "shared_meaning": "(الامتداد) مع رقة أو رخاوة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "رقة",
+          "رخاوة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "رغ",
+        "shared_meaning": "طبقة رخوة مع كثافة ما",
+        "features": [
+          "رخاوة",
+          "كثافة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "رف",
+        "shared_meaning": "الامتداد أو الطرفية مع رقة أو رخاوة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "رقة",
+          "رخاوة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "رق",
+        "shared_meaning": "الانبساط مع الرقة",
+        "features": [
+          "اتساع",
+          "رقة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "رك",
+        "shared_meaning": "التجمع مع قلة الكثافة والتماسك",
+        "features": [
+          "تجمع",
+          "نقص",
+          "كثافة",
+          "تماسك"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "رم",
+        "shared_meaning": "ضمّ غَضّ - أو رِخْو - (متغيّر أو متحوّل) في الأثناء",
+        "features": [
+          "تجمع",
+          "رخاوة",
+          "انتقال"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "رن",
+        "shared_meaning": "مادة تغطي على الحس وتمنع النفاذ",
+        "features": [
+          "باطن",
+          "إمساك",
+          "ضغط",
+          "نفاذ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رهـ",
+        "shared_meaning": "خلو الأثناء من الغلظ أي فراغها مما هو كثيف",
+        "features": [
+          "غلظ",
+          "فراغ",
+          "كثافة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "رو",
+        "shared_meaning": "نفاذ شيء لطيف أو خفي من حيز إلى آخر",
+        "features": [
+          "نفاذ",
+          "لطف",
+          "حيز"
+        ],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بر",
+        "shared_meaning": "التجرد والخلوص",
+        "features": [
+          "خلوص",
+          "فراغ"
+        ],
+        "member_count": 16
+      },
+      {
+        "nucleus": "تر",
+        "shared_meaning": "الابتعاد بقوة مع دقة",
+        "features": [
+          "قوة",
+          "دقة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "ثر",
+        "shared_meaning": "نفاذ المائع وما يشبهه بغزارة وانتشار",
+        "features": [
+          "نفاذ",
+          "غزارة",
+          "انتشار"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "جر",
+        "shared_meaning": "الاسترسال والامتداد",
+        "features": [
+          "استرسال",
+          "باطن",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 11
+      },
+      {
+        "nucleus": "حر",
+        "shared_meaning": "الخلوص من الغلظ",
+        "features": [
+          "خلوص",
+          "فراغ",
+          "غلظ"
+        ],
+        "member_count": 15
+      },
+      {
+        "nucleus": "خر",
+        "shared_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص",
+        "features": [
+          "تخلخل",
+          "استواء",
+          "نقص"
+        ],
+        "member_count": 11
+      },
+      {
+        "nucleus": "در",
+        "shared_meaning": "الجريان باسترسال، أو الامتداد بتوال",
+        "features": [
+          "استرسال",
+          "باطن",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "ذر",
+        "shared_meaning": "النثر والنفاذ بدقة واسترسال",
+        "features": [
+          "نفاذ",
+          "دقة",
+          "استرسال",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "زر",
+        "shared_meaning": "النفاذ بدقة مع إمساك ما",
+        "features": [
+          "نفاذ",
+          "دقة",
+          "إمساك"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "سر",
+        "shared_meaning": "الامتداد أو النفاذ مع الدقة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "نفاذ",
+          "دقة"
+        ],
+        "member_count": 18
+      },
+      {
+        "nucleus": "شر",
+        "shared_meaning": "الانتشار أو صورة منه",
+        "features": [
+          "انتشار"
+        ],
+        "member_count": 13
+      },
+      {
+        "nucleus": "صر",
+        "shared_meaning": "التضام الشديد الذي يمنع الانتشار",
+        "features": [
+          "قوة",
+          "إمساك",
+          "ضغط",
+          "انتشار"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "ضر",
+        "shared_meaning": "هو نوع من المزاحمة والدفع أو التضييق",
+        "features": [
+          "ازدحام",
+          "إبعاد",
+          "ضغط"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "طر",
+        "shared_meaning": "الامتداد مع الرقة أو التتابع",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "رقة"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "عر",
+        "shared_meaning": "نقص أو جرد من ظاهر الشيء يلزمه ظهور ما كان خافيًا",
+        "features": [
+          "نقص",
+          "ظاهر",
+          "ظهور"
+        ],
+        "member_count": 12
+      },
+      {
+        "nucleus": "غر",
+        "shared_meaning": "الغؤور والدخول بامتداد ودقة ويلزمه اللصوق والتغطي",
+        "features": [
+          "امتداد",
+          "دقة",
+          "تلاصق",
+          "باطن"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "فر",
+        "shared_meaning": "الفصل أو التفريق بين ما هو ملتق أو ملتحم",
+        "features": [
+          "تفرق"
+        ],
+        "member_count": 17
+      },
+      {
+        "nucleus": "قر",
+        "shared_meaning": "استقرار ما شأنه التسيب في قاع عميق أو حيز",
+        "features": [
+          "استقرار",
+          "تخلخل",
+          "حيز"
+        ],
+        "member_count": 14
+      },
+      {
+        "nucleus": "كر",
+        "shared_meaning": "التركز تكرارًا ومعاودة أو بقاء طويلًا لحصول النفع",
+        "features": [
+          "امتساك",
+          "انتقال",
+          "امتداد"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "مر",
+        "shared_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)",
+        "features": [
+          "استرسال",
+          "باطن",
+          "انتقال",
+          "حدة",
+          "قوة",
+          "تخلخل"
+        ],
+        "member_count": 11
+      },
+      {
+        "nucleus": "نر",
+        "shared_meaning": "نفاذ لطيف حاد الوقع من أثناء",
+        "features": [
+          "نفاذ",
+          "لطف",
+          "حدة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "هـر",
+        "shared_meaning": "تسيب بالغ الرقة",
+        "features": [
+          "تخلخل",
+          "رقة"
+        ],
+        "member_count": 4
+      }
+    ],
+    "count_l1": 24,
+    "count_l2": 22,
+    "total": 46
+  },
+  "ز": {
+    "letter": "ز",
+    "as_letter1": [
+      {
+        "nucleus": "زب",
+        "shared_meaning": "الاكتناز أو أثره في الانتصاب أو النضح",
+        "features": [
+          "اكتناز",
+          "نضح"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "زت",
+        "shared_meaning": "شيء يعلق زائدًا بشيء",
+        "features": [
+          "تعلق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "زج",
+        "shared_meaning": "الدفع للأمام وما قد يلزمه من التداخل",
+        "features": [
+          "إبعاد",
+          "تلاصق",
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "زح",
+        "shared_meaning": "الانتقال البطيء مع الاحتكاك بالمقر",
+        "features": [
+          "انتقال",
+          "تعقد",
+          "احتكاك",
+          "مقر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "زخ",
+        "shared_meaning": "اندفاع الشيء بقوة من أثناء أو فيها",
+        "features": [
+          "اندفاع",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "زد",
+        "shared_meaning": "إضافة شيء إلى الحيز",
+        "features": [
+          "حيز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "زر",
+        "shared_meaning": "النفاذ بدقة مع إمساك ما",
+        "features": [
+          "نفاذ",
+          "دقة",
+          "إمساك"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "زع",
+        "shared_meaning": "التحريك القليل دفعًا",
+        "features": [
+          "انتقال",
+          "إبعاد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "زغ",
+        "shared_meaning": "الدفع في أثناء أو إليها بدقة وخفة",
+        "features": [
+          "إبعاد",
+          "دقة",
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "زف",
+        "shared_meaning": "حركة ما هو جمع أو كثير بخفة",
+        "features": [
+          "انتقال",
+          "تجمع",
+          "رخاوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "زق",
+        "shared_meaning": "الدفع بمعنى الحشو",
+        "features": [
+          "إبعاد"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "زك",
+        "shared_meaning": "الامتلاء أو التشبع بمائع أو نحوه",
+        "features": [
+          "تلاصق",
+          "امتلاء",
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "زل",
+        "shared_meaning": "الانزلاق (التحرك السهل) عن مستوٍ يتيح هذا",
+        "features": [
+          "انتقال",
+          "استواء"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "زم",
+        "shared_meaning": "ضم الكثير باكتناز",
+        "features": [
+          "تجمع",
+          "اكتناز"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "زن",
+        "shared_meaning": "اختزان الباطن بقوة أو جمعه ما قد يبدو أثره",
+        "features": [
+          "باطن",
+          "قوة",
+          "تجمع",
+          "ظهور"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "زهـ",
+        "shared_meaning": "إفراغ ما في باطن الشيء بحيث يخلو مما يفترض أن يشغله",
+        "features": [
+          "إفراغ",
+          "فراغ",
+          "باطن"
+        ],
+        "member_count": 5
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بز",
+        "shared_meaning": "النفاذ من مضيق",
+        "features": [
+          "نفاذ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "جز",
+        "shared_meaning": "التميز والانفصال في الكتلة",
+        "features": [
+          "تميز",
+          "استقلال"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "حز",
+        "shared_meaning": "ما يشبه الشق الدقيق في شيء صلب وما يلزمه من التميز",
+        "features": [
+          "شق",
+          "دقة",
+          "صلابة",
+          "غلظ",
+          "تميز"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "خز",
+        "shared_meaning": "نفاذ الحاد أو النفاذ بحدة في أثناء الشيء",
+        "features": [
+          "نفاذ",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رز",
+        "shared_meaning": "التداخل الشديد",
+        "features": [
+          "اتصال",
+          "اشتمال",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ضز",
+        "shared_meaning": "هو تضاغط الشيء أو انضغاطه بشدة واكتناز",
+        "features": [
+          "ضغط",
+          "قوة",
+          "اكتناز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عز",
+        "shared_meaning": "تماسك الأثناء والاشتداد",
+        "features": [
+          "تماسك",
+          "اشتداد",
+          "قوة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "غز",
+        "shared_meaning": "النفاذ بحدة ودقة وامتداد",
+        "features": [
+          "نفاذ",
+          "حدة",
+          "دقة",
+          "امتداد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فز",
+        "shared_meaning": "انبعاث أو نتوء بقوة ونفاذ",
+        "features": [
+          "ظاهر",
+          "قوة",
+          "نفاذ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "كز",
+        "shared_meaning": "الصلابة الشديدة من شدة التداخل",
+        "features": [
+          "صلابة",
+          "غلظ",
+          "قوة",
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لز",
+        "shared_meaning": "لصوق الشيء بالشيء وشده إلى الشيء",
+        "features": [
+          "تلاصق",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مز",
+        "shared_meaning": "الجمع أو الفصل والامتلاء",
+        "features": [
+          "تجمع",
+          "تلاصق",
+          "امتلاء",
+          "كثافة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "نز",
+        "shared_meaning": "دقيق الجرم ينفذ بضغط أو قوة من أثناء ظاهر أو فيها",
+        "features": [
+          "دقة",
+          "ضغط",
+          "قوة",
+          "ظاهر"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "هـز",
+        "shared_meaning": "التحرك حركة خفيفة مضطربة وما يلزم ذلك من الخفة",
+        "features": [
+          "انتقال",
+          "رخاوة"
+        ],
+        "member_count": 4
+      }
+    ],
+    "count_l1": 16,
+    "count_l2": 14,
+    "total": 30
+  },
+  "س": {
+    "letter": "س",
+    "as_letter1": [
+      {
+        "nucleus": "سب",
+        "shared_meaning": "الامتداد الدقيق مع الاتصال بشيء",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "دقة",
+          "اتصال"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "ست",
+        "shared_meaning": "التغطية والإخفاء",
+        "features": [
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "سج",
+        "shared_meaning": "اعتدال ورقة وعدم غلظ واستواء",
+        "features": [
+          "رقة",
+          "غلظ",
+          "استواء"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "سح",
+        "shared_meaning": "تسيُّب الشيء أو انفصاله بلطف أو دقة عن مقره",
+        "features": [
+          "تخلخل",
+          "استقلال",
+          "لطف",
+          "دقة",
+          "مقر"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "سخ",
+        "shared_meaning": "لين الجسم وعدم صلادته مما يسمح بالاختراق أو الانقياد",
+        "features": [
+          "رخاوة",
+          "اختراق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "سد",
+        "shared_meaning": "مادة جامدة أو كثيفة تقوم معترضة أو متراكمة",
+        "features": [
+          "كثافة",
+          "تماسك"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "سر",
+        "shared_meaning": "الامتداد أو النفاذ مع الدقة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "نفاذ",
+          "دقة"
+        ],
+        "member_count": 18
+      },
+      {
+        "nucleus": "سس",
+        "shared_meaning": "التكوّن أو الصوت في عمق أو خفاء",
+        "features": [
+          "عمق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "سط",
+        "shared_meaning": "الامتداد الدقيق مع الانتهاء بغلظ",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "دقة",
+          "غلظ"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "سع",
+        "shared_meaning": "الانحسار والذهاب من جرم الشيء، ويلزمه اتساع الحيز الذي يشغله الحيز نفسه",
+        "features": [
+          "نقص",
+          "اتساع",
+          "حيز"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "سغ",
+        "shared_meaning": "وجود رطب في الأثناء مع نفاذ فيها أو منها",
+        "features": [
+          "نفاذ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "سف",
+        "shared_meaning": "نفاذ دقاق جافة من أثناء مع ظهورها",
+        "features": [
+          "نفاذ",
+          "جفاف",
+          "ظهور"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "سق",
+        "shared_meaning": "نفاذ غليظ أو مهم من الجوف أو إليه",
+        "features": [
+          "نفاذ",
+          "غلظ",
+          "جوف"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "سك",
+        "shared_meaning": "ضيق المنفذ ضيقًا شديدًا بحيث يكاد ينسد",
+        "features": [
+          "نفاذ",
+          "قوة",
+          "انسداد"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "سل",
+        "shared_meaning": "انسحاب الشيء ممتدًا من أثناء أو فيها بطول ورفق",
+        "features": [
+          "استرسال",
+          "طول"
+        ],
+        "member_count": 14
+      },
+      {
+        "nucleus": "سم",
+        "shared_meaning": "نوع من الخرق الذي يضم",
+        "features": [
+          "اختراق",
+          "تجمع"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "سن",
+        "shared_meaning": "الامتداد (أو النفاذ) مع حدة أو دقة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "نفاذ",
+          "حدة",
+          "دقة"
+        ],
+        "member_count": 11
+      },
+      {
+        "nucleus": "سهـ",
+        "shared_meaning": "الفراغ المتخلل",
+        "features": [
+          "فراغ",
+          "نفاذ"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "سو",
+        "shared_meaning": "هيئة الشيء الظاهرة وما يعتريها من استواء أو عيب",
+        "features": [
+          "ظاهر",
+          "استواء"
+        ],
+        "member_count": 2
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "أس",
+        "shared_meaning": "نفاذ شعور أو أثر حاد في عمق أو فجوة",
+        "features": [
+          "نفاذ",
+          "حدة",
+          "عمق",
+          "فجوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "بس",
+        "shared_meaning": "الجفاف واليبوسة",
+        "features": [
+          "جفاف"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "تس",
+        "shared_meaning": "ما دل على العدد تسعة",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "جس",
+        "shared_meaning": "الاختراق الحسي أو المعنوي",
+        "features": [
+          "اختراق"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "حس",
+        "shared_meaning": "انكشاف الظاهر وبدوه من زوال ما يعروه",
+        "features": [
+          "ظهور",
+          "ظاهر",
+          "اتصال"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "خس",
+        "shared_meaning": "القلة والنقص",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "دس",
+        "shared_meaning": "النفاذ بدفع مع دقة أو حدة في أثناء شيء",
+        "features": [
+          "نفاذ",
+          "إبعاد",
+          "دقة",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رس",
+        "shared_meaning": "النفاذ بامتداد",
+        "features": [
+          "نفاذ",
+          "امتداد"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "سس",
+        "shared_meaning": "التكوّن أو الصوت في عمق أو خفاء",
+        "features": [
+          "عمق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عس",
+        "shared_meaning": "نفاذ في كثيف أو منه بامتداد ما",
+        "features": [
+          "نفاذ",
+          "كثافة",
+          "امتداد"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "غس",
+        "shared_meaning": "الانغماس ونحوه من التغطي بالمائع",
+        "features": [
+          "باطن"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فس",
+        "shared_meaning": "ذهاب غلظ الشيء بتسرب قوته",
+        "features": [
+          "غلظ",
+          "تسرب"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "قس",
+        "shared_meaning": "تتبع أو تتابع وامتداد بصلابة أو حدة",
+        "features": [
+          "امتداد",
+          "صلابة",
+          "غلظ",
+          "حدة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "كس",
+        "shared_meaning": "النقص بالدق أو القشر أو نحوهما من التأخر والغئور",
+        "features": [
+          "نقص",
+          "انتقال",
+          "عمق"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "لس",
+        "shared_meaning": "قلة مفارقة المنشأ أو المقر",
+        "features": [
+          "نقص",
+          "رقة",
+          "مقر"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مس",
+        "shared_meaning": "المخالطة والاتصال",
+        "features": [
+          "اتصال"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "نس",
+        "shared_meaning": "نفاذ بدقة من أثناء شيء أو فيها",
+        "features": [
+          "نفاذ",
+          "دقة"
+        ],
+        "member_count": 10
+      }
+    ],
+    "count_l1": 19,
+    "count_l2": 17,
+    "total": 36
+  },
+  "ش": {
+    "letter": "ش",
+    "as_letter1": [
+      {
+        "nucleus": "شب",
+        "shared_meaning": "هو تجمع (عن انتشار أو ضعف) مع تركز",
+        "features": [
+          "تجمع",
+          "انتشار",
+          "نقص",
+          "امتساك"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "شت",
+        "shared_meaning": "هو التفرق",
+        "features": [
+          "تفرق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "شج",
+        "shared_meaning": "حدوث الشقّ أو الفتح في الجرم أو وجوده فيه",
+        "features": [
+          "شق",
+          "اختراق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "شح",
+        "shared_meaning": "هو جفاف الجرم أو حدته مع عرض أو تجسم",
+        "features": [
+          "جفاف"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "شخ",
+        "shared_meaning": "هو الجفاف مع التجسم",
+        "features": [
+          "جفاف"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "شد",
+        "shared_meaning": "هو صلابة الشيء أو وثاقة بعضه ببعض",
+        "features": [
+          "صلابة",
+          "غلظ",
+          "امتساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "شر",
+        "shared_meaning": "الانتشار أو صورة منه",
+        "features": [
+          "انتشار"
+        ],
+        "member_count": 13
+      },
+      {
+        "nucleus": "شط",
+        "shared_meaning": "الامتداد بجانب أو الانقسام عنه",
+        "features": [
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "شظ",
+        "shared_meaning": "الشد بإنفاذ",
+        "features": [
+          "نفاذ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "شع",
+        "shared_meaning": "الانتشار بتفرق ودقة وامتداد",
+        "features": [
+          "انتشار",
+          "تفرق",
+          "دقة",
+          "امتداد"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "شغ",
+        "shared_meaning": "دخول أو تداخل قوي وحاد يلزمه كثافة",
+        "features": [
+          "اتصال",
+          "اشتمال",
+          "قوة",
+          "حدة",
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "شف",
+        "shared_meaning": "فقد كثافة الأثناء",
+        "features": [
+          "كثافة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "شق",
+        "shared_meaning": "صدع الشيء أو ما هو بمعناه",
+        "features": [
+          "إمساك",
+          "قطع"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "شك",
+        "shared_meaning": "دخول أو نفاذ بحدة أو قوة يلزمه الجمع",
+        "features": [
+          "نفاذ",
+          "حدة",
+          "قوة",
+          "تجمع"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "شم",
+        "shared_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى",
+        "features": [
+          "تجمع",
+          "استرسال",
+          "ظاهر"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "شن",
+        "shared_meaning": "انتشار دقاق من أثناء الشيء",
+        "features": [
+          "انتشار"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "شهـ",
+        "shared_meaning": "وجود فراغ ما",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "شو",
+        "shared_meaning": "النتوء والظهور والزيادة الدقيقة",
+        "features": [
+          "ظاهر",
+          "ظهور",
+          "امتداد",
+          "دقة"
+        ],
+        "member_count": 3
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بش",
+        "shared_meaning": "الانتشار الظاهر",
+        "features": [
+          "انتشار",
+          "ظاهر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "حش",
+        "shared_meaning": "الجفاف والخشونة مع الانتشار",
+        "features": [
+          "جفاف",
+          "انتشار"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "خش",
+        "shared_meaning": "تجمع الدقاق الخشنة أو الحادّة في أثناء الشيء",
+        "features": [
+          "تجمع",
+          "حدة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "رش",
+        "shared_meaning": "انتشار الأشياء الدقيقة الطرية",
+        "features": [
+          "انتشار",
+          "دقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "عش",
+        "shared_meaning": "تداخل الدقاق الممتدة بعضها في بعض",
+        "features": [
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "غش",
+        "shared_meaning": "عدم صفاء الشيء أي شوبه أو خلطه بما يجعله كثيفًا يغطي ما تحته",
+        "features": [
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فش",
+        "shared_meaning": "خروج ما يمتلئ به الشيء من لطيف باتساع",
+        "features": [
+          "خروج",
+          "لطف",
+          "اتساع"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "قش",
+        "shared_meaning": "جفاف الظاهر وتقلصه أو تشنجه",
+        "features": [
+          "جفاف",
+          "ظاهر"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "كش",
+        "shared_meaning": "خروج ما هو متغلغل في أثناء الشيء أو شديد الالتحام به",
+        "features": [
+          "خروج",
+          "قوة",
+          "التحام"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مش",
+        "shared_meaning": "الانتشار والامتداد",
+        "features": [
+          "انتشار",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "نش",
+        "shared_meaning": "ارتفاع بانتشار مع حدة",
+        "features": [
+          "صعود",
+          "انتشار",
+          "حدة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "هـش",
+        "shared_meaning": "فقد قوّة التماسك والصلادة والإصمات",
+        "features": [
+          "قوة",
+          "تماسك"
+        ],
+        "member_count": 2
+      }
+    ],
+    "count_l1": 18,
+    "count_l2": 12,
+    "total": 30
+  },
+  "ص": {
+    "letter": "ص",
+    "as_letter1": [
+      {
+        "nucleus": "صب",
+        "shared_meaning": "الحدر أو الامتداد إلى أسفل بقوة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "باطن",
+          "قوة"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "صت",
+        "shared_meaning": "الصدم والطرق وما بمعناهما من الضغط الشديد",
+        "features": [
+          "إمساك",
+          "صدم",
+          "ضغط",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "صح",
+        "shared_meaning": "كون الشيء على حاله الأصلي مع عرضه وجفافه",
+        "features": [
+          "جفاف"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "صخ",
+        "shared_meaning": "الدخول في الأثناء بحدة بالغة",
+        "features": [
+          "حدة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "صد",
+        "shared_meaning": "شيء كثيف أو صلب قوي يعترض فيوقف النفاذ",
+        "features": [
+          "كثافة",
+          "صلابة",
+          "غلظ",
+          "قوة",
+          "نفاذ"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "صر",
+        "shared_meaning": "التضام الشديد الذي يمنع الانتشار",
+        "features": [
+          "قوة",
+          "إمساك",
+          "ضغط",
+          "انتشار"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "صع",
+        "shared_meaning": "التسيب والتفرق لما شأنه أن يتجمع أو يتماسك",
+        "features": [
+          "تخلخل",
+          "تفرق",
+          "تجمع",
+          "تماسك"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "صغ",
+        "shared_meaning": "لين الأثناء",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "صف",
+        "shared_meaning": "الرقة مع الخلوص من الغلظ تجمعا جاسيًا أو تثنيا",
+        "features": [
+          "رقة",
+          "خلوص",
+          "فراغ",
+          "غلظ",
+          "تجمع",
+          "تعقد"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "صك",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "صل",
+        "shared_meaning": "التماسك الدقيق مع لطف ما في الأثناء",
+        "features": [
+          "تماسك",
+          "دقة",
+          "لطف"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "صم",
+        "shared_meaning": "انسداد مسام الشيء مع صلابة فلا ينفذ فيه أو منه شيء",
+        "features": [
+          "إمساك",
+          "انسداد",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "صن",
+        "shared_meaning": "الاحتواء في الجوف أو الإمساك في الأثناء بتمكن أو دوام",
+        "features": [
+          "احتواء",
+          "جوف",
+          "تلاصق",
+          "إمساك",
+          "امتساك",
+          "امتداد"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "صهـ",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "صي",
+        "shared_meaning": "الاتصال والحيازة",
+        "features": [
+          "اتصال"
+        ],
+        "member_count": 2
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بص",
+        "shared_meaning": "النفاذ والإدراك",
+        "features": [
+          "نفاذ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "حص",
+        "shared_meaning": "الغلظ وما إليه من تجمع مع التئام أو جفاف مع الجزئية قطعًا أو صغرًا",
+        "features": [
+          "غلظ",
+          "تجمع",
+          "تلاصق",
+          "جفاف",
+          "قطع"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "خص",
+        "shared_meaning": "دقة الشيء ومحدوديته",
+        "features": [
+          "دقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رص",
+        "shared_meaning": "الالتحام بغلظ أو متانة",
+        "features": [
+          "التحام",
+          "غلظ",
+          "امتساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عص",
+        "shared_meaning": "الصلابة والاشتداد",
+        "features": [
+          "صلابة",
+          "غلظ",
+          "اشتداد",
+          "قوة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "غص",
+        "shared_meaning": "النفاذ بغلظ أو ضيق أو عُسْر",
+        "features": [
+          "نفاذ",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فص",
+        "shared_meaning": "تميز جزئي مع قوة",
+        "features": [
+          "تميز",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "قص",
+        "shared_meaning": "نوع من القطع مع التسوية والتتابع الممتد",
+        "features": [
+          "قطع"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "مص",
+        "shared_meaning": "استخلاص الشيء أو أخذه",
+        "features": [
+          "خلوص",
+          "إمساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نص",
+        "shared_meaning": "نوع من النفاذ بامتداد مع علو",
+        "features": [
+          "نفاذ",
+          "امتداد"
+        ],
+        "member_count": 8
+      }
+    ],
+    "count_l1": 15,
+    "count_l2": 10,
+    "total": 25
+  },
+  "ض": {
+    "letter": "ض",
+    "as_letter1": [
+      {
+        "nucleus": "ضب",
+        "shared_meaning": "هو اللزوم الشديد غشيانًا أو إمساكا في الأثناء",
+        "features": [
+          "تعلق",
+          "قوة",
+          "اشتمال",
+          "إمساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ضج",
+        "shared_meaning": "هو ذوبان تماسك الأثناء أو ما لصق وأمسك فيها",
+        "features": [
+          "تماسك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ضح",
+        "shared_meaning": "هو الانبساط مع الانكشاف أو الشفافية",
+        "features": [
+          "اتساع",
+          "ظهور"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ضد",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ضر",
+        "shared_meaning": "هو نوع من المزاحمة والدفع أو التضييق",
+        "features": [
+          "ازدحام",
+          "إبعاد",
+          "ضغط"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ضز",
+        "shared_meaning": "هو تضاغط الشيء أو انضغاطه بشدة واكتناز",
+        "features": [
+          "ضغط",
+          "قوة",
+          "اكتناز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ضع",
+        "shared_meaning": "هو تفكيك الشيء الغليظ الشديد التماسك ويلزمه التفرق",
+        "features": [
+          "غلظ",
+          "قوة",
+          "تماسك",
+          "تفرق"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ضغ",
+        "shared_meaning": "هو التجمع الكثيف الرخو",
+        "features": [
+          "تجمع",
+          "كثافة",
+          "رخاوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ضف",
+        "shared_meaning": "هو التجمع على الشيء أو حوله",
+        "features": [
+          "تجمع"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ضق",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ضل",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ضم",
+        "shared_meaning": "هو الجمع بضغط ولأم",
+        "features": [
+          "تجمع",
+          "ضغط",
+          "تلاصق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ضن",
+        "shared_meaning": "هو لزوم الشيء حيزه أي بقاؤه داخله لا يبرحه",
+        "features": [
+          "تعلق",
+          "حيز"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ضهـ",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ضو",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بض",
+        "shared_meaning": "التجمع الرخو مع نصاعة",
+        "features": [
+          "تجمع",
+          "رخاوة",
+          "نصاعة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "حض",
+        "shared_meaning": "الانحدار بقوة وغِلَظ",
+        "features": [
+          "نقص",
+          "قوة",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "خض",
+        "shared_meaning": "رخاوة الأثناء مع خثورتها",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "رض",
+        "shared_meaning": "تضخم الجرم مع رخاوة باطنه",
+        "features": [
+          "رخاوة",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "عض",
+        "shared_meaning": "التجمع مع ضغط شديد أو اشتداد",
+        "features": [
+          "تجمع",
+          "ضغط",
+          "قوة",
+          "اشتداد"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "غض",
+        "shared_meaning": "أن يكون الشيء ثخينًا ممتلئًا بمادة فيها رخاوة ما",
+        "features": [
+          "امتلاء",
+          "رخاوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فض",
+        "shared_meaning": "الكسر والتفريق بقوة وغلظ",
+        "features": [
+          "كسر",
+          "تفرق",
+          "قوة",
+          "غلظ"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "قض",
+        "shared_meaning": "انفصال أو فراغ من شيء بعد تمامه أو قطعه",
+        "features": [
+          "استقلال",
+          "فراغ",
+          "قطع"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "مض",
+        "shared_meaning": "المخالطة أو النفاذ بقوة",
+        "features": [
+          "نفاذ",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "نض",
+        "shared_meaning": "نفاذ الشيء (بنحو الرشح) من أثناء ما هو فيه اندفاعا إلى أعلى أو إلى الظاهر",
+        "features": [
+          "نفاذ",
+          "اندفاع",
+          "ظاهر"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "هـض",
+        "shared_meaning": "كسر الشيء الغليظ ودقه",
+        "features": [
+          "كسر",
+          "غلظ",
+          "دقة"
+        ],
+        "member_count": 2
+      }
+    ],
+    "count_l1": 15,
+    "count_l2": 11,
+    "total": 26
+  },
+  "ط": {
+    "letter": "ط",
+    "as_letter1": [
+      {
+        "nucleus": "طب",
+        "shared_meaning": "الجودة والإحكام والتغطية",
+        "features": [
+          "احتكاك",
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "طح",
+        "shared_meaning": "الانبساط عن ضغط",
+        "features": [
+          "اتساع",
+          "ضغط"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "طد",
+        "shared_meaning": "الارتفاع الشاهق",
+        "features": [
+          "صعود"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "طر",
+        "shared_meaning": "الامتداد مع الرقة أو التتابع",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "رقة"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "طع",
+        "shared_meaning": "الليونة والانقياد وتيسر التناول",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "طغ",
+        "shared_meaning": "التجاوز والغشيان بقوة",
+        "features": [
+          "اشتمال",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "طف",
+        "shared_meaning": "الوصول إلى نهاية الشيء بزيادة محدودة أو غشيان",
+        "features": [
+          "وصول",
+          "امتداد",
+          "اشتمال"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "طق",
+        "shared_meaning": "الإحاطة بقوة",
+        "features": [
+          "اشتمال",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "طل",
+        "shared_meaning": "الامتداد الظاهر من أصل",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "ظاهر"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "طم",
+        "shared_meaning": "الملء والتغطية حتى الإخفاء",
+        "features": [
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "طن",
+        "shared_meaning": "التكتل واللزوم",
+        "features": [
+          "تعلق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "طهـ",
+        "shared_meaning": "الحسن والنقاء",
+        "features": [
+          "خلوص"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "طو",
+        "shared_meaning": "الثني والانخفاض",
+        "features": [
+          "تعقد",
+          "نقص",
+          "فيض"
+        ],
+        "member_count": 2
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بط",
+        "shared_meaning": "الثقل والضغط الداخلي",
+        "features": [
+          "ثقل",
+          "ضغط"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "حط",
+        "shared_meaning": "الانضغاط بقوة إلى أسفل",
+        "features": [
+          "ضغط",
+          "قوة",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "خط",
+        "shared_meaning": "الامتداد السطحي الخفيف مع أخذ ما",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "سطح",
+          "إمساك"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "رط",
+        "shared_meaning": "رخاوة أثناء الشيء الكثيف أو تنديها",
+        "features": [
+          "رخاوة",
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "سط",
+        "shared_meaning": "الامتداد الدقيق مع الانتهاء بغلظ",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "دقة",
+          "غلظ"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "شط",
+        "shared_meaning": "الامتداد بجانب أو الانقسام عنه",
+        "features": [
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "عط",
+        "shared_meaning": "امتداد الشيء وما يتعلق به",
+        "features": [
+          "امتداد",
+          "تعلق"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "غط",
+        "shared_meaning": "دس الشيء في أثناء شيء فيُغَطَّى",
+        "features": [
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "فط",
+        "shared_meaning": "نتوء بسبب ضغط",
+        "features": [
+          "ظاهر",
+          "ضغط"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "قط",
+        "shared_meaning": "نوع من القطع باستواء وتسوية أو توالٍ",
+        "features": [
+          "قطع",
+          "استواء"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "لط",
+        "shared_meaning": "حجب الثغرة أو سدها بشيء خارجي",
+        "features": [
+          "باطن",
+          "انسداد",
+          "ظاهر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "مط",
+        "shared_meaning": "الامتداد والانسكاب",
+        "features": [
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "نط",
+        "shared_meaning": "اندفاع من المقر أو الحيز بقوة شديدة",
+        "features": [
+          "اندفاع",
+          "مقر",
+          "حيز",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "هـط",
+        "shared_meaning": "لين وانقياد دائم أو ممتد",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 2
+      }
+    ],
+    "count_l1": 13,
+    "count_l2": 14,
+    "total": 27
+  },
+  "ظ": {
+    "letter": "ظ",
+    "as_letter1": [
+      {
+        "nucleus": "ظع",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ظف",
+        "shared_meaning": "الجمع من خارج",
+        "features": [
+          "تجمع",
+          "ظاهر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ظل",
+        "shared_meaning": "الحجب",
+        "features": [
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ظم",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ظن",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ظهـ",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "حظ",
+        "shared_meaning": "النفاذ بغلظ وكثافة مع تميز",
+        "features": [
+          "نفاذ",
+          "غلظ",
+          "كثافة",
+          "تميز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "شظ",
+        "shared_meaning": "الشد بإنفاذ",
+        "features": [
+          "نفاذ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عظ",
+        "shared_meaning": "الانثناء أو ما يلزمه من ضخامة",
+        "features": [
+          "تعقد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غظ",
+        "shared_meaning": "الحر الشديد في الجوف",
+        "features": [
+          "قوة",
+          "جوف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "قظ",
+        "shared_meaning": "إثارة الساكن وتحريكه",
+        "features": [
+          "انتقال"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "كظ",
+        "shared_meaning": "امتلاء الجوف امتلاءً شديدًا",
+        "features": [
+          "امتلاء",
+          "كثافة",
+          "جوف",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لظ",
+        "shared_meaning": "الحركة الخفيفة مع الحدة",
+        "features": [
+          "انتقال",
+          "حدة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نظ",
+        "shared_meaning": "مواجهة العين للالتقاط",
+        "features": [
+          "إمساك"
+        ],
+        "member_count": 1
+      }
+    ],
+    "count_l1": 6,
+    "count_l2": 8,
+    "total": 14
+  },
+  "ع": {
+    "letter": "ع",
+    "as_letter1": [
+      {
+        "nucleus": "عب",
+        "shared_meaning": "اجتماع الرخو، أو المائع، أو التخلخل في الحيز",
+        "features": [
+          "رخاوة",
+          "تخلخل",
+          "حيز"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "عت",
+        "shared_meaning": "الامتداد مع شدة ما",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "قوة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "عث",
+        "shared_meaning": "تشعث ما كان ممتسكاً وانتشاره",
+        "features": [
+          "انتشار"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "عج",
+        "shared_meaning": "التجمع مع نوع من الهشاشة أو الضعف",
+        "features": [
+          "تجمع",
+          "هشاشة",
+          "نقص"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "عد",
+        "shared_meaning": "الامتداد بالتوالي ونحوه",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "اتصال"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "عذ",
+        "shared_meaning": "لصوق الغض بشيء",
+        "features": [
+          "تلاصق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "عر",
+        "shared_meaning": "نقص أو جرد من ظاهر الشيء يلزمه ظهور ما كان خافيًا",
+        "features": [
+          "نقص",
+          "ظاهر",
+          "ظهور"
+        ],
+        "member_count": 12
+      },
+      {
+        "nucleus": "عز",
+        "shared_meaning": "تماسك الأثناء والاشتداد",
+        "features": [
+          "تماسك",
+          "اشتداد",
+          "قوة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "عس",
+        "shared_meaning": "نفاذ في كثيف أو منه بامتداد ما",
+        "features": [
+          "نفاذ",
+          "كثافة",
+          "امتداد"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "عش",
+        "shared_meaning": "تداخل الدقاق الممتدة بعضها في بعض",
+        "features": [
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "عص",
+        "shared_meaning": "الصلابة والاشتداد",
+        "features": [
+          "صلابة",
+          "غلظ",
+          "اشتداد",
+          "قوة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "عض",
+        "shared_meaning": "التجمع مع ضغط شديد أو اشتداد",
+        "features": [
+          "تجمع",
+          "ضغط",
+          "قوة",
+          "اشتداد"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "عط",
+        "shared_meaning": "امتداد الشيء وما يتعلق به",
+        "features": [
+          "امتداد",
+          "تعلق"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "عظ",
+        "shared_meaning": "الانثناء أو ما يلزمه من ضخامة",
+        "features": [
+          "تعقد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "عف",
+        "shared_meaning": "قلة المتاح على الظاهر أو قلة المتناول منه",
+        "features": [
+          "نقص",
+          "ظاهر"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "عق",
+        "shared_meaning": "وجود غلظ أو تعقد في عمق الشيء",
+        "features": [
+          "غلظ",
+          "تعقد",
+          "عمق"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "عك",
+        "shared_meaning": "الحبس بتضييق وعدم انتشار",
+        "features": [
+          "ضغط",
+          "انتشار"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عل",
+        "shared_meaning": "نوع من التراكم أو الارتفاع الذي يلزمه",
+        "features": [
+          "تماسك",
+          "صعود"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "عم",
+        "shared_meaning": "الالتحام العلوي، أي التجمع مع علو، أو في أعلى",
+        "features": [
+          "التحام",
+          "تجمع",
+          "ظاهر"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "عن",
+        "shared_meaning": "اعتراض شيء أو ظهوره مع لطف قد يتمثل في الغموض",
+        "features": [
+          "ظهور",
+          "لطف"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "عه",
+        "shared_meaning": "الفراغ الذي يخالط الشيء",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "عي",
+        "shared_meaning": "ضعف أو فراغ في الشيء",
+        "features": [
+          "نقص",
+          "فراغ"
+        ],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بع",
+        "shared_meaning": "الخروج والانتقال من حوزة",
+        "features": [
+          "خروج",
+          "انتقال",
+          "اتساع",
+          "حيز"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "تع",
+        "shared_meaning": "الرخاوة التي يرتطم فيها",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ثع",
+        "shared_meaning": "خروج المائع أو شبهه من مصدره",
+        "features": [
+          "خروج",
+          "إمساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "جع",
+        "shared_meaning": "التجوف والفراغ",
+        "features": [
+          "جوف",
+          "فراغ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "دع",
+        "shared_meaning": "الدفع بضغط على رخو فيتداخل ويتجمع",
+        "features": [
+          "إبعاد",
+          "ضغط",
+          "رخاوة",
+          "اتصال",
+          "اشتمال",
+          "تجمع"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذع",
+        "shared_meaning": "التفرق والانقياد برقة",
+        "features": [
+          "تفرق",
+          "رقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رع",
+        "shared_meaning": "(الامتداد) مع رقة أو رخاوة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "رقة",
+          "رخاوة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "زع",
+        "shared_meaning": "التحريك القليل دفعًا",
+        "features": [
+          "انتقال",
+          "إبعاد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "سع",
+        "shared_meaning": "الانحسار والذهاب من جرم الشيء، ويلزمه اتساع الحيز الذي يشغله الحيز نفسه",
+        "features": [
+          "نقص",
+          "اتساع",
+          "حيز"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "شع",
+        "shared_meaning": "الانتشار بتفرق ودقة وامتداد",
+        "features": [
+          "انتشار",
+          "تفرق",
+          "دقة",
+          "امتداد"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "صع",
+        "shared_meaning": "التسيب والتفرق لما شأنه أن يتجمع أو يتماسك",
+        "features": [
+          "تخلخل",
+          "تفرق",
+          "تجمع",
+          "تماسك"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ضع",
+        "shared_meaning": "هو تفكيك الشيء الغليظ الشديد التماسك ويلزمه التفرق",
+        "features": [
+          "غلظ",
+          "قوة",
+          "تماسك",
+          "تفرق"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "طع",
+        "shared_meaning": "الليونة والانقياد وتيسر التناول",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ظع",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "فع",
+        "shared_meaning": "المهارة والقوة أو الجد في عمل الشيء",
+        "features": [
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "قع",
+        "shared_meaning": "نوع من التركز والكثافة مع غلظ وثقل إلى أسفل",
+        "features": [
+          "امتساك",
+          "كثافة",
+          "غلظ",
+          "ثقل",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "كع",
+        "shared_meaning": "النتوء الجزئي مع عدم الاسترسال فيه",
+        "features": [
+          "ظاهر",
+          "استرسال",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لع",
+        "shared_meaning": "الحدة في الأثناء حدة يظهر أثرها",
+        "features": [
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مع",
+        "shared_meaning": "الامتداد والصلابة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "نع",
+        "shared_meaning": "الرخاوة والطراءة وما إلى ذلك رقة الأثناء",
+        "features": [
+          "رخاوة",
+          "رقة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "وع",
+        "shared_meaning": "حوز الشيء في جوفه",
+        "features": [
+          "اتساع",
+          "جوف"
+        ],
+        "member_count": 1
+      }
+    ],
+    "count_l1": 22,
+    "count_l2": 21,
+    "total": 43
+  },
+  "غ": {
+    "letter": "غ",
+    "as_letter1": [
+      {
+        "nucleus": "غب",
+        "shared_meaning": "الغئور والغياب أو الاستتار",
+        "features": [
+          "عمق",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "غث",
+        "shared_meaning": "جنس من التجمع أو التراكم لمادة هشة خفيفة الكثافة أو القيمة",
+        "features": [
+          "تجمع",
+          "تماسك",
+          "كثافة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "غد",
+        "shared_meaning": "تجمع الرخو تجمعًا شديدًا",
+        "features": [
+          "تجمع",
+          "رخاوة",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "غر",
+        "shared_meaning": "الغؤور والدخول بامتداد ودقة ويلزمه اللصوق والتغطي",
+        "features": [
+          "امتداد",
+          "دقة",
+          "تلاصق",
+          "باطن"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "غز",
+        "shared_meaning": "النفاذ بحدة ودقة وامتداد",
+        "features": [
+          "نفاذ",
+          "حدة",
+          "دقة",
+          "امتداد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غس",
+        "shared_meaning": "الانغماس ونحوه من التغطي بالمائع",
+        "features": [
+          "باطن"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غش",
+        "shared_meaning": "عدم صفاء الشيء أي شوبه أو خلطه بما يجعله كثيفًا يغطي ما تحته",
+        "features": [
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "غص",
+        "shared_meaning": "النفاذ بغلظ أو ضيق أو عُسْر",
+        "features": [
+          "نفاذ",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غض",
+        "shared_meaning": "أن يكون الشيء ثخينًا ممتلئًا بمادة فيها رخاوة ما",
+        "features": [
+          "امتلاء",
+          "رخاوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غط",
+        "shared_meaning": "دس الشيء في أثناء شيء فيُغَطَّى",
+        "features": [
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "غظ",
+        "shared_meaning": "الحر الشديد في الجوف",
+        "features": [
+          "قوة",
+          "جوف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "غف",
+        "shared_meaning": "قلة ما يكون على جانب عريض من الشيء",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غل",
+        "shared_meaning": "التخلل بحدة مع إحاطة أو تقييد أو ما بمعناهما",
+        "features": [
+          "نفاذ",
+          "حدة",
+          "اشتمال"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "غم",
+        "shared_meaning": "نوع من التغطية والحجب",
+        "features": [
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "غن",
+        "shared_meaning": "وجود لطيف في الحوزة",
+        "features": [
+          "لطف",
+          "اتساع",
+          "حيز"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غو",
+        "shared_meaning": "الانجذاب إلى الشيء مع تغش وفساد",
+        "features": [],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بغ",
+        "shared_meaning": "التزايد والفوران الداخلي",
+        "features": [
+          "امتداد",
+          "خروج",
+          "فوران"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "رغ",
+        "shared_meaning": "طبقة رخوة مع كثافة ما",
+        "features": [
+          "رخاوة",
+          "كثافة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "زغ",
+        "shared_meaning": "الدفع في أثناء أو إليها بدقة وخفة",
+        "features": [
+          "إبعاد",
+          "دقة",
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "سغ",
+        "shared_meaning": "وجود رطب في الأثناء مع نفاذ فيها أو منها",
+        "features": [
+          "نفاذ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "شغ",
+        "shared_meaning": "دخول أو تداخل قوي وحاد يلزمه كثافة",
+        "features": [
+          "اتصال",
+          "اشتمال",
+          "قوة",
+          "حدة",
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "صغ",
+        "shared_meaning": "لين الأثناء",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ضغ",
+        "shared_meaning": "هو التجمع الكثيف الرخو",
+        "features": [
+          "تجمع",
+          "كثافة",
+          "رخاوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "طغ",
+        "shared_meaning": "التجاوز والغشيان بقوة",
+        "features": [
+          "اشتمال",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "لغ",
+        "shared_meaning": "تخلل الشيء بمائع ثخين أو كثيف",
+        "features": [
+          "نفاذ",
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "نغ",
+        "shared_meaning": "رخاوة في باطن الشيء",
+        "features": [
+          "رخاوة",
+          "باطن"
+        ],
+        "member_count": 2
+      }
+    ],
+    "count_l1": 16,
+    "count_l2": 10,
+    "total": 26
+  },
+  "ف": {
+    "letter": "ف",
+    "as_letter1": [
+      {
+        "nucleus": "فأ",
+        "shared_meaning": "فجوة أو شق في شيء صلب",
+        "features": [
+          "فجوة",
+          "شق",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "فت",
+        "shared_meaning": "تكسير الهش وما يلزمه من انفصال",
+        "features": [
+          "استقلال"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "فج",
+        "shared_meaning": "انفتاح في الشيء بقوة مع عدم الالتزام بحد",
+        "features": [
+          "اتساع",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "فح",
+        "shared_meaning": "صدور أثر حاد منتشر عن كائن حي",
+        "features": [
+          "إمساك",
+          "حدة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فخ",
+        "shared_meaning": "النفخ أو الانتفاخ بقوة مع احتمال فراغ",
+        "features": [
+          "قوة",
+          "فراغ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فد",
+        "shared_meaning": "التهيؤ بقوة لتحصيل أمر",
+        "features": [
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "فر",
+        "shared_meaning": "الفصل أو التفريق بين ما هو ملتق أو ملتحم",
+        "features": [
+          "تفرق"
+        ],
+        "member_count": 17
+      },
+      {
+        "nucleus": "فز",
+        "shared_meaning": "انبعاث أو نتوء بقوة ونفاذ",
+        "features": [
+          "ظاهر",
+          "قوة",
+          "نفاذ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فس",
+        "shared_meaning": "ذهاب غلظ الشيء بتسرب قوته",
+        "features": [
+          "غلظ",
+          "تسرب"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "فش",
+        "shared_meaning": "خروج ما يمتلئ به الشيء من لطيف باتساع",
+        "features": [
+          "خروج",
+          "لطف",
+          "اتساع"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فص",
+        "shared_meaning": "تميز جزئي مع قوة",
+        "features": [
+          "تميز",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "فض",
+        "shared_meaning": "الكسر والتفريق بقوة وغلظ",
+        "features": [
+          "كسر",
+          "تفرق",
+          "قوة",
+          "غلظ"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "فط",
+        "shared_meaning": "نتوء بسبب ضغط",
+        "features": [
+          "ظاهر",
+          "ضغط"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فع",
+        "shared_meaning": "المهارة والقوة أو الجد في عمل الشيء",
+        "features": [
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فق",
+        "shared_meaning": "شق الشيء إلى عمقه ويلزمه فراغ",
+        "features": [
+          "شق",
+          "عمق",
+          "فراغ"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "فك",
+        "shared_meaning": "تسيّب جزئي مع شيء من الربط",
+        "features": [
+          "تخلخل"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "فل",
+        "shared_meaning": "انفصال ندورًا أو نتوءًا مع ضعف",
+        "features": [
+          "استقلال",
+          "ظاهر",
+          "نقص"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "فم",
+        "shared_meaning": "فتحة الفم وما يملؤها",
+        "features": [
+          "اختراق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فن",
+        "shared_meaning": "امتداد مع الرقة أو الضعف",
+        "features": [
+          "امتداد",
+          "رقة",
+          "نقص"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فهـ",
+        "shared_meaning": "فراغ واصل إلى عمق الشيء",
+        "features": [
+          "فراغ",
+          "عمق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "في",
+        "shared_meaning": "تردد الشيء الممتد أو ميله",
+        "features": [
+          "انتقال"
+        ],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "أف",
+        "shared_meaning": "إفراز شيء مكروه ونفيه",
+        "features": [
+          "إفراغ",
+          "إبعاد"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "تف",
+        "shared_meaning": "الوسخ على الجلد أو نحو ذلك",
+        "features": [],
+        "member_count": 2
+      },
+      {
+        "nucleus": "جف",
+        "shared_meaning": "الجفاف والتباعد",
+        "features": [
+          "جفاف",
+          "إبعاد"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "حف",
+        "shared_meaning": "الإحاطة بالشيء من خارج",
+        "features": [
+          "اشتمال",
+          "ظاهر"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "خف",
+        "shared_meaning": "تخلخل أثناء الشيء وقلة كثافته",
+        "features": [
+          "تخلخل",
+          "نقص"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "دف",
+        "shared_meaning": "الضغط من الظاهر أو إليه",
+        "features": [
+          "ضغط",
+          "ظاهر"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "رف",
+        "shared_meaning": "الامتداد أو الطرفية مع رقة أو رخاوة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "رقة",
+          "رخاوة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "زف",
+        "shared_meaning": "حركة ما هو جمع أو كثير بخفة",
+        "features": [
+          "انتقال",
+          "تجمع",
+          "رخاوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "سف",
+        "shared_meaning": "نفاذ دقاق جافة من أثناء مع ظهورها",
+        "features": [
+          "نفاذ",
+          "جفاف",
+          "ظهور"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "شف",
+        "shared_meaning": "فقد كثافة الأثناء",
+        "features": [
+          "كثافة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "صف",
+        "shared_meaning": "الرقة مع الخلوص من الغلظ تجمعا جاسيًا أو تثنيا",
+        "features": [
+          "رقة",
+          "خلوص",
+          "فراغ",
+          "غلظ",
+          "تجمع",
+          "تعقد"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "ضف",
+        "shared_meaning": "هو التجمع على الشيء أو حوله",
+        "features": [
+          "تجمع"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "طف",
+        "shared_meaning": "الوصول إلى نهاية الشيء بزيادة محدودة أو غشيان",
+        "features": [
+          "وصول",
+          "امتداد",
+          "اشتمال"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ظف",
+        "shared_meaning": "الجمع من خارج",
+        "features": [
+          "تجمع",
+          "ظاهر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عف",
+        "shared_meaning": "قلة المتاح على الظاهر أو قلة المتناول منه",
+        "features": [
+          "نقص",
+          "ظاهر"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "غف",
+        "shared_meaning": "قلة ما يكون على جانب عريض من الشيء",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "قف",
+        "shared_meaning": "نوع من الارتفاع مع صلابة أو امتساك",
+        "features": [
+          "صعود",
+          "صلابة",
+          "غلظ",
+          "امتساك"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "كف",
+        "shared_meaning": "الانثناء أو القبض على الشيء",
+        "features": [
+          "تعقد",
+          "إمساك"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "لف",
+        "shared_meaning": "التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة",
+        "features": [
+          "ظاهر",
+          "كثافة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "نف",
+        "shared_meaning": "نفاذ أو إبعاد بانتشار",
+        "features": [
+          "نفاذ",
+          "إبعاد",
+          "انتشار"
+        ],
+        "member_count": 14
+      },
+      {
+        "nucleus": "وف",
+        "shared_meaning": "بلوغ الشيء تمام قوامه",
+        "features": [
+          "وصول"
+        ],
+        "member_count": 1
+      }
+    ],
+    "count_l1": 21,
+    "count_l2": 21,
+    "total": 42
+  },
+  "ق": {
+    "letter": "ق",
+    "as_letter1": [
+      {
+        "nucleus": "قب",
+        "shared_meaning": "النتوء مع تجوف وصلابة تحيط بنصف الشيء",
+        "features": [
+          "ظاهر",
+          "جوف",
+          "اتصال",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "قت",
+        "shared_meaning": "الدقة وقلة ما به القوة في العمق",
+        "features": [
+          "دقة",
+          "نقص",
+          "قوة",
+          "عمق"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "قث",
+        "shared_meaning": "هشاشة الشيء ورخاوته",
+        "features": [
+          "هشاشة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "قح",
+        "shared_meaning": "اصطحاب الجفاء أي الاتصاف به",
+        "features": [
+          "اتصال",
+          "جفاف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "قد",
+        "shared_meaning": "الامتداد الطولي بالقطع ونحوه مع تحدد وجفاف",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "طول",
+          "قطع",
+          "جفاف"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "قذ",
+        "shared_meaning": "الدفع بقوة",
+        "features": [
+          "إبعاد",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "قر",
+        "shared_meaning": "استقرار ما شأنه التسيب في قاع عميق أو حيز",
+        "features": [
+          "استقرار",
+          "تخلخل",
+          "حيز"
+        ],
+        "member_count": 14
+      },
+      {
+        "nucleus": "قس",
+        "shared_meaning": "تتبع أو تتابع وامتداد بصلابة أو حدة",
+        "features": [
+          "امتداد",
+          "صلابة",
+          "غلظ",
+          "حدة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "قش",
+        "shared_meaning": "جفاف الظاهر وتقلصه أو تشنجه",
+        "features": [
+          "جفاف",
+          "ظاهر"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "قص",
+        "shared_meaning": "نوع من القطع مع التسوية والتتابع الممتد",
+        "features": [
+          "قطع"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "قض",
+        "shared_meaning": "انفصال أو فراغ من شيء بعد تمامه أو قطعه",
+        "features": [
+          "استقلال",
+          "فراغ",
+          "قطع"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "قط",
+        "shared_meaning": "نوع من القطع باستواء وتسوية أو توالٍ",
+        "features": [
+          "قطع",
+          "استواء"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "قظ",
+        "shared_meaning": "إثارة الساكن وتحريكه",
+        "features": [
+          "انتقال"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "قع",
+        "shared_meaning": "نوع من التركز والكثافة مع غلظ وثقل إلى أسفل",
+        "features": [
+          "امتساك",
+          "كثافة",
+          "غلظ",
+          "ثقل",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "قف",
+        "shared_meaning": "نوع من الارتفاع مع صلابة أو امتساك",
+        "features": [
+          "صعود",
+          "صلابة",
+          "غلظ",
+          "امتساك"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "قل",
+        "shared_meaning": "الرفع بصورة من الصور",
+        "features": [
+          "صعود"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "قم",
+        "shared_meaning": "تجمع الشيء أو تضامه في كتلة قوية مع تسنم أو ارتفاع",
+        "features": [
+          "تجمع",
+          "قوة",
+          "صعود"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "قن",
+        "shared_meaning": "النفاذ في الباطن أو الأخذ إليه بعمق أو امتداد",
+        "features": [
+          "نفاذ",
+          "باطن",
+          "إمساك",
+          "عمق",
+          "امتداد"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "قهـ",
+        "shared_meaning": "إخراج ما في الباطن من قوة مذخورة",
+        "features": [
+          "باطن",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "قو",
+        "shared_meaning": "شدة في الأثناء بالالتئام أو الالتواء مع امتداد",
+        "features": [
+          "قوة",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 2
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بق",
+        "shared_meaning": "الثبات والكشف باتساع",
+        "features": [
+          "امتساك",
+          "ظهور",
+          "اتساع"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "تق",
+        "shared_meaning": "هوّي الشيء إلى العمق: كالهوّي إلى الأسفل",
+        "features": [
+          "عمق",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ثق",
+        "shared_meaning": "الغلظ والشدة",
+        "features": [
+          "غلظ",
+          "قوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "حق",
+        "shared_meaning": "تمكن الشيء في عُمق مَقَرَّه، أو وسط مقره",
+        "features": [
+          "امتساك",
+          "عمق",
+          "مقر"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "دق",
+        "shared_meaning": "الصدم أو الضغط الشديد والحدة",
+        "features": [
+          "إمساك",
+          "صدم",
+          "ضغط",
+          "قوة",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ذق",
+        "shared_meaning": "النفاذ الحاد والأثر العميق",
+        "features": [
+          "نفاذ",
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رق",
+        "shared_meaning": "الانبساط مع الرقة",
+        "features": [
+          "اتساع",
+          "رقة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "زق",
+        "shared_meaning": "الدفع بمعنى الحشو",
+        "features": [
+          "إبعاد"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "سق",
+        "shared_meaning": "نفاذ غليظ أو مهم من الجوف أو إليه",
+        "features": [
+          "نفاذ",
+          "غلظ",
+          "جوف"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "شق",
+        "shared_meaning": "صدع الشيء أو ما هو بمعناه",
+        "features": [
+          "إمساك",
+          "قطع"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ضق",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "طق",
+        "shared_meaning": "الإحاطة بقوة",
+        "features": [
+          "اشتمال",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "عق",
+        "shared_meaning": "وجود غلظ أو تعقد في عمق الشيء",
+        "features": [
+          "غلظ",
+          "تعقد",
+          "عمق"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "فق",
+        "shared_meaning": "شق الشيء إلى عمقه ويلزمه فراغ",
+        "features": [
+          "شق",
+          "عمق",
+          "فراغ"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "لق",
+        "shared_meaning": "الصدم أو الالتقاء بالشيء في الحيز بقوة",
+        "features": [
+          "إمساك",
+          "صدم",
+          "حيز",
+          "قوة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "مق",
+        "shared_meaning": "الغلظ الباطني (مادياً أو معنوياً)",
+        "features": [
+          "غلظ",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نق",
+        "shared_meaning": "فراغ في العمق لغليظ ينفذ فيه أو منه",
+        "features": [
+          "فراغ",
+          "عمق",
+          "غلظ"
+        ],
+        "member_count": 9
+      }
+    ],
+    "count_l1": 20,
+    "count_l2": 17,
+    "total": 37
+  },
+  "ك": {
+    "letter": "ك",
+    "as_letter1": [
+      {
+        "nucleus": "كأ",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 4
+      },
+      {
+        "nucleus": "كب",
+        "shared_meaning": "التجمع كتلة متضاغطة أو كالكتلة المتضاغطة",
+        "features": [
+          "تجمع"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "كت",
+        "shared_meaning": "تداخل الشيء بعضه في بعض فيدق وينحصر",
+        "features": [
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "كث",
+        "shared_meaning": "التجمع الكثيف لأشياء دقيقة",
+        "features": [
+          "تجمع",
+          "كثافة",
+          "دقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "كد",
+        "shared_meaning": "التعامل مع ما يشبه القشر الشديد اللصوق بأصله",
+        "features": [
+          "قوة",
+          "تلاصق"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "كذ",
+        "shared_meaning": "الرخاوة النسبية",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "كر",
+        "shared_meaning": "التركز تكرارًا ومعاودة أو بقاء طويلًا لحصول النفع",
+        "features": [
+          "امتساك",
+          "انتقال",
+          "امتداد"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "كز",
+        "shared_meaning": "الصلابة الشديدة من شدة التداخل",
+        "features": [
+          "صلابة",
+          "غلظ",
+          "قوة",
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "كس",
+        "shared_meaning": "النقص بالدق أو القشر أو نحوهما من التأخر والغئور",
+        "features": [
+          "نقص",
+          "انتقال",
+          "عمق"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "كش",
+        "shared_meaning": "خروج ما هو متغلغل في أثناء الشيء أو شديد الالتحام به",
+        "features": [
+          "خروج",
+          "قوة",
+          "التحام"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "كظ",
+        "shared_meaning": "امتلاء الجوف امتلاءً شديدًا",
+        "features": [
+          "امتلاء",
+          "كثافة",
+          "جوف",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "كع",
+        "shared_meaning": "النتوء الجزئي مع عدم الاسترسال فيه",
+        "features": [
+          "ظاهر",
+          "استرسال",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "كف",
+        "shared_meaning": "الانثناء أو القبض على الشيء",
+        "features": [
+          "تعقد",
+          "إمساك"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "كك",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "كل",
+        "shared_meaning": "تجمع الشيء كتلة دون حد أو طرف دقيق",
+        "features": [
+          "تجمع",
+          "دقة"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "كم",
+        "shared_meaning": "تغطية الشيء بغطاء زائد على حقيقته",
+        "features": [
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "كن",
+        "shared_meaning": "الاستتار في جوف شيء",
+        "features": [
+          "باطن",
+          "جوف"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "كهـ",
+        "shared_meaning": "إخراج المادة من الجوف بدفع وقوة",
+        "features": [
+          "جوف",
+          "إبعاد",
+          "قوة"
+        ],
+        "member_count": 4
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بك",
+        "shared_meaning": "الضغط والاحتباس",
+        "features": [
+          "ضغط",
+          "احتباس"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "حك",
+        "shared_meaning": "الدلك بضغط على الصلب",
+        "features": [
+          "احتكاك",
+          "ضغط",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ذك",
+        "shared_meaning": "الحِدّة والصلابة البالغة",
+        "features": [
+          "حدة",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رك",
+        "shared_meaning": "التجمع مع قلة الكثافة والتماسك",
+        "features": [
+          "تجمع",
+          "نقص",
+          "كثافة",
+          "تماسك"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "زك",
+        "shared_meaning": "الامتلاء أو التشبع بمائع أو نحوه",
+        "features": [
+          "تلاصق",
+          "امتلاء",
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "سك",
+        "shared_meaning": "ضيق المنفذ ضيقًا شديدًا بحيث يكاد ينسد",
+        "features": [
+          "نفاذ",
+          "قوة",
+          "انسداد"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "شك",
+        "shared_meaning": "دخول أو نفاذ بحدة أو قوة يلزمه الجمع",
+        "features": [
+          "نفاذ",
+          "حدة",
+          "قوة",
+          "تجمع"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "صك",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "عك",
+        "shared_meaning": "الحبس بتضييق وعدم انتشار",
+        "features": [
+          "ضغط",
+          "انتشار"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "فك",
+        "shared_meaning": "تسيّب جزئي مع شيء من الربط",
+        "features": [
+          "تخلخل"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "كك",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "لك",
+        "shared_meaning": "نوع من التراكم يتمثل في الاكتناز باللحم",
+        "features": [
+          "تماسك",
+          "اكتناز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "مك",
+        "shared_meaning": "التمكن والرسوخ والاحتباس",
+        "features": [
+          "امتساك",
+          "تماسك",
+          "احتباس"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "نك",
+        "shared_meaning": "الوصول إلى عمق الشيء بجد وتدقيق",
+        "features": [
+          "وصول",
+          "عمق",
+          "دقة"
+        ],
+        "member_count": 10
+      }
+    ],
+    "count_l1": 18,
+    "count_l2": 14,
+    "total": 32
+  },
+  "ل": {
+    "letter": "ل",
+    "as_letter1": [
+      {
+        "nucleus": "لء",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "لب",
+        "shared_meaning": "اللزوم أي التلازم والتداخل",
+        "features": [
+          "تعلق",
+          "اتصال",
+          "اشتمال"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "لت",
+        "shared_meaning": "التماسك واللزوق وما إليه وهو تداخل يلزمه النقص",
+        "features": [
+          "تماسك",
+          "اتصال",
+          "اشتمال",
+          "نقص"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "لج",
+        "shared_meaning": "التراكم ثم ما قد يلزمه من كثافة وشدة مادية",
+        "features": [
+          "تماسك",
+          "كثافة",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "لح",
+        "shared_meaning": "الالتحام وما يلزمه من عرض وامتداد",
+        "features": [
+          "التحام",
+          "امتداد"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "لد",
+        "shared_meaning": "الضم الشديد، أي الحوز بلا إفلات",
+        "features": [
+          "تجمع",
+          "قوة",
+          "اتساع"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "لذ",
+        "shared_meaning": "مماسة مستطابة",
+        "features": [
+          "اتصال",
+          "لطف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لز",
+        "shared_meaning": "لصوق الشيء بالشيء وشده إلى الشيء",
+        "features": [
+          "تلاصق",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "لس",
+        "shared_meaning": "قلة مفارقة المنشأ أو المقر",
+        "features": [
+          "نقص",
+          "رقة",
+          "مقر"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "لط",
+        "shared_meaning": "حجب الثغرة أو سدها بشيء خارجي",
+        "features": [
+          "باطن",
+          "انسداد",
+          "ظاهر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لظ",
+        "shared_meaning": "الحركة الخفيفة مع الحدة",
+        "features": [
+          "انتقال",
+          "حدة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لع",
+        "shared_meaning": "الحدة في الأثناء حدة يظهر أثرها",
+        "features": [
+          "حدة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "لغ",
+        "shared_meaning": "تخلل الشيء بمائع ثخين أو كثيف",
+        "features": [
+          "نفاذ",
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "لف",
+        "shared_meaning": "التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة",
+        "features": [
+          "ظاهر",
+          "كثافة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "لق",
+        "shared_meaning": "الصدم أو الالتقاء بالشيء في الحيز بقوة",
+        "features": [
+          "إمساك",
+          "صدم",
+          "حيز",
+          "قوة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "لك",
+        "shared_meaning": "نوع من التراكم يتمثل في الاكتناز باللحم",
+        "features": [
+          "تماسك",
+          "اكتناز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لم",
+        "shared_meaning": "نوع من الضم أو التضام لما شأنه الانتشار إلى الظاهر",
+        "features": [
+          "تجمع",
+          "انتشار",
+          "ظاهر"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "لن",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "له",
+        "shared_meaning": "الاتساع مع شمول وشفافية أو فراغ أثناء",
+        "features": [
+          "اتساع",
+          "فراغ"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "لو",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "لي",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "ءل",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "بل",
+        "shared_meaning": "التمكن والحَوْز بشدة",
+        "features": [
+          "امتساك",
+          "اتساع",
+          "قوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "تل",
+        "shared_meaning": "التكديس والاتباع",
+        "features": [
+          "تجمع",
+          "اتصال"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ثل",
+        "shared_meaning": "تجمع الدقائق وتماسكها",
+        "features": [
+          "تجمع",
+          "تماسك"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "جل",
+        "shared_meaning": "الاتساع والانكشاف",
+        "features": [
+          "اتساع",
+          "ظهور"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "حل",
+        "shared_meaning": "التسيب والتفكك وما هو من لوازمه كالزيادة",
+        "features": [
+          "تخلخل",
+          "امتداد"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "خل",
+        "shared_meaning": "الخلخلة أي الفراغ في الأثناء",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "دل",
+        "shared_meaning": "الامتداد (من أعلى) اتجاهاً إلى شيء أو مقر بقوة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "ظاهر",
+          "مقر",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ذل",
+        "shared_meaning": "النقص والانخفاض والتيسير",
+        "features": [
+          "نقص",
+          "فيض"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "زل",
+        "shared_meaning": "الانزلاق (التحرك السهل) عن مستوٍ يتيح هذا",
+        "features": [
+          "انتقال",
+          "استواء"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "سل",
+        "shared_meaning": "انسحاب الشيء ممتدًا من أثناء أو فيها بطول ورفق",
+        "features": [
+          "استرسال",
+          "طول"
+        ],
+        "member_count": 14
+      },
+      {
+        "nucleus": "صل",
+        "shared_meaning": "التماسك الدقيق مع لطف ما في الأثناء",
+        "features": [
+          "تماسك",
+          "دقة",
+          "لطف"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "ضل",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "طل",
+        "shared_meaning": "الامتداد الظاهر من أصل",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "ظاهر"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "ظل",
+        "shared_meaning": "الحجب",
+        "features": [
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عل",
+        "shared_meaning": "نوع من التراكم أو الارتفاع الذي يلزمه",
+        "features": [
+          "تماسك",
+          "صعود"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "غل",
+        "shared_meaning": "التخلل بحدة مع إحاطة أو تقييد أو ما بمعناهما",
+        "features": [
+          "نفاذ",
+          "حدة",
+          "اشتمال"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "فل",
+        "shared_meaning": "انفصال ندورًا أو نتوءًا مع ضعف",
+        "features": [
+          "استقلال",
+          "ظاهر",
+          "نقص"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "قل",
+        "shared_meaning": "الرفع بصورة من الصور",
+        "features": [
+          "صعود"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "كل",
+        "shared_meaning": "تجمع الشيء كتلة دون حد أو طرف دقيق",
+        "features": [
+          "تجمع",
+          "دقة"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "مل",
+        "shared_meaning": "الامتداد مع الحوز أو الشمول",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "اتساع"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "نل",
+        "shared_meaning": "دقة في الشيء الحاصل أو التحصيل",
+        "features": [
+          "دقة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "هـل",
+        "shared_meaning": "فراغ الأثناء أو ما هو من باب الفراغ",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ول",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      }
+    ],
+    "count_l1": 21,
+    "count_l2": 24,
+    "total": 45
+  },
+  "م": {
+    "letter": "م",
+    "as_letter1": [
+      {
+        "nucleus": "مء",
+        "shared_meaning": "الاتساع والامتداد",
+        "features": [
+          "اتساع",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "مت",
+        "shared_meaning": "الامتداد مع صفة (قوة، دقة، ضعف...)",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "قوة",
+          "دقة",
+          "نقص"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "مث",
+        "shared_meaning": "تشخص الشيء أو رشحه",
+        "features": [
+          "ظاهر"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "مج",
+        "shared_meaning": "الامتلاء والاندفاع",
+        "features": [
+          "تلاصق",
+          "امتلاء",
+          "كثافة",
+          "اندفاع"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مح",
+        "shared_meaning": "ذهاب الشيء أو خلاصته",
+        "features": [
+          "خلوص"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "مخ",
+        "shared_meaning": "توسط مادة رخوة أو خروجها",
+        "features": [
+          "رخاوة",
+          "خروج"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مد",
+        "shared_meaning": "الامتداد والغاية",
+        "features": [
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "مر",
+        "shared_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)",
+        "features": [
+          "استرسال",
+          "باطن",
+          "انتقال",
+          "حدة",
+          "قوة",
+          "تخلخل"
+        ],
+        "member_count": 11
+      },
+      {
+        "nucleus": "مز",
+        "shared_meaning": "الجمع أو الفصل والامتلاء",
+        "features": [
+          "تجمع",
+          "تلاصق",
+          "امتلاء",
+          "كثافة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "مس",
+        "shared_meaning": "المخالطة والاتصال",
+        "features": [
+          "اتصال"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "مش",
+        "shared_meaning": "الانتشار والامتداد",
+        "features": [
+          "انتشار",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مص",
+        "shared_meaning": "استخلاص الشيء أو أخذه",
+        "features": [
+          "خلوص",
+          "إمساك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "مض",
+        "shared_meaning": "المخالطة أو النفاذ بقوة",
+        "features": [
+          "نفاذ",
+          "قوة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مط",
+        "shared_meaning": "الامتداد والانسكاب",
+        "features": [
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "مع",
+        "shared_meaning": "الامتداد والصلابة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "مق",
+        "shared_meaning": "الغلظ الباطني (مادياً أو معنوياً)",
+        "features": [
+          "غلظ",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "مك",
+        "shared_meaning": "التمكن والرسوخ والاحتباس",
+        "features": [
+          "امتساك",
+          "تماسك",
+          "احتباس"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "مل",
+        "shared_meaning": "الامتداد مع الحوز أو الشمول",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "اتساع"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "مم",
+        "shared_meaning": "التجمع والتضام",
+        "features": [
+          "تجمع"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "من",
+        "shared_meaning": "القوة والثبات مع صفة (نقص، وثاقة، حجز)",
+        "features": [
+          "قوة",
+          "امتساك",
+          "نقص"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "مهـ",
+        "shared_meaning": "الفراغ والرقة والسهولة",
+        "features": [
+          "فراغ",
+          "رقة"
+        ],
+        "member_count": 5
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "ءم",
+        "shared_meaning": "النقص والانفراد",
+        "features": [
+          "نقص",
+          "استقلال"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "تم",
+        "shared_meaning": "التميز الشيء مستقلا",
+        "features": [
+          "تميز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ثم",
+        "shared_meaning": "ضم الدقائق أو ما يشبهها في حيز",
+        "features": [
+          "تجمع",
+          "حيز"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "جم",
+        "shared_meaning": "التجمع والكثرة",
+        "features": [
+          "تجمع",
+          "كثافة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "حم",
+        "shared_meaning": "حدة تسري في الشيء حتى تعمه",
+        "features": [
+          "حدة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "خم",
+        "shared_meaning": "الاضطمام على مائع كثير أو خَوَرٍ",
+        "features": [
+          "احتواء"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "دم",
+        "shared_meaning": "استواء الظاهر وبروزه كذلك",
+        "features": [
+          "استواء",
+          "ظاهر",
+          "بروز"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "ذم",
+        "shared_meaning": "ضعف قدر المذءوم",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "رم",
+        "shared_meaning": "ضمّ غَضّ - أو رِخْو - (متغيّر أو متحوّل) في الأثناء",
+        "features": [
+          "تجمع",
+          "رخاوة",
+          "انتقال"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "زم",
+        "shared_meaning": "ضم الكثير باكتناز",
+        "features": [
+          "تجمع",
+          "اكتناز"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "سم",
+        "shared_meaning": "نوع من الخرق الذي يضم",
+        "features": [
+          "اختراق",
+          "تجمع"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "شم",
+        "shared_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى",
+        "features": [
+          "تجمع",
+          "استرسال",
+          "ظاهر"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "صم",
+        "shared_meaning": "انسداد مسام الشيء مع صلابة فلا ينفذ فيه أو منه شيء",
+        "features": [
+          "إمساك",
+          "انسداد",
+          "صلابة",
+          "غلظ"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ضم",
+        "shared_meaning": "هو الجمع بضغط ولأم",
+        "features": [
+          "تجمع",
+          "ضغط",
+          "تلاصق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "طم",
+        "shared_meaning": "الملء والتغطية حتى الإخفاء",
+        "features": [
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ظم",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "عم",
+        "shared_meaning": "الالتحام العلوي، أي التجمع مع علو، أو في أعلى",
+        "features": [
+          "التحام",
+          "تجمع",
+          "ظاهر"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "غم",
+        "shared_meaning": "نوع من التغطية والحجب",
+        "features": [
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "فم",
+        "shared_meaning": "فتحة الفم وما يملؤها",
+        "features": [
+          "اختراق"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "قم",
+        "shared_meaning": "تجمع الشيء أو تضامه في كتلة قوية مع تسنم أو ارتفاع",
+        "features": [
+          "تجمع",
+          "قوة",
+          "صعود"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "كم",
+        "shared_meaning": "تغطية الشيء بغطاء زائد على حقيقته",
+        "features": [
+          "اشتمال",
+          "باطن"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "لم",
+        "shared_meaning": "نوع من الضم أو التضام لما شأنه الانتشار إلى الظاهر",
+        "features": [
+          "تجمع",
+          "انتشار",
+          "ظاهر"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "مم",
+        "shared_meaning": "التجمع والتضام",
+        "features": [
+          "تجمع"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نم",
+        "shared_meaning": "انتشار من باطن الشيء إلى ظاهره مع لطف ما",
+        "features": [
+          "انتشار",
+          "باطن",
+          "ظاهر",
+          "لطف"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "هـم",
+        "shared_meaning": "تسيب أثناء الشيء ذوبانًا أو نحوه",
+        "features": [
+          "تخلخل"
+        ],
+        "member_count": 7
+      }
+    ],
+    "count_l1": 21,
+    "count_l2": 25,
+    "total": 46
+  },
+  "ن": {
+    "letter": "ن",
+    "as_letter1": [
+      {
+        "nucleus": "نأ",
+        "shared_meaning": "الصرف والإبعاد بقوة",
+        "features": [
+          "إبعاد",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "نب",
+        "shared_meaning": "النُّبُوُّ ارتفاعًا أو ابتعادًا",
+        "features": [
+          "صعود"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "نت",
+        "shared_meaning": "الاندفاع الجزئي القوي انتبارًا أو انتثارًا",
+        "features": [
+          "اندفاع",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نث",
+        "shared_meaning": "الانتثار أو النشر بتفشٍّ واندفاع ما",
+        "features": [
+          "انتشار",
+          "تفشي",
+          "اندفاع"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "نج",
+        "shared_meaning": "النفاذ بغلظ وكثافة أو قوة مما يحتوي",
+        "features": [
+          "نفاذ",
+          "غلظ",
+          "كثافة",
+          "قوة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "نح",
+        "shared_meaning": "النفاذ من الباطن بقوة واتساع",
+        "features": [
+          "نفاذ",
+          "باطن",
+          "قوة",
+          "اتساع"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "نخ",
+        "shared_meaning": "نقص في انتصاب الشيء أو في إصمات بنائه",
+        "features": [
+          "نقص"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ند",
+        "shared_meaning": "الإبعاد امتدادا أو مفارقة",
+        "features": [
+          "إبعاد",
+          "امتداد",
+          "رقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "نذ",
+        "shared_meaning": "خروج كثيف من الأثناء أو الحيز",
+        "features": [
+          "خروج",
+          "كثافة",
+          "حيز"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نر",
+        "shared_meaning": "نفاذ لطيف حاد الوقع من أثناء",
+        "features": [
+          "نفاذ",
+          "لطف",
+          "حدة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "نز",
+        "shared_meaning": "دقيق الجرم ينفذ بضغط أو قوة من أثناء ظاهر أو فيها",
+        "features": [
+          "دقة",
+          "ضغط",
+          "قوة",
+          "ظاهر"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "نس",
+        "shared_meaning": "نفاذ بدقة من أثناء شيء أو فيها",
+        "features": [
+          "نفاذ",
+          "دقة"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "نش",
+        "shared_meaning": "ارتفاع بانتشار مع حدة",
+        "features": [
+          "صعود",
+          "انتشار",
+          "حدة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "نص",
+        "shared_meaning": "نوع من النفاذ بامتداد مع علو",
+        "features": [
+          "نفاذ",
+          "امتداد"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "نض",
+        "shared_meaning": "نفاذ الشيء (بنحو الرشح) من أثناء ما هو فيه اندفاعا إلى أعلى أو إلى الظاهر",
+        "features": [
+          "نفاذ",
+          "اندفاع",
+          "ظاهر"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "نط",
+        "shared_meaning": "اندفاع من المقر أو الحيز بقوة شديدة",
+        "features": [
+          "اندفاع",
+          "مقر",
+          "حيز",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "نظ",
+        "shared_meaning": "مواجهة العين للالتقاط",
+        "features": [
+          "إمساك"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "نع",
+        "shared_meaning": "الرخاوة والطراءة وما إلى ذلك رقة الأثناء",
+        "features": [
+          "رخاوة",
+          "رقة"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "نغ",
+        "shared_meaning": "رخاوة في باطن الشيء",
+        "features": [
+          "رخاوة",
+          "باطن"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نف",
+        "shared_meaning": "نفاذ أو إبعاد بانتشار",
+        "features": [
+          "نفاذ",
+          "إبعاد",
+          "انتشار"
+        ],
+        "member_count": 14
+      },
+      {
+        "nucleus": "نق",
+        "shared_meaning": "فراغ في العمق لغليظ ينفذ فيه أو منه",
+        "features": [
+          "فراغ",
+          "عمق",
+          "غلظ"
+        ],
+        "member_count": 9
+      },
+      {
+        "nucleus": "نك",
+        "shared_meaning": "الوصول إلى عمق الشيء بجد وتدقيق",
+        "features": [
+          "وصول",
+          "عمق",
+          "دقة"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "نل",
+        "shared_meaning": "دقة في الشيء الحاصل أو التحصيل",
+        "features": [
+          "دقة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نم",
+        "shared_meaning": "انتشار من باطن الشيء إلى ظاهره مع لطف ما",
+        "features": [
+          "انتشار",
+          "باطن",
+          "ظاهر",
+          "لطف"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "نن",
+        "shared_meaning": "التجوف والوجود في الجوف",
+        "features": [
+          "جوف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "نهـ",
+        "shared_meaning": "فراغ يتخلل الشيء",
+        "features": [
+          "فراغ",
+          "نفاذ"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "نو",
+        "shared_meaning": "الاحتواء والانجذاب والعود إلى الجوف أو الأصل",
+        "features": [
+          "احتواء",
+          "رجوع",
+          "جوف"
+        ],
+        "member_count": 2
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "أن",
+        "shared_meaning": "التهيؤ والصلاح للبلوغ والاستعمال",
+        "features": [
+          "وصول",
+          "احتواء"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "بن",
+        "shared_meaning": "الامتداد والبناء",
+        "features": [
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "تن",
+        "shared_meaning": "الضغط على القوة الباطنية للشيء",
+        "features": [
+          "ضغط",
+          "قوة",
+          "باطن"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ثن",
+        "shared_meaning": "التبطن والكثرة في الداخل",
+        "features": [
+          "كثافة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "جن",
+        "shared_meaning": "الستر والكثافة",
+        "features": [
+          "باطن",
+          "كثافة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "حن",
+        "shared_meaning": "جوف الشيء القوي أو أثنائه",
+        "features": [
+          "جوف",
+          "قوة"
+        ],
+        "member_count": 8
+      },
+      {
+        "nucleus": "خن",
+        "shared_meaning": "التخلخل الممتد في الباطن",
+        "features": [
+          "تخلخل",
+          "باطن"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "دن",
+        "shared_meaning": "اندساس الشيء في أثناء أو ثباته فيه",
+        "features": [
+          "باطن",
+          "امتساك"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ذن",
+        "shared_meaning": "الامتداد الخلفي والتبعية",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "تعلق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رن",
+        "shared_meaning": "مادة تغطي على الحس وتمنع النفاذ",
+        "features": [
+          "باطن",
+          "إمساك",
+          "ضغط",
+          "نفاذ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "زن",
+        "shared_meaning": "اختزان الباطن بقوة أو جمعه ما قد يبدو أثره",
+        "features": [
+          "باطن",
+          "قوة",
+          "تجمع",
+          "ظهور"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "سن",
+        "shared_meaning": "الامتداد (أو النفاذ) مع حدة أو دقة",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "نفاذ",
+          "حدة",
+          "دقة"
+        ],
+        "member_count": 11
+      },
+      {
+        "nucleus": "شن",
+        "shared_meaning": "انتشار دقاق من أثناء الشيء",
+        "features": [
+          "انتشار"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "صن",
+        "shared_meaning": "الاحتواء في الجوف أو الإمساك في الأثناء بتمكن أو دوام",
+        "features": [
+          "احتواء",
+          "جوف",
+          "تلاصق",
+          "إمساك",
+          "امتساك",
+          "امتداد"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "ضن",
+        "shared_meaning": "هو لزوم الشيء حيزه أي بقاؤه داخله لا يبرحه",
+        "features": [
+          "تعلق",
+          "حيز"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "طن",
+        "shared_meaning": "التكتل واللزوم",
+        "features": [
+          "تعلق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ظن",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "عن",
+        "shared_meaning": "اعتراض شيء أو ظهوره مع لطف قد يتمثل في الغموض",
+        "features": [
+          "ظهور",
+          "لطف"
+        ],
+        "member_count": 10
+      },
+      {
+        "nucleus": "غن",
+        "shared_meaning": "وجود لطيف في الحوزة",
+        "features": [
+          "لطف",
+          "اتساع",
+          "حيز"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فن",
+        "shared_meaning": "امتداد مع الرقة أو الضعف",
+        "features": [
+          "امتداد",
+          "رقة",
+          "نقص"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "قن",
+        "shared_meaning": "النفاذ في الباطن أو الأخذ إليه بعمق أو امتداد",
+        "features": [
+          "نفاذ",
+          "باطن",
+          "إمساك",
+          "عمق",
+          "امتداد"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "كن",
+        "shared_meaning": "الاستتار في جوف شيء",
+        "features": [
+          "باطن",
+          "جوف"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "لن",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "من",
+        "shared_meaning": "القوة والثبات مع صفة (نقص، وثاقة، حجز)",
+        "features": [
+          "قوة",
+          "امتساك",
+          "نقص"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "نن",
+        "shared_meaning": "التجوف والوجود في الجوف",
+        "features": [
+          "جوف"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "هـن",
+        "shared_meaning": "رخاوة المتجمع في الباطن ولطفه",
+        "features": [
+          "رخاوة",
+          "تجمع",
+          "باطن",
+          "لطف"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "ون",
+        "shared_meaning": "الفتور والتوقف عن الحركة",
+        "features": [
+          "نقص",
+          "احتباس",
+          "انتقال"
+        ],
+        "member_count": 1
+      }
+    ],
+    "count_l1": 27,
+    "count_l2": 27,
+    "total": 54
+  },
+  "هـ": {
+    "letter": "هـ",
+    "as_letter1": [
+      {
+        "nucleus": "هـب",
+        "shared_meaning": "مفارقة المقرّ باندفاع وقوة مع شيء من التجمع",
+        "features": [
+          "رقة",
+          "مقر",
+          "اندفاع",
+          "قوة",
+          "تجمع"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "هـت",
+        "shared_meaning": "دفع الشيء المتجمع إنهاء لتجمعه بامتداد",
+        "features": [
+          "إبعاد",
+          "تجمع",
+          "امتداد"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "هـج",
+        "shared_meaning": "غور في العمق مع حدة أو فراغ ما",
+        "features": [
+          "عمق",
+          "حدة",
+          "فراغ"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "هـد",
+        "shared_meaning": "تفكك القائم المنتصب وتضعضعه أو تسيبه",
+        "features": [
+          "تخلخل"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "هـر",
+        "shared_meaning": "تسيب بالغ الرقة",
+        "features": [
+          "تخلخل",
+          "رقة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "هـز",
+        "shared_meaning": "التحرك حركة خفيفة مضطربة وما يلزم ذلك من الخفة",
+        "features": [
+          "انتقال",
+          "رخاوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "هـش",
+        "shared_meaning": "فقد قوّة التماسك والصلادة والإصمات",
+        "features": [
+          "قوة",
+          "تماسك"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "هـض",
+        "shared_meaning": "كسر الشيء الغليظ ودقه",
+        "features": [
+          "كسر",
+          "غلظ",
+          "دقة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "هـط",
+        "shared_meaning": "لين وانقياد دائم أو ممتد",
+        "features": [
+          "رخاوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "هـل",
+        "shared_meaning": "فراغ الأثناء أو ما هو من باب الفراغ",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "هـم",
+        "shared_meaning": "تسيب أثناء الشيء ذوبانًا أو نحوه",
+        "features": [
+          "تخلخل"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "هـن",
+        "shared_meaning": "رخاوة المتجمع في الباطن ولطفه",
+        "features": [
+          "رخاوة",
+          "تجمع",
+          "باطن",
+          "لطف"
+        ],
+        "member_count": 5
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "بهـ",
+        "shared_meaning": "الخلو والفراغ الظاهري",
+        "features": [
+          "فراغ",
+          "ظاهر"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "تهـ",
+        "shared_meaning": "الفراغ وما هو من جنسه كالباطل",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "جهـ",
+        "shared_meaning": "الانكشاف والفراغ",
+        "features": [
+          "ظهور",
+          "فراغ"
+        ],
+        "member_count": 7
+      },
+      {
+        "nucleus": "دهـ",
+        "shared_meaning": "الحدر أو الدفع في فراغ أو مهواة",
+        "features": [
+          "إبعاد",
+          "فراغ",
+          "باطن"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "ذهـ",
+        "shared_meaning": "الخفاء والخلو والفراغ",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "رهـ",
+        "shared_meaning": "خلو الأثناء من الغلظ أي فراغها مما هو كثيف",
+        "features": [
+          "غلظ",
+          "فراغ",
+          "كثافة"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "زهـ",
+        "shared_meaning": "إفراغ ما في باطن الشيء بحيث يخلو مما يفترض أن يشغله",
+        "features": [
+          "إفراغ",
+          "فراغ",
+          "باطن"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "سهـ",
+        "shared_meaning": "الفراغ المتخلل",
+        "features": [
+          "فراغ",
+          "نفاذ"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "شهـ",
+        "shared_meaning": "وجود فراغ ما",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "صهـ",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ضهـ",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "طهـ",
+        "shared_meaning": "الحسن والنقاء",
+        "features": [
+          "خلوص"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "ظهـ",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "عه",
+        "shared_meaning": "الفراغ الذي يخالط الشيء",
+        "features": [
+          "فراغ"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "فهـ",
+        "shared_meaning": "فراغ واصل إلى عمق الشيء",
+        "features": [
+          "فراغ",
+          "عمق"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "قهـ",
+        "shared_meaning": "إخراج ما في الباطن من قوة مذخورة",
+        "features": [
+          "باطن",
+          "قوة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "كهـ",
+        "shared_meaning": "إخراج المادة من الجوف بدفع وقوة",
+        "features": [
+          "جوف",
+          "إبعاد",
+          "قوة"
+        ],
+        "member_count": 4
+      },
+      {
+        "nucleus": "له",
+        "shared_meaning": "الاتساع مع شمول وشفافية أو فراغ أثناء",
+        "features": [
+          "اتساع",
+          "فراغ"
+        ],
+        "member_count": 6
+      },
+      {
+        "nucleus": "مهـ",
+        "shared_meaning": "الفراغ والرقة والسهولة",
+        "features": [
+          "فراغ",
+          "رقة"
+        ],
+        "member_count": 5
+      },
+      {
+        "nucleus": "نهـ",
+        "shared_meaning": "فراغ يتخلل الشيء",
+        "features": [
+          "فراغ",
+          "نفاذ"
+        ],
+        "member_count": 4
+      }
+    ],
+    "count_l1": 12,
+    "count_l2": 20,
+    "total": 32
+  },
+  "و": {
+    "letter": "و",
+    "as_letter1": [
+      {
+        "nucleus": "وح",
+        "shared_meaning": "التحصيل اللطيف والقوي",
+        "features": [
+          "لطف",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ود",
+        "shared_meaning": "الامتداد مع الضغط أو التماسك",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "ضغط",
+          "تماسك"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "وع",
+        "shared_meaning": "حوز الشيء في جوفه",
+        "features": [
+          "اتساع",
+          "جوف"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "وف",
+        "shared_meaning": "بلوغ الشيء تمام قوامه",
+        "features": [
+          "وصول"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ول",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ون",
+        "shared_meaning": "الفتور والتوقف عن الحركة",
+        "features": [
+          "نقص",
+          "احتباس",
+          "انتقال"
+        ],
+        "member_count": 1
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "ءو",
+        "shared_meaning": "الرجوع إلى مستقر",
+        "features": [
+          "رجوع",
+          "استقرار"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "أو",
+        "shared_meaning": "اتساع الحيز والامتلاء",
+        "features": [
+          "اتساع",
+          "حيز",
+          "تلاصق",
+          "امتلاء",
+          "كثافة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "بو",
+        "shared_meaning": "الوصول",
+        "features": [
+          "وصول"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "حو",
+        "shared_meaning": "الامتلاء والحيازة بقوة وحياة",
+        "features": [
+          "تلاصق",
+          "امتلاء",
+          "كثافة",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "ذو",
+        "shared_meaning": "الدفع والحماية",
+        "features": [
+          "إبعاد",
+          "إمساك"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "رو",
+        "shared_meaning": "نفاذ شيء لطيف أو خفي من حيز إلى آخر",
+        "features": [
+          "نفاذ",
+          "لطف",
+          "حيز"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "سو",
+        "shared_meaning": "هيئة الشيء الظاهرة وما يعتريها من استواء أو عيب",
+        "features": [
+          "ظاهر",
+          "استواء"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "شو",
+        "shared_meaning": "النتوء والظهور والزيادة الدقيقة",
+        "features": [
+          "ظاهر",
+          "ظهور",
+          "امتداد",
+          "دقة"
+        ],
+        "member_count": 3
+      },
+      {
+        "nucleus": "ضو",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "طو",
+        "shared_meaning": "الثني والانخفاض",
+        "features": [
+          "تعقد",
+          "نقص",
+          "فيض"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "غو",
+        "shared_meaning": "الانجذاب إلى الشيء مع تغش وفساد",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "قو",
+        "shared_meaning": "شدة في الأثناء بالالتئام أو الالتواء مع امتداد",
+        "features": [
+          "قوة",
+          "تلاصق",
+          "امتداد"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "لو",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      },
+      {
+        "nucleus": "نو",
+        "shared_meaning": "الاحتواء والانجذاب والعود إلى الجوف أو الأصل",
+        "features": [
+          "احتواء",
+          "رجوع",
+          "جوف"
+        ],
+        "member_count": 2
+      }
+    ],
+    "count_l1": 6,
+    "count_l2": 14,
+    "total": 20
+  },
+  "ي": {
+    "letter": "ي",
+    "as_letter1": [
+      {
+        "nucleus": "يد",
+        "shared_meaning": "الامتداد بقوة للتمكين أو الضغط",
+        "features": [
+          "تلاصق",
+          "امتداد",
+          "قوة",
+          "ضغط"
+        ],
+        "member_count": 5
+      }
+    ],
+    "as_letter2": [
+      {
+        "nucleus": "أي",
+        "shared_meaning": "لزوم الأرض وبطء المفارقة",
+        "features": [
+          "تعلق",
+          "رقة"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "حي",
+        "shared_meaning": "الامتلاء والحيازة بقوة وحياة",
+        "features": [
+          "تلاصق",
+          "امتلاء",
+          "كثافة",
+          "قوة"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "صي",
+        "shared_meaning": "الاتصال والحيازة",
+        "features": [
+          "اتصال"
+        ],
+        "member_count": 2
+      },
+      {
+        "nucleus": "عي",
+        "shared_meaning": "ضعف أو فراغ في الشيء",
+        "features": [
+          "نقص",
+          "فراغ"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "في",
+        "shared_meaning": "تردد الشيء الممتد أو ميله",
+        "features": [
+          "انتقال"
+        ],
+        "member_count": 1
+      },
+      {
+        "nucleus": "لي",
+        "shared_meaning": "",
+        "features": [],
+        "member_count": 1
+      }
+    ],
+    "count_l1": 1,
+    "count_l2": 6,
+    "total": 7
+  }
+}
