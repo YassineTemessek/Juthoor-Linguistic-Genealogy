@@ -286,8 +286,40 @@
       "ثخانة",
       "اتساع"
     ],
-    "empirical_meaning_ar": "التحام + ثخانة + اتساع",
-    "empirical_gloss_en": "التحام + ثخانة + expansion",
+    "raw_semantic_skeleton_ar": "التحام + ثخانة + اتساع",
+    "raw_semantic_skeleton_en": "التحام + ثخانة + expansion",
+    "semantic_clusters": [
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 4,
+        "right_weight": 4,
+        "left_rate": 0.2,
+        "right_rate": 0.333333,
+        "intersection_score": 0.2,
+        "combined_weight": 8,
+        "anchor_overlap": [
+          "ثخانة"
+        ]
+      },
+      {
+        "id": "motion",
+        "label_ar": "امتداد + استرسال",
+        "label_en": "extension + flow",
+        "left_weight": 4,
+        "right_weight": 4,
+        "left_rate": 0.2,
+        "right_rate": 0.333333,
+        "intersection_score": 0.2,
+        "combined_weight": 8,
+        "anchor_overlap": [
+          "اتساع"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "قوة + ضغط + امتداد + استرسال",
+    "empirical_gloss_en": "force + pressure + extension + flow",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -802,8 +834,38 @@
       "امتداد",
       "ثقل"
     ],
-    "empirical_meaning_ar": "امتداد + ثقل",
-    "empirical_gloss_en": "extension + ثقل",
+    "raw_semantic_skeleton_ar": "امتداد + ثقل",
+    "raw_semantic_skeleton_en": "extension + ثقل",
+    "semantic_clusters": [
+      {
+        "id": "motion",
+        "label_ar": "امتداد + استرسال",
+        "label_en": "extension + flow",
+        "left_weight": 35,
+        "right_weight": 33,
+        "left_rate": 0.318182,
+        "right_rate": 0.246269,
+        "intersection_score": 0.246269,
+        "combined_weight": 68,
+        "anchor_overlap": [
+          "امتداد"
+        ]
+      },
+      {
+        "id": "release",
+        "label_ar": "خلوص + فراغ",
+        "label_en": "release + void",
+        "left_weight": 35,
+        "right_weight": 27,
+        "left_rate": 0.318182,
+        "right_rate": 0.201493,
+        "intersection_score": 0.201493,
+        "combined_weight": 62,
+        "anchor_overlap": []
+      }
+    ],
+    "empirical_meaning_ar": "امتداد + استرسال + خلوص + فراغ",
+    "empirical_gloss_en": "extension + flow + release + void",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -1603,8 +1665,38 @@
       "ثقل",
       "دقة"
     ],
-    "empirical_meaning_ar": "ثقل + دقة",
-    "empirical_gloss_en": "ثقل + fineness",
+    "raw_semantic_skeleton_ar": "ثقل + دقة",
+    "raw_semantic_skeleton_en": "ثقل + fineness",
+    "semantic_clusters": [
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 17,
+        "right_weight": 24,
+        "left_rate": 0.5,
+        "right_rate": 0.4,
+        "intersection_score": 0.4,
+        "combined_weight": 41,
+        "anchor_overlap": [
+          "ثقل"
+        ]
+      },
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 8,
+        "right_weight": 29,
+        "left_rate": 0.235294,
+        "right_rate": 0.483333,
+        "intersection_score": 0.235294,
+        "combined_weight": 37,
+        "anchor_overlap": []
+      }
+    ],
+    "empirical_meaning_ar": "قوة + ضغط + تجمع + اكتناز",
+    "empirical_gloss_en": "force + pressure + gathering + compaction",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -2191,8 +2283,40 @@
       "اكتناز",
       "ثخانة"
     ],
-    "empirical_meaning_ar": "اكتناز + ثخانة",
-    "empirical_gloss_en": "compaction + ثخانة",
+    "raw_semantic_skeleton_ar": "اكتناز + ثخانة",
+    "raw_semantic_skeleton_en": "compaction + ثخانة",
+    "semantic_clusters": [
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 29,
+        "right_weight": 18,
+        "left_rate": 0.90625,
+        "right_rate": 0.62069,
+        "intersection_score": 0.62069,
+        "combined_weight": 47,
+        "anchor_overlap": [
+          "اكتناز"
+        ]
+      },
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 15,
+        "right_weight": 14,
+        "left_rate": 0.46875,
+        "right_rate": 0.482759,
+        "intersection_score": 0.46875,
+        "combined_weight": 29,
+        "anchor_overlap": [
+          "ثخانة"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "تجمع + اكتناز + قوة + ضغط",
+    "empirical_gloss_en": "gathering + compaction + force + pressure",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -2721,8 +2845,40 @@
       "التحام",
       "باطن"
     ],
-    "empirical_meaning_ar": "ثخانة + التحام + باطن",
-    "empirical_gloss_en": "ثخانة + التحام + inner depth",
+    "raw_semantic_skeleton_ar": "ثخانة + التحام + باطن",
+    "raw_semantic_skeleton_en": "ثخانة + التحام + inner depth",
+    "semantic_clusters": [
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 26,
+        "right_weight": 39,
+        "left_rate": 0.329114,
+        "right_rate": 0.619048,
+        "intersection_score": 0.329114,
+        "combined_weight": 65,
+        "anchor_overlap": [
+          "ثخانة"
+        ]
+      },
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 25,
+        "right_weight": 24,
+        "left_rate": 0.316456,
+        "right_rate": 0.380952,
+        "intersection_score": 0.316456,
+        "combined_weight": 49,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "قوة + ضغط + تجمع + اكتناز",
+    "empirical_gloss_en": "force + pressure + gathering + compaction",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -3345,8 +3501,38 @@
       "باطن",
       "جفاف"
     ],
-    "empirical_meaning_ar": "ثقل + باطن + جفاف",
-    "empirical_gloss_en": "ثقل + inner depth + dryness",
+    "raw_semantic_skeleton_ar": "ثقل + باطن + جفاف",
+    "raw_semantic_skeleton_en": "ثقل + inner depth + dryness",
+    "semantic_clusters": [
+      {
+        "id": "release",
+        "label_ar": "خلوص + فراغ",
+        "label_en": "release + void",
+        "left_weight": 33,
+        "right_weight": 16,
+        "left_rate": 0.305556,
+        "right_rate": 0.25,
+        "intersection_score": 0.25,
+        "combined_weight": 49,
+        "anchor_overlap": []
+      },
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 66,
+        "right_weight": 14,
+        "left_rate": 0.611111,
+        "right_rate": 0.21875,
+        "intersection_score": 0.21875,
+        "combined_weight": 80,
+        "anchor_overlap": [
+          "ثقل"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "خلوص + فراغ + قوة + ضغط",
+    "empirical_gloss_en": "release + void + force + pressure",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -4075,8 +4261,28 @@
       "خلوص",
       "تخلخل"
     ],
-    "empirical_meaning_ar": "نقص + خلوص + تخلخل",
-    "empirical_gloss_en": "diminution + release + تخلخل",
+    "raw_semantic_skeleton_ar": "نقص + خلوص + تخلخل",
+    "raw_semantic_skeleton_en": "diminution + release + تخلخل",
+    "semantic_clusters": [
+      {
+        "id": "release",
+        "label_ar": "خلوص + فراغ",
+        "label_en": "release + void",
+        "left_weight": 64,
+        "right_weight": 17,
+        "left_rate": 0.780488,
+        "right_rate": 0.515152,
+        "intersection_score": 0.515152,
+        "combined_weight": 81,
+        "anchor_overlap": [
+          "تخلخل",
+          "خلوص",
+          "نقص"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "خلوص + فراغ",
+    "empirical_gloss_en": "release + void",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -4663,8 +4869,38 @@
       "ثقل",
       "التحام"
     ],
-    "empirical_meaning_ar": "إمساك + ثقل + التحام",
-    "empirical_gloss_en": "holding + ثقل + التحام",
+    "raw_semantic_skeleton_ar": "إمساك + ثقل + التحام",
+    "raw_semantic_skeleton_en": "holding + ثقل + التحام",
+    "semantic_clusters": [
+      {
+        "id": "motion",
+        "label_ar": "امتداد + استرسال",
+        "label_en": "extension + flow",
+        "left_weight": 22,
+        "right_weight": 47,
+        "left_rate": 0.385965,
+        "right_rate": 0.443396,
+        "intersection_score": 0.385965,
+        "combined_weight": 69,
+        "anchor_overlap": []
+      },
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 21,
+        "right_weight": 71,
+        "left_rate": 0.368421,
+        "right_rate": 0.669811,
+        "intersection_score": 0.368421,
+        "combined_weight": 92,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "امتداد + استرسال + تجمع + اكتناز",
+    "empirical_gloss_en": "extension + flow + gathering + compaction",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -5355,8 +5591,38 @@
       "التحام",
       "ثخانة"
     ],
-    "empirical_meaning_ar": "اختراق + التحام + ثخانة",
-    "empirical_gloss_en": "اختراق + التحام + ثخانة",
+    "raw_semantic_skeleton_ar": "اختراق + التحام + ثخانة",
+    "raw_semantic_skeleton_en": "اختراق + التحام + ثخانة",
+    "semantic_clusters": [
+      {
+        "id": "release",
+        "label_ar": "خلوص + فراغ",
+        "label_en": "release + void",
+        "left_weight": 9,
+        "right_weight": 7,
+        "left_rate": 0.310345,
+        "right_rate": 0.28,
+        "intersection_score": 0.28,
+        "combined_weight": 16,
+        "anchor_overlap": []
+      },
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 6,
+        "right_weight": 8,
+        "left_rate": 0.206897,
+        "right_rate": 0.32,
+        "intersection_score": 0.206897,
+        "combined_weight": 14,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "خلوص + فراغ + تجمع + اكتناز",
+    "empirical_gloss_en": "release + void + gathering + compaction",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -5895,8 +6161,40 @@
       "التحام",
       "امتداد"
     ],
-    "empirical_meaning_ar": "دقة + التحام + امتداد",
-    "empirical_gloss_en": "fineness + التحام + extension",
+    "raw_semantic_skeleton_ar": "دقة + التحام + امتداد",
+    "raw_semantic_skeleton_en": "fineness + التحام + extension",
+    "semantic_clusters": [
+      {
+        "id": "precision",
+        "label_ar": "دقة + نفاذ",
+        "label_en": "fineness + penetration",
+        "left_weight": 44,
+        "right_weight": 108,
+        "left_rate": 0.382609,
+        "right_rate": 0.509434,
+        "intersection_score": 0.382609,
+        "combined_weight": 152,
+        "anchor_overlap": [
+          "دقة"
+        ]
+      },
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 79,
+        "right_weight": 69,
+        "left_rate": 0.686957,
+        "right_rate": 0.325472,
+        "intersection_score": 0.325472,
+        "combined_weight": 148,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "دقة + نفاذ + تجمع + اكتناز",
+    "empirical_gloss_en": "fineness + penetration + gathering + compaction",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -6692,8 +6990,40 @@
       "دقة",
       "اكتناز"
     ],
-    "empirical_meaning_ar": "ثقل + دقة + اكتناز",
-    "empirical_gloss_en": "ثقل + fineness + compaction",
+    "raw_semantic_skeleton_ar": "ثقل + دقة + اكتناز",
+    "raw_semantic_skeleton_en": "ثقل + fineness + compaction",
+    "semantic_clusters": [
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 33,
+        "right_weight": 25,
+        "left_rate": 0.532258,
+        "right_rate": 0.510204,
+        "intersection_score": 0.510204,
+        "combined_weight": 58,
+        "anchor_overlap": [
+          "اكتناز"
+        ]
+      },
+      {
+        "id": "precision",
+        "label_ar": "دقة + نفاذ",
+        "label_en": "fineness + penetration",
+        "left_weight": 18,
+        "right_weight": 29,
+        "left_rate": 0.290323,
+        "right_rate": 0.591837,
+        "intersection_score": 0.290323,
+        "combined_weight": 47,
+        "anchor_overlap": [
+          "دقة"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "تجمع + اكتناز + دقة + نفاذ",
+    "empirical_gloss_en": "gathering + compaction + fineness + penetration",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -7327,8 +7657,27 @@
       "اختراق",
       "دقة"
     ],
-    "empirical_meaning_ar": "اختراق + دقة",
-    "empirical_gloss_en": "اختراق + fineness",
+    "raw_semantic_skeleton_ar": "اختراق + دقة",
+    "raw_semantic_skeleton_en": "اختراق + fineness",
+    "semantic_clusters": [
+      {
+        "id": "precision",
+        "label_ar": "دقة + نفاذ",
+        "label_en": "fineness + penetration",
+        "left_weight": 141,
+        "right_weight": 54,
+        "left_rate": 1.076336,
+        "right_rate": 0.683544,
+        "intersection_score": 0.683544,
+        "combined_weight": 195,
+        "anchor_overlap": [
+          "اختراق",
+          "دقة"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "دقة + نفاذ",
+    "empirical_gloss_en": "fineness + penetration",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -8011,8 +8360,40 @@
     "selected_features": [
       "انتشار"
     ],
-    "empirical_meaning_ar": "انتشار",
-    "empirical_gloss_en": "spreading",
+    "raw_semantic_skeleton_ar": "انتشار",
+    "raw_semantic_skeleton_en": "spreading",
+    "semantic_clusters": [
+      {
+        "id": "precision",
+        "label_ar": "دقة + نفاذ",
+        "label_en": "fineness + penetration",
+        "left_weight": 27,
+        "right_weight": 15,
+        "left_rate": 0.364865,
+        "right_rate": 0.394737,
+        "intersection_score": 0.364865,
+        "combined_weight": 42,
+        "anchor_overlap": [
+          "حدة"
+        ]
+      },
+      {
+        "id": "spread",
+        "label_ar": "انتشار + تفرق",
+        "label_en": "spreading + dispersal",
+        "left_weight": 25,
+        "right_weight": 18,
+        "left_rate": 0.337838,
+        "right_rate": 0.473684,
+        "intersection_score": 0.337838,
+        "combined_weight": 43,
+        "anchor_overlap": [
+          "انتشار"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "دقة + نفاذ + انتشار + تفرق",
+    "empirical_gloss_en": "fineness + penetration + spreading + dispersal",
     "structure": "unified",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -8635,8 +9016,41 @@
       "ثقل",
       "التحام"
     ],
-    "empirical_meaning_ar": "ثخانة + ثقل + التحام",
-    "empirical_gloss_en": "ثخانة + ثقل + التحام",
+    "raw_semantic_skeleton_ar": "ثخانة + ثقل + التحام",
+    "raw_semantic_skeleton_en": "ثخانة + ثقل + التحام",
+    "semantic_clusters": [
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 52,
+        "right_weight": 29,
+        "left_rate": 0.732394,
+        "right_rate": 0.644444,
+        "intersection_score": 0.644444,
+        "combined_weight": 81,
+        "anchor_overlap": [
+          "ثخانة",
+          "ثقل"
+        ]
+      },
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 43,
+        "right_weight": 18,
+        "left_rate": 0.605634,
+        "right_rate": 0.4,
+        "intersection_score": 0.4,
+        "combined_weight": 61,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "قوة + ضغط + تجمع + اكتناز",
+    "empirical_gloss_en": "force + pressure + gathering + compaction",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -9212,8 +9626,27 @@
       "ثخانة",
       "اكتناز"
     ],
-    "empirical_meaning_ar": "ثقل + ثخانة + اكتناز",
-    "empirical_gloss_en": "ثقل + ثخانة + compaction",
+    "raw_semantic_skeleton_ar": "ثقل + ثخانة + اكتناز",
+    "raw_semantic_skeleton_en": "ثقل + ثخانة + compaction",
+    "semantic_clusters": [
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 15,
+        "right_weight": 29,
+        "left_rate": 0.428571,
+        "right_rate": 0.659091,
+        "intersection_score": 0.428571,
+        "combined_weight": 44,
+        "anchor_overlap": [
+          "ثخانة",
+          "ثقل"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "قوة + ضغط",
+    "empirical_gloss_en": "force + pressure",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -9789,8 +10222,40 @@
       "امتداد",
       "التحام"
     ],
-    "empirical_meaning_ar": "امتداد + التحام",
-    "empirical_gloss_en": "extension + التحام",
+    "raw_semantic_skeleton_ar": "امتداد + التحام",
+    "raw_semantic_skeleton_en": "extension + التحام",
+    "semantic_clusters": [
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 31,
+        "right_weight": 23,
+        "left_rate": 0.688889,
+        "right_rate": 0.403509,
+        "intersection_score": 0.403509,
+        "combined_weight": 54,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      },
+      {
+        "id": "motion",
+        "label_ar": "امتداد + استرسال",
+        "label_en": "extension + flow",
+        "left_weight": 23,
+        "right_weight": 23,
+        "left_rate": 0.511111,
+        "right_rate": 0.403509,
+        "intersection_score": 0.403509,
+        "combined_weight": 46,
+        "anchor_overlap": [
+          "امتداد"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "تجمع + اكتناز + امتداد + استرسال",
+    "empirical_gloss_en": "gathering + compaction + extension + flow",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -10241,7 +10706,25 @@
     "selected_features": [
       "باطن"
     ],
-    "empirical_meaning_ar": "باطن",
+    "raw_semantic_skeleton_ar": "باطن",
+    "raw_semantic_skeleton_en": "inner depth",
+    "semantic_clusters": [
+      {
+        "id": "depth",
+        "label_ar": "باطن + عمق",
+        "label_en": "inner depth",
+        "left_weight": 2,
+        "right_weight": 4,
+        "left_rate": 0.25,
+        "right_rate": 0.266667,
+        "intersection_score": 0.25,
+        "combined_weight": 6,
+        "anchor_overlap": [
+          "باطن"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "باطن + عمق",
     "empirical_gloss_en": "inner depth",
     "structure": "unified",
     "confidence": "medium_high",
@@ -10697,8 +11180,38 @@
       "امتداد",
       "ثقل"
     ],
-    "empirical_meaning_ar": "التحام + امتداد + ثقل",
-    "empirical_gloss_en": "التحام + extension + ثقل",
+    "raw_semantic_skeleton_ar": "التحام + امتداد + ثقل",
+    "raw_semantic_skeleton_en": "التحام + extension + ثقل",
+    "semantic_clusters": [
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 69,
+        "right_weight": 45,
+        "left_rate": 0.6,
+        "right_rate": 0.5625,
+        "intersection_score": 0.5625,
+        "combined_weight": 114,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      },
+      {
+        "id": "release",
+        "label_ar": "خلوص + فراغ",
+        "label_en": "release + void",
+        "left_weight": 36,
+        "right_weight": 26,
+        "left_rate": 0.313043,
+        "right_rate": 0.325,
+        "intersection_score": 0.313043,
+        "combined_weight": 62,
+        "anchor_overlap": []
+      }
+    ],
+    "empirical_meaning_ar": "تجمع + اكتناز + خلوص + فراغ",
+    "empirical_gloss_en": "gathering + compaction + release + void",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -11455,8 +11968,40 @@
       "امتداد",
       "ثخانة"
     ],
-    "empirical_meaning_ar": "اختراق + امتداد + ثخانة",
-    "empirical_gloss_en": "اختراق + extension + ثخانة",
+    "raw_semantic_skeleton_ar": "اختراق + امتداد + ثخانة",
+    "raw_semantic_skeleton_en": "اختراق + extension + ثخانة",
+    "semantic_clusters": [
+      {
+        "id": "precision",
+        "label_ar": "دقة + نفاذ",
+        "label_en": "fineness + penetration",
+        "left_weight": 41,
+        "right_weight": 11,
+        "left_rate": 0.683333,
+        "right_rate": 0.366667,
+        "intersection_score": 0.366667,
+        "combined_weight": 52,
+        "anchor_overlap": [
+          "اختراق"
+        ]
+      },
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 15,
+        "right_weight": 18,
+        "left_rate": 0.25,
+        "right_rate": 0.6,
+        "intersection_score": 0.25,
+        "combined_weight": 33,
+        "anchor_overlap": [
+          "ثخانة"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "دقة + نفاذ + قوة + ضغط",
+    "empirical_gloss_en": "fineness + penetration + force + pressure",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -12040,8 +12585,40 @@
       "ثخانة",
       "نقص"
     ],
-    "empirical_meaning_ar": "ظاهر + ثخانة + نقص",
-    "empirical_gloss_en": "manifest surface + ثخانة + diminution",
+    "raw_semantic_skeleton_ar": "ظاهر + ثخانة + نقص",
+    "raw_semantic_skeleton_en": "manifest surface + ثخانة + diminution",
+    "semantic_clusters": [
+      {
+        "id": "release",
+        "label_ar": "خلوص + فراغ",
+        "label_en": "release + void",
+        "left_weight": 51,
+        "right_weight": 25,
+        "left_rate": 0.548387,
+        "right_rate": 0.233645,
+        "intersection_score": 0.233645,
+        "combined_weight": 76,
+        "anchor_overlap": [
+          "نقص"
+        ]
+      },
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 39,
+        "right_weight": 24,
+        "left_rate": 0.419355,
+        "right_rate": 0.224299,
+        "intersection_score": 0.224299,
+        "combined_weight": 63,
+        "anchor_overlap": [
+          "ثخانة"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "خلوص + فراغ + قوة + ضغط",
+    "empirical_gloss_en": "release + void + force + pressure",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -12770,8 +13347,39 @@
       "ثخانة",
       "ثقل"
     ],
-    "empirical_meaning_ar": "باطن + ثخانة + ثقل",
-    "empirical_gloss_en": "inner depth + ثخانة + ثقل",
+    "raw_semantic_skeleton_ar": "باطن + ثخانة + ثقل",
+    "raw_semantic_skeleton_en": "inner depth + ثخانة + ثقل",
+    "semantic_clusters": [
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 51,
+        "right_weight": 57,
+        "left_rate": 0.476636,
+        "right_rate": 0.74026,
+        "intersection_score": 0.476636,
+        "combined_weight": 108,
+        "anchor_overlap": [
+          "ثخانة",
+          "ثقل"
+        ]
+      },
+      {
+        "id": "holding",
+        "label_ar": "إمساك + احتباس",
+        "label_en": "holding + retention",
+        "left_weight": 30,
+        "right_weight": 23,
+        "left_rate": 0.280374,
+        "right_rate": 0.298701,
+        "intersection_score": 0.280374,
+        "combined_weight": 53,
+        "anchor_overlap": []
+      }
+    ],
+    "empirical_meaning_ar": "قوة + ضغط + إمساك + احتباس",
+    "empirical_gloss_en": "force + pressure + holding + retention",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -13475,8 +14083,40 @@
       "ثقل",
       "باطن"
     ],
-    "empirical_meaning_ar": "اكتناز + ثقل + باطن",
-    "empirical_gloss_en": "compaction + ثقل + inner depth",
+    "raw_semantic_skeleton_ar": "اكتناز + ثقل + باطن",
+    "raw_semantic_skeleton_en": "compaction + ثقل + inner depth",
+    "semantic_clusters": [
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 36,
+        "right_weight": 38,
+        "left_rate": 0.467532,
+        "right_rate": 0.655172,
+        "intersection_score": 0.467532,
+        "combined_weight": 74,
+        "anchor_overlap": [
+          "اكتناز"
+        ]
+      },
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 25,
+        "right_weight": 29,
+        "left_rate": 0.324675,
+        "right_rate": 0.5,
+        "intersection_score": 0.324675,
+        "combined_weight": 54,
+        "anchor_overlap": [
+          "ثقل"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "تجمع + اكتناز + قوة + ضغط",
+    "empirical_gloss_en": "gathering + compaction + force + pressure",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -14116,8 +14756,40 @@
       "التحام",
       "ظاهر"
     ],
-    "empirical_meaning_ar": "التحام + ظاهر",
-    "empirical_gloss_en": "التحام + manifest surface",
+    "raw_semantic_skeleton_ar": "التحام + ظاهر",
+    "raw_semantic_skeleton_en": "التحام + manifest surface",
+    "semantic_clusters": [
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 46,
+        "right_weight": 58,
+        "left_rate": 0.638889,
+        "right_rate": 0.439394,
+        "intersection_score": 0.439394,
+        "combined_weight": 104,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      },
+      {
+        "id": "motion",
+        "label_ar": "امتداد + استرسال",
+        "label_en": "extension + flow",
+        "left_weight": 18,
+        "right_weight": 88,
+        "left_rate": 0.25,
+        "right_rate": 0.666667,
+        "intersection_score": 0.25,
+        "combined_weight": 106,
+        "anchor_overlap": [
+          "اتساع"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "تجمع + اكتناز + امتداد + استرسال",
+    "empirical_gloss_en": "gathering + compaction + extension + flow",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -14859,8 +15531,26 @@
       "باطن",
       "التحام"
     ],
-    "empirical_meaning_ar": "باطن + التحام",
-    "empirical_gloss_en": "inner depth + التحام",
+    "raw_semantic_skeleton_ar": "باطن + التحام",
+    "raw_semantic_skeleton_en": "inner depth + التحام",
+    "semantic_clusters": [
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 50,
+        "right_weight": 103,
+        "left_rate": 0.549451,
+        "right_rate": 0.811024,
+        "intersection_score": 0.549451,
+        "combined_weight": 153,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "تجمع + اكتناز",
+    "empirical_gloss_en": "gathering + compaction",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -15633,8 +16323,40 @@
       "دقة",
       "ثقل"
     ],
-    "empirical_meaning_ar": "باطن + دقة + ثقل",
-    "empirical_gloss_en": "inner depth + fineness + ثقل",
+    "raw_semantic_skeleton_ar": "باطن + دقة + ثقل",
+    "raw_semantic_skeleton_en": "inner depth + fineness + ثقل",
+    "semantic_clusters": [
+      {
+        "id": "precision",
+        "label_ar": "دقة + نفاذ",
+        "label_en": "fineness + penetration",
+        "left_weight": 104,
+        "right_weight": 63,
+        "left_rate": 0.787879,
+        "right_rate": 0.525,
+        "intersection_score": 0.525,
+        "combined_weight": 167,
+        "anchor_overlap": [
+          "دقة"
+        ]
+      },
+      {
+        "id": "depth",
+        "label_ar": "باطن + عمق",
+        "label_en": "inner depth",
+        "left_weight": 37,
+        "right_weight": 62,
+        "left_rate": 0.280303,
+        "right_rate": 0.516667,
+        "intersection_score": 0.280303,
+        "combined_weight": 99,
+        "anchor_overlap": [
+          "باطن"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "دقة + نفاذ + باطن + عمق",
+    "empirical_gloss_en": "fineness + penetration + inner depth",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -16475,8 +17197,26 @@
       "خلوص",
       "باطن"
     ],
-    "empirical_meaning_ar": "خلوص + باطن",
-    "empirical_gloss_en": "release + inner depth",
+    "raw_semantic_skeleton_ar": "خلوص + باطن",
+    "raw_semantic_skeleton_en": "release + inner depth",
+    "semantic_clusters": [
+      {
+        "id": "release",
+        "label_ar": "خلوص + فراغ",
+        "label_en": "release + void",
+        "left_weight": 26,
+        "right_weight": 66,
+        "left_rate": 0.541667,
+        "right_rate": 0.88,
+        "intersection_score": 0.541667,
+        "combined_weight": 92,
+        "anchor_overlap": [
+          "خلوص"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "خلوص + فراغ",
+    "empirical_gloss_en": "release + void",
     "structure": "dual_aspect",
     "confidence": "high",
     "evidence_as_letter1": [
@@ -17099,8 +17839,40 @@
       "التحام",
       "امتداد"
     ],
-    "empirical_meaning_ar": "التحام + امتداد",
-    "empirical_gloss_en": "التحام + extension",
+    "raw_semantic_skeleton_ar": "التحام + امتداد",
+    "raw_semantic_skeleton_en": "التحام + extension",
+    "semantic_clusters": [
+      {
+        "id": "motion",
+        "label_ar": "امتداد + استرسال",
+        "label_en": "extension + flow",
+        "left_weight": 4,
+        "right_weight": 11,
+        "left_rate": 0.5,
+        "right_rate": 0.52381,
+        "intersection_score": 0.5,
+        "combined_weight": 15,
+        "anchor_overlap": [
+          "امتداد"
+        ]
+      },
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 3,
+        "right_weight": 10,
+        "left_rate": 0.375,
+        "right_rate": 0.47619,
+        "intersection_score": 0.375,
+        "combined_weight": 13,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "امتداد + استرسال + تجمع + اكتناز",
+    "empirical_gloss_en": "extension + flow + gathering + compaction",
     "structure": "dual_aspect",
     "confidence": "medium_high",
     "evidence_as_letter1": [
@@ -17512,8 +18284,40 @@
       "التحام",
       "ثقل"
     ],
-    "empirical_meaning_ar": "التحام + ثقل",
-    "empirical_gloss_en": "التحام + ثقل",
+    "raw_semantic_skeleton_ar": "التحام + ثقل",
+    "raw_semantic_skeleton_en": "التحام + ثقل",
+    "semantic_clusters": [
+      {
+        "id": "force",
+        "label_ar": "قوة + ضغط",
+        "label_en": "force + pressure",
+        "left_weight": 5,
+        "right_weight": 2,
+        "left_rate": 1.0,
+        "right_rate": 0.25,
+        "intersection_score": 0.25,
+        "combined_weight": 7,
+        "anchor_overlap": [
+          "ثقل"
+        ]
+      },
+      {
+        "id": "gathering",
+        "label_ar": "تجمع + اكتناز",
+        "label_en": "gathering + compaction",
+        "left_weight": 5,
+        "right_weight": 1,
+        "left_rate": 1.0,
+        "right_rate": 0.125,
+        "intersection_score": 0.125,
+        "combined_weight": 6,
+        "anchor_overlap": [
+          "التحام"
+        ]
+      }
+    ],
+    "empirical_meaning_ar": "قوة + ضغط + تجمع + اكتناز",
+    "empirical_gloss_en": "force + pressure + gathering + compaction",
     "structure": "sparse",
     "confidence": "low",
     "evidence_as_letter1": [

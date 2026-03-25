@@ -46,7 +46,7 @@ def test_derive_letter_meaning_uses_category_fallback_when_exact_overlap_missing
     }
     derived = derive_letter_meaning(entry)
     assert derived["selected_features"] == ["إمساك"]
-    assert derived["empirical_meaning_ar"] == "إمساك"
+    assert derived["empirical_meaning_ar"] == "إمساك + احتباس"
 
 
 def test_compare_scholars_classifies_match_and_conflict() -> None:
@@ -80,6 +80,16 @@ def test_render_independent_letter_genome_markdown_contains_letter_sections() ->
                 "shared_features": [{"feature": "خروج", "left_rate": 0.8, "right_rate": 0.9, "intersection_score": 0.8}],
                 "shared_categories": [],
                 "selected_features": ["خروج"],
+                "raw_semantic_skeleton_ar": "خروج",
+                "raw_semantic_skeleton_en": "emergence",
+                "semantic_clusters": [
+                    {
+                        "label_ar": "ظهور + خروج",
+                        "left_rate": 0.8,
+                        "right_rate": 0.9,
+                        "anchor_overlap": ["خروج"],
+                    }
+                ],
                 "empirical_meaning_ar": "خروج",
                 "empirical_gloss_en": "emergence",
                 "structure": "unified",
