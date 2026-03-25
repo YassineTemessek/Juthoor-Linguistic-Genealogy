@@ -9,8 +9,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ء — medium_high / dual_aspect
 
-**Empirical meaning:** التحام + ثخانة + اتساع
-**English gloss:** التحام + ثخانة + expansion
+**Empirical meaning:** قوة + ضغط + امتداد + استرسال
+**English gloss:** force + pressure + extension + flow
+**Raw skeleton:** التحام + ثخانة + اتساع
 **Coverage:** 19 nuclei (`L1=11`, `L2=8`)
 
 **Dominant weighted features as L1:**
@@ -34,6 +35,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - اختراق — L1 10.0%, L2 8.3%, score 8.3%
 - حيز — L1 10.0%, L2 8.3%, score 8.3%
 
+**Semantic synthesis layer:**
+- قوة + ضغط — L1 20.0%, L2 33.3%, anchors: ثخانة
+- امتداد + استرسال — L1 20.0%, L2 33.3%, anchors: اتساع
+
 **Scholar comparison (post-derivation):**
 - jabal: conflict — تأكيد, إمساك, تقوية, ثقل (blend=0.000)
 - asim_al_masri: partial — انتقال (blend=0.100)
@@ -43,8 +48,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ب — medium_high / dual_aspect
 
-**Empirical meaning:** امتداد + ثقل
-**English gloss:** extension + ثقل
+**Empirical meaning:** امتداد + استرسال + خلوص + فراغ
+**English gloss:** extension + flow + release + void
+**Raw skeleton:** امتداد + ثقل
 **Coverage:** 47 nuclei (`L1=24`, `L2=23`)
 
 **Dominant weighted features as L1:**
@@ -68,6 +74,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - إمساك — L1 20.0%, L2 6.7%, score 6.7%
 - بروز — L1 13.6%, L2 6.7%, score 6.7%
 
+**Semantic synthesis layer:**
+- امتداد + استرسال — L1 31.8%, L2 24.6%, anchors: امتداد
+- خلوص + فراغ — L1 31.8%, L2 20.1%, anchors: —
+
 **Scholar comparison (post-derivation):**
 - jabal: conflict — اكتناز, رخاوة, التحام (blend=0.000)
 - asim_al_masri: partial — بروز, اختراق, اتساع (blend=0.100)
@@ -77,8 +87,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ت — high / dual_aspect
 
-**Empirical meaning:** ثقل + دقة
-**English gloss:** ثقل + fineness
+**Empirical meaning:** قوة + ضغط + تجمع + اكتناز
+**English gloss:** force + pressure + gathering + compaction
+**Raw skeleton:** ثقل + دقة
 **Coverage:** 30 nuclei (`L1=14`, `L2=16`)
 
 **Dominant weighted features as L1:**
@@ -102,6 +113,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - باطن — L1 23.5%, L2 11.7%, score 11.7%
 - إمساك — L1 20.6%, L2 10.0%, score 10.0%
 
+**Semantic synthesis layer:**
+- قوة + ضغط — L1 50.0%, L2 40.0%, anchors: ثقل
+- تجمع + اكتناز — L1 23.5%, L2 48.3%, anchors: —
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — إمساك, دقة, وحدة, حدة, استقلال (blend=0.267)
 - asim_al_masri: match — ثقل (blend=0.500)
@@ -111,8 +126,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ث — medium_high / dual_aspect
 
-**Empirical meaning:** اكتناز + ثخانة
-**English gloss:** compaction + ثخانة
+**Empirical meaning:** تجمع + اكتناز + قوة + ضغط
+**English gloss:** gathering + compaction + force + pressure
+**Raw skeleton:** اكتناز + ثخانة
 **Coverage:** 21 nuclei (`L1=9`, `L2=12`)
 
 **Dominant weighted features as L1:**
@@ -136,6 +152,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - التحام — L1 28.1%, L2 13.8%, score 13.8%
 - إمساك — L1 6.2%, L2 6.9%, score 6.2%
 
+**Semantic synthesis layer:**
+- تجمع + اكتناز — L1 90.6%, L2 62.1%, anchors: اكتناز
+- قوة + ضغط — L1 46.9%, L2 48.3%, anchors: ثخانة
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — ثخانة, انتشار (blend=0.333)
 - asim_al_masri: conflict — إمساك (blend=0.000)
@@ -145,8 +165,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ج — high / dual_aspect
 
-**Empirical meaning:** ثخانة + التحام + باطن
-**English gloss:** ثخانة + التحام + inner depth
+**Empirical meaning:** قوة + ضغط + تجمع + اكتناز
+**English gloss:** force + pressure + gathering + compaction
+**Raw skeleton:** ثخانة + التحام + باطن
 **Coverage:** 30 nuclei (`L1=14`, `L2=16`)
 
 **Dominant weighted features as L1:**
@@ -170,6 +191,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - اكتناز — L1 10.1%, L2 12.7%, score 10.1%
 - خلوص — L1 12.7%, L2 9.5%, score 9.5%
 
+**Semantic synthesis layer:**
+- قوة + ضغط — L1 32.9%, L2 61.9%, anchors: ثخانة
+- تجمع + اكتناز — L1 31.6%, L2 38.1%, anchors: التحام
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — اكتناز, حدة (blend=0.075)
 - asim_al_masri: partial — اكتناز (blend=0.100)
@@ -179,8 +204,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ح — medium_high / dual_aspect
 
-**Empirical meaning:** ثقل + باطن + جفاف
-**English gloss:** ثقل + inner depth + dryness
+**Empirical meaning:** خلوص + فراغ + قوة + ضغط
+**English gloss:** release + void + force + pressure
+**Raw skeleton:** ثقل + باطن + جفاف
 **Coverage:** 39 nuclei (`L1=22`, `L2=17`)
 
 **Dominant weighted features as L1:**
@@ -204,6 +230,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - خلوص — L1 13.9%, L2 14.1%, score 13.9%
 - دقة — L1 13.0%, L2 21.9%, score 13.0%
 
+**Semantic synthesis layer:**
+- خلوص + فراغ — L1 30.6%, L2 25.0%, anchors: —
+- قوة + ضغط — L1 61.1%, L2 21.9%, anchors: ثقل
+
 **Scholar comparison (post-derivation):**
 - jabal: match — احتكاك, جفاف, باطن (blend=0.500)
 - asim_al_masri: conflict — انتقال (blend=0.000)
@@ -213,8 +243,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### خ — high / dual_aspect
 
-**Empirical meaning:** نقص + خلوص + تخلخل
-**English gloss:** diminution + release + تخلخل
+**Empirical meaning:** خلوص + فراغ
+**English gloss:** release + void
+**Raw skeleton:** نقص + خلوص + تخلخل
 **Coverage:** 27 nuclei (`L1=15`, `L2=12`)
 
 **Dominant weighted features as L1:**
@@ -238,6 +269,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - اختراق — L1 7.3%, L2 15.2%, score 7.3%
 - رخاوة — L1 6.1%, L2 24.2%, score 6.1%
 
+**Semantic synthesis layer:**
+- خلوص + فراغ — L1 78.0%, L2 51.5%, anchors: تخلخل, خلوص, نقص
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — تخلخل, جفاف, ثخانة (blend=0.240)
 - asim_al_masri: conflict — بروز, انتقال (blend=0.000)
@@ -247,8 +281,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### د — high / dual_aspect
 
-**Empirical meaning:** إمساك + ثقل + التحام
-**English gloss:** holding + ثقل + التحام
+**Empirical meaning:** امتداد + استرسال + تجمع + اكتناز
+**English gloss:** extension + flow + gathering + compaction
+**Raw skeleton:** إمساك + ثقل + التحام
 **Coverage:** 36 nuclei (`L1=13`, `L2=23`)
 
 **Dominant weighted features as L1:**
@@ -272,6 +307,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - امتداد — L1 22.8%, L2 39.6%, score 22.8%
 - باطن — L1 35.1%, L2 11.3%, score 11.3%
 
+**Semantic synthesis layer:**
+- امتداد + استرسال — L1 38.6%, L2 44.3%, anchors: —
+- تجمع + اكتناز — L1 36.8%, L2 67.0%, anchors: التحام
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — احتباس, إمساك, امتداد (blend=0.240)
 - asim_al_masri: partial — اندفاع, إمساك, انتقال (blend=0.240)
@@ -281,8 +320,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ذ — medium_high / dual_aspect
 
-**Empirical meaning:** اختراق + التحام + ثخانة
-**English gloss:** اختراق + التحام + ثخانة
+**Empirical meaning:** خلوص + فراغ + تجمع + اكتناز
+**English gloss:** release + void + gathering + compaction
+**Raw skeleton:** اختراق + التحام + ثخانة
 **Coverage:** 21 nuclei (`L1=11`, `L2=10`)
 
 **Dominant weighted features as L1:**
@@ -306,6 +346,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - نقص — L1 10.3%, L2 20.0%, score 10.3%
 - دقة — L1 34.5%, L2 8.0%, score 8.0%
 
+**Semantic synthesis layer:**
+- خلوص + فراغ — L1 31.0%, L2 28.0%, anchors: —
+- تجمع + اكتناز — L1 20.7%, L2 32.0%, anchors: التحام
+
 **Scholar comparison (post-derivation):**
 - jabal: match — اختراق, رخاوة, ثخانة (blend=0.550)
 - asim_al_masri: match — اختراق, انتقال, التحام (blend=0.500)
@@ -315,8 +359,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ر — high / dual_aspect
 
-**Empirical meaning:** دقة + التحام + امتداد
-**English gloss:** fineness + التحام + extension
+**Empirical meaning:** دقة + نفاذ + تجمع + اكتناز
+**English gloss:** fineness + penetration + gathering + compaction
+**Raw skeleton:** دقة + التحام + امتداد
 **Coverage:** 46 nuclei (`L1=24`, `L2=22`)
 
 **Dominant weighted features as L1:**
@@ -340,6 +385,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - باطن — L1 13.9%, L2 20.8%, score 13.9%
 - إمساك — L1 14.8%, L2 12.7%, score 12.7%
 
+**Semantic synthesis layer:**
+- دقة + نفاذ — L1 38.3%, L2 50.9%, anchors: دقة
+- تجمع + اكتناز — L1 68.7%, L2 32.5%, anchors: التحام
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — استرسال, باطن, التحام (blend=0.290)
 - asim_al_masri: partial — انتقال (blend=0.100)
@@ -349,8 +398,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ز — medium_high / dual_aspect
 
-**Empirical meaning:** ثقل + دقة + اكتناز
-**English gloss:** ثقل + fineness + compaction
+**Empirical meaning:** تجمع + اكتناز + دقة + نفاذ
+**English gloss:** gathering + compaction + fineness + penetration
+**Raw skeleton:** ثقل + دقة + اكتناز
 **Coverage:** 30 nuclei (`L1=16`, `L2=14`)
 
 **Dominant weighted features as L1:**
@@ -374,6 +424,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - اختراق — L1 12.9%, L2 22.4%, score 12.9%
 - إمساك — L1 12.9%, L2 14.3%, score 12.9%
 
+**Semantic synthesis layer:**
+- تجمع + اكتناز — L1 53.2%, L2 51.0%, anchors: اكتناز
+- دقة + نفاذ — L1 29.0%, L2 59.2%, anchors: دقة
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — اكتناز, ازدحام (blend=0.275)
 - asim_al_masri: conflict — انتقال (blend=0.000)
@@ -383,8 +437,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### س — high / dual_aspect
 
-**Empirical meaning:** اختراق + دقة
-**English gloss:** اختراق + fineness
+**Empirical meaning:** دقة + نفاذ
+**English gloss:** fineness + penetration
+**Raw skeleton:** اختراق + دقة
 **Coverage:** 36 nuclei (`L1=19`, `L2=17`)
 
 **Dominant weighted features as L1:**
@@ -408,6 +463,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - ثخانة — L1 19.1%, L2 16.5%, score 16.5%
 - باطن — L1 8.4%, L2 17.7%, score 8.4%
 
+**Semantic synthesis layer:**
+- دقة + نفاذ — L1 107.6%, L2 68.4%, anchors: اختراق, دقة
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — امتداد, دقة, وحدة, حدة (blend=0.200)
 - asim_al_masri: conflict — امتداد, ظاهر (blend=0.000)
@@ -417,8 +475,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ش — high / unified
 
-**Empirical meaning:** انتشار
-**English gloss:** spreading
+**Empirical meaning:** دقة + نفاذ + انتشار + تفرق
+**English gloss:** fineness + penetration + spreading + dispersal
+**Raw skeleton:** انتشار
 **Coverage:** 30 nuclei (`L1=18`, `L2=12`)
 
 **Dominant weighted features as L1:**
@@ -442,6 +501,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - ثقل — L1 12.2%, L2 13.2%, score 12.2%
 - دقة — L1 10.8%, L2 13.2%, score 10.8%
 
+**Semantic synthesis layer:**
+- دقة + نفاذ — L1 36.5%, L2 39.5%, anchors: حدة
+- انتشار + تفرق — L1 33.8%, L2 47.4%, anchors: انتشار
+
 **Scholar comparison (post-derivation):**
 - jabal: match — انتشار, دقة (blend=0.500)
 - asim_al_masri: partial — انتشار, انتقال, اكتناز (blend=0.333)
@@ -451,8 +514,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ص — high / dual_aspect
 
-**Empirical meaning:** ثخانة + ثقل + التحام
-**English gloss:** ثخانة + ثقل + التحام
+**Empirical meaning:** قوة + ضغط + تجمع + اكتناز
+**English gloss:** force + pressure + gathering + compaction
+**Raw skeleton:** ثخانة + ثقل + التحام
 **Coverage:** 25 nuclei (`L1=15`, `L2=10`)
 
 **Dominant weighted features as L1:**
@@ -476,6 +540,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - اكتناز — L1 19.7%, L2 17.8%, score 17.8%
 - امتداد — L1 18.3%, L2 17.8%, score 17.8%
 
+**Semantic synthesis layer:**
+- قوة + ضغط — L1 73.2%, L2 64.4%, anchors: ثخانة, ثقل
+- تجمع + اكتناز — L1 60.6%, L2 40.0%, anchors: التحام
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — اختراق, ثخانة, ثقل, خلوص (blend=0.430)
 - asim_al_masri: conflict — انتقال (blend=0.000)
@@ -485,8 +553,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ض — high / dual_aspect
 
-**Empirical meaning:** ثقل + ثخانة + اكتناز
-**English gloss:** ثقل + ثخانة + compaction
+**Empirical meaning:** قوة + ضغط
+**English gloss:** force + pressure
+**Raw skeleton:** ثقل + ثخانة + اكتناز
 **Coverage:** 26 nuclei (`L1=15`, `L2=11`)
 
 **Dominant weighted features as L1:**
@@ -510,6 +579,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - تخلخل — L1 11.4%, L2 15.9%, score 11.4%
 - إمساك — L1 28.6%, L2 9.1%, score 9.1%
 
+**Semantic synthesis layer:**
+- قوة + ضغط — L1 42.9%, L2 65.9%, anchors: ثخانة, ثقل
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — إمساك, ثخانة (blend=0.375)
 - asim_al_masri: partial — إمساك (blend=0.100)
@@ -519,8 +591,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ط — high / dual_aspect
 
-**Empirical meaning:** امتداد + التحام
-**English gloss:** extension + التحام
+**Empirical meaning:** تجمع + اكتناز + امتداد + استرسال
+**English gloss:** gathering + compaction + extension + flow
+**Raw skeleton:** امتداد + التحام
 **Coverage:** 27 nuclei (`L1=13`, `L2=14`)
 
 **Dominant weighted features as L1:**
@@ -544,6 +617,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - دقة — L1 20.0%, L2 10.5%, score 10.5%
 - ظاهر — L1 13.3%, L2 8.8%, score 8.8%
 
+**Semantic synthesis layer:**
+- تجمع + اكتناز — L1 68.9%, L2 40.4%, anchors: التحام
+- امتداد + استرسال — L1 51.1%, L2 40.4%, anchors: امتداد
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — إمساك, اتساع, ثخانة (blend=0.075)
 - asim_al_masri: partial — انتقال (blend=0.150)
@@ -553,8 +630,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ظ — medium_high / unified
 
-**Empirical meaning:** باطن
+**Empirical meaning:** باطن + عمق
 **English gloss:** inner depth
+**Raw skeleton:** باطن
 **Coverage:** 14 nuclei (`L1=6`, `L2=8`)
 
 **Dominant weighted features as L1:**
@@ -572,6 +650,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 **Shared evidence thread:**
 - باطن — L1 25.0%, L2 26.7%, score 25.0%
 
+**Semantic synthesis layer:**
+- باطن + عمق — L1 25.0%, L2 26.7%, anchors: باطن
+
 **Scholar comparison (post-derivation):**
 - jabal: conflict — اختراق, ثخانة, حدة (blend=0.000)
 - asim_al_masri: partial — ظاهر, انتقال (blend=0.150)
@@ -581,8 +662,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ع — high / dual_aspect
 
-**Empirical meaning:** التحام + امتداد + ثقل
-**English gloss:** التحام + extension + ثقل
+**Empirical meaning:** تجمع + اكتناز + خلوص + فراغ
+**English gloss:** gathering + compaction + release + void
+**Raw skeleton:** التحام + امتداد + ثقل
 **Coverage:** 43 nuclei (`L1=22`, `L2=21`)
 
 **Dominant weighted features as L1:**
@@ -606,6 +688,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - ثخانة — L1 12.2%, L2 16.2%, score 12.2%
 - اكتناز — L1 17.4%, L2 10.0%, score 10.0%
 
+**Semantic synthesis layer:**
+- تجمع + اكتناز — L1 60.0%, L2 56.2%, anchors: التحام
+- خلوص + فراغ — L1 31.3%, L2 32.5%, anchors: —
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — التحام, دقة, حدة, رخاوة (blend=0.177)
 - asim_al_masri: partial — ظاهر, انتقال (blend=0.075)
@@ -615,8 +701,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### غ — high / dual_aspect
 
-**Empirical meaning:** اختراق + امتداد + ثخانة
-**English gloss:** اختراق + extension + ثخانة
+**Empirical meaning:** دقة + نفاذ + قوة + ضغط
+**English gloss:** fineness + penetration + force + pressure
+**Raw skeleton:** اختراق + امتداد + ثخانة
 **Coverage:** 26 nuclei (`L1=16`, `L2=10`)
 
 **Dominant weighted features as L1:**
@@ -640,6 +727,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - احتواء — L1 21.7%, L2 13.3%, score 13.3%
 - رخاوة — L1 11.7%, L2 50.0%, score 11.7%
 
+**Semantic synthesis layer:**
+- دقة + نفاذ — L1 68.3%, L2 36.7%, anchors: اختراق
+- قوة + ضغط — L1 25.0%, L2 60.0%, anchors: ثخانة
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — تخلخل, رخاوة, ثخانة (blend=0.215)
 - asim_al_masri: partial — ظاهر, انتقال, إمساك, باطن (blend=0.060)
@@ -649,8 +740,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ف — medium_high / dual_aspect
 
-**Empirical meaning:** ظاهر + ثخانة + نقص
-**English gloss:** manifest surface + ثخانة + diminution
+**Empirical meaning:** خلوص + فراغ + قوة + ضغط
+**English gloss:** release + void + force + pressure
+**Raw skeleton:** ظاهر + ثخانة + نقص
 **Coverage:** 42 nuclei (`L1=21`, `L2=21`)
 
 **Dominant weighted features as L1:**
@@ -674,6 +766,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - خلوص — L1 14.0%, L2 8.4%, score 8.4%
 - اختراق — L1 5.4%, L2 22.4%, score 5.4%
 
+**Semantic synthesis layer:**
+- خلوص + فراغ — L1 54.8%, L2 23.4%, anchors: نقص
+- قوة + ضغط — L1 41.9%, L2 22.4%, anchors: ثخانة
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — طرد, إبعاد, اختراق, ثقل (blend=0.060)
 - asim_al_masri: conflict — تخلخل, انتقال (blend=0.000)
@@ -683,8 +779,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ق — high / dual_aspect
 
-**Empirical meaning:** باطن + ثخانة + ثقل
-**English gloss:** inner depth + ثخانة + ثقل
+**Empirical meaning:** قوة + ضغط + إمساك + احتباس
+**English gloss:** force + pressure + holding + retention
+**Raw skeleton:** باطن + ثخانة + ثقل
 **Coverage:** 37 nuclei (`L1=20`, `L2=17`)
 
 **Dominant weighted features as L1:**
@@ -708,6 +805,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - إمساك — L1 15.0%, L2 29.9%, score 15.0%
 - حيز — L1 13.1%, L2 9.1%, score 9.1%
 
+**Semantic synthesis layer:**
+- قوة + ضغط — L1 47.7%, L2 74.0%, anchors: ثخانة, ثقل
+- إمساك + احتباس — L1 28.0%, L2 29.9%, anchors: —
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — تعقد, اشتداد, ثقل, باطن (blend=0.480)
 - asim_al_masri: partial — ثقل, انتقال (blend=0.250)
@@ -717,8 +818,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ك — high / dual_aspect
 
-**Empirical meaning:** اكتناز + ثقل + باطن
-**English gloss:** compaction + ثقل + inner depth
+**Empirical meaning:** تجمع + اكتناز + قوة + ضغط
+**English gloss:** gathering + compaction + force + pressure
+**Raw skeleton:** اكتناز + ثقل + باطن
 **Coverage:** 32 nuclei (`L1=18`, `L2=14`)
 
 **Dominant weighted features as L1:**
@@ -742,6 +844,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - إمساك — L1 16.9%, L2 22.4%, score 16.9%
 - دقة — L1 16.9%, L2 17.2%, score 16.9%
 
+**Semantic synthesis layer:**
+- تجمع + اكتناز — L1 46.8%, L2 65.5%, anchors: اكتناز
+- قوة + ضغط — L1 32.5%, L2 50.0%, anchors: ثقل
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — إمساك, دقة, استقلال (blend=0.060)
 - asim_al_masri: partial — اكتناز, احتواء (blend=0.275)
@@ -751,8 +857,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ل — high / dual_aspect
 
-**Empirical meaning:** التحام + ظاهر
-**English gloss:** التحام + manifest surface
+**Empirical meaning:** تجمع + اكتناز + امتداد + استرسال
+**English gloss:** gathering + compaction + extension + flow
+**Raw skeleton:** التحام + ظاهر
 **Coverage:** 45 nuclei (`L1=21`, `L2=24`)
 
 **Dominant weighted features as L1:**
@@ -776,6 +883,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - اكتناز — L1 16.7%, L2 11.4%, score 11.4%
 - امتداد — L1 11.1%, L2 30.3%, score 11.1%
 
+**Semantic synthesis layer:**
+- تجمع + اكتناز — L1 63.9%, L2 43.9%, anchors: التحام
+- امتداد + استرسال — L1 25.0%, L2 66.7%, anchors: اتساع
+
 **Scholar comparison (post-derivation):**
 - jabal: conflict — تعلق, امتداد, استقلال, تميز (blend=0.000)
 - asim_al_masri: conflict — انتقال (blend=0.000)
@@ -785,8 +896,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### م — medium_high / dual_aspect
 
-**Empirical meaning:** باطن + التحام
-**English gloss:** inner depth + التحام
+**Empirical meaning:** تجمع + اكتناز
+**English gloss:** gathering + compaction
+**Raw skeleton:** باطن + التحام
 **Coverage:** 46 nuclei (`L1=21`, `L2=25`)
 
 **Dominant weighted features as L1:**
@@ -810,6 +922,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - اكتناز — L1 7.7%, L2 53.5%, score 7.7%
 - ثقل — L1 27.5%, L2 7.1%, score 7.1%
 
+**Semantic synthesis layer:**
+- تجمع + اكتناز — L1 54.9%, L2 81.1%, anchors: التحام
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — إمساك, استواء, ظاهر (blend=0.075)
 - asim_al_masri: conflict — انتقال (blend=0.000)
@@ -819,8 +934,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ن — high / dual_aspect
 
-**Empirical meaning:** باطن + دقة + ثقل
-**English gloss:** inner depth + fineness + ثقل
+**Empirical meaning:** دقة + نفاذ + باطن + عمق
+**English gloss:** fineness + penetration + inner depth
+**Raw skeleton:** باطن + دقة + ثقل
 **Coverage:** 54 nuclei (`L1=27`, `L2=27`)
 
 **Dominant weighted features as L1:**
@@ -844,6 +960,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - اختراق — L1 40.2%, L2 16.7%, score 16.7%
 - ظاهر — L1 12.1%, L2 14.2%, score 12.1%
 
+**Semantic synthesis layer:**
+- دقة + نفاذ — L1 78.8%, L2 52.5%, anchors: دقة
+- باطن + عمق — L1 28.0%, L2 51.7%, anchors: باطن
+
 **Scholar comparison (post-derivation):**
 - jabal: match — امتداد, دقة, باطن (blend=0.500)
 - asim_al_masri: partial — انتقال, استقرار (blend=0.075)
@@ -853,8 +973,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### هـ — high / dual_aspect
 
-**Empirical meaning:** خلوص + باطن
-**English gloss:** release + inner depth
+**Empirical meaning:** خلوص + فراغ
+**English gloss:** release + void
+**Raw skeleton:** خلوص + باطن
 **Coverage:** 32 nuclei (`L1=12`, `L2=20`)
 
 **Dominant weighted features as L1:**
@@ -878,6 +999,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - دقة — L1 31.2%, L2 6.7%, score 6.7%
 - إبعاد — L1 6.2%, L2 13.3%, score 6.2%
 
+**Semantic synthesis layer:**
+- خلوص + فراغ — L1 54.2%, L2 88.0%, anchors: خلوص
+
 **Scholar comparison (post-derivation):**
 - jabal: match — خلوص, إفراغ, باطن (blend=0.667)
 - asim_al_masri: partial — انتقال, استقرار (blend=0.100)
@@ -887,8 +1011,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### و — medium_high / dual_aspect
 
-**Empirical meaning:** التحام + امتداد
-**English gloss:** التحام + extension
+**Empirical meaning:** امتداد + استرسال + تجمع + اكتناز
+**English gloss:** extension + flow + gathering + compaction
+**Raw skeleton:** التحام + امتداد
 **Coverage:** 20 nuclei (`L1=6`, `L2=14`)
 
 **Dominant weighted features as L1:**
@@ -912,6 +1037,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - ثقل — L1 12.5%, L2 14.3%, score 12.5%
 - اتساع — L1 12.5%, L2 9.5%, score 9.5%
 
+**Semantic synthesis layer:**
+- امتداد + استرسال — L1 50.0%, L2 52.4%, anchors: امتداد
+- تجمع + اكتناز — L1 37.5%, L2 47.6%, anchors: التحام
+
 **Scholar comparison (post-derivation):**
 - jabal: partial — احتواء (blend=0.150)
 - asim_al_masri: partial — حيز, انتقال (blend=0.100)
@@ -921,8 +1050,9 @@ Each meaning is based on the stable cross-position thread that survives both `as
 
 ### ي — low / sparse
 
-**Empirical meaning:** التحام + ثقل
-**English gloss:** التحام + ثقل
+**Empirical meaning:** قوة + ضغط + تجمع + اكتناز
+**English gloss:** force + pressure + gathering + compaction
+**Raw skeleton:** التحام + ثقل
 **Coverage:** 7 nuclei (`L1=1`, `L2=6`)
 
 **Dominant weighted features as L1:**
@@ -941,6 +1071,10 @@ Each meaning is based on the stable cross-position thread that survives both `as
 **Shared evidence thread:**
 - التحام — L1 100.0%, L2 12.5%, score 12.5%
 - ثقل — L1 100.0%, L2 12.5%, score 12.5%
+
+**Semantic synthesis layer:**
+- قوة + ضغط — L1 100.0%, L2 25.0%, anchors: ثقل
+- تجمع + اكتناز — L1 100.0%, L2 12.5%, anchors: التحام
 
 **Scholar comparison (post-derivation):**
 - jabal: partial — اتصال, وحدة, تخلخل, دقة (blend=0.060)

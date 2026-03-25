@@ -60,6 +60,20 @@ FEATURE_GLOSSES_EN: dict[str, str] = {
 
 SCHOLAR_ORDER = ("jabal", "asim_al_masri", "hassan_abbas", "neili", "anbar")
 
+SEMANTIC_CLUSTERS: tuple[dict[str, Any], ...] = (
+    {"id": "manifestation", "label_ar": "ظهور + خروج", "label_en": "manifestation + emergence", "features": frozenset({"بروز", "ظاهر"})},
+    {"id": "motion", "label_ar": "امتداد + استرسال", "label_en": "extension + flow", "features": frozenset({"امتداد", "استرسال", "اتساع", "رجوع", "استقرار", "صعود"})},
+    {"id": "gathering", "label_ar": "تجمع + اكتناز", "label_en": "gathering + compaction", "features": frozenset({"اكتناز", "التحام", "احتواء", "اشتمال", "حيز", "تجمع", "تماسك"})},
+    {"id": "depth", "label_ar": "باطن + عمق", "label_en": "inner depth", "features": frozenset({"باطن", "عمق", "جوف"})},
+    {"id": "release", "label_ar": "خلوص + فراغ", "label_en": "release + void", "features": frozenset({"خلوص", "فراغ", "تخلخل", "نقص"})},
+    {"id": "force", "label_ar": "قوة + ضغط", "label_en": "force + pressure", "features": frozenset({"ثقل", "ثخانة", "ضغط", "قوة", "غلظ", "صدم"})},
+    {"id": "precision", "label_ar": "دقة + نفاذ", "label_en": "fineness + penetration", "features": frozenset({"دقة", "اختراق", "رقة", "لطف", "نفاذ", "حدة"})},
+    {"id": "holding", "label_ar": "إمساك + احتباس", "label_en": "holding + retention", "features": frozenset({"إمساك", "احتباس", "استقرار", "تأكيد"})},
+    {"id": "spread", "label_ar": "انتشار + تفرق", "label_en": "spreading + dispersal", "features": frozenset({"انتشار", "تفرق"})},
+    {"id": "cutting", "label_ar": "قطع + فصل", "label_en": "cutting + separation", "features": frozenset({"قطع", "استقلال", "إبعاد"})},
+    {"id": "dryness", "label_ar": "جفاف", "label_en": "dryness", "features": frozenset({"جفاف"})},
+)
+
 
 @dataclass(frozen=True)
 class PositionSummary:
@@ -194,6 +208,76 @@ def _representative_feature_for_category(
     return candidates[0][1]
 
 
+def _cluster_candidates(
+    l1: PositionSummary,
+    l2: PositionSummary,
+    anchor_features: list[str],
+) -> list[dict[str, Any]]:
+    anchor_set = set(anchor_features)
+    candidates: list[dict[str, Any]] = []
+    for cluster in SEMANTIC_CLUSTERS:
+        features = cluster["features"]
+        left = sum(weight for feature, weight in l1.feature_weights.items() if feature in features)
+        right = sum(weight for feature, weight in l2.feature_weights.items() if feature in features)
+        if not left and not right:
+            continue
+        left_rate = left / l1.total_member_weight if l1.total_member_weight else 0.0
+        right_rate = right / l2.total_member_weight if l2.total_member_weight else 0.0
+        anchor_overlap = sorted(anchor_set & set(features))
+        candidates.append(
+            {
+                "id": cluster["id"],
+                "label_ar": cluster["label_ar"],
+                "label_en": cluster["label_en"],
+                "left_weight": left,
+                "right_weight": right,
+                "left_rate": round(left_rate, 6),
+                "right_rate": round(right_rate, 6),
+                "intersection_score": round(min(left_rate, right_rate), 6),
+                "combined_weight": left + right,
+                "anchor_overlap": anchor_overlap,
+            }
+        )
+    return sorted(
+        candidates,
+        key=lambda row: (
+            -row["intersection_score"],
+            -len(row["anchor_overlap"]),
+            -row["combined_weight"],
+            row["id"],
+        ),
+    )
+
+
+def _synthesize_semantic_charge(
+    l1: PositionSummary,
+    l2: PositionSummary,
+    raw_features: list[str],
+    shared_features: list[dict[str, Any]],
+    *,
+    sparse: bool,
+) -> tuple[list[dict[str, Any]], str, str]:
+    anchors = list(dict.fromkeys(raw_features + [row["feature"] for row in shared_features[:3]]))
+    cluster_candidates = _cluster_candidates(l1, l2, anchors)
+    if not cluster_candidates:
+        meaning_ar = " + ".join(raw_features) if raw_features else "غير محسوم"
+        meaning_en = " + ".join(FEATURE_GLOSSES_EN.get(feature, feature) for feature in raw_features) if raw_features else "unresolved"
+        return [], meaning_ar, meaning_en
+
+    top_score = cluster_candidates[0]["intersection_score"]
+    threshold = max(0.06 if sparse else 0.1, top_score * 0.5)
+    chosen = [
+        row for row in cluster_candidates
+        if row["intersection_score"] >= threshold
+    ][:2]
+    if not chosen:
+        chosen = cluster_candidates[:1]
+
+    meaning_ar = " + ".join(row["label_ar"] for row in chosen)
+    meaning_en = " + ".join(row["label_en"] for row in chosen)
+    return chosen, meaning_ar, meaning_en
+
+
 def derive_letter_meaning(entry: dict[str, Any]) -> dict[str, Any]:
     l1_rows = list(entry.get("as_letter1") or [])
     l2_rows = list(entry.get("as_letter2") or [])
@@ -249,8 +333,15 @@ def derive_letter_meaning(entry: dict[str, Any]) -> dict[str, Any]:
     ):
         structure = "dual_aspect"
 
-    meaning_ar = " + ".join(selected_features) if selected_features else "غير محسوم"
-    meaning_en = " + ".join(FEATURE_GLOSSES_EN.get(feature, feature) for feature in selected_features) if selected_features else "unresolved"
+    synthesized_clusters, meaning_ar, meaning_en = _synthesize_semantic_charge(
+        l1,
+        l2,
+        selected_features,
+        shared_features,
+        sparse=(structure == "sparse"),
+    )
+    raw_skeleton_ar = " + ".join(selected_features) if selected_features else "غير محسوم"
+    raw_skeleton_en = " + ".join(FEATURE_GLOSSES_EN.get(feature, feature) for feature in selected_features) if selected_features else "unresolved"
 
     return {
         "letter": entry["letter"],
@@ -274,6 +365,9 @@ def derive_letter_meaning(entry: dict[str, Any]) -> dict[str, Any]:
         "shared_features": shared_features[:8],
         "shared_categories": shared_categories[:5],
         "selected_features": selected_features,
+        "raw_semantic_skeleton_ar": raw_skeleton_ar,
+        "raw_semantic_skeleton_en": raw_skeleton_en,
+        "semantic_clusters": synthesized_clusters,
         "empirical_meaning_ar": meaning_ar,
         "empirical_gloss_en": meaning_en,
         "structure": structure,
@@ -362,6 +456,7 @@ def render_independent_letter_genome_markdown(rows: list[dict[str, Any]]) -> str
                 "",
                 f"**Empirical meaning:** {row['empirical_meaning_ar']}",
                 f"**English gloss:** {row['empirical_gloss_en']}",
+                f"**Raw skeleton:** {row['raw_semantic_skeleton_ar']}",
                 f"**Coverage:** {row['total_nuclei']} nuclei (`L1={row['count_l1']}`, `L2={row['count_l2']}`)",
                 "",
                 "**Dominant weighted features as L1:**",
@@ -387,6 +482,15 @@ def render_independent_letter_genome_markdown(rows: list[dict[str, Any]]) -> str
                 )
         else:
             lines.append("- no exact shared thread; meaning chosen from the strongest surviving weighted evidence")
+        lines.append("")
+        lines.append("**Semantic synthesis layer:**")
+        if row["semantic_clusters"]:
+            for cluster in row["semantic_clusters"]:
+                lines.append(
+                    f"- {cluster['label_ar']} — L1 {cluster['left_rate']:.1%}, L2 {cluster['right_rate']:.1%}, anchors: {', '.join(cluster['anchor_overlap']) or '—'}"
+                )
+        else:
+            lines.append("- no higher-level synthesis cluster was stable enough; raw skeleton retained")
         lines.append("")
         lines.append("**Scholar comparison (post-derivation):**")
         for scholar in SCHOLAR_ORDER:
