@@ -1,15 +1,15 @@
-# LV1 Scoring Dashboard
+# LV1 Dashboard
 
-Generated: 2026-03-26T17:24:53.056655+00:00
+Generated: 2026-03-26T17:32:50.642806+00:00
 
-Single-page summary of the current LV1 nucleus and root scoring outputs.
+Clean summary of the current LV1 scoring outputs from `root_score_matrix.json` and `nucleus_score_matrix.json`.
 
 ## Overall Metrics
 
-| Layer | Tests | Units | Mean J | Mean wJ | Mean bJ | Nonzero Rate |
-| --- | --- | --- | --- | --- | --- | --- |
-| Nucleus scoring | 11605 | 395 | 0.092 | 0.089 | - | 32.3% |
-| Root scoring | 9620 | 1924 | 0.158 | 0.153 | 0.190 | 63.1% |
+| Layer | Tests | Units | Scholars | Models | Mean J | Mean wJ | Mean bJ | Nonzero Rate |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Nucleus scoring | 11605 | 395 | 7 | 5 | 0.092 | 0.089 | - | 32.3% |
+| Root scoring | 9620 | 1924 | 5 | 6 | 0.158 | 0.153 | 0.190 | 63.1% |
 
 ## Per-Scholar Breakdown
 
@@ -42,33 +42,42 @@ Single-page summary of the current LV1 nucleus and root scoring outputs.
 | Quranic | 0 | 0.000 | 0.000 | 0.000 | 0.0% | 0.0% |
 | Non-Quranic | 9620 | 0.158 | 0.153 | 0.190 | 63.1% | 100.0% |
 
-## Letter Correction Impact
+## Top 10 Best Roots
 
-This section measures the current footprint of the four corrected Jabal letters (م, ع, غ, ب) inside the root test set.
+| Root | Scholar | Model | bJ | wJ | J | Bab | Quranic | Actual Features | Predicted Features |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| أبي | jabal | nucleus_only | 1.000 | 1.000 | 1.000 | الباء | Yes | تلاصق + احتباس | تلاصق + احتباس |
+| أوب-أيب | jabal | nucleus_only | 1.000 | 1.000 | 1.000 | الباء | Yes | رجوع + استقرار | رجوع + استقرار |
+| يبس | jabal | nucleus_only | 1.000 | 1.000 | 1.000 | الباء | Yes | جفاف | جفاف |
+| وتد | jabal | nucleus_only | 1.000 | 1.000 | 1.000 | التاء | Yes | امتساك + تماسك | امتساك + تماسك |
+| تلو-تلي | jabal | intersection | 1.000 | 1.000 | 1.000 | التاء | Yes | اتصال | اتصال |
+| تيهـ-توهـ | jabal | intersection | 1.000 | 1.000 | 1.000 | التاء | Yes | فراغ | فراغ |
+| جوع | jabal | nucleus_only | 1.000 | 1.000 | 1.000 | الجيم | Yes | فراغ + جوف | جوف + فراغ |
+| حثث-حثحث | jabal | nucleus_only | 1.000 | 1.000 | 1.000 | الحاء | Yes | تخلخل + قطع + جفاف | تخلخل + قطع + جفاف |
+| خوو-خوى | jabal | nucleus_only | 1.000 | 1.000 | 1.000 | الخاء | Yes | فراغ | فراغ |
+| خدن | jabal | nucleus_only | 1.000 | 1.000 | 1.000 | الخاء | Yes | باطن | جوف |
 
-| Metric | Value |
-| --- | --- |
-| Affected Jabal root tests | 361 |
-| Share of Jabal root tests | 18.8% |
-| Affected-slice mean bJ | 0.195 |
-| Overall Jabal mean bJ | 0.193 |
-| Delta vs overall Jabal | 0.002 |
+## Top 10 Worst Roots
 
-| Letter | Affected Tests | Mean bJ | Mean wJ | Nonzero bJ |
-| --- | --- | --- | --- | --- |
-| ب | 123 | 0.195 | 0.148 | 68.3% |
-| ع | 97 | 0.201 | 0.167 | 68.0% |
-| غ | 20 | 0.251 | 0.213 | 80.0% |
-| م | 121 | 0.179 | 0.146 | 63.6% |
+| Root | Scholar | Model | bJ | wJ | J | Bab | Quranic | Actual Features | Predicted Features |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| أبو | jabal | nucleus_only | 0.000 | 0.000 | 0.000 | الباء | Yes | - | تلاصق + احتباس |
+| بيت | jabal | intersection | 0.000 | 0.000 | 0.000 | الباء | Yes | حيز | قطع |
+| بحح-بحبح | jabal | position_aware | 0.000 | 0.000 | 0.000 | الباء | No | فراغ | ظهور + اتساع |
+| بحث | jabal | nucleus_only | 0.000 | 0.000 | 0.000 | الباء | Yes | تماسك + تفرق | ظهور + فراغ |
+| بحر | jabal | nucleus_only | 0.060 | 0.000 | 0.000 | الباء | Yes | شق + فجوة + قوة + باطن + انتقال | ظهور + فراغ |
+| بخخ-بخبخ | jabal | nucleus_only | 0.000 | 0.000 | 0.000 | الباء | No | قوة + ظاهر + تخلخل + غلظ | نقص + فراغ |
+| بخع | jabal | position_aware | 0.200 | 0.000 | 0.000 | الباء | Yes | فراغ + قوة + باطن | نقص + ظهور |
+| بخل | jabal | position_aware | 0.000 | 0.000 | 0.000 | الباء | Yes | إمساك | نقص + تعلق |
+| بدد-بدبد | jabal | nucleus_only | 0.000 | 0.000 | 0.000 | الباء | No | تفرق + إبعاد + فراغ | ظهور |
+| بدو | jabal | phonetic_gestural | 0.000 | 0.000 | 0.000 | الباء | Yes | بروز + قوة + امتداد + اتساع | ظهور + اشتمال |
 
 ## Test Count
 
 | Metric | Value |
 | --- | --- |
+| Requested test count | 495 |
 | Nucleus row tests | 11605 |
-| Unique binary roots scored | 395 |
+| Unique binary roots in nucleus matrix | 395 |
 | Root row tests | 9620 |
 | Root tests per scholar | 1924 |
-| Scholars included | 5 |
-| Models included in root scoring | 6 |
-| Models included in nucleus scoring | 5 |

@@ -1,3 +1,9 @@
+"""Load theory-canon registry files into validated LV1 dataclass structures.
+
+These helpers resolve default canon paths, parse JSONL registries, and return
+typed records for letters, binary nuclei, triliteral roots, and theory claims.
+"""
+
 from __future__ import annotations
 
 import json

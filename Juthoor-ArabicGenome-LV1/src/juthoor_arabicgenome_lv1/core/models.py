@@ -1,3 +1,9 @@
+"""Define the foundational LV1 dataclasses for letters, roots, and root families.
+
+These models describe the primary Arabic genome entities loaded from registry
+files and reused across scoring, composition, and analysis workflows.
+"""
+
 from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional

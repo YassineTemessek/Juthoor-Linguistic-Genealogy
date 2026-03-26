@@ -1,3 +1,9 @@
+"""Run canon-backed analysis for Arabic roots and their semantic composition.
+
+The pipeline loads default registries, normalizes roots, and assembles evidence
+that explains letter traces, binary fields, and conceptual classifications.
+"""
+
 from __future__ import annotations
 
 import json
