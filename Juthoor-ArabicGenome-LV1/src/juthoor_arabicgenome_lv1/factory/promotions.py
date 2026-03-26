@@ -84,6 +84,22 @@ def _filter_jsonl(src: Path, dst: Path, pair_type: str) -> int:
     return len(kept)
 
 
+def _normalize_binary_root(value: object) -> str:
+    text = "".join(ch for ch in str(value or "").strip() if "\u0621" <= ch <= "\u064a")
+    return text[:2] if len(text) >= 2 else ""
+
+
+def _resolve_binary_root(row: dict) -> str:
+    binary_root = _normalize_binary_root(
+        row.get("binary_root")
+        or row.get("source_binary_nucleus")
+        or row.get("binary_nucleus")
+    )
+    if binary_root:
+        return binary_root
+    return _normalize_binary_root(row.get("source_root"))
+
+
 def _write_cross_lingual_support(dst: Path) -> int:
     support: dict[str, dict] = defaultdict(
         lambda: {
@@ -106,7 +122,7 @@ def _write_cross_lingual_support(dst: Path) -> int:
             return
         rows = json.loads(path.read_text(encoding="utf-8"))
         for row in rows:
-            binary_root = row.get("source_binary_nucleus")
+            binary_root = _resolve_binary_root(row)
             if not binary_root:
                 continue
             entry = support[binary_root]
