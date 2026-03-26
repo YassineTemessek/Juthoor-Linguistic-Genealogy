@@ -1,3 +1,9 @@
+"""Composition models for combining nucleus and modifier semantics.
+
+This module defines the core LV1 feature-composition strategies and exposes the
+model registry used by root prediction and scoring flows.
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass

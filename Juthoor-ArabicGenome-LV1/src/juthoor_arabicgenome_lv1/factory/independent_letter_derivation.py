@@ -1,3 +1,9 @@
+"""Independent letter derivation summaries for LV1 semantic evidence.
+
+This module aggregates weighted feature evidence by letter position and builds
+clustered summaries used to compare independent letter behavior across scholars.
+"""
+
 from __future__ import annotations
 
 import json

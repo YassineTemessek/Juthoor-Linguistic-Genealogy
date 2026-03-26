@@ -1,3 +1,9 @@
+"""Root prediction assembly for LV1 binary nuclei and third letters.
+
+This module selects the composition model, filters conflicting modifier
+features, and packages the resulting root-level semantic predictions.
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass

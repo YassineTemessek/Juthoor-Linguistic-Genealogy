@@ -1,3 +1,9 @@
+"""Promotion and support helpers for canon-backed LV1 records.
+
+This module attaches coherence or cross-lingual evidence to canon entries and
+defines the promotion checks used by downstream export steps.
+"""
+
 from __future__ import annotations
 
 from dataclasses import replace
