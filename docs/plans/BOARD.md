@@ -31,7 +31,7 @@
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
 | I1 | Binary Composition Verification — do letter meanings predict nucleus meanings? | Claude | WIP | Data: 53.5% match, report building |
-| I2 | Third Letter Modifier Profiles — how does each letter modify as 3rd? | Claude | NEXT | Data prepped: `third_letter_modifier_data.json` |
+| I2 | Third Letter Modifier Profiles — how does each letter modify as 3rd? | Claude+Codex | DONE | `THIRD_LETTER_MODIFIER_PROFILES.md`, `third_letter_modifier_profiles.json` |
 | I3 | Reverse Pair Analysis — Anbar's reversal hypothesis on 166 pairs | Claude | NEXT | Data prepped: `reverse_pair_data.json` (166 pairs) |
 | A.1 | Audit unrecognized tokens in jabal_axial_meaning — frequency clusters | Codex | DONE | `feature_vocab_gap_report.md` |
 | A.2 | Expand FEATURE_VOCAB from 65 to ~85 features (modulation semantics) | Codex | DONE | `feature_decomposition.py` expanded with modulation/substance/location terms |
@@ -50,9 +50,9 @@
 | C.2 | Yassin reviews 8 DIVERGE letters | Yassin | NEXT | decisions in the doc |
 
 ## Codex
-last: A.1-A.5 and B.2-B.3 complete. Expanded vocab is landed, compatibility filtering is live, and the full rerun is on main.
-metrics: roots=1924, quranic=1666, nuclei=456, Method A=49.5%, root empty-actual=107 (from 113), mean actual features/root=2.5333, overall blended=0.1956, nonzero=4550/9620 (47.3%), strict consensus blended=0.2012, weighted=0.2016, Jabal=0.1950, Asim=0.1908, Abbas=0.1892, dropped-third-feature rows=1551, dropped-التحام rows=1156, nucleus-only rows=3178
-suggests: Claude should do A.6 and B.6 next. `feature_vocab_gap_report.md` shows vocab-only gains are modest, while the B.2-B.3 rerun materially lifted the root layer. After Claude's spot checks, the next useful move is final calibration/verdict or targeted follow-up on the 8 DIVERGE letters if they still dominate.
+last: I2 DONE. Generated `THIRD_LETTER_MODIFIER_PROFILES.md` and `third_letter_modifier_profiles.json` directly from `root_predictions.json`, with per-letter modifier signatures, blocked-feature rates, dominant routing models, and support/risk bands across the two consensus layers.
+metrics: roots=1924, quranic=1666, nuclei=456, score_rows=9284, root_rows=9620, overall blended=0.1956, nonzero=4550/9620 (47.3%), strict consensus blended=0.2012, weighted=0.2016, dropped-third-feature rows=1551, dropped-التحام rows=1156, nucleus-only rows=3178, strongest modifiers=ج/ظ, riskiest modifiers=ب/ت/ر/س/ع/ل
+suggests: Claude should use `THIRD_LETTER_MODIFIER_PROFILES.md` for I1 calibration and I3 interpretation. The modifier layer is now explicit: `ج` and `ظ` are the cleanest enrichers, `ر`/`ل`/`ب` still revolve around blocked `التحام`, and `س` remains too generic. Next Codex move should wait for Claude's review unless he wants a model change driven by these profiles.
 blocked: none
 
 ## Claude
