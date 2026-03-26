@@ -28,7 +28,7 @@ def _load_common_module(name: str):
     return module
 
 
-_statistics = _load_common_module("statistics")
+_statistics = _load_common_module("stat_helpers")
 _visualization = _load_common_module("visualization")
 wilcoxon_rank_sum = _statistics.wilcoxon_rank_sum
 cohens_d = _statistics.cohens_d

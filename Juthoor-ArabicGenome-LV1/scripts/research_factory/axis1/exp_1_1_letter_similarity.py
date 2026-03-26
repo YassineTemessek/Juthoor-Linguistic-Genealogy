@@ -29,7 +29,7 @@ def _load_common_module(name: str):
     return module
 
 
-_statistics = _load_common_module("statistics")
+_statistics = _load_common_module("stat_helpers")
 _visualization = _load_common_module("visualization")
 mantel_test = _statistics.mantel_test
 plot_dendrogram = _visualization.plot_dendrogram

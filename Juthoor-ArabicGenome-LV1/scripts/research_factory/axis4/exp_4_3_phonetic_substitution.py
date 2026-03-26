@@ -34,7 +34,7 @@ def _load_common_module(name: str):
     return module
 
 
-_statistics = _load_common_module("statistics")
+_statistics = _load_common_module("stat_helpers")
 spearman_corr = _statistics.spearman_corr
 
 
