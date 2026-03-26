@@ -46,8 +46,9 @@
 | B.6 | Spot check: did third-letter fixes recover the poisoned roots? | Claude | NEXT | review rerun after B.2-B.3 |
 | E.2 | Opus empirical letter meaning derivation (8 DIVERGE) | Claude | DONE | `empirical_letter_meanings.md` — 3 corrections needed |
 | F.1-F.3 | Full 28-letter empirical derivation (THE ARABIC LETTER GENOME) | Claude | DONE | `THE_ARABIC_LETTER_GENOME.md` — 1,397 lines, all 28 letters, 5-scholar comparison |
-| C.2 | Yassin reviews empirical findings + confirms corrections | Yassin | NEXT | م=تجمع, ع=ظهور+عمق, هـ=فراغ, غ=باطن+اشتمال |
-| C.2 | Yassin reviews 8 DIVERGE letters | Yassin | NEXT | decisions in the doc |
+| C.2 | Yassin confirms 4 letter corrections | Yassin | DONE | م=تجمع+تلاصق, ع=ظهور+عمق, غ=باطن+اشتمال, ب=ظهور+خروج |
+| F.4 | Apply 4 corrections to letter registry + rebuild consensus + re-run | Codex | NEXT | jabal_letters.jsonl + consensus + predictions |
+| F.5 | Method A re-calibration with corrected letters | Claude | BLOCKED | depends on F.4 |
 
 ## Codex
 last: I2 DONE. Generated `THIRD_LETTER_MODIFIER_PROFILES.md` and `third_letter_modifier_profiles.json` directly from `root_predictions.json`, with per-letter modifier signatures, blocked-feature rates, dominant routing models, and support/risk bands across the two consensus layers.
@@ -56,7 +57,14 @@ suggests: Claude should use `THIRD_LETTER_MODIFIER_PROFILES.md` for I1 calibrati
 blocked: none
 
 ## Claude
-last: B.1 DONE (495 failures classified: 53% contradicts, 20% wrong model, 15% weak, 13% generic. التحام is #1 poison feature. ر is top polluting letter). C.1 DONE (8 DIVERGE letters presented to Yassin with response template).
+last: I1+I3 DONE. Folder reorganized. Yassin confirmed 4 corrections. F.4 ready for Codex.
+verdict: Letter genome complete. Next: apply corrections, rebuild, re-score.
+next-codex: F.4 — apply م=تجمع+تلاصق, ع=ظهور+عمق, غ=باطن+اشتمال, ب=ظهور+خروج to jabal_letters.jsonl, rebuild consensus_strict, re-run all predictions
+next-claude: F.5 Method A re-calibration after F.4
+note: Corrections confirmed by Yassin 2026-03-26.
+
+## Claude-old
+last-old: B.1 DONE (495 failures classified: 53% contradicts, 20% wrong model, 15% weak, 13% generic. التحام is #1 poison feature. ر is top polluting letter). C.1 DONE (8 DIVERGE letters presented to Yassin with response template).
 verdict: Third-letter fix path is clear: blacklist التحام from third-letter contributions, add intersection→phon_gest fallback when over-pruning, nucleus-only fallback for weak cases. Expected recovery: ~120 roots.
 next-codex: A.1-A.5 (vocab expansion) + B.2-B.3 (third-letter fixes) — can be parallel
 next-claude: A.6 spot check after A.5. B.6 spot check after B.5. D.1-D.4 after all sprints.
