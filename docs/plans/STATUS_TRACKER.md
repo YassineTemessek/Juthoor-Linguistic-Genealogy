@@ -1,6 +1,30 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-21 (LV2 Evaluation Expansion complete; LV1 Core Restructure parked)
+**Last updated:** 2026-03-23 (LV1 Phase 2-3 Sprints 1-5 complete; Sprint 6 integration in progress)
+
+---
+
+## Active Plan: LV1 Phase 2-3 Scoring + Cross-Lingual (Claude + Codex)
+**Plan file:** `docs/plans/2026-03-23-lv1-phase2-3-orchestration.md`
+**Dispatch board:** `docs/plans/BOARD.md`
+**Baseline commit:** `5fbd510`
+
+| Sprint | Status | Key Results |
+|--------|--------|-------------|
+| S1: Scoring Fixes | DONE | Synonym groups, opposition mapping, Golden Rule 19.9% |
+| S2: Anbar Extraction | PARKED | Source too prose-heavy for reliable extraction |
+| S3: Root Prediction | DONE | Method A ~36.7%, blended J 0.175, 56.3% coverage |
+| S4: Abbas Sensory | DONE | NOT a scoring prior; parked as "not yet validated" |
+| S5: Cross-Lingual | DONE | Semitic 67.9% exact / 88.7% prefix. English 3/11 exact hits |
+| S6: Integration | IN PROGRESS | README + STATUS updates, LV2 feed-back |
+
+Key modules added:
+- `factory/root_predictor.py` — trilateral root prediction
+- `factory/composition_models.py` — intersection + phonetic_gestural (capped 2+1) + sequence
+- `factory/scoring.py` — jaccard + weighted_jaccard + blended_jaccard
+- `factory/sound_laws.py` — Khashim's 9 sound laws
+- `factory/cross_lingual_projection.py` — Arabic→Hebrew/Aramaic/English projection
+- `factory/cross_lingual_scoring.py` — benchmark scorer
 
 ---
 
@@ -143,10 +167,10 @@
 
 | Level | Tests | Last verified |
 |-------|-------|---------------|
-| LV0 | 174 | 2026-03-21 |
-| LV1 | 275 | 2026-03-21 |
-| LV2 | 262 | 2026-03-21 |
-| **Total** | **711** | |
+| LV0 | 174 | 2026-03-23 |
+| LV1 | 322 | 2026-03-23 |
+| LV2 | 262 | 2026-03-23 |
+| **Total** | **758** | |
 
 ---
 
@@ -174,7 +198,9 @@
 | `37872b6` | Add genome_bonus as 11th reranker feature |
 | `b9850a8` | Fix stale READMEs + add LV2 evaluation expansion plan |
 | `15e8c70` | Persist genome_bonus in lead components for reranker consumption |
+| `5fbd510` | Sprint 1 scoring fixes landed |
+| `e206a23` | Sprint 3 root prediction checkpoint |
 
 ---
 
-*Last updated: 2026-03-21 — LV2 Evaluation Expansion complete; test counts updated (LV0=174, LV1=275, LV2=262, Total=711)*
+*Last updated: 2026-03-23 — LV1 Phase 2-3 Sprints 1-5 complete; Sprint 6 in progress; test counts updated (LV0=174, LV1=322, LV2=262, Total=758)*

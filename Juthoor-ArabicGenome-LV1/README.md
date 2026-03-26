@@ -62,7 +62,9 @@ Research Factory
 | H11 | Machines can discover binary structure unsupervised | Independent | Not supported |
 | H12 | Root meaning is predictable from components | Generative test | **Supported** |
 
-## Research Factory Results (Phase 1-2)
+## Research Factory Results
+
+### Phase 1-2 (Axes 1-5)
 
 | Experiment | Metric | Result | Verdict |
 |-----------|--------|--------|---------|
@@ -76,6 +78,39 @@ Research Factory
 
 **Key finding:** Binary root families are significantly more semantically coherent than random groupings. This is the strongest quantitative evidence for Jabal's theory to date.
 
+### Sprint 3: Root Prediction (Phase 2-3 Generative)
+
+Predicting triliteral roots from binary nucleus + third-letter composition (1,938 roots).
+
+| Model | Blended Jaccard | Regular Jaccard | Nonzero Coverage |
+|-------|----------------|----------------|-----------------|
+| Intersection | — | 0.146 | 40.4% |
+| Phonetic-Gestural (capped 2+1) | — | — | 38% fallback |
+| **Combined (Method A)** | **0.175** | 0.146 | **56.3%** |
+
+- Method A (semantic) overall accuracy: ~36.7%
+- Best model by root count: Intersection (58% of roots), Phonetic-Gestural fallback (38%)
+- Empty-actual roots reduced from 207 to 113 across 3 targeted fix passes
+
+### Sprint 4: Abbas Sensory Validation
+
+- Abbas sensory categories do **not** function as a scoring prior
+- إيماء+إيماء block is the weakest: 0/36 nonzero pairs
+- Verdict: sensory-category weighting not viable at current feature resolution
+
+### Sprint 5: Cross-Linguistic Projection
+
+Khashim's 9 sound laws implemented. Arabic roots projected onto Semitic and non-Semitic cognates (64 pairs total).
+
+| Language family | Exact consonant match | Binary-prefix match | Pairs tested |
+|----------------|----------------------|--------------------:|:------------|
+| Semitic (Hebrew/Aramaic) | 67.9% | 88.7% | 53 |
+| Non-Semitic (English) | 27.3% | 45.5% | 11 |
+
+Notable Arabic→English hits: بيت→booth, طرق→track, جلد→cold
+
+Semantic meaning transfer not yet viable at feature-Jaccard level; phonetic projection is strong for Semitic, plausible for English.
+
 ## Project Structure
 
 ```
@@ -86,7 +121,12 @@ Juthoor-ArabicGenome-LV1/
 │   │   └── loaders.py               -- Load letters, roots, families
 │   ├── factory/                     -- Research engine
 │   │   ├── feature_store.py         -- Save/load numpy features
-│   │   └── experiment_runner.py     -- Run & log experiments
+│   │   ├── experiment_runner.py     -- Run & log experiments
+│   │   ├── root_predictor.py        -- Root-level prediction engine
+│   │   ├── composition_models.py    -- Intersection, phonetic_gestural, sequence models
+│   │   ├── scoring.py               -- Jaccard, weighted_jaccard, blended_jaccard
+│   │   ├── sound_laws.py            -- Khashim's 9 sound laws
+│   │   └── cross_lingual_projection.py -- Arabic→Hebrew/Aramaic/English projection
 │   └── qca/                         -- Quranic Corpus Analysis
 │
 ├── scripts/
