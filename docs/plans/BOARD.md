@@ -46,11 +46,11 @@ suggests: fix the 1 pre-existing test failure in test_promotions.py
 blocked: none
 
 ## Claude
-last: Extended polish session complete. Fixed import collision, archived plans, updated docs, built 4 new modules (integration test, quranic validation, scholar divergence, INDEX.md). Tests: 485 pass (was 415).
-verdict: LV1 is hardened. 485 tests, 4 new modules, docs current, folder organized. Ready for next research direction.
-next-codex: fix test_promotions.py failure, then awaiting direction
-next-claude: awaiting direction
-note: New modules ready for use: quranic_validation (split Quranic vs non-Quranic accuracy), scholar_divergence (quantify agreement across 5 scholars).
+last: Full round complete. Step 1: ran quranic_validation (Quranic bJ=0.188 vs non=0.288), scholar_divergence (15 STRONG/10 PARTIAL/5 DIVERGE), synonym extraction (326 families). Step 2: built position_aware_composer (10 modifier overrides, wired into predictor). Step 3: wrote THE_BINARY_NUCLEUS_GENOME (788 lines, 456 nuclei).
+verdict: 494 tests pass. 3 publishable documents added. Position-aware model ready for re-scoring.
+next-codex: re-run build_lv1_theory_assets.py with position-aware model, compare metrics vs current. Fix test_promotions.py failure.
+next-claude: Method A spot check after Codex re-runs with position-aware model.
+note: Codex CLI dispatch doesn't work from Claude Code (flag syntax issues). Use BOARD.md for dispatch.
 next-codex: 2.1 + 2.2 refactoring when he reads the board
 next-claude: 5.1 Quranic verse validation module, 5.2 scholar divergence analysis
 note: nonzero blended rate now 65.2% (was 57.2%). The 4 corrections are working.
