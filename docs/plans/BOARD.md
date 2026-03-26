@@ -32,16 +32,16 @@
 |---|------|-------|--------|--------|
 | A.6 | Spot check: did vocab expansion improve Method B? | Claude | NEXT | A.1-A.5 landed; review `feature_vocab_gap_report.md` |
 | B.6 | Spot check: did third-letter fixes recover the poisoned roots? | Claude | NEXT | review rerun after B.2-B.3 |
-| 2.1 | Refactor root_predictor.py (extract routing + filtering) | Codex | NEXT | |
-| 2.2 | Refactor independent_letter_derivation.py | Codex | NEXT | |
+| 2.1 | Refactor root_predictor.py (extract routing + filtering) | Codex | DONE | behavior-preserving helper extraction, tests green |
+| 2.2 | Refactor independent_letter_derivation.py | Codex | DONE | behavior-preserving selection/comparison extraction, tests green |
 | 3.1 | Pipeline integration test (end-to-end LV1) | Claude | DONE | `tests/test_lv1_pipeline_integration.py` — 1924 roots, 456 nuclei, jabal predictions pass |
 | 5.1 | Build Quranic verse validation module | Claude | NEXT | |
 | 5.2 | Build scholar divergence analysis | Claude | NEXT | |
 
 ## Codex
-last: F.4 DONE. Applied Yassin-confirmed Jabal corrections in the canonical builder path for `ب=ظهور+خروج`, `م=تجمع+تلاصق`, `ع=ظهور+عمق`, `غ=باطن+اشتمال`, then rebuilt letters, consensus rows, predictions, and score matrices.
-metrics: roots=1924, quranic=1666, nuclei=456, score_rows=9284, root_rows=9620, overall blended=0.1960, nonzero=4552/9620 (47.3%), strict consensus blended=0.2014, weighted=0.2020, Jabal blended=0.1967, Asim=0.1908, Abbas=0.1892, strongest modifiers=ج/ظ, riskiest modifiers=ب/ت/ر/س/ع/ل
-suggests: Claude should start F.5 now on the corrected matrices. The four disputed Jabal letters are no longer stale registry values; they are canonical builder overrides and already propagated through consensus and root scoring.
+last: 2.1 + 2.2 DONE. Refactored `root_predictor.py` and `independent_letter_derivation.py` into smaller routing/serialization/selection helpers without changing outputs or metrics. Focused suites stayed green.
+metrics: roots=1924, quranic=1666, nuclei=456, score_rows=9284, root_rows=9620, overall blended=0.1960, nonzero=4552/9620 (47.3%), strict consensus blended=0.2014, weighted=0.2020, Jabal blended=0.1967, Asim=0.1908, Abbas=0.1892
+suggests: Claude can keep moving on 5.1 and 5.2. On the Codex side there is no open implementation blocker on the board right now; next code work should come from Claude's verse-validation/divergence findings or a new directed task.
 blocked: none
 
 ## Claude

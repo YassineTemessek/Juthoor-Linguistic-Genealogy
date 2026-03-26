@@ -104,6 +104,100 @@ def choose_root_prediction_model(
     return "empty"
 
 
+def _dedupe_features(features: tuple[str, ...]) -> tuple[str, ...]:
+    return tuple(dict.fromkeys(features))
+
+
+def _resolve_intersection_prediction(
+    binary_features: tuple[str, ...],
+    third_letter_features: tuple[str, ...],
+) -> tuple[str, tuple[str, ...]]:
+    result = model_intersection(binary_features, third_letter_features)
+    exact_overlap = set(binary_features) & set(third_letter_features)
+    if (
+        binary_features
+        and third_letter_features
+        and not exact_overlap
+        and set(result.predicted_features).issubset(set(binary_features))
+    ):
+        return "nucleus_only", _dedupe_features(binary_features)
+    return "intersection", result.predicted_features
+
+
+def _resolve_prediction_features(
+    *,
+    model_name: str,
+    binary_features: tuple[str, ...],
+    third_letter_features: tuple[str, ...],
+    third_letter_articulatory: dict[str, Any] | None,
+) -> tuple[str, tuple[str, ...]]:
+    if model_name == "intersection":
+        return _resolve_intersection_prediction(binary_features, third_letter_features)
+    if model_name == "phonetic_gestural":
+        result = model_phonetic_gestural(
+            binary_features,
+            third_letter_features,
+            articulatory2=third_letter_articulatory,
+        )
+        return model_name, result.predicted_features
+    if model_name == "sequence":
+        result = model_sequence(binary_features, third_letter_features)
+        return model_name, result.predicted_features
+    if model_name == "nucleus_only":
+        return model_name, _dedupe_features(binary_features)
+    return model_name, ()
+
+
+def _build_prediction_row(
+    *,
+    source_row: dict[str, Any],
+    prediction: RootPrediction,
+    filtered_third_letter_features: tuple[str, ...],
+    dropped_third_letter_features: tuple[str, ...],
+) -> dict[str, Any]:
+    return {
+        "root": prediction.root,
+        "binary_nucleus": prediction.binary_nucleus,
+        "third_letter": prediction.third_letter,
+        "scholar": prediction.scholar,
+        "model": prediction.model_used,
+        "predicted_meaning": prediction.predicted_meaning,
+        "predicted_features": list(prediction.predicted_features),
+        "filtered_third_letter_features": list(filtered_third_letter_features),
+        "dropped_third_letter_features": list(dropped_third_letter_features),
+        "actual_features": list(prediction.actual_features),
+        "jaccard": round(prediction.jaccard, 6),
+        "weighted_jaccard": round(prediction.weighted_jaccard, 6),
+        "blended_jaccard": round(blended_jaccard(
+            prediction.predicted_features, prediction.actual_features,
+        ), 6),
+        "bab": source_row.get("bab"),
+        "quranic_verse": source_row.get("quranic_verse"),
+    }
+
+
+def _mean(values: list[float]) -> float:
+    return sum(values) / len(values) if values else 0.0
+
+
+def _cohort_summary(cohort_rows: list[dict[str, Any]]) -> dict[str, Any]:
+    nonzero_rows = [row for row in cohort_rows if row["jaccard"] > 0.0]
+    nonzero_blended_rows = [row for row in cohort_rows if row.get("blended_jaccard", 0.0) > 0.0]
+    valid_rows = [row for row in cohort_rows if row.get("neili_valid", True)]
+    return {
+        "count": len(cohort_rows),
+        "mean_jaccard": round(_mean([row["jaccard"] for row in cohort_rows]), 6),
+        "mean_weighted_jaccard": round(_mean([row["weighted_jaccard"] for row in cohort_rows]), 6),
+        "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in cohort_rows]), 6),
+        "nonzero_predictions": len(nonzero_rows),
+        "nonzero_rate": round(len(nonzero_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
+        "nonzero_blended": len(nonzero_blended_rows),
+        "nonzero_blended_rate": round(len(nonzero_blended_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
+        "neili_valid_predictions": len(valid_rows),
+        "neili_valid_rate": round(len(valid_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
+    }
+
+
 def predict_root_from_parts(
     *,
     root: str,
@@ -123,35 +217,12 @@ def predict_root_from_parts(
     if filtered_third_letter_features != third_letter_features:
         third_letter_features = filtered_third_letter_features
         model_name = choose_root_prediction_model(binary_features, third_letter_features)
-    predicted_features: tuple[str, ...]
-
-    if model_name == "intersection":
-        result = model_intersection(binary_features, third_letter_features)
-        exact_overlap = set(binary_features) & set(third_letter_features)
-        if (
-            binary_features
-            and third_letter_features
-            and not exact_overlap
-            and set(result.predicted_features).issubset(set(binary_features))
-        ):
-            model_name = "nucleus_only"
-            predicted_features = tuple(dict.fromkeys(binary_features))
-        else:
-            predicted_features = result.predicted_features
-    elif model_name == "phonetic_gestural":
-        result = model_phonetic_gestural(
-            binary_features,
-            third_letter_features,
-            articulatory2=third_letter_articulatory,
-        )
-        predicted_features = result.predicted_features
-    elif model_name == "sequence":
-        result = model_sequence(binary_features, third_letter_features)
-        predicted_features = result.predicted_features
-    elif model_name == "nucleus_only":
-        predicted_features = tuple(dict.fromkeys(binary_features))
-    else:
-        predicted_features = ()
+    model_name, predicted_features = _resolve_prediction_features(
+        model_name=model_name,
+        binary_features=binary_features,
+        third_letter_features=third_letter_features,
+        third_letter_articulatory=third_letter_articulatory,
+    )
 
     return RootPrediction(
         root=root,
@@ -197,27 +268,13 @@ def build_root_prediction_rows(
             scholar=scholar,
             third_letter_articulatory=third_letter_entry.get("articulatory_features"),
         )
-
         out.append(
-            {
-                "root": prediction.root,
-                "binary_nucleus": prediction.binary_nucleus,
-                "third_letter": prediction.third_letter,
-                "scholar": prediction.scholar,
-                "model": prediction.model_used,
-                "predicted_meaning": prediction.predicted_meaning,
-                "predicted_features": list(prediction.predicted_features),
-                "filtered_third_letter_features": list(filtered_third_letter_features),
-                "dropped_third_letter_features": list(dropped_third_letter_features),
-                "actual_features": list(prediction.actual_features),
-                "jaccard": round(prediction.jaccard, 6),
-                "weighted_jaccard": round(prediction.weighted_jaccard, 6),
-                "blended_jaccard": round(blended_jaccard(
-                    prediction.predicted_features, prediction.actual_features,
-                ), 6),
-                "bab": row.get("bab"),
-                "quranic_verse": row.get("quranic_verse"),
-            }
+            _build_prediction_row(
+                source_row=row,
+                prediction=prediction,
+                filtered_third_letter_features=filtered_third_letter_features,
+                dropped_third_letter_features=dropped_third_letter_features,
+            )
         )
     return out
 
@@ -294,30 +351,10 @@ def summarize_root_predictions(rows: list[dict[str, Any]]) -> dict[str, Any]:
         else:
             non_quranic_rows.append(row)
 
-    def _mean(values: list[float]) -> float:
-        return sum(values) / len(values) if values else 0.0
-
     nonzero_blended = [row for row in rows if row.get("blended_jaccard", 0.0) > 0.0]
     neili_valid_rows = [row for row in rows if row.get("neili_valid", True)]
     neili_hard_rejected = [row for row in rows if row.get("neili_hard_flag_count", 0) > 0]
     neili_soft_flagged = [row for row in rows if row.get("neili_soft_flag_count", 0) > 0]
-
-    def _cohort_summary(cohort_rows: list[dict[str, Any]]) -> dict[str, Any]:
-        nonzero_rows = [row for row in cohort_rows if row["jaccard"] > 0.0]
-        nonzero_blended_rows = [row for row in cohort_rows if row.get("blended_jaccard", 0.0) > 0.0]
-        valid_rows = [row for row in cohort_rows if row.get("neili_valid", True)]
-        return {
-            "count": len(cohort_rows),
-            "mean_jaccard": round(_mean([row["jaccard"] for row in cohort_rows]), 6),
-            "mean_weighted_jaccard": round(_mean([row["weighted_jaccard"] for row in cohort_rows]), 6),
-            "mean_blended_jaccard": round(_mean([row.get("blended_jaccard", 0.0) for row in cohort_rows]), 6),
-            "nonzero_predictions": len(nonzero_rows),
-            "nonzero_rate": round(len(nonzero_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
-            "nonzero_blended": len(nonzero_blended_rows),
-            "nonzero_blended_rate": round(len(nonzero_blended_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
-            "neili_valid_predictions": len(valid_rows),
-            "neili_valid_rate": round(len(valid_rows) / len(cohort_rows), 6) if cohort_rows else 0.0,
-        }
 
     return {
         "overall": {

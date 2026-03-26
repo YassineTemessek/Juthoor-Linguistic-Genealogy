@@ -307,6 +307,11 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
   - `consensus_strict`: `0.201399`
 - next semantic checkpoint is Claude's `F.5` Method A recalibration on the corrected matrices
 
+**Refactor checkpoint (2.1 + 2.2, 2026-03-26):**
+- `root_predictor.py` refactored into smaller routing, intersection-fallback, cohort-summary, and row-serialization helpers
+- `independent_letter_derivation.py` refactored into smaller feature-selection, position-payload, and scholar-classification helpers
+- focused suites remained green with no intended metric drift; this was maintenance/polish for the active LV1 pipeline, not a semantic-model change
+
 ---
 
 ### Task 3.3: Add Quranic-first validation
