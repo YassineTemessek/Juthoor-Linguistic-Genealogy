@@ -30,6 +30,9 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
+| I1 | Binary Composition Verification — do letter meanings predict nucleus meanings? | Claude | WIP | Data: 53.5% match, report building |
+| I2 | Third Letter Modifier Profiles — how does each letter modify as 3rd? | Claude | NEXT | Data prepped: `third_letter_modifier_data.json` |
+| I3 | Reverse Pair Analysis — Anbar's reversal hypothesis on 166 pairs | Claude | NEXT | Data prepped: `reverse_pair_data.json` (166 pairs) |
 | A.1 | Audit unrecognized tokens in jabal_axial_meaning — frequency clusters | Codex | DONE | `feature_vocab_gap_report.md` |
 | A.2 | Expand FEATURE_VOCAB from 65 to ~85 features (modulation semantics) | Codex | DONE | `feature_decomposition.py` expanded with modulation/substance/location terms |
 | A.3 | Re-extract jabal_features for all 1,924 roots with expanded vocab | Codex | DONE | roots rebuilt with expanded decomposition |
@@ -41,6 +44,9 @@
 | B.2 | Build semantic compatibility filter + blacklist التحام from third-letter | Codex | DONE | `root_predictor.py` filter + dropped feature tracking |
 | B.3 | Add nucleus-only fallback when intersection over-prunes | Codex | DONE | `root_predictor.py` category-only pseudo-overlap -> nucleus fallback |
 | B.6 | Spot check: did third-letter fixes recover the poisoned roots? | Claude | NEXT | review rerun after B.2-B.3 |
+| E.2 | Opus empirical letter meaning derivation (8 DIVERGE) | Claude | DONE | `empirical_letter_meanings.md` — 3 corrections needed |
+| F.1-F.3 | Full 28-letter empirical derivation (THE ARABIC LETTER GENOME) | Claude | DONE | `THE_ARABIC_LETTER_GENOME.md` — 1,397 lines, all 28 letters, 5-scholar comparison |
+| C.2 | Yassin reviews empirical findings + confirms corrections | Yassin | NEXT | م=تجمع, ع=ظهور+عمق, هـ=فراغ, غ=باطن+اشتمال |
 | C.2 | Yassin reviews 8 DIVERGE letters | Yassin | NEXT | decisions in the doc |
 
 ## Codex
