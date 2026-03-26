@@ -8,10 +8,10 @@ import sys
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.append(str(REPO_ROOT / "src"))
 
-from ingest.adapters.quran_lemmas import QuranLemmasAdapter
-from ingest.adapters.english_ipa import EnglishIPAAdapter
-from ingest.adapters.wiktionary_filtered import WiktionaryFilteredAdapter
-from ingest.adapters.concepts import ConceptsAdapter
+from juthoor_datacore_lv0.ingest.adapters.quran_lemmas import QuranLemmasAdapter
+from juthoor_datacore_lv0.ingest.adapters.english_ipa import EnglishIPAAdapter
+from juthoor_datacore_lv0.ingest.adapters.wiktionary_filtered import WiktionaryFilteredAdapter
+from juthoor_datacore_lv0.ingest.adapters.concepts import ConceptsAdapter
 
 
 def main() -> None:

@@ -15,8 +15,8 @@
         "رجوع"
       ],
       "inverted_forward_features": [
-        "اختراق",
-        "إبعاد"
+        "إبعاد",
+        "اختراق"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -43,8 +43,8 @@
         "امتداد"
       ],
       "inverted_forward_features": [
-        "اتصال",
-        "اتساع"
+        "اتساع",
+        "اتصال"
       ],
       "overlap_with_reverse": [
         "اتساع"
@@ -65,8 +65,8 @@
         "غلظ"
       ],
       "inverted_forward_features": [
-        "تلاصق",
-        "احتواء"
+        "احتواء",
+        "تلاصق"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -83,8 +83,8 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "خروج",
-        "إبعاد"
+        "إبعاد",
+        "خروج"
       ],
       "overlap_with_reverse": [
         "إبعاد"
@@ -104,8 +104,8 @@
         "غلظ"
       ],
       "inverted_forward_features": [
-        "اتصال",
-        "قطع"
+        "قطع",
+        "اتصال"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -143,8 +143,8 @@
         "استواء"
       ],
       "inverted_forward_features": [
-        "قوة",
-        "احتواء"
+        "احتواء",
+        "قوة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -164,8 +164,8 @@
         "لطف"
       ],
       "inverted_forward_features": [
-        "باطن",
-        "ضغط"
+        "ضغط",
+        "باطن"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -334,9 +334,9 @@
         "إمساك"
       ],
       "inverted_forward_features": [
+        "تفرق",
         "نصاعة",
-        "قوة",
-        "تفرق"
+        "قوة"
       ],
       "overlap_with_reverse": [
         "قوة"
@@ -356,8 +356,8 @@
         "باطن"
       ],
       "inverted_forward_features": [
-        "فراغ",
-        "ثقل"
+        "ثقل",
+        "فراغ"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -377,10 +377,10 @@
         "حيز"
       ],
       "inverted_forward_features": [
-        "نقص",
-        "احتواء",
         "انتقال",
-        "حيز"
+        "احتواء",
+        "حيز",
+        "نقص"
       ],
       "overlap_with_reverse": [
         "حيز"
@@ -401,8 +401,8 @@
       ],
       "inverted_forward_features": [
         "فوران",
-        "انحسار",
-        "احتواء"
+        "احتواء",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -423,9 +423,9 @@
         "غلظ"
       ],
       "inverted_forward_features": [
+        "انتشار",
         "نقص",
-        "باطن",
-        "انتشار"
+        "باطن"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -441,8 +441,8 @@
         "تجمع"
       ],
       "inverted_forward_features": [
-        "فراغ",
-        "اختراق"
+        "اختراق",
+        "فراغ"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -461,9 +461,9 @@
         "اشتمال"
       ],
       "inverted_forward_features": [
-        "نقص",
+        "انتشار",
         "رخاوة",
-        "انتشار"
+        "نقص"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -479,8 +479,8 @@
         "صعود"
       ],
       "inverted_forward_features": [
-        "انحسار",
-        "إبعاد"
+        "إبعاد",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -520,8 +520,8 @@
         "دقة"
       ],
       "inverted_forward_features": [
-        "رخاوة",
-        "دقة"
+        "دقة",
+        "رخاوة"
       ],
       "overlap_with_reverse": [
         "دقة"
@@ -584,8 +584,8 @@
         "عمق"
       ],
       "inverted_forward_features": [
-        "عمق",
-        "ظاهر"
+        "ظاهر",
+        "عمق"
       ],
       "overlap_with_reverse": [
         "عمق"
@@ -606,8 +606,8 @@
         "نقص"
       ],
       "inverted_forward_features": [
-        "استقلال",
-        "تفرق"
+        "تفرق",
+        "استقلال"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -644,9 +644,9 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "فراغ",
         "رخاوة",
-        "ظاهر"
+        "ظاهر",
+        "فراغ"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -663,8 +663,8 @@
         "كثافة"
       ],
       "inverted_forward_features": [
-        "غزارة",
-        "تفرق"
+        "تفرق",
+        "غزارة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -699,8 +699,8 @@
         "انتشار"
       ],
       "inverted_forward_features": [
-        "إمساك",
-        "احتواء"
+        "احتواء",
+        "إمساك"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -770,8 +770,8 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "رقة",
         "ظاهر",
+        "رقة",
         "حدة"
       ],
       "overlap_with_reverse": [],
@@ -791,10 +791,10 @@
         "انتقال"
       ],
       "inverted_forward_features": [
-        "انحسار",
-        "ظاهر",
         "إبعاد",
-        "استرسال"
+        "استرسال",
+        "ظاهر",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -813,8 +813,8 @@
         "اشتمال"
       ],
       "inverted_forward_features": [
-        "اتصال",
-        "تميز"
+        "تميز",
+        "اتصال"
       ],
       "overlap_with_reverse": [
         "اتصال"
@@ -908,8 +908,8 @@
         "اندفاع"
       ],
       "inverted_forward_features": [
-        "كثافة",
-        "تفرق"
+        "تفرق",
+        "كثافة"
       ],
       "overlap_with_reverse": [
         "كثافة"
@@ -930,8 +930,8 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "كثافة",
-        "ظاهر"
+        "ظاهر",
+        "كثافة"
       ],
       "overlap_with_reverse": [
         "كثافة"
@@ -954,8 +954,8 @@
       "inverted_forward_features": [
         "فراغ",
         "إمساك",
-        "انحسار",
-        "إبعاد"
+        "إبعاد",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -973,8 +973,8 @@
         "رقة"
       ],
       "inverted_forward_features": [
-        "رقة",
         "ضغط",
+        "رقة",
         "خلوص"
       ],
       "overlap_with_reverse": [
@@ -999,10 +999,10 @@
         "مقر"
       ],
       "inverted_forward_features": [
-        "صلابة",
         "شق",
-        "تميز",
+        "صلابة",
         "دقة",
+        "تميز",
         "رقة"
       ],
       "overlap_with_reverse": [],
@@ -1043,8 +1043,8 @@
         "جفاف"
       ],
       "inverted_forward_features": [
-        "جفاف",
-        "امتساك"
+        "امتساك",
+        "جفاف"
       ],
       "overlap_with_reverse": [
         "جفاف"
@@ -1065,11 +1065,11 @@
         "جفاف"
       ],
       "inverted_forward_features": [
+        "جفاف",
         "تفرق",
         "إبعاد",
-        "رقة",
-        "جفاف",
-        "قطع"
+        "قطع",
+        "رقة"
       ],
       "overlap_with_reverse": [
         "جفاف"
@@ -1090,8 +1090,8 @@
       ],
       "inverted_forward_features": [
         "رخاوة",
-        "رقة",
-        "اتساع"
+        "اتساع",
+        "رقة"
       ],
       "overlap_with_reverse": [
         "اتساع"
@@ -1111,9 +1111,9 @@
         "ضغط"
       ],
       "inverted_forward_features": [
-        "فراغ",
         "رخاوة",
-        "ظاهر"
+        "ظاهر",
+        "فراغ"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1149,9 +1149,9 @@
         "جفاف"
       ],
       "inverted_forward_features": [
+        "انتشار",
         "مقر",
-        "عمق",
-        "انتشار"
+        "عمق"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1168,8 +1168,8 @@
         "امتداد"
       ],
       "inverted_forward_features": [
-        "انحسار",
-        "تماسك"
+        "تماسك",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1223,10 +1223,10 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "رخاوة",
-        "كثافة",
         "امتلاء",
-        "إبعاد"
+        "إبعاد",
+        "رخاوة",
+        "كثافة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1263,11 +1263,11 @@
         "باطن"
       ],
       "inverted_forward_features": [
-        "نقص",
         "نفاذ",
+        "نقص",
+        "حيز",
         "رخاوة",
-        "رقة",
-        "حيز"
+        "رقة"
       ],
       "overlap_with_reverse": [
         "نفاذ"
@@ -1286,9 +1286,9 @@
         "رخاوة"
       ],
       "inverted_forward_features": [
-        "استواء",
         "تماسك",
-        "اتساع"
+        "اتساع",
+        "استواء"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1406,8 +1406,8 @@
         "نقص"
       ],
       "inverted_forward_features": [
-        "ظاهر",
-        "تماسك"
+        "تماسك",
+        "ظاهر"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1427,10 +1427,10 @@
         "باطن"
       ],
       "inverted_forward_features": [
-        "انحسار",
-        "ظاهر",
         "إبعاد",
-        "استرسال"
+        "استرسال",
+        "ظاهر",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1450,9 +1450,9 @@
       ],
       "inverted_forward_features": [
         "دقة",
-        "تلاصق",
+        "حدة",
         "نفاذ",
-        "حدة"
+        "تلاصق"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1474,12 +1474,12 @@
         "اتصال"
       ],
       "inverted_forward_features": [
+        "استقلال",
         "اشتمال",
-        "تلاصق",
-        "تفرق",
-        "فراغ",
         "قوة",
-        "استقلال"
+        "فراغ",
+        "تفرق",
+        "تلاصق"
       ],
       "overlap_with_reverse": [
         "تلاصق"
@@ -1497,8 +1497,8 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "فراغ",
-        "باطن"
+        "باطن",
+        "فراغ"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1523,9 +1523,9 @@
       "inverted_forward_features": [
         "حدة",
         "فراغ",
-        "إمساك",
         "رخاوة",
-        "صدم"
+        "صدم",
+        "إمساك"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1547,10 +1547,10 @@
       ],
       "inverted_forward_features": [
         "مقر",
-        "انحسار",
+        "باطن",
         "إبعاد",
         "رخاوة",
-        "باطن"
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1568,9 +1568,9 @@
         "امتداد"
       ],
       "inverted_forward_features": [
-        "باطن",
+        "بروز",
         "استواء",
-        "بروز"
+        "باطن"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1588,8 +1588,8 @@
         "رقة"
       ],
       "inverted_forward_features": [
-        "ظاهر",
-        "انتشار"
+        "انتشار",
+        "ظاهر"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1607,9 +1607,9 @@
         "نقص"
       ],
       "inverted_forward_features": [
-        "ظاهر",
         "دقة",
         "نفاذ",
+        "ظاهر",
         "استرسال"
       ],
       "overlap_with_reverse": [],
@@ -1663,8 +1663,8 @@
       ],
       "inverted_forward_features": [
         "رقة",
-        "صلابة",
-        "حدة"
+        "حدة",
+        "صلابة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1681,8 +1681,8 @@
         "لطف"
       ],
       "inverted_forward_features": [
-        "فيض",
-        "اتساع"
+        "اتساع",
+        "فيض"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1702,8 +1702,8 @@
       ],
       "inverted_forward_features": [
         "استقلال",
-        "انحسار",
-        "إبعاد"
+        "إبعاد",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1743,8 +1743,8 @@
         "دقة"
       ],
       "inverted_forward_features": [
-        "انحسار",
-        "نفاذ"
+        "نفاذ",
+        "انحسار"
       ],
       "overlap_with_reverse": [
         "نفاذ"
@@ -1783,9 +1783,9 @@
         "انتشار"
       ],
       "inverted_forward_features": [
-        "التحام",
+        "انتشار",
         "رقة",
-        "انتشار"
+        "التحام"
       ],
       "overlap_with_reverse": [
         "انتشار"
@@ -1805,8 +1805,8 @@
         "ضغط"
       ],
       "inverted_forward_features": [
-        "قوة",
-        "ظاهر"
+        "ظاهر",
+        "قوة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1846,9 +1846,9 @@
       ],
       "inverted_forward_features": [
         "غلظ",
-        "انحسار",
+        "إبعاد",
         "قوة",
-        "إبعاد"
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1887,9 +1887,9 @@
       ],
       "inverted_forward_features": [
         "غلظ",
-        "انحسار",
+        "إبعاد",
         "قوة",
-        "إبعاد"
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1907,8 +1907,8 @@
         "حيز"
       ],
       "inverted_forward_features": [
-        "نقص",
-        "غلظ"
+        "غلظ",
+        "نقص"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1928,10 +1928,10 @@
         "امتداد"
       ],
       "inverted_forward_features": [
-        "كثافة",
         "تفرق",
         "اتساع",
-        "تخلخل"
+        "تخلخل",
+        "كثافة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -1953,9 +1953,9 @@
         "تخلخل"
       ],
       "inverted_forward_features": [
-        "قوة",
         "تفرق",
-        "انتقال"
+        "انتقال",
+        "قوة"
       ],
       "overlap_with_reverse": [
         "انتقال",
@@ -1979,9 +1979,9 @@
       ],
       "inverted_forward_features": [
         "فراغ",
-        "إمساك",
         "نفاذ",
-        "ظاهر"
+        "ظاهر",
+        "إمساك"
       ],
       "overlap_with_reverse": [
         "نفاذ"
@@ -2001,8 +2001,8 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "تلاصق",
-        "انتقال"
+        "انتقال",
+        "تلاصق"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2045,8 +2045,8 @@
         "نفاذ"
       ],
       "inverted_forward_features": [
-        "تفرق",
         "انتقال",
+        "تفرق",
         "قوة"
       ],
       "overlap_with_reverse": [
@@ -2070,9 +2070,9 @@
         "اشتمال"
       ],
       "inverted_forward_features": [
-        "كثافة",
         "امتلاء",
-        "إبعاد"
+        "إبعاد",
+        "كثافة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2089,8 +2089,8 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "استواء",
-        "انتقال"
+        "انتقال",
+        "استواء"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2131,9 +2131,9 @@
         "ظاهر"
       ],
       "inverted_forward_features": [
+        "تفرق",
         "رخاوة",
         "ظاهر",
-        "تفرق",
         "باطن"
       ],
       "overlap_with_reverse": [
@@ -2155,8 +2155,8 @@
         "امتداد"
       ],
       "inverted_forward_features": [
-        "نقص",
         "حيز",
+        "نقص",
         "اتساع"
       ],
       "overlap_with_reverse": [],
@@ -2190,9 +2190,9 @@
         "تسرب"
       ],
       "inverted_forward_features": [
-        "جفاف",
+        "باطن",
         "نفاذ",
-        "باطن"
+        "جفاف"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2212,8 +2212,8 @@
         "حدة"
       ],
       "inverted_forward_features": [
-        "رقة",
         "نفاذ",
+        "رقة",
         "جوف"
       ],
       "overlap_with_reverse": [],
@@ -2233,8 +2233,8 @@
         "عمق"
       ],
       "inverted_forward_features": [
-        "رخاوة",
         "انسداد",
+        "رخاوة",
         "نفاذ"
       ],
       "overlap_with_reverse": [],
@@ -2253,8 +2253,8 @@
         "مقر"
       ],
       "inverted_forward_features": [
-        "طول",
-        "استرسال"
+        "استرسال",
+        "طول"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2270,8 +2270,8 @@
         "اتصال"
       ],
       "inverted_forward_features": [
-        "تفرق",
-        "احتباس"
+        "احتباس",
+        "تفرق"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2291,11 +2291,11 @@
         "دقة"
       ],
       "inverted_forward_features": [
-        "انحسار",
         "نفاذ",
-        "إبعاد",
         "حدة",
-        "دقة"
+        "دقة",
+        "إبعاد",
+        "انحسار"
       ],
       "overlap_with_reverse": [
         "دقة",
@@ -2318,9 +2318,9 @@
       ],
       "inverted_forward_features": [
         "دقة",
-        "انحسار",
         "امتساك",
-        "تجمع"
+        "تجمع",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2339,10 +2339,10 @@
         "كثافة"
       ],
       "inverted_forward_features": [
-        "اشتمال",
-        "كثافة",
-        "حدة",
         "استقلال",
+        "اشتمال",
+        "حدة",
+        "كثافة",
         "رخاوة"
       ],
       "overlap_with_reverse": [
@@ -2379,8 +2379,8 @@
         "ظاهر"
       ],
       "inverted_forward_features": [
-        "إمساك",
-        "قطع"
+        "قطع",
+        "إمساك"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2400,9 +2400,9 @@
         "التحام"
       ],
       "inverted_forward_features": [
+        "تفرق",
         "رخاوة",
         "نفاذ",
-        "تفرق",
         "حدة"
       ],
       "overlap_with_reverse": [],
@@ -2422,9 +2422,9 @@
         "امتداد"
       ],
       "inverted_forward_features": [
-        "باطن",
         "تفرق",
-        "استرسال"
+        "استرسال",
+        "باطن"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2462,9 +2462,9 @@
         "قوة"
       ],
       "inverted_forward_features": [
+        "تماسك",
         "تفرق",
         "تخلخل",
-        "تماسك",
         "تجمع"
       ],
       "overlap_with_reverse": [],
@@ -2502,12 +2502,12 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "تعقد",
-        "تفرق",
-        "غلظ",
-        "رقة",
         "ضغط",
-        "خلوص"
+        "غلظ",
+        "خلوص",
+        "تفرق",
+        "تعقد",
+        "رقة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2526,10 +2526,10 @@
         "إمساك"
       ],
       "inverted_forward_features": [
-        "إمساك",
-        "صلابة",
         "انسداد",
-        "رقة"
+        "صلابة",
+        "رقة",
+        "إمساك"
       ],
       "overlap_with_reverse": [
         "إمساك"
@@ -2552,12 +2552,12 @@
         "امتداد"
       ],
       "inverted_forward_features": [
-        "انحسار",
-        "خروج",
-        "إبعاد",
-        "إمساك",
         "انتشار",
-        "جوف"
+        "جوف",
+        "انحسار",
+        "إبعاد",
+        "خروج",
+        "إمساك"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2578,10 +2578,10 @@
         "اشتداد"
       ],
       "inverted_forward_features": [
+        "تخلخل",
         "رخاوة",
         "رقة",
-        "تجمع",
-        "تخلخل"
+        "تجمع"
       ],
       "overlap_with_reverse": [
         "تجمع"
@@ -2601,9 +2601,9 @@
         "رخاوة"
       ],
       "inverted_forward_features": [
+        "تفرق",
         "قوة",
-        "كثافة",
-        "تفرق"
+        "كثافة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2654,9 +2654,9 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "فراغ",
         "تفرق",
-        "إبعاد"
+        "إبعاد",
+        "فراغ"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2674,8 +2674,8 @@
         "ظاهر"
       ],
       "inverted_forward_features": [
-        "استقلال",
-        "حيز"
+        "حيز",
+        "استقلال"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2727,8 +2727,8 @@
       ],
       "inverted_forward_features": [
         "اشتمال",
-        "انحسار",
-        "إبعاد"
+        "إبعاد",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2765,9 +2765,9 @@
         "ظاهر"
       ],
       "inverted_forward_features": [
-        "انحسار",
+        "إبعاد",
         "باطن",
-        "إبعاد"
+        "انحسار"
       ],
       "overlap_with_reverse": [
         "باطن"
@@ -2859,8 +2859,8 @@
         "قوة"
       ],
       "inverted_forward_features": [
-        "باطن",
-        "اتساع"
+        "اتساع",
+        "باطن"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2901,8 +2901,8 @@
         "باطن"
       ],
       "inverted_forward_features": [
-        "فراغ",
-        "امتساك"
+        "امتساك",
+        "فراغ"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2939,9 +2939,9 @@
         "غلظ"
       ],
       "inverted_forward_features": [
-        "التحام",
+        "تفرق",
         "باطن",
-        "تفرق"
+        "التحام"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2958,8 +2958,8 @@
         "رقة"
       ],
       "inverted_forward_features": [
-        "باطن",
-        "لطف"
+        "لطف",
+        "باطن"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -2999,9 +2999,9 @@
         "باطن"
       ],
       "inverted_forward_features": [
-        "نقص",
         "حيز",
-        "لطف"
+        "لطف",
+        "نقص"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -3021,9 +3021,9 @@
         "امتساك"
       ],
       "inverted_forward_features": [
-        "عمق",
         "شق",
-        "ضغط"
+        "ضغط",
+        "عمق"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -3057,9 +3057,9 @@
         "كثافة"
       ],
       "inverted_forward_features": [
+        "اتساع",
         "اتصال",
-        "باطن",
-        "اتساع"
+        "باطن"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -3079,8 +3079,8 @@
       ],
       "inverted_forward_features": [
         "غلظ",
-        "انحسار",
-        "اتساع"
+        "اتساع",
+        "انحسار"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -3116,9 +3116,9 @@
         "باطن"
       ],
       "inverted_forward_features": [
-        "رخاوة",
+        "تفرق",
         "صعود",
-        "تفرق"
+        "رخاوة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -3139,11 +3139,11 @@
         "غلظ"
       ],
       "inverted_forward_features": [
-        "إمساك",
-        "انحسار",
         "نفاذ",
+        "ظاهر",
         "عمق",
-        "ظاهر"
+        "انحسار",
+        "إمساك"
       ],
       "overlap_with_reverse": [
         "عمق"
@@ -3162,8 +3162,8 @@
         "اكتناز"
       ],
       "inverted_forward_features": [
-        "دقة",
-        "تفرق"
+        "تفرق",
+        "دقة"
       ],
       "overlap_with_reverse": [],
       "confirmed": false
@@ -3220,8 +3220,8 @@
         "اتساع"
       ],
       "inverted_forward_features": [
-        "امتساك",
         "تفرق",
+        "امتساك",
         "باطن"
       ],
       "overlap_with_reverse": [],
@@ -3262,9 +3262,9 @@
         "لطف"
       ],
       "inverted_forward_features": [
-        "رخاوة",
         "انتشار",
-        "اتساع"
+        "اتساع",
+        "رخاوة"
       ],
       "overlap_with_reverse": [
         "انتشار"

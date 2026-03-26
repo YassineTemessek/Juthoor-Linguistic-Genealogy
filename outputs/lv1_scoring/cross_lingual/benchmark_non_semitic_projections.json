@@ -319,11 +319,10 @@
     "target_gloss": "track",
     "relation": "cognate",
     "confidence": 0.5,
-    "predicted_meaning": "تلاصق + امتداد + تعقد",
+    "predicted_meaning": "تلاصق + عمق",
     "predicted_features": [
       "تلاصق",
-      "امتداد",
-      "تعقد"
+      "عمق"
     ],
     "actual_features": [
       "امتداد",
@@ -332,9 +331,9 @@
       "ضغط"
     ],
     "meanings_score": {
-      "jaccard": 0.2,
-      "weighted_jaccard": 0.166667,
-      "blended_jaccard": 0.34
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "blended_jaccard": 0.0
     },
     "projected_variants": [
       "ṭrq",
@@ -396,20 +395,19 @@
     "target_gloss": "shelf/frame",
     "relation": "cognate",
     "confidence": 0.7,
-    "predicted_meaning": "اتساع + رقة + تعقد",
+    "predicted_meaning": "اتساع + عمق",
     "predicted_features": [
       "اتساع",
-      "رقة",
-      "تعقد"
+      "عمق"
     ],
     "actual_features": [
       "اتساع",
       "رخاوة"
     ],
     "meanings_score": {
-      "jaccard": 0.25,
-      "weighted_jaccard": 0.25,
-      "blended_jaccard": 0.375
+      "jaccard": 0.333333,
+      "weighted_jaccard": 0.333333,
+      "blended_jaccard": 0.333333
     },
     "projected_variants": [
       "rqqrqrq",
@@ -1035,11 +1033,9 @@
     "target_gloss": "a person/humanity",
     "relation": "cognate",
     "confidence": 0.8,
-    "predicted_meaning": "استواء + ظاهر + تجمع",
+    "predicted_meaning": "ظاهر",
     "predicted_features": [
-      "استواء",
-      "ظاهر",
-      "تجمع"
+      "ظاهر"
     ],
     "actual_features": [
       "احتواء",
@@ -1047,9 +1043,9 @@
       "ظاهر"
     ],
     "meanings_score": {
-      "jaccard": 0.2,
-      "weighted_jaccard": 0.2,
-      "blended_jaccard": 0.29
+      "jaccard": 0.333333,
+      "weighted_jaccard": 0.333333,
+      "blended_jaccard": 0.333333
     },
     "projected_variants": [
       "adm",
@@ -1664,11 +1660,10 @@
     "target_gloss": "connected metal links/fetter",
     "relation": "cognate",
     "confidence": 0.8,
-    "predicted_meaning": "قطع + استواء + امتداد",
+    "predicted_meaning": "قطع + نفاذ",
     "predicted_features": [
       "قطع",
-      "استواء",
-      "امتداد"
+      "نفاذ"
     ],
     "actual_features": [
       "تعلق"
