@@ -81,9 +81,12 @@ def model_phonetic_gestural(
     return CompositionResult("phonetic_gestural", ordered, _categories(ordered))
 
 
+from juthoor_arabicgenome_lv1.factory.position_aware_composer import model_position_aware  # noqa: E402
+
 COMPOSITION_MODELS = {
     "intersection": model_intersection,
     "sequence": model_sequence,
     "dialectical": model_dialectical,
     "phonetic_gestural": model_phonetic_gestural,
+    "position_aware": model_position_aware,
 }
