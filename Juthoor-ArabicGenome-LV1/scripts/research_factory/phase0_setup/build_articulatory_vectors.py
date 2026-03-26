@@ -1,3 +1,4 @@
+# ACTIVE: current Phase 0 setup script for articulatory vectors, documented and covered by tests.
 """Build articulatory feature vectors for 28 Arabic letters.
 
 Loads makhaarij.json (place of articulation) and sifaat.json (binary features),

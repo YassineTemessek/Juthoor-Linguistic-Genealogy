@@ -1,3 +1,4 @@
+# ARCHIVED: deprecated shim that only prints guidance after ingest ownership moved out of this script path.
 param(
   [string]$Python = "python"
 )

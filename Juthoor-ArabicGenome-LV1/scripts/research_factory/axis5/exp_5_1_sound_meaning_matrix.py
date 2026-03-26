@@ -1,3 +1,4 @@
+# ACTIVE: maintained Axis 5 sound-meaning matrix experiment with direct test coverage.
 from __future__ import annotations
 
 import json

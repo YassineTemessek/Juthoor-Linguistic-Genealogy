@@ -1,3 +1,4 @@
+# ARCHIVED: legacy coverage-gap diagnosis for `outputs/genome`; it targets the pre-`genome_v2` layout.
 """
 diagnose_coverage_gap.py
 Investigates WHY ~989 Muajam roots are absent from the LV1 genome.

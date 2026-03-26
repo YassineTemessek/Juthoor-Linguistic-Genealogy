@@ -1,3 +1,4 @@
+# ACTIVE: maintained Axis 1 positional semantics experiment with direct test coverage.
 from __future__ import annotations
 
 import json

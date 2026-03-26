@@ -1,3 +1,4 @@
+# ACTIVE: current Phase 1 genome builder, still documented in README and covered by tests.
 """
 LV1 Arabic Genome — Phase 1: Brute word list
 

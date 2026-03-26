@@ -1,3 +1,4 @@
+# ACTIVE: current QCA subset extractor referenced by package docs and QCA docs.
 import argparse
 import sys
 from pathlib import Path

@@ -1,3 +1,4 @@
+# ACTIVE: current QCA co-occurrence analysis script referenced by the QCA package docs.
 import argparse
 import json
 import os

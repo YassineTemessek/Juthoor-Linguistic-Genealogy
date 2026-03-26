@@ -1,3 +1,4 @@
+# ARCHIVED: legacy coverage audit for `outputs/genome`; current LV1 pipeline uses newer `outputs/genome_v2` assets instead.
 """
 coverage_check.py
 Cross-references Muajam roots (data/muajam/roots.jsonl) with

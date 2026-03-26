@@ -1,3 +1,4 @@
+# ACTIVE: documented clustering utility for binary-root groupings; no newer replacement exists.
 """
 Discovery clustering for Arabic based on LV0-provided `binary_root`.
 

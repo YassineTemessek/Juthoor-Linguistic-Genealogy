@@ -1,3 +1,4 @@
+# ACTIVE: maintained CLI wrapper around `core.canon_import.ingest_from_inbox`, with dedicated tests.
 from __future__ import annotations
 
 import argparse

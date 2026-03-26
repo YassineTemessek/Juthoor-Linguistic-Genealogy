@@ -1,3 +1,4 @@
+# ACTIVE: current Phase 3 semantic validation entrypoint referenced by README and tests.
 """
 Phase 3 Semantic Validation Script
 Scores how well each tri-root's axial_meaning relates to its binary_root_meaning
