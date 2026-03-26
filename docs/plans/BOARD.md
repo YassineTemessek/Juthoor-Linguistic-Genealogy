@@ -32,7 +32,7 @@
 |---|------|-------|--------|--------|
 | I1 | Binary Composition Verification | Claude | DONE | `BINARY_COMPOSITION_VERIFICATION.md` — 53.5% match, 3 failure families. Pushed. |
 | I2 | Third Letter Modifier Profiles | Codex | DONE | `THIRD_LETTER_MODIFIER_PROFILES.md` + JSON. ج/ظ cleanest, ر/ل/ب riskiest. |
-| I3 | Reverse Pair Analysis — Anbar's reversal hypothesis on 166 pairs | Claude | WIP | Data prepped, analysis starting |
+| I3 | Reverse Pair Analysis — Anbar's reversal hypothesis on 166 pairs | Claude | DONE | `REVERSE_PAIR_ANALYSIS.md` — 12% inversion, 79% unrelated, hypothesis too simple. Pushed. |
 | A.1 | Audit unrecognized tokens in jabal_axial_meaning — frequency clusters | Codex | DONE | `feature_vocab_gap_report.md` |
 | A.2 | Expand FEATURE_VOCAB from 65 to ~85 features (modulation semantics) | Codex | DONE | `feature_decomposition.py` expanded with modulation/substance/location terms |
 | A.3 | Re-extract jabal_features for all 1,924 roots with expanded vocab | Codex | DONE | roots rebuilt with expanded decomposition |
