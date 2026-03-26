@@ -1,0 +1,305 @@
+{
+  "metadata": {
+    "description": "Per-letter scholar feature sets for all 5 scholars compared in Juthoor LV1",
+    "scholars": {
+      "jabal": "Ibrahim Mohamed Jabal — المعجم الاشتقاقي المؤصل — primary data source; lexical analysis of 456 binary nuclei",
+      "hassan_abbas": "Hassan Abbas — النظرية الصوتية الدلالية — phonetic-articulatory analysis of letter articulation",
+      "asim_al_masri": "Asim Al-Masri — نظرية الحرف — kinetic-philosophical theory: each letter describes a type of movement",
+      "neili": "Neili — kinetic theory — 10 letters only; trajectory-of-force analysis",
+      "anbar": "Mohamed Anbar — phonetic-semantic group analysis; articulatory-acoustic; proposed reversal hypothesis"
+    },
+    "accuracy_vs_juthoor": {
+      "jabal": "~79% (22/28 letters confirmed)",
+      "hassan_abbas": "~62% (18/28 confirmed, strongest on pharyngeals)",
+      "asim_al_masri": "~28% (8/28 confirmed, انتقال catch-all weakens many entries)",
+      "neili": "~70% per letter covered (7/10 confirmed)",
+      "anbar": "~56% (14/25 confirmed, strongest on emphatics and depth letters)"
+    },
+    "juthoor_empirical": "Derived bottom-up from 456 binary nuclei corpus. Scholar agreement is validation, not methodology."
+  },
+  "letters": [
+    {
+      "letter": "ء",
+      "juthoor_empirical": ["تأكيد", "قوة"],
+      "jabal": ["تأكيد", "ضغط", "تقوية", "قوة"],
+      "hassan_abbas": ["تأكيد"],
+      "asim_al_masri": ["انتقال"],
+      "neili": null,
+      "anbar": ["نقص", "انتقال"],
+      "juthoor_vs_scholars": {"jabal": "BEST", "hassan_abbas": "GOOD", "asim_al_masri": "WEAK", "anbar": "PARTIAL"}
+    },
+    {
+      "letter": "ب",
+      "juthoor_empirical": ["ظهور", "خروج"],
+      "jabal": ["ظهور", "خروج"],
+      "hassan_abbas": ["بروز", "رجوع"],
+      "asim_al_masri": ["خروج", "اختراق", "اتساع"],
+      "neili": ["ظهور", "خروج"],
+      "anbar": ["قوة", "تلاصق", "إمساك", "رجوع"],
+      "juthoor_vs_scholars": {"jabal": "ENRICHED", "hassan_abbas": "GOOD", "asim_al_masri": "BEST", "neili": "BEST", "anbar": "PARTIAL"}
+    },
+    {
+      "letter": "ت",
+      "juthoor_empirical": ["ضغط", "دقة", "قطع"],
+      "jabal": ["ضغط", "دقة", "وحدة", "حدة", "إمساك", "قطع"],
+      "hassan_abbas": ["رخاوة"],
+      "asim_al_masri": ["قوة"],
+      "neili": ["تجمع"],
+      "anbar": ["قطع"],
+      "juthoor_vs_scholars": {"jabal": "BEST", "hassan_abbas": "WRONG", "asim_al_masri": "PARTIAL", "neili": "WEAK", "anbar": "GOOD"}
+    },
+    {
+      "letter": "ث",
+      "juthoor_empirical": ["كثافة", "تجمع"],
+      "jabal": ["كثافة", "غلظ", "تفشي", "انتشار"],
+      "hassan_abbas": ["تفشي"],
+      "asim_al_masri": ["امتساك"],
+      "neili": null,
+      "anbar": null,
+      "juthoor_vs_scholars": {"jabal": "GOOD", "hassan_abbas": "PARTIAL", "asim_al_masri": "WEAK"}
+    },
+    {
+      "letter": "ج",
+      "juthoor_empirical": ["تجمع", "بروز"],
+      "jabal": ["تجمع", "حدة"],
+      "hassan_abbas": ["رخاوة"],
+      "asim_al_masri": ["تجمع"],
+      "neili": null,
+      "anbar": ["تجمع", "باطن"],
+      "juthoor_vs_scholars": {"jabal": "PARTIAL", "hassan_abbas": "WEAK", "asim_al_masri": "GOOD", "anbar": "GOOD"}
+    },
+    {
+      "letter": "ح",
+      "juthoor_empirical": ["خلوص", "احتكاك", "جفاف"],
+      "jabal": ["احتكاك", "جفاف", "باطن"],
+      "hassan_abbas": ["اتساع", "باطن"],
+      "asim_al_masri": ["انتقال"],
+      "neili": ["اتساع"],
+      "anbar": ["اتساع", "ظهور"],
+      "juthoor_vs_scholars": {"jabal": "BEST", "hassan_abbas": "GOOD", "asim_al_masri": "WEAK", "neili": "PARTIAL", "anbar": "GOOD"}
+    },
+    {
+      "letter": "خ",
+      "juthoor_empirical": ["تخلخل", "فراغ"],
+      "jabal": ["تخلخل", "جفاف", "غلظ"],
+      "hassan_abbas": ["تخلخل", "جفاف", "خروج"],
+      "asim_al_masri": ["خروج", "انتقال"],
+      "neili": null,
+      "anbar": ["انتشار", "ظهور"],
+      "juthoor_vs_scholars": {"jabal": "GOOD", "hassan_abbas": "BETTER", "asim_al_masri": "PARTIAL", "anbar": "WEAK"}
+    },
+    {
+      "letter": "د",
+      "juthoor_empirical": ["احتباس", "امتداد"],
+      "jabal": ["احتباس", "ضغط", "امتداد", "طول"],
+      "hassan_abbas": ["صلابة", "غلظ", "ثقل", "قوة"],
+      "asim_al_masri": ["اندفاع", "إمساك", "انتقال"],
+      "neili": ["الفعل المقصود المنظم"],
+      "anbar": ["قوة", "انسداد", "إمساك", "احتباس"],
+      "juthoor_vs_scholars": {"jabal": "BEST", "hassan_abbas": "PARTIAL", "asim_al_masri": "PARTIAL", "neili": "WEAK", "anbar": "GOOD"}
+    },
+    {
+      "letter": "ذ",
+      "juthoor_empirical": ["نفاذ", "حدة"],
+      "jabal": ["نفاذ", "رخاوة", "غلظ"],
+      "hassan_abbas": ["نفاذ"],
+      "asim_al_masri": ["نفاذ", "انتقال", "التحام"],
+      "neili": null,
+      "anbar": null,
+      "juthoor_vs_scholars": {"jabal": "GOOD", "hassan_abbas": "GOOD", "asim_al_masri": "PARTIAL"}
+    },
+    {
+      "letter": "ر",
+      "juthoor_empirical": ["استرسال", "امتداد"],
+      "jabal": ["استرسال", "باطن", "تماسك"],
+      "hassan_abbas": ["انتقال"],
+      "asim_al_masri": ["انتقال"],
+      "neili": ["التكرار المنتظم"],
+      "anbar": ["خروج", "تلاصق", "امتداد"],
+      "juthoor_vs_scholars": {"jabal": "BEST", "hassan_abbas": "PARTIAL", "asim_al_masri": "PARTIAL", "neili": "GOOD", "anbar": "GOOD"}
+    },
+    {
+      "letter": "ز",
+      "juthoor_empirical": ["نفاذ", "اكتناز"],
+      "jabal": ["اكتناز", "ازدحام"],
+      "hassan_abbas": ["تخلخل"],
+      "asim_al_masri": ["انتقال"],
+      "neili": null,
+      "anbar": ["احتكاك", "التحام"],
+      "juthoor_vs_scholars": {"jabal": "GOOD", "hassan_abbas": "WRONG", "asim_al_masri": "WEAK", "anbar": "PARTIAL"}
+    },
+    {
+      "letter": "س",
+      "juthoor_empirical": ["امتداد", "نفاذ", "دقة"],
+      "jabal": ["امتداد", "دقة", "وحدة", "حدة"],
+      "hassan_abbas": ["دقة", "امتداد"],
+      "asim_al_masri": ["امتداد", "ظهور"],
+      "neili": null,
+      "anbar": ["احتكاك"],
+      "juthoor_vs_scholars": {"jabal": "EXCELLENT", "hassan_abbas": "EXCELLENT", "asim_al_masri": "GOOD", "anbar": "PARTIAL"}
+    },
+    {
+      "letter": "ش",
+      "juthoor_empirical": ["انتشار", "تفرق"],
+      "jabal": ["تفشي", "انتشار", "دقة"],
+      "hassan_abbas": ["انتشار", "تفرق"],
+      "asim_al_masri": ["انتشار", "انتقال", "تجمع"],
+      "neili": null,
+      "anbar": ["تفشي", "انتشار", "تفرق"],
+      "juthoor_vs_scholars": {"jabal": "EXCELLENT", "hassan_abbas": "EXCELLENT", "asim_al_masri": "GOOD", "anbar": "EXCELLENT"}
+    },
+    {
+      "letter": "ص",
+      "juthoor_empirical": ["غلظ", "قوة", "نفاذ"],
+      "jabal": ["نفاذ", "غلظ", "قوة", "خلوص", "فراغ"],
+      "hassan_abbas": ["صلابة", "غلظ", "خلوص", "فراغ"],
+      "asim_al_masri": ["انتقال"],
+      "neili": null,
+      "anbar": ["استقلال", "إبعاد"],
+      "juthoor_vs_scholars": {"jabal": "EXCELLENT", "hassan_abbas": "EXCELLENT", "asim_al_masri": "WEAK", "anbar": "PARTIAL"}
+    },
+    {
+      "letter": "ض",
+      "juthoor_empirical": ["ضغط", "تجمع", "كثافة"],
+      "jabal": ["ضغط", "كثافة", "غلظ"],
+      "hassan_abbas": ["ضغط", "كثافة"],
+      "asim_al_masri": ["إمساك"],
+      "neili": null,
+      "anbar": ["رجوع", "تلاصق", "إمساك"],
+      "juthoor_vs_scholars": {"jabal": "EXCELLENT", "hassan_abbas": "EXCELLENT", "asim_al_masri": "PARTIAL", "anbar": "PARTIAL"}
+    },
+    {
+      "letter": "ط",
+      "juthoor_empirical": ["امتداد", "اشتمال", "ضغط"],
+      "jabal": ["ضغط", "اتساع", "غلظ"],
+      "hassan_abbas": ["اتساع"],
+      "asim_al_masri": ["انتقال"],
+      "neili": null,
+      "anbar": ["قوة", "احتكاك", "احتباس"],
+      "juthoor_vs_scholars": {"jabal": "GOOD", "hassan_abbas": "PARTIAL", "asim_al_masri": "WEAK", "anbar": "PARTIAL"}
+    },
+    {
+      "letter": "ظ",
+      "juthoor_empirical": ["غلظ", "ظهور"],
+      "jabal": ["نفاذ", "غلظ", "حدة", "كثافة"],
+      "hassan_abbas": ["غلظ", "بروز"],
+      "asim_al_masri": ["ظهور", "انتقال", "ظاهر"],
+      "neili": null,
+      "anbar": null,
+      "juthoor_vs_scholars": {"jabal": "GOOD", "hassan_abbas": "GOOD", "asim_al_masri": "GOOD"}
+    },
+    {
+      "letter": "ع",
+      "juthoor_empirical": ["ظهور", "عمق"],
+      "jabal": ["ظهور", "عمق"],
+      "hassan_abbas": ["عمق"],
+      "asim_al_masri": ["ظاهر", "انتقال"],
+      "neili": ["ظهور"],
+      "anbar": ["خروج", "ظهور"],
+      "juthoor_vs_scholars": {"jabal": "WEAK_ORIGINAL", "hassan_abbas": "GOOD", "asim_al_masri": "PARTIAL", "neili": "GOOD", "anbar": "BEST"},
+      "notes": "Jabal's updated entry reflects Juthoor correction. Jabal's original was التحام+رخاوة+حدة."
+    },
+    {
+      "letter": "غ",
+      "juthoor_empirical": ["باطن", "اشتمال"],
+      "jabal": ["باطن", "اشتمال"],
+      "hassan_abbas": ["باطن"],
+      "asim_al_masri": ["ظهور", "انتقال", "إمساك", "باطن"],
+      "neili": null,
+      "anbar": ["باطن"],
+      "juthoor_vs_scholars": {"jabal": "WEAK_ORIGINAL", "hassan_abbas": "BEST", "asim_al_masri": "PARTIAL", "anbar": "BEST"},
+      "notes": "Jabal's updated entry reflects Juthoor correction. Jabal's original was تخلخل+رخاوة+كثافة."
+    },
+    {
+      "letter": "ف",
+      "juthoor_empirical": ["تفرق", "فصل"],
+      "jabal": ["طرد", "إبعاد", "نفاذ", "قوة"],
+      "hassan_abbas": ["نفاذ"],
+      "asim_al_masri": ["تفرق", "انتقال"],
+      "neili": null,
+      "anbar": ["تجمع"],
+      "juthoor_vs_scholars": {"jabal": "GOOD", "hassan_abbas": "GOOD", "asim_al_masri": "BEST", "anbar": "WRONG"}
+    },
+    {
+      "letter": "ق",
+      "juthoor_empirical": ["قوة", "عمق"],
+      "jabal": ["تعقد", "اشتداد", "قوة", "عمق"],
+      "hassan_abbas": ["قوة"],
+      "asim_al_masri": ["قوة", "انتقال"],
+      "neili": null,
+      "anbar": ["قوة", "احتكاك", "احتباس"],
+      "juthoor_vs_scholars": {"jabal": "EXCELLENT", "hassan_abbas": "GOOD", "asim_al_masri": "PARTIAL", "anbar": "GOOD"}
+    },
+    {
+      "letter": "ك",
+      "juthoor_empirical": ["تجمع", "إمساك", "ضغط"],
+      "jabal": ["ضغط", "دقة", "امتساك", "قطع"],
+      "hassan_abbas": ["ضغط", "تماسك"],
+      "asim_al_masri": ["تجمع", "احتواء"],
+      "neili": ["تجمع"],
+      "anbar": ["إمساك", "ضغط"],
+      "juthoor_vs_scholars": {"jabal": "GOOD", "hassan_abbas": "GOOD", "asim_al_masri": "GOOD", "neili": "GOOD", "anbar": "BEST"}
+    },
+    {
+      "letter": "ل",
+      "juthoor_empirical": ["تعلق", "امتداد"],
+      "jabal": ["تعلق", "امتداد", "استقلال", "تميز"],
+      "hassan_abbas": ["تلاصق"],
+      "asim_al_masri": ["انتقال"],
+      "neili": ["تلاصق", "اتصال"],
+      "anbar": ["امتداد"],
+      "juthoor_vs_scholars": {"jabal": "BEST", "hassan_abbas": "GOOD", "asim_al_masri": "WEAK", "neili": "GOOD", "anbar": "GOOD"}
+    },
+    {
+      "letter": "م",
+      "juthoor_empirical": ["تجمع", "تلاصق"],
+      "jabal": ["تجمع", "تلاصق"],
+      "hassan_abbas": ["تجمع"],
+      "asim_al_masri": ["انتقال"],
+      "neili": ["الإتمام والاكتمال"],
+      "anbar": ["تجمع", "تماسك", "احتواء"],
+      "juthoor_vs_scholars": {"jabal": "WEAK_ORIGINAL", "hassan_abbas": "BEST_CONFIRMED", "asim_al_masri": "WRONG", "neili": "PARTIAL", "anbar": "BEST"},
+      "notes": "Jabal's updated entry reflects Juthoor correction. Jabal's original was امتساك+استواء+ظاهر."
+    },
+    {
+      "letter": "ن",
+      "juthoor_empirical": ["نفاذ", "باطن", "امتداد"],
+      "jabal": ["امتداد", "لطف", "باطن"],
+      "hassan_abbas": ["خروج", "نفاذ", "باطن"],
+      "asim_al_masri": ["انتقال", "استقرار"],
+      "neili": null,
+      "anbar": ["نقص", "انتقال", "وصول", "احتباس"],
+      "juthoor_vs_scholars": {"jabal": "EXCELLENT", "hassan_abbas": "EXCELLENT", "asim_al_masri": "PARTIAL", "anbar": "PARTIAL"}
+    },
+    {
+      "letter": "هـ",
+      "juthoor_empirical": ["فراغ", "تخلخل"],
+      "jabal": ["فراغ", "إفراغ", "جوف"],
+      "hassan_abbas": ["تخلخل", "فراغ"],
+      "asim_al_masri": ["انتقال", "استقرار"],
+      "neili": null,
+      "anbar": null,
+      "juthoor_vs_scholars": {"jabal": "EXCELLENT", "hassan_abbas": "EXACT_MATCH", "asim_al_masri": "WEAK"}
+    },
+    {
+      "letter": "و",
+      "juthoor_empirical": ["اشتمال", "احتواء"],
+      "jabal": ["اشتمال", "احتواء"],
+      "hassan_abbas": ["تلاصق"],
+      "asim_al_masri": ["حيز", "انتقال"],
+      "neili": null,
+      "anbar": ["تجمع"],
+      "juthoor_vs_scholars": {"jabal": "EXACT_MATCH", "hassan_abbas": "PARTIAL", "asim_al_masri": "PARTIAL", "anbar": "GOOD"}
+    },
+    {
+      "letter": "ي",
+      "juthoor_empirical": ["اتصال", "امتداد"],
+      "jabal": ["اتصال", "وحدة", "تفرق", "رقة"],
+      "hassan_abbas": ["باطن"],
+      "asim_al_masri": ["تعلق", "انتقال"],
+      "neili": ["امتداد"],
+      "anbar": ["كسر", "نقص"],
+      "juthoor_vs_scholars": {"jabal": "BEST", "hassan_abbas": "WEAK", "asim_al_masri": "GOOD", "neili": "GOOD", "anbar": "PARTIAL"}
+    }
+  ]
+}
