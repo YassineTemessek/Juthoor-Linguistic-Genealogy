@@ -74,7 +74,17 @@ def model_position_aware(
     if overlap:
         features = _ordered_unique(overlap)
     else:
-        # No overlap — take top 1 from nucleus + top 1 from modifier
-        features = _ordered_unique(list(nuc[:1]) + list(mod[:1]))
+        # Check category-level overlap before mixing
+        nuc_cats = {FEATURE_TO_CATEGORY.get(f) for f in nuc} - {None}
+        mod_cats = {FEATURE_TO_CATEGORY.get(f) for f in mod} - {None}
+        if nuc_cats & mod_cats:
+            # Same category — take nucleus features from shared categories
+            shared_cats = nuc_cats & mod_cats
+            features = _ordered_unique(
+                [f for f in nuc if FEATURE_TO_CATEGORY.get(f) in shared_cats]
+            )
+        else:
+            # No overlap at all — nucleus-only is safer than mixing
+            features = _ordered_unique(list(nuc[:2]))
 
     return CompositionResult("position_aware", features, _categories(features))
