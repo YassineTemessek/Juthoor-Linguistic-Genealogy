@@ -67,10 +67,10 @@ def run_positional_semantics() -> dict:
     letters = [record.letter.translate(NORMALIZE_MAP) for record in load_letters()]
     name_map = {record.letter.translate(NORMALIZE_MAP): record.letter_name for record in load_letters()}
 
-    statistics_path = REPO_ROOT / "Juthoor-ArabicGenome-LV1" / "scripts" / "research_factory" / "common" / "statistics.py"
+    statistics_path = REPO_ROOT / "Juthoor-ArabicGenome-LV1" / "scripts" / "research_factory" / "common" / "stat_helpers.py"
     import importlib.util
 
-    spec = importlib.util.spec_from_file_location("rf_common_statistics_axis1_2", statistics_path)
+    spec = importlib.util.spec_from_file_location("rf_common_stat_helpers_axis1_2", statistics_path)
     assert spec and spec.loader
     statistics_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(statistics_module)

@@ -15,7 +15,7 @@ def _load_module(name: str, rel_path: str):
     return mod
 
 
-stats_mod = _load_module("rf_statistics", "scripts/research_factory/common/statistics.py")
+stats_mod = _load_module("rf_statistics", "scripts/research_factory/common/stat_helpers.py")
 
 
 def test_mantel_test_detects_positive_correlation():
