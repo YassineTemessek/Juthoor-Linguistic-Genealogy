@@ -131,6 +131,18 @@ CHAR_TO_LETTER_NAME = {
 CORE_REGISTRY_LETTERS = frozenset(CHAR_TO_LETTER_NAME.keys())
 
 NEILI_LETTERS = frozenset({"د", "ح", "ر", "ت", "ك", "م", "ب", "ع", "ل", "ي"})
+JABAL_RAW_DESCRIPTION_OVERRIDES = {
+    "ب": "ظهور وخروج",
+    "م": "تجمع وتلاصق",
+    "ع": "ظهور وعمق",
+    "غ": "باطن واشتمال",
+}
+JABAL_FEATURE_OVERRIDES = {
+    "ب": ("ظهور", "خروج"),
+    "م": ("تجمع", "تلاصق"),
+    "ع": ("ظهور", "عمق"),
+    "غ": ("باطن", "اشتمال"),
+}
 ASIM_FEATURE_OVERRIDES = {
     "ا": ("اتصال", "وحدة"),
     "س": ("امتداد", "ظهور"),
@@ -244,16 +256,24 @@ def _load_jabal_letters() -> list[dict[str, Any]]:
         if not letter:
             continue
         normalized_letter = _normalize_letter_symbol(str(letter).strip())
-        out.append(
-            _letter_row(
-                letter=normalized_letter,
-                letter_name=str(letter_name).strip(),
-                scholar="jabal",
-                raw_description=str(meaning or "").strip(),
-                source_document=f"{SOURCE_MUAJAM_XLSX}#معاني الحروف",
-                confidence="high",
-            )
+        raw_description = JABAL_RAW_DESCRIPTION_OVERRIDES.get(
+            normalized_letter,
+            str(meaning or "").strip(),
         )
+        payload = _letter_row(
+            letter=normalized_letter,
+            letter_name=str(letter_name).strip(),
+            scholar="jabal",
+            raw_description=raw_description,
+            source_document=f"{SOURCE_MUAJAM_XLSX}#معاني الحروف",
+            confidence="high",
+        )
+        if normalized_letter in JABAL_FEATURE_OVERRIDES:
+            features = JABAL_FEATURE_OVERRIDES[normalized_letter]
+            payload["atomic_features"] = list(features)
+            payload["feature_categories"] = list(feature_categories(features))
+            payload["source_note"] = "Yassin-confirmed 2026-03-26 correction"
+        out.append(payload)
     return out
 
 
