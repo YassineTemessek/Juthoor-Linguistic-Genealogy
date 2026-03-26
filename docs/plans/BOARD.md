@@ -30,9 +30,9 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| I1 | Binary Composition Verification — do letter meanings predict nucleus meanings? | Claude | WIP | Data: 53.5% match, report building |
-| I2 | Third Letter Modifier Profiles — how does each letter modify as 3rd? | Claude+Codex | DONE | `THIRD_LETTER_MODIFIER_PROFILES.md`, `third_letter_modifier_profiles.json` |
-| I3 | Reverse Pair Analysis — Anbar's reversal hypothesis on 166 pairs | Claude | NEXT | Data prepped: `reverse_pair_data.json` (166 pairs) |
+| I1 | Binary Composition Verification | Claude | DONE | `BINARY_COMPOSITION_VERIFICATION.md` — 53.5% match, 3 failure families. Pushed. |
+| I2 | Third Letter Modifier Profiles | Codex | DONE | `THIRD_LETTER_MODIFIER_PROFILES.md` + JSON. ج/ظ cleanest, ر/ل/ب riskiest. |
+| I3 | Reverse Pair Analysis — Anbar's reversal hypothesis on 166 pairs | Claude | WIP | Data prepped, analysis starting |
 | A.1 | Audit unrecognized tokens in jabal_axial_meaning — frequency clusters | Codex | DONE | `feature_vocab_gap_report.md` |
 | A.2 | Expand FEATURE_VOCAB from 65 to ~85 features (modulation semantics) | Codex | DONE | `feature_decomposition.py` expanded with modulation/substance/location terms |
 | A.3 | Re-extract jabal_features for all 1,924 roots with expanded vocab | Codex | DONE | roots rebuilt with expanded decomposition |
