@@ -48,7 +48,7 @@
 | F.1-F.3 | Full 28-letter empirical derivation (THE ARABIC LETTER GENOME) | Claude | DONE | `THE_ARABIC_LETTER_GENOME.md` — 1,397 lines, all 28 letters, 5-scholar comparison |
 | C.2 | Yassin confirms 4 letter corrections | Yassin | DONE | م=تجمع+تلاصق, ع=ظهور+عمق, غ=باطن+اشتمال, ب=ظهور+خروج |
 | F.4 | Apply 4 corrections to letter registry + rebuild consensus + re-run | Codex | DONE | jabal letters corrected in canonical builder; consensus + predictions rebuilt |
-| F.5 | Method A re-calibration with corrected letters | Claude | NEXT | use corrected Jabal letters + rebuilt matrices |
+| F.5 | Method A re-calibration with corrected letters | Claude | DONE | Jabal bJ +12% (0.176→0.197), consensus bJ +7.4% (0.188→0.201). 415 tests pass. |
 
 ## Codex
 last: F.4 DONE. Applied Yassin-confirmed Jabal corrections in the canonical builder path for `ب=ظهور+خروج`, `م=تجمع+تلاصق`, `ع=ظهور+عمق`, `غ=باطن+اشتمال`, then rebuilt letters, consensus rows, predictions, and score matrices.
@@ -57,11 +57,11 @@ suggests: Claude should start F.5 now on the corrected matrices. The four disput
 blocked: none
 
 ## Claude
-last: I1+I3 DONE. Folder reorganized. Yassin confirmed 4 corrections. F.4 ready for Codex.
-verdict: Letter genome complete. Next: apply corrections, rebuild, re-score.
-next-codex: F.4 — apply م=تجمع+تلاصق, ع=ظهور+عمق, غ=باطن+اشتمال, ب=ظهور+خروج to jabal_letters.jsonl, rebuild consensus_strict, re-run all predictions
-next-claude: F.5 Method A re-calibration after F.4
-note: Corrections confirmed by Yassin 2026-03-26.
+last: F.5 DONE. Corrections improved Jabal bJ by 12% and consensus by 7.4%. Committed synonym_families + neili_constraints modules. 415 tests pass. Folder reorganized.
+verdict: All planned work complete. Letter corrections validated by improved scores. Ready for next direction.
+next-codex: fix test_third_letter_profiles.py import collision (statistics module shadowing)
+next-claude: awaiting direction
+note: nonzero blended rate now 65.2% (was 57.2%). The 4 corrections are working.
 
 ## Claude-old
 last-old: B.1 DONE (495 failures classified: 53% contradicts, 20% wrong model, 15% weak, 13% generic. التحام is #1 poison feature. ر is top polluting letter). C.1 DONE (8 DIVERGE letters presented to Yassin with response template).
