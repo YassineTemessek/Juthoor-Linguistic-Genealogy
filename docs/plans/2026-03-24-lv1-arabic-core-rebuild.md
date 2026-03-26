@@ -312,6 +312,17 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 - `independent_letter_derivation.py` refactored into smaller feature-selection, position-payload, and scholar-classification helpers
 - focused suites remained green with no intended metric drift; this was maintenance/polish for the active LV1 pipeline, not a semantic-model change
 
+**Position-aware rerun checkpoint (2026-03-26):**
+- Claude's `position_aware_composer` is wired and runnable, but the first full rerun did **not** improve LV1
+- current rerun metrics:
+  - overall blended Jaccard: `0.190419` (down from `0.196015`)
+  - nonzero predictions: `4352 / 9620` (down from `4552 / 9620`)
+  - `consensus_weighted`: `0.196644` (down from `0.201964`)
+  - `consensus_strict`: `0.190738` (down from `0.201399`)
+  - `position_aware` rows: `3005`, mean blended `0.146678`
+- practical decision for now: keep the position-aware model **experimental**, not promoted as the new default root composer
+- side effect: regenerating the benchmark support files also cleared the pre-existing `test_promotions.py` failure
+
 ---
 
 ### Task 3.3: Add Quranic-first validation
