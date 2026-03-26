@@ -39,6 +39,22 @@ def _write_promoted(tmp_path: Path) -> Path:
     return tmp_path
 
 
+def _write_synonym_families(tmp_path: Path) -> Path:
+    path = tmp_path / "synonym_families_full.jsonl"
+    path.write_text(
+        json.dumps(
+            {
+                "family_id": "seed-001",
+                "roots": ["قلب", "لب", "فؤاد"],
+                "shared_concept": "heart",
+            },
+            ensure_ascii=False,
+        ) + "\n",
+        encoding="utf-8",
+    )
+    return path
+
+
 def test_genome_bonus_uses_cross_script_binary_match(tmp_path: Path):
     scorer = GenomeScorer(_write_promoted(tmp_path))
     bonus = scorer.genome_bonus(
@@ -215,3 +231,38 @@ def test_genome_bonus_no_lang_field_falls_through(tmp_path: Path):
         {"lemma": "עין"},
     )
     assert bonus == 0.13
+
+
+def test_genome_bonus_expands_arabic_root_to_synonym_family(tmp_path: Path):
+    features = tmp_path / "promoted_features"
+    features.mkdir(parents=True)
+    (features / "field_coherence_scores.jsonl").write_text(
+        json.dumps({"binary_root": "lb", "coherence": 0.72}) + "\n",
+        encoding="utf-8",
+    )
+    (features / "metathesis_pairs.jsonl").write_text("", encoding="utf-8")
+    (features / "cross_lingual_support.jsonl").write_text(
+        json.dumps(
+            {
+                "binary_root": "lb",
+                "semitic_support": {"rows": 1, "exact_hit_rate": 1.0, "binary_hit_rate": 1.0},
+                "non_semitic_support": {"rows": 0, "exact_hit_rate": 0.0, "binary_hit_rate": 0.0},
+                "support_score": 0.91,
+            }
+        ) + "\n",
+        encoding="utf-8",
+    )
+    scorer = GenomeScorer(
+        tmp_path,
+        synonym_families_path=_write_synonym_families(tmp_path),
+    )
+
+    bonus = scorer.genome_bonus(
+        {"lang": "ara", "lemma": "قلب", "root_norm": "قلب"},
+        {"lang": "heb", "lemma": "לב"},
+    )
+    support = scorer.cross_lingual_support("قلب")
+
+    assert bonus == 0.13
+    assert support is not None
+    assert support["binary_root"] == "lb"

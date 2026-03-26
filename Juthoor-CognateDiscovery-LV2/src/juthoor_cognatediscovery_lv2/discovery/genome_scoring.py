@@ -10,6 +10,11 @@ import json
 import re
 from pathlib import Path
 
+from juthoor_cognatediscovery_lv2.discovery.synonym_expansion import (
+    expand_root,
+    load_synonym_families,
+)
+
 # Resolve promoted outputs relative to the monorepo root.
 # Path depth from this file to repo root:
 #   parents[0] = discovery/
@@ -19,6 +24,14 @@ from pathlib import Path
 #   parents[4] = repo root (Juthoor-Linguistic-Genealogy/)
 _REPO_ROOT = Path(__file__).resolve().parents[4]
 _DEFAULT_PROMOTED_DIR = _REPO_ROOT / "outputs" / "research_factory" / "promoted"
+_DEFAULT_SYNONYM_FAMILIES_PATH = (
+    _REPO_ROOT
+    / "Juthoor-ArabicGenome-LV1"
+    / "data"
+    / "theory_canon"
+    / "roots"
+    / "synonym_families_full.jsonl"
+)
 
 # Arabic + Hebrew normalization to a shared Semitic comparison space.
 _NORMALIZE_MAP = str.maketrans(
@@ -107,11 +120,17 @@ def _extract_binary_root(root: str) -> str | None:
 class GenomeScorer:
     """Scores cognate candidates using LV1 genome data."""
 
-    def __init__(self, promoted_dir: Path | None = None):
+    def __init__(
+        self,
+        promoted_dir: Path | None = None,
+        synonym_families_path: Path | None = None,
+    ):
         self._dir = promoted_dir or _DEFAULT_PROMOTED_DIR
+        self._synonym_families_path = synonym_families_path or _DEFAULT_SYNONYM_FAMILIES_PATH
         self._coherence: dict[str, float] = {}
         self._metathesis_set: set[tuple[str, str]] = set()
         self._cross_lingual_support: dict[str, dict] = {}
+        self._synonym_families: dict[str, list[str]] = {}
         self._loaded = False
 
     def _ensure_loaded(self) -> None:
@@ -154,7 +173,16 @@ class GenomeScorer:
                 if br:
                     self._cross_lingual_support[str(br)] = row
 
+        if self._synonym_families_path.exists():
+            self._synonym_families = load_synonym_families(str(self._synonym_families_path))
+
         self._loaded = True
+
+    def _expand_arabic_root_family(self, root: str) -> list[str]:
+        self._ensure_loaded()
+        if not root:
+            return []
+        return expand_root(root, self._synonym_families)
 
     def root_coherence_score(self, root: str) -> float | None:
         """Return the field coherence score for a root's binary nucleus.
@@ -193,10 +221,14 @@ class GenomeScorer:
         ranking features.
         """
         self._ensure_loaded()
-        br = _extract_binary_root(root)
-        if br is None:
-            return None
-        return self._cross_lingual_support.get(br)
+        for candidate_root in self._expand_arabic_root_family(root):
+            br = _extract_binary_root(candidate_root)
+            if br is None:
+                continue
+            support = self._cross_lingual_support.get(br)
+            if support is not None:
+                return support
+        return None
 
     def genome_bonus(self, source_entry: dict, target_entry: dict) -> float:
         """Compute a genome-informed bonus for a candidate pair.
@@ -235,17 +267,26 @@ class GenomeScorer:
         if not source_root or not target_root:
             return bonus
 
-        source_binary = _extract_binary_root(source_root)
         target_binary = _extract_binary_root(target_root)
-        coherence = self.root_coherence_score(source_root)
+        if target_binary is None:
+            return bonus
 
-        if source_binary and target_binary and source_binary == target_binary:
-            bonus += 0.08
-            if coherence is not None and coherence > 0.6:
-                bonus += 0.05
-        elif self.is_metathesis_pair(source_root, target_root):
-            bonus += 0.05
-            if coherence is not None and coherence > 0.6:
-                bonus += 0.03
+        best_bonus = 0.0
+        for candidate_root in self._expand_arabic_root_family(source_root):
+            source_binary = _extract_binary_root(candidate_root)
+            coherence = self.root_coherence_score(candidate_root)
+            candidate_bonus = 0.0
 
-        return bonus
+            if source_binary and source_binary == target_binary:
+                candidate_bonus += 0.08
+                if coherence is not None and coherence > 0.6:
+                    candidate_bonus += 0.05
+            elif self.is_metathesis_pair(candidate_root, target_root):
+                candidate_bonus += 0.05
+                if coherence is not None and coherence > 0.6:
+                    candidate_bonus += 0.03
+
+            if candidate_bonus > best_bonus:
+                best_bonus = candidate_bonus
+
+        return best_bonus
