@@ -1,0 +1,2986 @@
+[
+  {
+    "pair": "ءب ↔ بء",
+    "forward": "ءب",
+    "reverse": "بء",
+    "forward_meaning": "الغَذْو والتهيؤ والامتناع",
+    "forward_features": [
+      "تلاصق",
+      "احتباس"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الاستقرار والرجوع",
+    "reverse_features": [
+      "استقرار",
+      "رجوع"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "ءل ↔ لء",
+    "forward": "ءل",
+    "reverse": "لء",
+    "forward_meaning": "",
+    "forward_features": [],
+    "forward_members": 1,
+    "reverse_meaning": "",
+    "reverse_features": [],
+    "reverse_members": 1
+  },
+  {
+    "pair": "ءم ↔ مء",
+    "forward": "ءم",
+    "reverse": "مء",
+    "forward_meaning": "النقص والانفراد",
+    "forward_features": [
+      "نقص",
+      "استقلال"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "الاتساع والامتداد",
+    "reverse_features": [
+      "اتساع",
+      "تلاصق",
+      "امتداد"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "أف ↔ فأ",
+    "forward": "أف",
+    "reverse": "فأ",
+    "forward_meaning": "إفراز شيء مكروه ونفيه",
+    "forward_features": [
+      "إفراغ",
+      "إبعاد"
+    ],
+    "forward_members": 1,
+    "reverse_meaning": "فجوة أو شق في شيء صلب",
+    "reverse_features": [
+      "فجوة",
+      "شق",
+      "صلابة",
+      "غلظ"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "أن ↔ نأ",
+    "forward": "أن",
+    "reverse": "نأ",
+    "forward_meaning": "التهيؤ والصلاح للبلوغ والاستعمال",
+    "forward_features": [
+      "وصول",
+      "احتواء"
+    ],
+    "forward_members": 1,
+    "reverse_meaning": "الصرف والإبعاد بقوة",
+    "reverse_features": [
+      "إبعاد",
+      "قوة"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "بت ↔ تب",
+    "forward": "بت",
+    "reverse": "تب",
+    "forward_meaning": "القطع والانفصال",
+    "forward_features": [
+      "قطع",
+      "استقلال"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "ضعف الشيء المتجمع أو ذهاب غلظه",
+    "reverse_features": [
+      "نقص",
+      "تجمع",
+      "غلظ"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "بث ↔ ثب",
+    "forward": "بث",
+    "reverse": "ثب",
+    "forward_meaning": "النشر والتفريق",
+    "forward_features": [
+      "انتشار",
+      "تفرق"
+    ],
+    "forward_members": 1,
+    "reverse_meaning": "التجمع والتماسك",
+    "reverse_features": [
+      "تجمع",
+      "تماسك"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "بج ↔ جب",
+    "forward": "بج",
+    "reverse": "جب",
+    "forward_meaning": "التفتق والتفجر الرخو",
+    "forward_features": [
+      "خروج",
+      "رخاوة"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "التجسم والبروز مع القطع أو الاستواء",
+    "reverse_features": [
+      "بروز",
+      "قطع",
+      "استواء"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "بح ↔ حب",
+    "forward": "بح",
+    "reverse": "حب",
+    "forward_meaning": "الكشف والفراغ",
+    "forward_features": [
+      "ظهور",
+      "فراغ"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "التجمع في حيز باكتناز مع جفاف أو لطف",
+    "reverse_features": [
+      "تجمع",
+      "حيز",
+      "اكتناز",
+      "جفاف",
+      "لطف"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "بخ ↔ خب",
+    "forward": "بخ",
+    "reverse": "خب",
+    "forward_meaning": "النقص والاستفراغ",
+    "forward_features": [
+      "نقص",
+      "فراغ"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "تخلخل باطن الشيء المتجمع",
+    "reverse_features": [
+      "تخلخل",
+      "باطن",
+      "تجمع"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "بد ↔ دب",
+    "forward": "بد",
+    "reverse": "دب",
+    "forward_meaning": "الظهور والتكوين الأول",
+    "forward_features": [
+      "ظهور"
+    ],
+    "forward_members": 9,
+    "reverse_meaning": "الثقل أو الضغط والحركة البطيئة، ويلزمها التخلف",
+    "reverse_features": [
+      "ثقل",
+      "ضغط",
+      "انتقال"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "بذ ↔ ذب",
+    "forward": "بذ",
+    "reverse": "ذب",
+    "forward_meaning": "التفرق والنثر",
+    "forward_features": [
+      "تفرق"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "النفاذ والامتداد باندفاع وحِدّة",
+    "reverse_features": [
+      "نفاذ",
+      "تلاصق",
+      "امتداد",
+      "اندفاع",
+      "وحدة",
+      "حدة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "بر ↔ رب",
+    "forward": "بر",
+    "reverse": "رب",
+    "forward_meaning": "التجرد والخلوص",
+    "forward_features": [
+      "خلوص",
+      "فراغ"
+    ],
+    "forward_members": 16,
+    "reverse_meaning": "الاستغلاظ وما إليه من تماسك وتجمع",
+    "reverse_features": [
+      "غلظ",
+      "تماسك",
+      "تجمع"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "بز ↔ زب",
+    "forward": "بز",
+    "reverse": "زب",
+    "forward_meaning": "النفاذ من مضيق",
+    "forward_features": [
+      "نفاذ"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "الاكتناز أو أثره في الانتصاب أو النضح",
+    "reverse_features": [
+      "اكتناز",
+      "نضح"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "بس ↔ سب",
+    "forward": "بس",
+    "reverse": "سب",
+    "forward_meaning": "الجفاف واليبوسة",
+    "forward_features": [
+      "جفاف"
+    ],
+    "forward_members": 8,
+    "reverse_meaning": "الامتداد الدقيق مع الاتصال بشيء",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "دقة",
+      "اتصال"
+    ],
+    "reverse_members": 10
+  },
+  {
+    "pair": "بش ↔ شب",
+    "forward": "بش",
+    "reverse": "شب",
+    "forward_meaning": "الانتشار الظاهر",
+    "forward_features": [
+      "انتشار",
+      "ظاهر"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "هو تجمع (عن انتشار أو ضعف) مع تركز",
+    "reverse_features": [
+      "تجمع",
+      "انتشار",
+      "نقص",
+      "امتساك"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "بص ↔ صب",
+    "forward": "بص",
+    "reverse": "صب",
+    "forward_meaning": "النفاذ والإدراك",
+    "forward_features": [
+      "نفاذ"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الحدر أو الامتداد إلى أسفل بقوة",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "باطن",
+      "قوة"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "بض ↔ ضب",
+    "forward": "بض",
+    "reverse": "ضب",
+    "forward_meaning": "التجمع الرخو مع نصاعة",
+    "forward_features": [
+      "تجمع",
+      "رخاوة",
+      "نصاعة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "هو اللزوم الشديد غشيانًا أو إمساكا في الأثناء",
+    "reverse_features": [
+      "تعلق",
+      "قوة",
+      "اشتمال",
+      "إمساك"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "بط ↔ طب",
+    "forward": "بط",
+    "reverse": "طب",
+    "forward_meaning": "الثقل والضغط الداخلي",
+    "forward_features": [
+      "ثقل",
+      "ضغط"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "الجودة والإحكام والتغطية",
+    "reverse_features": [
+      "احتكاك",
+      "اشتمال",
+      "باطن"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "بع ↔ عب",
+    "forward": "بع",
+    "reverse": "عب",
+    "forward_meaning": "الخروج والانتقال من حوزة",
+    "forward_features": [
+      "خروج",
+      "انتقال",
+      "اتساع",
+      "حيز"
+    ],
+    "forward_members": 8,
+    "reverse_meaning": "اجتماع الرخو، أو المائع، أو التخلخل في الحيز",
+    "reverse_features": [
+      "رخاوة",
+      "تخلخل",
+      "حيز"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "بغ ↔ غب",
+    "forward": "بغ",
+    "reverse": "غب",
+    "forward_meaning": "التزايد والفوران الداخلي",
+    "forward_features": [
+      "امتداد",
+      "خروج",
+      "فوران"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الغئور والغياب أو الاستتار",
+    "reverse_features": [
+      "عمق",
+      "باطن"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "بق ↔ قب",
+    "forward": "بق",
+    "reverse": "قب",
+    "forward_meaning": "الثبات والكشف باتساع",
+    "forward_features": [
+      "امتساك",
+      "ظهور",
+      "اتساع"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "النتوء مع تجوف وصلابة تحيط بنصف الشيء",
+    "reverse_features": [
+      "ظاهر",
+      "جوف",
+      "اتصال",
+      "صلابة",
+      "غلظ"
+    ],
+    "reverse_members": 8
+  },
+  {
+    "pair": "بك ↔ كب",
+    "forward": "بك",
+    "reverse": "كب",
+    "forward_meaning": "الضغط والاحتباس",
+    "forward_features": [
+      "ضغط",
+      "احتباس"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "التجمع كتلة متضاغطة أو كالكتلة المتضاغطة",
+    "reverse_features": [
+      "تجمع"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "بل ↔ لب",
+    "forward": "بل",
+    "reverse": "لب",
+    "forward_meaning": "التمكن والحَوْز بشدة",
+    "forward_features": [
+      "امتساك",
+      "اتساع",
+      "قوة"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "اللزوم أي التلازم والتداخل",
+    "reverse_features": [
+      "تعلق",
+      "اتصال",
+      "اشتمال"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "بن ↔ نب",
+    "forward": "بن",
+    "reverse": "نب",
+    "forward_meaning": "الامتداد والبناء",
+    "forward_features": [
+      "تلاصق",
+      "امتداد"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "النُّبُوُّ ارتفاعًا أو ابتعادًا",
+    "reverse_features": [
+      "صعود"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "تح ↔ حت",
+    "forward": "تح",
+    "reverse": "حت",
+    "forward_meaning": "الاحتكاك من أسفل",
+    "forward_features": [
+      "احتكاك",
+      "باطن"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "تفتت الرقيق الجاف حكًا أو تسيبه",
+    "reverse_features": [
+      "رقة",
+      "جفاف",
+      "احتكاك",
+      "تخلخل"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "تر ↔ رت",
+    "forward": "تر",
+    "reverse": "رت",
+    "forward_meaning": "الابتعاد بقوة مع دقة",
+    "forward_features": [
+      "قوة",
+      "دقة"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "الامتساك الدقيق وما إليه",
+    "reverse_features": [
+      "تلاصق",
+      "امتساك",
+      "دقة"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "تس ↔ ست",
+    "forward": "تس",
+    "reverse": "ست",
+    "forward_meaning": "ما دل على العدد تسعة",
+    "forward_features": [],
+    "forward_members": 1,
+    "reverse_meaning": "التغطية والإخفاء",
+    "reverse_features": [
+      "اشتمال",
+      "باطن"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "تع ↔ عت",
+    "forward": "تع",
+    "reverse": "عت",
+    "forward_meaning": "الرخاوة التي يرتطم فيها",
+    "forward_features": [
+      "رخاوة"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "الامتداد مع شدة ما",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "قوة"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "تف ↔ فت",
+    "forward": "تف",
+    "reverse": "فت",
+    "forward_meaning": "الوسخ على الجلد أو نحو ذلك",
+    "forward_features": [],
+    "forward_members": 2,
+    "reverse_meaning": "تكسير الهش وما يلزمه من انفصال",
+    "reverse_features": [
+      "استقلال"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "تق ↔ قت",
+    "forward": "تق",
+    "reverse": "قت",
+    "forward_meaning": "هوّي الشيء إلى العمق: كالهوّي إلى الأسفل",
+    "forward_features": [
+      "عمق",
+      "باطن"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "الدقة وقلة ما به القوة في العمق",
+    "reverse_features": [
+      "دقة",
+      "نقص",
+      "قوة",
+      "عمق"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "تل ↔ لت",
+    "forward": "تل",
+    "reverse": "لت",
+    "forward_meaning": "التكديس والاتباع",
+    "forward_features": [
+      "تجمع",
+      "اتصال"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "التماسك واللزوق وما إليه وهو تداخل يلزمه النقص",
+    "reverse_features": [
+      "تماسك",
+      "اتصال",
+      "اشتمال",
+      "نقص"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "تم ↔ مت",
+    "forward": "تم",
+    "reverse": "مت",
+    "forward_meaning": "التميز الشيء مستقلا",
+    "forward_features": [
+      "تميز"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "الامتداد مع صفة (قوة، دقة، ضعف...)",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "قوة",
+      "دقة",
+      "نقص"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "تن ↔ نت",
+    "forward": "تن",
+    "reverse": "نت",
+    "forward_meaning": "الضغط على القوة الباطنية للشيء",
+    "forward_features": [
+      "ضغط",
+      "قوة",
+      "باطن"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "الاندفاع الجزئي القوي انتبارًا أو انتثارًا",
+    "reverse_features": [
+      "اندفاع",
+      "قوة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "ثج ↔ جث",
+    "forward": "ثج",
+    "reverse": "جث",
+    "forward_meaning": "غزارة المائع وتجمعه",
+    "forward_features": [
+      "غزارة",
+      "تجمع"
+    ],
+    "forward_members": 1,
+    "reverse_meaning": "تجمع الكتلة الكثيفة",
+    "reverse_features": [
+      "تجمع",
+      "كثافة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "ثر ↔ رث",
+    "forward": "ثر",
+    "reverse": "رث",
+    "forward_meaning": "نفاذ المائع وما يشبهه بغزارة وانتشار",
+    "forward_features": [
+      "نفاذ",
+      "غزارة",
+      "انتشار"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "مستوى من البلى",
+    "reverse_features": [
+      "استواء"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "ثع ↔ عث",
+    "forward": "ثع",
+    "reverse": "عث",
+    "forward_meaning": "خروج المائع أو شبهه من مصدره",
+    "forward_features": [
+      "خروج",
+      "إمساك"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "تشعث ما كان ممتسكاً وانتشاره",
+    "reverse_features": [
+      "انتشار"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "ثق ↔ قث",
+    "forward": "ثق",
+    "reverse": "قث",
+    "forward_meaning": "الغلظ والشدة",
+    "forward_features": [
+      "غلظ",
+      "قوة"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "هشاشة الشيء ورخاوته",
+    "reverse_features": [
+      "هشاشة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "ثم ↔ مث",
+    "forward": "ثم",
+    "reverse": "مث",
+    "forward_meaning": "ضم الدقائق أو ما يشبهها في حيز",
+    "forward_features": [
+      "تجمع",
+      "حيز"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "تشخص الشيء أو رشحه",
+    "reverse_features": [
+      "ظاهر"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "ثن ↔ نث",
+    "forward": "ثن",
+    "reverse": "نث",
+    "forward_meaning": "التبطن والكثرة في الداخل",
+    "forward_features": [
+      "كثافة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الانتثار أو النشر بتفشٍّ واندفاع ما",
+    "reverse_features": [
+      "انتشار",
+      "تفشي",
+      "اندفاع"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "جح ↔ حج",
+    "forward": "جح",
+    "reverse": "حج",
+    "forward_meaning": "الغلظ والحدة في الباطن",
+    "forward_features": [
+      "غلظ",
+      "حدة",
+      "باطن"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الحيلولة بصلب أو شديد",
+    "reverse_features": [
+      "صلابة",
+      "غلظ",
+      "قوة"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "جر ↔ رج",
+    "forward": "جر",
+    "reverse": "رج",
+    "forward_meaning": "الاسترسال والامتداد",
+    "forward_features": [
+      "استرسال",
+      "باطن",
+      "تلاصق",
+      "امتداد"
+    ],
+    "forward_members": 11,
+    "reverse_meaning": "الاضطراب المادي، أي اضطراب الجِرْم وتردده",
+    "reverse_features": [
+      "تخلخل",
+      "انتقال"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "جز ↔ زج",
+    "forward": "جز",
+    "reverse": "زج",
+    "forward_meaning": "التميز والانفصال في الكتلة",
+    "forward_features": [
+      "تميز",
+      "استقلال"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الدفع للأمام وما قد يلزمه من التداخل",
+    "reverse_features": [
+      "إبعاد",
+      "تلاصق",
+      "اتصال",
+      "اشتمال"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "جس ↔ سج",
+    "forward": "جس",
+    "reverse": "سج",
+    "forward_meaning": "الاختراق الحسي أو المعنوي",
+    "forward_features": [
+      "اختراق"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "اعتدال ورقة وعدم غلظ واستواء",
+    "reverse_features": [
+      "رقة",
+      "غلظ",
+      "استواء"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "جع ↔ عج",
+    "forward": "جع",
+    "reverse": "عج",
+    "forward_meaning": "التجوف والفراغ",
+    "forward_features": [
+      "جوف",
+      "فراغ"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "التجمع مع نوع من الهشاشة أو الضعف",
+    "reverse_features": [
+      "تجمع",
+      "هشاشة",
+      "نقص"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "جف ↔ فج",
+    "forward": "جف",
+    "reverse": "فج",
+    "forward_meaning": "الجفاف والتباعد",
+    "forward_features": [
+      "جفاف",
+      "إبعاد"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "انفتاح في الشيء بقوة مع عدم الالتزام بحد",
+    "reverse_features": [
+      "اتساع",
+      "قوة"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "جل ↔ لج",
+    "forward": "جل",
+    "reverse": "لج",
+    "forward_meaning": "الاتساع والانكشاف",
+    "forward_features": [
+      "اتساع",
+      "ظهور"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "التراكم ثم ما قد يلزمه من كثافة وشدة مادية",
+    "reverse_features": [
+      "تماسك",
+      "كثافة",
+      "قوة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "جم ↔ مج",
+    "forward": "جم",
+    "reverse": "مج",
+    "forward_meaning": "التجمع والكثرة",
+    "forward_features": [
+      "تجمع",
+      "كثافة"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الامتلاء والاندفاع",
+    "reverse_features": [
+      "تلاصق",
+      "امتلاء",
+      "كثافة",
+      "اندفاع"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "جن ↔ نج",
+    "forward": "جن",
+    "reverse": "نج",
+    "forward_meaning": "الستر والكثافة",
+    "forward_features": [
+      "باطن",
+      "كثافة"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "النفاذ بغلظ وكثافة أو قوة مما يحتوي",
+    "reverse_features": [
+      "نفاذ",
+      "غلظ",
+      "كثافة",
+      "قوة"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "حد ↔ دح",
+    "forward": "حد",
+    "reverse": "دح",
+    "forward_meaning": "إيقاف الامتداد والتخطي للشيء، أي إنهاؤه، أو منعه",
+    "forward_features": [
+      "تلاصق",
+      "امتداد",
+      "إمساك",
+      "ضغط"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "الضغط القوي على الشيء",
+    "reverse_features": [
+      "ضغط",
+      "قوة"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "حر ↔ رح",
+    "forward": "حر",
+    "reverse": "رح",
+    "forward_meaning": "الخلوص من الغلظ",
+    "forward_features": [
+      "خلوص",
+      "فراغ",
+      "غلظ"
+    ],
+    "forward_members": 15,
+    "reverse_meaning": "الاتساع والانبساط مع نوع من الرقة",
+    "reverse_features": [
+      "اتساع",
+      "رقة"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "حز ↔ زح",
+    "forward": "حز",
+    "reverse": "زح",
+    "forward_meaning": "ما يشبه الشق الدقيق في شيء صلب وما يلزمه من التميز",
+    "forward_features": [
+      "شق",
+      "دقة",
+      "صلابة",
+      "غلظ",
+      "تميز"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "الانتقال البطيء مع الاحتكاك بالمقر",
+    "reverse_features": [
+      "انتقال",
+      "تعقد",
+      "احتكاك",
+      "مقر"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "حس ↔ سح",
+    "forward": "حس",
+    "reverse": "سح",
+    "forward_meaning": "انكشاف الظاهر وبدوه من زوال ما يعروه",
+    "forward_features": [
+      "ظهور",
+      "ظاهر",
+      "اتصال"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "تسيُّب الشيء أو انفصاله بلطف أو دقة عن مقره",
+    "reverse_features": [
+      "تخلخل",
+      "استقلال",
+      "لطف",
+      "دقة",
+      "مقر"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "حش ↔ شح",
+    "forward": "حش",
+    "reverse": "شح",
+    "forward_meaning": "الجفاف والخشونة مع الانتشار",
+    "forward_features": [
+      "جفاف",
+      "انتشار"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "هو جفاف الجرم أو حدته مع عرض أو تجسم",
+    "reverse_features": [
+      "جفاف"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "حص ↔ صح",
+    "forward": "حص",
+    "reverse": "صح",
+    "forward_meaning": "الغلظ وما إليه من تجمع مع التئام أو جفاف مع الجزئية قطعًا أو صغرًا",
+    "forward_features": [
+      "غلظ",
+      "تجمع",
+      "تلاصق",
+      "جفاف",
+      "قطع"
+    ],
+    "forward_members": 8,
+    "reverse_meaning": "كون الشيء على حاله الأصلي مع عرضه وجفافه",
+    "reverse_features": [
+      "جفاف"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "حض ↔ ضح",
+    "forward": "حض",
+    "reverse": "ضح",
+    "forward_meaning": "الانحدار بقوة وغِلَظ",
+    "forward_features": [
+      "نقص",
+      "قوة",
+      "غلظ"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "هو الانبساط مع الانكشاف أو الشفافية",
+    "reverse_features": [
+      "اتساع",
+      "ظهور"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "حط ↔ طح",
+    "forward": "حط",
+    "reverse": "طح",
+    "forward_meaning": "الانضغاط بقوة إلى أسفل",
+    "forward_features": [
+      "ضغط",
+      "قوة",
+      "باطن"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "الانبساط عن ضغط",
+    "reverse_features": [
+      "اتساع",
+      "ضغط"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "حف ↔ فح",
+    "forward": "حف",
+    "reverse": "فح",
+    "forward_meaning": "الإحاطة بالشيء من خارج",
+    "forward_features": [
+      "اشتمال",
+      "ظاهر"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "صدور أثر حاد منتشر عن كائن حي",
+    "reverse_features": [
+      "إمساك",
+      "حدة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "حق ↔ قح",
+    "forward": "حق",
+    "reverse": "قح",
+    "forward_meaning": "تمكن الشيء في عُمق مَقَرَّه، أو وسط مقره",
+    "forward_features": [
+      "امتساك",
+      "عمق",
+      "مقر"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "اصطحاب الجفاء أي الاتصاف به",
+    "reverse_features": [
+      "اتصال",
+      "جفاف"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "حل ↔ لح",
+    "forward": "حل",
+    "reverse": "لح",
+    "forward_meaning": "التسيب والتفكك وما هو من لوازمه كالزيادة",
+    "forward_features": [
+      "تخلخل",
+      "امتداد"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "الالتحام وما يلزمه من عرض وامتداد",
+    "reverse_features": [
+      "التحام",
+      "امتداد"
+    ],
+    "reverse_members": 8
+  },
+  {
+    "pair": "حم ↔ مح",
+    "forward": "حم",
+    "reverse": "مح",
+    "forward_meaning": "حدة تسري في الشيء حتى تعمه",
+    "forward_features": [
+      "حدة"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "ذهاب الشيء أو خلاصته",
+    "reverse_features": [
+      "خلوص"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "حن ↔ نح",
+    "forward": "حن",
+    "reverse": "نح",
+    "forward_meaning": "جوف الشيء القوي أو أثنائه",
+    "forward_features": [
+      "جوف",
+      "قوة"
+    ],
+    "forward_members": 8,
+    "reverse_meaning": "النفاذ من الباطن بقوة واتساع",
+    "reverse_features": [
+      "نفاذ",
+      "باطن",
+      "قوة",
+      "اتساع"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "حو ↔ وح",
+    "forward": "حو",
+    "reverse": "وح",
+    "forward_meaning": "الامتلاء والحيازة بقوة وحياة",
+    "forward_features": [
+      "تلاصق",
+      "امتلاء",
+      "كثافة",
+      "قوة"
+    ],
+    "forward_members": 1,
+    "reverse_meaning": "التحصيل اللطيف والقوي",
+    "reverse_features": [
+      "لطف",
+      "قوة"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "خد ↔ دخ",
+    "forward": "خد",
+    "reverse": "دخ",
+    "forward_meaning": "التجوف الممتد",
+    "forward_features": [
+      "جوف"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "تخلخل مادة الشيء وأثنائه",
+    "reverse_features": [
+      "تخلخل"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "خذ ↔ ذخ",
+    "forward": "خذ",
+    "reverse": "ذخ",
+    "forward_meaning": "النفاذ بقوة من الحوزة أو إليها بغلظ",
+    "forward_features": [
+      "نفاذ",
+      "قوة",
+      "اتساع",
+      "حيز",
+      "غلظ"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "النثر والنفاذ بدقة واسترسال",
+    "reverse_features": [
+      "نفاذ",
+      "دقة",
+      "استرسال",
+      "باطن"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "خر ↔ رخ",
+    "forward": "خر",
+    "reverse": "رخ",
+    "forward_meaning": "تخلخل الأثناء وتسيبها وهو مستوٍ من النقص",
+    "forward_features": [
+      "تخلخل",
+      "استواء",
+      "نقص"
+    ],
+    "forward_members": 11,
+    "reverse_meaning": "طراءة الشيء المتجسم لتندى أثنائه",
+    "reverse_features": [
+      "رخاوة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "خز ↔ زخ",
+    "forward": "خز",
+    "reverse": "زخ",
+    "forward_meaning": "نفاذ الحاد أو النفاذ بحدة في أثناء الشيء",
+    "forward_features": [
+      "نفاذ",
+      "حدة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "اندفاع الشيء بقوة من أثناء أو فيها",
+    "reverse_features": [
+      "اندفاع",
+      "قوة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "خس ↔ سخ",
+    "forward": "خس",
+    "reverse": "سخ",
+    "forward_meaning": "القلة والنقص",
+    "forward_features": [
+      "نقص"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "لين الجسم وعدم صلادته مما يسمح بالاختراق أو الانقياد",
+    "reverse_features": [
+      "رخاوة",
+      "اختراق"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "خش ↔ شخ",
+    "forward": "خش",
+    "reverse": "شخ",
+    "forward_meaning": "تجمع الدقاق الخشنة أو الحادّة في أثناء الشيء",
+    "forward_features": [
+      "تجمع",
+      "حدة"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "هو الجفاف مع التجسم",
+    "reverse_features": [
+      "جفاف"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "خص ↔ صخ",
+    "forward": "خص",
+    "reverse": "صخ",
+    "forward_meaning": "دقة الشيء ومحدوديته",
+    "forward_features": [
+      "دقة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الدخول في الأثناء بحدة بالغة",
+    "reverse_features": [
+      "حدة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "خف ↔ فخ",
+    "forward": "خف",
+    "reverse": "فخ",
+    "forward_meaning": "تخلخل أثناء الشيء وقلة كثافته",
+    "forward_features": [
+      "تخلخل",
+      "نقص"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "النفخ أو الانتفاخ بقوة مع احتمال فراغ",
+    "reverse_features": [
+      "قوة",
+      "فراغ"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "خم ↔ مخ",
+    "forward": "خم",
+    "reverse": "مخ",
+    "forward_meaning": "الاضطمام على مائع كثير أو خَوَرٍ",
+    "forward_features": [
+      "احتواء"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "توسط مادة رخوة أو خروجها",
+    "reverse_features": [
+      "رخاوة",
+      "خروج"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "خن ↔ نخ",
+    "forward": "خن",
+    "reverse": "نخ",
+    "forward_meaning": "التخلخل الممتد في الباطن",
+    "forward_features": [
+      "تخلخل",
+      "باطن"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "نقص في انتصاب الشيء أو في إصمات بنائه",
+    "reverse_features": [
+      "نقص"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "در ↔ رد",
+    "forward": "در",
+    "reverse": "رد",
+    "forward_meaning": "الجريان باسترسال، أو الامتداد بتوال",
+    "forward_features": [
+      "استرسال",
+      "باطن",
+      "تلاصق",
+      "امتداد"
+    ],
+    "forward_members": 9,
+    "reverse_meaning": "التراكم المترتب على صدّ الشيء المسترسل",
+    "reverse_features": [
+      "تماسك",
+      "إمساك",
+      "باطن"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "دس ↔ سد",
+    "forward": "دس",
+    "reverse": "سد",
+    "forward_meaning": "النفاذ بدفع مع دقة أو حدة في أثناء شيء",
+    "forward_features": [
+      "نفاذ",
+      "إبعاد",
+      "دقة",
+      "حدة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "مادة جامدة أو كثيفة تقوم معترضة أو متراكمة",
+    "reverse_features": [
+      "كثافة",
+      "تماسك"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "دع ↔ عد",
+    "forward": "دع",
+    "reverse": "عد",
+    "forward_meaning": "الدفع بضغط على رخو فيتداخل ويتجمع",
+    "forward_features": [
+      "إبعاد",
+      "ضغط",
+      "رخاوة",
+      "اتصال",
+      "اشتمال",
+      "تجمع"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الامتداد بالتوالي ونحوه",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "اتصال"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "دف ↔ فد",
+    "forward": "دف",
+    "reverse": "فد",
+    "forward_meaning": "الضغط من الظاهر أو إليه",
+    "forward_features": [
+      "ضغط",
+      "ظاهر"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "التهيؤ بقوة لتحصيل أمر",
+    "reverse_features": [
+      "قوة"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "دق ↔ قد",
+    "forward": "دق",
+    "reverse": "قد",
+    "forward_meaning": "الصدم أو الضغط الشديد والحدة",
+    "forward_features": [
+      "إمساك",
+      "صدم",
+      "ضغط",
+      "قوة",
+      "حدة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الامتداد الطولي بالقطع ونحوه مع تحدد وجفاف",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "طول",
+      "قطع",
+      "جفاف"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "دل ↔ لد",
+    "forward": "دل",
+    "reverse": "لد",
+    "forward_meaning": "الامتداد (من أعلى) اتجاهاً إلى شيء أو مقر بقوة",
+    "forward_features": [
+      "تلاصق",
+      "امتداد",
+      "ظاهر",
+      "مقر",
+      "قوة"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "الضم الشديد، أي الحوز بلا إفلات",
+    "reverse_features": [
+      "تجمع",
+      "قوة",
+      "اتساع"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "دم ↔ مد",
+    "forward": "دم",
+    "reverse": "مد",
+    "forward_meaning": "استواء الظاهر وبروزه كذلك",
+    "forward_features": [
+      "استواء",
+      "ظاهر",
+      "بروز"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "الامتداد والغاية",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "دن ↔ ند",
+    "forward": "دن",
+    "reverse": "ند",
+    "forward_meaning": "اندساس الشيء في أثناء أو ثباته فيه",
+    "forward_features": [
+      "باطن",
+      "امتساك"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الإبعاد امتدادا أو مفارقة",
+    "reverse_features": [
+      "إبعاد",
+      "امتداد",
+      "رقة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "ذر ↔ رذ",
+    "forward": "ذر",
+    "reverse": "رذ",
+    "forward_meaning": "النثر والنفاذ بدقة واسترسال",
+    "forward_features": [
+      "نفاذ",
+      "دقة",
+      "استرسال",
+      "باطن"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "قلة القدر وضعف الأثر والقيمة",
+    "reverse_features": [
+      "نقص"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "ذع ↔ عذ",
+    "forward": "ذع",
+    "reverse": "عذ",
+    "forward_meaning": "التفرق والانقياد برقة",
+    "forward_features": [
+      "تفرق",
+      "رقة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "لصوق الغض بشيء",
+    "reverse_features": [
+      "تلاصق"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "ذق ↔ قذ",
+    "forward": "ذق",
+    "reverse": "قذ",
+    "forward_meaning": "النفاذ الحاد والأثر العميق",
+    "forward_features": [
+      "نفاذ",
+      "حدة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الدفع بقوة",
+    "reverse_features": [
+      "إبعاد",
+      "قوة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "ذك ↔ كذ",
+    "forward": "ذك",
+    "reverse": "كذ",
+    "forward_meaning": "الحِدّة والصلابة البالغة",
+    "forward_features": [
+      "حدة",
+      "صلابة",
+      "غلظ"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الرخاوة النسبية",
+    "reverse_features": [
+      "رخاوة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "ذل ↔ لذ",
+    "forward": "ذل",
+    "reverse": "لذ",
+    "forward_meaning": "النقص والانخفاض والتيسير",
+    "forward_features": [
+      "نقص",
+      "فيض"
+    ],
+    "forward_members": 1,
+    "reverse_meaning": "مماسة مستطابة",
+    "reverse_features": [
+      "اتصال",
+      "لطف"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "ذن ↔ نذ",
+    "forward": "ذن",
+    "reverse": "نذ",
+    "forward_meaning": "الامتداد الخلفي والتبعية",
+    "forward_features": [
+      "تلاصق",
+      "امتداد",
+      "تعلق"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "خروج كثيف من الأثناء أو الحيز",
+    "reverse_features": [
+      "خروج",
+      "كثافة",
+      "حيز"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "رز ↔ زر",
+    "forward": "رز",
+    "reverse": "زر",
+    "forward_meaning": "التداخل الشديد",
+    "forward_features": [
+      "اتصال",
+      "اشتمال",
+      "قوة"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "النفاذ بدقة مع إمساك ما",
+    "reverse_features": [
+      "نفاذ",
+      "دقة",
+      "إمساك"
+    ],
+    "reverse_members": 8
+  },
+  {
+    "pair": "رس ↔ سر",
+    "forward": "رس",
+    "reverse": "سر",
+    "forward_meaning": "النفاذ بامتداد",
+    "forward_features": [
+      "نفاذ",
+      "امتداد"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الامتداد أو النفاذ مع الدقة",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "نفاذ",
+      "دقة"
+    ],
+    "reverse_members": 18
+  },
+  {
+    "pair": "رش ↔ شر",
+    "forward": "رش",
+    "reverse": "شر",
+    "forward_meaning": "انتشار الأشياء الدقيقة الطرية",
+    "forward_features": [
+      "انتشار",
+      "دقة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الانتشار أو صورة منه",
+    "reverse_features": [
+      "انتشار"
+    ],
+    "reverse_members": 13
+  },
+  {
+    "pair": "رص ↔ صر",
+    "forward": "رص",
+    "reverse": "صر",
+    "forward_meaning": "الالتحام بغلظ أو متانة",
+    "forward_features": [
+      "التحام",
+      "غلظ",
+      "امتساك"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "التضام الشديد الذي يمنع الانتشار",
+    "reverse_features": [
+      "قوة",
+      "إمساك",
+      "ضغط",
+      "انتشار"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "رض ↔ ضر",
+    "forward": "رض",
+    "reverse": "ضر",
+    "forward_meaning": "تضخم الجرم مع رخاوة باطنه",
+    "forward_features": [
+      "رخاوة",
+      "باطن"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "هو نوع من المزاحمة والدفع أو التضييق",
+    "reverse_features": [
+      "ازدحام",
+      "إبعاد",
+      "ضغط"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "رط ↔ طر",
+    "forward": "رط",
+    "reverse": "طر",
+    "forward_meaning": "رخاوة أثناء الشيء الكثيف أو تنديها",
+    "forward_features": [
+      "رخاوة",
+      "كثافة"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "الامتداد مع الرقة أو التتابع",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "رقة"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "رع ↔ عر",
+    "forward": "رع",
+    "reverse": "عر",
+    "forward_meaning": "(الامتداد) مع رقة أو رخاوة",
+    "forward_features": [
+      "تلاصق",
+      "امتداد",
+      "رقة",
+      "رخاوة"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "نقص أو جرد من ظاهر الشيء يلزمه ظهور ما كان خافيًا",
+    "reverse_features": [
+      "نقص",
+      "ظاهر",
+      "ظهور"
+    ],
+    "reverse_members": 12
+  },
+  {
+    "pair": "رغ ↔ غر",
+    "forward": "رغ",
+    "reverse": "غر",
+    "forward_meaning": "طبقة رخوة مع كثافة ما",
+    "forward_features": [
+      "رخاوة",
+      "كثافة"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الغؤور والدخول بامتداد ودقة ويلزمه اللصوق والتغطي",
+    "reverse_features": [
+      "امتداد",
+      "دقة",
+      "تلاصق",
+      "باطن"
+    ],
+    "reverse_members": 8
+  },
+  {
+    "pair": "رف ↔ فر",
+    "forward": "رف",
+    "reverse": "فر",
+    "forward_meaning": "الامتداد أو الطرفية مع رقة أو رخاوة",
+    "forward_features": [
+      "تلاصق",
+      "امتداد",
+      "رقة",
+      "رخاوة"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "الفصل أو التفريق بين ما هو ملتق أو ملتحم",
+    "reverse_features": [
+      "تفرق"
+    ],
+    "reverse_members": 17
+  },
+  {
+    "pair": "رق ↔ قر",
+    "forward": "رق",
+    "reverse": "قر",
+    "forward_meaning": "الانبساط مع الرقة",
+    "forward_features": [
+      "اتساع",
+      "رقة"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "استقرار ما شأنه التسيب في قاع عميق أو حيز",
+    "reverse_features": [
+      "استقرار",
+      "تخلخل",
+      "حيز"
+    ],
+    "reverse_members": 14
+  },
+  {
+    "pair": "رك ↔ كر",
+    "forward": "رك",
+    "reverse": "كر",
+    "forward_meaning": "التجمع مع قلة الكثافة والتماسك",
+    "forward_features": [
+      "تجمع",
+      "نقص",
+      "كثافة",
+      "تماسك"
+    ],
+    "forward_members": 10,
+    "reverse_meaning": "التركز تكرارًا ومعاودة أو بقاء طويلًا لحصول النفع",
+    "reverse_features": [
+      "امتساك",
+      "انتقال",
+      "امتداد"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "رم ↔ مر",
+    "forward": "رم",
+    "reverse": "مر",
+    "forward_meaning": "ضمّ غَضّ - أو رِخْو - (متغيّر أو متحوّل) في الأثناء",
+    "forward_features": [
+      "تجمع",
+      "رخاوة",
+      "انتقال"
+    ],
+    "forward_members": 8,
+    "reverse_meaning": "الاسترسال والحركة مع صفة (حدة، قوة، اضطراب...)",
+    "reverse_features": [
+      "استرسال",
+      "باطن",
+      "انتقال",
+      "حدة",
+      "قوة",
+      "تخلخل"
+    ],
+    "reverse_members": 11
+  },
+  {
+    "pair": "رن ↔ نر",
+    "forward": "رن",
+    "reverse": "نر",
+    "forward_meaning": "مادة تغطي على الحس وتمنع النفاذ",
+    "forward_features": [
+      "باطن",
+      "إمساك",
+      "ضغط",
+      "نفاذ"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "نفاذ لطيف حاد الوقع من أثناء",
+    "reverse_features": [
+      "نفاذ",
+      "لطف",
+      "حدة"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "زع ↔ عز",
+    "forward": "زع",
+    "reverse": "عز",
+    "forward_meaning": "التحريك القليل دفعًا",
+    "forward_features": [
+      "انتقال",
+      "إبعاد"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "تماسك الأثناء والاشتداد",
+    "reverse_features": [
+      "تماسك",
+      "اشتداد",
+      "قوة"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "زغ ↔ غز",
+    "forward": "زغ",
+    "reverse": "غز",
+    "forward_meaning": "الدفع في أثناء أو إليها بدقة وخفة",
+    "forward_features": [
+      "إبعاد",
+      "دقة",
+      "رخاوة"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "النفاذ بحدة ودقة وامتداد",
+    "reverse_features": [
+      "نفاذ",
+      "حدة",
+      "دقة",
+      "امتداد"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "زف ↔ فز",
+    "forward": "زف",
+    "reverse": "فز",
+    "forward_meaning": "حركة ما هو جمع أو كثير بخفة",
+    "forward_features": [
+      "انتقال",
+      "تجمع",
+      "رخاوة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "انبعاث أو نتوء بقوة ونفاذ",
+    "reverse_features": [
+      "ظاهر",
+      "قوة",
+      "نفاذ"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "زك ↔ كز",
+    "forward": "زك",
+    "reverse": "كز",
+    "forward_meaning": "الامتلاء أو التشبع بمائع أو نحوه",
+    "forward_features": [
+      "تلاصق",
+      "امتلاء",
+      "كثافة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الصلابة الشديدة من شدة التداخل",
+    "reverse_features": [
+      "صلابة",
+      "غلظ",
+      "قوة",
+      "اتصال",
+      "اشتمال"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "زل ↔ لز",
+    "forward": "زل",
+    "reverse": "لز",
+    "forward_meaning": "الانزلاق (التحرك السهل) عن مستوٍ يتيح هذا",
+    "forward_features": [
+      "انتقال",
+      "استواء"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "لصوق الشيء بالشيء وشده إلى الشيء",
+    "reverse_features": [
+      "تلاصق",
+      "قوة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "زم ↔ مز",
+    "forward": "زم",
+    "reverse": "مز",
+    "forward_meaning": "ضم الكثير باكتناز",
+    "forward_features": [
+      "تجمع",
+      "اكتناز"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الجمع أو الفصل والامتلاء",
+    "reverse_features": [
+      "تجمع",
+      "تلاصق",
+      "امتلاء",
+      "كثافة"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "زن ↔ نز",
+    "forward": "زن",
+    "reverse": "نز",
+    "forward_meaning": "اختزان الباطن بقوة أو جمعه ما قد يبدو أثره",
+    "forward_features": [
+      "باطن",
+      "قوة",
+      "تجمع",
+      "ظهور"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "دقيق الجرم ينفذ بضغط أو قوة من أثناء ظاهر أو فيها",
+    "reverse_features": [
+      "دقة",
+      "ضغط",
+      "قوة",
+      "ظاهر"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "سع ↔ عس",
+    "forward": "سع",
+    "reverse": "عس",
+    "forward_meaning": "الانحسار والذهاب من جرم الشيء، ويلزمه اتساع الحيز الذي يشغله الحيز نفسه",
+    "forward_features": [
+      "نقص",
+      "اتساع",
+      "حيز"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "نفاذ في كثيف أو منه بامتداد ما",
+    "reverse_features": [
+      "نفاذ",
+      "كثافة",
+      "امتداد"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "سغ ↔ غس",
+    "forward": "سغ",
+    "reverse": "غس",
+    "forward_meaning": "وجود رطب في الأثناء مع نفاذ فيها أو منها",
+    "forward_features": [
+      "نفاذ"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "الانغماس ونحوه من التغطي بالمائع",
+    "reverse_features": [
+      "باطن"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "سف ↔ فس",
+    "forward": "سف",
+    "reverse": "فس",
+    "forward_meaning": "نفاذ دقاق جافة من أثناء مع ظهورها",
+    "forward_features": [
+      "نفاذ",
+      "جفاف",
+      "ظهور"
+    ],
+    "forward_members": 10,
+    "reverse_meaning": "ذهاب غلظ الشيء بتسرب قوته",
+    "reverse_features": [
+      "غلظ",
+      "تسرب"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "سق ↔ قس",
+    "forward": "سق",
+    "reverse": "قس",
+    "forward_meaning": "نفاذ غليظ أو مهم من الجوف أو إليه",
+    "forward_features": [
+      "نفاذ",
+      "غلظ",
+      "جوف"
+    ],
+    "forward_members": 8,
+    "reverse_meaning": "تتبع أو تتابع وامتداد بصلابة أو حدة",
+    "reverse_features": [
+      "امتداد",
+      "صلابة",
+      "غلظ",
+      "حدة"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "سك ↔ كس",
+    "forward": "سك",
+    "reverse": "كس",
+    "forward_meaning": "ضيق المنفذ ضيقًا شديدًا بحيث يكاد ينسد",
+    "forward_features": [
+      "نفاذ",
+      "قوة",
+      "انسداد"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "النقص بالدق أو القشر أو نحوهما من التأخر والغئور",
+    "reverse_features": [
+      "نقص",
+      "انتقال",
+      "عمق"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "سل ↔ لس",
+    "forward": "سل",
+    "reverse": "لس",
+    "forward_meaning": "انسحاب الشيء ممتدًا من أثناء أو فيها بطول ورفق",
+    "forward_features": [
+      "استرسال",
+      "طول"
+    ],
+    "forward_members": 14,
+    "reverse_meaning": "قلة مفارقة المنشأ أو المقر",
+    "reverse_features": [
+      "نقص",
+      "رقة",
+      "مقر"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "سم ↔ مس",
+    "forward": "سم",
+    "reverse": "مس",
+    "forward_meaning": "نوع من الخرق الذي يضم",
+    "forward_features": [
+      "اختراق",
+      "تجمع"
+    ],
+    "forward_members": 10,
+    "reverse_meaning": "المخالطة والاتصال",
+    "reverse_features": [
+      "اتصال"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "سن ↔ نس",
+    "forward": "سن",
+    "reverse": "نس",
+    "forward_meaning": "الامتداد (أو النفاذ) مع حدة أو دقة",
+    "forward_features": [
+      "تلاصق",
+      "امتداد",
+      "نفاذ",
+      "حدة",
+      "دقة"
+    ],
+    "forward_members": 11,
+    "reverse_meaning": "نفاذ بدقة من أثناء شيء أو فيها",
+    "reverse_features": [
+      "نفاذ",
+      "دقة"
+    ],
+    "reverse_members": 10
+  },
+  {
+    "pair": "شع ↔ عش",
+    "forward": "شع",
+    "reverse": "عش",
+    "forward_meaning": "الانتشار بتفرق ودقة وامتداد",
+    "forward_features": [
+      "انتشار",
+      "تفرق",
+      "دقة",
+      "امتداد"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "تداخل الدقاق الممتدة بعضها في بعض",
+    "reverse_features": [
+      "اتصال",
+      "اشتمال"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "شغ ↔ غش",
+    "forward": "شغ",
+    "reverse": "غش",
+    "forward_meaning": "دخول أو تداخل قوي وحاد يلزمه كثافة",
+    "forward_features": [
+      "اتصال",
+      "اشتمال",
+      "قوة",
+      "حدة",
+      "كثافة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "عدم صفاء الشيء أي شوبه أو خلطه بما يجعله كثيفًا يغطي ما تحته",
+    "reverse_features": [
+      "كثافة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "شف ↔ فش",
+    "forward": "شف",
+    "reverse": "فش",
+    "forward_meaning": "فقد كثافة الأثناء",
+    "forward_features": [
+      "كثافة"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "خروج ما يمتلئ به الشيء من لطيف باتساع",
+    "reverse_features": [
+      "خروج",
+      "لطف",
+      "اتساع"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "شق ↔ قش",
+    "forward": "شق",
+    "reverse": "قش",
+    "forward_meaning": "صدع الشيء أو ما هو بمعناه",
+    "forward_features": [
+      "إمساك",
+      "قطع"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "جفاف الظاهر وتقلصه أو تشنجه",
+    "reverse_features": [
+      "جفاف",
+      "ظاهر"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "شك ↔ كش",
+    "forward": "شك",
+    "reverse": "كش",
+    "forward_meaning": "دخول أو نفاذ بحدة أو قوة يلزمه الجمع",
+    "forward_features": [
+      "نفاذ",
+      "حدة",
+      "قوة",
+      "تجمع"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "خروج ما هو متغلغل في أثناء الشيء أو شديد الالتحام به",
+    "reverse_features": [
+      "خروج",
+      "قوة",
+      "التحام"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "شم ↔ مش",
+    "forward": "شم",
+    "reverse": "مش",
+    "forward_meaning": "جمع ما هو منتشر منسحبًا إلى أعلى",
+    "forward_features": [
+      "تجمع",
+      "استرسال",
+      "ظاهر"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "الانتشار والامتداد",
+    "reverse_features": [
+      "انتشار",
+      "تلاصق",
+      "امتداد"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "شن ↔ نش",
+    "forward": "شن",
+    "reverse": "نش",
+    "forward_meaning": "انتشار دقاق من أثناء الشيء",
+    "forward_features": [
+      "انتشار"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "ارتفاع بانتشار مع حدة",
+    "reverse_features": [
+      "صعود",
+      "انتشار",
+      "حدة"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "صع ↔ عص",
+    "forward": "صع",
+    "reverse": "عص",
+    "forward_meaning": "التسيب والتفرق لما شأنه أن يتجمع أو يتماسك",
+    "forward_features": [
+      "تخلخل",
+      "تفرق",
+      "تجمع",
+      "تماسك"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الصلابة والاشتداد",
+    "reverse_features": [
+      "صلابة",
+      "غلظ",
+      "اشتداد",
+      "قوة"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "صغ ↔ غص",
+    "forward": "صغ",
+    "reverse": "غص",
+    "forward_meaning": "لين الأثناء",
+    "forward_features": [
+      "رخاوة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "النفاذ بغلظ أو ضيق أو عُسْر",
+    "reverse_features": [
+      "نفاذ",
+      "غلظ"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "صف ↔ فص",
+    "forward": "صف",
+    "reverse": "فص",
+    "forward_meaning": "الرقة مع الخلوص من الغلظ تجمعا جاسيًا أو تثنيا",
+    "forward_features": [
+      "رقة",
+      "خلوص",
+      "فراغ",
+      "غلظ",
+      "تجمع",
+      "تعقد"
+    ],
+    "forward_members": 9,
+    "reverse_meaning": "تميز جزئي مع قوة",
+    "reverse_features": [
+      "تميز",
+      "قوة"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "صم ↔ مص",
+    "forward": "صم",
+    "reverse": "مص",
+    "forward_meaning": "انسداد مسام الشيء مع صلابة فلا ينفذ فيه أو منه شيء",
+    "forward_features": [
+      "إمساك",
+      "انسداد",
+      "صلابة",
+      "غلظ"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "استخلاص الشيء أو أخذه",
+    "reverse_features": [
+      "خلوص",
+      "إمساك"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "صن ↔ نص",
+    "forward": "صن",
+    "reverse": "نص",
+    "forward_meaning": "الاحتواء في الجوف أو الإمساك في الأثناء بتمكن أو دوام",
+    "forward_features": [
+      "احتواء",
+      "جوف",
+      "تلاصق",
+      "إمساك",
+      "امتساك",
+      "امتداد"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "نوع من النفاذ بامتداد مع علو",
+    "reverse_features": [
+      "نفاذ",
+      "امتداد"
+    ],
+    "reverse_members": 8
+  },
+  {
+    "pair": "ضع ↔ عض",
+    "forward": "ضع",
+    "reverse": "عض",
+    "forward_meaning": "هو تفكيك الشيء الغليظ الشديد التماسك ويلزمه التفرق",
+    "forward_features": [
+      "غلظ",
+      "قوة",
+      "تماسك",
+      "تفرق"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "التجمع مع ضغط شديد أو اشتداد",
+    "reverse_features": [
+      "تجمع",
+      "ضغط",
+      "قوة",
+      "اشتداد"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "ضغ ↔ غض",
+    "forward": "ضغ",
+    "reverse": "غض",
+    "forward_meaning": "هو التجمع الكثيف الرخو",
+    "forward_features": [
+      "تجمع",
+      "كثافة",
+      "رخاوة"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "أن يكون الشيء ثخينًا ممتلئًا بمادة فيها رخاوة ما",
+    "reverse_features": [
+      "امتلاء",
+      "رخاوة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "ضف ↔ فض",
+    "forward": "ضف",
+    "reverse": "فض",
+    "forward_meaning": "هو التجمع على الشيء أو حوله",
+    "forward_features": [
+      "تجمع"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "الكسر والتفريق بقوة وغلظ",
+    "reverse_features": [
+      "كسر",
+      "تفرق",
+      "قوة",
+      "غلظ"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "ضق ↔ قض",
+    "forward": "ضق",
+    "reverse": "قض",
+    "forward_meaning": "",
+    "forward_features": [],
+    "forward_members": 1,
+    "reverse_meaning": "انفصال أو فراغ من شيء بعد تمامه أو قطعه",
+    "reverse_features": [
+      "استقلال",
+      "فراغ",
+      "قطع"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "ضم ↔ مض",
+    "forward": "ضم",
+    "reverse": "مض",
+    "forward_meaning": "هو الجمع بضغط ولأم",
+    "forward_features": [
+      "تجمع",
+      "ضغط",
+      "تلاصق"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "المخالطة أو النفاذ بقوة",
+    "reverse_features": [
+      "نفاذ",
+      "قوة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "ضن ↔ نض",
+    "forward": "ضن",
+    "reverse": "نض",
+    "forward_meaning": "هو لزوم الشيء حيزه أي بقاؤه داخله لا يبرحه",
+    "forward_features": [
+      "تعلق",
+      "حيز"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "نفاذ الشيء (بنحو الرشح) من أثناء ما هو فيه اندفاعا إلى أعلى أو إلى الظاهر",
+    "reverse_features": [
+      "نفاذ",
+      "اندفاع",
+      "ظاهر"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "طع ↔ عط",
+    "forward": "طع",
+    "reverse": "عط",
+    "forward_meaning": "الليونة والانقياد وتيسر التناول",
+    "forward_features": [
+      "رخاوة"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "امتداد الشيء وما يتعلق به",
+    "reverse_features": [
+      "امتداد",
+      "تعلق"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "طغ ↔ غط",
+    "forward": "طغ",
+    "reverse": "غط",
+    "forward_meaning": "التجاوز والغشيان بقوة",
+    "forward_features": [
+      "اشتمال",
+      "قوة"
+    ],
+    "forward_members": 1,
+    "reverse_meaning": "دس الشيء في أثناء شيء فيُغَطَّى",
+    "reverse_features": [
+      "باطن"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "طف ↔ فط",
+    "forward": "طف",
+    "reverse": "فط",
+    "forward_meaning": "الوصول إلى نهاية الشيء بزيادة محدودة أو غشيان",
+    "forward_features": [
+      "وصول",
+      "امتداد",
+      "اشتمال"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "نتوء بسبب ضغط",
+    "reverse_features": [
+      "ظاهر",
+      "ضغط"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "طق ↔ قط",
+    "forward": "طق",
+    "reverse": "قط",
+    "forward_meaning": "الإحاطة بقوة",
+    "forward_features": [
+      "اشتمال",
+      "قوة"
+    ],
+    "forward_members": 1,
+    "reverse_meaning": "نوع من القطع باستواء وتسوية أو توالٍ",
+    "reverse_features": [
+      "قطع",
+      "استواء"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "طل ↔ لط",
+    "forward": "طل",
+    "reverse": "لط",
+    "forward_meaning": "الامتداد الظاهر من أصل",
+    "forward_features": [
+      "تلاصق",
+      "امتداد",
+      "ظاهر"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "حجب الثغرة أو سدها بشيء خارجي",
+    "reverse_features": [
+      "باطن",
+      "انسداد",
+      "ظاهر"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "طم ↔ مط",
+    "forward": "طم",
+    "reverse": "مط",
+    "forward_meaning": "الملء والتغطية حتى الإخفاء",
+    "forward_features": [
+      "اشتمال",
+      "باطن"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الامتداد والانسكاب",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "طن ↔ نط",
+    "forward": "طن",
+    "reverse": "نط",
+    "forward_meaning": "التكتل واللزوم",
+    "forward_features": [
+      "تعلق"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "اندفاع من المقر أو الحيز بقوة شديدة",
+    "reverse_features": [
+      "اندفاع",
+      "مقر",
+      "حيز",
+      "قوة"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "ظع ↔ عظ",
+    "forward": "ظع",
+    "reverse": "عظ",
+    "forward_meaning": "",
+    "forward_features": [],
+    "forward_members": 1,
+    "reverse_meaning": "الانثناء أو ما يلزمه من ضخامة",
+    "reverse_features": [
+      "تعقد"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "ظل ↔ لظ",
+    "forward": "ظل",
+    "reverse": "لظ",
+    "forward_meaning": "الحجب",
+    "forward_features": [
+      "باطن"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "الحركة الخفيفة مع الحدة",
+    "reverse_features": [
+      "انتقال",
+      "حدة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "ظن ↔ نظ",
+    "forward": "ظن",
+    "reverse": "نظ",
+    "forward_meaning": "",
+    "forward_features": [],
+    "forward_members": 1,
+    "reverse_meaning": "مواجهة العين للالتقاط",
+    "reverse_features": [
+      "إمساك"
+    ],
+    "reverse_members": 1
+  },
+  {
+    "pair": "عف ↔ فع",
+    "forward": "عف",
+    "reverse": "فع",
+    "forward_meaning": "قلة المتاح على الظاهر أو قلة المتناول منه",
+    "forward_features": [
+      "نقص",
+      "ظاهر"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "المهارة والقوة أو الجد في عمل الشيء",
+    "reverse_features": [
+      "قوة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "عق ↔ قع",
+    "forward": "عق",
+    "reverse": "قع",
+    "forward_meaning": "وجود غلظ أو تعقد في عمق الشيء",
+    "forward_features": [
+      "غلظ",
+      "تعقد",
+      "عمق"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "نوع من التركز والكثافة مع غلظ وثقل إلى أسفل",
+    "reverse_features": [
+      "امتساك",
+      "كثافة",
+      "غلظ",
+      "ثقل",
+      "باطن"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "عك ↔ كع",
+    "forward": "عك",
+    "reverse": "كع",
+    "forward_meaning": "الحبس بتضييق وعدم انتشار",
+    "forward_features": [
+      "ضغط",
+      "انتشار"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "النتوء الجزئي مع عدم الاسترسال فيه",
+    "reverse_features": [
+      "ظاهر",
+      "استرسال",
+      "باطن"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "عل ↔ لع",
+    "forward": "عل",
+    "reverse": "لع",
+    "forward_meaning": "نوع من التراكم أو الارتفاع الذي يلزمه",
+    "forward_features": [
+      "تماسك",
+      "صعود"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "الحدة في الأثناء حدة يظهر أثرها",
+    "reverse_features": [
+      "حدة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "عم ↔ مع",
+    "forward": "عم",
+    "reverse": "مع",
+    "forward_meaning": "الالتحام العلوي، أي التجمع مع علو، أو في أعلى",
+    "forward_features": [
+      "التحام",
+      "تجمع",
+      "ظاهر"
+    ],
+    "forward_members": 9,
+    "reverse_meaning": "الامتداد والصلابة",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "صلابة",
+      "غلظ"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "عن ↔ نع",
+    "forward": "عن",
+    "reverse": "نع",
+    "forward_meaning": "اعتراض شيء أو ظهوره مع لطف قد يتمثل في الغموض",
+    "forward_features": [
+      "ظهور",
+      "لطف"
+    ],
+    "forward_members": 10,
+    "reverse_meaning": "الرخاوة والطراءة وما إلى ذلك رقة الأثناء",
+    "reverse_features": [
+      "رخاوة",
+      "رقة"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "غل ↔ لغ",
+    "forward": "غل",
+    "reverse": "لغ",
+    "forward_meaning": "التخلل بحدة مع إحاطة أو تقييد أو ما بمعناهما",
+    "forward_features": [
+      "نفاذ",
+      "حدة",
+      "اشتمال"
+    ],
+    "forward_members": 9,
+    "reverse_meaning": "تخلل الشيء بمائع ثخين أو كثيف",
+    "reverse_features": [
+      "نفاذ",
+      "كثافة"
+    ],
+    "reverse_members": 3
+  },
+  {
+    "pair": "غن ↔ نغ",
+    "forward": "غن",
+    "reverse": "نغ",
+    "forward_meaning": "وجود لطيف في الحوزة",
+    "forward_features": [
+      "لطف",
+      "اتساع",
+      "حيز"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "رخاوة في باطن الشيء",
+    "reverse_features": [
+      "رخاوة",
+      "باطن"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "فق ↔ قف",
+    "forward": "فق",
+    "reverse": "قف",
+    "forward_meaning": "شق الشيء إلى عمقه ويلزمه فراغ",
+    "forward_features": [
+      "شق",
+      "عمق",
+      "فراغ"
+    ],
+    "forward_members": 8,
+    "reverse_meaning": "نوع من الارتفاع مع صلابة أو امتساك",
+    "reverse_features": [
+      "صعود",
+      "صلابة",
+      "غلظ",
+      "امتساك"
+    ],
+    "reverse_members": 4
+  },
+  {
+    "pair": "فك ↔ كف",
+    "forward": "فك",
+    "reverse": "كف",
+    "forward_meaning": "تسيّب جزئي مع شيء من الربط",
+    "forward_features": [
+      "تخلخل"
+    ],
+    "forward_members": 4,
+    "reverse_meaning": "الانثناء أو القبض على الشيء",
+    "reverse_features": [
+      "تعقد",
+      "إمساك"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "فل ↔ لف",
+    "forward": "فل",
+    "reverse": "لف",
+    "forward_meaning": "انفصال ندورًا أو نتوءًا مع ضعف",
+    "forward_features": [
+      "استقلال",
+      "ظاهر",
+      "نقص"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة",
+    "reverse_features": [
+      "ظاهر",
+      "كثافة"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "فن ↔ نف",
+    "forward": "فن",
+    "reverse": "نف",
+    "forward_meaning": "امتداد مع الرقة أو الضعف",
+    "forward_features": [
+      "امتداد",
+      "رقة",
+      "نقص"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "نفاذ أو إبعاد بانتشار",
+    "reverse_features": [
+      "نفاذ",
+      "إبعاد",
+      "انتشار"
+    ],
+    "reverse_members": 14
+  },
+  {
+    "pair": "قل ↔ لق",
+    "forward": "قل",
+    "reverse": "لق",
+    "forward_meaning": "الرفع بصورة من الصور",
+    "forward_features": [
+      "صعود"
+    ],
+    "forward_members": 8,
+    "reverse_meaning": "الصدم أو الالتقاء بالشيء في الحيز بقوة",
+    "reverse_features": [
+      "إمساك",
+      "صدم",
+      "حيز",
+      "قوة"
+    ],
+    "reverse_members": 7
+  },
+  {
+    "pair": "قم ↔ مق",
+    "forward": "قم",
+    "reverse": "مق",
+    "forward_meaning": "تجمع الشيء أو تضامه في كتلة قوية مع تسنم أو ارتفاع",
+    "forward_features": [
+      "تجمع",
+      "قوة",
+      "صعود"
+    ],
+    "forward_members": 9,
+    "reverse_meaning": "الغلظ الباطني (مادياً أو معنوياً)",
+    "reverse_features": [
+      "غلظ",
+      "باطن"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "قن ↔ نق",
+    "forward": "قن",
+    "reverse": "نق",
+    "forward_meaning": "النفاذ في الباطن أو الأخذ إليه بعمق أو امتداد",
+    "forward_features": [
+      "نفاذ",
+      "باطن",
+      "إمساك",
+      "عمق",
+      "امتداد"
+    ],
+    "forward_members": 7,
+    "reverse_meaning": "فراغ في العمق لغليظ ينفذ فيه أو منه",
+    "reverse_features": [
+      "فراغ",
+      "عمق",
+      "غلظ"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "كل ↔ لك",
+    "forward": "كل",
+    "reverse": "لك",
+    "forward_meaning": "تجمع الشيء كتلة دون حد أو طرف دقيق",
+    "forward_features": [
+      "تجمع",
+      "دقة"
+    ],
+    "forward_members": 10,
+    "reverse_meaning": "نوع من التراكم يتمثل في الاكتناز باللحم",
+    "reverse_features": [
+      "تماسك",
+      "اكتناز"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "كم ↔ مك",
+    "forward": "كم",
+    "reverse": "مك",
+    "forward_meaning": "تغطية الشيء بغطاء زائد على حقيقته",
+    "forward_features": [
+      "اشتمال",
+      "باطن"
+    ],
+    "forward_members": 3,
+    "reverse_meaning": "التمكن والرسوخ والاحتباس",
+    "reverse_features": [
+      "امتساك",
+      "تماسك",
+      "احتباس"
+    ],
+    "reverse_members": 5
+  },
+  {
+    "pair": "كن ↔ نك",
+    "forward": "كن",
+    "reverse": "نك",
+    "forward_meaning": "الاستتار في جوف شيء",
+    "forward_features": [
+      "باطن",
+      "جوف"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "الوصول إلى عمق الشيء بجد وتدقيق",
+    "reverse_features": [
+      "وصول",
+      "عمق",
+      "دقة"
+    ],
+    "reverse_members": 10
+  },
+  {
+    "pair": "لم ↔ مل",
+    "forward": "لم",
+    "reverse": "مل",
+    "forward_meaning": "نوع من الضم أو التضام لما شأنه الانتشار إلى الظاهر",
+    "forward_features": [
+      "تجمع",
+      "انتشار",
+      "ظاهر"
+    ],
+    "forward_members": 6,
+    "reverse_meaning": "الامتداد مع الحوز أو الشمول",
+    "reverse_features": [
+      "تلاصق",
+      "امتداد",
+      "اتساع"
+    ],
+    "reverse_members": 9
+  },
+  {
+    "pair": "لن ↔ نل",
+    "forward": "لن",
+    "reverse": "نل",
+    "forward_meaning": "",
+    "forward_features": [],
+    "forward_members": 1,
+    "reverse_meaning": "دقة في الشيء الحاصل أو التحصيل",
+    "reverse_features": [
+      "دقة"
+    ],
+    "reverse_members": 2
+  },
+  {
+    "pair": "لو ↔ ول",
+    "forward": "لو",
+    "reverse": "ول",
+    "forward_meaning": "",
+    "forward_features": [],
+    "forward_members": 1,
+    "reverse_meaning": "",
+    "reverse_features": [],
+    "reverse_members": 1
+  },
+  {
+    "pair": "من ↔ نم",
+    "forward": "من",
+    "reverse": "نم",
+    "forward_meaning": "القوة والثبات مع صفة (نقص، وثاقة، حجز)",
+    "forward_features": [
+      "قوة",
+      "امتساك",
+      "نقص"
+    ],
+    "forward_members": 5,
+    "reverse_meaning": "انتشار من باطن الشيء إلى ظاهره مع لطف ما",
+    "reverse_features": [
+      "انتشار",
+      "باطن",
+      "ظاهر",
+      "لطف"
+    ],
+    "reverse_members": 6
+  },
+  {
+    "pair": "نو ↔ ون",
+    "forward": "نو",
+    "reverse": "ون",
+    "forward_meaning": "الاحتواء والانجذاب والعود إلى الجوف أو الأصل",
+    "forward_features": [
+      "احتواء",
+      "رجوع",
+      "جوف"
+    ],
+    "forward_members": 2,
+    "reverse_meaning": "الفتور والتوقف عن الحركة",
+    "reverse_features": [
+      "نقص",
+      "احتباس",
+      "انتقال"
+    ],
+    "reverse_members": 1
+  }
+]
