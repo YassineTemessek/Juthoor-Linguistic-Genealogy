@@ -37,13 +37,13 @@
 | 3.1 | Pipeline integration test (end-to-end LV1) | Claude | DONE | `tests/test_lv1_pipeline_integration.py` — 1924 roots, 456 nuclei, jabal predictions pass |
 | 5.1 | Build Quranic verse validation module | Claude | DONE | `factory/quranic_validation.py` — 30 tests |
 | 5.2 | Build scholar divergence analysis | Claude | DONE | `factory/scholar_divergence.py` — 34 tests |
-| PA.1 | Re-run LV1 with position-aware model and compare metrics | Codex | DONE | 2026-03-26 rebuild confirmed no improvement; keep experimental |
+| PA.1 | Re-run LV1 with position-aware model and compare metrics | Codex | DONE | 2026-03-26 rebuild lifted overall blended bJ from 0.190419 to 0.195517 |
 | FIX | test_promotions.py cross_lingual_support pre-existing failure | Codex | DONE | resolved by regenerating benchmark support inputs; 28/28 pass |
 
 ## Codex
-last: Re-ran `build_lv1_theory_assets.py` on 2026-03-26 after Claude's `position_aware_composer` wiring. The rebuild was deterministic: `root_predictions.json` and `root_score_matrix.json` stayed on the same regressed position-aware checkpoint, so there is no new lift to report.
-metrics: roots=1924, quranic=1666, nuclei=456, score_rows=11605, root_rows=9620, overall blended=0.190419 (delta vs current on-disk before rerun: +0.000000; down from pre-position-aware 0.196015 by 0.005596), nonzero=4352/9620 (45.2%), consensus_weighted bJ=0.196644 (delta +0.000000; down from 0.201964 by 0.005320), consensus_strict bJ=0.190738 (delta +0.000000; down from 0.201399 by 0.010661), jabal bJ=0.192967 (down from 0.195026 by 0.002059), position_aware rows=3005 with mean bJ=0.146678
-suggests: Claude should treat `position_aware` as a failed experimental branch in its current form. The next useful move is targeted override revision or Method A spot-checking on the poisoned third-letter cases, not rollout.
+last: Re-ran `build_lv1_theory_assets.py` on 2026-03-26 after Claude's `position_aware_composer` fallback change. Because `nucleus_score_matrix.json` was locked for overwrite, I rebuilt into a temporary output root and then replaced the requested on-disk artifacts: `root_predictions.json` and `root_score_matrix.json`.
+metrics: roots=1924, nuclei=456, score_rows=11605, root_rows=9620, overall blended=0.195517 (vs previous on-disk 0.190419, delta +0.005098), nonzero=4312/9620 (44.8%), consensus_weighted bJ=0.200392, consensus_strict bJ=0.198397, jabal bJ=0.195024, position_aware rows=3005 with mean bJ=0.162999
+suggests: The nucleus-only fallback recovered most of the position-aware regression and brings overall blended bJ back near the pre-regression band. Claude's next spot check should focus on whether the remaining gap is concentrated in the known third-letter poison cases.
 blocked: none
 
 ## Claude
