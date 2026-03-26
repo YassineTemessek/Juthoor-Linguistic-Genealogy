@@ -348,6 +348,75 @@ def test_summarize_root_predictions_includes_neili_summary() -> None:
     assert summary["neili_summary"]["constraint_counts"]["no_synonymy"] == 2
 
 
+def test_adaptive_routing_prefers_nucleus_only_without_actual_features() -> None:
+    """When position_aware is chosen but no actual_features exist, nucleus_only wins."""
+    # م has a MODIFIER_OVERRIDE — route to position_aware requires no semantic overlap
+    # between nucleus and third_letter_features AND no category overlap
+    # choose_root_prediction_model: jaccard > 0 → intersection; category overlap → intersection
+    # To force position_aware: jaccard == 0 AND no category overlap AND letter in MODIFIER_OVERRIDES
+    # Use nucleus=(رخاوة,) and third_letter_features=(تفرق,) — different categories, no overlap
+    prediction = predict_root_from_parts(
+        root="حمر",
+        binary_nucleus="حم",
+        third_letter="ر",
+        binary_features=("رخاوة",),
+        third_letter_features=("تفرق",),  # no feature or category overlap with رخاوة
+        actual_features=(),               # no ground truth
+    )
+    # ر has a MODIFIER_OVERRIDE → choose_root_prediction_model returns "position_aware"
+    # Without actual_features, adaptive routing must fall back to nucleus_only
+    assert prediction.model_used == "nucleus_only"
+    assert prediction.predicted_features == ("رخاوة",)
+
+
+def test_adaptive_routing_keeps_position_aware_when_it_scores_higher() -> None:
+    """When position_aware produces a better blended_jaccard than nucleus_only, keep it."""
+    # Construct a case where position_aware prediction overlaps actual_features but
+    # nucleus_only does not.
+    # م override = (ظاهر, تجمع); nucleus = (تجمع, امتداد)
+    # position_aware intersection = (تجمع,)  → overlaps actual (تجمع,)
+    # nucleus_only = (تجمع, امتداد)          → also overlaps, but we test score equality
+    # To force position_aware to win, use actual = (تجمع,) and nucleus = (امتداد, رخاوة)
+    # so position_aware intersection with م override (ظاهر, تجمع) → ()  — no overlap
+    # We need: nucleus that does NOT overlap with م override, but override overlaps actual
+    # nucleus = (رخاوة,), م override = (ظاهر, تجمع), no overlap → nucleus-only fallback inside model
+    # So model returns nucleus[:2] = (رخاوة,)
+    # actual = (تجمع,) → nucleus_only score = 0, position_aware score = 0 → tie → nucleus_only wins
+    # For PA to strictly win: nucleus = (ظاهر,), override = (ظاهر, تجمع) → overlap = (ظاهر,)
+    # actual = (ظاهر,), nucleus_only = (ظاهر,) → same score → tie → nucleus_only wins
+    # To get PA strictly better: nucleus = (تجمع, ثقل), م override = (ظاهر, تجمع)
+    # PA intersection = (تجمع,); nucleus_only = (تجمع, ثقل)
+    # actual = (تجمع,): bJ(PA) = bJ((تجمع,),(تجمع,)) = 1.0; bJ(NU) = bJ((تجمع,ثقل),(تجمع,)) = 0.7*0.5+0.3*...
+    prediction = predict_root_from_parts(
+        root="جمع",
+        binary_nucleus="جم",
+        third_letter="م",
+        binary_features=("تجمع", "ثقل"),
+        third_letter_features=("شيء",),  # raw third features irrelevant — override used
+        actual_features=("تجمع",),
+    )
+    # position_aware uses م override (ظاهر, تجمع); intersection with (تجمع, ثقل) = (تجمع,)
+    # bJ of (تجمع,) vs (تجمع,) = 1.0
+    # nucleus_only = (تجمع, ثقل); bJ vs (تجمع,) < 1.0  → position_aware wins
+    assert prediction.model_used == "position_aware"
+    assert "تجمع" in prediction.predicted_features
+
+
+def test_adaptive_routing_falls_back_to_nucleus_only_when_scores_tie_or_worse() -> None:
+    """When nucleus_only ties or beats position_aware on blended_jaccard, nucleus_only wins."""
+    # nucleus = (ثقل,), م override = (ظاهر, تجمع) — no overlap → PA returns nucleus[:2] = (ثقل,)
+    # nucleus_only = (ثقل,) — identical features → tie → nucleus_only should win
+    prediction = predict_root_from_parts(
+        root="حمل",
+        binary_nucleus="حل",
+        third_letter="م",
+        binary_features=("ثقل",),
+        third_letter_features=("شيء",),
+        actual_features=("ثقل",),
+    )
+    assert prediction.model_used == "nucleus_only"
+
+
 def test_summarize_root_predictions_includes_quranic_validation_split() -> None:
     rows = apply_neili_filters_to_prediction_rows(
         [
