@@ -173,21 +173,21 @@
     "shared_blocked_features": [
       "ظاهر"
     ],
-    "mean_blended_jaccard": 0.173686,
-    "nonzero_rate": 0.674797,
+    "mean_blended_jaccard": 0.187859,
+    "nonzero_rate": 0.658537,
     "dropped_feature_row_rate": 0.105691,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 123,
         "quranic_rows": 108,
-        "mean_blended_jaccard": 0.173686,
-        "nonzero_rate": 0.674797,
+        "mean_blended_jaccard": 0.187859,
+        "nonzero_rate": 0.658537,
         "quranic_rate": 0.878049,
-        "feature_precision": 0.196581,
+        "feature_precision": 0.213768,
         "dropped_feature_row_rate": 0.105691,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 64
           },
           {
@@ -231,14 +231,14 @@
       "consensus_strict": {
         "rows": 123,
         "quranic_rows": 108,
-        "mean_blended_jaccard": 0.173686,
-        "nonzero_rate": 0.674797,
+        "mean_blended_jaccard": 0.187859,
+        "nonzero_rate": 0.658537,
         "quranic_rate": 0.878049,
-        "feature_precision": 0.196581,
+        "feature_precision": 0.213768,
         "dropped_feature_row_rate": 0.105691,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 64
           },
           {
@@ -586,17 +586,17 @@
     "shared_blocked_features": [
       "باطن"
     ],
-    "mean_blended_jaccard": 0.181697,
-    "nonzero_rate": 0.725806,
+    "mean_blended_jaccard": 0.171119,
+    "nonzero_rate": 0.677419,
     "dropped_feature_row_rate": 0.080645,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 62,
         "quranic_rows": 48,
-        "mean_blended_jaccard": 0.187618,
-        "nonzero_rate": 0.725806,
+        "mean_blended_jaccard": 0.178908,
+        "nonzero_rate": 0.677419,
         "quranic_rate": 0.774194,
-        "feature_precision": 0.20915,
+        "feature_precision": 0.211268,
         "dropped_feature_row_rate": 0.080645,
         "dominant_models": [
           {
@@ -608,7 +608,7 @@
             "count": 19
           },
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 14
           }
         ],
@@ -653,14 +653,14 @@
       "consensus_strict": {
         "rows": 62,
         "quranic_rows": 48,
-        "mean_blended_jaccard": 0.175776,
-        "nonzero_rate": 0.725806,
+        "mean_blended_jaccard": 0.16333,
+        "nonzero_rate": 0.677419,
         "quranic_rate": 0.774194,
-        "feature_precision": 0.20122,
+        "feature_precision": 0.204225,
         "dropped_feature_row_rate": 0.080645,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 27
           },
           {
@@ -812,28 +812,28 @@
   },
   {
     "letter": "د",
-    "summary_band": "mixed",
+    "summary_band": "risky",
     "shared_stable_modifier_features": [
       "إمساك",
       "احتباس",
       "ثقل"
     ],
     "shared_blocked_features": [],
-    "mean_blended_jaccard": 0.189643,
-    "nonzero_rate": 0.697674,
+    "mean_blended_jaccard": 0.156559,
+    "nonzero_rate": 0.647287,
     "dropped_feature_row_rate": 0.015504,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 129,
         "quranic_rows": 123,
-        "mean_blended_jaccard": 0.185183,
-        "nonzero_rate": 0.643411,
+        "mean_blended_jaccard": 0.161365,
+        "nonzero_rate": 0.620155,
         "quranic_rate": 0.953488,
-        "feature_precision": 0.163121,
+        "feature_precision": 0.170635,
         "dropped_feature_row_rate": 0.015504,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 49
           },
           {
@@ -880,14 +880,14 @@
       "consensus_strict": {
         "rows": 129,
         "quranic_rows": 123,
-        "mean_blended_jaccard": 0.194104,
-        "nonzero_rate": 0.751938,
+        "mean_blended_jaccard": 0.151753,
+        "nonzero_rate": 0.674419,
         "quranic_rate": 0.953488,
-        "feature_precision": 0.156069,
+        "feature_precision": 0.150877,
         "dropped_feature_row_rate": 0.015504,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 85
           },
           {
@@ -1031,21 +1031,21 @@
     "shared_blocked_features": [
       "التحام"
     ],
-    "mean_blended_jaccard": 0.190786,
-    "nonzero_rate": 0.6875,
+    "mean_blended_jaccard": 0.159368,
+    "nonzero_rate": 0.617788,
     "dropped_feature_row_rate": 0.997596,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 208,
         "quranic_rows": 201,
-        "mean_blended_jaccard": 0.193712,
-        "nonzero_rate": 0.677885,
+        "mean_blended_jaccard": 0.169449,
+        "nonzero_rate": 0.620192,
         "quranic_rate": 0.966346,
-        "feature_precision": 0.206704,
+        "feature_precision": 0.190265,
         "dropped_feature_row_rate": 1.0,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 113
           },
           {
@@ -1098,14 +1098,14 @@
       "consensus_strict": {
         "rows": 208,
         "quranic_rows": 201,
-        "mean_blended_jaccard": 0.187861,
-        "nonzero_rate": 0.697115,
+        "mean_blended_jaccard": 0.149287,
+        "nonzero_rate": 0.615385,
         "quranic_rate": 0.966346,
-        "feature_precision": 0.196918,
+        "feature_precision": 0.167019,
         "dropped_feature_row_rate": 0.995192,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 139
           },
           {
@@ -1805,21 +1805,21 @@
       "باطن",
       "ظاهر"
     ],
-    "mean_blended_jaccard": 0.228414,
-    "nonzero_rate": 0.721649,
+    "mean_blended_jaccard": 0.181392,
+    "nonzero_rate": 0.597938,
     "dropped_feature_row_rate": 0.164948,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 97,
         "quranic_rows": 79,
-        "mean_blended_jaccard": 0.228414,
-        "nonzero_rate": 0.721649,
+        "mean_blended_jaccard": 0.181392,
+        "nonzero_rate": 0.597938,
         "quranic_rate": 0.814433,
-        "feature_precision": 0.251046,
+        "feature_precision": 0.185792,
         "dropped_feature_row_rate": 0.164948,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 63
           },
           {
@@ -1863,14 +1863,14 @@
       "consensus_strict": {
         "rows": 97,
         "quranic_rows": 79,
-        "mean_blended_jaccard": 0.228414,
-        "nonzero_rate": 0.721649,
+        "mean_blended_jaccard": 0.181392,
+        "nonzero_rate": 0.597938,
         "quranic_rate": 0.814433,
-        "feature_precision": 0.251046,
+        "feature_precision": 0.185792,
         "dropped_feature_row_rate": 0.164948,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 63
           },
           {
@@ -2027,17 +2027,17 @@
       "اختراق"
     ],
     "shared_blocked_features": [],
-    "mean_blended_jaccard": 0.192199,
-    "nonzero_rate": 0.639535,
+    "mean_blended_jaccard": 0.172684,
+    "nonzero_rate": 0.563953,
     "dropped_feature_row_rate": 0.040697,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 86,
         "quranic_rows": 76,
-        "mean_blended_jaccard": 0.20031,
-        "nonzero_rate": 0.616279,
+        "mean_blended_jaccard": 0.188236,
+        "nonzero_rate": 0.604651,
         "quranic_rate": 0.883721,
-        "feature_precision": 0.215768,
+        "feature_precision": 0.214612,
         "dropped_feature_row_rate": 0.081395,
         "dominant_models": [
           {
@@ -2045,7 +2045,7 @@
             "count": 49
           },
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 28
           },
           {
@@ -2090,14 +2090,14 @@
       "consensus_strict": {
         "rows": 86,
         "quranic_rows": 76,
-        "mean_blended_jaccard": 0.184089,
-        "nonzero_rate": 0.662791,
+        "mean_blended_jaccard": 0.157132,
+        "nonzero_rate": 0.523256,
         "quranic_rate": 0.883721,
-        "feature_precision": 0.188235,
+        "feature_precision": 0.190722,
         "dropped_feature_row_rate": 0.0,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 61
           },
           {
@@ -2125,26 +2125,26 @@
   },
   {
     "letter": "ق",
-    "summary_band": "mixed",
+    "summary_band": "supportive",
     "shared_stable_modifier_features": [
       "ثقل"
     ],
     "shared_blocked_features": [],
-    "mean_blended_jaccard": 0.219853,
-    "nonzero_rate": 0.676471,
+    "mean_blended_jaccard": 0.246714,
+    "nonzero_rate": 0.752941,
     "dropped_feature_row_rate": 0.023529,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 85,
         "quranic_rows": 72,
-        "mean_blended_jaccard": 0.216353,
-        "nonzero_rate": 0.694118,
+        "mean_blended_jaccard": 0.24815,
+        "nonzero_rate": 0.752941,
         "quranic_rate": 0.847059,
-        "feature_precision": 0.184211,
+        "feature_precision": 0.253807,
         "dropped_feature_row_rate": 0.047059,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 40
           },
           {
@@ -2191,14 +2191,14 @@
       "consensus_strict": {
         "rows": 85,
         "quranic_rows": 72,
-        "mean_blended_jaccard": 0.223353,
-        "nonzero_rate": 0.658824,
+        "mean_blended_jaccard": 0.245278,
+        "nonzero_rate": 0.752941,
         "quranic_rate": 0.847059,
-        "feature_precision": 0.166667,
+        "feature_precision": 0.280423,
         "dropped_feature_row_rate": 0.0,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 60
           },
           {
@@ -2340,21 +2340,21 @@
     "shared_blocked_features": [
       "التحام"
     ],
-    "mean_blended_jaccard": 0.150759,
-    "nonzero_rate": 0.566901,
+    "mean_blended_jaccard": 0.144712,
+    "nonzero_rate": 0.521127,
     "dropped_feature_row_rate": 0.992958,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 142,
         "quranic_rows": 140,
-        "mean_blended_jaccard": 0.141496,
-        "nonzero_rate": 0.549296,
+        "mean_blended_jaccard": 0.145775,
+        "nonzero_rate": 0.528169,
         "quranic_rate": 0.985915,
-        "feature_precision": 0.148265,
+        "feature_precision": 0.170909,
         "dropped_feature_row_rate": 0.992958,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 63
           },
           {
@@ -2415,14 +2415,14 @@
       "consensus_strict": {
         "rows": 142,
         "quranic_rows": 140,
-        "mean_blended_jaccard": 0.160023,
-        "nonzero_rate": 0.584507,
+        "mean_blended_jaccard": 0.14365,
+        "nonzero_rate": 0.514085,
         "quranic_rate": 0.985915,
-        "feature_precision": 0.19195,
+        "feature_precision": 0.169118,
         "dropped_feature_row_rate": 0.992958,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 73
           },
           {
@@ -2468,21 +2468,21 @@
     "shared_blocked_features": [
       "التحام"
     ],
-    "mean_blended_jaccard": 0.213131,
-    "nonzero_rate": 0.669421,
+    "mean_blended_jaccard": 0.20949,
+    "nonzero_rate": 0.694215,
     "dropped_feature_row_rate": 0.975207,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 121,
         "quranic_rows": 113,
-        "mean_blended_jaccard": 0.213131,
-        "nonzero_rate": 0.669421,
+        "mean_blended_jaccard": 0.20949,
+        "nonzero_rate": 0.694215,
         "quranic_rate": 0.933884,
-        "feature_precision": 0.186335,
+        "feature_precision": 0.257576,
         "dropped_feature_row_rate": 0.975207,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 72
           },
           {
@@ -2520,14 +2520,14 @@
       "consensus_strict": {
         "rows": 121,
         "quranic_rows": 113,
-        "mean_blended_jaccard": 0.213131,
-        "nonzero_rate": 0.669421,
+        "mean_blended_jaccard": 0.20949,
+        "nonzero_rate": 0.694215,
         "quranic_rate": 0.933884,
-        "feature_precision": 0.186335,
+        "feature_precision": 0.257576,
         "dropped_feature_row_rate": 0.975207,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 72
           },
           {
@@ -2572,17 +2572,17 @@
       "باطن"
     ],
     "shared_blocked_features": [],
-    "mean_blended_jaccard": 0.20811,
-    "nonzero_rate": 0.598214,
+    "mean_blended_jaccard": 0.204509,
+    "nonzero_rate": 0.53125,
     "dropped_feature_row_rate": 0.035714,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 112,
         "quranic_rows": 98,
-        "mean_blended_jaccard": 0.212842,
-        "nonzero_rate": 0.580357,
+        "mean_blended_jaccard": 0.207574,
+        "nonzero_rate": 0.535714,
         "quranic_rate": 0.875,
-        "feature_precision": 0.240909,
+        "feature_precision": 0.247525,
         "dropped_feature_row_rate": 0.035714,
         "dominant_models": [
           {
@@ -2594,7 +2594,7 @@
             "count": 40
           },
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 26
           }
         ],
@@ -2633,14 +2633,14 @@
       "consensus_strict": {
         "rows": 112,
         "quranic_rows": 98,
-        "mean_blended_jaccard": 0.203378,
-        "nonzero_rate": 0.616071,
+        "mean_blended_jaccard": 0.201443,
+        "nonzero_rate": 0.526786,
         "quranic_rate": 0.875,
-        "feature_precision": 0.217899,
+        "feature_precision": 0.234513,
         "dropped_feature_row_rate": 0.035714,
         "dominant_models": [
           {
-            "model": "phonetic_gestural",
+            "model": "position_aware",
             "count": 43
           },
           {

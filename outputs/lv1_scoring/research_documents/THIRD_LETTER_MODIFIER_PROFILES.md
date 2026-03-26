@@ -21,34 +21,34 @@
 | ج | supportive | 0.274 | 0.782 | 0.000 | اكتناز | — |
 | غ | mixed | 0.260 | 0.825 | 0.125 | باطن | باطن |
 | ا | mixed | 0.250 | 0.500 | 0.000 | — | — |
+| ق | supportive | 0.247 | 0.753 | 0.024 | ثقل | — |
 | ي | mixed | 0.239 | 0.646 | 0.040 | — | — |
 | ض | mixed | 0.237 | 0.703 | 0.000 | إمساك, ثخانة | — |
 | ز | mixed | 0.234 | 0.769 | 0.000 | — | — |
 | ذ | mixed | 0.231 | 0.750 | 0.125 | اختراق | — |
 | ك | mixed | 0.229 | 0.705 | 0.013 | إمساك, اكتناز | — |
-| ع | mixed | 0.228 | 0.722 | 0.165 | باطن, ظاهر | باطن, ظاهر |
 | ط | mixed | 0.223 | 0.682 | 0.023 | اتساع | — |
 | هـ | mixed | 0.220 | 0.653 | 0.028 | خلوص | — |
-| ق | mixed | 0.220 | 0.676 | 0.024 | ثقل | — |
-| م | risky | 0.213 | 0.669 | 0.975 | اكتناز | التحام |
-| ن | mixed | 0.208 | 0.598 | 0.036 | انتقال, باطن | — |
-| ف | mixed | 0.192 | 0.640 | 0.041 | اختراق | — |
-| ر | risky | 0.191 | 0.688 | 0.998 | انتقال | التحام |
+| م | risky | 0.209 | 0.694 | 0.975 | اكتناز | التحام |
+| ن | mixed | 0.205 | 0.531 | 0.036 | انتقال, باطن | — |
 | خ | mixed | 0.190 | 0.542 | 0.000 | بروز, تخلخل, جفاف | — |
-| د | mixed | 0.190 | 0.698 | 0.016 | إمساك, احتباس, ثقل | — |
+| ب | mixed | 0.188 | 0.659 | 0.106 | بروز, رجوع, ظاهر | ظاهر |
 | ء | mixed | 0.188 | 0.723 | 0.000 | انتقال, تأكيد | — |
 | ث | mixed | 0.183 | 0.583 | 0.028 | انتشار | — |
-| ح | mixed | 0.182 | 0.726 | 0.081 | اتساع, باطن | باطن |
+| ع | mixed | 0.181 | 0.598 | 0.165 | باطن, ظاهر | باطن, ظاهر |
 | و | mixed | 0.181 | 0.508 | 0.000 | — | — |
-| ب | mixed | 0.174 | 0.675 | 0.106 | بروز, رجوع, ظاهر | ظاهر |
-| ل | risky | 0.151 | 0.567 | 0.993 | امتداد | التحام |
+| ف | mixed | 0.173 | 0.564 | 0.041 | اختراق | — |
+| ح | mixed | 0.171 | 0.677 | 0.081 | اتساع, باطن | باطن |
+| ر | risky | 0.159 | 0.618 | 0.998 | انتقال | التحام |
+| د | risky | 0.157 | 0.647 | 0.016 | إمساك, احتباس, ثقل | — |
+| ل | risky | 0.145 | 0.521 | 0.993 | امتداد | التحام |
 | ت | risky | 0.144 | 0.509 | 0.091 | استقلال | استقلال |
 | س | risky | 0.139 | 0.483 | 0.000 | امتداد, دقة | — |
 
 ## High-Level Findings
 
-- Strongest third-letter enrichers in the current matrix: ج, ظ
-- Riskiest third-letter modifiers in the current matrix: ت, ر, س, ل, م
+- Strongest third-letter enrichers in the current matrix: ج, ظ, ق
+- Riskiest third-letter modifiers in the current matrix: ت, د, ر, س, ل, م
 - The repeated poison pattern is still `التحام` as a third-letter-only feature, especially with `ر`, `ل`, `ب`, and `ع`.
 - Many letters route to `nucleus_only`, which means the nucleus still carries more of the signal than the modifier in a large share of roots.
 
@@ -93,18 +93,18 @@
 ### ب
 
 - Band: `mixed`
-- Mean blended score across consensus layers: `0.174`
-- Nonzero rate across consensus layers: `0.675`
+- Mean blended score across consensus layers: `0.188`
+- Nonzero rate across consensus layers: `0.659`
 - Dropped-feature row rate: `0.106`
 - Stable modifier signature: بروز, رجوع, ظاهر
 - Shared blocked features: ظاهر
 
-- `consensus_weighted`: mean `0.174`, nonzero `0.675`, quranic share `0.878`, feature precision `0.197`
-- `consensus_weighted` dominant models: phonetic_gestural (64), nucleus_only (47), intersection (11)
+- `consensus_weighted`: mean `0.188`, nonzero `0.659`, quranic share `0.878`, feature precision `0.214`
+- `consensus_weighted` dominant models: position_aware (64), nucleus_only (47), intersection (11)
 - `consensus_weighted` top modifier features: بروز (123), رجوع (123), ظاهر (110)
 - `consensus_weighted` blocked features: ظاهر (13)
-- `consensus_strict`: mean `0.174`, nonzero `0.675`, quranic share `0.878`, feature precision `0.197`
-- `consensus_strict` dominant models: phonetic_gestural (64), nucleus_only (47), intersection (11)
+- `consensus_strict`: mean `0.188`, nonzero `0.659`, quranic share `0.878`, feature precision `0.214`
+- `consensus_strict` dominant models: position_aware (64), nucleus_only (47), intersection (11)
 - `consensus_strict` top modifier features: بروز (123), رجوع (123), ظاهر (110)
 - `consensus_strict` blocked features: ظاهر (13)
 
@@ -165,18 +165,18 @@
 ### ح
 
 - Band: `mixed`
-- Mean blended score across consensus layers: `0.182`
-- Nonzero rate across consensus layers: `0.726`
+- Mean blended score across consensus layers: `0.171`
+- Nonzero rate across consensus layers: `0.677`
 - Dropped-feature row rate: `0.081`
 - Stable modifier signature: اتساع, باطن
 - Shared blocked features: باطن
 
-- `consensus_weighted`: mean `0.188`, nonzero `0.726`, quranic share `0.774`, feature precision `0.209`
-- `consensus_weighted` dominant models: nucleus_only (29), intersection (19), phonetic_gestural (14)
+- `consensus_weighted`: mean `0.179`, nonzero `0.677`, quranic share `0.774`, feature precision `0.211`
+- `consensus_weighted` dominant models: nucleus_only (29), intersection (19), position_aware (14)
 - `consensus_weighted` top modifier features: احتكاك (62), جفاف (62), اتساع (61), باطن (57)
 - `consensus_weighted` blocked features: باطن (5), اتساع (1)
-- `consensus_strict`: mean `0.176`, nonzero `0.726`, quranic share `0.774`, feature precision `0.201`
-- `consensus_strict` dominant models: phonetic_gestural (27), nucleus_only (22), intersection (12)
+- `consensus_strict`: mean `0.163`, nonzero `0.677`, quranic share `0.774`, feature precision `0.204`
+- `consensus_strict` dominant models: position_aware (27), nucleus_only (22), intersection (12)
 - `consensus_strict` top modifier features: اتساع (61), باطن (57)
 - `consensus_strict` blocked features: باطن (5), اتساع (1)
 
@@ -200,19 +200,19 @@
 
 ### د
 
-- Band: `mixed`
-- Mean blended score across consensus layers: `0.190`
-- Nonzero rate across consensus layers: `0.698`
+- Band: `risky`
+- Mean blended score across consensus layers: `0.157`
+- Nonzero rate across consensus layers: `0.647`
 - Dropped-feature row rate: `0.016`
 - Stable modifier signature: إمساك, احتباس, ثقل
 - Shared blocked features: —
 
-- `consensus_weighted`: mean `0.185`, nonzero `0.643`, quranic share `0.953`, feature precision `0.163`
-- `consensus_weighted` dominant models: phonetic_gestural (49), intersection (40), nucleus_only (39)
+- `consensus_weighted`: mean `0.161`, nonzero `0.620`, quranic share `0.953`, feature precision `0.171`
+- `consensus_weighted` dominant models: position_aware (49), intersection (40), nucleus_only (39)
 - `consensus_weighted` top modifier features: إمساك (129), امتداد (129), ثقل (129), احتباس (127)
 - `consensus_weighted` blocked features: احتباس (2)
-- `consensus_strict`: mean `0.194`, nonzero `0.752`, quranic share `0.953`, feature precision `0.156`
-- `consensus_strict` dominant models: phonetic_gestural (85), nucleus_only (31), intersection (12)
+- `consensus_strict`: mean `0.152`, nonzero `0.674`, quranic share `0.953`, feature precision `0.151`
+- `consensus_strict` dominant models: position_aware (85), nucleus_only (31), intersection (12)
 - `consensus_strict` top modifier features: إمساك (129), ثقل (129), احتباس (127)
 - `consensus_strict` blocked features: احتباس (2)
 
@@ -237,18 +237,18 @@
 ### ر
 
 - Band: `risky`
-- Mean blended score across consensus layers: `0.191`
-- Nonzero rate across consensus layers: `0.688`
+- Mean blended score across consensus layers: `0.159`
+- Nonzero rate across consensus layers: `0.618`
 - Dropped-feature row rate: `0.998`
 - Stable modifier signature: انتقال
 - Shared blocked features: التحام
 
-- `consensus_weighted`: mean `0.194`, nonzero `0.678`, quranic share `0.966`, feature precision `0.207`
-- `consensus_weighted` dominant models: phonetic_gestural (113), nucleus_only (54), intersection (38)
+- `consensus_weighted`: mean `0.169`, nonzero `0.620`, quranic share `0.966`, feature precision `0.190`
+- `consensus_weighted` dominant models: position_aware (113), nucleus_only (54), intersection (38)
 - `consensus_weighted` top modifier features: استرسال (208), انتقال (208), باطن (194), التحام (1)
 - `consensus_weighted` blocked features: التحام (207), باطن (14)
-- `consensus_strict`: mean `0.188`, nonzero `0.697`, quranic share `0.966`, feature precision `0.197`
-- `consensus_strict` dominant models: phonetic_gestural (139), nucleus_only (55), intersection (11)
+- `consensus_strict`: mean `0.149`, nonzero `0.615`, quranic share `0.966`, feature precision `0.167`
+- `consensus_strict` dominant models: position_aware (139), nucleus_only (55), intersection (11)
 - `consensus_strict` top modifier features: انتقال (208), التحام (1)
 - `consensus_strict` blocked features: التحام (207)
 
@@ -381,18 +381,18 @@
 ### ع
 
 - Band: `mixed`
-- Mean blended score across consensus layers: `0.228`
-- Nonzero rate across consensus layers: `0.722`
+- Mean blended score across consensus layers: `0.181`
+- Nonzero rate across consensus layers: `0.598`
 - Dropped-feature row rate: `0.165`
 - Stable modifier signature: باطن, ظاهر
 - Shared blocked features: باطن, ظاهر
 
-- `consensus_weighted`: mean `0.228`, nonzero `0.722`, quranic share `0.814`, feature precision `0.251`
-- `consensus_weighted` dominant models: phonetic_gestural (63), intersection (20), nucleus_only (13)
+- `consensus_weighted`: mean `0.181`, nonzero `0.598`, quranic share `0.814`, feature precision `0.186`
+- `consensus_weighted` dominant models: position_aware (63), intersection (20), nucleus_only (13)
 - `consensus_weighted` top modifier features: باطن (91), ظاهر (87)
 - `consensus_weighted` blocked features: ظاهر (10), باطن (6)
-- `consensus_strict`: mean `0.228`, nonzero `0.722`, quranic share `0.814`, feature precision `0.251`
-- `consensus_strict` dominant models: phonetic_gestural (63), intersection (20), nucleus_only (13)
+- `consensus_strict`: mean `0.181`, nonzero `0.598`, quranic share `0.814`, feature precision `0.186`
+- `consensus_strict` dominant models: position_aware (63), intersection (20), nucleus_only (13)
 - `consensus_strict` top modifier features: باطن (91), ظاهر (87)
 - `consensus_strict` blocked features: ظاهر (10), باطن (6)
 
@@ -417,36 +417,36 @@
 ### ف
 
 - Band: `mixed`
-- Mean blended score across consensus layers: `0.192`
-- Nonzero rate across consensus layers: `0.640`
+- Mean blended score across consensus layers: `0.173`
+- Nonzero rate across consensus layers: `0.564`
 - Dropped-feature row rate: `0.041`
 - Stable modifier signature: اختراق
 - Shared blocked features: —
 
-- `consensus_weighted`: mean `0.200`, nonzero `0.616`, quranic share `0.884`, feature precision `0.216`
-- `consensus_weighted` dominant models: nucleus_only (49), phonetic_gestural (28), intersection (8)
+- `consensus_weighted`: mean `0.188`, nonzero `0.605`, quranic share `0.884`, feature precision `0.215`
+- `consensus_weighted` dominant models: nucleus_only (49), position_aware (28), intersection (8)
 - `consensus_weighted` top modifier features: اختراق (86), ثقل (86), طرد (86), إبعاد (79)
 - `consensus_weighted` blocked features: إبعاد (7)
-- `consensus_strict`: mean `0.184`, nonzero `0.663`, quranic share `0.884`, feature precision `0.188`
-- `consensus_strict` dominant models: phonetic_gestural (61), nucleus_only (24), sequence (1)
+- `consensus_strict`: mean `0.157`, nonzero `0.523`, quranic share `0.884`, feature precision `0.191`
+- `consensus_strict` dominant models: position_aware (61), nucleus_only (24), sequence (1)
 - `consensus_strict` top modifier features: اختراق (86)
 - `consensus_strict` blocked features: —
 
 ### ق
 
-- Band: `mixed`
-- Mean blended score across consensus layers: `0.220`
-- Nonzero rate across consensus layers: `0.676`
+- Band: `supportive`
+- Mean blended score across consensus layers: `0.247`
+- Nonzero rate across consensus layers: `0.753`
 - Dropped-feature row rate: `0.024`
 - Stable modifier signature: ثقل
 - Shared blocked features: —
 
-- `consensus_weighted`: mean `0.216`, nonzero `0.694`, quranic share `0.847`, feature precision `0.184`
-- `consensus_weighted` dominant models: phonetic_gestural (40), nucleus_only (33), intersection (11)
+- `consensus_weighted`: mean `0.248`, nonzero `0.753`, quranic share `0.847`, feature precision `0.254`
+- `consensus_weighted` dominant models: position_aware (40), nucleus_only (33), intersection (11)
 - `consensus_weighted` top modifier features: اشتداد (85), تعقد (85), ثقل (85), باطن (81)
 - `consensus_weighted` blocked features: باطن (4)
-- `consensus_strict`: mean `0.223`, nonzero `0.659`, quranic share `0.847`, feature precision `0.167`
-- `consensus_strict` dominant models: phonetic_gestural (60), nucleus_only (24), sequence (1)
+- `consensus_strict`: mean `0.245`, nonzero `0.753`, quranic share `0.847`, feature precision `0.280`
+- `consensus_strict` dominant models: position_aware (60), nucleus_only (24), sequence (1)
 - `consensus_strict` top modifier features: ثقل (85)
 - `consensus_strict` blocked features: —
 
@@ -471,54 +471,54 @@
 ### ل
 
 - Band: `risky`
-- Mean blended score across consensus layers: `0.151`
-- Nonzero rate across consensus layers: `0.567`
+- Mean blended score across consensus layers: `0.145`
+- Nonzero rate across consensus layers: `0.521`
 - Dropped-feature row rate: `0.993`
 - Stable modifier signature: امتداد
 - Shared blocked features: التحام
 
-- `consensus_weighted`: mean `0.141`, nonzero `0.549`, quranic share `0.986`, feature precision `0.148`
-- `consensus_weighted` dominant models: phonetic_gestural (63), nucleus_only (40), intersection (32)
+- `consensus_weighted`: mean `0.146`, nonzero `0.528`, quranic share `0.986`, feature precision `0.171`
+- `consensus_weighted` dominant models: position_aware (63), nucleus_only (40), intersection (32)
 - `consensus_weighted` top modifier features: امتداد (142), تميز (142), استقلال (137), تعلق (136)
 - `consensus_weighted` blocked features: التحام (141), تعلق (6), استقلال (5)
-- `consensus_strict`: mean `0.160`, nonzero `0.585`, quranic share `0.986`, feature precision `0.192`
-- `consensus_strict` dominant models: phonetic_gestural (73), nucleus_only (38), intersection (24)
+- `consensus_strict`: mean `0.144`, nonzero `0.514`, quranic share `0.986`, feature precision `0.169`
+- `consensus_strict` dominant models: position_aware (73), nucleus_only (38), intersection (24)
 - `consensus_strict` top modifier features: امتداد (142), التحام (1)
 - `consensus_strict` blocked features: التحام (141)
 
 ### م
 
 - Band: `risky`
-- Mean blended score across consensus layers: `0.213`
-- Nonzero rate across consensus layers: `0.669`
+- Mean blended score across consensus layers: `0.209`
+- Nonzero rate across consensus layers: `0.694`
 - Dropped-feature row rate: `0.975`
 - Stable modifier signature: اكتناز
 - Shared blocked features: التحام
 
-- `consensus_weighted`: mean `0.213`, nonzero `0.669`, quranic share `0.934`, feature precision `0.186`
-- `consensus_weighted` dominant models: phonetic_gestural (72), nucleus_only (45), intersection (4)
+- `consensus_weighted`: mean `0.209`, nonzero `0.694`, quranic share `0.934`, feature precision `0.258`
+- `consensus_weighted` dominant models: position_aware (72), nucleus_only (45), intersection (4)
 - `consensus_weighted` top modifier features: اكتناز (121), التحام (3)
 - `consensus_weighted` blocked features: التحام (118)
-- `consensus_strict`: mean `0.213`, nonzero `0.669`, quranic share `0.934`, feature precision `0.186`
-- `consensus_strict` dominant models: phonetic_gestural (72), nucleus_only (45), intersection (4)
+- `consensus_strict`: mean `0.209`, nonzero `0.694`, quranic share `0.934`, feature precision `0.258`
+- `consensus_strict` dominant models: position_aware (72), nucleus_only (45), intersection (4)
 - `consensus_strict` top modifier features: اكتناز (121), التحام (3)
 - `consensus_strict` blocked features: التحام (118)
 
 ### ن
 
 - Band: `mixed`
-- Mean blended score across consensus layers: `0.208`
-- Nonzero rate across consensus layers: `0.598`
+- Mean blended score across consensus layers: `0.205`
+- Nonzero rate across consensus layers: `0.531`
 - Dropped-feature row rate: `0.036`
 - Stable modifier signature: انتقال, باطن
 - Shared blocked features: —
 
-- `consensus_weighted`: mean `0.213`, nonzero `0.580`, quranic share `0.875`, feature precision `0.241`
-- `consensus_weighted` dominant models: intersection (43), nucleus_only (40), phonetic_gestural (26)
+- `consensus_weighted`: mean `0.208`, nonzero `0.536`, quranic share `0.875`, feature precision `0.248`
+- `consensus_weighted` dominant models: intersection (43), nucleus_only (40), position_aware (26)
 - `consensus_weighted` top modifier features: امتداد (112), انتقال (112), دقة (112), باطن (108)
 - `consensus_weighted` blocked features: باطن (4)
-- `consensus_strict`: mean `0.203`, nonzero `0.616`, quranic share `0.875`, feature precision `0.218`
-- `consensus_strict` dominant models: phonetic_gestural (43), nucleus_only (39), intersection (27)
+- `consensus_strict`: mean `0.201`, nonzero `0.527`, quranic share `0.875`, feature precision `0.235`
+- `consensus_strict` dominant models: position_aware (43), nucleus_only (39), intersection (27)
 - `consensus_strict` top modifier features: انتقال (112), باطن (108)
 - `consensus_strict` blocked features: باطن (4)
 
