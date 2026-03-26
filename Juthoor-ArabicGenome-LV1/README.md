@@ -86,11 +86,40 @@ Predicting triliteral roots from binary nucleus + third-letter composition (1,93
 |-------|----------------|----------------|-----------------|
 | Intersection | — | 0.146 | 40.4% |
 | Phonetic-Gestural (capped 2+1) | — | — | 38% fallback |
-| **Combined (Method A)** | **0.175** | 0.146 | **56.3%** |
+| **Combined (Method A)** | **0.201** (consensus_strict) | 0.146 | **65.2%** |
 
-- Method A (semantic) overall accuracy: ~36.7%
+- Method A (semantic) overall accuracy: **49.5%** (post Arabic Core Rebuild + consensus)
+- Blended Jaccard improved from 0.175 to 0.201 after consensus scoring
+- Nonzero coverage improved from 56.3% to 65.2%
+- 4 letter-meaning corrections (م, ع, غ, ب) improved Jabal bJ by +12%
 - Best model by root count: Intersection (58% of roots), Phonetic-Gestural fallback (38%)
 - Empty-actual roots reduced from 207 to 113 across 3 targeted fix passes
+
+### Letter Corrections (Arabic Core Rebuild)
+
+Four letter meanings were corrected empirically after observing systematic scoring failures:
+
+| Letter | Original label | Corrected meaning |
+|--------|---------------|-------------------|
+| م | (generic gathering) | تجمع + تلاصق (gathering + adhesion) |
+| ع | (generic depth) | ظهور + عمق (manifestation + depth) |
+| غ | (concealment) | باطن + اشتمال (interior + encompassing) |
+| ب | (generic emergence) | ظهور + خروج (emergence + outward motion) |
+
+Full 28-letter empirical derivation: `outputs/lv1_scoring/research_documents/THE_ARABIC_LETTER_GENOME.md`
+
+Key structural discoveries:
+- **Labial triad** (ب/م/ف): three distinct emergence modes — outward, adhesive, dispersive
+- **Depth axis** (ع/غ/هـ): graded concealment from manifest depth to interior to exhaled release
+- **Positional modifier reversal**: several letters reverse their dominant meaning when shifted from position 1 to position 3
+
+### Binary & Trilateral Investigations
+
+| Investigation | Finding |
+|--------------|---------|
+| **I1: Binary composition verification** | 53.5% match rate between predicted binary fields and attested roots |
+| **I2: Third letter modifier profiles** | 28 profiles derived; positional shift confirmed in 19/28 letters |
+| **I3: Reverse pair analysis** | 12% semantic inversion, 79% unrelated — metathesis rarely inverts cleanly |
 
 ### Sprint 4: Abbas Sensory Validation
 
@@ -118,13 +147,15 @@ Juthoor-ArabicGenome-LV1/
 ├── src/juthoor_arabicgenome_lv1/
 │   ├── core/                        -- Data models & loaders
 │   │   ├── models.py                -- 7 frozen dataclasses
-│   │   └── loaders.py               -- Load letters, roots, families
+│   │   ├── loaders.py               -- Load letters, roots, families
+│   │   └── neili_constraints.py     -- Parked: Quranic exegesis constraints (future)
 │   ├── factory/                     -- Research engine
 │   │   ├── feature_store.py         -- Save/load numpy features
 │   │   ├── experiment_runner.py     -- Run & log experiments
 │   │   ├── root_predictor.py        -- Root-level prediction engine
 │   │   ├── composition_models.py    -- Intersection, phonetic_gestural, sequence models
 │   │   ├── scoring.py               -- Jaccard, weighted_jaccard, blended_jaccard
+│   │   ├── synonym_families.py      -- Synonym cluster construction for roots
 │   │   ├── sound_laws.py            -- Khashim's 9 sound laws
 │   │   └── cross_lingual_projection.py -- Arabic→Hebrew/Aramaic/English projection
 │   └── qca/                         -- Quranic Corpus Analysis
