@@ -1,3 +1,9 @@
+"""Map Arabic semantic feature labels into reusable decomposition categories.
+
+The module groups fine-grained glosses into atomic feature buckets and provides
+helpers for counting, normalizing, and comparing feature-category coverage.
+"""
+
 from __future__ import annotations
 
 import re

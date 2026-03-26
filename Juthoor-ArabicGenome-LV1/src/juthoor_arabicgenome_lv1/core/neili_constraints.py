@@ -1,3 +1,9 @@
+"""Apply Neili-style semantic constraints to Quranic root predictions.
+
+The checks in this module flag synonymy, instance-level meanings, and weak
+category structure so predicted root analyses stay methodologically coherent.
+"""
+
 from __future__ import annotations
 
 from collections import defaultdict

@@ -1,3 +1,9 @@
+"""Define validated dataclasses for theory-canon registry content.
+
+The models capture letters, binary nuclei, roots, sources, and scholarly claims
+while enforcing controlled vocabularies for curation and agreement metadata.
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass

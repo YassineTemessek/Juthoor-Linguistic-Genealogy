@@ -1,3 +1,9 @@
+"""Import curated theory-canon records from inbox files into registry JSONL data.
+
+The module normalizes Arabic keys, validates imported rows, and writes the
+canonical letter, binary-field, root-composition, theory, and Quranic datasets.
+"""
+
 from __future__ import annotations
 
 import json

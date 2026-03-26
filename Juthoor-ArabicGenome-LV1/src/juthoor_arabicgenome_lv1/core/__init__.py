@@ -1,3 +1,9 @@
+"""Expose the core LV1 data models, loaders, and canon-processing helpers.
+
+This package collects the public imports used to read Arabic genome datasets
+and run canonical root-analysis workflows.
+"""
+
 from .models import (
     Letter, BinaryRoot, TriliteralRoot, RootFamily,
     MetathesisPair, SubstitutionPair, PermutationGroup,
