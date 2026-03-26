@@ -30,25 +30,13 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| I1 | Binary Composition Verification | Claude | DONE | `BINARY_COMPOSITION_VERIFICATION.md` — 53.5% match, 3 failure families. Pushed. |
-| I2 | Third Letter Modifier Profiles | Codex | DONE | `THIRD_LETTER_MODIFIER_PROFILES.md` + JSON. ج/ظ cleanest, ر/ل/ب riskiest. |
-| I3 | Reverse Pair Analysis — Anbar's reversal hypothesis on 166 pairs | Claude | DONE | `REVERSE_PAIR_ANALYSIS.md` — 12% inversion, 79% unrelated, hypothesis too simple. Pushed. |
-| A.1 | Audit unrecognized tokens in jabal_axial_meaning — frequency clusters | Codex | DONE | `feature_vocab_gap_report.md` |
-| A.2 | Expand FEATURE_VOCAB from 65 to ~85 features (modulation semantics) | Codex | DONE | `feature_decomposition.py` expanded with modulation/substance/location terms |
-| A.3 | Re-extract jabal_features for all 1,924 roots with expanded vocab | Codex | DONE | roots rebuilt with expanded decomposition |
-| A.4 | Recover empty-actual roots (target: 113→<50) | Codex | DONE | improved only modestly: `113 -> 107` |
-| A.5 | Re-run all predictions + score matrix with expanded features | Codex | DONE | outputs rebuilt; coverage improved slightly but scores softened |
 | A.6 | Spot check: did vocab expansion improve Method B? | Claude | NEXT | A.1-A.5 landed; review `feature_vocab_gap_report.md` |
-| B.1 | Classify 495 nucleus-correct-but-root-wrong failures | Claude | DONE | `third_letter_failure_analysis.md` — 53% contradicts, 20% wrong model, 15% weak nucleus, 13% too generic |
-| C.1 | Present 8 DIVERGE letters to Yassin for resolution | Claude | DONE | `diverge_letters_for_yassin.md` — awaiting Yassin's decisions |
-| B.2 | Build semantic compatibility filter + blacklist التحام from third-letter | Codex | DONE | `root_predictor.py` filter + dropped feature tracking |
-| B.3 | Add nucleus-only fallback when intersection over-prunes | Codex | DONE | `root_predictor.py` category-only pseudo-overlap -> nucleus fallback |
 | B.6 | Spot check: did third-letter fixes recover the poisoned roots? | Claude | NEXT | review rerun after B.2-B.3 |
-| E.2 | Opus empirical letter meaning derivation (8 DIVERGE) | Claude | DONE | `empirical_letter_meanings.md` — 3 corrections needed |
-| F.1-F.3 | Full 28-letter empirical derivation (THE ARABIC LETTER GENOME) | Claude | DONE | `THE_ARABIC_LETTER_GENOME.md` — 1,397 lines, all 28 letters, 5-scholar comparison |
-| C.2 | Yassin confirms 4 letter corrections | Yassin | DONE | م=تجمع+تلاصق, ع=ظهور+عمق, غ=باطن+اشتمال, ب=ظهور+خروج |
-| F.4 | Apply 4 corrections to letter registry + rebuild consensus + re-run | Codex | DONE | jabal letters corrected in canonical builder; consensus + predictions rebuilt |
-| F.5 | Method A re-calibration with corrected letters | Claude | DONE | Jabal bJ +12% (0.176→0.197), consensus bJ +7.4% (0.188→0.201). 415 tests pass. |
+| 2.1 | Refactor root_predictor.py (extract routing + filtering) | Codex | NEXT | |
+| 2.2 | Refactor independent_letter_derivation.py | Codex | NEXT | |
+| 3.1 | Pipeline integration test (end-to-end LV1) | Claude | DONE | `tests/test_lv1_pipeline_integration.py` — 1924 roots, 456 nuclei, jabal predictions pass |
+| 5.1 | Build Quranic verse validation module | Claude | NEXT | |
+| 5.2 | Build scholar divergence analysis | Claude | NEXT | |
 
 ## Codex
 last: F.4 DONE. Applied Yassin-confirmed Jabal corrections in the canonical builder path for `ب=ظهور+خروج`, `م=تجمع+تلاصق`, `ع=ظهور+عمق`, `غ=باطن+اشتمال`, then rebuilt letters, consensus rows, predictions, and score matrices.
@@ -57,10 +45,10 @@ suggests: Claude should start F.5 now on the corrected matrices. The four disput
 blocked: none
 
 ## Claude
-last: F.5 DONE. Corrections improved Jabal bJ by 12% and consensus by 7.4%. Committed synonym_families + neili_constraints modules. 415 tests pass. Folder reorganized.
+last: Phase 1 polish complete (import fix, docs updated, plans archived, stray files organized). Starting Phase 3+5.
 verdict: All planned work complete. Letter corrections validated by improved scores. Ready for next direction.
-next-codex: fix test_third_letter_profiles.py import collision (statistics module shadowing)
-next-claude: awaiting direction
+next-codex: 2.1 + 2.2 refactoring when he reads the board
+next-claude: 5.1 Quranic verse validation module, 5.2 scholar divergence analysis
 note: nonzero blended rate now 65.2% (was 57.2%). The 4 corrections are working.
 
 ## Claude-old
@@ -91,6 +79,23 @@ note: C.2 needs Yassin to review `diverge_letters_for_yassin.md` and fill in dec
 ## Archive
 | Date | Task | Owner | Output |
 |------|------|-------|--------|
+| 03-26 | I1 Binary Composition Verification | Claude | `BINARY_COMPOSITION_VERIFICATION.md` — 53.5% match, 3 failure families |
+| 03-26 | I2 Third Letter Modifier Profiles | Codex | `THIRD_LETTER_MODIFIER_PROFILES.md` + JSON. ج/ظ cleanest, ر/ل/ب riskiest |
+| 03-26 | I3 Reverse Pair Analysis | Claude | `REVERSE_PAIR_ANALYSIS.md` — 12% inversion, 79% unrelated |
+| 03-26 | A.1 Audit unrecognized tokens in jabal_axial_meaning | Codex | `feature_vocab_gap_report.md` |
+| 03-26 | A.2 Expand FEATURE_VOCAB 65→~85 features | Codex | `feature_decomposition.py` expanded |
+| 03-26 | A.3 Re-extract jabal_features with expanded vocab | Codex | roots rebuilt |
+| 03-26 | A.4 Recover empty-actual roots (113→107) | Codex | `feature_decomposition.py` |
+| 03-26 | A.5 Re-run predictions + score matrix | Codex | outputs rebuilt |
+| 03-26 | B.1 Classify 495 nucleus-correct-but-root-wrong failures | Claude | `third_letter_failure_analysis.md` |
+| 03-26 | C.1 Present 8 DIVERGE letters to Yassin | Claude | `diverge_letters_for_yassin.md` |
+| 03-26 | B.2 Semantic compatibility filter + blacklist التحام | Codex | `root_predictor.py` filter |
+| 03-26 | B.3 Nucleus-only fallback when intersection over-prunes | Codex | `root_predictor.py` |
+| 03-26 | E.2 Empirical letter meaning derivation (8 DIVERGE) | Claude | `empirical_letter_meanings.md` |
+| 03-26 | F.1-F.3 Full 28-letter empirical derivation | Claude | `THE_ARABIC_LETTER_GENOME.md` |
+| 03-26 | C.2 Yassin confirms 4 letter corrections | Yassin | م=تجمع+تلاصق, ع=ظهور+عمق, غ=باطن+اشتمال, ب=ظهور+خروج |
+| 03-26 | F.4 Apply 4 corrections + rebuild consensus | Codex | jabal letters corrected; consensus rebuilt |
+| 03-26 | F.5 Method A re-calibration with corrected letters | Claude | Jabal bJ +12%, consensus bJ +7.4%. 415 tests pass |
 | 03-23 | S1.1 Synonym groups | Codex | `scoring.py` |
 | 03-23 | S1.2 Fix empty features | Codex | `feature_decomposition.py` |
 | 03-23 | S1.3 Opposition mapping | Codex | `scoring.py` |
