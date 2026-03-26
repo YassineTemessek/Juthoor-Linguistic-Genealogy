@@ -1,3 +1,4 @@
+# ACTIVE: maintained registry seeding CLI used by canon tests and loaders.
 from __future__ import annotations
 
 import json

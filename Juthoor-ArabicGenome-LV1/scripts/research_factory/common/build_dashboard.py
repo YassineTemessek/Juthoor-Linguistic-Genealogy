@@ -1,3 +1,4 @@
+# ACTIVE: maintained Research Factory dashboard builder with direct test coverage.
 """
 build_dashboard.py — Aggregate all experiment results and hypothesis statuses
 into a single dashboard JSON.

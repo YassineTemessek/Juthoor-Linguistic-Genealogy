@@ -1,3 +1,4 @@
+# ACTIVE: current Phase 2 Muajam overlay builder, still documented in README and covered by tests.
 """
 Phase 2 Genome Overlay Script
 Merges Muajam Ishtiqaqi meanings into Phase 1 genome word lists.

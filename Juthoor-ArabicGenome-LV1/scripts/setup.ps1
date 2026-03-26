@@ -1,3 +1,4 @@
+# ACTIVE: optional local bootstrap helper; no newer setup wrapper replaces this script in the repo.
 param(
   [string]$Python = "python",
   [switch]$IngestDeps
@@ -22,4 +23,3 @@ if ($IngestDeps) {
 }
 
 Write-Host "OK. Activate with: .\\.venv\\Scripts\\Activate.ps1"
-

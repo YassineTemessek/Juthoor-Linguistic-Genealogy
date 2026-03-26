@@ -1,3 +1,4 @@
+# ACTIVE: current QCA verse-extraction helper referenced by package docs and QCA docs.
 import argparse
 from pathlib import Path
 from typing import List, Set

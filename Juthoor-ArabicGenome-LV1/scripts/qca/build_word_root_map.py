@@ -1,3 +1,4 @@
+# ACTIVE: current QCA word-to-root map builder referenced by package docs and QCA docs.
 import argparse
 import csv
 from pathlib import Path

@@ -1,3 +1,4 @@
+# ACTIVE: maintained shared statistics helpers exercised by Research Factory tests.
 from __future__ import annotations
 
 from collections.abc import Callable, Sequence
@@ -131,4 +132,3 @@ def kruskal_wallis(*groups: ArrayLike) -> tuple[float, float]:
     arrays = [_as_1d(group) for group in groups]
     result = stats.kruskal(*arrays)
     return float(result.statistic), float(result.pvalue)
-

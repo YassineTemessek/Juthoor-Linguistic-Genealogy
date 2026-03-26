@@ -1,3 +1,4 @@
+# ACTIVE: documented QA utility for comparing binary-root and tri-root coherence; not replaced elsewhere.
 """
 Compare Arabic tri-root grouping vs binary-root grouping (LV2 QA).
 

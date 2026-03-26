@@ -1,3 +1,4 @@
+# ACTIVE: current Phase 0 setup script for embeddings, documented and covered by tests.
 from __future__ import annotations
 
 import json

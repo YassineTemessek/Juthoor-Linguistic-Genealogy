@@ -1,3 +1,4 @@
+# ACTIVE: sole repo script that regenerates `data/muajam/*.jsonl` from the source Muajam XLSX files.
 """
 ingest_muajam.py — Phase 2 ingest for the Muajam Ishtiqaqi XLSX data.
 

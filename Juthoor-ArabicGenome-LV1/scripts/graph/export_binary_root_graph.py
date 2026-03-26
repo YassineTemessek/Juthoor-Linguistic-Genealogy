@@ -1,3 +1,4 @@
+# ACTIVE: current documented graph export command for binary-root CSV generation.
 """
 Export a graph-friendly view of LV2 Arabic root relations (nodes + edges).
 

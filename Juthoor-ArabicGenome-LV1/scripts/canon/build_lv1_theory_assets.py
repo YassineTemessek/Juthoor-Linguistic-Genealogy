@@ -1,3 +1,4 @@
+# ACTIVE: maintained canon/theory asset rebuild entrypoint still referenced by current planning docs.
 from __future__ import annotations
 
 import json
