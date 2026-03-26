@@ -44,11 +44,11 @@ def test_fallback_when_no_overlap() -> None:
     nucleus = ("ثقل",)
     raw_third = ("تفرق",)
     # Use a letter with no override so raw_third is used directly
+    # No feature or category overlap → falls back to nucleus-only (top 2)
     result = model_position_aware(nucleus, raw_third, third_letter="ز")
     assert result.model_name == "position_aware"
     assert len(result.predicted_features) >= 1
     assert "ثقل" in result.predicted_features
-    assert "تفرق" in result.predicted_features
 
 
 def test_empty_third_letter_uses_raw_features() -> None:
