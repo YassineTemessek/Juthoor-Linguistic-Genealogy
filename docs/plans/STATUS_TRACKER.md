@@ -1,6 +1,6 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-23 (LV1 Phase 2-3 Sprints 1-5 complete; Sprint 6 integration in progress)
+**Last updated:** 2026-03-26 (LV1 Letter Genome complete; 4 corrections applied; 3 investigations done)
 
 ---
 
@@ -16,7 +16,12 @@
 | S3: Root Prediction | DONE | Method A ~36.7%, blended J 0.175, 56.3% coverage |
 | S4: Abbas Sensory | DONE | NOT a scoring prior; parked as "not yet validated" |
 | S5: Cross-Lingual | DONE | Semitic 67.9% exact / 88.7% prefix. English 3/11 exact hits |
-| S6: Integration | IN PROGRESS | README + STATUS updates, LV2 feed-back |
+| S6: Integration | DONE | README + STATUS updates, LV2 feed-back |
+| F.4: Letter Corrections | DONE | 4 corrections applied (ث, ذ, ض, ظ articulatory vectors) |
+| F.5: Re-calibration | DONE | Jabal bJ=0.197, consensus bJ=0.201, nonzero blended=65.2% (+12% vs pre-correction) |
+| I1: Reverse Pair Analysis | DONE | Asymmetry confirmed; documented in REVERSE_PAIR_ANALYSIS.md |
+| I2: Third-Letter Modifier Profiles | DONE | 28-letter profiles computed; documented in THIRD_LETTER_MODIFIER_PROFILES.md |
+| I3: Binary Composition Verification | DONE | Verified binary root structure; documented in BINARY_COMPOSITION_VERIFICATION.md |
 
 Key modules added:
 - `factory/root_predictor.py` — trilateral root prediction
@@ -25,6 +30,15 @@ Key modules added:
 - `factory/sound_laws.py` — Khashim's 9 sound laws
 - `factory/cross_lingual_projection.py` — Arabic→Hebrew/Aramaic/English projection
 - `factory/cross_lingual_scoring.py` — benchmark scorer
+
+Key outputs (Letter Genome):
+- `docs/THE_ARABIC_LETTER_GENOME.md` — canonical letter genome reference
+- `docs/BINARY_COMPOSITION_VERIFICATION.md` — binary root structure verification
+- `docs/THIRD_LETTER_MODIFIER_PROFILES.md` — per-letter modifier profiles (28 letters)
+- `docs/REVERSE_PAIR_ANALYSIS.md` — reverse pair asymmetry analysis
+
+Scoring metrics (post F.5 calibration):
+- Jabal bJ: 0.197 | Consensus bJ: 0.201 | Nonzero blended coverage: 65.2%
 
 ---
 
@@ -168,9 +182,9 @@ Key modules added:
 | Level | Tests | Last verified |
 |-------|-------|---------------|
 | LV0 | 174 | 2026-03-23 |
-| LV1 | 322 | 2026-03-23 |
+| LV1 | 415 | 2026-03-26 |
 | LV2 | 262 | 2026-03-23 |
-| **Total** | **758** | |
+| **Total** | **851** | |
 
 ---
 
@@ -200,7 +214,11 @@ Key modules added:
 | `15e8c70` | Persist genome_bonus in lead components for reranker consumption |
 | `5fbd510` | Sprint 1 scoring fixes landed |
 | `e206a23` | Sprint 3 root prediction checkpoint |
+| `57148fb` | Folder reorganization (docs/outputs restructure) |
+| `b2eee13` | Arabic Letter Genome + Binary Composition documents |
+| `2e77709` | Reverse Pair Analysis document |
+| `7071956` | F.5 corrections improve Jabal bJ +12% |
 
 ---
 
-*Last updated: 2026-03-23 — LV1 Phase 2-3 Sprints 1-5 complete; Sprint 6 in progress; test counts updated (LV0=174, LV1=322, LV2=262, Total=758)*
+*Last updated: 2026-03-26 — LV1 Letter Genome complete; 4 corrections applied (F.4); re-calibration done (F.5, Jabal bJ=0.197, consensus bJ=0.201, nonzero blended=65.2%); 3 investigations done (I1-I3); test counts updated (LV0=174, LV1=415, LV2=262, Total=851)*
