@@ -1324,15 +1324,14 @@
     ],
     "scholar_comparison": {
       "jabal": {
-        "classification": "conflict",
+        "classification": "partial",
         "features": [
-          "اكتناز",
-          "رخاوة",
-          "التحام"
+          "ظاهر",
+          "بروز"
         ],
         "jaccard": 0.0,
-        "category_jaccard": 0.0,
-        "blended_jaccard": 0.0
+        "category_jaccard": 0.333333,
+        "blended_jaccard": 0.1
       },
       "asim_al_masri": {
         "classification": "partial",
@@ -11630,16 +11629,14 @@
     ],
     "scholar_comparison": {
       "jabal": {
-        "classification": "partial",
+        "classification": "conflict",
         "features": [
-          "التحام",
-          "دقة",
-          "حدة",
-          "رخاوة"
+          "ظاهر",
+          "باطن"
         ],
-        "jaccard": 0.166667,
-        "category_jaccard": 0.2,
-        "blended_jaccard": 0.176667
+        "jaccard": 0.0,
+        "category_jaccard": 0.0,
+        "blended_jaccard": 0.0
       },
       "asim_al_masri": {
         "classification": "partial",
@@ -12249,15 +12246,14 @@
     ],
     "scholar_comparison": {
       "jabal": {
-        "classification": "partial",
+        "classification": "conflict",
         "features": [
-          "تخلخل",
-          "رخاوة",
-          "ثخانة"
+          "باطن",
+          "احتواء"
         ],
-        "jaccard": 0.2,
-        "category_jaccard": 0.25,
-        "blended_jaccard": 0.215
+        "jaccard": 0.0,
+        "category_jaccard": 0.0,
+        "blended_jaccard": 0.0
       },
       "asim_al_masri": {
         "classification": "partial",
@@ -15990,13 +15986,12 @@
       "jabal": {
         "classification": "partial",
         "features": [
-          "إمساك",
-          "استواء",
-          "ظاهر"
+          "اكتناز",
+          "التحام"
         ],
-        "jaccard": 0.0,
-        "category_jaccard": 0.25,
-        "blended_jaccard": 0.075
+        "jaccard": 0.333333,
+        "category_jaccard": 0.5,
+        "blended_jaccard": 0.383333
       },
       "asim_al_masri": {
         "classification": "conflict",
