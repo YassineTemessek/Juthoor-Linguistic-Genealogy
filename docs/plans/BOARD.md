@@ -44,9 +44,9 @@
 
 ## Codex
 ```
-last: All tasks complete. Tokens resetting.
-metrics: roots=1924, nuclei=456, tests=495, overall bJ=0.196, consensus_weighted bJ=0.200
-suggests: wait for Claude's H1 adaptive routing results before next rebuild
+last: README refresh complete, LV1 adaptive rerun rebuilt, dashboard regenerated, LV2 GenomeScorer now expands Arabic synonym families before scoring.
+metrics: roots=1924, nuclei=456, root_rows=9620, overall bJ=0.207564, consensus_strict bJ=0.212745, consensus_weighted bJ=0.209766, nucleus_only rows=5785, position_aware rows=336, LV2 targeted tests=30/30
+suggests: README headlines from pre-rerun state should be reconciled later if we want docs to reflect the newer post-rerun metrics rather than the requested checkpoint values
 blocked: none
 ```
 
@@ -77,7 +77,8 @@ note: Codex tokens reset in 1 hour. Claude working solo until then.
 - Semantic transfer NOT viable at feature-Jaccard level — needs embedding-based scoring (LV2 capability).
 - Neili no-synonymy is parked for a later Quranic interpretation layer. It is not part of active LV1 scoring or model acceptance.
 - Position-aware model: needs adaptive routing (best-of ensemble, not unconditional override)
-- Consensus_weighted is now best scholar (bJ=0.200), overtook consensus_strict
+- Adaptive rerun changed the scholar ranking again: consensus_strict is now best on the rebuilt matrix (bJ=0.212745), with consensus_weighted close behind (bJ=0.209766)
+- Adaptive routing worked as intended on rerun: many former position_aware rows moved to nucleus_only, lifting overall blended Jaccard from 0.195517 to 0.207564
 
 ## Archive
 | Date | Task | Owner | Output |
@@ -108,6 +109,10 @@ note: Codex tokens reset in 1 hour. Claude working solo until then.
 | 03-26 | 5.2 Build scholar divergence analysis | Claude | `factory/scholar_divergence.py` — 34 tests |
 | 03-26 | PA.1 Re-run LV1 with position-aware model and compare metrics | Codex | 2026-03-26 rebuild lifted overall blended bJ from 0.190419 to 0.195517 |
 | 03-26 | FIX test_promotions.py cross_lingual_support pre-existing failure | Codex | resolved by regenerating benchmark support inputs; 28/28 pass |
+| 03-26 | README refresh across root/LV0/LV1/LV2 | Codex | requested checkpoint values documented; LV0 verified current |
+| 03-26 | LV1 adaptive rerun rebuild | Codex | `build_lv1_theory_assets.py` rerun; overall bJ 0.195517→0.207564 |
+| 03-26 | LV1 dashboard regeneration | Codex | `LV1_DASHBOARD.md` refreshed from rebuilt score matrices |
+| 03-26 | LV2 synonym-family GenomeScorer integration | Codex | `genome_scoring.py` expands Arabic roots through synonym families; 30 targeted tests pass |
 | 03-23 | S1.1 Synonym groups | Codex | `scoring.py` |
 | 03-23 | S1.2 Fix empty features | Codex | `feature_decomposition.py` |
 | 03-23 | S1.3 Opposition mapping | Codex | `scoring.py` |
