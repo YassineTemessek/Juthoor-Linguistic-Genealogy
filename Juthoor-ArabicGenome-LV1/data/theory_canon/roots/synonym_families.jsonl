@@ -1,0 +1,10 @@
+{"family_id": "seed-001", "roots": ["قلب", "فؤاد", "لب"], "shared_concept": "heart / inner core", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-002", "roots": ["ستر", "خفي", "كتم"], "shared_concept": "conceal / hide", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-003", "roots": ["جمع", "ضم", "لم", "حشد"], "shared_concept": "gather / collect", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-004", "roots": ["قطع", "فصل", "بتر"], "shared_concept": "cut / sever / separate", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-005", "roots": ["بيت", "دار", "منزل", "مأوى"], "shared_concept": "dwelling / house / shelter", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-006", "roots": ["طريق", "سبيل", "نهج", "صراط"], "shared_concept": "path / way", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-007", "roots": ["قول", "نطق", "لفظ"], "shared_concept": "speaking / uttering", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-008", "roots": ["ذهب", "مضى", "مر"], "shared_concept": "go / pass", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-009", "roots": ["خوف", "خشية", "رهبة"], "shared_concept": "fear", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-010", "roots": ["حزن", "هم", "كرب"], "shared_concept": "grief / distress", "confidence": 1.0, "source": "seed"}

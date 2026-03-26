@@ -1,0 +1,326 @@
+{"family_id": "seed-001", "roots": ["قلب", "فؤاد", "لب"], "shared_concept": "heart / inner core", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-002", "roots": ["ستر", "خفي", "كتم"], "shared_concept": "conceal / hide", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-003", "roots": ["جمع", "ضم", "لم", "حشد"], "shared_concept": "gather / collect", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-004", "roots": ["قطع", "فصل", "بتر"], "shared_concept": "cut / sever / separate", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-005", "roots": ["بيت", "دار", "منزل", "مأوى"], "shared_concept": "dwelling / house / shelter", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-006", "roots": ["طريق", "سبيل", "نهج", "صراط"], "shared_concept": "path / way", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-007", "roots": ["قول", "نطق", "لفظ"], "shared_concept": "speaking / uttering", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-008", "roots": ["ذهب", "مضى", "مر"], "shared_concept": "go / pass", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-009", "roots": ["خوف", "خشية", "رهبة"], "shared_concept": "fear", "confidence": 1.0, "source": "seed"}
+{"family_id": "seed-010", "roots": ["حزن", "هم", "كرب"], "shared_concept": "grief / distress", "confidence": 1.0, "source": "seed"}
+{"family_id": "ext-8b7a4be4", "roots": ["بوب", "بيب"], "shared_concept": "اتساع + نفاذ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-4a314389", "roots": ["أبو", "أبي", "مكك-مكمك"], "shared_concept": "تلاصق + احتباس", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-f16c4251", "roots": ["بتك", "شقق", "شقو", "صمت", "قصد", "كفت"], "shared_concept": "قطع + استقلال + إمساك", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-93619825", "roots": ["بتل", "بغت", "فتل"], "shared_concept": "قطع + استقلال + امتداد", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-2c87ad32", "roots": ["بثث-بثبث", "بشش-بشبش", "تفث", "حشش-حشحش", "حوش", "وحش", "رشش-رشرش", "ريش", "شرى", "عثث-عثعث", "عثو-عثى", "مشش-مشمش", "نثث-نثنث", "أنث", "نشش-نشنش", "نوش", "نفث", "نفش"], "shared_concept": "انتشار", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-55ef5832", "roots": ["بجس", "رطب", "رغب", "كذب", "مخخ", "مخر", "مخض"], "shared_concept": "خروج + رخاوة", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-15d9b971", "roots": ["بحح-بحبح", "بحث", "بحر", "جهه-جهجه", "وجه", "جهر", "جهز", "جهل"], "shared_concept": "ظهور + فراغ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-9e4f018e", "roots": ["بخخ-بخبخ", "عيي"], "shared_concept": "نقص + فراغ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-222c9fc5", "roots": ["بخس", "بخل", "خسس", "خلل-خلخل", "خول", "خيل", "ذهل", "رذل", "غفل", "محل", "نخل", "ههه", "هوه-هيه", "هو-هي", "وهى", "هوو-هوى", "هوأ-هيأ", "أوه", "هلل-هلهل", "هيل", "أهل"], "shared_concept": "نقص + فراغ + امتداد", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-924c7c2b", "roots": ["بخع", "جعع-جعجع", "جوع", "خلع", "هلع"], "shared_concept": "نقص + فراغ + باطن", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-be09a48e", "roots": ["بدد-بدبد", "بيد", "أبد", "بقو-بقى", "حسد", "دفأ", "دفق"], "shared_concept": "ظهور + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-37276369", "roots": ["بدو", "بدأ", "بدر", "بدل-بأدل", "بدن", "حسب", "دفع", "دمع", "شوى", "وشى", "طلب", "طلع", "عرب", "فزع", "قبب-قبقب", "قوب", "وقب", "قشع", "كعب", "نزع"], "shared_concept": "ظهور", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-104d9cad", "roots": ["بدع", "تسع", "كعع-كعكع"], "shared_concept": "ظهور + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-4a3e74b4", "roots": ["بذر", "دخر", "دخن", "رجو", "رجز", "رجس", "رجل", "صعر", "فرر-فرفر", "فور", "وفر", "فكر", "همر", "همن"], "shared_concept": "تفرق + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-94480aff", "roots": ["برر", "برأ", "بور", "بأر", "وبر", "بره-برهن", "حرر-حرحر", "حور", "حير", "سهـر", "شهر", "طهـر", "عهن", "محن", "نهـر"], "shared_concept": "خلوص + فراغ + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-672f3eea", "roots": ["برو-برى", "برز", "برزخ", "برص", "بهـهـ-بهـبهـ", "تهـتهـ", "تيهـ-توهـ", "حرو-حرى", "حرص", "أخخ", "خوخ", "خوو-خوى", "أخو-أخي", "خلو-خلى", "ذهه", "شهو-شهى", "طهـطهـ", "عهه", "فهه-فهفه", "فوهـ", "محو-محى", "محص", "مصص-مصمص", "مهـهـ-مهمه", "موهـ-ميه"], "shared_concept": "خلوص + فراغ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d2ace66d", "roots": ["برج", "برم", "حرج", "حرم", "زمه", "سهـم", "عمه", "نهـج"], "shared_concept": "خلوص + فراغ + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-fadff2ba", "roots": ["برح", "خلط", "لهله", "لهو-لهى", "أله", "لهب", "لهث", "محح-محمح"], "shared_concept": "خلوص + فراغ + اتساع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-bc1a9bed", "roots": ["برد", "برك", "حرد", "حرك", "خلد", "شهد", "عهد", "هلك"], "shared_concept": "خلوص + فراغ + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-1995f38c", "roots": ["برق", "حرق", "خلق", "شهق", "فخخ-فخفخ", "محق"], "shared_concept": "خلوص + فراغ + ثقل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-57b5a805", "roots": ["بزز-بزبز", "بصص-بصبص", "تفف-تفتف"], "shared_concept": "نفاذ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d28ebe6f", "roots": ["بزغ", "سغغ-سغسغ", "سوغ-سيغ", "سفع", "قنو-قنى", "نقذ"], "shared_concept": "نفاذ + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-968b7e6f", "roots": ["بسس-بسبس", "يبس", "بأس", "شخخ", "شيخ", "شخص"], "shared_concept": "جفاف", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-371051a4", "roots": ["بسر", "شحن"], "shared_concept": "جفاف + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-570a7a81", "roots": ["بسط", "شحح-شحشح", "صحح-صحصح", "صوح-صيح"], "shared_concept": "جفاف + اتساع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-6dc282a8", "roots": ["بسم", "حتم", "شحم"], "shared_concept": "جفاف + اكتناز", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-0a787e3f", "roots": ["بصل", "جسس", "جوس", "وجس", "رسو", "رسخ", "سلف", "سهـل", "طفف-طفطف", "طوف-طيف", "نصص-نصنص", "نصو", "نيص-نوص", "نصب", "نصح", "نصر", "نصف"], "shared_concept": "نفاذ + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-8952e751", "roots": ["بضض", "بيض", "رمي", "رمز", "طعم", "غدو", "هنو-هنى"], "shared_concept": "تجمع + رخاوة + نصاعة", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-abaa0e6e", "roots": ["بطط", "بلل-بلبل", "بلو-بلي", "بول", "وبل", "أبل", "حطط-حطحط", "حوط", "دحح-دحدح", "صرح", "طحو-طحى", "فجو", "فجر"], "shared_concept": "ثقل + ضغط + اتساع", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-c0b3f0f8", "roots": ["بطأ", "دحو-دحي", "دحض", "ضزز", "ضوز-ضيز", "منو-منى"], "shared_concept": "ثقل + ضغط", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-710f3327", "roots": ["بطر", "بطن", "تنر", "دبب-دبدب", "دأب", "دحر", "صرر-صرصر", "صور", "صير", "أصر", "منن", "أمن", "يمن", "نظر"], "shared_concept": "ثقل + ضغط + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c3c4a6dc", "roots": ["بطش", "شرد", "شرق", "شرك", "صرخ", "عكك"], "shared_concept": "ثقل + ضغط + انتشار", "confidence": 0.7278, "source": "extracted"}
+{"family_id": "ext-774c0727", "roots": ["بطل", "أود", "أيد", "وأد", "فعل"], "shared_concept": "ثقل + ضغط + امتداد", "confidence": 0.8625, "source": "extracted"}
+{"family_id": "ext-70d32e45", "roots": ["بعع-بعبع", "بيع", "بعل"], "shared_concept": "خروج + انتقال + اتساع + حيز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-2f3cfe92", "roots": ["بعث", "شرر-شرشر", "شور", "أشر", "شرب", "شنن-شنشن", "شنأ", "شأن", "عثر"], "shared_concept": "خروج + انتقال + انتشار", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-8bb2726a", "roots": ["بعثر", "بعر", "تجر", "دبر", "رجأ", "رمن", "زفر", "صهـر", "ظهـر", "فيأ", "كرر-كركر", "كور-كير", "مرر-مرمر", "مور", "مير", "مرأ", "أمر", "هزأ"], "shared_concept": "انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ebaf8f9e", "roots": ["بعد", "بعض", "ثعب"], "shared_concept": "خروج + انتقال + إمساك", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-5e15a89f", "roots": ["بغغ-بغبغ", "أسس", "وسوس", "ظلل-ظلظل", "غبب", "غيب", "غسس", "غسل", "كنس"], "shared_concept": "امتداد + خروج + باطن", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-704905f0", "roots": ["بغل", "بلس", "جدل", "حلل-حلحل", "حول", "درس", "دلل-دلدل", "دول", "رسس-رسرس", "رأس", "رسل", "سبل-سنبل", "سربل", "سنبل", "شعل", "ضلل-ضلضل", "طفل", "طلل-طلطل", "طول", "عتل", "عدس", "عدل", "عسس-عسعس", "عسل", "عطل", "غزل", "قدس", "قسس-قسقس", "قوس", "قسطس", "كرس", "ليل", "ألل", "أول", "وول-أول", "وأل", "ويل", "ملل-ململ", "مول", "ميل", "أمل"], "shared_concept": "امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d1bcc98e", "roots": ["بقق-بقبق", "وبق", "أبق", "بقر", "بقل", "جلد", "ضحك", "فطط-فطفط"], "shared_concept": "امتساك + ظهور + اتساع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-52110bbd", "roots": ["بقع", "حقق-حقحق", "حيق", "حقب", "خدد", "دنو", "صرع", "صمع", "كند", "منع"], "shared_concept": "امتساك + باطن", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-bd62dcdc", "roots": ["بكك-بكبك", "بكى", "ضدد"], "shared_concept": "ضغط + احتباس", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-53f438e7", "roots": ["بكم", "صكك", "ضفد", "عضو", "أيك", "كبد"], "shared_concept": "ضغط + احتباس + اكتناز", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-33ce6562", "roots": ["بلد", "حدب", "حدق", "خطط", "خيط", "خطأ", "خطب", "ودد", "أدد", "رتل", "رعد", "رفد", "سرد", "سرمد", "سند", "طرد", "عدد", "عود-عيد", "وعد", "قدد", "وقد", "لحد", "مدد", "ميد", "أمد"], "shared_concept": "تلاصق + امتداد + إمساك", "confidence": 0.875, "source": "extracted"}
+{"family_id": "ext-eb72c780", "roots": ["بلع", "بلغ", "جرر-جرجر", "جور", "جأر", "أجر", "جرم", "درر-دردر", "دور-دير", "درأ", "درج", "درك", "درهم", "رعع-رعرع", "روع", "ريع", "رفع", "سبع", "سبغ", "سرع", "صبب-صبصب", "صوب-صيب", "وصب", "صبأ", "صبر", "غرر-غرغر", "غور", "غير", "غرب", "غرم", "متع", "معع-معمع"], "shared_concept": "تلاصق + امتداد + باطن", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-7fcec190", "roots": ["بنن-بنبن", "بنو-بني", "ثلل-ثلثل", "أثل", "خطو", "ودى", "يدى", "أدو-أدى", "دلو", "رعى", "رعو", "سبت", "سرو-سرى", "سطو", "سنو-سنى", "شطط", "شطأ", "شطر", "شطن", "صبو", "عتو", "عدو", "عدن", "قدو-قدى", "لحح-لحلح", "لحى", "لوح", "لحن", "متو-متى", "مدن", "مطط-مطمط", "مطو", "مطر", "معى", "معز", "ملو", "ملأ", "ملك"], "shared_concept": "تلاصق + امتداد", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-2b6810fe", "roots": ["بون-بين", "وفى"], "shared_concept": "وصول", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-dc9f7488", "roots": ["بهـج", "بهـم", "جهنم"], "shared_concept": "فراغ + ظاهر + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-1211ccfa", "roots": ["تبب-تبتب", "توب", "ركب"], "shared_concept": "نقص + تجمع + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c5118df5", "roots": ["تبت", "أوم-أيم"], "shared_concept": "نقص + تجمع + استقلال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-0996f490", "roots": ["تبر", "ركن"], "shared_concept": "نقص + تجمع + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a731b681", "roots": ["تبع", "ركع"], "shared_concept": "نقص + تجمع + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-13ed8de0", "roots": ["تحتح", "تقن", "تنن-تنتن", "تين", "وتن", "جحح-جحجح", "جرح", "جرع", "جنن-جنجن", "جنح", "خدع", "خدن", "خنن-خنخن", "خون", "دنن-دندن", "دون", "دين", "دهن", "ذرع", "رضع", "رنن", "رين", "زنن", "زين", "وزن", "صبح", "صبع", "صبغ", "طبع", "طمع", "طمن-طمأن", "غبن", "غطو-غطى", "قعع-قعقع", "قوع", "وقع", "قنن-قنقن", "يقن", "قنع", "كنن", "كون", "كين", "كنز", "مرح", "نون", "أنن", "نغنغ", "هنن", "هون-هين", "وهن"], "shared_concept": "باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b82c336e", "roots": ["وتد", "ردى", "ضمم-ضمضم", "عمد", "مجد", "مكو", "مكث"], "shared_concept": "امتساك + تماسك", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-a82db533", "roots": ["ترر", "تور-تير", "وتر"], "shared_concept": "قوة + دقة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-946b2bb3", "roots": ["ترك", "وحي", "نعق"], "shared_concept": "قوة + دقة", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-24b7aa16", "roots": ["تعع-تعتع", "خضع", "رضض-رضرض", "رضو-رضى", "روض-ريض", "أرض", "رغغ-رغرغ", "روغ-ريغ", "صغصغ", "طعع-طعطع", "طوع-طيع", "نعع-نعنع", "ينع", "نغض", "هطع"], "shared_concept": "رخاوة + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-fd6ec27c", "roots": ["تعس", "خضض-خضخض", "خوض", "رخخ-رخرخ", "رخو-رخى", "صغو-صغى"], "shared_concept": "رخاوة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-3b73bbf1", "roots": ["تقتق", "حنن-حنحن", "حين", "حنك", "زني", "غسق", "فعفع"], "shared_concept": "عمق + باطن + ثقل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a5983330", "roots": ["تلل-تلتل", "زمل", "يوم", "مسس-مسمس", "أمس"], "shared_concept": "تجمع + اتصال + امتداد", "confidence": 0.7278, "source": "extracted"}
+{"family_id": "ext-3e1267e3", "roots": ["تمم", "يتم"], "shared_concept": "تميز + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-366aa09a", "roots": ["أثث", "جثث-جثجث", "ضغث", "كثث-كثكث"], "shared_concept": "تجمع + كثافة + انتشار", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-aa30bf56", "roots": ["ثوى", "جثو-جثى", "جثم", "جمم-جمجم", "حجج-حجحج", "حوج-حيج", "حصو-حصى", "ربص", "رغم", "سجج-سجسج", "عصم"], "shared_concept": "تجمع + كثافة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c2622ff4", "roots": ["ثبب-ثبثب", "ثوب", "عذب", "كبب-كبكب", "كوب"], "shared_concept": "تجمع + تماسك + بروز", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-90944e8b", "roots": ["ثبو", "عمى", "غثو-غثى", "مزز-مزمز", "ميز"], "shared_concept": "تجمع + تماسك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f8223e29", "roots": ["ثبت", "قصم", "كبت"], "shared_concept": "تجمع + تماسك + استقلال", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-ca740607", "roots": ["ثبر", "زمر", "زمهرير", "عذر", "علن", "كبر", "مزن"], "shared_concept": "تجمع + تماسك + انتقال", "confidence": 0.7278, "source": "extracted"}
+{"family_id": "ext-9466e9ac", "roots": ["ثبط", "مأو-مأى"], "shared_concept": "تجمع + تماسك + اتساع", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-b4303db9", "roots": ["ثخخ", "ثنى", "شفو-شفي", "غشو-غشى"], "shared_concept": "كثافة + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b2e971bf", "roots": ["ثخن", "ثنن", "وثن", "حجر", "سجر", "سجن", "صدر", "عصر", "يقظ"], "shared_concept": "كثافة + غلظ + انتقال", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-12fc7e3c", "roots": ["ثرر-ثرثر", "ثور", "أثر"], "shared_concept": "نفاذ + غزارة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-29b304c0", "roots": ["ثقق-ثقثق", "وثق", "شفق"], "shared_concept": "غلظ + قوة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-889de5a8", "roots": ["ثقف", "سقق-سقسق", "سوق", "وسق", "صيد", "وصد", "أصد", "صدف", "صدق", "ضعف", "نجد", "نجس"], "shared_concept": "غلظ + قوة + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f48f2533", "roots": ["ثلث", "شرذم", "غثث", "غوث", "غيث", "لمم-لملم-لم-لما", "لمز", "مشى"], "shared_concept": "تجمع + تماسك + انتشار", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-969a7d08", "roots": ["ثمم-ثمثم", "أثم", "ثمن"], "shared_concept": "تجمع + حيز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-38e153f3", "roots": ["ثمر", "حبر"], "shared_concept": "تجمع + حيز + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d03350d6", "roots": ["أجج", "خشع", "هجج-هجهج", "هيج", "وهج"], "shared_concept": "حدة + جوف + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-03d42fe2", "roots": ["جوو-جوى", "لعع-لعلع"], "shared_concept": "حدة + جوف", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-cd6309e6", "roots": ["جيأ", "هجر"], "shared_concept": "حدة + جوف + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-9acfd3ef", "roots": ["جبب-جبجب", "جوب-جيب", "وجب"], "shared_concept": "بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d997e25a", "roots": ["جبو-جبى", "جبت", "جبر", "جبل", "جبن"], "shared_concept": "بروز + قطع", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-4f4c993c", "roots": ["جبه", "قضب"], "shared_concept": "بروز + قطع + خلوص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-9f3b1539", "roots": ["جدد-جدجد", "جود-جيد", "وجد", "جدر", "رفق", "سبق", "سردق", "سرق", "طرق", "طلق", "عتب", "عتد", "عتق", "لحق", "ملق"], "shared_concept": "قوة + تلاصق + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-07e97301", "roots": ["جدث", "هشش"], "shared_concept": "قوة + تلاصق + انتشار", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-6f171b57", "roots": ["جذو-جذى", "قصص-قصقص"], "shared_concept": "غلظ + قطع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-6f62f60d", "roots": ["جذع", "مقت"], "shared_concept": "غلظ + قطع + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a23837ba", "roots": ["جرى", "جرز", "درى", "مرو", "مرى"], "shared_concept": "استرسال + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-8a7c59cd", "roots": ["جرف", "ذخخ-ذخذخ", "ذخر", "ذرر-ذرذر", "ذرأ", "وذر"], "shared_concept": "استرسال + باطن + اختراق", "confidence": 0.875, "source": "extracted"}
+{"family_id": "ext-843f004e", "roots": ["جزز-جزجز", "جزى", "جوز-جيز"], "shared_concept": "تميز + استقلال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-42cc2d6c", "roots": ["جسد", "صرف", "كفف-كفكف", "كوف-كيف"], "shared_concept": "اختراق + إمساك", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-6b2317fa", "roots": ["جسم", "سمم-سمسم", "سمو", "سوم", "وسم", "سأم", "سمك", "ضفف", "ضوف-ضيف", "فمم", "فوم"], "shared_concept": "اختراق + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-1f3958cb", "roots": ["جفف-جفجف", "جوف-جيف", "وجف"], "shared_concept": "جفاف + إبعاد + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a64bb127", "roots": ["جفأ", "جفن"], "shared_concept": "جفاف + إبعاد + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-783d21e0", "roots": ["جلل-جلجل", "جلو-جلى", "وجل", "أجل", "جلب", "جلس", "ضحو-ضحى", "قبح"], "shared_concept": "اتساع + ظهور", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-5f722256", "roots": ["جمد", "حصد"], "shared_concept": "تجمع + كثافة + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-367cd3dd", "roots": ["جمل", "حصل"], "shared_concept": "تجمع + كثافة + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ce3476e1", "roots": ["جنى", "شفع", "صدع"], "shared_concept": "باطن + كثافة", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-7b078926", "roots": ["جنف", "سقف", "لغلغ"], "shared_concept": "باطن + كثافة + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-5014e423", "roots": ["حوى", "حيي", "زكو"], "shared_concept": "تلاصق + امتلاء", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-e152bcd4", "roots": ["حبب-حبحب", "حوب", "حبس"], "shared_concept": "تجمع + حيز + اكتناز + جفاف + لطف", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-811445a8", "roots": ["حبك", "زمم-زمزم", "لكك-لكلك", "ألك-لأك", "أمم", "يمم"], "shared_concept": "اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-1975a2a5", "roots": ["حتت-حتحت", "حوت"], "shared_concept": "رقة + جفاف + استقلال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-382ad8c9", "roots": ["حثث-حثحث", "حوث-حيث"], "shared_concept": "تخلخل + قطع + جفاف", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d782b7ee", "roots": ["حجب", "عصب"], "shared_concept": "صلابة + غلظ + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-7544e111", "roots": ["حجز", "صدد-صدى", "عصو-عصى", "كزز", "وكز"], "shared_concept": "صلابة + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-15c2dd6f", "roots": ["حدد", "حيد", "وحد", "أحد", "دكك", "ذود", "ردد", "رود", "ريد", "رأد", "ورد", "صمد"], "shared_concept": "إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-9ba90bf6", "roots": ["حدث", "رفث", "مشج"], "shared_concept": "تلاصق + امتداد + انتشار", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-10c0d2a0", "roots": ["حذذ-حذحذ", "حوذ"], "shared_concept": "نقص + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-60168b42", "roots": ["حرث", "حرس", "حرض", "حرف", "خلص", "رهره", "رهو", "شفه"], "shared_concept": "خلوص + فراغ + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f72801ba", "roots": ["حزز", "حوز-حيز"], "shared_concept": "شق + دقة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-08416046", "roots": ["حسس-حسحس", "حسر", "حسم", "حسن"], "shared_concept": "ظهور + ظاهر + اتصال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f933e0e0", "roots": ["حصص-حصحص", "حوص-حيص", "سدس-ستت"], "shared_concept": "غلظ + تجمع + تلاصق + جفاف + قطع", "confidence": 0.8133, "source": "extracted"}
+{"family_id": "ext-f1345126", "roots": ["حصب", "كثب"], "shared_concept": "غلظ + تجمع + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-0d44a2e3", "roots": ["حصر", "حصن", "ضغن", "كثر"], "shared_concept": "غلظ + تجمع + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-47e931d6", "roots": ["حضض", "حيض"], "shared_concept": "نقص + قوة + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d58c1faf", "roots": ["حطم", "صرم", "عضض", "عضد", "لدى"], "shared_concept": "ضغط + قوة + اكتناز", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-d1fd07d5", "roots": ["حظر", "سقر"], "shared_concept": "نفاذ + غلظ + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-265f7e90", "roots": ["حفف-حفحف", "حيف"], "shared_concept": "اشتمال + ظاهر + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a10380b1", "roots": ["حقف", "قنط", "قنطر"], "shared_concept": "امتساك + عمق + اختراق", "confidence": 0.8333, "source": "extracted"}
+{"family_id": "ext-4284f78c", "roots": ["حكك", "شدد", "شيد"], "shared_concept": "احتكاك + ضغط + صلابة + غلظ", "confidence": 0.8167, "source": "extracted"}
+{"family_id": "ext-390d50cc", "roots": ["حلو-حلى", "دخل", "فردوس", "همس"], "shared_concept": "تخلخل + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-304aedda", "roots": ["حلقم", "حلم"], "shared_concept": "تخلخل + امتداد + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-5c12e1d1", "roots": ["حمم-حمحم", "خشو-خشى"], "shared_concept": "حدة + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-e9b16162", "roots": ["حمأ", "حمر", "صخر", "لظى", "لعن"], "shared_concept": "حدة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-0e2e96e2", "roots": ["حنث", "نمرق"], "shared_concept": "جوف + قوة + انتشار", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-0b683b98", "roots": ["حنج", "زنج", "زنجبيل", "زنم", "قمع"], "shared_concept": "جوف + قوة + اكتناز", "confidence": 0.9125, "source": "extracted"}
+{"family_id": "ext-5e1b64a7", "roots": ["حنجر", "قهـر"], "shared_concept": "جوف + قوة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b0cd4034", "roots": ["حنذ", "حنف", "مضغ", "نحب", "نحر", "نحس", "نحل"], "shared_concept": "جوف + قوة + اختراق", "confidence": 0.875, "source": "extracted"}
+{"family_id": "ext-20c8f68c", "roots": ["خبب-خبخب", "خوب-خيب"], "shared_concept": "تخلخل + باطن + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-0525b717", "roots": ["خبو", "خبز", "خنز", "شعع-شعشع", "شوع-شيع", "صعع-صعصع", "صوع-صيع", "فرع", "فرغ"], "shared_concept": "تخلخل + باطن", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-5bdc25a2", "roots": ["خبأ", "خبر", "خنزر", "رجع"], "shared_concept": "تخلخل + باطن + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-5697ce84", "roots": ["خبل", "خنس"], "shared_concept": "تخلخل + باطن + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-daaec2ad", "roots": ["خذذ", "أخذ", "خذل"], "shared_concept": "نفاذ + قوة + اتساع + حيز + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-04f66b4d", "roots": ["خرر-خرخر", "خور-خير", "أخر"], "shared_concept": "تخلخل + استواء + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-68695a4b", "roots": ["خرج", "خرطم"], "shared_concept": "تخلخل + استواء + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d85e44dd", "roots": ["خزز", "خزو-خزى", "أسو", "شكو", "غزز-غزغز", "غزو", "غلو", "غلى"], "shared_concept": "نفاذ + حدة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c6f76041", "roots": ["خزن", "ذقن", "شكر"], "shared_concept": "نفاذ + حدة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-9be45122", "roots": ["خسأ", "خسر", "غفر", "كسو", "نخر"], "shared_concept": "نقص + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-96051a3a", "roots": ["خسف", "رذذ", "غفف"], "shared_concept": "نقص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ad8ae8c5", "roots": ["خصص", "دسس", "نسس-نسنس", "أنس", "نكس"], "shared_concept": "دقة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-8c00b289", "roots": ["خصف", "ذرو-ذرى", "ورى", "رأى", "زري", "نسو-نسى", "نسخ", "نسف"], "shared_concept": "دقة + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-9c1ab98c", "roots": ["خصم", "كلو", "كلم", "نعج", "نعم"], "shared_concept": "دقة + اكتناز", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-d79d2b35", "roots": ["خضد", "رغد"], "shared_concept": "رخاوة + إمساك", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-4ea8f8f1", "roots": ["خضر", "صغر", "طعن", "هزز-هزهز", "هزل"], "shared_concept": "رخاوة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ab362f08", "roots": ["خطف", "رفف-رفرف", "رأف", "سرر-سرسر", "سور", "سير", "يسر", "أسر", "سرب", "سرج", "سرح", "سرط", "سرف", "سرم", "طرف", "لحف"], "shared_concept": "تلاصق + امتداد + اختراق", "confidence": 0.875, "source": "extracted"}
+{"family_id": "ext-105abd06", "roots": ["خفف", "خفو-خفي", "خوف-خيف"], "shared_concept": "تخلخل + نقص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-4db50859", "roots": ["خلف", "سهـو", "نهـنهـ", "نهـى"], "shared_concept": "فراغ + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-5cf3eebb", "roots": ["خمم-خمخم", "خيم"], "shared_concept": "احتواء", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d5f3f20e", "roots": ["خمر", "عشر"], "shared_concept": "احتواء + انتقال", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-f6b396ed", "roots": ["خمس", "شغل", "طفأ"], "shared_concept": "احتواء + امتداد", "confidence": 0.7278, "source": "extracted"}
+{"family_id": "ext-410b7c6b", "roots": ["دخخ-دخدخ", "شتو-شتى", "فرى", "فرث", "فرش", "قرش", "هدى", "همز"], "shared_concept": "تخلخل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a9b6528a", "roots": ["دسو-دسي", "أفف", "نفف-نفنف", "نفي", "أنف", "نفخ", "نفذ"], "shared_concept": "نفاذ + إبعاد", "confidence": 0.7861, "source": "extracted"}
+{"family_id": "ext-977732ab", "roots": ["دسر", "نفر"], "shared_concept": "نفاذ + إبعاد + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-8d4e1375", "roots": ["دعع-دعدع", "ودع"], "shared_concept": "إبعاد + ضغط + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-4223f6d9", "roots": ["دقق-دقدق", "ودق"], "shared_concept": "إمساك + صدم + ضغط + قوة + حدة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ba18b361", "roots": ["دمم-دمدم", "دوم-ديم", "أدم"], "shared_concept": "استواء + ظاهر + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c6df6879", "roots": ["دمى-دمو", "دمغ", "سوى"], "shared_concept": "استواء + ظاهر", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-da373fd3", "roots": ["دهده", "دهى"], "shared_concept": "إبعاد + خلوص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-aa269bc2", "roots": ["أذذ-إذ", "قصف", "قطف"], "shared_concept": "قطع + اختراق", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-fba8576f", "roots": ["ذبب-ذبذب", "ذأب", "ذبح"], "shared_concept": "نفاذ + تلاصق + امتداد + اندفاع + وحدة + حدة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-e0171722", "roots": ["ذعع-ذعذع", "ذيع", "هرع"], "shared_concept": "تفرق + رقة + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-bf5016f0", "roots": ["ذعن", "هرر-هرهر", "هور-هير"], "shared_concept": "تفرق + رقة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-cceb66b8", "roots": ["ذقذق", "ذوق", "شكك", "شوك", "غلق"], "shared_concept": "نفاذ + حدة + ثقل", "confidence": 0.8333, "source": "extracted"}
+{"family_id": "ext-1e2c6109", "roots": ["ذم-ذمذم", "ذأم", "ركز"], "shared_concept": "نقص + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b76512af", "roots": ["ذنن", "أذن", "ذنب"], "shared_concept": "تلاصق + امتداد + تعلق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-562e9e13", "roots": ["ربب-ربرب", "روب", "ريب", "أرب"], "shared_concept": "غلظ + تماسك + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-6400981a", "roots": ["ربو-ربى", "زكك-زكزك", "سدو-سدى"], "shared_concept": "غلظ + تماسك", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-bba221ea", "roots": ["ربح", "ربط"], "shared_concept": "غلظ + تماسك + اتساع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-6658bebb", "roots": ["رتع", "ردأ", "ردم"], "shared_concept": "تلاصق + امتساك + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-4f92d14b", "roots": ["رتق", "صلد"], "shared_concept": "تلاصق + امتساك + دقة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-4d26020d", "roots": ["رثث", "ورث"], "shared_concept": "استواء + انتشار", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b9cd2b20", "roots": ["رجج-رجرج", "رجم"], "shared_concept": "تخلخل + انتقال + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-79e4651b", "roots": ["رحح-رحرح", "روح-ريح", "ضحح-ضحضح", "طحح-طحطح", "ملح"], "shared_concept": "اتساع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-185cc466", "roots": ["رحب", "رحل", "رقو-رقى", "رقب", "غنى", "فشل"], "shared_concept": "اتساع + رقة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-1704d496", "roots": ["رحق", "رقق-رقرق", "ورق"], "shared_concept": "اتساع + رقة + ثقل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a93f0930", "roots": ["رحم", "رقم", "غنم", "كلح"], "shared_concept": "اتساع + رقة + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-87a1ea99", "roots": ["رزق", "طغو-طغى", "طوق"], "shared_concept": "اتصال + اشتمال + قوة", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-55d6184d", "roots": ["رصص-رصرص", "رصد", "سدد", "سود-سيد"], "shared_concept": "التحام + غلظ + امتساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-aad3bed1", "roots": ["رطط-رطرط", "هطط-هطهط"], "shared_concept": "رخاوة + كثافة + اتساع", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-ba6c3c5a", "roots": ["رعب", "سبب-سبسب", "سيب", "سبأ", "سبح", "سبط", "سطط", "سوط", "وسط", "سطح", "سطر", "صلل-صلصل", "وصل", "أصل", "طرر-طرطر", "طرو-طرى-طرأ", "طور", "طير", "وطر", "طرح", "نعل"], "shared_concept": "تلاصق + امتداد + رقة + رخاوة", "confidence": 0.86, "source": "extracted"}
+{"family_id": "ext-884a362a", "roots": ["رفت", "عتت-عتعتت", "قدح", "قدر", "قدم", "متت-متمت", "موت", "أمت"], "shared_concept": "تلاصق + امتداد + استقلال", "confidence": 0.8333, "source": "extracted"}
+{"family_id": "ext-2ed922ef", "roots": ["ركك-ركرك", "أرك", "ركس", "ركض", "ركم"], "shared_concept": "تجمع + نقص + كثافة + تماسك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ce819ce9", "roots": ["ركد", "شبه"], "shared_concept": "تجمع + نقص + إمساك", "confidence": 0.75, "source": "extracted"}
+{"family_id": "ext-20f836b7", "roots": ["رمم-رمرم", "أرم", "رمح", "رمض", "غدر", "هزم", "هنأ"], "shared_concept": "تجمع + رخاوة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a57bb89b", "roots": ["زبر", "زبن"], "shared_concept": "اكتناز + نضح + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-1f6b7db0", "roots": ["زتت", "زيت"], "shared_concept": "تعلق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-de533a73", "roots": ["زجج", "زوج"], "shared_concept": "إبعاد + تلاصق + اتصال + اشتمال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-8f9fd0da", "roots": ["زخخ-زخزخ", "زخر", "نتق"], "shared_concept": "اندفاع + قوة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f749004a", "roots": ["زود", "زيد"], "shared_concept": "حيز + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-fbbb5730", "roots": ["زرر-زرزر", "زور", "وزر", "أزر", "نور", "نسأ", "نسر"], "shared_concept": "نفاذ + دقة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b1971f71", "roots": ["زرب", "نسب"], "shared_concept": "نفاذ + دقة + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-24c4dc6a", "roots": ["زرق", "نزف", "نسك"], "shared_concept": "نفاذ + دقة + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d451205a", "roots": ["زعع-زعزع", "وزع"], "shared_concept": "انتقال + إبعاد + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a2818fa7", "roots": ["زغغ-زغزغ", "زوغ-زيغ"], "shared_concept": "إبعاد + دقة + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-17d1acb3", "roots": ["زفف-زفزف", "أزف", "سمر", "سمن"], "shared_concept": "انتقال + تجمع + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-92f0ffd4", "roots": ["زقق-زقزق", "نأو-نأى"], "shared_concept": "إبعاد + ثقل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-6dd48030", "roots": ["زقم", "هتو"], "shared_concept": "إبعاد + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-bd211109", "roots": ["زلل-زلزل", "زول", "زيل"], "shared_concept": "انتقال + استواء", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-40543c47", "roots": ["زهزه", "زهو"], "shared_concept": "إفراغ + خلوص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-012cc310", "roots": ["يأس", "شكس", "شكل", "غلل-غلغل", "غول"], "shared_concept": "نفاذ + حدة + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-d7b9d727", "roots": ["سجد", "نزز", "نزغ"], "shared_concept": "رقة + غلظ + إمساك", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-f44307a6", "roots": ["سجل", "سندس", "غرو-غرى", "فنى", "نلنل", "نول-نيل"], "shared_concept": "رقة + غلظ + امتداد", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-4897e1ec", "roots": ["سحح-سحسح", "سيح", "سحب"], "shared_concept": "تخلخل + استقلال + لطف + دقة + مقر", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-e5def407", "roots": ["سخخ-سخسخ", "كذذ"], "shared_concept": "رخاوة + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-9b6d2b0b", "roots": ["سعع-سعسع", "سوع-سيع", "وسع", "سعر"], "shared_concept": "نقص + اتساع + حيز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-7a7ab50c", "roots": ["سفف-سفسف", "سوف", "أسف", "سفح", "سفر", "سفل", "سفن", "سفه"], "shared_concept": "نفاذ + جفاف + ظهور", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-62ae166b", "roots": ["سقى", "شظظ", "شوظ", "شفف-شفشف", "عسو-عسى", "عصف", "غصص", "غوص", "لغو", "نجو"], "shared_concept": "نفاذ + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-94a10cf4", "roots": ["سقم", "نجج-نجنج", "نجم"], "shared_concept": "نفاذ + غلظ + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-15695b62", "roots": ["سكب", "كشف"], "shared_concept": "نفاذ + قوة + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-47bc5598", "roots": ["سكر", "سكن"], "shared_concept": "نفاذ + قوة + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-db0511bd", "roots": ["سلل-سلسل-سلسبيل", "سلو-سلي", "سول", "سيل", "وسل", "سأل", "سلب", "سلح", "سلخ", "سلط"], "shared_concept": "استرسال + طول", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-251b8a28", "roots": ["سلم", "شمز-شمأز"], "shared_concept": "استرسال + طول + اكتناز", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-f6c9038a", "roots": ["سنن-سنسن", "سين", "وسن", "أسن", "سنب", "سنم", "سنهـ"], "shared_concept": "تلاصق + امتداد + نفاذ + حدة + دقة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-44bf9c17", "roots": ["شبب", "شوب", "شيب"], "shared_concept": "تجمع + انتشار + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-1ee7fc92", "roots": ["شتت", "فرت"], "shared_concept": "تفرق + استقلال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-dd581c65", "roots": ["شرح", "شرط"], "shared_concept": "انتشار + اتساع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-e87a8408", "roots": ["شرع", "غطش"], "shared_concept": "انتشار + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-99de4c3c", "roots": ["شعب", "شعر"], "shared_concept": "انتشار + تفرق + دقة + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-576e5d4e", "roots": ["شغشغ", "صنو", "طمم-طمطم", "غمم-غمغم", "غمز", "كمم-كمكم"], "shared_concept": "اتصال + اشتمال + باطن", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-cd275063", "roots": ["شمم", "شأم", "شمخ", "شمس", "شمل"], "shared_concept": "تجمع + استرسال + ظاهر", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-9f2dd1db", "roots": ["وصى", "مسو-مسى", "مسك"], "shared_concept": "اتصال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a4259ec7", "roots": ["صتت", "صوت"], "shared_concept": "إمساك + صدم + استقلال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-aba9f676", "roots": ["صخخ", "لعب"], "shared_concept": "حدة + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c9ca65ed", "roots": ["صعد", "فرد", "فرض", "فكك", "أفك", "هدد-هدهد", "هود", "همد"], "shared_concept": "تخلخل + تفرق + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-84f575a0", "roots": ["صعق", "فرق"], "shared_concept": "تخلخل + تفرق + ثقل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-3c008e49", "roots": ["صفف-صفصف", "صوف", "صيف", "وصف", "صفد"], "shared_concept": "رقة + خلوص + فراغ + غلظ + تجمع + تعقد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-545e9742", "roots": ["صفر", "صفن", "مهـن"], "shared_concept": "رقة + خلوص + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-e4e4dbe9", "roots": ["صمم-صمصم", "صوم"], "shared_concept": "إمساك + انسداد + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-3b99ec7d", "roots": ["صنن", "صنع", "صنم"], "shared_concept": "احتواء + جوف + تلاصق + إمساك + امتساك + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-84726490", "roots": ["ضَوأ", "ضهأ", "ظمأ", "كأكأ", "وكأ", "لألأ"], "shared_concept": "انتقال + تأكيد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-882b56eb", "roots": ["ضجج", "عمم", "عوم", "عمر", "عمل", "لحم"], "shared_concept": "تماسك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-11a7430f", "roots": ["ضرر", "ضور-ضير"], "shared_concept": "ازدحام + إبعاد + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-afd98357", "roots": ["ضعع-ضعضع", "ضوع-ضيع", "وضع", "غظغظ", "غيظ", "كظظ", "كظم", "مقق-مقمق"], "shared_concept": "غلظ + قوة + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-76d8cf23", "roots": ["ضفدع", "ظلم"], "shared_concept": "تجمع + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-56e72ea4", "roots": ["ضيق", "فدد-فدفد", "فدى", "وفد", "فأد", "قعد"], "shared_concept": "ثقل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-0e901f9d", "roots": ["ضمر", "كرم"], "shared_concept": "تجمع + ضغط + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-51768680", "roots": ["ضنن", "وضن", "ضأن"], "shared_concept": "تعلق + حيز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-5cdb7c8e", "roots": ["طبب-طبطب", "طيب"], "shared_concept": "احتكاك + اشتمال + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-28d1b8be", "roots": ["طود", "قلد"], "shared_concept": "صعود + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-06680b2b", "roots": ["طمس", "كمل"], "shared_concept": "اشتمال + باطن + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-78c014aa", "roots": ["طنن-طنطن", "طين", "وطن"], "shared_concept": "تعلق + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-49fd4de7", "roots": ["ظعن", "ظنن", "غبر", "قبر", "لون-لين"], "shared_concept": "انتقال + باطن", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-9c881841", "roots": ["وعي", "غطط", "غوط", "نحح"], "shared_concept": "اتساع + جوف", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-41adf84c", "roots": ["عبب-عبعب", "عيب", "عبث", "عبس"], "shared_concept": "رخاوة + تخلخل + حيز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-7877a34e", "roots": ["عبأ", "عبر", "عبقر"], "shared_concept": "رخاوة + تخلخل + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-786706a4", "roots": ["عجج-عجعج", "عوج-عيج", "عجف", "عجم"], "shared_concept": "تجمع + هشاشة + نقص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-bc24a86f", "roots": ["عرر-عرعر", "عرو", "عرى", "عور", "عير", "عرجن", "عرف", "عفف-عفعف", "عفو"], "shared_concept": "نقص + ظاهر + ظهور", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ab0f3298", "roots": ["عرج", "عرم"], "shared_concept": "نقص + ظاهر + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-68ba214a", "roots": ["عزز", "عزو-عزى", "عزم"], "shared_concept": "تماسك + اشتداد", "confidence": 0.8444, "source": "extracted"}
+{"family_id": "ext-a50bea27", "roots": ["عشش", "عيش"], "shared_concept": "اتصال + اشتمال + انتشار", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-00f5d7a5", "roots": ["عطط", "عطو"], "shared_concept": "امتداد + تعلق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-8b88091f", "roots": ["عظظ-عظعظ", "وعظ"], "shared_concept": "تعقد + ثخانة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a5edf2a7", "roots": ["عقق", "عوق", "عقب", "عقد"], "shared_concept": "غلظ + تعقد + عمق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-beed4aa4", "roots": ["علل-علعل", "علو-على", "عول-عيل", "علم"], "shared_concept": "تماسك + صعود", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-94a35d43", "roots": ["عمق", "قوو", "وقي", "كدد-كدكد", "كدى", "كود", "كيد", "وكد", "لزز", "لزم", "مزق", "هشم"], "shared_concept": "التحام + تجمع + ثقل", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-b64efc70", "roots": ["عنن-عن", "عنو-عنى", "عون", "عين", "عنب"], "shared_concept": "ظهور + لطف", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a8328622", "roots": ["عنت", "عنكبوت"], "shared_concept": "ظهور + لطف + استقلال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-23256e7a", "roots": ["عند", "عنك"], "shared_concept": "ظهور + لطف + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-10b2ece1", "roots": ["غدد", "غدق"], "shared_concept": "تجمع + رخاوة + قوة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-2755cbbf", "roots": ["غرف", "نسل"], "shared_concept": "امتداد + دقة + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-5fbaa970", "roots": ["غصب", "لغب", "نذذ"], "shared_concept": "نفاذ + غلظ + بروز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b2408751", "roots": ["غضض-غضغض", "غيض"], "shared_concept": "امتلاء + رخاوة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-2d6da51b", "roots": ["غلف", "غلم"], "shared_concept": "نفاذ + حدة + اشتمال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-74509434", "roots": ["فتح", "قطط-قطقط"], "shared_concept": "استقلال + اتساع", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-03af4285", "roots": ["فجج-فجفج", "فوج-فيج", "لدد", "ولد", "لدن"], "shared_concept": "اتساع + قوة + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-97f076e6", "roots": ["فرج", "هدم", "همم-همهم", "هيم"], "shared_concept": "تفرق + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-893f9914", "roots": ["فرح", "فرط"], "shared_concept": "تفرق + اتساع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-cb7bcb85", "roots": ["فرهـ", "فكهـ"], "shared_concept": "تفرق + خلوص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f8d6af0e", "roots": ["فزز-فزفز", "فوز"], "shared_concept": "ظاهر + قوة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-90532fd4", "roots": ["فضض-فضفض", "فوض", "فيض", "وفض"], "shared_concept": "كسر + تفرق + قوة + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-3555833c", "roots": ["فقق-فقفق", "فوق", "وفق", "أفق"], "shared_concept": "شق + عمق + ثقل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-3850d5c0", "roots": ["فلل-فلفل", "فيل", "أفل"], "shared_concept": "استقلال + ظاهر + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-0a2fb0e3", "roots": ["فنن-فنفن", "قتل"], "shared_concept": "امتداد + رقة + نقص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-788f8958", "roots": ["فند", "نزل"], "shared_concept": "امتداد + رقة + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-1a3bbf8b", "roots": ["فهم", "نقم"], "shared_concept": "فراغ + عمق + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-2e5b8772", "roots": ["قبس", "قبض"], "shared_concept": "ظاهر + جوف + اتصال + صلابة + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-2ff23f13", "roots": ["قبل", "مثل"], "shared_concept": "ظاهر + جوف + امتداد", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-aaec40ff", "roots": ["قتت", "قوت", "وقت", "يقت"], "shared_concept": "دقة + نقص + استقلال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c2b8d221", "roots": ["قذذ", "وقذ", "قذف", "نفق"], "shared_concept": "إبعاد + قوة + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-6e2c1bd5", "roots": ["قرر-قرقر", "قرأ", "وقر"], "shared_concept": "استقرار + تخلخل + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-3a497c37", "roots": ["قري", "قرب", "قرح", "قرع", "قرن"], "shared_concept": "استقرار + تخلخل", "confidence": 0.8833, "source": "extracted"}
+{"family_id": "ext-3a42bd71", "roots": ["قرد", "قرض"], "shared_concept": "استقرار + تخلخل + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-7d261222", "roots": ["قسر", "قسط"], "shared_concept": "امتداد + صلابة + غلظ + حدة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-7b03c3f0", "roots": ["قضض-قضقض", "قيض"], "shared_concept": "استقلال + فراغ + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-154e2b76", "roots": ["قفف-قفقف", "وقف"], "shared_concept": "صعود + صلابة + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c773ae5b", "roots": ["قلع", "نبع"], "shared_concept": "صعود + باطن", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-21daec94", "roots": ["قمم-قمقم", "قوم", "قمح", "قمر", "قمط", "قمطر", "قمل"], "shared_concept": "تجمع + قوة + صعود", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f7a56329", "roots": ["قنت", "نحت"], "shared_concept": "نفاذ + باطن + استقلال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ed407fd8", "roots": ["قهـهـ-قهقه", "نقق-نقنق", "نوق"], "shared_concept": "باطن + قوة + خلوص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-48dafdba", "roots": ["كتب", "مسخ"], "shared_concept": "اتصال + اشتمال + بروز", "confidence": 0.7667, "source": "extracted"}
+{"family_id": "ext-b5cb9456", "roots": ["كرهـ", "مصر"], "shared_concept": "امتساك + انتقال + خلوص", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-5935fe65", "roots": ["كسس", "كأس", "كسب", "كسف", "كسل"], "shared_concept": "نقص + انتقال + عمق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-abf832e0", "roots": ["كشط", "لزب"], "shared_concept": "خروج + قوة + التحام", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f0170e1a", "roots": ["كفى", "كفأ-كفو"], "shared_concept": "تعقد + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-536d6b84", "roots": ["كلل-كلكل", "كيل", "وكل", "أكل"], "shared_concept": "تجمع + دقة + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-fb1647b6", "roots": ["كهـف", "نفع"], "shared_concept": "جوف + إبعاد + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c60f9059", "roots": ["لتت", "لوت-ليت", "ألت-ولت"], "shared_concept": "تماسك + اتصال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-ede90f96", "roots": ["لجج-لجلج", "لجأ", "ولج"], "shared_concept": "تماسك + كثافة + قوة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-97ab217a", "roots": ["لذذ-لذلذ", "لوذ"], "shared_concept": "اتصال + لطف + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-0dc48e19", "roots": ["لسس", "ليس", "لسن"], "shared_concept": "نقص + رقة + مقر", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-33ee24db", "roots": ["لفف-لفلف", "ألف"], "shared_concept": "ظاهر + كثافة + اختراق", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-616e855c", "roots": ["لقق-لقلق", "لقب", "لقح"], "shared_concept": "إمساك + صدم + حيز + قوة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-77322d77", "roots": ["لوم", "ألم"], "shared_concept": "تجمع + انتشار + ظاهر", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-2a9e659c", "roots": ["مجج-مجمج", "موج-ميج"], "shared_concept": "تلاصق + امتلاء + كثافة + اندفاع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-54a9fbdc", "roots": ["مرد", "مرض"], "shared_concept": "استرسال + باطن + انتقال + حدة + قوة + تخلخل", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b080b8bc", "roots": ["مكر", "مكن"], "shared_concept": "امتساك + تماسك + انتقال", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-f19da83f", "roots": ["نشأ", "نشر", "نشط"], "shared_concept": "صعود + انتشار + حدة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-4503d82c", "roots": ["نضض-نضنض", "نضد"], "shared_concept": "نفاذ + اندفاع + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-8bf79b47", "roots": ["نضخ", "نضر"], "shared_concept": "نفاذ + اندفاع + ظاهر", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-c08ab769", "roots": ["نفس", "نفل"], "shared_concept": "نفاذ + إبعاد + امتداد", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-a1189050", "roots": ["نقب", "نقص", "نقض", "نقع"], "shared_concept": "فراغ + عمق + غلظ", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-63449f0f", "roots": ["نكنك", "نكد"], "shared_concept": "وصول + عمق + إمساك", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-14e94d87", "roots": ["نكب", "نكح", "نكر", "نكص", "نكل"], "shared_concept": "وصول + عمق + دقة", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-8eae0131", "roots": ["نمم-نمنم", "نوم", "أنم"], "shared_concept": "انتشار + باطن + اكتناز", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-07170227", "roots": ["هبب", "وهب", "هبط"], "shared_concept": "رقة + مقر + اندفاع + قوة + تجمع", "confidence": 1.0, "source": "extracted"}
+{"family_id": "ext-b0f8d88e", "roots": ["هتت-هتهت", "هوت-هيت"], "shared_concept": "إبعاد + تجمع + استقلال", "confidence": 1.0, "source": "extracted"}
