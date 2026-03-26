@@ -35,8 +35,12 @@
 | H3 | Quranic roots deep-dive | Claude | DONE | `quranic_deep_dive.md` — failure classification on 50 Quranic roots |
 | M1 | LV2 synonym expansion module | Claude | DONE | `synonym_expansion.py` — 12 LV2 tests |
 | M2 | Abbas mechanism routing test | Claude | DONE | `abbas_mechanism_routing_test.md` |
-| L1 | Merge Abbas reports | Claude | WIP | merging 2→1 |
-| L2 | Move session reports to docs/sessions | Claude | WIP | organizing |
+| L1 | Merge Abbas reports | Claude | DONE | 2→1 consolidated |
+| L2 | Move session reports to docs/sessions | Claude | DONE | 2 files moved |
+| CL | Massive project cleanup — delete temp, move strays, archive calibrations | Claude | DONE | 15MB temp deleted, 13 strays moved, 7 calibrations archived |
+| 1F | Update all 4 READMEs | Codex | WIP | dispatched |
+| 2A | Rebuild pipeline with adaptive routing | Codex | WIP | dispatched |
+| 3A | Wire synonym expansion into LV2 GenomeScorer | Codex | WIP | dispatched |
 
 ## Codex
 ```
