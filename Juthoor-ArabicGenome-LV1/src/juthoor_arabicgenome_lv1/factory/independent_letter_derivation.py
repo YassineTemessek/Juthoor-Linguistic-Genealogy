@@ -278,14 +278,14 @@ def _synthesize_semantic_charge(
     return chosen, meaning_ar, meaning_en
 
 
-def derive_letter_meaning(entry: dict[str, Any]) -> dict[str, Any]:
-    l1_rows = list(entry.get("as_letter1") or [])
-    l2_rows = list(entry.get("as_letter2") or [])
-    l1 = summarize_position(l1_rows)
-    l2 = summarize_position(l2_rows)
-    shared_features = _shared_feature_candidates(l1, l2)
-    shared_categories = _shared_category_candidates(l1, l2)
-
+def _select_features(
+    *,
+    entry: dict[str, Any],
+    l1: PositionSummary,
+    l2: PositionSummary,
+    shared_features: list[dict[str, Any]],
+    shared_categories: list[dict[str, Any]],
+) -> tuple[list[str], str, str]:
     selected_features: list[str] = []
     structure = "unified"
     confidence = "medium"
@@ -333,6 +333,42 @@ def derive_letter_meaning(entry: dict[str, Any]) -> dict[str, Any]:
     ):
         structure = "dual_aspect"
 
+    return selected_features, structure, confidence
+
+
+def _position_payload(summary: PositionSummary, rows: list[dict[str, Any]]) -> dict[str, Any]:
+    return {
+        "total_nuclei": summary.total_nuclei,
+        "total_member_weight": summary.total_member_weight,
+        "top_features": summary.top_features[:8],
+        "top_categories": summary.top_categories[:5],
+        "evidence": rows,
+    }
+
+
+def _classify_scholar_alignment(feat_j: float, cat_j: float, blend: float) -> str:
+    if blend >= 0.67 or feat_j >= 0.5:
+        return "match"
+    if blend >= 0.2 or cat_j > 0.0:
+        return "partial"
+    return "conflict"
+
+
+def derive_letter_meaning(entry: dict[str, Any]) -> dict[str, Any]:
+    l1_rows = list(entry.get("as_letter1") or [])
+    l2_rows = list(entry.get("as_letter2") or [])
+    l1 = summarize_position(l1_rows)
+    l2 = summarize_position(l2_rows)
+    shared_features = _shared_feature_candidates(l1, l2)
+    shared_categories = _shared_category_candidates(l1, l2)
+    selected_features, structure, confidence = _select_features(
+        entry=entry,
+        l1=l1,
+        l2=l2,
+        shared_features=shared_features,
+        shared_categories=shared_categories,
+    )
+
     synthesized_clusters, meaning_ar, meaning_en = _synthesize_semantic_charge(
         l1,
         l2,
@@ -349,18 +385,8 @@ def derive_letter_meaning(entry: dict[str, Any]) -> dict[str, Any]:
         "count_l2": entry.get("count_l2", len(l2_rows)),
         "total_nuclei": entry.get("total", len(l1_rows) + len(l2_rows)),
         "position_summaries": {
-            "as_letter1": {
-                "total_nuclei": l1.total_nuclei,
-                "total_member_weight": l1.total_member_weight,
-                "top_features": l1.top_features[:8],
-                "top_categories": l1.top_categories[:5],
-            },
-            "as_letter2": {
-                "total_nuclei": l2.total_nuclei,
-                "total_member_weight": l2.total_member_weight,
-                "top_features": l2.top_features[:8],
-                "top_categories": l2.top_categories[:5],
-            },
+            "as_letter1": _position_payload(l1, l1_rows),
+            "as_letter2": _position_payload(l2, l2_rows),
         },
         "shared_features": shared_features[:8],
         "shared_categories": shared_categories[:5],
@@ -407,14 +433,8 @@ def compare_scholars(
             feat_j = jaccard_similarity(derived, scholar_features)
             cat_j = category_jaccard(derived, scholar_features)
             blend = blended_jaccard(derived, scholar_features)
-            if blend >= 0.67 or feat_j >= 0.5:
-                classification = "match"
-            elif blend >= 0.2 or cat_j > 0.0:
-                classification = "partial"
-            else:
-                classification = "conflict"
             comparisons[scholar] = {
-                "classification": classification,
+                "classification": _classify_scholar_alignment(feat_j, cat_j, blend),
                 "features": list(_canonicalize_features(scholar_features)),
                 "jaccard": round(feat_j, 6),
                 "category_jaccard": round(cat_j, 6),
