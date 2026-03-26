@@ -30,10 +30,13 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| H1 | Adaptive model routing (best-of ensemble) | Claude | WIP | root_predictor.py |
-| H2 | Method A re-calibration on consensus_weighted (100 roots) | Claude | WIP | calibration report |
-| H3 | Quranic roots deep-dive (50 failures) | Claude | NEXT | analysis report |
-| M1 | Synonym-aware cross-lingual re-run | Claude | NEXT | updated projections |
+| H1 | Adaptive model routing (best-of ensemble) | Claude | DONE | root_predictor.py — 498 tests. nucleus_only wins 15/21 letter families |
+| H2 | Method A v5 on consensus_weighted | Claude | DONE | **Method A = 53.0%** (up from 49.5%). First time past 50%! |
+| H3 | Quranic roots deep-dive | Claude | DONE | `quranic_deep_dive.md` — failure classification on 50 Quranic roots |
+| M1 | LV2 synonym expansion module | Claude | DONE | `synonym_expansion.py` — 12 LV2 tests |
+| M2 | Abbas mechanism routing test | Claude | DONE | `abbas_mechanism_routing_test.md` |
+| L1 | Merge Abbas reports | Claude | WIP | merging 2→1 |
+| L2 | Move session reports to docs/sessions | Claude | WIP | organizing |
 
 ## Codex
 ```
@@ -45,8 +48,8 @@ blocked: none
 
 ## Claude
 ```
-last: Starting fresh sprint with 60% tokens, 1 hour. Parallel Sonnet builders for code, Opus for analysis.
-verdict: Position-aware model needs fixing (bJ=0.163 vs nucleus_only 0.237). Adaptive routing should lift overall bJ >0.210.
+last: Sprint complete. H1 adaptive routing, H2 Method A v5=53.0%, H3 Quranic dive, M1 LV2 synonyms, M2 Abbas routing. 498 tests. 5 new reports. LV2 module added.
+verdict: **Method A crossed 50% for the first time (53.0%)**. nucleus_only is the best model for 15/21 letter families. LV2 now has synonym expansion for cross-lingual.
 next-codex: rebuild pipeline after H1 lands
 next-claude: H1 + H2 + H3 in parallel, then M1
 note: Codex tokens reset in 1 hour. Claude working solo until then.
