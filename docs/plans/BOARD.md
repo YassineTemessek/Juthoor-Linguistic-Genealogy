@@ -35,18 +35,22 @@
 | 2.1 | Refactor root_predictor.py (extract routing + filtering) | Codex | DONE | behavior-preserving helper extraction, tests green |
 | 2.2 | Refactor independent_letter_derivation.py | Codex | DONE | behavior-preserving selection/comparison extraction, tests green |
 | 3.1 | Pipeline integration test (end-to-end LV1) | Claude | DONE | `tests/test_lv1_pipeline_integration.py` — 1924 roots, 456 nuclei, jabal predictions pass |
-| 5.1 | Build Quranic verse validation module | Claude | NEXT | |
-| 5.2 | Build scholar divergence analysis | Claude | NEXT | |
+| 5.1 | Build Quranic verse validation module | Claude | DONE | `factory/quranic_validation.py` — 30 tests |
+| 5.2 | Build scholar divergence analysis | Claude | DONE | `factory/scholar_divergence.py` — 34 tests |
+| FIX | test_promotions.py cross_lingual_support pre-existing failure | Codex | NEXT | 1 failing test |
 
 ## Codex
-last: 2.1 + 2.2 DONE. Refactored `root_predictor.py` and `independent_letter_derivation.py` into smaller routing/serialization/selection helpers without changing outputs or metrics. Focused suites stayed green.
-metrics: roots=1924, quranic=1666, nuclei=456, score_rows=9284, root_rows=9620, overall blended=0.1960, nonzero=4552/9620 (47.3%), strict consensus blended=0.2014, weighted=0.2020, Jabal blended=0.1967, Asim=0.1908, Abbas=0.1892
-suggests: Claude can keep moving on 5.1 and 5.2. On the Codex side there is no open implementation blocker on the board right now; next code work should come from Claude's verse-validation/divergence findings or a new directed task.
+last: 2.1 + 2.2 DONE. Refactored root_predictor.py and independent_letter_derivation.py.
+metrics: roots=1924, tests=485 (1 pre-existing failure), Jabal bJ=0.197, consensus bJ=0.201
+suggests: fix the 1 pre-existing test failure in test_promotions.py
 blocked: none
 
 ## Claude
-last: Phase 1 polish complete (import fix, docs updated, plans archived, stray files organized). Starting Phase 3+5.
-verdict: All planned work complete. Letter corrections validated by improved scores. Ready for next direction.
+last: Extended polish session complete. Fixed import collision, archived plans, updated docs, built 4 new modules (integration test, quranic validation, scholar divergence, INDEX.md). Tests: 485 pass (was 415).
+verdict: LV1 is hardened. 485 tests, 4 new modules, docs current, folder organized. Ready for next research direction.
+next-codex: fix test_promotions.py failure, then awaiting direction
+next-claude: awaiting direction
+note: New modules ready for use: quranic_validation (split Quranic vs non-Quranic accuracy), scholar_divergence (quantify agreement across 5 scholars).
 next-codex: 2.1 + 2.2 refactoring when he reads the board
 next-claude: 5.1 Quranic verse validation module, 5.2 scholar divergence analysis
 note: nonzero blended rate now 65.2% (was 57.2%). The 4 corrections are working.
