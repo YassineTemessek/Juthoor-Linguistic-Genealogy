@@ -164,55 +164,50 @@
   },
   {
     "letter": "ب",
-    "summary_band": "risky",
+    "summary_band": "mixed",
     "shared_stable_modifier_features": [
       "بروز",
-      "رجوع"
+      "رجوع",
+      "ظاهر"
     ],
     "shared_blocked_features": [
-      "التحام"
+      "ظاهر"
     ],
-    "mean_blended_jaccard": 0.182056,
-    "nonzero_rate": 0.699187,
-    "dropped_feature_row_rate": 1.0,
+    "mean_blended_jaccard": 0.173686,
+    "nonzero_rate": 0.674797,
+    "dropped_feature_row_rate": 0.105691,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 123,
         "quranic_rows": 108,
-        "mean_blended_jaccard": 0.1971,
-        "nonzero_rate": 0.715447,
+        "mean_blended_jaccard": 0.173686,
+        "nonzero_rate": 0.674797,
         "quranic_rate": 0.878049,
-        "feature_precision": 0.215339,
-        "dropped_feature_row_rate": 1.0,
+        "feature_precision": 0.196581,
+        "dropped_feature_row_rate": 0.105691,
         "dominant_models": [
           {
-            "model": "nucleus_only",
-            "count": 90
+            "model": "phonetic_gestural",
+            "count": 64
           },
           {
-            "model": "phonetic_gestural",
-            "count": 18
+            "model": "nucleus_only",
+            "count": 47
           },
           {
             "model": "intersection",
-            "count": 14
+            "count": 11
           }
         ],
         "stable_modifier_features": [
-          "اكتناز",
           "بروز",
           "رجوع",
-          "رخاوة"
+          "ظاهر"
         ],
         "blocked_modifier_features": [
-          "التحام",
-          "رخاوة"
+          "ظاهر"
         ],
         "top_modifier_features": [
-          {
-            "feature": "اكتناز",
-            "count": 123
-          },
           {
             "feature": "بروز",
             "count": 123
@@ -222,49 +217,46 @@
             "count": 123
           },
           {
-            "feature": "رخاوة",
-            "count": 106
+            "feature": "ظاهر",
+            "count": 110
           }
         ],
         "top_blocked_features": [
           {
-            "feature": "التحام",
-            "count": 123
-          },
-          {
-            "feature": "رخاوة",
-            "count": 17
+            "feature": "ظاهر",
+            "count": 13
           }
         ]
       },
       "consensus_strict": {
         "rows": 123,
         "quranic_rows": 108,
-        "mean_blended_jaccard": 0.167012,
-        "nonzero_rate": 0.682927,
+        "mean_blended_jaccard": 0.173686,
+        "nonzero_rate": 0.674797,
         "quranic_rate": 0.878049,
-        "feature_precision": 0.184358,
-        "dropped_feature_row_rate": 1.0,
+        "feature_precision": 0.196581,
+        "dropped_feature_row_rate": 0.105691,
         "dominant_models": [
           {
             "model": "phonetic_gestural",
-            "count": 77
+            "count": 64
           },
           {
             "model": "nucleus_only",
-            "count": 41
+            "count": 47
           },
           {
             "model": "intersection",
-            "count": 4
+            "count": 11
           }
         ],
         "stable_modifier_features": [
           "بروز",
-          "رجوع"
+          "رجوع",
+          "ظاهر"
         ],
         "blocked_modifier_features": [
-          "التحام"
+          "ظاهر"
         ],
         "top_modifier_features": [
           {
@@ -274,12 +266,16 @@
           {
             "feature": "رجوع",
             "count": 123
+          },
+          {
+            "feature": "ظاهر",
+            "count": 110
           }
         ],
         "top_blocked_features": [
           {
-            "feature": "التحام",
-            "count": 123
+            "feature": "ظاهر",
+            "count": 13
           }
         ]
       }
@@ -1800,112 +1796,54 @@
   },
   {
     "letter": "ع",
-    "summary_band": "risky",
+    "summary_band": "mixed",
     "shared_stable_modifier_features": [
+      "باطن",
       "ظاهر"
     ],
     "shared_blocked_features": [
+      "باطن",
       "ظاهر"
     ],
-    "mean_blended_jaccard": 0.221986,
-    "nonzero_rate": 0.71134,
-    "dropped_feature_row_rate": 0.551547,
+    "mean_blended_jaccard": 0.228414,
+    "nonzero_rate": 0.721649,
+    "dropped_feature_row_rate": 0.164948,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 97,
         "quranic_rows": 79,
-        "mean_blended_jaccard": 0.208668,
-        "nonzero_rate": 0.670103,
+        "mean_blended_jaccard": 0.228414,
+        "nonzero_rate": 0.721649,
         "quranic_rate": 0.814433,
-        "feature_precision": 0.226244,
-        "dropped_feature_row_rate": 1.0,
-        "dominant_models": [
-          {
-            "model": "intersection",
-            "count": 35
-          },
-          {
-            "model": "nucleus_only",
-            "count": 33
-          },
-          {
-            "model": "phonetic_gestural",
-            "count": 28
-          }
-        ],
-        "stable_modifier_features": [
-          "حدة",
-          "دقة",
-          "ظاهر",
-          "رخاوة"
-        ],
-        "blocked_modifier_features": [
-          "التحام",
-          "رخاوة",
-          "ظاهر"
-        ],
-        "top_modifier_features": [
-          {
-            "feature": "حدة",
-            "count": 97
-          },
-          {
-            "feature": "دقة",
-            "count": 97
-          },
-          {
-            "feature": "ظاهر",
-            "count": 87
-          },
-          {
-            "feature": "رخاوة",
-            "count": 85
-          }
-        ],
-        "top_blocked_features": [
-          {
-            "feature": "التحام",
-            "count": 97
-          },
-          {
-            "feature": "رخاوة",
-            "count": 12
-          },
-          {
-            "feature": "ظاهر",
-            "count": 10
-          }
-        ]
-      },
-      "consensus_strict": {
-        "rows": 97,
-        "quranic_rows": 79,
-        "mean_blended_jaccard": 0.235304,
-        "nonzero_rate": 0.752577,
-        "quranic_rate": 0.814433,
-        "feature_precision": 0.255061,
-        "dropped_feature_row_rate": 0.103093,
+        "feature_precision": 0.251046,
+        "dropped_feature_row_rate": 0.164948,
         "dominant_models": [
           {
             "model": "phonetic_gestural",
             "count": 63
           },
           {
-            "model": "nucleus_only",
-            "count": 13
+            "model": "intersection",
+            "count": 20
           },
           {
-            "model": "sequence",
-            "count": 11
+            "model": "nucleus_only",
+            "count": 13
           }
         ],
         "stable_modifier_features": [
+          "باطن",
           "ظاهر"
         ],
         "blocked_modifier_features": [
-          "ظاهر"
+          "ظاهر",
+          "باطن"
         ],
         "top_modifier_features": [
+          {
+            "feature": "باطن",
+            "count": 91
+          },
           {
             "feature": "ظاهر",
             "count": 87
@@ -1915,6 +1853,61 @@
           {
             "feature": "ظاهر",
             "count": 10
+          },
+          {
+            "feature": "باطن",
+            "count": 6
+          }
+        ]
+      },
+      "consensus_strict": {
+        "rows": 97,
+        "quranic_rows": 79,
+        "mean_blended_jaccard": 0.228414,
+        "nonzero_rate": 0.721649,
+        "quranic_rate": 0.814433,
+        "feature_precision": 0.251046,
+        "dropped_feature_row_rate": 0.164948,
+        "dominant_models": [
+          {
+            "model": "phonetic_gestural",
+            "count": 63
+          },
+          {
+            "model": "intersection",
+            "count": 20
+          },
+          {
+            "model": "nucleus_only",
+            "count": 13
+          }
+        ],
+        "stable_modifier_features": [
+          "باطن",
+          "ظاهر"
+        ],
+        "blocked_modifier_features": [
+          "ظاهر",
+          "باطن"
+        ],
+        "top_modifier_features": [
+          {
+            "feature": "باطن",
+            "count": 91
+          },
+          {
+            "feature": "ظاهر",
+            "count": 87
+          }
+        ],
+        "top_blocked_features": [
+          {
+            "feature": "ظاهر",
+            "count": 10
+          },
+          {
+            "feature": "باطن",
+            "count": 6
           }
         ]
       }
@@ -1929,68 +1922,58 @@
     "shared_blocked_features": [
       "باطن"
     ],
-    "mean_blended_jaccard": 0.285625,
+    "mean_blended_jaccard": 0.2595,
     "nonzero_rate": 0.825,
-    "dropped_feature_row_rate": 0.175,
+    "dropped_feature_row_rate": 0.125,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 20,
         "quranic_rows": 11,
-        "mean_blended_jaccard": 0.311,
+        "mean_blended_jaccard": 0.25875,
         "nonzero_rate": 0.85,
         "quranic_rate": 0.55,
-        "feature_precision": 0.395349,
-        "dropped_feature_row_rate": 0.25,
+        "feature_precision": 0.358491,
+        "dropped_feature_row_rate": 0.15,
         "dominant_models": [
           {
-            "model": "intersection",
-            "count": 8
-          },
-          {
             "model": "phonetic_gestural",
-            "count": 6
+            "count": 14
           },
           {
             "model": "nucleus_only",
-            "count": 6
+            "count": 4
+          },
+          {
+            "model": "intersection",
+            "count": 2
           }
         ],
         "stable_modifier_features": [
-          "تخلخل",
-          "ثخانة",
-          "باطن",
-          "رخاوة"
+          "احتواء",
+          "باطن"
         ],
         "blocked_modifier_features": [
-          "رخاوة",
-          "باطن"
+          "باطن",
+          "احتواء"
         ],
         "top_modifier_features": [
           {
-            "feature": "تخلخل",
-            "count": 20
-          },
-          {
-            "feature": "ثخانة",
-            "count": 20
+            "feature": "احتواء",
+            "count": 19
           },
           {
             "feature": "باطن",
             "count": 18
-          },
-          {
-            "feature": "رخاوة",
-            "count": 16
           }
         ],
         "top_blocked_features": [
           {
-            "feature": "رخاوة",
-            "count": 4
-          },
-          {
             "feature": "باطن",
             "count": 2
+          },
+          {
+            "feature": "احتواء",
+            "count": 1
           }
         ]
       },
@@ -2478,79 +2461,25 @@
   },
   {
     "letter": "م",
-    "summary_band": "mixed",
+    "summary_band": "risky",
     "shared_stable_modifier_features": [
       "اكتناز"
     ],
-    "shared_blocked_features": [],
-    "mean_blended_jaccard": 0.200698,
-    "nonzero_rate": 0.632231,
-    "dropped_feature_row_rate": 0.049587,
+    "shared_blocked_features": [
+      "التحام"
+    ],
+    "mean_blended_jaccard": 0.213131,
+    "nonzero_rate": 0.669421,
+    "dropped_feature_row_rate": 0.975207,
     "scholar_profiles": {
       "consensus_weighted": {
         "rows": 121,
         "quranic_rows": 113,
-        "mean_blended_jaccard": 0.19062,
-        "nonzero_rate": 0.595041,
-        "quranic_rate": 0.933884,
-        "feature_precision": 0.215328,
-        "dropped_feature_row_rate": 0.099174,
-        "dominant_models": [
-          {
-            "model": "nucleus_only",
-            "count": 55
-          },
-          {
-            "model": "phonetic_gestural",
-            "count": 40
-          },
-          {
-            "model": "intersection",
-            "count": 26
-          }
-        ],
-        "stable_modifier_features": [
-          "إمساك",
-          "استواء",
-          "اكتناز",
-          "ظاهر"
-        ],
-        "blocked_modifier_features": [
-          "ظاهر"
-        ],
-        "top_modifier_features": [
-          {
-            "feature": "إمساك",
-            "count": 121
-          },
-          {
-            "feature": "استواء",
-            "count": 121
-          },
-          {
-            "feature": "اكتناز",
-            "count": 121
-          },
-          {
-            "feature": "ظاهر",
-            "count": 109
-          }
-        ],
-        "top_blocked_features": [
-          {
-            "feature": "ظاهر",
-            "count": 12
-          }
-        ]
-      },
-      "consensus_strict": {
-        "rows": 121,
-        "quranic_rows": 113,
-        "mean_blended_jaccard": 0.210776,
+        "mean_blended_jaccard": 0.213131,
         "nonzero_rate": 0.669421,
         "quranic_rate": 0.933884,
-        "feature_precision": 0.183486,
-        "dropped_feature_row_rate": 0.0,
+        "feature_precision": 0.186335,
+        "dropped_feature_row_rate": 0.975207,
         "dominant_models": [
           {
             "model": "phonetic_gestural",
@@ -2558,24 +2487,80 @@
           },
           {
             "model": "nucleus_only",
-            "count": 48
+            "count": 45
           },
           {
             "model": "intersection",
-            "count": 1
+            "count": 4
           }
         ],
         "stable_modifier_features": [
           "اكتناز"
         ],
-        "blocked_modifier_features": [],
+        "blocked_modifier_features": [
+          "التحام"
+        ],
         "top_modifier_features": [
           {
             "feature": "اكتناز",
             "count": 121
+          },
+          {
+            "feature": "التحام",
+            "count": 3
           }
         ],
-        "top_blocked_features": []
+        "top_blocked_features": [
+          {
+            "feature": "التحام",
+            "count": 118
+          }
+        ]
+      },
+      "consensus_strict": {
+        "rows": 121,
+        "quranic_rows": 113,
+        "mean_blended_jaccard": 0.213131,
+        "nonzero_rate": 0.669421,
+        "quranic_rate": 0.933884,
+        "feature_precision": 0.186335,
+        "dropped_feature_row_rate": 0.975207,
+        "dominant_models": [
+          {
+            "model": "phonetic_gestural",
+            "count": 72
+          },
+          {
+            "model": "nucleus_only",
+            "count": 45
+          },
+          {
+            "model": "intersection",
+            "count": 4
+          }
+        ],
+        "stable_modifier_features": [
+          "اكتناز"
+        ],
+        "blocked_modifier_features": [
+          "التحام"
+        ],
+        "top_modifier_features": [
+          {
+            "feature": "اكتناز",
+            "count": 121
+          },
+          {
+            "feature": "التحام",
+            "count": 3
+          }
+        ],
+        "top_blocked_features": [
+          {
+            "feature": "التحام",
+            "count": 118
+          }
+        ]
       }
     }
   },

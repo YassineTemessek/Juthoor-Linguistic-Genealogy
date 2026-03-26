@@ -534,10 +534,9 @@
     "target_gloss": "heart",
     "relation": "cognate",
     "confidence": 0.9,
-    "predicted_meaning": "صعود + تجمع",
+    "predicted_meaning": "صعود",
     "predicted_features": [
-      "صعود",
-      "تجمع"
+      "صعود"
     ],
     "actual_features": [
       "باطن"
@@ -658,19 +657,20 @@
     "target_gloss": "blood",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "استواء + ظاهر",
+    "predicted_meaning": "استواء + ظاهر + تجمع",
     "predicted_features": [
       "استواء",
-      "ظاهر"
+      "ظاهر",
+      "تجمع"
     ],
     "actual_features": [
       "ظاهر",
       "شق"
     ],
     "meanings_score": {
-      "jaccard": 0.333333,
-      "weighted_jaccard": 0.333333,
-      "blended_jaccard": 0.333333
+      "jaccard": 0.25,
+      "weighted_jaccard": 0.25,
+      "blended_jaccard": 0.25
     },
     "projected_variants": [
       "dmmdmdm",
@@ -874,10 +874,11 @@
     "target_gloss": "to write",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "اتصال + اشتمال",
+    "predicted_meaning": "اتصال + اشتمال + ظهور",
     "predicted_features": [
       "اتصال",
-      "اشتمال"
+      "اشتمال",
+      "ظهور"
     ],
     "actual_features": [
       "دقة",
@@ -999,11 +1000,11 @@
     "target_gloss": "peace",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "استرسال + طول + امتساك",
+    "predicted_meaning": "استرسال + طول + تجمع",
     "predicted_features": [
       "استرسال",
       "طول",
-      "امتساك"
+      "تجمع"
     ],
     "actual_features": [
       "تلاصق",
@@ -1012,9 +1013,9 @@
       "قطع"
     ],
     "meanings_score": {
-      "jaccard": 0.166667,
-      "weighted_jaccard": 0.166667,
-      "blended_jaccard": 0.176667
+      "jaccard": 0.0,
+      "weighted_jaccard": 0.0,
+      "blended_jaccard": 0.06
     },
     "projected_variants": [
       "slm",
@@ -1242,10 +1243,10 @@
     "target_gloss": "day",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "امتداد + امتساك",
+    "predicted_meaning": "امتداد + تجمع",
     "predicted_features": [
       "امتداد",
-      "امتساك"
+      "تجمع"
     ],
     "actual_features": [],
     "meanings_score": {
@@ -1487,11 +1488,11 @@
     "target_gloss": "to hear",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "اختراق + تجمع + رقة",
+    "predicted_meaning": "اختراق + تجمع + ظهور",
     "predicted_features": [
       "اختراق",
       "تجمع",
-      "رقة"
+      "ظهور"
     ],
     "actual_features": [
       "نفاذ",
@@ -1499,9 +1500,9 @@
       "دقة"
     ],
     "meanings_score": {
-      "jaccard": 0.666667,
-      "weighted_jaccard": 0.5,
-      "blended_jaccard": 0.666667
+      "jaccard": 0.25,
+      "weighted_jaccard": 0.2,
+      "blended_jaccard": 0.25
     },
     "projected_variants": [
       "smʕ",
@@ -1614,18 +1615,20 @@
     "target_gloss": "father",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تلاصق",
+    "predicted_meaning": "تلاصق + احتباس + ظهور",
     "predicted_features": [
-      "تلاصق"
+      "تلاصق",
+      "احتباس",
+      "ظهور"
     ],
     "actual_features": [
       "تلاصق",
       "صعود"
     ],
     "meanings_score": {
-      "jaccard": 0.5,
-      "weighted_jaccard": 0.5,
-      "blended_jaccard": 0.5
+      "jaccard": 0.25,
+      "weighted_jaccard": 0.25,
+      "blended_jaccard": 0.25
     },
     "projected_variants": [
       "abb",
@@ -1738,10 +1741,9 @@
     "target_gloss": "mother",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تجمع + امتساك",
+    "predicted_meaning": "تجمع",
     "predicted_features": [
-      "تجمع",
-      "امتساك"
+      "تجمع"
     ],
     "actual_features": [
       "حيز",
@@ -2038,11 +2040,11 @@
     "target_gloss": "to approach/draw near",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "استقرار + تخلخل + تجمع",
+    "predicted_meaning": "استقرار + تخلخل + ظهور",
     "predicted_features": [
       "استقرار",
       "تخلخل",
-      "تجمع"
+      "ظهور"
     ],
     "actual_features": [
       "حيز"
@@ -2050,7 +2052,7 @@
     "meanings_score": {
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
-      "blended_jaccard": 0.1
+      "blended_jaccard": 0.15
     },
     "projected_variants": [
       "qrb",
@@ -2163,9 +2165,11 @@
     "target_gloss": "dog",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تجمع",
+    "predicted_meaning": "تجمع + دقة + ظهور",
     "predicted_features": [
-      "تجمع"
+      "تجمع",
+      "دقة",
+      "ظهور"
     ],
     "actual_features": [
       "تلاصق",
@@ -2175,7 +2179,7 @@
     "meanings_score": {
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
-      "blended_jaccard": 0.15
+      "blended_jaccard": 0.075
     },
     "projected_variants": [
       "klb",
@@ -2480,9 +2484,10 @@
     "target_gloss": "bone/essence",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تعقد",
+    "predicted_meaning": "تعقد + تجمع",
     "predicted_features": [
-      "تعقد"
+      "تعقد",
+      "تجمع"
     ],
     "actual_features": [
       "غلظ",
@@ -2717,11 +2722,9 @@
     "target_gloss": "to think/reckon",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "ظهور + ظاهر + اتصال",
+    "predicted_meaning": "ظهور",
     "predicted_features": [
-      "ظهور",
-      "ظاهر",
-      "اتصال"
+      "ظهور"
     ],
     "actual_features": [
       "تجمع",
@@ -2730,7 +2733,7 @@
     "meanings_score": {
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
-      "blended_jaccard": 0.3
+      "blended_jaccard": 0.15
     },
     "projected_variants": [
       "ḥsb",
@@ -3424,20 +3427,19 @@
     "target_gloss": "bread/food",
     "relation": "cognate",
     "confidence": 0.8,
-    "predicted_meaning": "التحام + امتداد + امتساك",
+    "predicted_meaning": "التحام + امتداد",
     "predicted_features": [
       "التحام",
-      "امتداد",
-      "امتساك"
+      "امتداد"
     ],
     "actual_features": [
       "تلاصق",
       "كثافة"
     ],
     "meanings_score": {
-      "jaccard": 0.25,
-      "weighted_jaccard": 0.25,
-      "blended_jaccard": 0.25
+      "jaccard": 0.333333,
+      "weighted_jaccard": 0.333333,
+      "blended_jaccard": 0.333333
     },
     "projected_variants": [
       "lḥm",
@@ -3674,10 +3676,10 @@
     "target_gloss": "gold",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "فراغ + تجمع",
+    "predicted_meaning": "فراغ + ظهور",
     "predicted_features": [
       "فراغ",
-      "تجمع"
+      "ظهور"
     ],
     "actual_features": [
       "انتقال",
@@ -3687,7 +3689,7 @@
     "meanings_score": {
       "jaccard": 0.25,
       "weighted_jaccard": 0.25,
-      "blended_jaccard": 0.25
+      "blended_jaccard": 0.375
     },
     "projected_variants": [
       "dhhb",
@@ -4420,10 +4422,11 @@
     "target_gloss": "to write",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "اتصال + اشتمال",
+    "predicted_meaning": "اتصال + اشتمال + ظهور",
     "predicted_features": [
       "اتصال",
-      "اشتمال"
+      "اشتمال",
+      "ظهور"
     ],
     "actual_features": [
       "دقة",
@@ -4741,18 +4744,20 @@
     "target_gloss": "father",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تلاصق",
+    "predicted_meaning": "تلاصق + احتباس + ظهور",
     "predicted_features": [
-      "تلاصق"
+      "تلاصق",
+      "احتباس",
+      "ظهور"
     ],
     "actual_features": [
       "تلاصق",
       "صعود"
     ],
     "meanings_score": {
-      "jaccard": 0.5,
-      "weighted_jaccard": 0.5,
-      "blended_jaccard": 0.5
+      "jaccard": 0.25,
+      "weighted_jaccard": 0.25,
+      "blended_jaccard": 0.25
     },
     "projected_variants": [
       "abb",
@@ -4865,10 +4870,9 @@
     "target_gloss": "mother",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "تجمع + امتساك",
+    "predicted_meaning": "تجمع",
     "predicted_features": [
-      "تجمع",
-      "امتساك"
+      "تجمع"
     ],
     "actual_features": [
       "حيز",
@@ -4991,10 +4995,10 @@
     "target_gloss": "day",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "امتداد + امتساك",
+    "predicted_meaning": "امتداد + تجمع",
     "predicted_features": [
       "امتداد",
-      "امتساك"
+      "تجمع"
     ],
     "actual_features": [],
     "meanings_score": {
@@ -5378,10 +5382,9 @@
     "target_gloss": "heart",
     "relation": "cognate",
     "confidence": 0.9,
-    "predicted_meaning": "صعود + تجمع",
+    "predicted_meaning": "صعود",
     "predicted_features": [
-      "صعود",
-      "تجمع"
+      "صعود"
     ],
     "actual_features": [
       "باطن"
@@ -5502,11 +5505,11 @@
     "target_gloss": "to hear",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "اختراق + تجمع + رقة",
+    "predicted_meaning": "اختراق + تجمع + ظهور",
     "predicted_features": [
       "اختراق",
       "تجمع",
-      "رقة"
+      "ظهور"
     ],
     "actual_features": [
       "نفاذ",
@@ -5514,9 +5517,9 @@
       "دقة"
     ],
     "meanings_score": {
-      "jaccard": 0.666667,
-      "weighted_jaccard": 0.5,
-      "blended_jaccard": 0.666667
+      "jaccard": 0.25,
+      "weighted_jaccard": 0.2,
+      "blended_jaccard": 0.25
     },
     "projected_variants": [
       "smʕ",
@@ -5752,19 +5755,20 @@
     "target_gloss": "blood",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "استواء + ظاهر",
+    "predicted_meaning": "استواء + ظاهر + تجمع",
     "predicted_features": [
       "استواء",
-      "ظاهر"
+      "ظاهر",
+      "تجمع"
     ],
     "actual_features": [
       "ظاهر",
       "شق"
     ],
     "meanings_score": {
-      "jaccard": 0.333333,
-      "weighted_jaccard": 0.333333,
-      "blended_jaccard": 0.333333
+      "jaccard": 0.25,
+      "weighted_jaccard": 0.25,
+      "blended_jaccard": 0.25
     },
     "projected_variants": [
       "dmmdmdm",
@@ -6006,10 +6010,10 @@
     "target_gloss": "gold",
     "relation": "cognate",
     "confidence": 1.0,
-    "predicted_meaning": "فراغ + تجمع",
+    "predicted_meaning": "فراغ + ظهور",
     "predicted_features": [
       "فراغ",
-      "تجمع"
+      "ظهور"
     ],
     "actual_features": [
       "انتقال",
@@ -6019,7 +6023,7 @@
     "meanings_score": {
       "jaccard": 0.25,
       "weighted_jaccard": 0.25,
-      "blended_jaccard": 0.25
+      "blended_jaccard": 0.375
     },
     "projected_variants": [
       "dhhb",
@@ -6132,11 +6136,11 @@
     "target_gloss": "sword",
     "relation": "cognate",
     "confidence": 0.7,
-    "predicted_meaning": "خلوص + فراغ + غلظ",
+    "predicted_meaning": "خلوص + فراغ + ظهور",
     "predicted_features": [
       "خلوص",
       "فراغ",
-      "غلظ"
+      "ظهور"
     ],
     "actual_features": [
       "إمساك",

@@ -1952,10 +1952,11 @@
     "target_gloss": "a person/humanity",
     "relation": "cognate",
     "confidence": 0.8,
-    "predicted_meaning": "استواء + ظاهر",
+    "predicted_meaning": "استواء + ظاهر + تجمع",
     "predicted_features": [
       "استواء",
-      "ظاهر"
+      "ظاهر",
+      "تجمع"
     ],
     "actual_features": [
       "احتواء",
@@ -1963,9 +1964,9 @@
       "ظاهر"
     ],
     "meanings_score": {
-      "jaccard": 0.25,
-      "weighted_jaccard": 0.25,
-      "blended_jaccard": 0.25
+      "jaccard": 0.2,
+      "weighted_jaccard": 0.2,
+      "blended_jaccard": 0.29
     },
     "projected_variants": [
       "adm",
@@ -2607,9 +2608,9 @@
     "target_gloss": "parent's brother",
     "relation": "cognate",
     "confidence": 0.8,
-    "predicted_meaning": "ظاهر",
+    "predicted_meaning": "تجمع",
     "predicted_features": [
-      "ظاهر"
+      "تجمع"
     ],
     "actual_features": [
       "كثافة",
@@ -2619,7 +2620,7 @@
     "meanings_score": {
       "jaccard": 0.0,
       "weighted_jaccard": 0.0,
-      "blended_jaccard": 0.0
+      "blended_jaccard": 0.1
     },
     "projected_variants": [
       "ʕmm",

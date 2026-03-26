@@ -79,7 +79,7 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - خلوص + فراغ — L1 31.8%, L2 20.1%, anchors: —
 
 **Scholar comparison (post-derivation):**
-- jabal: conflict — اكتناز, رخاوة, التحام (blend=0.000)
+- jabal: partial — ظاهر, بروز (blend=0.100)
 - asim_al_masri: partial — بروز, اختراق, اتساع (blend=0.100)
 - hassan_abbas: partial — بروز, رجوع (blend=0.150)
 - neili: partial — ظاهر, بروز (blend=0.100)
@@ -693,7 +693,7 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - خلوص + فراغ — L1 31.3%, L2 32.5%, anchors: —
 
 **Scholar comparison (post-derivation):**
-- jabal: partial — التحام, دقة, حدة, رخاوة (blend=0.177)
+- jabal: conflict — ظاهر, باطن (blend=0.000)
 - asim_al_masri: partial — ظاهر, انتقال (blend=0.075)
 - hassan_abbas: conflict — باطن (blend=0.000)
 - neili: conflict — ظاهر (blend=0.000)
@@ -732,7 +732,7 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - قوة + ضغط — L1 25.0%, L2 60.0%, anchors: ثخانة
 
 **Scholar comparison (post-derivation):**
-- jabal: partial — تخلخل, رخاوة, ثخانة (blend=0.215)
+- jabal: conflict — باطن, احتواء (blend=0.000)
 - asim_al_masri: partial — ظاهر, انتقال, إمساك, باطن (blend=0.060)
 - hassan_abbas: conflict — باطن (blend=0.000)
 - neili: no_data
@@ -926,7 +926,7 @@ Each meaning is based on the stable cross-position thread that survives both `as
 - تجمع + اكتناز — L1 54.9%, L2 81.1%, anchors: التحام
 
 **Scholar comparison (post-derivation):**
-- jabal: partial — إمساك, استواء, ظاهر (blend=0.075)
+- jabal: partial — اكتناز, التحام (blend=0.383)
 - asim_al_masri: conflict — انتقال (blend=0.000)
 - hassan_abbas: partial — اكتناز (blend=0.150)
 - neili: conflict — ∅ (blend=0.000)
