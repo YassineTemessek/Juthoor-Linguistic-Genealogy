@@ -7,6 +7,10 @@ LV0 is the shared **data core**: it turns raw sources into **canonical processed
 
 All higher levels should *consume* LV0 outputs instead of re-ingesting data independently.
 
+## Current Status
+
+LV0 has been verified as the current foundation layer for the monorepo. Its role remains unchanged: canonical ingestion, validation, packaging, and release distribution for all downstream levels.
+
 ## Role in the stack
 
 LV0 ingests raw sources, normalizes them, validates them, and publishes canonical datasets
@@ -77,4 +81,5 @@ For collaboration: `yassine.temessek@hotmail.com`
 
 
 ## Project Status & Progress
-- Project-wide progress log: docs/PROGRESS_LOG.md`n- Raw data flow (Resources -> LV0 -> processed): docs/RAW_DATA_FLOW.md`n
+- Project-wide progress log: `../docs/PROGRESS_LOG.md`
+- Raw data flow (Resources -> LV0 -> processed): `../docs/RAW_DATA_FLOW.md`
