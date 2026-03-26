@@ -40,5 +40,7 @@
 
 | Document | Description |
 |----------|-------------|
+| **LV1_EXECUTIVE_SUMMARY.md** | Single-briefing synthesis of the full LV1 research program, findings, limits, and promotion case for LV2. |
 | **LV1_SESSION_REPORT.md** | Narrative session report for Yassin. |
+| **../LV1_DASHBOARD.md** | Generated dashboard of current LV1 scoring outputs from the root and nucleus score matrices. |
 | **LV1_EXAMPLES_TABLE.md** | Concrete examples with Arabic roots, predictions, Quranic verses. |
