@@ -1,3 +1,9 @@
+"""Sound-law projection helpers for Arabic root comparison.
+
+This module normalizes Arabic consonants, expands phonetic substitution options,
+and generates target-language projections from LV1 roots.
+"""
+
 from __future__ import annotations
 
 import itertools

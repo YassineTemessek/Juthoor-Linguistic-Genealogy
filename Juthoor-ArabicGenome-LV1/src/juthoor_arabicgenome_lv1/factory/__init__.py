@@ -1,3 +1,9 @@
+"""Public exports for the LV1 research factory package.
+
+This module re-exports the factory helpers used to run experiments, score
+results, and prepare promoted outputs for downstream levels.
+"""
+
 from .feature_store import save_feature, load_feature, feature_exists, list_features
 from .experiment_runner import ExperimentConfig, MissingFeatureError, run_experiment
 from .promotions import export_promoted_results

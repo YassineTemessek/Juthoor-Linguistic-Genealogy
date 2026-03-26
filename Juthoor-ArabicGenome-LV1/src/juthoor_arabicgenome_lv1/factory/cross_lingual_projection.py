@@ -1,3 +1,9 @@
+"""Cross-lingual projection builders for LV1 root predictions.
+
+This module aligns Arabic benchmark entries with predicted roots and produces
+projection rows for Semitic and non-Semitic evaluation targets.
+"""
+
 from __future__ import annotations
 
 import json

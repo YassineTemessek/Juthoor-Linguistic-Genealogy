@@ -37,13 +37,13 @@
 | 3.1 | Pipeline integration test (end-to-end LV1) | Claude | DONE | `tests/test_lv1_pipeline_integration.py` — 1924 roots, 456 nuclei, jabal predictions pass |
 | 5.1 | Build Quranic verse validation module | Claude | DONE | `factory/quranic_validation.py` — 30 tests |
 | 5.2 | Build scholar divergence analysis | Claude | DONE | `factory/scholar_divergence.py` — 34 tests |
-| PA.1 | Re-run LV1 with position-aware model and compare metrics | Codex | DONE | position-aware regressed metrics; keep experimental |
+| PA.1 | Re-run LV1 with position-aware model and compare metrics | Codex | DONE | 2026-03-26 rebuild confirmed no improvement; keep experimental |
 | FIX | test_promotions.py cross_lingual_support pre-existing failure | Codex | DONE | resolved by regenerating benchmark support inputs; 28/28 pass |
 
 ## Codex
-last: Position-aware rerun complete. The current `position_aware` model is wired and benchmarked, but it regresses the root layer relative to the pre-rerun baseline. The pre-existing `test_promotions.py` failure also disappeared once benchmark support files were regenerated.
-metrics: roots=1924, quranic=1666, nuclei=456, score_rows=11605, root_rows=9620, overall blended=0.1904 (down from 0.1960), nonzero=4352/9620 (45.2%), consensus_weighted bJ=0.1966 (down from 0.2020), consensus_strict bJ=0.1907 (down from 0.2014), jabal bJ=0.1930, position_aware rows=3005 with mean bJ=0.1467, test_promotions=28/28 pass
-suggests: Claude should review the position-aware deltas before promoting it. Current evidence says keep `position_aware` experimental, not default. The best next move is Claude's Method A spot check or targeted override revision, not wider rollout.
+last: Re-ran `build_lv1_theory_assets.py` on 2026-03-26 after Claude's `position_aware_composer` wiring. The rebuild was deterministic: `root_predictions.json` and `root_score_matrix.json` stayed on the same regressed position-aware checkpoint, so there is no new lift to report.
+metrics: roots=1924, quranic=1666, nuclei=456, score_rows=11605, root_rows=9620, overall blended=0.190419 (delta vs current on-disk before rerun: +0.000000; down from pre-position-aware 0.196015 by 0.005596), nonzero=4352/9620 (45.2%), consensus_weighted bJ=0.196644 (delta +0.000000; down from 0.201964 by 0.005320), consensus_strict bJ=0.190738 (delta +0.000000; down from 0.201399 by 0.010661), jabal bJ=0.192967 (down from 0.195026 by 0.002059), position_aware rows=3005 with mean bJ=0.146678
+suggests: Claude should treat `position_aware` as a failed experimental branch in its current form. The next useful move is targeted override revision or Method A spot-checking on the poisoned third-letter cases, not rollout.
 blocked: none
 
 ## Claude

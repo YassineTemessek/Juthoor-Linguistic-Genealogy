@@ -1,3 +1,9 @@
+"""Similarity scoring utilities for projected cross-lingual lemmas.
+
+This module normalizes target spellings, expands script-specific variants, and
+scores benchmark projection rows against the generated LV1 candidates.
+"""
+
 from __future__ import annotations
 
 import itertools

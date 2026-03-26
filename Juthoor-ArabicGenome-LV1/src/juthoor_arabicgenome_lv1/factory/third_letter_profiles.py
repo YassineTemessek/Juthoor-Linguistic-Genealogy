@@ -1,3 +1,9 @@
+"""Third-letter modifier profiling for LV1 prediction analysis.
+
+This module aggregates per-letter modifier behavior, stability, and blockage
+signals across scholars to build summary profiles for third letters.
+"""
+
 from __future__ import annotations
 
 from collections import Counter, defaultdict

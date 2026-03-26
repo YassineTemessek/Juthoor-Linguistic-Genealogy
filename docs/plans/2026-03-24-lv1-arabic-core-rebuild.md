@@ -313,13 +313,15 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 - focused suites remained green with no intended metric drift; this was maintenance/polish for the active LV1 pipeline, not a semantic-model change
 
 **Position-aware rerun checkpoint (2026-03-26):**
-- Claude's `position_aware_composer` is wired and runnable, but the first full rerun did **not** improve LV1
+- Claude's `position_aware_composer` is wired and runnable, but the full rerun did **not** improve LV1
+- 2026-03-26 confirmation rerun of `build_lv1_theory_assets.py` reproduced the same checkpoint exactly, so the regression is stable rather than a stale-output artifact
 - current rerun metrics:
   - overall blended Jaccard: `0.190419` (down from `0.196015`)
   - nonzero predictions: `4352 / 9620` (down from `4552 / 9620`)
   - `consensus_weighted`: `0.196644` (down from `0.201964`)
   - `consensus_strict`: `0.190738` (down from `0.201399`)
   - `position_aware` rows: `3005`, mean blended `0.146678`
+- improvement vs current on-disk pre-rerun baseline: `0.000000` on all reported root metrics; rebuild is deterministic
 - practical decision for now: keep the position-aware model **experimental**, not promoted as the new default root composer
 - side effect: regenerating the benchmark support files also cleared the pre-existing `test_promotions.py` failure
 
@@ -441,5 +443,5 @@ Phase 5 (after Phase 3+4):
 ---
 
 *Plan created: 2026-03-24*
-*Plan updated: 2026-03-24 (all blockers resolved by Yassin)*
+*Plan updated: 2026-03-26 (position-aware rerun reconfirmed as a regression with no metric lift)*
 *Status: READY FOR EXECUTION*

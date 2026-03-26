@@ -1,3 +1,9 @@
+"""Scoring utilities for evaluating LV1 semantic predictions.
+
+This module defines synonym-aware similarity metrics and scoring helpers for
+comparing predicted feature sets with scholar-provided ground truth.
+"""
+
 from __future__ import annotations
 
 from collections import defaultdict
