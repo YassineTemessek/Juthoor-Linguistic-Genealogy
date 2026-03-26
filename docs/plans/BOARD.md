@@ -47,13 +47,13 @@
 | E.2 | Opus empirical letter meaning derivation (8 DIVERGE) | Claude | DONE | `empirical_letter_meanings.md` — 3 corrections needed |
 | F.1-F.3 | Full 28-letter empirical derivation (THE ARABIC LETTER GENOME) | Claude | DONE | `THE_ARABIC_LETTER_GENOME.md` — 1,397 lines, all 28 letters, 5-scholar comparison |
 | C.2 | Yassin confirms 4 letter corrections | Yassin | DONE | م=تجمع+تلاصق, ع=ظهور+عمق, غ=باطن+اشتمال, ب=ظهور+خروج |
-| F.4 | Apply 4 corrections to letter registry + rebuild consensus + re-run | Codex | NEXT | jabal_letters.jsonl + consensus + predictions |
-| F.5 | Method A re-calibration with corrected letters | Claude | BLOCKED | depends on F.4 |
+| F.4 | Apply 4 corrections to letter registry + rebuild consensus + re-run | Codex | DONE | jabal letters corrected in canonical builder; consensus + predictions rebuilt |
+| F.5 | Method A re-calibration with corrected letters | Claude | NEXT | use corrected Jabal letters + rebuilt matrices |
 
 ## Codex
-last: I2 DONE. Generated `THIRD_LETTER_MODIFIER_PROFILES.md` and `third_letter_modifier_profiles.json` directly from `root_predictions.json`, with per-letter modifier signatures, blocked-feature rates, dominant routing models, and support/risk bands across the two consensus layers.
-metrics: roots=1924, quranic=1666, nuclei=456, score_rows=9284, root_rows=9620, overall blended=0.1956, nonzero=4550/9620 (47.3%), strict consensus blended=0.2012, weighted=0.2016, dropped-third-feature rows=1551, dropped-التحام rows=1156, nucleus-only rows=3178, strongest modifiers=ج/ظ, riskiest modifiers=ب/ت/ر/س/ع/ل
-suggests: Claude should use `THIRD_LETTER_MODIFIER_PROFILES.md` for I1 calibration and I3 interpretation. The modifier layer is now explicit: `ج` and `ظ` are the cleanest enrichers, `ر`/`ل`/`ب` still revolve around blocked `التحام`, and `س` remains too generic. Next Codex move should wait for Claude's review unless he wants a model change driven by these profiles.
+last: F.4 DONE. Applied Yassin-confirmed Jabal corrections in the canonical builder path for `ب=ظهور+خروج`, `م=تجمع+تلاصق`, `ع=ظهور+عمق`, `غ=باطن+اشتمال`, then rebuilt letters, consensus rows, predictions, and score matrices.
+metrics: roots=1924, quranic=1666, nuclei=456, score_rows=9284, root_rows=9620, overall blended=0.1960, nonzero=4552/9620 (47.3%), strict consensus blended=0.2014, weighted=0.2020, Jabal blended=0.1967, Asim=0.1908, Abbas=0.1892, strongest modifiers=ج/ظ, riskiest modifiers=ب/ت/ر/س/ع/ل
+suggests: Claude should start F.5 now on the corrected matrices. The four disputed Jabal letters are no longer stale registry values; they are canonical builder overrides and already propagated through consensus and root scoring.
 blocked: none
 
 ## Claude

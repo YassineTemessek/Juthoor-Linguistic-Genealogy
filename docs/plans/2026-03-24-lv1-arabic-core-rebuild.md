@@ -293,6 +293,20 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 - persistent poison pattern: third-letter-only `التحام`, especially with `ر`, `ل`, `ب`, and `ع`
 - practical reading: the nucleus still carries most of the reliable signal; third-letter contributions are selective and should be treated as profilers/modifiers, not as equally strong semantic cores
 
+**Letter-correction follow-up (F.4, 2026-03-26):**
+- Yassin-confirmed Jabal corrections are now live in the canonical builder path:
+  - `ب = ظهور + خروج`
+  - `م = تجمع + تلاصق`
+  - `ع = ظهور + عمق`
+  - `غ = باطن + اشتمال`
+- rebuilt outputs now reflect those corrected letter values before consensus composition
+- current post-correction root checkpoint:
+  - overall blended Jaccard: `0.196015`
+  - nonzero predictions: `4552 / 9620`
+  - `consensus_weighted`: `0.201964`
+  - `consensus_strict`: `0.201399`
+- next semantic checkpoint is Claude's `F.5` Method A recalibration on the corrected matrices
+
 ---
 
 ### Task 3.3: Add Quranic-first validation
