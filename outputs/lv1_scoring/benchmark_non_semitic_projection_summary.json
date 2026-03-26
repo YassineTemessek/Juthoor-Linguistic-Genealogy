@@ -1,0 +1,8 @@
+{
+  "benchmark_non_semitic_pairs": 23,
+  "matched_source_roots": 18,
+  "coverage": 0.7826,
+  "by_target_lang": {
+    "eng": 18
+  }
+}

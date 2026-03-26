@@ -6,14 +6,31 @@ appears in a binary nucleus. This model respects that positional difference.
 """
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import Any
 
-from juthoor_arabicgenome_lv1.factory.composition_models import (
-    CompositionResult,
-    _as_features,
-    _categories,
-    _ordered_unique,
-)
+from juthoor_arabicgenome_lv1.core.feature_decomposition import FEATURE_TO_CATEGORY, decompose_semantic_text
+
+
+@dataclass(frozen=True)
+class CompositionResult:
+    model_name: str
+    predicted_features: tuple[str, ...]
+    supporting_categories: tuple[str, ...]
+
+
+def _ordered_unique(items: list[str]) -> tuple[str, ...]:
+    return tuple(dict.fromkeys(item for item in items if item))
+
+
+def _categories(features: tuple[str, ...]) -> tuple[str, ...]:
+    return tuple(dict.fromkeys(FEATURE_TO_CATEGORY.get(feature, "unknown") for feature in features))
+
+
+def _as_features(value: str | tuple[str, ...] | list[str]) -> tuple[str, ...]:
+    if isinstance(value, str):
+        return decompose_semantic_text(value)
+    return tuple(value)
 
 
 # Empirical modifier overrides — letters whose modifier behavior differs from nucleus behavior

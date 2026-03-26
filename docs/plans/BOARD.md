@@ -37,12 +37,13 @@
 | 3.1 | Pipeline integration test (end-to-end LV1) | Claude | DONE | `tests/test_lv1_pipeline_integration.py` — 1924 roots, 456 nuclei, jabal predictions pass |
 | 5.1 | Build Quranic verse validation module | Claude | DONE | `factory/quranic_validation.py` — 30 tests |
 | 5.2 | Build scholar divergence analysis | Claude | DONE | `factory/scholar_divergence.py` — 34 tests |
-| FIX | test_promotions.py cross_lingual_support pre-existing failure | Codex | NEXT | 1 failing test |
+| PA.1 | Re-run LV1 with position-aware model and compare metrics | Codex | DONE | position-aware regressed metrics; keep experimental |
+| FIX | test_promotions.py cross_lingual_support pre-existing failure | Codex | DONE | resolved by regenerating benchmark support inputs; 28/28 pass |
 
 ## Codex
-last: 2.1 + 2.2 DONE. Refactored root_predictor.py and independent_letter_derivation.py.
-metrics: roots=1924, tests=485 (1 pre-existing failure), Jabal bJ=0.197, consensus bJ=0.201
-suggests: fix the 1 pre-existing test failure in test_promotions.py
+last: Position-aware rerun complete. The current `position_aware` model is wired and benchmarked, but it regresses the root layer relative to the pre-rerun baseline. The pre-existing `test_promotions.py` failure also disappeared once benchmark support files were regenerated.
+metrics: roots=1924, quranic=1666, nuclei=456, score_rows=11605, root_rows=9620, overall blended=0.1904 (down from 0.1960), nonzero=4352/9620 (45.2%), consensus_weighted bJ=0.1966 (down from 0.2020), consensus_strict bJ=0.1907 (down from 0.2014), jabal bJ=0.1930, position_aware rows=3005 with mean bJ=0.1467, test_promotions=28/28 pass
+suggests: Claude should review the position-aware deltas before promoting it. Current evidence says keep `position_aware` experimental, not default. The best next move is Claude's Method A spot check or targeted override revision, not wider rollout.
 blocked: none
 
 ## Claude
