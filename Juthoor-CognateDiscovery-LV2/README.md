@@ -8,6 +8,13 @@ Reproducible **discovery pipeline** that produces **ranked cross-language candid
 LV2 is "discovery-first": results are **not polished/final**, but we still **compare and score** aggressively to see what the outputs look like.
 LV2 does not claim historical directionality.
 
+## Current Status
+
+- GenomeScorer is live and consumes promoted LV1 evidence.
+- `synonym_expansion.py` is now part of the discovery stack for Arabic root-family expansion.
+- The synonym-expansion module currently carries **12 focused tests**.
+- Benchmark coverage remains centered on the 126-pair gold benchmark across 5 categories.
+
 ## Role in the stack
 
 LV2 compares Arabic 3-letter roots with Indo-European lexemes using orthographic and
@@ -19,6 +26,7 @@ phonetic similarity, then ranks candidate connections for review.
 - **ByT5 (Google)**: byte-level character form retrieval (tokenizer-free, raw Unicode).
 - **Hybrid scoring**: after retrieval, compute additional rough scores on retrieved pairs (orthography/IPA/skeleton/etc.).
 - **Correspondence-aware reranking**: use root matches, consonant-class correspondence, hamza normalization, and weak-radical-aware features.
+- **Synonym expansion**: expand an Arabic root into its synonym family before downstream comparison when family-level evidence is relevant.
 - **FAISS**: vector similarity search for fast nearest-neighbor retrieval.
 
 ## What You Get
@@ -47,8 +55,9 @@ phonetic similarity, then ranks candidate connections for review.
 1) **Get canonical processed data (LV0)**: fetch release bundles or build locally in LV0.
 2) **Discovery retrieval**: BGE-M3 (meaning) and/or ByT5 (form) retrieve top-K candidates.
 3) **Hybrid scoring**: compute rough signals on the retrieved pairs and re-rank.
-4) **Benchmark evaluation**: score runs against tracked JSONL benchmarks and compare runs directly.
-5) **Review/QA**: inspect `outputs/leads/` and iterate on data + scoring.
+4) **Synonym-family expansion**: widen Arabic root-family coverage where the lexical family is the right comparison unit.
+5) **Benchmark evaluation**: score runs against tracked JSONL benchmarks and compare runs directly.
+6) **Review/QA**: inspect `outputs/leads/` and iterate on data + scoring.
 
 ## Quickstart
 
@@ -167,6 +176,7 @@ python "scripts/discovery/build_root_family_corpus.py"
 - Cross-lingual consonant mapping for Arabic ↔ Hebrew, Aramaic, and Persian
 - Bonuses are applied only for Semitic-Semitic pairs (family-aware gating)
 - Phonetic merger tables covering 6 languages (66 entries)
+- Arabic roots can now be expanded through `synonym_expansion.load_synonym_families()` and `expand_root()`
 - Arabic→English consonant shifts documented: ج↔K, ب↔F, د↔T, ق↔C
 - Benchmark corrections based on phonetic merger principle (see `BENCHMARK_CORRECTIONS.md`)
 
