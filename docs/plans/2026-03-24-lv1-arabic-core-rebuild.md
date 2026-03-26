@@ -285,6 +285,14 @@ The Phase 2-3 session (2026-03-23) built good infrastructure (root predictor, sc
 
 **Interpretation:** vocab expansion alone had diminishing returns, but the third-letter correction materially improved the root layer and moved both consensus models above `0.20` blended Jaccard.
 
+**Third-letter profile follow-up (I2, 2026-03-26):**
+- `THIRD_LETTER_MODIFIER_PROFILES.md` is now generated from `root_predictions.json`
+- strongest stable third-letter enrichers in the current matrix: `ج`, `ظ`
+- high-value but still mixed enrichers: `غ`, `ش`, `ص`, `ض`, `ك`, `هـ`, `ق`
+- riskiest modifiers: `ب`, `ت`, `ر`, `س`, `ع`, `ل`
+- persistent poison pattern: third-letter-only `التحام`, especially with `ر`, `ل`, `ب`, and `ع`
+- practical reading: the nucleus still carries most of the reliable signal; third-letter contributions are selective and should be treated as profilers/modifiers, not as equally strong semantic cores
+
 ---
 
 ### Task 3.3: Add Quranic-first validation

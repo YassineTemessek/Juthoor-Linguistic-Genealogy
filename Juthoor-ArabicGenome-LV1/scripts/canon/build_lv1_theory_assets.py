@@ -39,6 +39,10 @@ from juthoor_arabicgenome_lv1.factory.independent_letter_derivation import (
     derive_independent_letter_meanings,
     render_independent_letter_genome_markdown,
 )
+from juthoor_arabicgenome_lv1.factory.third_letter_profiles import (
+    build_third_letter_modifier_profiles,
+    render_third_letter_modifier_profiles_markdown,
+)
 
 
 LV1_ROOT = Path(__file__).resolve().parents[2]
@@ -735,6 +739,8 @@ def main() -> int:
             "consensus_weighted",
         ),
     )
+    third_letter_profiles = build_third_letter_modifier_profiles(root_prediction_rows)
+    third_letter_profiles_md = render_third_letter_modifier_profiles_markdown(third_letter_profiles)
     root_score_matrix = summarize_root_predictions(root_prediction_rows)
     jabal_root_prediction_rows = [row for row in root_prediction_rows if row["scholar"] == "jabal"]
     benchmark_rows = load_benchmark_rows(LV2_BENCHMARK)
@@ -775,6 +781,8 @@ def main() -> int:
     _write_json(OUTPUT_ROOT / "independent_letter_derivations.json", independent_letter_derivations)
     _write_text(OUTPUT_ROOT / "INDEPENDENT_ARABIC_LETTER_GENOME.md", independent_letter_genome_md)
     _write_json(OUTPUT_ROOT / "root_predictions.json", root_prediction_rows)
+    _write_json(OUTPUT_ROOT / "third_letter_modifier_profiles.json", third_letter_profiles)
+    _write_text(OUTPUT_ROOT / "THIRD_LETTER_MODIFIER_PROFILES.md", third_letter_profiles_md)
     _write_json(OUTPUT_ROOT / "root_score_matrix.json", root_score_matrix)
     _write_json(OUTPUT_ROOT / "benchmark_semitic_projections.json", semitic_projection_rows)
     _write_json(OUTPUT_ROOT / "benchmark_semitic_projection_summary.json", semitic_projection_summary)
