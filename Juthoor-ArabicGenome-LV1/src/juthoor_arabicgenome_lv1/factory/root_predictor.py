@@ -9,6 +9,10 @@ from juthoor_arabicgenome_lv1.factory.composition_models import (
     model_phonetic_gestural,
     model_sequence,
 )
+from juthoor_arabicgenome_lv1.factory.position_aware_composer import (
+    MODIFIER_OVERRIDES,
+    model_position_aware,
+)
 from juthoor_arabicgenome_lv1.factory.scoring import (
     blended_jaccard,
     jaccard_similarity,
@@ -84,12 +88,16 @@ def filter_third_letter_features(
 def choose_root_prediction_model(
     binary_features: tuple[str, ...],
     third_letter_features: tuple[str, ...],
+    *,
+    third_letter: str = "",
 ) -> str:
     """Choose the Phase 3 model.
 
     Use Intersection only when the nucleus field and third-letter modifier
-    already share a semantic signal. Otherwise follow Claude's recommendation
-    and fall back to Phonetic-Gestural rather than forcing a fake overlap.
+    already share a semantic signal. When the third letter has an empirical
+    modifier override and the standard model would fall back to
+    phonetic_gestural, use position_aware instead. Otherwise follow Claude's
+    recommendation and fall back to Phonetic-Gestural.
     """
     if binary_features and third_letter_features:
         if jaccard_similarity(binary_features, third_letter_features) > 0.0:
@@ -98,6 +106,10 @@ def choose_root_prediction_model(
         third_categories = {FEATURE_TO_CATEGORY.get(feature) for feature in third_letter_features}
         if binary_categories & third_categories:
             return "intersection"
+        # Use position_aware instead of phonetic_gestural when the third letter
+        # has an empirical modifier profile that differs from its nucleus behavior.
+        if third_letter and third_letter in MODIFIER_OVERRIDES:
+            return "position_aware"
         return "phonetic_gestural"
     if binary_features or third_letter_features:
         return "sequence"
@@ -130,6 +142,7 @@ def _resolve_prediction_features(
     binary_features: tuple[str, ...],
     third_letter_features: tuple[str, ...],
     third_letter_articulatory: dict[str, Any] | None,
+    third_letter: str = "",
 ) -> tuple[str, tuple[str, ...]]:
     if model_name == "intersection":
         return _resolve_intersection_prediction(binary_features, third_letter_features)
@@ -138,6 +151,13 @@ def _resolve_prediction_features(
             binary_features,
             third_letter_features,
             articulatory2=third_letter_articulatory,
+        )
+        return model_name, result.predicted_features
+    if model_name == "position_aware":
+        result = model_position_aware(
+            binary_features,
+            third_letter_features,
+            third_letter=third_letter,
         )
         return model_name, result.predicted_features
     if model_name == "sequence":
@@ -209,19 +229,24 @@ def predict_root_from_parts(
     scholar: str = "jabal",
     third_letter_articulatory: dict[str, Any] | None = None,
 ) -> RootPrediction:
-    model_name = choose_root_prediction_model(binary_features, third_letter_features)
+    model_name = choose_root_prediction_model(
+        binary_features, third_letter_features, third_letter=third_letter
+    )
     filtered_third_letter_features, dropped_third_letter_features = filter_third_letter_features(
         binary_features,
         third_letter_features,
     )
     if filtered_third_letter_features != third_letter_features:
         third_letter_features = filtered_third_letter_features
-        model_name = choose_root_prediction_model(binary_features, third_letter_features)
+        model_name = choose_root_prediction_model(
+            binary_features, third_letter_features, third_letter=third_letter
+        )
     model_name, predicted_features = _resolve_prediction_features(
         model_name=model_name,
         binary_features=binary_features,
         third_letter_features=third_letter_features,
         third_letter_articulatory=third_letter_articulatory,
+        third_letter=third_letter,
     )
 
     return RootPrediction(
