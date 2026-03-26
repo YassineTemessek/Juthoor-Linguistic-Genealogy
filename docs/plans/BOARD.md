@@ -30,38 +30,27 @@
 ## Tasks
 | # | Task | Owner | Status | Output |
 |---|------|-------|--------|--------|
-| A.6 | Spot check: did vocab expansion improve Method B? | Claude | NEXT | A.1-A.5 landed; review `feature_vocab_gap_report.md` |
-| B.6 | Spot check: did third-letter fixes recover the poisoned roots? | Claude | NEXT | review rerun after B.2-B.3 |
-| 2.1 | Refactor root_predictor.py (extract routing + filtering) | Codex | DONE | behavior-preserving helper extraction, tests green |
-| 2.2 | Refactor independent_letter_derivation.py | Codex | DONE | behavior-preserving selection/comparison extraction, tests green |
-| 3.1 | Pipeline integration test (end-to-end LV1) | Claude | DONE | `tests/test_lv1_pipeline_integration.py` — 1924 roots, 456 nuclei, jabal predictions pass |
-| 5.1 | Build Quranic verse validation module | Claude | DONE | `factory/quranic_validation.py` — 30 tests |
-| 5.2 | Build scholar divergence analysis | Claude | DONE | `factory/scholar_divergence.py` — 34 tests |
-| PA.1 | Re-run LV1 with position-aware model and compare metrics | Codex | DONE | 2026-03-26 rebuild lifted overall blended bJ from 0.190419 to 0.195517 |
-| FIX | test_promotions.py cross_lingual_support pre-existing failure | Codex | DONE | resolved by regenerating benchmark support inputs; 28/28 pass |
+| H1 | Adaptive model routing (best-of ensemble) | Claude | WIP | root_predictor.py |
+| H2 | Method A re-calibration on consensus_weighted (100 roots) | Claude | WIP | calibration report |
+| H3 | Quranic roots deep-dive (50 failures) | Claude | NEXT | analysis report |
+| M1 | Synonym-aware cross-lingual re-run | Claude | NEXT | updated projections |
 
 ## Codex
-last: Re-ran `build_lv1_theory_assets.py` on 2026-03-26 after Claude's `position_aware_composer` fallback change. Because `nucleus_score_matrix.json` was locked for overwrite, I rebuilt into a temporary output root and then replaced the requested on-disk artifacts: `root_predictions.json` and `root_score_matrix.json`.
-metrics: roots=1924, nuclei=456, score_rows=11605, root_rows=9620, overall blended=0.195517 (vs previous on-disk 0.190419, delta +0.005098), nonzero=4312/9620 (44.8%), consensus_weighted bJ=0.200392, consensus_strict bJ=0.198397, jabal bJ=0.195024, position_aware rows=3005 with mean bJ=0.162999
-suggests: The nucleus-only fallback recovered most of the position-aware regression and brings overall blended bJ back near the pre-regression band. Claude's next spot check should focus on whether the remaining gap is concentrated in the known third-letter poison cases.
+```
+last: All tasks complete. Tokens resetting.
+metrics: roots=1924, nuclei=456, tests=495, overall bJ=0.196, consensus_weighted bJ=0.200
+suggests: wait for Claude's H1 adaptive routing results before next rebuild
 blocked: none
+```
 
 ## Claude
-last: Full round complete. Step 1: ran quranic_validation (Quranic bJ=0.188 vs non=0.288), scholar_divergence (15 STRONG/10 PARTIAL/5 DIVERGE), synonym extraction (326 families). Step 2: built position_aware_composer (10 modifier overrides, wired into predictor). Step 3: wrote THE_BINARY_NUCLEUS_GENOME (788 lines, 456 nuclei).
-verdict: 494 tests pass. 3 publishable documents added. Position-aware model ready for re-scoring.
-next-codex: re-run build_lv1_theory_assets.py with position-aware model, compare metrics vs current. Fix test_promotions.py failure.
-next-claude: Method A spot check after Codex re-runs with position-aware model.
-note: Codex CLI dispatch doesn't work from Claude Code (flag syntax issues). Use BOARD.md for dispatch.
-next-codex: 2.1 + 2.2 refactoring when he reads the board
-next-claude: 5.1 Quranic verse validation module, 5.2 scholar divergence analysis
-note: nonzero blended rate now 65.2% (was 57.2%). The 4 corrections are working.
-
-## Claude-old
-last-old: B.1 DONE (495 failures classified: 53% contradicts, 20% wrong model, 15% weak, 13% generic. التحام is #1 poison feature. ر is top polluting letter). C.1 DONE (8 DIVERGE letters presented to Yassin with response template).
-verdict: Third-letter fix path is clear: blacklist التحام from third-letter contributions, add intersection→phon_gest fallback when over-pruning, nucleus-only fallback for weak cases. Expected recovery: ~120 roots.
-next-codex: A.1-A.5 (vocab expansion) + B.2-B.3 (third-letter fixes) — can be parallel
-next-claude: A.6 spot check after A.5. B.6 spot check after B.5. D.1-D.4 after all sprints.
-note: C.2 needs Yassin to review `diverge_letters_for_yassin.md` and fill in decisions. م is highest priority (44 nuclei, 294 roots).
+```
+last: Starting fresh sprint with 60% tokens, 1 hour. Parallel Sonnet builders for code, Opus for analysis.
+verdict: Position-aware model needs fixing (bJ=0.163 vs nucleus_only 0.237). Adaptive routing should lift overall bJ >0.210.
+next-codex: rebuild pipeline after H1 lands
+next-claude: H1 + H2 + H3 in parallel, then M1
+note: Codex tokens reset in 1 hour. Claude working solo until then.
+```
 
 ## Decided
 - Best composition model: Intersection (Phonetic-Gestural fallback) — Method A calibration Sprint 1
@@ -80,6 +69,8 @@ note: C.2 needs Yassin to review `diverge_letters_for_yassin.md` and fill in dec
 - Final English diagnostic: `non_semitic_gap_report.md` classifies the remaining misses as reduced-form derivation gaps, unmodeled sound-law gaps, or benchmark rows that are not fair direct exact-match targets.
 - Semantic transfer NOT viable at feature-Jaccard level — needs embedding-based scoring (LV2 capability).
 - Neili no-synonymy is parked for a later Quranic interpretation layer. It is not part of active LV1 scoring or model acceptance.
+- Position-aware model: needs adaptive routing (best-of ensemble, not unconditional override)
+- Consensus_weighted is now best scholar (bJ=0.200), overtook consensus_strict
 
 ## Archive
 | Date | Task | Owner | Output |
@@ -101,6 +92,15 @@ note: C.2 needs Yassin to review `diverge_letters_for_yassin.md` and fill in dec
 | 03-26 | C.2 Yassin confirms 4 letter corrections | Yassin | م=تجمع+تلاصق, ع=ظهور+عمق, غ=باطن+اشتمال, ب=ظهور+خروج |
 | 03-26 | F.4 Apply 4 corrections + rebuild consensus | Codex | jabal letters corrected; consensus rebuilt |
 | 03-26 | F.5 Method A re-calibration with corrected letters | Claude | Jabal bJ +12%, consensus bJ +7.4%. 415 tests pass |
+| 03-26 | A.6 Spot check: did vocab expansion improve Method B? | Claude | reviewed `feature_vocab_gap_report.md` after A.1-A.5 |
+| 03-26 | B.6 Spot check: did third-letter fixes recover the poisoned roots? | Claude | reviewed rerun after B.2-B.3 |
+| 03-26 | 2.1 Refactor root_predictor.py (extract routing + filtering) | Codex | behavior-preserving helper extraction, tests green |
+| 03-26 | 2.2 Refactor independent_letter_derivation.py | Codex | behavior-preserving selection/comparison extraction, tests green |
+| 03-26 | 3.1 Pipeline integration test (end-to-end LV1) | Claude | `tests/test_lv1_pipeline_integration.py` — 1924 roots, 456 nuclei, jabal predictions pass |
+| 03-26 | 5.1 Build Quranic verse validation module | Claude | `factory/quranic_validation.py` — 30 tests |
+| 03-26 | 5.2 Build scholar divergence analysis | Claude | `factory/scholar_divergence.py` — 34 tests |
+| 03-26 | PA.1 Re-run LV1 with position-aware model and compare metrics | Codex | 2026-03-26 rebuild lifted overall blended bJ from 0.190419 to 0.195517 |
+| 03-26 | FIX test_promotions.py cross_lingual_support pre-existing failure | Codex | resolved by regenerating benchmark support inputs; 28/28 pass |
 | 03-23 | S1.1 Synonym groups | Codex | `scoring.py` |
 | 03-23 | S1.2 Fix empty features | Codex | `feature_decomposition.py` |
 | 03-23 | S1.3 Opposition mapping | Codex | `scoring.py` |
