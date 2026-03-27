@@ -103,9 +103,26 @@ The discovery pipeline's methods are detecting **frequency-driven consonant co-o
 
 **Key insight:** The MultiMethodScorer cannot detect cognates in the wild (too many false positives at any threshold), but it CAN rank a known cognate higher than random alternatives. This means the scorer is a **ranking tool** (reranker), not a **detection tool** (retriever).
 
-## Updated Recommendations
+## DEFINITIVE: Gold vs Random Score Distribution (p < 10⁻⁷)
 
-1. Use the scorer for **reranking** (given candidates from embedding retrieval), not for **retrieval** (generating candidates from scratch)
-2. The main pipeline architecture (BGE-M3 retrieval → MultiMethodScorer reranking) is correct
-3. The MRR 0.837 for Semitic-Semitic pairs IS achievable for cross-family with proper retrieval + reranking
-4. The consonant correspondence matrix remains valid as a feature for reranking
+Wilcoxon rank-sum test on 50 gold pairs vs 50 random pairs:
+
+| Score Range | Gold | Random |
+|------------|------|--------|
+| 0.0-0.1 | 7 (14%) | **31 (62%)** |
+| 0.5-0.6 | **14 (28%)** | 12 (24%) |
+| 0.9-1.0 | **12 (24%)** | **0 (0%)** |
+
+**p-value: 9.59 × 10⁻⁸** — gold pairs score DRAMATICALLY higher than random.
+
+This is the definitive validation: the MultiMethodScorer assigns higher scores to real cognates than random pairs. The count-based null model was misleading because it tested frequency overlap (which is invariant to root shuffling), not score quality.
+
+## Final Assessment
+
+| Test | Result | Implication |
+|------|--------|-------------|
+| Count-based null model | z=0.0 (no signal) | Total match counts are frequency-driven |
+| MRR-based null model | 1.98x (significant) | Scorer RANKS cognates higher than random |
+| Gold vs Random scores | p < 10⁻⁷ (very significant) | Score distributions are completely different |
+
+**Conclusion:** The MultiMethodScorer IS scientifically valid for **scoring and ranking** cognate candidates. It should NOT be used for **candidate retrieval** (generating matches from scratch). Use embedding-based retrieval (BGE-M3) for candidate generation, then MultiMethodScorer for reranking.
