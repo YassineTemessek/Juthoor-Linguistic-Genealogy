@@ -469,7 +469,17 @@ def _precompute_target_cache(
                     if (suffix or _) and stem and len(stem) >= 2 else ""
                 )
             else:
-                tgt_skel = basic_consonant_skeleton(lemma)
+                # For non-Latin script IE targets (Greek, etc.), use IPA
+                is_latin_script = lemma and lemma[0].isascii()
+                if is_latin_script:
+                    tgt_skel = basic_consonant_skeleton(lemma)
+                elif ipa:
+                    # Non-Latin script (Greek, etc.) — extract from IPA
+                    tgt_skel = ipa_skel(ipa)
+                    if not tgt_skel:
+                        tgt_skel = basic_consonant_skeleton(ipa)
+                else:
+                    tgt_skel = ""
                 i_skel = ipa_skel(ipa) if ipa else ""
                 stem_skel = ""
 
