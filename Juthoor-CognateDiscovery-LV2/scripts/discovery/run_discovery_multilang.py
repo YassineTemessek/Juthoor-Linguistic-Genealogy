@@ -700,6 +700,25 @@ def score_all_pairs_fast(
     return leads
 
 
+def _classify_anchor(score: float, methods_fired_count: int) -> str:
+    """Classify a scored pair into an anchor tier for downstream use.
+
+    Tiers
+    -----
+    gold:            score >= 0.85 AND >= 4 independent methods fired.
+    silver:          score >= 0.70 AND >= 2 methods fired.
+    auto_brut:       score >= 0.55.
+    below_threshold: everything else.
+    """
+    if score >= 0.85 and methods_fired_count >= 4:
+        return "gold"
+    elif score >= 0.70 and methods_fired_count >= 2:
+        return "silver"
+    elif score >= 0.55:
+        return "auto_brut"
+    return "below_threshold"
+
+
 def _build_lead(
     src: dict[str, Any],
     tgt: dict[str, Any],
@@ -746,6 +765,7 @@ def _build_lead(
             "explanation": explanation,
             "best_method": result.best_method,
         },
+        "anchor_level": _classify_anchor(result.best_score, len(result.methods_that_fired)),
     }
 
 
@@ -1192,6 +1212,42 @@ def main() -> int:
                     if gold_tgt and gold_tgt not in existing_lemmas and gold_tgt in en_lookup:
                         target_entries.append(en_lookup[gold_tgt])
                         existing_lemmas.add(gold_tgt)
+
+    # Supplement Arabic source corpus with gold benchmark Arabic lemmas not already included.
+    # Mirrors the pattern from run_full_discovery.py to ensure benchmark coverage.
+    if source_lang in ARABIC_SCHEMA_LANGS and GOLD_BENCHMARK.exists():
+        classical_path = REPO_ROOT / "Juthoor-DataCore-LV0/data/processed/arabic/classical/lexemes.jsonl"
+        existing_ar = {e.get("lemma", "").strip() for e in source_entries}
+        ar_lookup: dict[str, dict[str, Any]] = {}
+        if classical_path.exists():
+            with open(classical_path, encoding="utf-8") as f:
+                for line in f:
+                    if not line.strip():
+                        continue
+                    row = json.loads(line)
+                    lemma = (row.get("lemma") or "").strip()
+                    if lemma and lemma not in ar_lookup:
+                        ar_lookup[lemma] = row
+        with open(GOLD_BENCHMARK, encoding="utf-8") as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                gp = json.loads(line)
+                if gp.get("source", {}).get("lang") == source_lang:
+                    gold_ar = (gp["source"].get("lemma") or "").strip()
+                    if gold_ar and gold_ar not in existing_ar:
+                        if gold_ar in ar_lookup:
+                            source_entries.append(ar_lookup[gold_ar])
+                        else:
+                            # Create minimal entry from gold pair info
+                            source_entries.append({
+                                "lemma": gold_ar,
+                                "root": gp["source"].get("root", gold_ar),
+                                "root_norm": gp["source"].get("root", gold_ar),
+                                "meaning_text": gp["source"].get("gloss", ""),
+                                "pos_tag": "N",
+                            })
+                        existing_ar.add(gold_ar)
 
     print(f"  Loaded {len(source_entries)} {source_lang} entries, {len(target_entries)} {target_lang} entries.")
 
