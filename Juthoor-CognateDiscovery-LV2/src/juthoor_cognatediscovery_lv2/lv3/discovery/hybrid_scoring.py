@@ -68,11 +68,11 @@ def _first_nonempty(*values: Any) -> str:
 
 @dataclass(frozen=True)
 class HybridWeights:
-    semantic: float = 0.40   # semantic model weight (BGE-M3)
-    form: float = 0.20       # form model weight (ByT5)
-    orthography: float = 0.15
-    sound: float = 0.15
-    skeleton: float = 0.10
+    semantic: float = 0.50   # semantic model weight (BGE-M3) — most reliable signal
+    form: float = 0.18       # form model weight (ByT5)
+    orthography: float = 0.05  # anti-signal per reranker v2 (coeff -0.54): drastically reduced
+    sound: float = 0.22      # sound correspondence is valuable; boosted
+    skeleton: float = 0.05   # anti-signal per reranker v2 (coeff -0.70): drastically reduced
     family_boost: float = 0.05  # multiplicative boost (+5%) for same language family
 
 
