@@ -6,6 +6,8 @@ from juthoor_cognatediscovery_lv2.discovery.phonetic_law_scorer import (
     PhoneticLawScorer,
     _HIGH_FREQ_WORDS,
     _POSITION_WEIGHTS,
+    _load_position_weight_profiles,
+    _position_weight_for,
     _arabic_consonant_skeleton,
     _best_projection_match,
     _best_projection_match_ipa,
@@ -172,23 +174,27 @@ class TestIPAProjectionMatch:
 # ---------------------------------------------------------------------------
 
 class TestPositionWeights:
-    """Unit tests for _POSITION_WEIGHTS and _weighted_projection_score."""
+    """Unit tests for dynamic position weights and _weighted_projection_score."""
 
-    def test_weights_defined(self):
+    def test_fallback_weights_defined(self):
         assert _POSITION_WEIGHTS[0] > _POSITION_WEIGHTS[1]
         assert _POSITION_WEIGHTS[1] > _POSITION_WEIGHTS[2]
 
-    def test_position1_match_beats_position3_only_match(self):
-        """A variant matching at position 0 (anchor) should outscore one matching only at position 2."""
-        # Arabic skeleton: k-t-b (كتب)
-        # Variant A: "ktb" — matches English "ktx" at positions 0 and 1
-        # Variant B: "xtb" — matches English "ktx" only at position 2 (b vs b... wait, let's be precise)
-        #
-        # English: "ktz"
-        # Variant matching pos 0 only: "kxx" — score = 1.5 / (1.5+1.0+0.7) = 0.4688
-        # Variant matching pos 2 only: "xxz" — score = 0.7 / (1.5+1.0+0.7) = 0.2188
-        score_pos0, _ = _weighted_projection_score("كتب", "ktz", ("kxx",))
-        score_pos2, _ = _weighted_projection_score("كتب", "ktz", ("xxz",))
+    def test_dynamic_weights_loaded_for_profiles(self):
+        weights = _load_position_weight_profiles()
+        assert "ب" in weights
+        assert set(weights["ب"]) == {0, 1, 2}
+        assert all(value > 0 for value in weights["ب"].values())
+
+    def test_position_weight_for_uses_dynamic_profile(self):
+        weights = _load_position_weight_profiles()
+        assert _position_weight_for("ب", 0) == pytest.approx(weights["ب"][0])
+
+    def test_weighted_score_follows_letter_specific_profile_ordering(self):
+        """If the same letter is stronger at pos 0 than pos 2, the score should reflect that."""
+        assert _position_weight_for("ت", 0) > _position_weight_for("ت", 2)
+        score_pos0, _ = _weighted_projection_score("تكت", "tyt", ("txx",))
+        score_pos2, _ = _weighted_projection_score("تكت", "tyt", ("xxt",))
         assert score_pos0 > score_pos2
 
     def test_exact_match_returns_high_score(self):
@@ -211,11 +217,9 @@ class TestPositionWeights:
         assert score == 0.0
         assert var == ""
 
-    def test_position0_weight_is_1_5(self):
-        assert _POSITION_WEIGHTS[0] == 1.5
-
-    def test_position2_weight_is_0_7(self):
-        assert _POSITION_WEIGHTS[2] == 0.7
+    def test_position_weight_for_falls_back_when_letter_missing(self):
+        assert _position_weight_for("?", 0) == pytest.approx(_POSITION_WEIGHTS[0])
+        assert _position_weight_for("?", 2) == pytest.approx(_POSITION_WEIGHTS[2])
 
 
 class TestPositionWeightedInScorePair:
