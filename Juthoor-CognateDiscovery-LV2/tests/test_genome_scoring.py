@@ -3,13 +3,18 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from unittest.mock import MagicMock
+
 from juthoor_cognatediscovery_lv2.discovery.genome_scoring import (
     GenomeScorer,
     _LETTER_CLASS,
     _extract_binary_root,
     classify_pair,
 )
-from juthoor_cognatediscovery_lv2.discovery.scoring import apply_hybrid_scoring
+from juthoor_cognatediscovery_lv2.discovery.scoring import (
+    _apply_phonetic_law_bonus,
+    apply_hybrid_scoring,
+)
 from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import HybridWeights
 
 
@@ -266,3 +271,170 @@ def test_genome_bonus_expands_arabic_root_to_synonym_family(tmp_path: Path):
     assert bonus == 0.13
     assert support is not None
     assert support["binary_root"] == "lb"
+
+
+# ---------------------------------------------------------------------------
+# cross_family_coherence_signal tests
+# ---------------------------------------------------------------------------
+
+def test_cross_family_coherence_signal_returns_float_for_known_root(tmp_path: Path):
+    """cross_family_coherence_signal returns a float for a root with known coherence data."""
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    # عين maps to binary root ʕy which has coherence 0.72 in _write_promoted
+    result = scorer.cross_family_coherence_signal({"root_norm": "عين"})
+    assert result is not None
+    assert isinstance(result, float)
+    assert result == 0.72
+
+
+def test_cross_family_coherence_signal_returns_none_for_unknown_root(tmp_path: Path):
+    """cross_family_coherence_signal returns None when the root has no coherence data."""
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    result = scorer.cross_family_coherence_signal({"root_norm": "xyz"})
+    assert result is None
+
+
+def test_cross_family_coherence_signal_uses_lemma_fallback(tmp_path: Path):
+    """cross_family_coherence_signal falls back to lemma when root_norm is absent."""
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    result = scorer.cross_family_coherence_signal({"lemma": "عين"})
+    assert result is not None
+    assert result == 0.72
+
+
+def test_cross_family_coherence_signal_returns_none_for_empty_entry(tmp_path: Path):
+    """cross_family_coherence_signal returns None when entry has no root or lemma."""
+    scorer = GenomeScorer(_write_promoted(tmp_path))
+    result = scorer.cross_family_coherence_signal({})
+    assert result is None
+
+
+# ---------------------------------------------------------------------------
+# coherence modulation in _apply_phonetic_law_bonus tests
+# ---------------------------------------------------------------------------
+
+def _make_phonetic_scorer(bonus_value: float) -> MagicMock:
+    mock = MagicMock()
+    mock.phonetic_law_bonus.return_value = bonus_value
+    return mock
+
+
+def test_high_coherence_root_gets_boosted_bonus(tmp_path: Path):
+    """High-coherence Arabic root (>0.6) boosts phonetic law bonus by 1.3x."""
+    genome_scorer = GenomeScorer(_write_promoted(tmp_path))
+    phonetic_scorer = _make_phonetic_scorer(0.10)
+    hybrid = {"combined_score": 0.5, "components": {}}
+    source_fields = {"root_norm": "عين", "lang": "ara"}  # coherence 0.72 → high
+    target_fields = {"lemma": "eye", "lang": "eng"}
+
+    result = _apply_phonetic_law_bonus(
+        hybrid,
+        source_fields=source_fields,
+        target_fields=target_fields,
+        phonetic_law_scorer=phonetic_scorer,
+        genome_scorer=genome_scorer,
+    )
+
+    # 0.10 * 1.3 = 0.13, capped at 0.15
+    assert result["components"]["phonetic_law_bonus"] == 0.13
+    assert result["components"]["source_coherence"] == 0.72
+
+
+def test_low_coherence_root_gets_dampened_bonus(tmp_path: Path):
+    """Low-coherence Arabic root (<0.3) reduces phonetic law bonus by 0.7x."""
+    # Write a custom promoted dir with a low-coherence root
+    features = tmp_path / "promoted_features"
+    features.mkdir(parents=True)
+    (features / "field_coherence_scores.jsonl").write_text(
+        json.dumps({"binary_root": "ʕy", "coherence": 0.20}) + "\n",
+        encoding="utf-8",
+    )
+    (features / "metathesis_pairs.jsonl").write_text("", encoding="utf-8")
+    (features / "cross_lingual_support.jsonl").write_text("", encoding="utf-8")
+
+    genome_scorer = GenomeScorer(tmp_path)
+    phonetic_scorer = _make_phonetic_scorer(0.10)
+    hybrid = {"combined_score": 0.5, "components": {}}
+    source_fields = {"root_norm": "عين", "lang": "ara"}  # coherence 0.20 → low
+    target_fields = {"lemma": "eye", "lang": "eng"}
+
+    result = _apply_phonetic_law_bonus(
+        hybrid,
+        source_fields=source_fields,
+        target_fields=target_fields,
+        phonetic_law_scorer=phonetic_scorer,
+        genome_scorer=genome_scorer,
+    )
+
+    # 0.10 * 0.7 = 0.07
+    assert abs(result["components"]["phonetic_law_bonus"] - 0.07) < 1e-6
+    assert result["components"]["source_coherence"] == 0.20
+
+
+def test_mid_coherence_root_passes_through_unchanged(tmp_path: Path):
+    """Mid-coherence root (0.3-0.6) leaves the bonus unchanged."""
+    features = tmp_path / "promoted_features"
+    features.mkdir(parents=True)
+    (features / "field_coherence_scores.jsonl").write_text(
+        json.dumps({"binary_root": "ʕy", "coherence": 0.45}) + "\n",
+        encoding="utf-8",
+    )
+    (features / "metathesis_pairs.jsonl").write_text("", encoding="utf-8")
+    (features / "cross_lingual_support.jsonl").write_text("", encoding="utf-8")
+
+    genome_scorer = GenomeScorer(tmp_path)
+    phonetic_scorer = _make_phonetic_scorer(0.10)
+    hybrid = {"combined_score": 0.5, "components": {}}
+    source_fields = {"root_norm": "عين", "lang": "ara"}
+    target_fields = {"lemma": "eye", "lang": "eng"}
+
+    result = _apply_phonetic_law_bonus(
+        hybrid,
+        source_fields=source_fields,
+        target_fields=target_fields,
+        phonetic_law_scorer=phonetic_scorer,
+        genome_scorer=genome_scorer,
+    )
+
+    # 0.10, no multiplier, still capped at 0.15
+    assert abs(result["components"]["phonetic_law_bonus"] - 0.10) < 1e-6
+    assert result["components"]["source_coherence"] == 0.45
+
+
+def test_phonetic_bonus_still_capped_at_0_15_after_coherence_boost(tmp_path: Path):
+    """Even with high-coherence boost, phonetic_law_bonus must not exceed 0.15."""
+    genome_scorer = GenomeScorer(_write_promoted(tmp_path))
+    # Base bonus of 0.14 * 1.3 = 0.182 — must be capped to 0.15
+    phonetic_scorer = _make_phonetic_scorer(0.14)
+    hybrid = {"combined_score": 0.5, "components": {}}
+    source_fields = {"root_norm": "عين", "lang": "ara"}  # coherence 0.72 → high
+    target_fields = {"lemma": "eye", "lang": "eng"}
+
+    result = _apply_phonetic_law_bonus(
+        hybrid,
+        source_fields=source_fields,
+        target_fields=target_fields,
+        phonetic_law_scorer=phonetic_scorer,
+        genome_scorer=genome_scorer,
+    )
+
+    assert result["components"]["phonetic_law_bonus"] == 0.15
+
+
+def test_no_genome_scorer_leaves_phonetic_bonus_unchanged():
+    """Without a genome_scorer, coherence modulation is skipped and bonus is unchanged."""
+    phonetic_scorer = _make_phonetic_scorer(0.10)
+    hybrid = {"combined_score": 0.5, "components": {}}
+    source_fields = {"root_norm": "عين", "lang": "ara"}
+    target_fields = {"lemma": "eye", "lang": "eng"}
+
+    result = _apply_phonetic_law_bonus(
+        hybrid,
+        source_fields=source_fields,
+        target_fields=target_fields,
+        phonetic_law_scorer=phonetic_scorer,
+        genome_scorer=None,
+    )
+
+    assert abs(result["components"]["phonetic_law_bonus"] - 0.10) < 1e-6
+    assert "source_coherence" not in result["components"]

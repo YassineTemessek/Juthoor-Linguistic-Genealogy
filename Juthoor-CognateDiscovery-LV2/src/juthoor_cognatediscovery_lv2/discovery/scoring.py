@@ -98,6 +98,7 @@ def _apply_phonetic_law_bonus(
     target_fields: dict[str, Any],
     phonetic_law_scorer: "PhoneticLawScorer",
     semantic_score: float | None = None,
+    genome_scorer: "GenomeScorer | None" = None,
 ) -> dict[str, Any]:
     boosted = dict(hybrid)
     components = dict(boosted.get("components") or {})
@@ -107,6 +108,18 @@ def _apply_phonetic_law_bonus(
     # A strong phonetic match with unrelated meaning is almost certainly a false positive.
     if bonus > 0.0 and semantic_score is not None and semantic_score < 0.25:
         bonus = bonus * 0.5
+
+    # Coherence modulation: boost for reliable roots, dampen for fragmented
+    if genome_scorer is not None:
+        coherence = genome_scorer.cross_family_coherence_signal(source_fields)
+        if coherence is not None:
+            if coherence > 0.6:
+                bonus *= 1.3  # High coherence = more trust
+            elif coherence < 0.3:
+                bonus *= 0.7  # Low coherence = less trust
+            components["source_coherence"] = round(coherence, 4)
+
+    bonus = min(bonus, 0.15)  # Still cap at 0.15
 
     components["phonetic_law_bonus"] = round(bonus, 6) if bonus != 0.0 else 0.0
     boosted["components"] = components
@@ -171,6 +184,7 @@ def apply_hybrid_scoring(
                 target_fields=tgt_fields,
                 phonetic_law_scorer=phonetic_law_scorer,
                 semantic_score=float(semantic_score) if semantic_score is not None else None,
+                genome_scorer=genome_scorer,
             )
         else:
             components = dict(hybrid.get("components") or {})

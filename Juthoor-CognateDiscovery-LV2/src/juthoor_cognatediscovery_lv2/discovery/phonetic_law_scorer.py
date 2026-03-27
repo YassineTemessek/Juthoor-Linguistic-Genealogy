@@ -10,10 +10,27 @@ V2 additions:
 V3 additions:
 - IPA-based consonant skeleton (more accurate than orthographic for English)
 - Frequency penalty for high-frequency function words
+
+V4 additions:
+- Position-weighted scoring: LV1 H8 proved position 1 is the semantic anchor.
+  Matches at position 1 of the Arabic root count 1.5x, position 3 counts 0.7x.
+
+V5 additions:
+- Synonym family expansion: if the primary Arabic root does not match well,
+  try related roots from LV1 synonym families (lazy-loaded, capped at 3 synonyms).
+
+V6 additions:
+- Target-aware projection: switch from project_root_sound_laws(..., max_variants=256)
+  to project_root_by_target(root, "european") which uses 128 variants with proper
+  phonetic succession group expansion tuned for European target languages.
+- _ARABIC_IPA_TO_ENGLISH_IPA mapping: applied in _best_projection_match_ipa to remap
+  Arabic IPA consonants (ق ع ح خ غ etc.) to their expected English realisations before
+  comparison, improving accuracy when IPA data is available.
 """
 from __future__ import annotations
 
 import json
+import math
 import re
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
@@ -26,7 +43,9 @@ try:
         LATIN_EQUIVALENTS,
         normalize_arabic_root,
         project_root_sound_laws,
+        project_root_by_target,
     )
+    _HAS_TARGET_PROJECTION = True
 except ImportError:
     # Minimal fallback — define inline
     _HAMZA_NORM = str.maketrans(
@@ -89,12 +108,47 @@ except ImportError:
                 break
         return tuple(variants)
 
+    def project_root_by_target(root: str, target_family: str) -> tuple[str, ...]:  # type: ignore[misc]
+        return project_root_sound_laws(root, include_group_expansion=True, max_variants=128)
+
+    _HAS_TARGET_PROJECTION = False
+
 
 _DIACRITICAL_MAP = str.maketrans(
     {"ṭ": "t", "ṣ": "s", "ḥ": "h", "ḍ": "d", "ẓ": "z", "ʕ": "", "ġ": "g", "ḫ": "kh"}
 )
 _ENG_CONSONANTS_RE = re.compile(r"[bcdfghjklmnpqrstvwxyz]")
 _ARABIC_WEAK = set("اويى")
+
+# ---------------------------------------------------------------------------
+# Position weights (LV1 H8 — positional semantics)
+# Position 0 (first consonant) = semantic anchor → highest weight
+# Position 1 (second consonant) = core body → standard weight
+# Position 2 (third consonant) = modifier → lower weight
+# ---------------------------------------------------------------------------
+_POSITION_WEIGHTS: dict[int, float] = {0: 1.5, 1: 1.0, 2: 0.7}
+
+# ---------------------------------------------------------------------------
+# Arabic IPA to English IPA consonant mapping (V6)
+# Used in _best_projection_match_ipa when IPA data is available for more
+# accurate projection comparison.  Keys are Arabic IPA consonants; values are
+# their expected English IPA realisations (ordered most-likely first).
+# ---------------------------------------------------------------------------
+_ARABIC_IPA_TO_ENGLISH_IPA: dict[str, list[str]] = {
+    "q": ["k", "g"],          # ق → k/g
+    "ʕ": ["", "h"],           # ع → deletion or h
+    "ħ": ["h", ""],           # ح → h or deletion
+    "χ": ["h", "k", "x"],     # خ → h/k/x
+    "ɣ": ["g", ""],           # غ → g or deletion
+    "sˤ": ["s"],              # ص → s
+    "tˤ": ["t"],              # ط → t
+    "dˤ": ["d"],              # ض → d
+    "ðˤ": ["z", "d"],         # ظ → z/d
+    "θ": ["θ", "t", "s"],     # ث → th/t/s
+    "ð": ["ð", "d", "z"],     # ذ → th/d/z
+    "dʒ": ["dʒ", "g", "ʒ"],  # ج → j/g/zh
+    "ʃ": ["ʃ", "s"],          # ش → sh/s
+}
 
 # ---------------------------------------------------------------------------
 # High-frequency English words — too common to be meaningful cognate evidence.
@@ -192,11 +246,101 @@ def _pairwise_swap_variants(skeleton: str) -> list[str]:
     return variants
 
 
+def _consonant_class_diversity(arabic_skel: str, english_skel: str) -> int:
+    """Count how many distinct consonant classes are shared between the two skeletons.
+
+    Uses the _CLASS_MAP from correspondence.py for a broader cross-lingual class
+    grouping (Arabic and English characters both mapped to the same class labels).
+    Returns the count of shared class labels -- higher = more diverse match.
+    """
+    from juthoor_cognatediscovery_lv2.discovery.correspondence import _CLASS_MAP
+
+    ar_classes = {_CLASS_MAP.get(c, "?") for c in arabic_skel if c in _CLASS_MAP}
+    en_classes = {_CLASS_MAP.get(c, "?") for c in english_skel if c in _CLASS_MAP}
+    shared = ar_classes & en_classes
+    shared.discard("?")
+    return len(shared)
+
+
+def _consonant_class(ch: str) -> str:
+    """Return a broad consonant class for partial-match credit (0.5 score)."""
+    _CLASSES = [
+        frozenset("pbfv"),          # labials
+        frozenset("tdszθðʃʒ"),      # dentals / sibilants
+        frozenset("kg"),            # velars
+        frozenset("mn"),            # nasals
+        frozenset("lr"),            # liquids
+        frozenset("hw"),            # glottals / glides
+    ]
+    for cls in _CLASSES:
+        if ch in cls:
+            return str(id(cls))
+    return ch  # unique class — no cross-class credit
+
+
+def _weighted_projection_score(
+    arabic_skeleton: str,
+    english_skeleton: str,
+    variants: tuple[str, ...],
+) -> tuple[float, str]:
+    """Score with position weights: position 0 (first consonant) counts most.
+
+    For each projected variant, align it position-by-position against the
+    English consonant skeleton and compute a weighted match score.
+
+    Match value per position:
+      1.0 — exact character match
+      0.5 — same broad consonant class
+      0.0 — no match
+
+    weighted_score = sum(match[i] * w[i]) / sum(w[i])
+
+    Only positions present in both the variant and the English skeleton are
+    scored; missing positions contribute 0 to the numerator.
+    """
+    if not arabic_skeleton or not english_skeleton or not variants:
+        return 0.0, ""
+
+    n = len(arabic_skeleton)  # number of Arabic consonant positions (usually 3)
+    # Build weight vector (pad with last weight if root longer than 3)
+    default_w = _POSITION_WEIGHTS.get(2, 0.7)
+    weights = [_POSITION_WEIGHTS.get(i, default_w) for i in range(n)]
+    total_weight = sum(weights)
+
+    best_score, best_var = 0.0, ""
+    eng_lower = english_skeleton.lower()
+
+    for var in variants:
+        clean = _strip_diacriticals(var).lower()
+        if not clean:
+            continue
+
+        # Align: walk both strings together up to the shorter length
+        aligned_len = min(len(clean), len(eng_lower), n)
+        numerator = 0.0
+        for i in range(aligned_len):
+            w = weights[i]
+            if i < len(clean) and i < len(eng_lower):
+                if clean[i] == eng_lower[i]:
+                    numerator += 1.0 * w
+                elif _consonant_class(clean[i]) == _consonant_class(eng_lower[i]):
+                    numerator += 0.5 * w
+
+        score = numerator / total_weight if total_weight > 0 else 0.0
+        if score > best_score:
+            best_score, best_var = score, var
+
+    return best_score, best_var
+
+
 def _best_projection_match(arabic_root: str, english_word: str) -> tuple[float, str]:
     eng_skel = _english_consonant_skeleton(english_word)
     if not eng_skel:
         return 0.0, ""
-    variants = project_root_sound_laws(arabic_root, include_group_expansion=True, max_variants=256)
+    try:
+        variants = project_root_by_target(arabic_root, "european")
+    except Exception:
+        variants = project_root_sound_laws(arabic_root, include_group_expansion=True, max_variants=256)
     if not variants:
         return 0.0, ""
     best_score, best_var = 0.0, ""
@@ -215,10 +359,17 @@ def _best_projection_match_ipa(arabic_root: str, ipa_skeleton: str) -> tuple[flo
     We map the Arabic projected variants (which produce Latin-like strings) against
     the IPA using a transliteration layer that maps common IPA consonants to their
     closest Latin equivalents before comparison.
+
+    Also applies _ARABIC_IPA_TO_ENGLISH_IPA normalisation to the skeleton so that
+    Arabic-specific IPA consonants (ق, ع, ح, etc.) are remapped to their expected
+    English realisations before comparison.
     """
     if not ipa_skeleton:
         return 0.0, ""
-    variants = project_root_sound_laws(arabic_root, include_group_expansion=True, max_variants=256)
+    try:
+        variants = project_root_by_target(arabic_root, "european")
+    except Exception:
+        variants = project_root_sound_laws(arabic_root, include_group_expansion=True, max_variants=256)
     if not variants:
         return 0.0, ""
 
@@ -245,6 +396,12 @@ def _best_projection_match_ipa(arabic_root: str, ipa_skeleton: str) -> tuple[flo
 
     # Multi-char IPA sequences first, then single-char map
     ipa_lat = ipa_skeleton
+    # Apply Arabic IPA → English IPA mapping (longest keys first to avoid partial matches)
+    for arabic_ipa, english_options in sorted(
+        _ARABIC_IPA_TO_ENGLISH_IPA.items(), key=lambda kv: -len(kv[0])
+    ):
+        if arabic_ipa in ipa_lat:
+            ipa_lat = ipa_lat.replace(arabic_ipa, english_options[0] if english_options else "")
     ipa_lat = ipa_lat.replace("tʃ", "ch").replace("dʒ", "j")
     ipa_lat = ipa_lat.replace("ʃ", "sh").replace("ʒ", "zh")
     ipa_lat = ipa_lat.replace("ŋ", "ng")
@@ -268,6 +425,29 @@ class PhoneticLawScorer:
     _morpheme_loaded: bool = False
 
     _ipa_lookup: Any = field(default=None)  # IPALookup — lazy-initialised
+
+    _synonym_families: dict[str, list[str]] = field(default_factory=dict)
+    _synonym_loaded: bool = False
+
+    def _get_synonym_families(self) -> dict[str, list[str]]:
+        """Lazy-load synonym families from LV1 data. Returns empty dict if file missing."""
+        if self._synonym_loaded:
+            return self._synonym_families
+        self._synonym_loaded = True
+        here = Path(__file__).resolve()
+        repo_root = here.parents[4]
+        families_path = (
+            repo_root
+            / "Juthoor-ArabicGenome-LV1"
+            / "data"
+            / "theory_canon"
+            / "roots"
+            / "synonym_families_full.jsonl"
+        )
+        if families_path.exists():
+            from juthoor_cognatediscovery_lv2.discovery.synonym_expansion import load_synonym_families
+            self._synonym_families = load_synonym_families(str(families_path))
+        return self._synonym_families
 
     def _get_ipa_lookup(self) -> Any:
         """Lazy-initialise and return the IPALookup instance."""
@@ -361,6 +541,19 @@ class PhoneticLawScorer:
 
         ar_skel = _arabic_consonant_skeleton(arabic_root)
         eng_skel = _english_consonant_skeleton(english_lemma)
+
+        # --- V4: position-weighted scoring ---
+        try:
+            variants_for_pos = project_root_by_target(arabic_root, "european")
+        except Exception:
+            variants_for_pos = project_root_sound_laws(
+                arabic_root, include_group_expansion=True, max_variants=256
+            )
+        pos_weighted_score, pos_best_var = _weighted_projection_score(
+            ar_skel, eng_skel, variants_for_pos
+        )
+        if pos_best_var and not best_var:
+            best_var = pos_best_var
         primary_latin = _strip_diacriticals(
             "".join(LATIN_EQUIVALENTS.get(ch, (ch,))[0] for ch in ar_skel)
         )
@@ -427,7 +620,23 @@ class PhoneticLawScorer:
         if suffix_str in known_suffixes or prefix_str in known_prefixes:
             morpheme_bonus = 0.05
 
-        base_score = max(proj_score, direct_score, stem_score, ipa_proj_score)
+        # --- V5: Synonym family expansion ---
+        # If the primary root does not match well, try up to 3 synonym roots.
+        best_synonym_score = 0.0
+        synonyms_tried: list[str] = []
+        synonym_families = self._get_synonym_families()
+        if synonym_families and arabic_root:
+            from juthoor_cognatediscovery_lv2.discovery.synonym_expansion import expand_root
+            synonyms = expand_root(arabic_root, synonym_families)
+            for syn in synonyms[:3]:  # cap at 3 to avoid combinatorial explosion
+                if syn == arabic_root:
+                    continue
+                synonyms_tried.append(syn)
+                syn_score, _ = _best_projection_match(syn, english_lemma)
+                if syn_score > best_synonym_score:
+                    best_synonym_score = syn_score
+
+        base_score = max(proj_score, direct_score, stem_score, ipa_proj_score, pos_weighted_score, best_synonym_score)
         combined = (
             base_score
             + min(metathesis_score * 0.4, 0.12)  # raised from 0.3 to 0.4, cap 0.12
@@ -436,7 +645,16 @@ class PhoneticLawScorer:
         )
         combined = min(combined, 1.0)
 
-        # --- Frequency penalty (V3) ---
+        # --- V6: Consonant class diversity penalty ---
+        # A true cognate matches across DIVERSE consonant classes.
+        # Matches that share <2 distinct consonant classes are likely coincidental.
+        diversity = _consonant_class_diversity(ar_skel, eng_skel)
+        diversity_penalty_applied = False
+        if diversity < 2:
+            combined *= 0.6
+            diversity_penalty_applied = True
+
+                # --- Frequency penalty (V3) ---
         # Common function words match by coincidence — reduce their score to cut false positives.
         freq_penalty_applied = False
         if english_lemma.lower() in _HIGH_FREQ_WORDS:
@@ -460,6 +678,11 @@ class PhoneticLawScorer:
                 "ipa_proj_score": round(ipa_proj_score, 4),
                 "ipa_skeleton": ipa_skel or "",
                 "freq_penalty_applied": freq_penalty_applied,
+                "position_weighted_score": round(pos_weighted_score, 4),
+                "synonym_match": round(best_synonym_score, 4),
+                "synonyms_tried": len(synonyms_tried),
+                "consonant_diversity": diversity,
+                "diversity_penalty_applied": diversity_penalty_applied,
             },
         }
 
@@ -491,7 +714,13 @@ class PhoneticLawScorer:
         if ratio > 3.0 or ratio < 0.33:
             raw *= 0.5
 
-        # Optimal threshold = 0.50 (tuned to minimise false positives)
-        if raw < 0.50:
+        # V6: Sigmoid bonus curve -- sharply rewards high-confidence matches.
+        # Threshold raised to 0.55 (was 0.50); sigmoid centred at 0.70.
+        # Score 0.55-0.65: very small bonus (sigmoid approx 0.05-0.15 of max)
+        # Score 0.70: bonus approx 0.075 (half max)
+        # Score 0.85+: bonus approx 0.14 (near max)
+        if raw < 0.55:
             return 0.0
-        return round(min(0.15, (raw - 0.50) * 0.30), 6)
+        x = 10.0 * (raw - 0.70)
+        sigmoid = 1.0 / (1.0 + math.exp(-x))
+        return round(min(0.15, 0.15 * sigmoid), 6)

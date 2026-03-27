@@ -22,6 +22,8 @@ FEATURE_NAMES = (
     "weak_radical_match",
     "hamza_match",
     "genome_bonus",
+    "phonetic_law_bonus",
+    "source_coherence",
 )
 
 
@@ -43,6 +45,8 @@ def _feature_vector(entry: dict[str, Any]) -> np.ndarray:
             float(components.get("weak_radical_match", 0.0)),
             float(components.get("hamza_match", 0.0)),
             float(components.get("genome_bonus", 0.0)),
+            float(components.get("phonetic_law_bonus", 0.0)),
+            float(components.get("source_coherence", 0.0)),
         ],
         dtype=np.float32,
     )
@@ -82,6 +86,8 @@ class DiscoveryReranker:
             "weak_radical_match": 0.1,
             "hamza_match": 0.05,
             "genome_bonus": 0.0,
+            "phonetic_law_bonus": 0.3,
+            "source_coherence": 0.1,
         }
         self.model_type = "linear_baseline"
         if model_path and model_path.exists():
