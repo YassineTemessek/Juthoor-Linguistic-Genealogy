@@ -34,6 +34,7 @@ import math
 import re
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -122,11 +123,75 @@ _ARABIC_WEAK = set("اويى")
 
 # ---------------------------------------------------------------------------
 # Position weights (LV1 H8 — positional semantics)
-# Position 0 (first consonant) = semantic anchor → highest weight
-# Position 1 (second consonant) = core body → standard weight
-# Position 2 (third consonant) = modifier → lower weight
+# Default fallback if LV1 positional profile data is unavailable.
 # ---------------------------------------------------------------------------
 _POSITION_WEIGHTS: dict[int, float] = {0: 1.5, 1: 1.0, 2: 0.7}
+
+
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parents[4]
+
+
+def _positional_profiles_candidates() -> tuple[Path, ...]:
+    repo_root = _repo_root()
+    return (
+        repo_root
+        / "Juthoor-ArabicGenome-LV1"
+        / "outputs"
+        / "research_factory"
+        / "promoted"
+        / "promoted_features"
+        / "positional_profiles.jsonl",
+        repo_root
+        / "outputs"
+        / "research_factory"
+        / "promoted"
+        / "promoted_features"
+        / "positional_profiles.jsonl",
+    )
+
+
+@lru_cache(maxsize=1)
+def _load_position_weight_profiles() -> dict[str, dict[int, float]]:
+    profile_path = next((path for path in _positional_profiles_candidates() if path.exists()), None)
+    if profile_path is None:
+        return {}
+
+    rows: list[tuple[str, int, float]] = []
+    with profile_path.open("r", encoding="utf-8") as handle:
+        for raw_line in handle:
+            line = raw_line.strip()
+            if not line:
+                continue
+            payload = json.loads(line)
+            letter = str(payload.get("letter", ""))
+            positions = payload.get("positions", {})
+            for pos_key in ("1", "2", "3"):
+                coherence = positions.get(pos_key, {}).get("coherence")
+                if letter and isinstance(coherence, (int, float)):
+                    rows.append((letter, int(pos_key) - 1, float(coherence)))
+
+    if not rows:
+        return {}
+
+    mean_coherence = sum(coherence for _, _, coherence in rows) / len(rows)
+    if mean_coherence <= 0:
+        return {}
+
+    weights: dict[str, dict[int, float]] = {}
+    for letter, position, coherence in rows:
+        weights.setdefault(letter, {})[position] = coherence / mean_coherence
+    return weights
+
+
+def _position_weight_for(letter: str, position: int) -> float:
+    profile_weights = _load_position_weight_profiles()
+    if letter:
+        letter_weights = profile_weights.get(letter)
+        if letter_weights is not None and position in letter_weights:
+            return letter_weights[position]
+    default_w = _POSITION_WEIGHTS.get(2, 0.7)
+    return _POSITION_WEIGHTS.get(position, default_w)
 
 # ---------------------------------------------------------------------------
 # Arabic IPA to English IPA consonant mapping (V6)
@@ -302,9 +367,7 @@ def _weighted_projection_score(
         return 0.0, ""
 
     n = len(arabic_skeleton)  # number of Arabic consonant positions (usually 3)
-    # Build weight vector (pad with last weight if root longer than 3)
-    default_w = _POSITION_WEIGHTS.get(2, 0.7)
-    weights = [_POSITION_WEIGHTS.get(i, default_w) for i in range(n)]
+    weights = [_position_weight_for(arabic_skeleton[i], i) for i in range(n)]
     total_weight = sum(weights)
 
     best_score, best_var = 0.0, ""
