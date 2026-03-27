@@ -230,6 +230,23 @@ class GenomeScorer:
                 return support
         return None
 
+    def cross_family_coherence_signal(self, source_entry: dict) -> float | None:
+        """Return coherence score for the Arabic source root's binary nucleus.
+
+        Unlike genome_bonus(), this works for ANY pair — it only looks at the
+        Arabic source to assess how reliable/tight its semantic field is.
+        Returns None if root not found in coherence data.
+        """
+        self._ensure_loaded()
+        source_root = source_entry.get("root_norm") or source_entry.get("root") or source_entry.get("lemma", "")
+        if not source_root:
+            return None
+        for candidate in self._expand_arabic_root_family(str(source_root)):
+            score = self.root_coherence_score(candidate)
+            if score is not None:
+                return score
+        return None
+
     def genome_bonus(self, source_entry: dict, target_entry: dict) -> float:
         """Compute a genome-informed bonus for a candidate pair.
 

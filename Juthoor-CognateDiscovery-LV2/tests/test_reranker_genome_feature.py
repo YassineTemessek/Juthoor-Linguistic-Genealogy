@@ -15,7 +15,7 @@ def test_genome_bonus_is_last_feature():
     assert FEATURE_NAMES.index("genome_bonus") == 10
 
 
-def test_feature_vector_length_is_11():
+def test_feature_vector_length_is_13():
     entry = {
         "scores": {"semantic": 0.8, "form": 0.5},
         "hybrid": {
@@ -29,7 +29,7 @@ def test_feature_vector_length_is_11():
         },
     }
     vec = _feature_vector(entry)
-    assert len(vec) == 11
+    assert len(vec) == len(FEATURE_NAMES)
 
 
 def test_feature_vector_extracts_genome_bonus():
@@ -55,5 +55,5 @@ def test_feature_vector_defaults_genome_bonus_to_zero():
         "hybrid": {"components": {}, "family_boost_applied": False},
     }
     vec = _feature_vector(entry)
-    assert len(vec) == 11
+    assert len(vec) == len(FEATURE_NAMES)
     assert vec[10] == 0.0
