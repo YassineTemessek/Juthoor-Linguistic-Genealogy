@@ -24,6 +24,7 @@ FEATURE_NAMES = (
     "genome_bonus",
     "phonetic_law_bonus",
     "source_coherence",
+    "multi_method_score",
 )
 
 
@@ -47,6 +48,7 @@ def _feature_vector(entry: dict[str, Any]) -> np.ndarray:
             float(components.get("genome_bonus", 0.0)),
             float(components.get("phonetic_law_bonus", 0.0)),
             float(components.get("source_coherence", 0.0)),
+            float(components.get("multi_method_best_score", 0.0)),
         ],
         dtype=np.float32,
     )
@@ -88,6 +90,7 @@ class DiscoveryReranker:
             "genome_bonus": 0.0,
             "phonetic_law_bonus": 0.3,
             "source_coherence": 0.1,
+            "multi_method_score": 0.0,
         }
         self.model_type = "linear_baseline"
         if model_path and model_path.exists():

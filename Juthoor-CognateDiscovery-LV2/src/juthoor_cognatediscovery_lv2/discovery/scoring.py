@@ -11,6 +11,7 @@ from .correspondence import correspondence_features
 if TYPE_CHECKING:
     from .genome_scoring import GenomeScorer
     from .phonetic_law_scorer import PhoneticLawScorer
+    from .multi_method_scorer import MultiMethodScorer
 
 
 def _norm(value: Any) -> str:
@@ -130,11 +131,45 @@ def _apply_phonetic_law_bonus(
     return boosted
 
 
+def _apply_multi_method_bonus(
+    hybrid: dict[str, Any],
+    *,
+    source_fields: dict[str, Any],
+    target_fields: dict[str, Any],
+    multi_method_scorer: "MultiMethodScorer",
+    semantic_score: float | None = None,
+) -> dict[str, Any]:
+    boosted = dict(hybrid)
+    components = dict(boosted.get("components") or {})
+
+    result = multi_method_scorer.score_pair(source_fields, target_fields)
+
+    components["multi_method_best_score"] = round(result.best_score, 6)
+    components["multi_method_best_method"] = result.best_method
+    components["multi_method_fired_count"] = len(result.methods_that_fired)
+
+    # Scale: cap bonus at 0.12, using sigmoid-like scaling
+    bonus = min(0.12, result.best_score * 0.15)
+
+    # Semantic guard: reduce bonus when meanings are very different
+    if bonus > 0.0 and semantic_score is not None and semantic_score < 0.25:
+        bonus *= 0.5
+
+    components["multi_method_bonus"] = round(bonus, 6)
+    boosted["components"] = components
+    if bonus == 0.0:
+        return boosted
+    base_score = float(boosted.get("combined_score") or 0.0)
+    boosted["combined_score"] = round(min(1.0, base_score + bonus), 6)
+    return boosted
+
+
 def apply_hybrid_scoring(
     candidates: dict[str, dict[str, Any]],
     weights: HybridWeights,
     genome_scorer: "GenomeScorer | None" = None,
     phonetic_law_scorer: "PhoneticLawScorer | None" = None,
+    multi_method_scorer: "MultiMethodScorer | None" = None,
 ) -> None:
     """
     Applies heuristic hybrid scoring to a dictionary of candidates.
@@ -189,6 +224,21 @@ def apply_hybrid_scoring(
         else:
             components = dict(hybrid.get("components") or {})
             components.setdefault("phonetic_law_bonus", 0.0)
+            hybrid = dict(hybrid)
+            hybrid["components"] = components
+        if multi_method_scorer is not None:
+            semantic_score = entry["scores"].get("semantic")
+            hybrid = _apply_multi_method_bonus(
+                hybrid,
+                source_fields=src_fields,
+                target_fields=tgt_fields,
+                multi_method_scorer=multi_method_scorer,
+                semantic_score=float(semantic_score) if semantic_score is not None else None,
+            )
+        else:
+            components = dict(hybrid.get("components") or {})
+            components.setdefault("multi_method_best_score", 0.0)
+            components.setdefault("multi_method_bonus", 0.0)
             hybrid = dict(hybrid)
             hybrid["components"] = components
         entry["hybrid"] = hybrid
@@ -253,10 +303,12 @@ class DiscoveryScorer:
         weights: HybridWeights | None = None,
         genome_scorer: "GenomeScorer | None" = None,
         phonetic_law_scorer: "PhoneticLawScorer | None" = None,
+        multi_method_scorer: "MultiMethodScorer | None" = None,
     ):
         self.weights = weights or HybridWeights()
         self.genome_scorer = genome_scorer
         self.phonetic_law_scorer = phonetic_law_scorer
+        self.multi_method_scorer = multi_method_scorer
 
     def score(self, candidates: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
         apply_hybrid_scoring(
@@ -264,6 +316,7 @@ class DiscoveryScorer:
             self.weights,
             genome_scorer=self.genome_scorer,
             phonetic_law_scorer=self.phonetic_law_scorer,
+            multi_method_scorer=self.multi_method_scorer,
         )
         # Clean up temporary fields used for scoring but not needed in output
         for entry in candidates.values():
