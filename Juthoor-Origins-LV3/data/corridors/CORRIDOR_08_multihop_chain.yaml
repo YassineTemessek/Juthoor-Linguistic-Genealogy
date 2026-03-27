@@ -1,0 +1,33 @@
+id: CORRIDOR_08
+name: "Multi-Hop Chain (via Latin/Greek)"
+description: >
+  Arabic words often entered European languages through Latin or Greek
+  intermediaries. The multi-hop chain traces: Arabic → Latin/Greek →
+  Modern European. This corridor captures historical transmission paths
+  rather than direct genetic inheritance.
+attested_examples:
+  - example: "قطن (quṭn, 'cotton') → Latin 'cottō' → English 'cotton'"
+    notes: "Arabic→Latin→English chain via trade contact"
+  - example: "صفر (ṣifr, 'zero/empty') → Latin 'zephirum' → English 'zero/cipher'"
+    notes: "Mathematical term transmission via Latin"
+  - example: "قميص (qamīṣ, 'shirt') → Latin 'camisia' → French 'chemise'"
+    notes: "Textile vocabulary via Latin intermediary"
+sources:
+  - "Historical linguistics: Arabic loanwords in medieval Latin"
+  - "LV2 MultiMethodScorer: multi_hop_chain method"
+empirical_evidence:
+  method_fires: 569
+  strongest_for: "Hebrew (255 fires, 11.8%)"
+  note: "Hebrew fires unexpectedly high — may indicate shared Semitic→Greek pathway"
+  also_fires_for: "English (125), Greek (113), Latin (76)"
+limitations:
+  - "Multi-hop introduces compounding sound shifts — each hop adds noise"
+  - "Cannot always distinguish: Arabic→Latin→English vs Latin→English (no Arabic)"
+  - "Requires historical contact evidence (trade routes, conquest, scholarship)"
+validation_notes:
+  - "Verify Latin intermediate exists in Latin corpus (LV0 has 884K Latin entries)"
+  - "Check chronology: Arabic form must predate or be contemporary with Latin form"
+  - "Cross-validate: if Arabic→Latin AND Arabic→English match, chain is plausible"
+language_pairs: ["ara-eng", "ara-lat", "ara-grc", "ara-fra", "ara-spa"]
+lv1_support: "None directly — this is a transmission pathway, not a root property"
+discovery_method: "multi_hop_chain"

@@ -1,0 +1,34 @@
+id: CORRIDOR_06
+name: "Binary Root Nucleus"
+description: >
+  The first two consonants of a triliteral Arabic root form a "binary
+  nucleus" that defines a broad semantic field. LV1 hypothesis H2 showed
+  these fields are statistically coherent (mean cosine=0.540 vs baseline
+  0.518, >11 sigma). Cross-linguistically, if two languages share the
+  same binary nucleus pattern, they likely share the semantic field.
+attested_examples:
+  - example: "كتب (k-t) binary nucleus → covers: kitāb (book), kātib (writer), maktūb (written)"
+    notes: "k-t nucleus defines 'writing' field. English: 'cut' shares k-t."
+  - example: "سم (s-m) binary nucleus → covers: ism (name), samā' (sky/elevation)"
+    notes: "s-m field is broad: naming, elevation, poison (samm)"
+  - example: "قل (q-l) binary nucleus → covers: qalb (heart), qalīl (little), qaul (speech)"
+    notes: "q-l defines a field of inner motion/core"
+sources:
+  - "LV1 Research Factory: H2 (field coherence) — >11 sigma above baseline"
+  - "LV1 promoted: field_coherence_scores.jsonl (396 families tested)"
+empirical_evidence:
+  lv1_h2_mean_coherence: 0.540
+  lv1_h2_baseline: 0.518
+  lv1_h2_sigma: ">11"
+  families_tested: 396
+limitations:
+  - "Binary nuclei are only 2 consonants — chance overlap is higher than triliteral"
+  - "Some binary nuclei are polysemous (multiple unrelated fields)"
+  - "Cross-family binary matching inflates false positives"
+validation_notes:
+  - "Only use binary nucleus as SUPPORTING evidence, never as primary"
+  - "Require at least 1 additional corridor match (phonetic law, metathesis) to validate"
+  - "Use LV1 coherence score as confidence weight"
+language_pairs: ["ara-heb", "ara-eng", "ara-lat", "ara-grc", "ara-arc"]
+lv1_support: "H2 (field coherence — primary evidence)"
+discovery_method: "direct_skeleton"

@@ -1,0 +1,36 @@
+id: CORRIDOR_03
+name: "Article Absorption (al-)"
+description: >
+  The Arabic definite article ال (al-) is absorbed into loanwords entering
+  European languages, becoming an inseparable part of the word. This is
+  the highest-precision corridor — when detected, it almost certainly
+  indicates Arabic origin (not coincidental similarity).
+attested_examples:
+  - example: "الكحل (al-kuḥl, 'antimony') → English 'alcohol'"
+    notes: "al- + kuḥl. Original meaning shifted: antimony powder → distilled spirits"
+  - example: "الجبر (al-jabr, 'restoration') → English 'algebra'"
+    notes: "al- + jabr. Mathematical term from al-Khwarizmi"
+  - example: "الكيمياء (al-kīmiyā', 'alchemy') → English 'alchemy/chemistry'"
+    notes: "al- + Greek khēmeia. Double etymology pathway"
+  - example: "القلي (al-qalī, 'potash') → English 'alkali'"
+    notes: "al- + qalī. Chemical term"
+  - example: "المغزل (al-mighzal, 'spindle') → English 'magazine' via Italian/French"
+    notes: "al- absorbed through multi-hop chain"
+sources:
+  - "Well-documented in historical linguistics (Arabic loanwords in European languages)"
+  - "LV2 MultiMethodScorer: article_detection method"
+empirical_evidence:
+  method_fires: 18
+  total_in_discovery: "0.2% of leads (very low fire rate)"
+  estimated_precision: ">0.90 (near-perfect when it fires)"
+limitations:
+  - "Only detects al- prefix. Other Arabic article forms (il-, ul-) not detected"
+  - "Some English words start with 'al-' by coincidence (e.g., 'always', 'also')"
+  - "Direction is always Arabic→European (one-way corridor)"
+validation_notes:
+  - "Every al- detection should be manually verifiable via etymology dictionaries"
+  - "False positive rate expected < 5%"
+  - "Cross-reference with Latin/Spanish cognates for confirmation"
+language_pairs: ["ara-eng", "ara-lat", "ara-spa", "ara-fra"]
+lv1_support: "None directly — article is a morphological feature, not a root feature"
+discovery_method: "article_detection"

@@ -1,0 +1,31 @@
+id: CORRIDOR_05
+name: "Position-1 Semantic Anchor"
+description: >
+  The first consonant of a triliteral Arabic root carries the most semantic
+  weight. LV1 hypothesis H8 showed 24/28 Arabic letters have statistically
+  significant positional effects (Kruskal-Wallis p<0.05). When matching
+  cross-linguistically, position 1 consonant match is worth 1.5× position 3.
+attested_examples:
+  - example: "كتب (k-t-b, 'write') → 'script' (s-k-r-p-t): k at position 1 matches"
+    notes: "Position 1 'k' anchors the semantic field of writing/inscription"
+  - example: "سمع (s-m-ʿ, 'hear') → 'sense' (s-n-s): s at position 1 matches"
+    notes: "Position 1 's' anchors the semantic field of perception"
+sources:
+  - "LV1 Research Factory: H8 (positional semantics) — 24/28 letters significant"
+  - "LV1 promoted: positional_profiles.jsonl (per-letter coherence at each position)"
+empirical_evidence:
+  method_fires: 1911
+  lv1_h8_significant_letters: "24/28 (86%)"
+  position_weights: {1: 1.5, 2: 1.0, 3: 0.7}
+  note: "Weights now loaded per-letter from LV1 data (not hardcoded)"
+limitations:
+  - "Position 1 weight (1.5×) is a heuristic — some letters have position 2 or 3 as strongest"
+  - "Not applicable to biliteral roots (only 2 positions)"
+  - "English doesn't have a root system — position mapping is approximate"
+validation_notes:
+  - "Test: if only position 1 matches, is semantic similarity still above chance?"
+  - "Compare position-weighted vs unweighted scoring on gold benchmark"
+  - "Use LV1 positional_profiles.jsonl for letter-specific weights"
+language_pairs: ["ara-eng", "ara-lat", "ara-grc"]
+lv1_support: "H8 (positional semantics — primary evidence)"
+discovery_method: "position_weighted"
