@@ -50,9 +50,46 @@ Despite the null model showing no overall significance, gold pairs ARE found at 
 4. **The convergent evidence framework remains valid** — if the same Arabic root matches 3+ languages via different methods, that's still stronger than a single match, even if individual matches aren't above random chance
 5. **The reranker's strongest signal (multi_method_score +1.39) may be capturing frequency effects** rather than linguistic relationships
 
+## Follow-Up: Gloss Similarity Filtering Also Shows No Signal
+
+**Test:** Added Jaccard-based gloss word overlap as semantic filter. Pairs with zero gloss overlap AND score < 0.85 are filtered out.
+
+**Results:** Phonetic-only: 1958 real vs 1958 null. Gloss-filtered: 56 real vs 56 null. **Still ratio 1.00x.**
+
+**Interpretation:** Even gloss word overlap is driven by word frequency, not cognate relationships. Common English gloss words (like "place", "person", "thing") overlap with Arabic gloss translations at the same rate regardless of whether the Arabic root is real or shuffled.
+
+## Follow-Up: Per-Corridor Null Model
+
+Tested each of the 12 methods individually. **All 12 show ratio 1.00x.** No single method beats random chance:
+- direct_skeleton: 471 real vs 471 null (1.00x)
+- ipa_scoring: 248 vs 248 (1.00x)
+- reverse_root: 203 vs 203 (1.00x)
+- position_weighted: 120 vs 121 (0.99x)
+- morpheme_decomposition: 92 vs 92 (1.00x)
+- metathesis: 58 vs 58 (1.00x)
+- guttural_projection: 43 vs 43 (1.00x)
+- multi_hop_chain: 23 vs 23 (1.00x)
+- emphatic_collapse: 11 vs 11 (1.00x)
+- article_detection: 7 vs 7 (1.00x)
+
+## What This Means for the Project
+
+The discovery pipeline's methods are detecting **frequency-driven consonant co-occurrence patterns**, not linguistic relationships. This is because:
+
+1. Arabic consonant frequency distribution determines which projections are generated
+2. English consonant frequency distribution determines which skeletons exist
+3. The match rate is a function of frequency overlap, not etymology
+
+**What DOES work:**
+- The consonant correspondence matrix (from expert-curated 861 gold pairs) IS empirically valid — it describes real historical patterns
+- The LV1 findings (H2, H5, H8, H12) ARE statistically significant within Arabic
+- The GenomeScorer for Semitic-Semitic pairs (MRR 0.837) uses embedding-based semantic filtering
+
+**What the pipeline needs:** True semantic similarity from embedding models (BGE-M3, not just gloss word overlap) to provide the discriminative power that consonant matching alone cannot provide.
+
 ## Recommended Next Steps
 
-1. Run null model test with **full-mode pipeline** (semantic + form embeddings)
-2. Re-compute corridor validation statistics using semantic-filtered leads only
-3. Add semantic_score as a REQUIRED filter (not optional guard) for any claim
-4. The consonant correspondence matrix (3,461 alignments from gold pairs) remains valid because those ARE expert-curated cognates — but the discovery pipeline's ability to FIND them in the wild needs semantic filtering
+1. Run null model with **BGE-M3 embedding-based semantic scores** — this is the only remaining option for statistical validation of cross-family discovery
+2. The consonant correspondence matrix from gold pairs remains the project's strongest empirical artifact
+3. Focus on Semitic-Semitic discovery (GenomeScorer + embeddings) where statistical significance IS achieved (MRR 0.837)
+4. Treat cross-family consonant-only discovery as a **recall tool** (finds candidates) not an **evidence tool** (proves cognacy)
