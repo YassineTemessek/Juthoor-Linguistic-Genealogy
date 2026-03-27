@@ -1,0 +1,40 @@
+id: CORRIDOR_10
+name: "Root Meaning Predictability (Linguistic Genome)"
+description: >
+  Arabic root meaning is predictable from its consonant structure with
+  cosine similarity 0.716 (H12). The binary nucleus carries ~72% of
+  meaning, while the third consonant specializes it. This suggests the
+  Arabic root system operates as a "linguistic genome" where consonant
+  combinations encode semantic information systematically. If this
+  encoding is shared across language families, it would support deep
+  linguistic genealogy.
+attested_examples:
+  - example: "ك-ت (k-t binary nucleus) → field of cutting/writing"
+    notes: "كتب (write), كتف (shoulder/cut), all share k-t nucleus"
+  - example: "ق-ل (q-l binary nucleus) → field of core/inner motion"
+    notes: "قلب (heart), قلم (pen), قال (said)"
+  - example: "ر-ك (r-k binary nucleus) → field of riding/mounting"
+    notes: "ركب (ride), ركز (plant/fix), ركع (kneel)"
+sources:
+  - "LV1 Research Factory: H12 (meaning predictability)"
+  - "LV1 Axis 6: meaning predictor AUC=0.739, cosine=0.716"
+  - "LV1 promoted: meaning_predictor_predictions.jsonl (1,721 roots)"
+empirical_evidence:
+  h12_cosine_similarity: 0.716
+  h12_phantom_root_auc: 0.739
+  roots_analyzed: 1721
+  h2_field_coherence: 0.540
+  h2_sigma_above_baseline: ">11"
+limitations:
+  - "Predictability applies to Arabic specifically — not tested on other Semitic languages"
+  - "0.716 cosine means ~28% of meaning is NOT predicted by structure"
+  - "Cross-linguistic extension is hypothetical — needs validation per language pair"
+  - "Could be a property of Arabic morphology, not a universal linguistic principle"
+validation_notes:
+  - "Test H12 on Hebrew/Aramaic roots: if binary nuclei predict meaning there too, supports universality"
+  - "Compare Arabic root predictability vs random baseline (should be much higher)"
+  - "The 'genome' metaphor needs rigorous definition — what exactly is the encoding?"
+  - "Publication requires: (1) cross-validation on held-out roots, (2) comparison with non-Semitic languages"
+language_pairs: ["all — foundational hypothesis"]
+lv1_support: "H12 (meaning predictability — primary), H2 (field coherence — supporting)"
+discovery_method: "root_quality_scorer (H12-based)"

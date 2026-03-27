@@ -1,0 +1,35 @@
+id: CORRIDOR_02
+name: "Emphatic Collapse"
+description: >
+  Arabic emphatic consonants (ص ṣād, ض ḍād, ط ṭā', ظ ẓā') lose their
+  pharyngealized articulation in Indo-European languages, collapsing to
+  their plain counterparts (s, d, t, z). This is a systematic phonological
+  simplification that occurs because IE languages lack the emphatic
+  phonemic distinction.
+attested_examples:
+  - example: "صبر (ṣabr, 'patience') → English 'super' (ṣ→s, b→p)"
+    notes: "Emphatic ṣ→s + bilabial voicing shift"
+  - example: "طريق (ṭarīq, 'road') → English 'track' (ṭ→t, r→r)"
+    notes: "Emphatic ṭ→t, preserved r, q→ck"
+  - example: "ضرب (ḍarb, 'strike') → English 'drub' (ḍ→d)"
+    notes: "Emphatic ḍ→d with metathesis"
+  - example: "صخر (ṣaḫr, 'rock') → English 'sacr-' (sacred) via Latin"
+    notes: "ṣ→s through Latin pathway"
+sources:
+  - "Standard Semitic phonology: emphatic/plain opposition"
+  - "LV2 MultiMethodScorer: emphatic_collapse method"
+empirical_evidence:
+  method_fires: 103
+  languages_found_in: ["eng", "lat", "grc", "heb"]
+  discovery_proportion: "1.1% of all leads"
+limitations:
+  - "Emphatics are low-frequency in the dataset — only 103 total fires"
+  - "Cannot distinguish emphatic collapse from simple consonant identity (s=s)"
+  - "Some 'emphatic' pairs may be coincidental plain consonant matches"
+validation_notes:
+  - "Compare emphatic match rate vs plain consonant match rate"
+  - "If ṣ→s rate ≈ س→s rate, the emphatic distinction adds no signal"
+  - "Cross-validate with Aramaic (which preserves some emphatic distinction)"
+language_pairs: ["ara-eng", "ara-lat"]
+lv1_support: "H8 (positional semantics — emphatics tend to occur in specific positions)"
+discovery_method: "emphatic_collapse"

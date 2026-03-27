@@ -1,0 +1,33 @@
+id: CORRIDOR_07
+name: "Morpheme Decomposition"
+description: >
+  Indo-European languages use prefixes and suffixes that obscure the
+  underlying root. Stripping known affixes (un-, re-, -tion, -ment, -er,
+  -ing) reveals a consonant stem that may match an Arabic root. This
+  corridor is IE-specific and does not apply to Semitic target languages.
+attested_examples:
+  - example: "كتب (k-t-b) → 'inscription' (in-scrip-tion): strip in- and -tion → 'scrip' → s-k-r-p"
+    notes: "Prefix 'in-' + suffix '-tion' removed, stem matches ktb via k→c shift"
+  - example: "كتب (k-t-b) → 'scriber' (scrib-er): strip -er → 'scrib' → s-c-r-b"
+    notes: "Agent suffix -er removed"
+  - example: "عصفر (ʿ-ṣ-f-r) → 'saffron': strip -on suffix → 'saffr' → s-f-r (guttural deleted)"
+    notes: "Combined morpheme decomposition + guttural deletion"
+sources:
+  - "Standard morphological analysis of English/Latin/Greek"
+  - "LV2 MultiMethodScorer: morpheme_decomposition method"
+empirical_evidence:
+  method_fires: 631
+  strongest_for: "English (339 fires, 11.0% of ara-eng leads)"
+  also_fires_for: "Latin (270 fires, 9.1% of ara-lat leads)"
+  weakest_for: "Hebrew (16 fires, 0.7%) — expected: Hebrew has no IE affixes"
+limitations:
+  - "Over-decomposition: stripping too many affixes can create false stem matches"
+  - "English has productive derivation — nearly any word can be decomposed"
+  - "Some stems after stripping are too short (1-2 consonants) for reliable matching"
+validation_notes:
+  - "Require stem length ≥ 3 consonants after decomposition"
+  - "Verify semantic relationship between Arabic root and decomposed English stem"
+  - "Cross-validate: if stem matches via morpheme AND direct skeleton, stronger evidence"
+language_pairs: ["ara-eng", "ara-lat", "ara-fra", "ara-deu"]
+lv1_support: "Indirect — H8 position weights apply to the stem after decomposition"
+discovery_method: "morpheme_decomposition"
