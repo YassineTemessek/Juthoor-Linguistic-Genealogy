@@ -1,0 +1,7 @@
+{
+  "file": "C:\\Users\\yassi\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-DataCore-LV0\\data\\processed\\akkadian\\sources\\kaikki.jsonl",
+  "sha256": "b30b123fc108fe5089d062415c83f893ac3299c425e3eb43c8a081611afbf390",
+  "row_count": 50,
+  "schema_version": "lv0.7",
+  "generated_by": "ingest_kaikki.py:akk"
+}

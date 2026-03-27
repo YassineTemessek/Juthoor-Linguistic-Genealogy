@@ -73,6 +73,12 @@ ARC_RECORD = json.dumps({
     "sounds": [{"ipa": "/kəθaḇ/"}],
 })
 
+AKK_RECORD = json.dumps({
+    "word": "sharru", "lang_code": "akk", "pos": "noun",
+    "senses": [{"glosses": ["king"]}],
+    "sounds": [{"ipa": "/ʃar.ru/"}],
+})
+
 
 # ---------------------------------------------------------------------------
 # Helper
@@ -87,7 +93,7 @@ def _parse(raw_json: str) -> dict | None:
 # ---------------------------------------------------------------------------
 
 def test_lang_map_covers_all_targets():
-    assert set(ingest_kaikki.LANG_MAP.keys()) == {"grc", "la", "ang", "enm", "en", "he", "fa", "arc"}
+    assert set(ingest_kaikki.LANG_MAP.keys()) == {"grc", "la", "ang", "enm", "en", "he", "fa", "arc", "akk"}
 
 
 def test_parse_greek_record():
@@ -153,6 +159,15 @@ def test_parse_aramaic():
     assert rec["stage"] == "classical"
     assert rec["script"] == "Hebr"
     assert rec["gloss_plain"] == "to write"
+
+
+def test_parse_akkadian():
+    rec = _parse(AKK_RECORD)
+    assert rec is not None
+    assert rec["language"] == "akk"
+    assert rec["stage"] == "ancient"
+    assert rec["script"] == "Xsux"
+    assert rec["gloss_plain"] == "king"
 
 
 def test_ingest_lines_deduplicates_ids(tmp_path):
