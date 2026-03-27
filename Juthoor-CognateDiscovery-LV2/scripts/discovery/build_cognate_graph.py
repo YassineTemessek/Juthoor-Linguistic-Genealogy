@@ -227,21 +227,21 @@ def _print_summary(graph: dict) -> None:
     edges = graph["edges"]
 
     _safe_print("\n" + "=" * 60)
-    print("COGNATE GRAPH SUMMARY")
-    print("=" * 60)
-    print(f"Total nodes : {stats['total_nodes']:,}")
-    print(f"Total edges : {stats['total_edges']:,}")
-    print(f"Languages   : {', '.join(stats['languages'])}")
-    print(f"Avg score   : {stats['avg_score']}")
-    print(f"Min-score   : {stats['min_score_filter']}")
+    _safe_print("COGNATE GRAPH SUMMARY")
+    _safe_print("=" * 60)
+    _safe_print(f"Total nodes : {stats['total_nodes']:,}")
+    _safe_print(f"Total edges : {stats['total_edges']:,}")
+    _safe_print(f"Languages   : {', '.join(stats['languages'])}")
+    _safe_print(f"Avg score   : {stats['avg_score']}")
+    _safe_print(f"Min-score   : {stats['min_score_filter']}")
 
-    print("\n--- Nodes per language ---")
+    _safe_print("\n--- Nodes per language ---")
     for lang, count in sorted(stats["nodes_by_lang"].items()):
-        print(f"  {lang:<10} {count:>6,}")
+        _safe_print(f"  {lang:<10} {count:>6,}")
 
-    print("\n--- Edges per language pair ---")
+    _safe_print("\n--- Edges per language pair ---")
     for pair, count in stats["lang_pair_counts"].items():
-        print(f"  {pair:<16} {count:>6,}")
+        _safe_print(f"  {pair:<16} {count:>6,}")
 
     # Top 20 most-connected Arabic roots
     ara_nodes = [
@@ -251,14 +251,14 @@ def _print_summary(graph: dict) -> None:
     top20 = ara_nodes[:20]
 
     if top20:
-        print("\n--- Top 20 most-connected Arabic roots ---")
-        print(f"  {'Root':<12} {'Lemma':<20} {'Connections':>11}")
-        print("  " + "-" * 45)
+        _safe_print("\n--- Top 20 most-connected Arabic roots ---")
+        _safe_print(f"  {'Root':<12} {'Lemma':<20} {'Connections':>11}")
+        _safe_print("  " + "-" * 45)
         for nid, n in top20:
             root = n["root"] or n["lemma"]
-            print(f"  {root:<12} {n['lemma']:<20} {n['connections']:>11,}")
+            _safe_print(f"  {root:<12} {n['lemma']:<20} {n['connections']:>11,}")
 
-    print("=" * 60 + "\n")
+    _safe_print("=" * 60 + "\n")
 
 
 # ---------------------------------------------------------------------------
