@@ -70,6 +70,17 @@ class TrainingExample:
     relation: str
 
 
+@dataclass(frozen=True)
+class TrainingMetrics:
+    accuracy: float
+    total_examples: int
+    positive_examples: int
+    negative_examples: int
+    epochs: int
+    learning_rate: float
+    l2: float
+
+
 class DiscoveryReranker:
     """Small logistic reranker over existing LV2 similarity features."""
 
@@ -133,6 +144,53 @@ class DiscoveryReranker:
         for entry in candidates:
             entry["rerank_score"] = self.predict_one(entry)
         return sorted(candidates, key=lambda item: item["rerank_score"], reverse=True)
+
+    def train(
+        self,
+        examples: list[TrainingExample],
+        *,
+        learning_rate: float = 0.5,
+        epochs: int = 400,
+        l2: float = 0.01,
+    ) -> TrainingMetrics:
+        if not examples:
+            raise ValueError("No training examples were provided.")
+
+        labels = np.array([row.label for row in examples], dtype=np.float32)
+        if len(set(labels.tolist())) < 2:
+            raise ValueError("Training requires at least one positive and one negative example.")
+
+        features = np.stack([row.features for row in examples], axis=0)
+        weights = np.zeros(features.shape[1], dtype=np.float32)
+        bias = 0.0
+
+        for _ in range(max(int(epochs), 1)):
+            logits = features @ weights + bias
+            probs = _sigmoid(logits)
+            error = probs - labels
+            grad_w = (features.T @ error) / len(features) + (l2 * weights)
+            grad_b = float(np.mean(error))
+            weights -= learning_rate * grad_w
+            bias -= learning_rate * grad_b
+
+        logits = features @ weights + bias
+        probs = _sigmoid(logits)
+        predictions = (probs >= 0.5).astype(np.float32)
+        accuracy = float(np.mean(predictions == labels))
+
+        self.model_type = "logistic_regression"
+        self.bias = float(bias)
+        self.weights = {name: float(weights[idx]) for idx, name in enumerate(FEATURE_NAMES)}
+        self.save()
+        return TrainingMetrics(
+            accuracy=round(accuracy, 6),
+            total_examples=len(examples),
+            positive_examples=int(np.sum(labels == 1.0)),
+            negative_examples=int(np.sum(labels == 0.0)),
+            epochs=max(int(epochs), 1),
+            learning_rate=float(learning_rate),
+            l2=float(l2),
+        )
 
 
 def _candidate_key(entry: dict[str, Any]) -> tuple[str, str, str, str]:
@@ -229,28 +287,13 @@ def train_reranker(
     if not examples:
         raise ValueError("No training examples matched the discovery leads.")
 
-    labels = np.array([row.label for row in examples], dtype=np.float32)
-    if len(set(labels.tolist())) < 2:
-        raise ValueError("Training requires at least one positive and one negative example.")
-
-    features = np.stack([row.features for row in examples], axis=0)
-    weights = np.zeros(features.shape[1], dtype=np.float32)
-    bias = 0.0
-
-    for _ in range(max(int(epochs), 1)):
-        logits = features @ weights + bias
-        probs = _sigmoid(logits)
-        error = probs - labels
-        grad_w = (features.T @ error) / len(features) + (l2 * weights)
-        grad_b = float(np.mean(error))
-        weights -= learning_rate * grad_w
-        bias -= learning_rate * grad_b
-
     model = DiscoveryReranker(output_model_path)
-    model.model_type = "logistic_regression"
-    model.bias = float(bias)
-    model.weights = {name: float(weights[idx]) for idx, name in enumerate(FEATURE_NAMES)}
-    model.save()
+    model.train(
+        examples,
+        learning_rate=learning_rate,
+        epochs=epochs,
+        l2=l2,
+    )
     return model
 
 
