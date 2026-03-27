@@ -99,7 +99,16 @@ Based on the three-tier anchor gate system:
 
 ## 5. Limitations & Challenges
 
-### 5.1 False Positive Problem
+### 5.1 Statistical Validation (CRITICAL UPDATE)
+**Null model permutation testing revealed that the fast-mode discovery pipeline produces results INDISTINGUISHABLE from random chance** (z-score = 0.0, p = 0.5). All 12 methods individually show ratio 1.00x (real vs shuffled Arabic roots). Even adding gloss-based semantic filtering did not improve discrimination.
+
+**Root cause:** Consonant frequency distributions in Arabic and English determine match rates. Shuffling Arabic roots preserves these frequencies, so match counts are identical. The methods detect consonant co-occurrence patterns, not etymological relationships.
+
+**What remains valid:** (1) LV1 internal findings (H2, H5, H8, H12) are statistically significant within Arabic; (2) the expert-curated consonant correspondence matrix (3,461 alignments) describes real historical patterns; (3) GenomeScorer for Semitic-Semitic pairs achieves MRR 0.837 with embedding-based scoring.
+
+**Path forward:** BGE-M3 embedding-based semantic similarity (full-mode pipeline) is required for any publishable cross-family claims. An MRR-based null model (ranking correct cognate vs distractors) is being tested as a more appropriate evaluation.
+
+### 5.2 False Positive Problem
 The fast-mode pipeline (no semantic embeddings) generates high false positive rates. The reranker revealed that skeleton (-0.70) and orthography (-0.54) features are ANTI-correlated with true cognates — meaning surface-level similarity is actually a counter-indicator.
 
 ### 5.2 Directionality Ambiguity
