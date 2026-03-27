@@ -6,6 +6,10 @@ into expected English consonant patterns and scores the match.
 V2 additions:
 - Morpheme-aware scoring: strip known prefixes/suffixes, score the stem
 - Improved metathesis: try pairwise adjacent-consonant swaps (partial metathesis)
+
+V3 additions:
+- IPA-based consonant skeleton (more accurate than orthographic for English)
+- Frequency penalty for high-frequency function words
 """
 from __future__ import annotations
 
@@ -92,6 +96,34 @@ _DIACRITICAL_MAP = str.maketrans(
 _ENG_CONSONANTS_RE = re.compile(r"[bcdfghjklmnpqrstvwxyz]")
 _ARABIC_WEAK = set("اويى")
 
+# ---------------------------------------------------------------------------
+# High-frequency English words — too common to be meaningful cognate evidence.
+# These words match by coincidence and inflate false-positive rates.
+# ---------------------------------------------------------------------------
+_HIGH_FREQ_WORDS: frozenset[str] = frozenset({
+    # Top-200 most frequent English words (function words + very common content words)
+    "the", "be", "to", "of", "and", "a", "in", "that", "have", "i",
+    "it", "for", "not", "on", "with", "he", "as", "you", "do", "at",
+    "this", "but", "his", "by", "from", "they", "we", "say", "her", "she",
+    "or", "an", "will", "my", "one", "all", "would", "there", "their", "what",
+    "so", "up", "out", "if", "about", "who", "get", "which", "go", "me",
+    "when", "make", "can", "like", "time", "no", "just", "him", "know", "take",
+    "people", "into", "year", "your", "good", "some", "could", "them", "see",
+    "other", "than", "then", "now", "look", "only", "come", "its", "over",
+    "think", "also", "back", "after", "use", "two", "how", "our", "work",
+    "first", "well", "way", "even", "new", "want", "because", "any", "these",
+    "give", "day", "most", "us", "great", "between", "need", "large", "often",
+    "hand", "high", "place", "hold", "turn", "been", "every", "find", "here",
+    "thing", "tell", "much", "before", "own", "had", "very", "were", "more",
+    "was", "has", "are", "am", "is", "did", "does", "done", "got", "gets",
+    "may", "might", "must", "shall", "should", "let", "set", "put", "go",
+    "too", "very", "still", "while", "down", "long", "same", "old", "little",
+    "few", "both", "those", "through", "where", "again", "right", "big",
+    "different", "next", "hard", "real", "life", "few", "north", "open",
+    "seem", "together", "next", "white", "children", "begin", "got", "walk",
+    "example", "ease", "paper", "often", "always", "music", "those", "both",
+})
+
 # Known English prefixes and suffixes that can hide the Arabic root
 _KNOWN_PREFIXES: tuple[str, ...] = (
     "auto", "anti", "semi", "hyper", "super", "inter", "trans", "over",
@@ -176,6 +208,57 @@ def _best_projection_match(arabic_root: str, english_word: str) -> tuple[float, 
     return best_score, best_var
 
 
+def _best_projection_match_ipa(arabic_root: str, ipa_skeleton: str) -> tuple[float, str]:
+    """Like _best_projection_match but matches against an IPA consonant skeleton.
+
+    The IPA skeleton uses IPA consonant symbols rather than orthographic letters.
+    We map the Arabic projected variants (which produce Latin-like strings) against
+    the IPA using a transliteration layer that maps common IPA consonants to their
+    closest Latin equivalents before comparison.
+    """
+    if not ipa_skeleton:
+        return 0.0, ""
+    variants = project_root_sound_laws(arabic_root, include_group_expansion=True, max_variants=256)
+    if not variants:
+        return 0.0, ""
+
+    # IPA -> simplified Latin consonant map for comparison with projected variants
+    _IPA_TO_LATIN = str.maketrans({
+        "θ": "s",   # theta -> s (as in think)
+        "ð": "d",   # eth -> d
+        "ʃ": "sh",  # -- replaced below via .replace()
+        "ʒ": "zh",
+        "ŋ": "ng",
+        "ɹ": "r",
+        "ɾ": "r",
+        "ʁ": "r",
+        "χ": "kh",
+        "ħ": "h",
+        "ʕ": "",
+        "ɣ": "g",
+        "β": "b",
+        "ɸ": "f",
+        "ʔ": "",    # glottal stop
+        "ɫ": "l",
+        "ʍ": "wh",
+    })
+
+    # Multi-char IPA sequences first, then single-char map
+    ipa_lat = ipa_skeleton
+    ipa_lat = ipa_lat.replace("tʃ", "ch").replace("dʒ", "j")
+    ipa_lat = ipa_lat.replace("ʃ", "sh").replace("ʒ", "zh")
+    ipa_lat = ipa_lat.replace("ŋ", "ng")
+    ipa_lat = ipa_lat.translate(_IPA_TO_LATIN)
+
+    best_score, best_var = 0.0, ""
+    for var in variants:
+        clean = _strip_diacriticals(var)
+        score = SequenceMatcher(None, clean, ipa_lat).ratio()
+        if score > best_score:
+            best_score, best_var = score, var
+    return best_score, best_var
+
+
 @dataclass
 class PhoneticLawScorer:
     _mined_weights: dict[str, Any] = field(default_factory=dict)
@@ -183,6 +266,15 @@ class PhoneticLawScorer:
 
     _morpheme_data: dict[str, Any] = field(default_factory=dict)
     _morpheme_loaded: bool = False
+
+    _ipa_lookup: Any = field(default=None)  # IPALookup — lazy-initialised
+
+    def _get_ipa_lookup(self) -> Any:
+        """Lazy-initialise and return the IPALookup instance."""
+        if self._ipa_lookup is None:
+            from .ipa_lookup import IPALookup
+            self._ipa_lookup = IPALookup()
+        return self._ipa_lookup
 
     def _try_load_mined_data(self) -> None:
         if self._loaded:
@@ -278,6 +370,18 @@ class PhoneticLawScorer:
             else 0.0
         )
 
+        # --- IPA-based scoring (V3) ---
+        # Use IPA consonant skeleton when available — more accurate than orthography
+        # for words with silent letters (knight, psalm, write, etc.)
+        ipa_proj_score = 0.0
+        ipa_skel = None
+        ipa_lookup = self._get_ipa_lookup()
+        ipa_skel = ipa_lookup.ipa_consonant_skeleton(english_lemma)
+        if ipa_skel:
+            ipa_proj_score, ipa_var = _best_projection_match_ipa(arabic_root, ipa_skel)
+            if ipa_proj_score > proj_score and not best_var:
+                best_var = ipa_var
+
         # --- Task 3: Improved metathesis ---
         # Try full reversal + all pairwise adjacent-consonant swaps
         metathesis_score = 0.0
@@ -323,7 +427,7 @@ class PhoneticLawScorer:
         if suffix_str in known_suffixes or prefix_str in known_prefixes:
             morpheme_bonus = 0.05
 
-        base_score = max(proj_score, direct_score, stem_score)
+        base_score = max(proj_score, direct_score, stem_score, ipa_proj_score)
         combined = (
             base_score
             + min(metathesis_score * 0.4, 0.12)  # raised from 0.3 to 0.4, cap 0.12
@@ -331,6 +435,13 @@ class PhoneticLawScorer:
             + morpheme_bonus
         )
         combined = min(combined, 1.0)
+
+        # --- Frequency penalty (V3) ---
+        # Common function words match by coincidence — reduce their score to cut false positives.
+        freq_penalty_applied = False
+        if english_lemma.lower() in _HIGH_FREQ_WORDS:
+            combined *= 0.6
+            freq_penalty_applied = True
 
         return {
             "phonetic_law_score": round(combined, 6),
@@ -346,6 +457,9 @@ class PhoneticLawScorer:
                 "arabic_skeleton": ar_skel,
                 "english_skeleton": eng_skel,
                 "primary_latin": primary_latin,
+                "ipa_proj_score": round(ipa_proj_score, 4),
+                "ipa_skeleton": ipa_skel or "",
+                "freq_penalty_applied": freq_penalty_applied,
             },
         }
 
