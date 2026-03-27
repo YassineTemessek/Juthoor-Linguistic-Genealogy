@@ -34,6 +34,7 @@ def gloss_similarity(source: dict[str, Any], target: dict[str, Any]) -> float:
     Returns 0.0-1.0. Uses meaning_text, gloss, gloss_plain, short_gloss fields.
     """
     src_text = " ".join(filter(None, [
+        str(source.get("english_gloss", "") or ""),  # Arabic entries with English gloss
         str(source.get("meaning_text", "") or ""),
         str(source.get("gloss", "") or ""),
         str(source.get("short_gloss", "") or ""),
@@ -48,6 +49,16 @@ def gloss_similarity(source: dict[str, Any], target: dict[str, Any]) -> float:
 
     src_words = _extract_content_words(src_text)
     tgt_words = _extract_content_words(tgt_text)
+
+    # Also include the lemma itself as a content word (catches "horn" in English lemma
+    # matching "horn" in Arabic english_gloss even when the English meaning text
+    # describes the concept without using the word itself)
+    src_lemma = str(source.get("lemma", "") or "").strip().lower()
+    tgt_lemma = str(target.get("lemma", "") or "").strip().lower()
+    if len(src_lemma) >= 3:
+        src_words.add(src_lemma)
+    if len(tgt_lemma) >= 3:
+        tgt_words.add(tgt_lemma)
 
     if not src_words or not tgt_words:
         return 0.0
