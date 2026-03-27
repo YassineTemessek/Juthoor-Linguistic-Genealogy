@@ -45,6 +45,30 @@ _HEB_ARC_BASE_MAP: dict[str, set[str]] = {
     "ת": {"ت", "ط", "ث"},
 }
 
+_ENGLISH_BASE_MAP: dict[str, set[str]] = {
+    # Derived from consonant_correspondence_matrix.json (english_to_arabic), ≥2 observations only
+    "b": {"ب"},                          # ب:56
+    "c": {"ق", "ك", "ج", "ش", "خ", "س", "ت"},  # ق:53, ك:29, ج:11, ش:9, خ:8, س:8, ت:7
+    "d": {"د", "ت", "ذ", "ج", "ق", "ف", "س", "ش", "ك", "ب"},  # د:49, ت:8, ذ:3, ج:3, ق:2, ف:2, س:2, ش:2, ك:2, ب:2
+    "f": {"ف"},                          # ف:39
+    "g": {"ج", "ق", "غ", "ن", "ر", "خ", "ك", "ز"},  # ج:41, ق:21, غ:11, ن:7, ر:4, خ:4, ك:3, ز:2
+    "h": {"ه", "ع", "خ", "ش", "م", "و", "ت", "ق", "ك", "س", "ف", "ن", "ج"},  # ه:26, ع:15, خ:10, ش:7, م:5, و:5, ت:4, ق:4, ك:3, س:2, ف:2, ن:2, ج:2
+    "j": {"ج"},                          # ج:7
+    "k": {"ق", "ك", "ه", "س", "ج", "خ"},  # ق:10, ك:5, ه:3, س:3, ج:2, خ:2
+    "l": {"ل"},                          # ل:159
+    "m": {"م"},                          # م:89
+    "n": {"ن"},                          # ن:86
+    "p": {"ب", "ف"},                     # ب:37, ف:31
+    "q": {"ق"},                          # ق:3
+    "r": {"ر"},                          # ر:199
+    "s": {"س", "ش", "ز", "ق", "د", "ن", "ج"},  # س:85, ش:35, ز:9, ق:5, د:4, ن:4, ج:4
+    "t": {"ت", "د", "ث", "س", "ر", "م", "ش", "ذ", "ق", "ج", "ب", "ن", "ف"},  # ت:98, د:21, ث:10, س:8, ر:7, م:5, ش:5, ذ:4, ق:4, ج:3, ب:2, ن:2, ف:2
+    "v": {"ف", "ب", "و", "ن", "س", "ش"},  # ف:11, ب:10, و:8, ن:2, س:2, ش:2
+    "w": {"و", "س"},                     # و:11, س:2
+    "x": {"ق"},                          # ق:2
+    "z": {"ز", "ه", "س", "ذ"},          # ز:9, ه:3, س:2, ذ:1→only 1 but included as historically relevant
+}
+
 _PERSIAN_BASE_MAP: dict[str, set[str]] = {
     "ا": {"ا", "ع"},
     "آ": {"ا"},
@@ -101,7 +125,13 @@ def _norm(value: Any) -> str:
 
 
 def _norm_lang(code: str) -> str:
-    aliases = {"fa": "fas", "fas": "fas", "he": "heb", "heb": "heb", "arc": "arc", "ara": "ara", "ar": "ara"}
+    aliases = {
+        "fa": "fas", "fas": "fas",
+        "he": "heb", "heb": "heb",
+        "arc": "arc",
+        "ara": "ara", "ar": "ara",
+        "en": "eng", "eng": "eng",
+    }
     return aliases.get(_norm(code), _norm(code))
 
 
@@ -130,6 +160,8 @@ def build_target_to_arabic_map(target_lang: str, rules: list[PhoneticMergerRule]
         mapping = {key: set(value) for key, value in _HEB_ARC_BASE_MAP.items()}
     elif lang == "fas":
         mapping = {key: set(value) for key, value in _PERSIAN_BASE_MAP.items()}
+    elif lang == "eng":
+        mapping = {key: set(value) for key, value in _ENGLISH_BASE_MAP.items()}
     else:
         mapping = {}
     for rule in rules or load_phonetic_mergers():

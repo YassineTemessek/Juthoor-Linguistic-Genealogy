@@ -31,6 +31,7 @@ from juthoor_cognatediscovery_lv2.discovery.retrieval import (
     load_lexemes, embed_corpus, build_or_load_index, search_index
 )
 from juthoor_cognatediscovery_lv2.discovery.genome_scoring import GenomeScorer
+from juthoor_cognatediscovery_lv2.discovery.phonetic_law_scorer import PhoneticLawScorer
 from juthoor_cognatediscovery_lv2.discovery.scoring import DiscoveryScorer, rank_candidates
 from juthoor_cognatediscovery_lv2.discovery.reporting import write_leads, generate_discovery_report
 from juthoor_cognatediscovery_lv2.discovery.rerank import DiscoveryReranker
@@ -127,6 +128,7 @@ def main() -> int:
     parser.add_argument("--min-hybrid", type=float, default=0.0)
     parser.add_argument("--no-report", action="store_true")
     parser.add_argument("--no-genome", action="store_true", help="Disable LV1 genome-informed bonus scoring.")
+    parser.add_argument("--no-phonetic-laws", action="store_true", help="Disable phonetic law bonus scoring.")
     parser.add_argument("--reranker-model", type=Path, default=None, help="Optional trained reranker model JSON.")
     parser.add_argument("-y", "--yes", action="store_true")
     args = parser.parse_args()
@@ -144,7 +146,8 @@ def main() -> int:
         sound=args.w_sound, skeleton=args.w_skeleton
     )
     genome_scorer = None if args.no_genome else GenomeScorer()
-    scorer = DiscoveryScorer(weights=weights, genome_scorer=genome_scorer)
+    phonetic_law_scorer = None if args.no_phonetic_laws else PhoneticLawScorer()
+    scorer = DiscoveryScorer(weights=weights, genome_scorer=genome_scorer, phonetic_law_scorer=phonetic_law_scorer)
     reranker = DiscoveryReranker(args.reranker_model) if args.reranker_model else None
 
     # 1. Embed and Index targets

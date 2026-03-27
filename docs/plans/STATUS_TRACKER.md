@@ -1,6 +1,6 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-26 (LV1 Letter Genome complete; 4 corrections applied; 3 investigations done)
+**Last updated:** 2026-03-27 (LV2 Phonetic Law pipeline complete; 863-pair extraction; PhoneticLawScorer V2; benchmark expanded to 878 gold + 105 silver; reference docs written)
 
 ---
 
@@ -39,6 +39,57 @@ Key outputs (Letter Genome):
 
 Scoring metrics (post F.5 calibration):
 - Jabal bJ: 0.197 | Consensus bJ: 0.201 | Nonzero blended coverage: 65.2%
+
+---
+
+## Session 2026-03-27: LV2 Phonetic Law Pipeline
+
+### What was done
+
+| Task | Status | Key Outputs |
+|------|--------|-------------|
+| Pair extraction from "Beyond the Name" | DONE | 863 pairs → `data/processed/beyond_name_cognate_gold_candidates.jsonl` |
+| Consonant correspondence mining | DONE | 861 pairs, 3,461 alignments → `consonant_correspondence_matrix.json` |
+| Phonetic law weight mining | DONE | 5 merger groups, 6/9 Khashim laws confirmed → `phonetic_law_weights.json` |
+| Morpheme correspondence extraction | DONE | 16 suffixes + 14 prefixes → `morpheme_correspondences.json` |
+| PhoneticLawScorer V1 | DONE | Projection + direct + metathesis scoring |
+| Scorer threshold tuning (Phase 6) | DONE | Threshold 0.50, false positive rate ~42% |
+| English-to-Arabic base map (Phase 7) | DONE | `phonetic_mergers.py` reverse map built |
+| Phonetic mergers enrichment (Phase 8) | DONE | `phonetic_mergers.jsonl` enriched with mined rules |
+| Failure analysis + PhoneticLawScorer V2 (Phase 9) | DONE | Morpheme-aware scoring; gold mean 0.758→0.797 |
+| Discovery benchmark evaluation (Phase 10) | DONE | MRR 0.107→0.185, Hit@10 21.2%→31.0%, nDCG 0.122→0.205 |
+| Benchmark expansion | DONE | 863 extracted → 878 gold + 105 silver benchmark |
+| Reference docs (Phase 11) | DONE | PHONETIC_LAWS_REFERENCE.md + PHONETIC_LAW_EVALUATION.md |
+
+### Key metrics
+
+| Metric | Baseline | With Phonetic Laws | Delta |
+|--------|----------|--------------------|-------|
+| Gold mean score | — | 0.797 | — |
+| Gold-negative separation | — | +0.314 | — |
+| Discovery MRR@10 | 0.107 | 0.185 | +0.078 |
+| Discovery Hit@10 | 21.2% | 31.0% | +9.8pp |
+| Discovery nDCG@10 | 0.122 | 0.205 | +0.083 |
+
+### LV2 Status after this session
+
+| Component | Status |
+|-----------|--------|
+| PhoneticLawScorer V2 | Operational |
+| Consonant correspondence matrix | Complete (861 pairs) |
+| Phonetic law weights | Complete (5 merger groups) |
+| Morpheme correspondences | Complete (30 entries) |
+| Benchmark: gold | 878 pairs |
+| Benchmark: silver | 105 pairs |
+| Scorer threshold | 0.50 (tuned) |
+| Failure analysis | Done (dominant: distractor interference 86%) |
+| Pipeline integration | Phonetic bonus active as secondary reranker feature |
+| Next: IPA-level scoring | Pending |
+| Next: Reranker retrain with phonetic_law_bonus as 12th feature | Pending |
+
+### Reference documents added
+- `Juthoor-CognateDiscovery-LV2/docs/PHONETIC_LAWS_REFERENCE.md` — Khashim laws, mined correspondence table, 5 merger groups, morpheme table, 10 examples
+- `Juthoor-CognateDiscovery-LV2/docs/PHONETIC_LAW_EVALUATION.md` — Scorer architecture, V1→V2 comparison, discovery metrics, failure analysis, known limitations, next steps
 
 ---
 
@@ -221,4 +272,4 @@ Scoring metrics (post F.5 calibration):
 
 ---
 
-*Last updated: 2026-03-26 — LV1 Letter Genome complete; 4 corrections applied (F.4); re-calibration done (F.5, Jabal bJ=0.197, consensus bJ=0.201, nonzero blended=65.2%); 3 investigations done (I1-I3); test counts updated (LV0=174, LV1=415, LV2=262, Total=851)*
+*Last updated: 2026-03-27 — LV2 Phonetic Law pipeline complete: 863-pair extraction, PhoneticLawScorer V2 (gold mean 0.797, separation +0.314), discovery MRR 0.107→0.185, benchmark 878 gold + 105 silver, PHONETIC_LAWS_REFERENCE.md + PHONETIC_LAW_EVALUATION.md written; LV1 Letter Genome complete (F.4/F.5, bJ=0.197, nonzero blended=65.2%); test counts: LV0=174, LV1=415, LV2=262, Total=851*

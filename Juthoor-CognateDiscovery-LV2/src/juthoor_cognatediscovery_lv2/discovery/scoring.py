@@ -10,6 +10,7 @@ from .correspondence import correspondence_features
 
 if TYPE_CHECKING:
     from .genome_scoring import GenomeScorer
+    from .phonetic_law_scorer import PhoneticLawScorer
 
 
 def _norm(value: Any) -> str:
@@ -90,10 +91,30 @@ def _apply_genome_bonus(
     return boosted
 
 
+def _apply_phonetic_law_bonus(
+    hybrid: dict[str, Any],
+    *,
+    source_fields: dict[str, Any],
+    target_fields: dict[str, Any],
+    phonetic_law_scorer: "PhoneticLawScorer",
+) -> dict[str, Any]:
+    boosted = dict(hybrid)
+    components = dict(boosted.get("components") or {})
+    bonus = phonetic_law_scorer.phonetic_law_bonus(source_fields, target_fields)
+    components["phonetic_law_bonus"] = round(bonus, 6) if bonus != 0.0 else 0.0
+    boosted["components"] = components
+    if bonus == 0.0:
+        return boosted
+    base_score = float(boosted.get("combined_score") or 0.0)
+    boosted["combined_score"] = round(min(1.0, base_score + bonus), 6)
+    return boosted
+
+
 def apply_hybrid_scoring(
     candidates: dict[str, dict[str, Any]],
     weights: HybridWeights,
     genome_scorer: "GenomeScorer | None" = None,
+    phonetic_law_scorer: "PhoneticLawScorer | None" = None,
 ) -> None:
     """
     Applies heuristic hybrid scoring to a dictionary of candidates.
@@ -133,6 +154,18 @@ def apply_hybrid_scoring(
             # Ensure genome_bonus is always present in components for reranker
             components = dict(hybrid.get("components") or {})
             components.setdefault("genome_bonus", 0.0)
+            hybrid = dict(hybrid)
+            hybrid["components"] = components
+        if phonetic_law_scorer is not None:
+            hybrid = _apply_phonetic_law_bonus(
+                hybrid,
+                source_fields=src_fields,
+                target_fields=tgt_fields,
+                phonetic_law_scorer=phonetic_law_scorer,
+            )
+        else:
+            components = dict(hybrid.get("components") or {})
+            components.setdefault("phonetic_law_bonus", 0.0)
             hybrid = dict(hybrid)
             hybrid["components"] = components
         entry["hybrid"] = hybrid
@@ -196,12 +229,19 @@ class DiscoveryScorer:
         self,
         weights: HybridWeights | None = None,
         genome_scorer: "GenomeScorer | None" = None,
+        phonetic_law_scorer: "PhoneticLawScorer | None" = None,
     ):
         self.weights = weights or HybridWeights()
         self.genome_scorer = genome_scorer
+        self.phonetic_law_scorer = phonetic_law_scorer
 
     def score(self, candidates: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
-        apply_hybrid_scoring(candidates, self.weights, genome_scorer=self.genome_scorer)
+        apply_hybrid_scoring(
+            candidates,
+            self.weights,
+            genome_scorer=self.genome_scorer,
+            phonetic_law_scorer=self.phonetic_law_scorer,
+        )
         # Clean up temporary fields used for scoring but not needed in output
         for entry in candidates.values():
             entry["category"] = _candidate_category(entry)

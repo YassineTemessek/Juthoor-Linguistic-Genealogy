@@ -163,3 +163,8 @@ def correspondence_features(source: dict[str, Any], target: dict[str, Any]) -> d
         "hamza_match": 1.0 if src_hamza and src_hamza == tgt_hamza else 0.0,
         "weak_radical_match": 1.0 if src_weak and src_weak == tgt_weak else 0.0,
     }
+
+
+def cross_lingual_skeleton_score(arabic_text: str, english_text: str) -> float:
+    """Score consonant skeleton similarity across Arabic<->English using class mapping."""
+    return _seq_ratio(correspondence_string(arabic_text), correspondence_string(english_text))
