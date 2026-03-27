@@ -56,6 +56,19 @@ _EVIDENCE_CARDS: list[dict] = [
         "promotion_date": "2026-03-14",
         "data_file": "promoted_features/positional_profiles.jsonl",
     },
+    {
+        "hypothesis_id": "H12",
+        "hypothesis_name": "meaning_predictability",
+        "claim": "Arabic root meaning is predictable from binary nucleus + third letter position",
+        "source": "Jabal",
+        "experiment_id": "6.4",
+        "experiment_name": "phantom_roots",
+        "status": "supported",
+        "key_metric": "binary_plus_letter cosine=0.716, phantom AUC=0.739",
+        "families_tested": 1721,
+        "promotion_date": "2026-03-27",
+        "data_file": "promoted_features/meaning_predictor_predictions.jsonl",
+    },
 ]
 
 
@@ -187,10 +200,12 @@ def export_promoted_results(output_dir: Path | None = None) -> dict:
                 field_coherence_scores.jsonl
                 positional_profiles.jsonl
                 metathesis_pairs.jsonl
+                meaning_predictor_predictions.jsonl
             evidence_cards/
                 H2_field_coherence.json
                 H5_order_matters.json
                 H8_positional_semantics.json
+                H12_meaning_predictability.json
             promotion_manifest.json
 
     Args:
@@ -221,6 +236,10 @@ def export_promoted_results(output_dir: Path | None = None) -> dict:
         features_dir / "metathesis_pairs.jsonl",
         pair_type="metathesis",
     )
+    _copy_jsonl(
+        _RF_OUTPUTS / "axis6" / "meaning_predictor_predictions.jsonl",
+        features_dir / "meaning_predictor_predictions.jsonl",
+    )
     _write_cross_lingual_support(features_dir / "cross_lingual_support.jsonl")
 
     # --- evidence_cards/ ---
@@ -228,6 +247,7 @@ def export_promoted_results(output_dir: Path | None = None) -> dict:
         "H2": "H2_field_coherence.json",
         "H5": "H5_order_matters.json",
         "H8": "H8_positional_semantics.json",
+        "H12": "H12_meaning_predictability.json",
     }
 
     written_cards: list[str] = []
@@ -240,15 +260,16 @@ def export_promoted_results(output_dir: Path | None = None) -> dict:
     # --- promotion_manifest.json ---
     manifest: dict = {
         "promotion_date": datetime.now(timezone.utc).isoformat(),
-        "promoted_hypotheses": ["H2", "H5", "H8"],
+        "promoted_hypotheses": ["H2", "H5", "H8", "H12"],
         "evidence_cards": written_cards,
         "promoted_features": [
             "promoted_features/field_coherence_scores.jsonl",
             "promoted_features/positional_profiles.jsonl",
             "promoted_features/metathesis_pairs.jsonl",
+            "promoted_features/meaning_predictor_predictions.jsonl",
             "promoted_features/cross_lingual_support.jsonl",
         ],
-        "source_experiments": ["2.3", "4.1", "1.2", "5.3", "5.4"],
+        "source_experiments": ["2.3", "4.1", "1.2", "5.3", "5.4", "6.4"],
     }
     (out / "promotion_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"

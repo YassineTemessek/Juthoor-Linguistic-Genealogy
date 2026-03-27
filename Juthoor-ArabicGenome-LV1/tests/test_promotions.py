@@ -122,22 +122,22 @@ def test_h8_card_references_positional_file(tmp_path):
 
 def test_manifest_lists_all_three_hypotheses(tmp_path):
     manifest = export_promoted_results(tmp_path)
-    assert set(manifest["promoted_hypotheses"]) == {"H2", "H5", "H8"}
+    assert set(manifest["promoted_hypotheses"]) == {"H2", "H5", "H8", "H12"}
 
 
 def test_manifest_lists_three_evidence_cards(tmp_path):
     manifest = export_promoted_results(tmp_path)
-    assert len(manifest["evidence_cards"]) == 3
+    assert len(manifest["evidence_cards"]) == 4
 
 
 def test_manifest_lists_three_promoted_features(tmp_path):
     manifest = export_promoted_results(tmp_path)
-    assert len(manifest["promoted_features"]) == 4
+    assert len(manifest["promoted_features"]) == 5
 
 
 def test_manifest_lists_source_experiments(tmp_path):
     manifest = export_promoted_results(tmp_path)
-    assert set(manifest["source_experiments"]) == {"2.3", "4.1", "1.2", "5.3", "5.4"}
+    assert set(manifest["source_experiments"]) == {"2.3", "4.1", "1.2", "5.3", "5.4", "6.4"}
 
 
 def test_manifest_has_promotion_date(tmp_path):
