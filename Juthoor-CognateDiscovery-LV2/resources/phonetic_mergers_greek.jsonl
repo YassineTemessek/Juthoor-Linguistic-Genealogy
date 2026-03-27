@@ -1,0 +1,15 @@
+{"arabic": "ق", "greek": "κ", "romanization": "k", "probability": 0.07, "alternatives": []}
+{"arabic": "ب", "greek": "β", "romanization": "b", "probability": 0.34, "alternatives": [{"letter": "π", "romanization": "p", "prob": 0.22}]}
+{"arabic": "ت", "greek": "τ", "romanization": "t", "probability": 0.6, "alternatives": [{"letter": "δ", "romanization": "d", "prob": 0.05}]}
+{"arabic": "ج", "greek": "γ", "romanization": "g", "probability": 0.4, "alternatives": []}
+{"arabic": "ع", "greek": "∅", "romanization": "silent", "probability": 0.88, "alternatives": []}
+{"arabic": "غ", "greek": "γ", "romanization": "g", "probability": 0.38, "alternatives": []}
+{"arabic": "ف", "greek": "φ", "romanization": "ph", "probability": 0.31, "alternatives": [{"letter": "π", "romanization": "p", "prob": 0.25}]}
+{"arabic": "ك", "greek": "κ", "romanization": "k", "probability": 0.08, "alternatives": []}
+{"arabic": "ل", "greek": "λ", "romanization": "l", "probability": 0.46, "alternatives": []}
+{"arabic": "م", "greek": "μ", "romanization": "m", "probability": 0.51, "alternatives": []}
+{"arabic": "ن", "greek": "ν", "romanization": "n", "probability": 0.5, "alternatives": []}
+{"arabic": "ر", "greek": "ρ", "romanization": "r", "probability": 0.65, "alternatives": []}
+{"arabic": "س", "greek": "σ", "romanization": "s", "probability": 0.56, "alternatives": []}
+{"arabic": "ش", "greek": "σ", "romanization": "s", "probability": 0.49, "alternatives": [{"letter": "χ", "romanization": "ch", "prob": 0.1}]}
+{"arabic": "ه", "greek": "∅", "romanization": "silent", "probability": 0.16, "alternatives": [{"letter": "h", "romanization": "h", "prob": 0.33}]}
