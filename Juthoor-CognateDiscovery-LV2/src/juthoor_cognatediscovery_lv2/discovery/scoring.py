@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     from .phonetic_law_scorer import PhoneticLawScorer
     from .multi_method_scorer import MultiMethodScorer
     from .root_quality_scorer import RootQualityScorer
+    from .cross_pair_scorer import CrossPairScorer
 
 
 def _norm(value: Any) -> str:
@@ -185,6 +186,43 @@ def _apply_multi_method_bonus(
     return boosted
 
 
+def _apply_cross_pair_bonus(
+    hybrid: dict[str, Any],
+    *,
+    source_fields: dict[str, Any],
+    cross_pair_scorer: "CrossPairScorer",
+    cap: float = 0.10,
+) -> dict[str, Any]:
+    """Apply a cross-pair convergence bonus based on the cognate graph.
+
+    The bonus rewards Arabic roots that already have multilingual evidence in
+    the cognate graph (i.e., convergent support across multiple language families).
+    The bonus is capped at *cap* (default 0.10).
+    """
+    boosted = dict(hybrid)
+    components = dict(boosted.get("components") or {})
+
+    root = source_fields.get("root_norm") or source_fields.get("root") or source_fields.get("lemma", "")
+    if not root:
+        components["cross_pair_bonus"] = 0.0
+        boosted["components"] = components
+        return boosted
+
+    evidence = cross_pair_scorer.convergent_evidence(str(root))
+    convergence_score = float(evidence.get("convergence_score", 0.0) or 0.0)
+    # Scale convergence into a small bonus (0 → 0, 1.0 → cap)
+    bonus = min(cap, convergence_score * cap)
+    components["cross_pair_bonus"] = round(bonus, 6) if bonus != 0.0 else 0.0
+    components["cross_pair_langs_matched"] = evidence.get("total_target_langs", 0)
+    boosted["components"] = components
+
+    if bonus == 0.0:
+        return boosted
+    base_score = float(boosted.get("combined_score") or 0.0)
+    boosted["combined_score"] = round(min(1.0, base_score + bonus), 6)
+    return boosted
+
+
 def apply_hybrid_scoring(
     candidates: dict[str, dict[str, Any]],
     weights: HybridWeights,
@@ -192,6 +230,7 @@ def apply_hybrid_scoring(
     phonetic_law_scorer: "PhoneticLawScorer | None" = None,
     multi_method_scorer: "MultiMethodScorer | None" = None,
     root_quality_scorer: "RootQualityScorer | None" = None,
+    cross_pair_scorer: "CrossPairScorer | None" = None,
 ) -> None:
     """
     Applies heuristic hybrid scoring to a dictionary of candidates.
@@ -274,6 +313,18 @@ def apply_hybrid_scoring(
             components.setdefault("multi_method_bonus", 0.0)
             hybrid = dict(hybrid)
             hybrid["components"] = components
+        if cross_pair_scorer is not None:
+            hybrid = _apply_cross_pair_bonus(
+                hybrid,
+                source_fields=src_fields,
+                cross_pair_scorer=cross_pair_scorer,
+            )
+        else:
+            components = dict(hybrid.get("components") or {})
+            components.setdefault("cross_pair_bonus", 0.0)
+            components.setdefault("cross_pair_langs_matched", 0)
+            hybrid = dict(hybrid)
+            hybrid["components"] = components
         entry["hybrid"] = hybrid
 
 
@@ -338,12 +389,14 @@ class DiscoveryScorer:
         phonetic_law_scorer: "PhoneticLawScorer | None" = None,
         multi_method_scorer: "MultiMethodScorer | None" = None,
         root_quality_scorer: "RootQualityScorer | None" = None,
+        cross_pair_scorer: "CrossPairScorer | None" = None,
     ):
         self.weights = weights or HybridWeights()
         self.genome_scorer = genome_scorer
         self.phonetic_law_scorer = phonetic_law_scorer
         self.multi_method_scorer = multi_method_scorer
         self.root_quality_scorer = root_quality_scorer
+        self.cross_pair_scorer = cross_pair_scorer
 
     def score(self, candidates: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
         apply_hybrid_scoring(
@@ -353,6 +406,7 @@ class DiscoveryScorer:
             phonetic_law_scorer=self.phonetic_law_scorer,
             multi_method_scorer=self.multi_method_scorer,
             root_quality_scorer=self.root_quality_scorer,
+            cross_pair_scorer=self.cross_pair_scorer,
         )
         # Clean up temporary fields used for scoring but not needed in output
         for entry in candidates.values():
