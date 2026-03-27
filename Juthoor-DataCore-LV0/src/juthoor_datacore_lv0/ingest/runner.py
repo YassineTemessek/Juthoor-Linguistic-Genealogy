@@ -234,6 +234,9 @@ def build_steps(*, python_exe: str, repo_root: Path, resources_dir: Path | None)
                 ("arc", "aramaic",
                  "aramaic/kaikki.org-dictionary-Aramaic.jsonl",
                  "aramaic/classical/sources/kaikki.jsonl"),
+                ("akk", "akkadian",
+                 "akkadian/kaikki.org-dictionary-Akkadian.jsonl",
+                 "akkadian/sources/kaikki.jsonl"),
             ]
         ],
         # ── Arabic: 10 classical dictionaries ────────────────────────────
@@ -274,6 +277,7 @@ def build_steps(*, python_exe: str, repo_root: Path, resources_dir: Path | None)
                 ("hebrew",          "hebrew/sources/kaikki.jsonl"),
                 ("persian",         "persian/modern/sources/kaikki.jsonl"),
                 ("aramaic",         "aramaic/classical/sources/kaikki.jsonl"),
+                ("akkadian",        "akkadian/sources/kaikki.jsonl"),
                 ("arabic",          "arabic/classical/sources/ten_dicts.jsonl"),
                 ("arabic",          "arabic/classical/lexemes.jsonl"),
                 ("quranic_arabic",  "quranic_arabic/lexemes.jsonl"),
