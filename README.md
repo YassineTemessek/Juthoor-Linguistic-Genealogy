@@ -14,10 +14,10 @@ This monorepo consolidates the full stack: LV0 data ingestion, LV1 Arabic genome
 
 | Level | Module | Current status |
 | :--- | :--- | :--- |
-| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | Foundation layer verified current. Canonical ingestion, validation, and release packaging remain the source of truth for downstream levels. |
-| **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | Arabic core rebuild landed. Method A reached **53.0%**, `consensus_weighted` is the best scholar at **bJ=0.200**, adaptive routing is active, 4 empirical letter corrections are applied, and the research corpus now includes **25 documents**. |
-| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | Discovery stack is live with GenomeScorer, family-aware reranking, and a new `synonym_expansion` module wired for Arabic root-family expansion. |
-| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Theory layer remains the synthesis and interpretation tier fed by promoted LV1 and LV2 evidence. |
+| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | ~2.64M lexemes across 11 languages (Arabic, English, Latin, Greek, Hebrew, Persian, Aramaic, Old/Middle English, Turkish, Akkadian). Foundation layer complete. |
+| **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | Research Factory complete: 4 hypotheses supported (H2 field coherence >11sigma, H5 order matters, H8 positional semantics 86%, H12 meaning predictability cosine=0.716). 498 tests. |
+| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | Full discovery engine: 12-method scorer, 14-feature reranker, 7 language pairs, **47,071-edge cognate graph** across 7 languages. 1,889 gold benchmark pairs. 32.1% gold coverage. 394 tests. |
+| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Theory bootstrap active: 10 corridor cards, 3-tier anchor gates, validation methodology, 14,494 validated leads flowing from LV2. Theory synthesis document written. |
 
 ## Architecture & Layers
 
