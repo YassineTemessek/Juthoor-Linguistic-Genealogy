@@ -17,6 +17,7 @@ from juthoor_cognatediscovery_lv2.discovery.rerank import (
     TrainingExample,
     _feature_vector,
 )
+from juthoor_cognatediscovery_lv2.discovery.root_quality_scorer import RootQualityScorer
 from juthoor_cognatediscovery_lv2.discovery.scoring import DiscoveryScorer
 
 
@@ -138,6 +139,7 @@ def main() -> int:
         genome_scorer=GenomeScorer(),
         phonetic_law_scorer=PhoneticLawScorer(),
         multi_method_scorer=MultiMethodScorer(),
+        root_quality_scorer=RootQualityScorer(),
     )
 
     prepared_rows: list[dict] = []
