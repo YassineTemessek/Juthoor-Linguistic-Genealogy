@@ -32,6 +32,7 @@ if hasattr(sys.stderr, "reconfigure"):
 LV2_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = LV2_ROOT.parent
 ARABIC_CORPUS = LV2_ROOT / "data/processed/arabic/quran_lemmas_enriched.jsonl"
+CLASSICAL_ARABIC_CORPUS = REPO_ROOT / "Juthoor-DataCore-LV0/data/processed/arabic/classical/lexemes.jsonl"
 ENGLISH_CORPUS = LV2_ROOT / "data/processed/english/english_ipa_merged_pos.jsonl"
 GOLD_BENCHMARK = LV2_ROOT / "resources/benchmarks/cognate_gold.jsonl"
 LEADS_DIR = LV2_ROOT / "outputs/leads"
@@ -44,23 +45,30 @@ sys.path.insert(0, str(LV2_ROOT / "src"))
 # ---------------------------------------------------------------------------
 
 def load_arabic_corpus(limit: int = 500) -> list[dict[str, Any]]:
-    """Load Arabic entries from quran_lemmas_enriched.jsonl."""
+    """Load Arabic entries from Quran and classical corpora, deduplicated by lemma."""
     entries: list[dict[str, Any]] = []
-    with open(ARABIC_CORPUS, encoding="utf-8") as f:
-        for line in f:
-            if not line.strip():
-                continue
-            row = json.loads(line)
-            lemma = row.get("lemma", "")
-            # Filter: must be a content word (N, V, ADJ) and have non-trivial lemma
-            pos = row.get("pos_tag", "") or ""
-            if not lemma or len(lemma) < 2:
-                continue
-            if pos not in ("N", "V", "ADJ", "ADV", ""):
-                continue
-            entries.append(row)
-            if limit and len(entries) >= limit:
-                break
+    seen_lemmas: set[str] = set()
+
+    for corpus_path in (ARABIC_CORPUS, CLASSICAL_ARABIC_CORPUS):
+        with open(corpus_path, encoding="utf-8") as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                row = json.loads(line)
+                lemma = str(row.get("lemma", "") or "").strip()
+                # Filter: must be a content word (N, V, ADJ) and have non-trivial lemma
+                pos = row.get("pos_tag", "") or ""
+                if not lemma or len(lemma) < 2:
+                    continue
+                if pos not in ("N", "V", "ADJ", "ADV", ""):
+                    continue
+                if lemma in seen_lemmas:
+                    continue
+                seen_lemmas.add(lemma)
+                entries.append(row)
+
+    if limit:
+        return entries[:limit]
     return entries
 
 
@@ -867,13 +875,12 @@ def main() -> int:
 
     # Supplement Arabic corpus with gold benchmark Arabic lemmas not already included
     # Critical: only 0.9% overlap between Quranic corpus and gold benchmark lemmas
-    CLASSICAL_CORPUS = REPO_ROOT / "Juthoor-DataCore-LV0/data/processed/arabic/classical/lexemes.jsonl"
     if GOLD_BENCHMARK.exists():
         existing_ar = {e.get("lemma", "").strip() for e in arabic_entries}
         # Build a lookup from classical Arabic
         ar_lookup: dict[str, dict[str, Any]] = {}
-        if CLASSICAL_CORPUS.exists():
-            with open(CLASSICAL_CORPUS, encoding="utf-8") as f:
+        if CLASSICAL_ARABIC_CORPUS.exists():
+            with open(CLASSICAL_ARABIC_CORPUS, encoding="utf-8") as f:
                 for line in f:
                     if not line.strip():
                         continue
