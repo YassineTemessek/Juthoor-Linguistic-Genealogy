@@ -1,0 +1,7 @@
+{
+  "file": "C:\\Users\\yassi\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-DataCore-LV0\\data\\processed\\turkish\\sources\\kaikki.jsonl",
+  "sha256": "b03f80ff5ae77350ed9a219be854d0448e7ce358975f3fd358ea438d286faba1",
+  "row_count": 100,
+  "schema_version": "lv0.7",
+  "generated_by": "ingest_kaikki.py:tr-fallback"
+}
