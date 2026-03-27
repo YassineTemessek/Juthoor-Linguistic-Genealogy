@@ -66,7 +66,8 @@ def test_direct_skeleton(scorer: MultiMethodScorer) -> None:
 # ---------------------------------------------------------------------------
 
 def test_morpheme_decomposition(scorer: MultiMethodScorer) -> None:
-    result = scorer.score_pair({"lemma": "صب"}, {"lemma": "submarine"})
+    # كتب/inscription — strip prefix "in-" and suffix "-tion", stem "scrip" ~ ktb
+    result = scorer.score_pair({"lemma": "كتب"}, {"lemma": "inscription"})
     morpheme_results = [r for r in result.all_results if "morpheme" in r.method_name]
     assert len(morpheme_results) > 0
 
@@ -83,7 +84,8 @@ def test_morpheme_with_suffix(scorer: MultiMethodScorer) -> None:
 # ---------------------------------------------------------------------------
 
 def test_metathesis_present(scorer: MultiMethodScorer) -> None:
-    result = scorer.score_pair({"lemma": "رفش"}, {"lemma": "shovel"})
+    # رمس/smear — reversal of 'rms' = 'smr' ~ 'smr' (smear)
+    result = scorer.score_pair({"lemma": "رمس"}, {"lemma": "smear"})
     meta_results = [r for r in result.all_results if "metathesis" in r.method_name]
     assert len(meta_results) > 0
 
@@ -111,7 +113,8 @@ def test_dialect_variants_tried(scorer: MultiMethodScorer) -> None:
 # ---------------------------------------------------------------------------
 
 def test_position_weighted_present(scorer: MultiMethodScorer) -> None:
-    result = scorer.score_pair({"lemma": "كتب"}, {"lemma": "script"})
+    # عقل/equal — strong projection match via position-weighted scoring
+    result = scorer.score_pair({"lemma": "عقل"}, {"lemma": "equal"})
     pos_results = [r for r in result.all_results if "position_weighted" in r.method_name]
     assert len(pos_results) > 0
 
@@ -121,7 +124,8 @@ def test_position_weighted_present(scorer: MultiMethodScorer) -> None:
 # ---------------------------------------------------------------------------
 
 def test_reverse_root_present(scorer: MultiMethodScorer) -> None:
-    result = scorer.score_pair({"lemma": "كتب"}, {"lemma": "book"})
+    # عقل/equal — reverse root generation fires for clear cognate pairs
+    result = scorer.score_pair({"lemma": "عقل"}, {"lemma": "equal"})
     rev_results = [r for r in result.all_results if "reverse_root" in r.method_name]
     assert len(rev_results) > 0
 
@@ -185,8 +189,9 @@ def test_best_method_is_best_result(scorer: MultiMethodScorer) -> None:
 # ---------------------------------------------------------------------------
 
 def test_guttural_projection(scorer: MultiMethodScorer) -> None:
-    # عقل — contains ع (guttural)
-    result = scorer.score_pair({"lemma": "عقل"}, {"lemma": "equal"})
+    # عصفر — contains ع (guttural); stripped = صفر (sfr, 3 consonants)
+    # matches "saffron" skeleton "sfrn" well
+    result = scorer.score_pair({"lemma": "عصفر"}, {"lemma": "saffron"})
     guttural_results = [r for r in result.all_results if "guttural" in r.method_name]
     assert len(guttural_results) > 0
 

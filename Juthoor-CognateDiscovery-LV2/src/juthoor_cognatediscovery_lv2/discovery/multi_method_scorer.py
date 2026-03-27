@@ -269,6 +269,13 @@ class MultiMethodScorer:
         eng_skel = _english_consonant_skeleton(eng_form)
         if not ar_skel or not eng_skel:
             return 0.0
+        # Require minimum 5 consonants total across both skeletons
+        if len(ar_skel) + len(eng_skel) < 5:
+            return 0.0
+        # Length ratio guard — reject very mismatched lengths
+        len_ratio = max(len(ar_skel), len(eng_skel)) / max(min(len(ar_skel), len(eng_skel)), 1)
+        if len_ratio > 3.0:
+            return 0.0
         primary_latin = _strip_diacriticals(
             "".join(LATIN_EQUIVALENTS.get(ch, (ch,))[0] for ch in ar_skel)
         )
@@ -459,6 +466,9 @@ class MultiMethodScorer:
         score, best_var = _weighted_projection_score(ar_skel, eng_skel, variants)
         if score <= 0.0:
             return None
+        # Penalize very short roots — they match too easily
+        if len(ar_skel) < 3:
+            score *= 0.7
         return MethodResult(
             method_name="position_weighted",
             score=score,
@@ -612,6 +622,10 @@ class MultiMethodScorer:
 
         results.extend(self._method_article_detection(ar_variant, eng_form))
 
+        # Apply minimum quality thresholds
+        MIN_SCORE = 0.55
+        results = [r for r in results if r.score >= MIN_SCORE]
+
         return results
 
     # ------------------------------------------------------------------
@@ -688,7 +702,46 @@ class MultiMethodScorer:
                 methods_that_fired=[],
             )
 
-        # 4. Pick best result
+        # 4. Consonant class diversity penalty (applied to all results)
+        # If all matched consonants belong to a single class, penalize
+        _CONSONANT_CLASSES = {
+            "stops": set("bpdtgkqṭḍ"),
+            "fricatives": set("fvszhxšžθðɣʁχ"),
+            "nasals": set("mnŋ"),
+            "liquids": set("lrɹɾ"),
+            "sibilants": set("sšzžṣṡ"),
+        }
+        ar_skel_raw = _arabic_consonant_skeleton(arabic_root)
+        ar_skel_latin = _strip_diacriticals(
+            "".join(LATIN_EQUIVALENTS.get(ch, (ch,))[0] for ch in ar_skel_raw)
+        )
+        eng_skel = _english_consonant_skeleton(english_word)
+        apply_diversity_penalty = False
+        if ar_skel_latin and eng_skel:
+            shared_chars = set(ar_skel_latin) & set(eng_skel)
+            classes_hit: set[str] = set()
+            for cls_name, cls_chars in _CONSONANT_CLASSES.items():
+                if shared_chars & cls_chars:
+                    classes_hit.add(cls_name)
+            if len(classes_hit) <= 1:
+                apply_diversity_penalty = True
+
+        if apply_diversity_penalty:
+            penalized: list[MethodResult] = []
+            for r in all_results:
+                if r.score > 0.6:
+                    penalized.append(MethodResult(
+                        method_name=r.method_name,
+                        score=round(r.score * 0.5, 6),
+                        explanation=r.explanation + " [diversity-penalized]",
+                        arabic_variant_used=r.arabic_variant_used,
+                        english_variant_used=r.english_variant_used,
+                    ))
+                else:
+                    penalized.append(r)
+            all_results = penalized
+
+        # 5. Pick best result
         best = max(all_results, key=lambda r: r.score)
         methods_fired = list({r.method_name for r in all_results if r.score > 0.4})
 
