@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import pytest
 from juthoor_cognatediscovery_lv2.discovery.phonetic_law_scorer import (
+    CORRESPONDENCE_WEIGHTS,
     PhoneticLawScorer,
     _HIGH_FREQ_WORDS,
     _POSITION_WEIGHTS,
@@ -43,6 +44,19 @@ class TestProjectionMatch:
     def test_dam(self):
         score, _ = _best_projection_match("دأم", "dam")
         assert score > 0.4
+
+    def test_empirical_weights_loaded_from_matrix(self):
+        assert CORRESPONDENCE_WEIGHTS["ع"]["O"] == pytest.approx(0.88)
+        assert CORRESPONDENCE_WEIGHTS["ع"]["h"] == pytest.approx(0.12)
+        assert CORRESPONDENCE_WEIGHTS["ب"]["b"] == pytest.approx(0.34)
+        assert CORRESPONDENCE_WEIGHTS["ب"]["p"] == pytest.approx(0.22)
+        assert CORRESPONDENCE_WEIGHTS["ب"]["v"] == pytest.approx(0.06)
+
+    def test_primary_correspondence_scores_higher_than_secondary(self):
+        score_b, _ = _best_projection_match("ب", "b")
+        score_p, _ = _best_projection_match("ب", "p")
+        assert score_b > score_p
+        assert score_p / score_b == pytest.approx(0.22 / 0.34, rel=0.05)
 
 
 class TestScorePair:
@@ -198,11 +212,17 @@ class TestPositionWeights:
         assert score_pos0 > score_pos2
 
     def test_exact_match_returns_high_score(self):
-        """A variant that exactly matches the English skeleton should score ~1.0."""
-        # Arabic كتب, variant "ktb", English "ktb"
+        """An exact variant match stays high, but less-probable correspondences are downweighted."""
+        # Arabic كتب, variant "ktb", English "ktb" includes ك -> k, which is weaker than ك -> c.
         score, var = _weighted_projection_score("كتب", "ktb", ("ktb",))
-        assert score > 0.9
+        assert score > 0.7
         assert var == "ktb"
+
+    def test_weighted_score_uses_empirical_correspondence_ratio(self):
+        score_b, _ = _weighted_projection_score("ب", "b", ("b",))
+        score_p, _ = _weighted_projection_score("ب", "p", ("p",))
+        assert score_b > score_p
+        assert score_p / score_b == pytest.approx(0.22 / 0.34, rel=0.05)
 
     def test_empty_inputs_return_zero(self):
         score, var = _weighted_projection_score("", "ktb", ("ktb",))

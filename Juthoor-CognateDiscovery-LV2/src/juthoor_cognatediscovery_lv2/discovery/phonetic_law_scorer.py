@@ -132,6 +132,56 @@ def _repo_root() -> Path:
     return Path(__file__).resolve().parents[4]
 
 
+def _consonant_correspondence_matrix_path() -> Path:
+    return (
+        _repo_root()
+        / "Juthoor-CognateDiscovery-LV2"
+        / "data"
+        / "processed"
+        / "consonant_correspondence_matrix.json"
+    )
+
+
+def _fallback_correspondence_weights() -> dict[str, dict[str, float]]:
+    fallback: dict[str, dict[str, float]] = {}
+    for letter, equivalents in LATIN_EQUIVALENTS.items():
+        normalized = [eq.translate(_DIACRITICAL_MAP) for eq in equivalents if eq.translate(_DIACRITICAL_MAP)]
+        if normalized:
+            fallback[letter] = {eq: 1.0 for eq in normalized}
+    return fallback
+
+
+def _load_correspondence_weights() -> dict[str, dict[str, float]]:
+    matrix_path = _consonant_correspondence_matrix_path()
+    fallback = _fallback_correspondence_weights()
+    if not matrix_path.exists():
+        return fallback
+
+    with matrix_path.open("r", encoding="utf-8") as handle:
+        payload = json.load(handle)
+
+    arabic_to_english = payload.get("arabic_to_english", {})
+    weights: dict[str, dict[str, float]] = {}
+    for letter, counts in arabic_to_english.items():
+        total = counts.get("total", 0)
+        if not isinstance(total, int) or total <= 0:
+            continue
+        letter_weights = {
+            latin: round(count / total, 2)
+            for latin, count in counts.items()
+            if latin not in {"total", "primary"} and isinstance(count, int) and count > 0
+        }
+        if letter_weights:
+            weights[str(letter)] = letter_weights
+
+    for letter, letter_weights in fallback.items():
+        weights.setdefault(letter, letter_weights)
+    return weights
+
+
+CORRESPONDENCE_WEIGHTS: dict[str, dict[str, float]] = _load_correspondence_weights()
+
+
 def _positional_profiles_candidates() -> tuple[Path, ...]:
     repo_root = _repo_root()
     return (
@@ -343,6 +393,55 @@ def _consonant_class(ch: str) -> str:
     return ch  # unique class — no cross-class credit
 
 
+def _correspondence_ratio(arabic_letter: str, latin_char: str) -> float:
+    normalized = _strip_diacriticals(latin_char).lower()
+    if not normalized:
+        return 0.0
+    letter_weights = CORRESPONDENCE_WEIGHTS.get(arabic_letter)
+    if not letter_weights:
+        return 1.0
+    primary_weight = max(letter_weights.values(), default=0.0)
+    if primary_weight <= 0.0:
+        return 1.0
+    return min(1.0, letter_weights.get(normalized, primary_weight) / primary_weight)
+
+
+def _score_aligned_projection(
+    arabic_skeleton: str,
+    english_skeleton: str,
+    projected_variant: str,
+    *,
+    use_position_weights: bool,
+) -> float:
+    if not arabic_skeleton or not english_skeleton or not projected_variant:
+        return 0.0
+
+    n = len(arabic_skeleton)
+    base_weights = (
+        [_position_weight_for(arabic_skeleton[i], i) for i in range(n)]
+        if use_position_weights
+        else [1.0] * n
+    )
+    total_weight = sum(base_weights)
+    if total_weight <= 0.0:
+        return 0.0
+
+    clean = _strip_diacriticals(projected_variant).lower()
+    eng_lower = english_skeleton.lower()
+    aligned_len = min(len(clean), len(eng_lower), n)
+    numerator = 0.0
+    for i in range(aligned_len):
+        english_char = eng_lower[i]
+        projected_char = clean[i]
+        correspondence_weight = _correspondence_ratio(arabic_skeleton[i], english_char)
+        if projected_char == english_char:
+            numerator += base_weights[i] * correspondence_weight
+        elif _consonant_class(projected_char) == _consonant_class(english_char):
+            numerator += base_weights[i] * 0.5 * correspondence_weight
+
+    return numerator / total_weight
+
+
 def _weighted_projection_score(
     arabic_skeleton: str,
     english_skeleton: str,
@@ -366,30 +465,11 @@ def _weighted_projection_score(
     if not arabic_skeleton or not english_skeleton or not variants:
         return 0.0, ""
 
-    n = len(arabic_skeleton)  # number of Arabic consonant positions (usually 3)
-    weights = [_position_weight_for(arabic_skeleton[i], i) for i in range(n)]
-    total_weight = sum(weights)
-
     best_score, best_var = 0.0, ""
-    eng_lower = english_skeleton.lower()
-
     for var in variants:
-        clean = _strip_diacriticals(var).lower()
-        if not clean:
-            continue
-
-        # Align: walk both strings together up to the shorter length
-        aligned_len = min(len(clean), len(eng_lower), n)
-        numerator = 0.0
-        for i in range(aligned_len):
-            w = weights[i]
-            if i < len(clean) and i < len(eng_lower):
-                if clean[i] == eng_lower[i]:
-                    numerator += 1.0 * w
-                elif _consonant_class(clean[i]) == _consonant_class(eng_lower[i]):
-                    numerator += 0.5 * w
-
-        score = numerator / total_weight if total_weight > 0 else 0.0
+        score = _score_aligned_projection(
+            arabic_skeleton, english_skeleton, var, use_position_weights=True
+        )
         if score > best_score:
             best_score, best_var = score, var
 
@@ -398,7 +478,8 @@ def _weighted_projection_score(
 
 def _best_projection_match(arabic_root: str, english_word: str) -> tuple[float, str]:
     eng_skel = _english_consonant_skeleton(english_word)
-    if not eng_skel:
+    ar_skel = _arabic_consonant_skeleton(arabic_root)
+    if not eng_skel or not ar_skel:
         return 0.0, ""
     try:
         variants = project_root_by_target(arabic_root, "european")
@@ -408,8 +489,7 @@ def _best_projection_match(arabic_root: str, english_word: str) -> tuple[float, 
         return 0.0, ""
     best_score, best_var = 0.0, ""
     for var in variants:
-        clean = _strip_diacriticals(var)
-        score = SequenceMatcher(None, clean, eng_skel).ratio()
+        score = _score_aligned_projection(ar_skel, eng_skel, var, use_position_weights=False)
         if score > best_score:
             best_score, best_var = score, var
     return best_score, best_var
@@ -428,6 +508,9 @@ def _best_projection_match_ipa(arabic_root: str, ipa_skeleton: str) -> tuple[flo
     English realisations before comparison.
     """
     if not ipa_skeleton:
+        return 0.0, ""
+    ar_skel = _arabic_consonant_skeleton(arabic_root)
+    if not ar_skel:
         return 0.0, ""
     try:
         variants = project_root_by_target(arabic_root, "european")
@@ -472,8 +555,7 @@ def _best_projection_match_ipa(arabic_root: str, ipa_skeleton: str) -> tuple[flo
 
     best_score, best_var = 0.0, ""
     for var in variants:
-        clean = _strip_diacriticals(var)
-        score = SequenceMatcher(None, clean, ipa_lat).ratio()
+        score = _score_aligned_projection(ar_skel, ipa_lat, var, use_position_weights=False)
         if score > best_score:
             best_score, best_var = score, var
     return best_score, best_var
