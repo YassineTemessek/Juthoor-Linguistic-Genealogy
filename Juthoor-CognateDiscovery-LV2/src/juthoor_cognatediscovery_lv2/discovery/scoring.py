@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from .genome_scoring import GenomeScorer
     from .phonetic_law_scorer import PhoneticLawScorer
     from .multi_method_scorer import MultiMethodScorer
+    from .root_quality_scorer import RootQualityScorer
 
 
 def _norm(value: Any) -> str:
@@ -84,6 +85,26 @@ def _apply_genome_bonus(
         components["non_semitic_binary_hit_rate"] = round(float(non_semitic.get("binary_hit_rate", 0.0) or 0.0), 6)
     else:
         components.setdefault("cross_lingual_support", 0.0)
+    boosted["components"] = components
+    if bonus == 0.0:
+        return boosted
+    base_score = float(boosted.get("combined_score") or 0.0)
+    boosted["combined_score"] = round(min(1.0, base_score + bonus), 6)
+    return boosted
+
+
+def _apply_root_quality_bonus(
+    hybrid: dict[str, Any],
+    *,
+    source_fields: dict[str, Any],
+    root_quality_scorer: "RootQualityScorer",
+) -> dict[str, Any]:
+    boosted = dict(hybrid)
+    components = dict(boosted.get("components") or {})
+    source_root = source_fields.get("root_norm") or source_fields.get("root") or source_fields.get("lemma", "")
+    quality = root_quality_scorer.root_quality(str(source_root)) if source_root else 0.0
+    bonus = min(0.08, float(quality))
+    components["root_quality_bonus"] = round(bonus, 6) if bonus != 0.0 else 0.0
     boosted["components"] = components
     if bonus == 0.0:
         return boosted
@@ -170,6 +191,7 @@ def apply_hybrid_scoring(
     genome_scorer: "GenomeScorer | None" = None,
     phonetic_law_scorer: "PhoneticLawScorer | None" = None,
     multi_method_scorer: "MultiMethodScorer | None" = None,
+    root_quality_scorer: "RootQualityScorer | None" = None,
 ) -> None:
     """
     Applies heuristic hybrid scoring to a dictionary of candidates.
@@ -209,6 +231,17 @@ def apply_hybrid_scoring(
             # Ensure genome_bonus is always present in components for reranker
             components = dict(hybrid.get("components") or {})
             components.setdefault("genome_bonus", 0.0)
+            hybrid = dict(hybrid)
+            hybrid["components"] = components
+        if root_quality_scorer is not None:
+            hybrid = _apply_root_quality_bonus(
+                hybrid,
+                source_fields=src_fields,
+                root_quality_scorer=root_quality_scorer,
+            )
+        else:
+            components = dict(hybrid.get("components") or {})
+            components.setdefault("root_quality_bonus", 0.0)
             hybrid = dict(hybrid)
             hybrid["components"] = components
         if phonetic_law_scorer is not None:
@@ -304,11 +337,13 @@ class DiscoveryScorer:
         genome_scorer: "GenomeScorer | None" = None,
         phonetic_law_scorer: "PhoneticLawScorer | None" = None,
         multi_method_scorer: "MultiMethodScorer | None" = None,
+        root_quality_scorer: "RootQualityScorer | None" = None,
     ):
         self.weights = weights or HybridWeights()
         self.genome_scorer = genome_scorer
         self.phonetic_law_scorer = phonetic_law_scorer
         self.multi_method_scorer = multi_method_scorer
+        self.root_quality_scorer = root_quality_scorer
 
     def score(self, candidates: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
         apply_hybrid_scoring(
@@ -317,6 +352,7 @@ class DiscoveryScorer:
             genome_scorer=self.genome_scorer,
             phonetic_law_scorer=self.phonetic_law_scorer,
             multi_method_scorer=self.multi_method_scorer,
+            root_quality_scorer=self.root_quality_scorer,
         )
         # Clean up temporary fields used for scoring but not needed in output
         for entry in candidates.values():
