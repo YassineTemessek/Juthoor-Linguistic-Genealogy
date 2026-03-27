@@ -44,9 +44,9 @@
 
 ## Codex
 ```
-last: README refresh complete, LV1 adaptive rerun rebuilt, dashboard regenerated, LV2 GenomeScorer now expands Arabic synonym families before scoring.
-metrics: roots=1924, nuclei=456, root_rows=9620, overall bJ=0.207564, consensus_strict bJ=0.212745, consensus_weighted bJ=0.209766, nucleus_only rows=5785, position_aware rows=336, LV2 targeted tests=30/30
-suggests: README headlines from pre-rerun state should be reconciled later if we want docs to reflect the newer post-rerun metrics rather than the requested checkpoint values
+last: Built three reusable LV2 prep assets: curated English IPA corpus (10k), reverse Arabic root index (54,347 skeletons), and historical English lookup (853 rows). Existing LV2 discovery tests stayed green.
+metrics: roots=1924, nuclei=456, root_rows=9620, overall bJ=0.207564, consensus_strict bJ=0.212745, consensus_weighted bJ=0.209766, english_curated=10000, reverse_index_skeletons=54347, historical_lookup=853, LV2 targeted tests=22/22
+suggests: next high-value LV2 step is to wire the curated English corpus and reverse root index into the discovery runner before the next large discovery sweep
 blocked: none
 ```
 
@@ -113,6 +113,9 @@ note: Codex tokens reset in 1 hour. Claude working solo until then.
 | 03-26 | LV1 adaptive rerun rebuild | Codex | `build_lv1_theory_assets.py` rerun; overall bJ 0.195517→0.207564 |
 | 03-26 | LV1 dashboard regeneration | Codex | `LV1_DASHBOARD.md` refreshed from rebuilt score matrices |
 | 03-26 | LV2 synonym-family GenomeScorer integration | Codex | `genome_scoring.py` expands Arabic roots through synonym families; 30 targeted tests pass |
+| 03-27 | LV2 curated English corpus | Codex | `english_ipa_curated_10k.jsonl` built from 268,889 rows -> 10,000 high-value English entries |
+| 03-27 | LV2 reverse Arabic root index | Codex | `reverse_arabic_root_index.json` with 54,347 English-style skeleton keys and Arabic root candidates |
+| 03-27 | LV2 historical English lookup | Codex | `english_historical_meanings.jsonl` from Beyond-the-Name + Old/Middle English matches |
 | 03-23 | S1.1 Synonym groups | Codex | `scoring.py` |
 | 03-23 | S1.2 Fix empty features | Codex | `feature_decomposition.py` |
 | 03-23 | S1.3 Opposition mapping | Codex | `scoring.py` |
