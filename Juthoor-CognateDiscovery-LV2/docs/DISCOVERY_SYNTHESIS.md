@@ -113,3 +113,24 @@ New script `run_discovery_multilang.py` supports any source/target pair with:
 7. Feed validated leads into LV3 corridor analysis
 8. Language genealogy graph visualization
 9. Statistical significance testing of cognate clusters
+
+---
+
+## Language Pair Routing Guide
+
+Each language pair should use the pipeline best suited to its linguistic relationship:
+
+| Language Pair | Family Relation | Recommended Pipeline | Key Scorer | Rationale |
+|--------------|----------------|---------------------|------------|-----------|
+| **ara→heb** | Semitic-Semitic | Main (embeddings + GenomeScorer) | GenomeScorer | MRR 0.837 achieved; genome bonus exploits shared binary nuclei |
+| **ara→arc** | Semitic-Semitic | Main (embeddings + GenomeScorer) | GenomeScorer | Closest Semitic relative; metathesis pairs directly applicable |
+| **ara→eng** | Cross-family | Full mode (BGE-M3 + FAISS + MultiMethod) | PhoneticLawScorer + MultiMethod | Needs semantic guard to filter false positives |
+| **ara→lat** | Cross-family | Full mode OR Fast mode | MultiMethodScorer | Latin script = no IPA issues; morpheme decomposition valuable |
+| **ara→grc** | Cross-family | Full mode (IPA-based) | MultiMethodScorer | Greek script needs IPA extraction; multi-hop chain useful |
+| **ara→per** | Mixed (loanwords + IE) | Both pipelines | PhoneticLawScorer | Persian has Arabic loanwords (high score) + IE cognates (lower) |
+| **ara→fra/spa/ita** | Cross-family via Latin | Fast mode | MultiMethodScorer | Latin intermediary; article_detection fires here |
+
+### Key Insight: Semitic-Semitic vs Cross-Family
+- **Semitic-Semitic** (heb, arc): Use embedding-based main pipeline. GenomeScorer's binary nucleus matching is the strongest signal. Fast-mode MultiMethodScorer adds noise because consonant skeleton projection assumes Latin target alphabet.
+- **Cross-family** (eng, lat, grc, per): Use MultiMethodScorer's 12 methods. Phonetic law projection (Arabic→European consonant mapping) is the core mechanism. Semantic guard from embeddings filters false positives.
+- **Persian is special**: Arabic loanwords score perfectly on direct skeleton (they ARE Arabic), while IE-origin Persian words need full phonetic law projection. Pipeline should flag high-scoring matches as potential loanwords vs inherited cognates.
