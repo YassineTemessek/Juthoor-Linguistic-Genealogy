@@ -76,9 +76,11 @@ def test_scorer_without_multi_method_backwards_compat():
     assert result[0]["hybrid"]["components"]["multi_method_best_score"] == 0.0
 
 
-def test_reranker_has_14_features():
-    assert len(FEATURE_NAMES) == 14
+def test_reranker_has_11_features():
+    assert len(FEATURE_NAMES) == 11
     assert "multi_method_score" in FEATURE_NAMES
+    assert "root_quality" in FEATURE_NAMES
+    assert "methods_fired_count" in FEATURE_NAMES
 
 
 def test_feature_vector_extracts_multi_method():
@@ -86,21 +88,21 @@ def test_feature_vector_extracts_multi_method():
         "scores": {"semantic": 0.5, "form": 0.3},
         "hybrid": {
             "components": {
-                "orthography": 0.2,
                 "sound": 0.1,
-                "skeleton": 0.15,
-                "family_boost": 0.0,
-                "root_match": 0.0,
                 "correspondence": 0.1,
-                "weak_radical_match": 0.0,
-                "hamza_match": 0.0,
                 "genome_bonus": 0.0,
                 "phonetic_law_bonus": 0.05,
-                "source_coherence": 0.0,
+                "source_coherence": 0.2,
                 "multi_method_best_score": 0.65,
+                "cross_pair_evidence": 0.3,
+                "root_quality_bonus": 0.08,
+                "multi_method_fired_count": 2,
             }
         },
     }
     vec = _feature_vector(entry)
-    assert len(vec) == 14
-    assert vec[13] == 0.65  # multi_method_score is the 14th feature
+    assert len(vec) == 11
+    assert vec[7] == 0.65
+    assert vec[8] == pytest.approx(0.3)
+    assert vec[9] == pytest.approx(0.08)
+    assert vec[10] == pytest.approx(2.0)

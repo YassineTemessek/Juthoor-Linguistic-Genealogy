@@ -13,18 +13,15 @@ from .evaluation import BenchmarkPair, load_benchmark, load_leads
 FEATURE_NAMES = (
     "semantic",
     "form",
-    "orthography",
     "sound",
-    "skeleton",
-    "family_boost",
-    "root_match",
     "correspondence",
-    "weak_radical_match",
-    "hamza_match",
     "genome_bonus",
     "phonetic_law_bonus",
     "source_coherence",
     "multi_method_score",
+    "cross_pair_evidence",
+    "root_quality",
+    "methods_fired_count",
 )
 
 
@@ -32,23 +29,19 @@ def _feature_vector(entry: dict[str, Any]) -> np.ndarray:
     scores = entry.get("scores", {})
     hybrid = entry.get("hybrid", {})
     components = hybrid.get("components", {})
-    sound_value = components.get("sound")
     return np.array(
         [
             float(scores.get("semantic", 0.0)),
             float(scores.get("form", 0.0)),
-            float(components.get("orthography", 0.0)),
-            float(sound_value or 0.0),
-            float(components.get("skeleton", 0.0)),
-            1.0 if hybrid.get("family_boost_applied") else 0.0,
-            float(components.get("root_match", 0.0)),
+            float(components.get("sound", 0.0) or 0.0),
             float(components.get("correspondence", 0.0)),
-            float(components.get("weak_radical_match", 0.0)),
-            float(components.get("hamza_match", 0.0)),
             float(components.get("genome_bonus", 0.0)),
             float(components.get("phonetic_law_bonus", 0.0)),
             float(components.get("source_coherence", 0.0)),
             float(components.get("multi_method_best_score", 0.0)),
+            float(components.get("cross_pair_evidence", 0.0)),
+            float(components.get("root_quality_bonus", 0.0)),
+            float(components.get("methods_fired_count", components.get("multi_method_fired_count", 0.0))),
         ],
         dtype=np.float32,
     )
@@ -90,18 +83,15 @@ class DiscoveryReranker:
         self.weights = {
             "semantic": 0.4,
             "form": 0.2,
-            "orthography": 0.15,
             "sound": 0.15,
-            "skeleton": 0.1,
-            "family_boost": 0.1,
-            "root_match": 0.25,
-            "correspondence": 0.2,
-            "weak_radical_match": 0.1,
-            "hamza_match": 0.05,
-            "genome_bonus": 0.0,
-            "phonetic_law_bonus": 0.3,
+            "correspondence": 0.06,
+            "genome_bonus": 0.02,
+            "phonetic_law_bonus": 0.11,
             "source_coherence": 0.1,
-            "multi_method_score": 0.0,
+            "multi_method_score": 1.39,
+            "cross_pair_evidence": 0.1,
+            "root_quality": 0.08,
+            "methods_fired_count": 0.05,
         }
         self.model_type = "linear_baseline"
         if model_path and model_path.exists():
