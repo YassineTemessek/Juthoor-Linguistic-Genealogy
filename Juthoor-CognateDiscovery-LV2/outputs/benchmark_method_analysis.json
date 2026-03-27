@@ -1,0 +1,3126 @@
+{
+  "benchmark_path": "C:\\Users\\yassi\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\resources\\benchmarks\\cognate_gold.jsonl",
+  "output_path": "C:\\Users\\yassi\\AI Projects\\Juthoor-Linguistic-Genealogy\\Juthoor-CognateDiscovery-LV2\\outputs\\benchmark_method_analysis.json",
+  "total_gold_pairs_loaded": 1889,
+  "sample_size": 100,
+  "seed": 42,
+  "method_stats": {
+    "article_detection": {
+      "gold_pairs_found": 3,
+      "average_score": 0.662698,
+      "best_method_count": 0
+    },
+    "dialect_variant_egyptian": {
+      "gold_pairs_found": 7,
+      "average_score": 0.703061,
+      "best_method_count": 0
+    },
+    "dialect_variant_gulf": {
+      "gold_pairs_found": 17,
+      "average_score": 0.591783,
+      "best_method_count": 0
+    },
+    "dialect_variant_moroccan": {
+      "gold_pairs_found": 5,
+      "average_score": 0.594286,
+      "best_method_count": 0
+    },
+    "direct_skeleton": {
+      "gold_pairs_found": 66,
+      "average_score": 0.647986,
+      "best_method_count": 33
+    },
+    "emphatic_collapse": {
+      "gold_pairs_found": 12,
+      "average_score": 0.616468,
+      "best_method_count": 2
+    },
+    "guttural_projection": {
+      "gold_pairs_found": 10,
+      "average_score": 0.690238,
+      "best_method_count": 2
+    },
+    "ipa_scoring": {
+      "gold_pairs_found": 57,
+      "average_score": 0.617558,
+      "best_method_count": 12
+    },
+    "metathesis": {
+      "gold_pairs_found": 39,
+      "average_score": 0.615201,
+      "best_method_count": 4
+    },
+    "morpheme_decomposition": {
+      "gold_pairs_found": 11,
+      "average_score": 0.702273,
+      "best_method_count": 4
+    },
+    "multi_hop_chain": {
+      "gold_pairs_found": 73,
+      "average_score": 0.623634,
+      "best_method_count": 5
+    },
+    "position_weighted": {
+      "gold_pairs_found": 45,
+      "average_score": 0.573866,
+      "best_method_count": 10
+    },
+    "reverse_root": {
+      "gold_pairs_found": 62,
+      "average_score": 0.623694,
+      "best_method_count": 10
+    },
+    "synonym_expansion": {
+      "gold_pairs_found": 24,
+      "average_score": 0.62791,
+      "best_method_count": 0
+    }
+  },
+  "language_pair_stats": {
+    "ara-ang": {
+      "sampled_pairs": 3,
+      "pairs_with_any_method": 3,
+      "coverage": 1.0,
+      "average_best_score": 0.580455,
+      "average_methods_that_fired": 2.333333,
+      "best_method_distribution": {
+        "direct_skeleton": 1,
+        "position_weighted": 1,
+        "reverse_root": 1
+      }
+    },
+    "ara-arc": {
+      "sampled_pairs": 2,
+      "pairs_with_any_method": 0,
+      "coverage": 0.0,
+      "average_best_score": 0.0,
+      "average_methods_that_fired": 0.0,
+      "best_method_distribution": {}
+    },
+    "ara-deu": {
+      "sampled_pairs": 5,
+      "pairs_with_any_method": 3,
+      "coverage": 0.6,
+      "average_best_score": 0.616667,
+      "average_methods_that_fired": 2.6,
+      "best_method_distribution": {
+        "direct_skeleton": 1,
+        "ipa_scoring": 1,
+        "multi_hop_chain": 1,
+        "reverse_root": 1
+      }
+    },
+    "ara-eng": {
+      "sampled_pairs": 47,
+      "pairs_with_any_method": 33,
+      "coverage": 0.702128,
+      "average_best_score": 0.627231,
+      "average_methods_that_fired": 3.595745,
+      "best_method_distribution": {
+        "direct_skeleton": 17,
+        "emphatic_collapse": 1,
+        "guttural_projection": 1,
+        "ipa_scoring": 9,
+        "metathesis": 3,
+        "morpheme_decomposition": 2,
+        "multi_hop_chain": 1,
+        "position_weighted": 5,
+        "reverse_root": 3
+      }
+    },
+    "ara-fa": {
+      "sampled_pairs": 1,
+      "pairs_with_any_method": 1,
+      "coverage": 1.0,
+      "average_best_score": 0.5,
+      "average_methods_that_fired": 3.0,
+      "best_method_distribution": {
+        "direct_skeleton": 1
+      }
+    },
+    "ara-fra": {
+      "sampled_pairs": 13,
+      "pairs_with_any_method": 6,
+      "coverage": 0.461538,
+      "average_best_score": 0.446938,
+      "average_methods_that_fired": 2.769231,
+      "best_method_distribution": {
+        "direct_skeleton": 7,
+        "ipa_scoring": 1,
+        "position_weighted": 1,
+        "reverse_root": 1
+      }
+    },
+    "ara-grc": {
+      "sampled_pairs": 8,
+      "pairs_with_any_method": 5,
+      "coverage": 0.625,
+      "average_best_score": 0.583805,
+      "average_methods_that_fired": 3.0,
+      "best_method_distribution": {
+        "direct_skeleton": 3,
+        "multi_hop_chain": 1,
+        "position_weighted": 1,
+        "reverse_root": 3
+      }
+    },
+    "ara-heb": {
+      "sampled_pairs": 4,
+      "pairs_with_any_method": 0,
+      "coverage": 0.0,
+      "average_best_score": 0.0,
+      "average_methods_that_fired": 0.0,
+      "best_method_distribution": {}
+    },
+    "ara-ita": {
+      "sampled_pairs": 4,
+      "pairs_with_any_method": 3,
+      "coverage": 0.75,
+      "average_best_score": 0.623215,
+      "average_methods_that_fired": 2.5,
+      "best_method_distribution": {
+        "direct_skeleton": 1,
+        "metathesis": 1,
+        "position_weighted": 2
+      }
+    },
+    "ara-lat": {
+      "sampled_pairs": 7,
+      "pairs_with_any_method": 5,
+      "coverage": 0.714286,
+      "average_best_score": 0.628571,
+      "average_methods_that_fired": 3.571429,
+      "best_method_distribution": {
+        "direct_skeleton": 1,
+        "morpheme_decomposition": 2,
+        "multi_hop_chain": 1,
+        "reverse_root": 1
+      }
+    },
+    "ara-spa": {
+      "sampled_pairs": 4,
+      "pairs_with_any_method": 4,
+      "coverage": 1.0,
+      "average_best_score": 0.744643,
+      "average_methods_that_fired": 6.75,
+      "best_method_distribution": {
+        "direct_skeleton": 1,
+        "emphatic_collapse": 1,
+        "guttural_projection": 1,
+        "ipa_scoring": 1
+      }
+    },
+    "ara-syc": {
+      "sampled_pairs": 1,
+      "pairs_with_any_method": 1,
+      "coverage": 1.0,
+      "average_best_score": 0.571429,
+      "average_methods_that_fired": 1.0,
+      "best_method_distribution": {
+        "multi_hop_chain": 1
+      }
+    },
+    "lat-grc": {
+      "sampled_pairs": 1,
+      "pairs_with_any_method": 0,
+      "coverage": 0.0,
+      "average_best_score": 0.0,
+      "average_methods_that_fired": 0.0,
+      "best_method_distribution": {}
+    }
+  },
+  "pairs": [
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "النمر",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "leopard",
+        "gloss": "النمر المرقط"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.333333,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.333333,
+        "multi_hop_chain": 0.333333
+      },
+      "raw_result_count": 2
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "رجا",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "region",
+        "gloss": "Region"
+      },
+      "relation": "cognate",
+      "confidence": 0.8,
+      "notes": "English 'Region' corresponds to Arabic 'رَجا'. The text notes: ...التماثل في اللفظ والمعنى بين أصل الكلمة في اللغتين (رجا = regio) والتي جاءت منها كلمة Region.... Via: French, PIE",
+      "best_score": 0.4,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.4,
+        "ipa_scoring": 0.4,
+        "multi_hop_chain": 0.4,
+        "position_weighted": 0.35,
+        "reverse_root": 0.4
+      },
+      "raw_result_count": 12
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "ستة",
+        "gloss": "six"
+      },
+      "target": {
+        "lang": "heb",
+        "lemma": "שש",
+        "gloss": "six"
+      },
+      "relation": "cognate",
+      "confidence": 0.9,
+      "notes": "Common Semitic root sh-d-sh / sh-sh with phonological reduction in Hebrew",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "عصّ",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "deu",
+        "lemma": "ossify",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 1.0,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain"
+      ],
+      "method_scores": {
+        "ipa_scoring": 1.0,
+        "metathesis": 0.666667,
+        "multi_hop_chain": 0.666667
+      },
+      "raw_result_count": 4
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "غراء",
+        "gloss": "غراء"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "glue",
+        "gloss": "Glue"
+      },
+      "relation": "cognate",
+      "confidence": 0.8,
+      "notes": "English 'Glue' corresponds to Arabic 'غراء'. The text notes: ...أن العلاقة بين كلمة غراء وطين (وحل) / Clay موجودة ومتشابهة حتى في اللغتين!!!... Via: Latin, PIE",
+      "best_score": 0.5,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "multi_hop_chain"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.5,
+        "multi_hop_chain": 0.5,
+        "position_weighted": 0.332841
+      },
+      "raw_result_count": 3
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "فرج",
+        "gloss": "قابل للكسر"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "fragile",
+        "gloss": "Fragile"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Fragile' corresponds to Arabic 'فرج'. Via: Latin",
+      "best_score": 0.571429,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_egyptian": 0.333333,
+        "dialect_variant_gulf": 0.571429,
+        "direct_skeleton": 0.571429,
+        "ipa_scoring": 0.571429,
+        "multi_hop_chain": 0.571429,
+        "position_weighted": 0.5,
+        "reverse_root": 0.428571,
+        "synonym_expansion": 0.571429
+      },
+      "raw_result_count": 19
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "بعري",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "bare",
+        "gloss": "Bare"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Bare corresponds to Arabic 'بعرّي – أي من العُري'. Sound/meaning match from group entry. Via: French",
+      "best_score": 1.0,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 1.0,
+        "multi_hop_chain": 0.8,
+        "position_weighted": 0.656627,
+        "reverse_root": 0.8
+      },
+      "raw_result_count": 4
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "تل",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "tell",
+        "gloss": "Tell"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Tell' corresponds to Arabic 'تَل'.",
+      "best_score": 1.0,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.8,
+        "ipa_scoring": 1.0,
+        "multi_hop_chain": 0.8,
+        "position_weighted": 0.7,
+        "reverse_root": 0.8
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "جلا",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "glow",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.4,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.4,
+        "ipa_scoring": 0.333333,
+        "multi_hop_chain": 0.4,
+        "position_weighted": 0.35,
+        "reverse_root": 0.4
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "القسط",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "costus",
+        "gloss": "Costus"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Costus corresponds to Arabic 'القُسطُ'. Sound/meaning match from group entry. Via: French, German, Old English",
+      "best_score": 0.75,
+      "best_method": "emphatic_collapse",
+      "methods_that_fired": [
+        "dialect_variant_gulf",
+        "dialect_variant_moroccan",
+        "direct_skeleton",
+        "emphatic_collapse",
+        "metathesis",
+        "multi_hop_chain",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_gulf": 0.666667,
+        "dialect_variant_moroccan": 0.571429,
+        "direct_skeleton": 0.666667,
+        "emphatic_collapse": 0.75,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.666667,
+        "synonym_expansion": 0.666667
+      },
+      "raw_result_count": 14
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "سَكَر",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "cider",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.571429,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "multi_hop_chain",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_gulf": 0.571429,
+        "direct_skeleton": 0.571429,
+        "ipa_scoring": 0.333333,
+        "multi_hop_chain": 0.571429,
+        "reverse_root": 0.5,
+        "synonym_expansion": 0.571429
+      },
+      "raw_result_count": 12
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "عند",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "deu",
+        "lemma": "end",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 1.0,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 1.0,
+        "ipa_scoring": 1.0,
+        "multi_hop_chain": 1.0,
+        "position_weighted": 0.672337,
+        "reverse_root": 0.8
+      },
+      "raw_result_count": 6
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "الطيّب",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "syc",
+        "lemma": "toby",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.571429,
+      "best_method": "multi_hop_chain",
+      "methods_that_fired": [
+        "multi_hop_chain"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.333333,
+        "emphatic_collapse": 0.333333,
+        "ipa_scoring": 0.333333,
+        "metathesis": 0.333333,
+        "multi_hop_chain": 0.571429
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "التكريم",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "lat",
+        "lemma": "honour",
+        "gloss": "المجد"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "متن",
+        "gloss": "جبل"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "amount",
+        "gloss": "Amount"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Amount' corresponds to Arabic 'متن'.",
+      "best_score": 1.0,
+      "best_method": "metathesis",
+      "methods_that_fired": [
+        "article_detection",
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "article_detection": 0.666667,
+        "direct_skeleton": 0.666667,
+        "ipa_scoring": 0.666667,
+        "metathesis": 1.0,
+        "multi_hop_chain": 0.666667,
+        "reverse_root": 0.666667
+      },
+      "raw_result_count": 11
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "شوف",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "scope",
+        "gloss": "ليشمل الرؤية المجازية مثل: مدى الفهم"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.8,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.666667,
+        "ipa_scoring": 0.666667,
+        "multi_hop_chain": 0.666667,
+        "reverse_root": 0.8
+      },
+      "raw_result_count": 4
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "قيء",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "puke",
+        "gloss": "Puke"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Puke corresponds to Arabic 'قيء'. Sound/meaning match from group entry.",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "بنى",
+        "gloss": "to build"
+      },
+      "target": {
+        "lang": "heb",
+        "lemma": "בנה",
+        "gloss": "to build"
+      },
+      "relation": "cognate",
+      "confidence": 1.0,
+      "notes": "Common Semitic root b-n-y/h",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "نهر",
+        "gloss": "river"
+      },
+      "target": {
+        "lang": "heb",
+        "lemma": "נהר",
+        "gloss": "river"
+      },
+      "relation": "cognate",
+      "confidence": 1.0,
+      "notes": "Common Semitic root n-h-r",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "عبد،",
+        "gloss": "من"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "bead",
+        "gloss": "Bead"
+      },
+      "relation": "cognate",
+      "confidence": 0.8,
+      "notes": "English 'Bead' corresponds to Arabic 'عبد،'. Phonetic note: أن حرف العين حذف من الكلمة لعدم وجوده بلغتهم) Via: Persian, Old English",
+      "best_score": 0.5,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.5,
+        "ipa_scoring": 0.5,
+        "multi_hop_chain": 0.5,
+        "position_weighted": 0.335306,
+        "reverse_root": 0.4
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "ولد",
+        "gloss": "ولد صغير/طفل"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "lad",
+        "gloss": "Lad"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Lad corresponds to Arabic 'ولد'. Sound/meaning match from group entry. Via: Italian",
+      "best_score": 1.0,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.8,
+        "ipa_scoring": 0.8,
+        "metathesis": 0.8,
+        "multi_hop_chain": 0.8,
+        "position_weighted": 0.670511,
+        "reverse_root": 1.0,
+        "synonym_expansion": 0.8
+      },
+      "raw_result_count": 17
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "الخريق",
+        "gloss": "إعصار"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "hurricane",
+        "gloss": "Hurricane"
+      },
+      "relation": "cognate",
+      "confidence": 0.8,
+      "notes": "English 'Hurricane' corresponds to Arabic 'الخريق'. Via: Spanish, Old English",
+      "best_score": 0.75,
+      "best_method": "guttural_projection",
+      "methods_that_fired": [
+        "guttural_projection",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "guttural_projection": 0.75,
+        "reverse_root": 0.666667
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "محصول",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "lat",
+        "lemma": "harvest",
+        "gloss": "محصول/موسم الحصاد"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "كَنَبَه",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "canopy",
+        "gloss": "مظلّة ثابته"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.571429,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.571429,
+        "ipa_scoring": 0.5,
+        "multi_hop_chain": 0.571429,
+        "reverse_root": 0.428571
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "لحم",
+        "gloss": "meat/flesh"
+      },
+      "target": {
+        "lang": "heb",
+        "lemma": "לחם",
+        "gloss": "bread/food"
+      },
+      "relation": "cognate",
+      "confidence": 0.8,
+      "notes": "Common Semitic root l-h-m; semantic shift: Arabic=meat, Hebrew=bread",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "مهين",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "lat",
+        "lemma": "heinous",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.85,
+      "best_method": "morpheme_decomposition",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "morpheme_decomposition",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.8,
+        "ipa_scoring": 0.666667,
+        "metathesis": 0.8,
+        "morpheme_decomposition": 0.85,
+        "multi_hop_chain": 0.666667,
+        "reverse_root": 0.8
+      },
+      "raw_result_count": 10
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "بارجه",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "barge",
+        "gloss": "Barge"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Barge corresponds to Arabic 'بارجه'. Sound/meaning match from group entry.",
+      "best_score": 1.0,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_egyptian",
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_egyptian": 1.0,
+        "dialect_variant_gulf": 0.857143,
+        "direct_skeleton": 1.0,
+        "ipa_scoring": 0.857143,
+        "metathesis": 0.666667,
+        "multi_hop_chain": 1.0,
+        "position_weighted": 1.0,
+        "reverse_root": 0.857143,
+        "synonym_expansion": 1.0
+      },
+      "raw_result_count": 21
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "صنعة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "science",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.857143,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "emphatic_collapse",
+        "guttural_projection",
+        "ipa_scoring",
+        "metathesis",
+        "morpheme_decomposition",
+        "multi_hop_chain"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.857143,
+        "emphatic_collapse": 0.857143,
+        "guttural_projection": 0.857143,
+        "ipa_scoring": 0.8,
+        "metathesis": 0.571429,
+        "morpheme_decomposition": 0.85,
+        "multi_hop_chain": 0.857143
+      },
+      "raw_result_count": 11
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "شِفّة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "lip",
+        "gloss": "الشفة"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "طابور",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "troop",
+        "gloss": "قوات/كتيبة/فوج"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.674478,
+      "best_method": "position_weighted",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "emphatic_collapse",
+        "metathesis",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.666667,
+        "emphatic_collapse": 0.666667,
+        "metathesis": 0.666667,
+        "position_weighted": 0.674478,
+        "reverse_root": 0.666667
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "السملة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "small",
+        "gloss": "Small"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Small corresponds to Arabic 'السملة'. Sound/meaning match from group entry.",
+      "best_score": 0.75,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.666667,
+        "ipa_scoring": 0.75,
+        "metathesis": 0.666667,
+        "multi_hop_chain": 0.666667,
+        "reverse_root": 0.666667
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "رسغ",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "wrist",
+        "gloss": "Wrist"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Wrist corresponds to Arabic 'رسغ'. Sound/meaning match from group entry. Via: Italian",
+      "best_score": 0.8,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "guttural_projection",
+        "ipa_scoring",
+        "morpheme_decomposition",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.666667,
+        "guttural_projection": 0.666667,
+        "ipa_scoring": 0.8,
+        "morpheme_decomposition": 0.55,
+        "multi_hop_chain": 0.666667,
+        "reverse_root": 0.571429
+      },
+      "raw_result_count": 6
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "بجاية",
+        "gloss": "شمعة/بوجيه"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "bougie",
+        "gloss": "Bougie"
+      },
+      "relation": "cognate",
+      "confidence": 0.65,
+      "notes": "English 'Bougie' corresponds to Arabic 'بجاية'. Via: French",
+      "best_score": 0.4,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.333333,
+        "ipa_scoring": 0.4,
+        "multi_hop_chain": 0.4,
+        "reverse_root": 0.4
+      },
+      "raw_result_count": 6
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "الإير",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "meteorology",
+        "gloss": "علم الأرصاد الجوية"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.571429,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "reverse_root"
+      ],
+      "method_scores": {
+        "reverse_root": 0.571429
+      },
+      "raw_result_count": 1
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "ترف",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "thrive",
+        "gloss": "Thrive"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Thrive corresponds to Arabic 'ترف'. Sound/meaning match from group entry.",
+      "best_score": 0.857143,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "morpheme_decomposition",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.857143,
+        "ipa_scoring": 0.666667,
+        "metathesis": 0.666667,
+        "morpheme_decomposition": 0.716667,
+        "multi_hop_chain": 0.857143,
+        "reverse_root": 0.857143
+      },
+      "raw_result_count": 10
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "مغرفة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "deu",
+        "lemma": "scoop",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "ترسة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "deu",
+        "lemma": "turtle",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7999999999999999,
+      "notes": "",
+      "best_score": 0.75,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.571429,
+        "ipa_scoring": 0.666667,
+        "multi_hop_chain": 0.571429,
+        "position_weighted": 0.676682,
+        "reverse_root": 0.75
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "lat",
+        "lemma": "nomen",
+        "gloss": "name"
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "ὄνομα",
+        "gloss": "name"
+      },
+      "relation": "cognate",
+      "confidence": 1.0,
+      "notes": "",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "قرعة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "spa",
+        "lemma": "calabash",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.571429,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_moroccan",
+        "direct_skeleton",
+        "guttural_projection",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_moroccan": 0.571429,
+        "direct_skeleton": 0.571429,
+        "guttural_projection": 0.571429,
+        "ipa_scoring": 0.571429,
+        "multi_hop_chain": 0.571429,
+        "synonym_expansion": 0.571429
+      },
+      "raw_result_count": 8
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "حتى",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "deu",
+        "lemma": "eat",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.333333,
+      "best_method": "multi_hop_chain",
+      "methods_that_fired": [],
+      "method_scores": {
+        "ipa_scoring": 0.333333,
+        "metathesis": 0.333333,
+        "multi_hop_chain": 0.333333,
+        "reverse_root": 0.333333
+      },
+      "raw_result_count": 4
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "السد",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "alidade",
+        "gloss": "Alidade"
+      },
+      "relation": "cognate",
+      "confidence": 0.8,
+      "notes": "English 'Alidade' corresponds to Arabic 'السدّ'. Phonetic note: اختلاف بسيط في النطق أو إختلاف في أحد الأحرف أو إبداله بحرف آخر أو حذفه:",
+      "best_score": 0.827519,
+      "best_method": "position_weighted",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.666667,
+        "metathesis": 0.666667,
+        "multi_hop_chain": 0.666667,
+        "position_weighted": 0.827519,
+        "reverse_root": 0.666667
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "فتات",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "piece",
+        "gloss": "قطعة"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.4,
+      "best_method": "reverse_root",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.333333,
+        "multi_hop_chain": 0.333333,
+        "reverse_root": 0.4
+      },
+      "raw_result_count": 3
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "صنة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "scent",
+        "gloss": "Scent"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Scent corresponds to Arabic 'صنّة'. Sound/meaning match from group entry.",
+      "best_score": 0.8,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "emphatic_collapse",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.666667,
+        "emphatic_collapse": 0.666667,
+        "ipa_scoring": 0.8,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.666667,
+        "position_weighted": 0.658556
+      },
+      "raw_result_count": 6
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "بلية",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "bully",
+        "gloss": "Bully"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Bully corresponds to Arabic 'بليّة / أبتلاء'. Sound/meaning match from group entry.",
+      "best_score": 0.857143,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.857143,
+        "ipa_scoring": 0.8,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.857143,
+        "position_weighted": 0.687696,
+        "reverse_root": 0.666667
+      },
+      "raw_result_count": 6
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "باذر",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "father",
+        "gloss": "Father"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Father' corresponds to Arabic 'باذر'. Via: Old English",
+      "best_score": 0.669936,
+      "best_method": "position_weighted",
+      "methods_that_fired": [
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "position_weighted": 0.669936,
+        "reverse_root": 0.571429
+      },
+      "raw_result_count": 3
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "سراج",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "surgery",
+        "gloss": "Surgery"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Surgery' corresponds to Arabic 'سرّاج'. The text notes: ...أن الكلمتين متماثلين في اللفظ.... Via: Greek",
+      "best_score": 1.0,
+      "best_method": "position_weighted",
+      "methods_that_fired": [
+        "dialect_variant_egyptian",
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_egyptian": 0.75,
+        "dialect_variant_gulf": 0.888889,
+        "direct_skeleton": 0.888889,
+        "ipa_scoring": 0.8,
+        "multi_hop_chain": 0.888889,
+        "position_weighted": 1.0,
+        "reverse_root": 0.857143,
+        "synonym_expansion": 0.888889
+      },
+      "raw_result_count": 19
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "غلام",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "spa",
+        "lemma": "groom",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.8,
+      "best_method": "guttural_projection",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "guttural_projection",
+        "metathesis",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.571429,
+        "guttural_projection": 0.8,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.571429,
+        "reverse_root": 0.666667
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "قرد",
+        "gloss": "ملتوي"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "curl",
+        "gloss": "Curl"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "English 'Curl' corresponds to Arabic 'قرّد'. The text notes: ...أن مثل هذا الإبدال موجود في بعض الكلمات الإنجليزية فمثلا:... Rules: إبدال موجود في بعض الكلمات الإنجليزي Via: Greek, German",
+      "best_score": 0.4,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [],
+      "method_scores": {
+        "dialect_variant_gulf": 0.333333,
+        "direct_skeleton": 0.333333,
+        "emphatic_collapse": 0.333333,
+        "ipa_scoring": 0.4,
+        "multi_hop_chain": 0.333333,
+        "position_weighted": 0.335175,
+        "reverse_root": 0.333333,
+        "synonym_expansion": 0.333333
+      },
+      "raw_result_count": 19
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "كرار",
+        "gloss": "لتأخذ دلالة أكثر تحديدًا وهي"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "garage",
+        "gloss": "Garage"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Garage' corresponds to Arabic 'كرّار'. Via: French, German",
+      "best_score": 0.571429,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "multi_hop_chain",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_gulf": 0.571429,
+        "direct_skeleton": 0.571429,
+        "morpheme_decomposition": 0.358333,
+        "multi_hop_chain": 0.571429,
+        "position_weighted": 0.334446,
+        "reverse_root": 0.571429,
+        "synonym_expansion": 0.571429
+      },
+      "raw_result_count": 15
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "مهين",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "heinous",
+        "gloss": "Heinous"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Heinous corresponds to Arabic 'مهين'. Sound/meaning match from group entry. Via: Latin, Greek",
+      "best_score": 0.85,
+      "best_method": "morpheme_decomposition",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "morpheme_decomposition",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.8,
+        "ipa_scoring": 0.666667,
+        "metathesis": 0.8,
+        "morpheme_decomposition": 0.85,
+        "multi_hop_chain": 0.666667,
+        "reverse_root": 0.8
+      },
+      "raw_result_count": 10
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "فرية",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "fraud",
+        "gloss": "Fraud"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Fraud corresponds to Arabic 'فرية'. Sound/meaning match from group entry.",
+      "best_score": 0.344691,
+      "best_method": "position_weighted",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.333333,
+        "ipa_scoring": 0.333333,
+        "multi_hop_chain": 0.333333,
+        "position_weighted": 0.344691,
+        "reverse_root": 0.333333
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "أهوج",
+        "gloss": "ضخم"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "huge",
+        "gloss": "Huge"
+      },
+      "relation": "cognate",
+      "confidence": 0.8,
+      "notes": "English 'Huge' corresponds to Arabic 'أهوج'. The text notes: ...التشابه بين كلمة (أهوج) و (ahuge, ahoge) في اللفظ والمعنى والتي اختصرت لاحقاً الى huge في الإنجليزية... Via: French",
+      "best_score": 0.35,
+      "best_method": "position_weighted",
+      "methods_that_fired": [],
+      "method_scores": {
+        "metathesis": 0.333333,
+        "multi_hop_chain": 0.333333,
+        "position_weighted": 0.35
+      },
+      "raw_result_count": 4
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "حك",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "ita",
+        "lemma": "itch",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.571429,
+      "best_method": "metathesis",
+      "methods_that_fired": [
+        "metathesis"
+      ],
+      "method_scores": {
+        "dialect_variant_gulf": 0.333333,
+        "direct_skeleton": 0.333333,
+        "guttural_projection": 0.333333,
+        "ipa_scoring": 0.333333,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.333333,
+        "position_weighted": 0.330699,
+        "reverse_root": 0.333333,
+        "synonym_expansion": 0.333333
+      },
+      "raw_result_count": 10
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "متر",
+        "gloss": "الهندسة"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "meter",
+        "gloss": "meter"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "meter corresponds to Arabic 'مّتّر'. Sound/meaning match from group entry.",
+      "best_score": 1.0,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "morpheme_decomposition",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 1.0,
+        "ipa_scoring": 0.8,
+        "metathesis": 0.8,
+        "morpheme_decomposition": 0.85,
+        "multi_hop_chain": 1.0,
+        "position_weighted": 1.0,
+        "reverse_root": 1.0
+      },
+      "raw_result_count": 13
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "جبيل",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "bible",
+        "gloss": "الكتاب المقدس"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.8,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_egyptian",
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_egyptian": 0.8,
+        "dialect_variant_gulf": 0.8,
+        "direct_skeleton": 0.8,
+        "ipa_scoring": 0.666667,
+        "metathesis": 0.666667,
+        "multi_hop_chain": 0.666667,
+        "reverse_root": 0.8,
+        "synonym_expansion": 0.8
+      },
+      "raw_result_count": 17
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "قعد",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "chair",
+        "gloss": "Chair"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "English 'Chair' corresponds to Arabic 'قعد'. Via: French, Greek",
+      "best_score": 0.4,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [],
+      "method_scores": {
+        "dialect_variant_gulf": 0.333333,
+        "direct_skeleton": 0.333333,
+        "ipa_scoring": 0.4,
+        "multi_hop_chain": 0.333333,
+        "position_weighted": 0.331258,
+        "reverse_root": 0.333333,
+        "synonym_expansion": 0.333333
+      },
+      "raw_result_count": 11
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "القرض",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "spa",
+        "lemma": "corrode",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.857143,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [
+        "dialect_variant_gulf",
+        "dialect_variant_moroccan",
+        "direct_skeleton",
+        "emphatic_collapse",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_gulf": 0.75,
+        "dialect_variant_moroccan": 0.857143,
+        "direct_skeleton": 0.857143,
+        "emphatic_collapse": 0.857143,
+        "ipa_scoring": 0.857143,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.857143,
+        "position_weighted": 0.727838,
+        "synonym_expansion": 0.857143
+      },
+      "raw_result_count": 18
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "بيت",
+        "gloss": "house"
+      },
+      "target": {
+        "lang": "arc",
+        "lemma": "בית",
+        "gloss": "house"
+      },
+      "relation": "cognate",
+      "confidence": 1.0,
+      "notes": "Common Semitic root b-y-t",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "وهل",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "surface",
+        "gloss": "سطح"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "فاه،",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "lat",
+        "lemma": "infant",
+        "gloss": "رضيع"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.55,
+      "best_method": "morpheme_decomposition",
+      "methods_that_fired": [
+        "morpheme_decomposition"
+      ],
+      "method_scores": {
+        "morpheme_decomposition": 0.55
+      },
+      "raw_result_count": 1
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "بردعة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "lat",
+        "lemma": "bard",
+        "gloss": "“سرج الحصان"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 1.0,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "guttural_projection",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 1.0,
+        "guttural_projection": 1.0,
+        "ipa_scoring": 1.0,
+        "metathesis": 0.857143,
+        "multi_hop_chain": 1.0,
+        "position_weighted": 0.682355,
+        "reverse_root": 0.75
+      },
+      "raw_result_count": 7
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "مرج",
+        "gloss": "الدمج والإتحاد في الإنجليزية وحسب مصادرهم فقد جاءت من اللاتي"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "merge",
+        "gloss": "Merge"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Merge' corresponds to Arabic 'مرج'. Via: Latin",
+      "best_score": 1.0,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_egyptian",
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_egyptian": 0.8,
+        "dialect_variant_gulf": 0.8,
+        "direct_skeleton": 1.0,
+        "ipa_scoring": 0.8,
+        "metathesis": 0.666667,
+        "multi_hop_chain": 1.0,
+        "position_weighted": 1.0,
+        "reverse_root": 1.0,
+        "synonym_expansion": 0.8
+      },
+      "raw_result_count": 18
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "رفش",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "ang",
+        "lemma": "shovel",
+        "gloss": "مجرفة"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.571429,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "reverse_root"
+      ],
+      "method_scores": {
+        "reverse_root": 0.571429
+      },
+      "raw_result_count": 1
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "علم",
+        "gloss": "علم الفلك"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "semiology",
+        "gloss": "Semiology"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Semiology corresponds to Arabic 'علم السمة'. Sound/meaning match from group entry. Via: Latin, Greek",
+      "best_score": 0.8,
+      "best_method": "morpheme_decomposition",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "metathesis",
+        "morpheme_decomposition",
+        "multi_hop_chain",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.75,
+        "metathesis": 0.571429,
+        "morpheme_decomposition": 0.8,
+        "multi_hop_chain": 0.75,
+        "synonym_expansion": 0.75
+      },
+      "raw_result_count": 17
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "شاه",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "check",
+        "gloss": "Check"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Check corresponds to Arabic 'شاه'. Sound/meaning match from group entry. Rules: حيث V=ب; حيث g=ي Via: Latin, Spanish",
+      "best_score": 0.375,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.375,
+        "ipa_scoring": 0.333333,
+        "multi_hop_chain": 0.375,
+        "reverse_root": 0.333333
+      },
+      "raw_result_count": 4
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "سمو",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "lat",
+        "lemma": "sum",
+        "gloss": "الأصلي"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 1.0,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.8,
+        "ipa_scoring": 1.0,
+        "metathesis": 0.8,
+        "multi_hop_chain": 1.0,
+        "position_weighted": 0.7,
+        "reverse_root": 1.0,
+        "synonym_expansion": 0.8
+      },
+      "raw_result_count": 28
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "عمانويل",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "emmanuel",
+        "gloss": "Emmanuel"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Emmanuel corresponds to Arabic 'عمانويل'. Sound/meaning match from group entry.",
+      "best_score": 0.857143,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "guttural_projection",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.857143,
+        "guttural_projection": 0.857143,
+        "ipa_scoring": 0.666667,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.666667,
+        "reverse_root": 0.75
+      },
+      "raw_result_count": 6
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "باذر",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "ang",
+        "lemma": "father",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.669936,
+      "best_method": "position_weighted",
+      "methods_that_fired": [
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "position_weighted": 0.669936,
+        "reverse_root": 0.571429
+      },
+      "raw_result_count": 3
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "الأبتر",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "apterous",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.857143,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "article_detection",
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "morpheme_decomposition",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "article_detection": 0.75,
+        "direct_skeleton": 0.75,
+        "ipa_scoring": 0.571429,
+        "metathesis": 0.571429,
+        "morpheme_decomposition": 0.8,
+        "multi_hop_chain": 0.75,
+        "reverse_root": 0.857143
+      },
+      "raw_result_count": 16
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "الكي",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "ink",
+        "gloss": "(حبر) كما نعلم"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.4,
+      "best_method": "multi_hop_chain",
+      "methods_that_fired": [],
+      "method_scores": {
+        "ipa_scoring": 0.333333,
+        "multi_hop_chain": 0.4,
+        "position_weighted": 0.35
+      },
+      "raw_result_count": 3
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "القاسط",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "spa",
+        "lemma": "justin",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.75,
+      "best_method": "emphatic_collapse",
+      "methods_that_fired": [
+        "dialect_variant_gulf",
+        "dialect_variant_moroccan",
+        "direct_skeleton",
+        "emphatic_collapse",
+        "metathesis",
+        "multi_hop_chain",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_gulf": 0.75,
+        "dialect_variant_moroccan": 0.571429,
+        "direct_skeleton": 0.75,
+        "emphatic_collapse": 0.75,
+        "metathesis": 0.75,
+        "multi_hop_chain": 0.666667,
+        "synonym_expansion": 0.75
+      },
+      "raw_result_count": 12
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "طبة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "ang",
+        "lemma": "tape",
+        "gloss": "شريط"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "",
+      "best_score": 0.5,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "emphatic_collapse",
+        "ipa_scoring",
+        "multi_hop_chain"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.5,
+        "emphatic_collapse": 0.5,
+        "ipa_scoring": 0.5,
+        "multi_hop_chain": 0.5,
+        "position_weighted": 0.344907
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "طوق",
+        "gloss": "ربطة العنق"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "toque",
+        "gloss": "Toque"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Toque corresponds to Arabic 'طوق'. Sound/meaning match from group entry. Via: French",
+      "best_score": 0.4,
+      "best_method": "multi_hop_chain",
+      "methods_that_fired": [],
+      "method_scores": {
+        "ipa_scoring": 0.4,
+        "metathesis": 0.333333,
+        "multi_hop_chain": 0.4,
+        "reverse_root": 0.4
+      },
+      "raw_result_count": 6
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "دأم",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "lat",
+        "lemma": "dam",
+        "gloss": "(السّد)"
+      },
+      "relation": "cognate",
+      "confidence": 0.7999999999999999,
+      "notes": "",
+      "best_score": 1.0,
+      "best_method": "multi_hop_chain",
+      "methods_that_fired": [
+        "ipa_scoring",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "ipa_scoring": 1.0,
+        "multi_hop_chain": 1.0,
+        "position_weighted": 0.7,
+        "reverse_root": 1.0
+      },
+      "raw_result_count": 4
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "هي،",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "he",
+        "gloss": "He"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "English 'He' corresponds to Arabic 'هي،'. Via: Old English",
+      "best_score": 0.5,
+      "best_method": "metathesis",
+      "methods_that_fired": [
+        "metathesis",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "ipa_scoring": 0.333333,
+        "metathesis": 0.5,
+        "multi_hop_chain": 0.333333,
+        "position_weighted": 0.35,
+        "reverse_root": 0.5
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "نفط",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "naphtha",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.75,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "emphatic_collapse",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "position_weighted"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.75,
+        "emphatic_collapse": 0.75,
+        "ipa_scoring": 0.666667,
+        "multi_hop_chain": 0.75,
+        "position_weighted": 0.667457
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "المن",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "manna",
+        "gloss": "Manna"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Manna corresponds to Arabic 'المن'. Sound/meaning match from group entry. Rules: حيث S=ز Via: Greek",
+      "best_score": 0.4,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.333333,
+        "ipa_scoring": 0.4,
+        "metathesis": 0.333333,
+        "multi_hop_chain": 0.333333,
+        "reverse_root": 0.333333
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "ليل",
+        "gloss": "night"
+      },
+      "target": {
+        "lang": "arc",
+        "lemma": "ליל",
+        "gloss": "night"
+      },
+      "relation": "cognate",
+      "confidence": 1.0,
+      "notes": "Common Semitic root l-y-l",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "رَجا",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "region",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "",
+      "best_score": 0.4,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [],
+      "method_scores": {
+        "direct_skeleton": 0.4,
+        "ipa_scoring": 0.4,
+        "multi_hop_chain": 0.4,
+        "position_weighted": 0.35,
+        "reverse_root": 0.4
+      },
+      "raw_result_count": 12
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "الجزء",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "acephalous",
+        "gloss": "Acephalous"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Acephalous corresponds to Arabic 'الجزء السفلي (بدون رأس)'. Sound/meaning match from group entry.",
+      "best_score": 0.571429,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "article_detection",
+        "dialect_variant_egyptian",
+        "direct_skeleton",
+        "morpheme_decomposition",
+        "multi_hop_chain",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "article_detection": 0.571429,
+        "dialect_variant_egyptian": 0.571429,
+        "direct_skeleton": 0.571429,
+        "morpheme_decomposition": 0.55,
+        "multi_hop_chain": 0.571429,
+        "synonym_expansion": 0.571429
+      },
+      "raw_result_count": 17
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "عبد،",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fa",
+        "lemma": "bead",
+        "gloss": "من"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "",
+      "best_score": 0.5,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.5,
+        "ipa_scoring": 0.5,
+        "multi_hop_chain": 0.5,
+        "position_weighted": 0.335306,
+        "reverse_root": 0.4
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "سجل",
+        "gloss": "إلى"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "album",
+        "gloss": "Album"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Album' corresponds to Arabic 'سجل'. Via: Latin",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "ألوق",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "loco",
+        "gloss": "Loco"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Loco corresponds to Arabic 'ألوق'. Sound/meaning match from group entry. Rules: حيث V=ب; حيث g=ي Via: Latin, Spanish",
+      "best_score": 0.5,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "reverse_root"
+      ],
+      "method_scores": {
+        "ipa_scoring": 0.4,
+        "metathesis": 0.333333,
+        "multi_hop_chain": 0.4,
+        "reverse_root": 0.5
+      },
+      "raw_result_count": 7
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "غرافة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "ita",
+        "lemma": "crow",
+        "gloss": "غراب"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.571429,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "multi_hop_chain"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.571429,
+        "guttural_projection": 0.4,
+        "multi_hop_chain": 0.571429
+      },
+      "raw_result_count": 3
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "بسر",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "ita",
+        "lemma": "bizarre",
+        "gloss": "عندهم الى"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "",
+      "best_score": 1.0,
+      "best_method": "position_weighted",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "guttural_projection",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.857143,
+        "guttural_projection": 0.666667,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.857143,
+        "position_weighted": 1.0,
+        "reverse_root": 0.857143,
+        "synonym_expansion": 0.666667
+      },
+      "raw_result_count": 9
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "العمى",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "amaurosis fugax",
+        "gloss": "Amaurosis fugax"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Amaurosis fugax corresponds to Arabic 'العمى الفجائي'. Sound/meaning match from group entry. Via: French, German, Old English",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "مستور",
+        "gloss": "لغز / سر / شيء غامض"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "mystery",
+        "gloss": "Mystery"
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "English 'Mystery' corresponds to Arabic 'مستور'. Via: French, Latin, Greek",
+      "best_score": 1.0,
+      "best_method": "reverse_root",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.8,
+        "ipa_scoring": 0.888889,
+        "metathesis": 0.6,
+        "multi_hop_chain": 0.727273,
+        "reverse_root": 1.0
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "قرّظ",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "grc",
+        "lemma": "grace",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.33711,
+      "best_method": "position_weighted",
+      "methods_that_fired": [],
+      "method_scores": {
+        "dialect_variant_gulf": 0.333333,
+        "direct_skeleton": 0.333333,
+        "emphatic_collapse": 0.333333,
+        "multi_hop_chain": 0.333333,
+        "position_weighted": 0.33711,
+        "reverse_root": 0.333333,
+        "synonym_expansion": 0.333333
+      },
+      "raw_result_count": 12
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "الى",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "ita",
+        "lemma": "alarm",
+        "gloss": "(كما حدث للعديد من الكلمات التي سبق وأن ذكرنا بعضا منها) فأص"
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.35,
+      "best_method": "position_weighted",
+      "methods_that_fired": [],
+      "method_scores": {
+        "position_weighted": 0.35
+      },
+      "raw_result_count": 2
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "زفير",
+        "gloss": "الإلهام"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "zephyr",
+        "gloss": "Zephyr"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Zephyr corresponds to Arabic 'زفير'. Sound/meaning match from group entry. Via: Latin, Greek, Syriac",
+      "best_score": 0.888889,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.888889,
+        "ipa_scoring": 0.666667,
+        "multi_hop_chain": 0.888889,
+        "position_weighted": 0.663099,
+        "reverse_root": 0.857143
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "منطقة",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "zone",
+        "gloss": "Zone"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Zone' corresponds to Arabic 'منطقة'. Via: Latin, Greek",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "طيب",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "toffee",
+        "gloss": "Toffee"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Toffee corresponds to Arabic 'طيّب'. Sound/meaning match from group entry. Via: Latin",
+      "best_score": 0.6,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "emphatic_collapse",
+        "multi_hop_chain",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.6,
+        "emphatic_collapse": 0.6,
+        "ipa_scoring": 0.4,
+        "multi_hop_chain": 0.6,
+        "synonym_expansion": 0.6
+      },
+      "raw_result_count": 8
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "دبله",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "double",
+        "gloss": "Double"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Double corresponds to Arabic 'دبله'. Sound/meaning match from group entry.",
+      "best_score": 1.0,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 1.0,
+        "ipa_scoring": 1.0,
+        "metathesis": 0.857143,
+        "multi_hop_chain": 1.0,
+        "position_weighted": 0.811844,
+        "reverse_root": 0.857143
+      },
+      "raw_result_count": 6
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "البر",
+        "gloss": "الأول عند انتقالها بين اللغات واللهجات"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "barley",
+        "gloss": "Barley"
+      },
+      "relation": "cognate",
+      "confidence": 0.75,
+      "notes": "Barley corresponds to Arabic 'البُر'. Sound/meaning match from group entry.",
+      "best_score": 0.666667,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [
+        "direct_skeleton",
+        "ipa_scoring",
+        "metathesis",
+        "multi_hop_chain",
+        "reverse_root"
+      ],
+      "method_scores": {
+        "direct_skeleton": 0.571429,
+        "ipa_scoring": 0.666667,
+        "metathesis": 0.571429,
+        "multi_hop_chain": 0.571429,
+        "reverse_root": 0.666667
+      },
+      "raw_result_count": 5
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "فتق",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "fatigue",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6,
+      "notes": "",
+      "best_score": 0.5,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_gulf": 0.5,
+        "dialect_variant_moroccan": 0.4,
+        "direct_skeleton": 0.5,
+        "ipa_scoring": 0.4,
+        "multi_hop_chain": 0.5,
+        "position_weighted": 0.5,
+        "reverse_root": 0.5,
+        "synonym_expansion": 0.5
+      },
+      "raw_result_count": 19
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "كي",
+        "gloss": "مادة"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "caustic",
+        "gloss": "Caustic"
+      },
+      "relation": "cognate",
+      "confidence": 0.85,
+      "notes": "English 'Caustic' corresponds to Arabic 'كي'. The text notes: ...كلمتي \"كي\" و Kaiein”\" تتماثلان في اللفظ والمعنى، أمّا النون الأخيرة في الكلمة اليونانية فهي التنوين... Via: Greek",
+      "best_score": 0.571429,
+      "best_method": "metathesis",
+      "methods_that_fired": [
+        "metathesis"
+      ],
+      "method_scores": {
+        "metathesis": 0.571429,
+        "position_weighted": 0.35,
+        "reverse_root": 0.333333
+      },
+      "raw_result_count": 3
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "قعد",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "chair",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.4,
+      "best_method": "ipa_scoring",
+      "methods_that_fired": [],
+      "method_scores": {
+        "dialect_variant_gulf": 0.333333,
+        "direct_skeleton": 0.333333,
+        "ipa_scoring": 0.4,
+        "multi_hop_chain": 0.333333,
+        "position_weighted": 0.331258,
+        "reverse_root": 0.333333,
+        "synonym_expansion": 0.333333
+      },
+      "raw_result_count": 11
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "إسم",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "name",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.6499999999999999,
+      "notes": "",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "مسجد",
+        "gloss": ""
+      },
+      "target": {
+        "lang": "fra",
+        "lemma": "mosque",
+        "gloss": ""
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "",
+      "best_score": 0.857143,
+      "best_method": "direct_skeleton",
+      "methods_that_fired": [
+        "dialect_variant_egyptian",
+        "dialect_variant_gulf",
+        "direct_skeleton",
+        "metathesis",
+        "multi_hop_chain",
+        "position_weighted",
+        "reverse_root",
+        "synonym_expansion"
+      ],
+      "method_scores": {
+        "dialect_variant_egyptian": 0.666667,
+        "dialect_variant_gulf": 0.666667,
+        "direct_skeleton": 0.857143,
+        "metathesis": 0.666667,
+        "multi_hop_chain": 0.857143,
+        "position_weighted": 0.81412,
+        "reverse_root": 0.666667,
+        "synonym_expansion": 0.666667
+      },
+      "raw_result_count": 19
+    },
+    {
+      "source": {
+        "lang": "ara",
+        "lemma": "يمتلك،",
+        "gloss": "مشهور"
+      },
+      "target": {
+        "lang": "eng",
+        "lemma": "famous",
+        "gloss": "Famous"
+      },
+      "relation": "cognate",
+      "confidence": 0.7,
+      "notes": "English 'Famous' corresponds to Arabic 'يمتلك،'. Via: French, Latin",
+      "best_score": 0.0,
+      "best_method": "",
+      "methods_that_fired": [],
+      "method_scores": {},
+      "raw_result_count": 0
+    }
+  ]
+}
