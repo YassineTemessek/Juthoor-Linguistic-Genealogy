@@ -40,6 +40,8 @@ LEADS_DIR = LV2_ROOT / "outputs/leads"
 # Package path
 sys.path.insert(0, str(LV2_ROOT / "src"))
 
+from juthoor_cognatediscovery_lv2.discovery.gloss_similarity import gloss_similarity  # noqa: E402
+
 # ---------------------------------------------------------------------------
 # Stage 1: Load corpora
 # ---------------------------------------------------------------------------
@@ -398,6 +400,11 @@ def score_all_pairs_fast(
             if result.best_score <= threshold:
                 continue
 
+            # Lightweight semantic guard: require SOME gloss overlap
+            sem_score = gloss_similarity(ar, en)
+            if result.best_score < 0.85 and sem_score < 0.01:
+                continue  # Skip pairs with zero semantic overlap unless very high phonetic score
+
             explanation = ""
             if result.all_results:
                 best_result = max(result.all_results, key=lambda r: r.score)
@@ -429,6 +436,7 @@ def score_all_pairs_fast(
                     "methods_fired_count": len(result.methods_that_fired),
                     "arabic_expansions": result.arabic_expansions_tried,
                     "final_combined": result.best_score,
+                    "gloss_similarity": round(sem_score, 4),
                 },
                 "evidence": {
                     "methods_fired": result.methods_that_fired,
