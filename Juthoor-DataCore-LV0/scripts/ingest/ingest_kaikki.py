@@ -196,11 +196,6 @@ _TURKISH_FALLBACK_ENTRIES: tuple[tuple[str, str, str, str], ...] = (
     ("yaz", "noun", "summer", "/jaz/"),
     ("yaz", "verb", "to write", "/jaz/"),
     ("ye", "verb", "to eat", "/je/"),
-    ("yel", "noun", "wind", "/jel/"),
-    ("yeni", "adj", "new", "/jeˈni/"),
-    ("yıl", "noun", "year", "/jɯɫ/"),
-    ("yol", "noun", "road; way", "/joɫ/"),
-    ("yürek", "noun", "heart; courage", "/jyˈɾec/"),
     ("zaman", "noun", "time", "/zaˈman/"),
 )
 

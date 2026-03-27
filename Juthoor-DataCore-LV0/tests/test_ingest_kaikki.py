@@ -9,10 +9,6 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
-from io import StringIO
-
-import pytest
-
 # Ensure scripts/ingest/ is on sys.path so we can import the script directly.
 _SCRIPTS_INGEST = Path(__file__).resolve().parents[1] / "scripts" / "ingest"
 if str(_SCRIPTS_INGEST) not in sys.path:
@@ -79,6 +75,12 @@ AKK_RECORD = json.dumps({
     "sounds": [{"ipa": "/ʃar.ru/"}],
 })
 
+TR_RECORD = json.dumps({
+    "word": "kitap", "lang_code": "tr", "pos": "noun",
+    "senses": [{"glosses": ["book"]}],
+    "sounds": [{"ipa": "/ciˈtap/"}],
+})
+
 
 # ---------------------------------------------------------------------------
 # Helper
@@ -88,12 +90,20 @@ def _parse(raw_json: str) -> dict | None:
     return ingest_kaikki.parse_record(json.loads(raw_json))
 
 
+def _writable_test_output(name: str) -> Path:
+    out_path = Path(__file__).resolve().parents[1] / "data" / "processed" / "_intermediate" / name
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    if out_path.exists():
+        out_path.unlink()
+    return out_path
+
+
 # ---------------------------------------------------------------------------
 # Tests
 # ---------------------------------------------------------------------------
 
 def test_lang_map_covers_all_targets():
-    assert set(ingest_kaikki.LANG_MAP.keys()) == {"grc", "la", "ang", "enm", "en", "he", "fa", "arc", "akk"}
+    assert set(ingest_kaikki.LANG_MAP.keys()) == {"grc", "la", "ang", "enm", "en", "he", "fa", "arc", "akk", "tr"}
 
 
 def test_parse_greek_record():
@@ -170,15 +180,24 @@ def test_parse_akkadian():
     assert rec["gloss_plain"] == "king"
 
 
-def test_ingest_lines_deduplicates_ids(tmp_path):
-    out_file = tmp_path / "out.jsonl"
-    # Feed the same raw line twice — should produce 2 records with distinct IDs.
+def test_parse_turkish():
+    rec = _parse(TR_RECORD)
+    assert rec is not None
+    assert rec["language"] == "tur"
+    assert rec["stage"] == "modern"
+    assert rec["script"] == "Latn"
+    assert rec["gloss_plain"] == "book"
+
+
+def test_ingest_lines_deduplicates_ids():
+    out_file = _writable_test_output("_test_ingest_kaikki_dedup.jsonl")
     lines = [LATIN_RECORD, LATIN_RECORD]
     count = ingest_kaikki.ingest_lines(iter(lines), out_file)
     assert count == 2
     records = [json.loads(l) for l in out_file.read_text(encoding="utf-8").splitlines() if l.strip()]
     assert len(records) == 2
     assert records[0]["id"] != records[1]["id"]
+    out_file.unlink()
 
 
 def test_form_text_populated():
@@ -236,3 +255,14 @@ def test_old_english_fields():
     assert rec["form_text"]  # must be populated
     assert "word" in rec["form_text"]  # lemma appears in form_text
     assert rec.get("translit") == "word"  # translit set to lemma
+
+
+def test_turkish_fallback_fixture_is_usable():
+    out_file = _writable_test_output("_test_ingest_kaikki_turkish.jsonl")
+    count = ingest_kaikki.ingest_lines(ingest_kaikki._turkish_fallback_lines(), out_file)
+    assert count == 100
+    records = [json.loads(line) for line in out_file.read_text(encoding="utf-8").splitlines() if line.strip()]
+    assert len(records) == 100
+    assert records[0]["language"] == "tur"
+    assert records[0]["source"] == "kaikki-wiktionary"
+    out_file.unlink()
