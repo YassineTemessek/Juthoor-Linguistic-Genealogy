@@ -97,10 +97,17 @@ def _apply_phonetic_law_bonus(
     source_fields: dict[str, Any],
     target_fields: dict[str, Any],
     phonetic_law_scorer: "PhoneticLawScorer",
+    semantic_score: float | None = None,
 ) -> dict[str, Any]:
     boosted = dict(hybrid)
     components = dict(boosted.get("components") or {})
     bonus = phonetic_law_scorer.phonetic_law_bonus(source_fields, target_fields)
+
+    # Semantic guard: reduce phonetic bonus when meanings are very different.
+    # A strong phonetic match with unrelated meaning is almost certainly a false positive.
+    if bonus > 0.0 and semantic_score is not None and semantic_score < 0.25:
+        bonus = bonus * 0.5
+
     components["phonetic_law_bonus"] = round(bonus, 6) if bonus != 0.0 else 0.0
     boosted["components"] = components
     if bonus == 0.0:
@@ -157,11 +164,13 @@ def apply_hybrid_scoring(
             hybrid = dict(hybrid)
             hybrid["components"] = components
         if phonetic_law_scorer is not None:
+            semantic_score = entry["scores"].get("semantic")
             hybrid = _apply_phonetic_law_bonus(
                 hybrid,
                 source_fields=src_fields,
                 target_fields=tgt_fields,
                 phonetic_law_scorer=phonetic_law_scorer,
+                semantic_score=float(semantic_score) if semantic_score is not None else None,
             )
         else:
             components = dict(hybrid.get("components") or {})
