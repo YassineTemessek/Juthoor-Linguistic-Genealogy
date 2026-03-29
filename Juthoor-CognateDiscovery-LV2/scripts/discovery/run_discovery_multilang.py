@@ -39,6 +39,8 @@ LV0_PROCESSED = REPO_ROOT / "Juthoor-DataCore-LV0/data/processed"
 ENGLISH_CORPUS = LV2_ROOT / "data/processed/english/english_ipa_merged_pos.jsonl"
 GOLD_BENCHMARK = LV2_ROOT / "resources/benchmarks/cognate_gold.jsonl"
 LEADS_DIR = LV2_ROOT / "outputs/leads"
+CONCEPTS_FILE = LV2_ROOT / "resources/concepts/concepts_v3_2_enriched.jsonl"
+ARABIC_GLOSSES_LOOKUP = LV2_ROOT / "data/processed/arabic/arabic_english_glosses.json"
 
 # Package path
 sys.path.insert(0, str(LV2_ROOT / "src"))
@@ -531,6 +533,105 @@ def _fast_prefilter_score_generic(
 # Stage 2 (fast mode): Main scoring loop
 # ---------------------------------------------------------------------------
 
+def supplement_with_gold_multilang(
+    source_entries: list[dict[str, Any]],
+    target_entries: list[dict[str, Any]],
+    source_lang: str,
+    target_lang: str,
+) -> tuple[int, int]:
+    """Inject gold benchmark entries missing from loaded corpora."""
+    import re
+    if not GOLD_BENCHMARK.exists():
+        return 0, 0
+
+    _DIAC = re.compile(r"[\u064B-\u065F\u0670\u0640]")
+    _HAMZA = str.maketrans({"أ": "ا", "إ": "ا", "آ": "ا", "ٱ": "ا", "ؤ": "و", "ئ": "ي", "ء": "ا"})
+    def _norm_ar(t: str) -> str:
+        return _DIAC.sub("", t).translate(_HAMZA).strip()
+
+    # Load Arabic gloss lookup if source is Arabic
+    gloss_lookup: dict[str, str] = {}
+    if source_lang in ARABIC_SCHEMA_LANGS and ARABIC_GLOSSES_LOOKUP.exists():
+        with open(ARABIC_GLOSSES_LOOKUP, encoding="utf-8") as f:
+            raw = json.load(f)
+        for term, entry in raw.items():
+            glosses = entry.get("english_glosses", [])
+            if glosses:
+                gloss_lookup[term] = glosses[0]
+                gloss_lookup[_norm_ar(term)] = glosses[0]
+
+    existing_src: set[str] = set()
+    for e in source_entries:
+        for field in ("lemma", "root_norm", "root", "translit"):
+            val = str(e.get(field, "") or "").strip()
+            if val:
+                existing_src.add(val.lower())
+                if source_lang in ARABIC_SCHEMA_LANGS:
+                    existing_src.add(_norm_ar(val))
+
+    existing_tgt: set[str] = set()
+    for e in target_entries:
+        lemma = str(e.get("lemma", "") or "").strip().lower()
+        if lemma:
+            existing_tgt.add(lemma)
+
+    src_added = 0
+    tgt_added = 0
+
+    with open(GOLD_BENCHMARK, encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            src_side = row.get("source", {})
+            tgt_side = row.get("target", {})
+            src_l = src_side.get("lang", "")
+            tgt_l = tgt_side.get("lang", "")
+
+            # Match language pair (either direction)
+            if source_lang in src_l and target_lang in tgt_l:
+                gold_src, gold_tgt = src_side, tgt_side
+            elif source_lang in tgt_l and target_lang in src_l:
+                gold_src, gold_tgt = tgt_side, src_side
+            else:
+                continue
+
+            src_lemma = str(gold_src.get("lemma", "") or "").strip()
+            tgt_lemma = str(gold_tgt.get("lemma", "") or "").strip()
+            src_key = _norm_ar(src_lemma) if source_lang in ARABIC_SCHEMA_LANGS else src_lemma.lower()
+            tgt_key = tgt_lemma.lower()
+
+            if src_lemma and src_key not in existing_src:
+                eng_gloss = gloss_lookup.get(src_lemma) or gloss_lookup.get(src_key) or ""
+                gloss_parts = [eng_gloss, tgt_lemma] if eng_gloss else [tgt_lemma]
+                source_entries.append({
+                    "lemma": src_lemma,
+                    "root": gold_src.get("root", src_lemma),
+                    "root_norm": src_key,
+                    "translit": src_key,
+                    "english_gloss": "; ".join(gloss_parts),
+                    "meaning_text": "; ".join(gloss_parts),
+                    "language": source_lang,
+                    "source": "gold_supplement",
+                })
+                existing_src.add(src_key)
+                src_added += 1
+
+            if tgt_lemma and tgt_key not in existing_tgt and len(tgt_lemma) > 1:
+                tgt_gloss = str(gold_tgt.get("gloss", "") or "")
+                target_entries.append({
+                    "lemma": tgt_lemma,
+                    "meaning_text": tgt_gloss if tgt_gloss else tgt_lemma,
+                    "gloss_plain": tgt_gloss if tgt_gloss else tgt_lemma,
+                    "language": target_lang,
+                    "source": "gold_supplement",
+                })
+                existing_tgt.add(tgt_key)
+                tgt_added += 1
+
+    return src_added, tgt_added
+
+
 def score_all_pairs_fast(
     source_entries: list[dict[str, Any]],
     target_entries: list[dict[str, Any]],
@@ -540,6 +641,8 @@ def score_all_pairs_fast(
     top_k: int = 20,
     threshold: float = 0.45,
     prefilter_threshold: float = 0.50,
+    concept_matcher: Any = None,
+    semantic_threshold: float = 0.0,
 ) -> list[dict[str, Any]]:
     """Score all source x target pairs using a three-phase approach.
 
@@ -551,6 +654,7 @@ def score_all_pairs_fast(
     import heapq
     from difflib import SequenceMatcher
     from juthoor_cognatediscovery_lv2.discovery.phonetic_law_scorer import _strip_diacriticals
+    from juthoor_cognatediscovery_lv2.discovery.gloss_similarity import gloss_similarity as _gloss_sim
 
     _IPA_LATIN_MAP = str.maketrans({
         "θ": "s", "ð": "d", "ɹ": "r", "ɾ": "r", "ʁ": "r",
@@ -665,7 +769,10 @@ def score_all_pairs_fast(
 
         # Phase 3: full MultiMethodScorer on top candidates
         top_for_this: list[dict[str, Any]] = []
+        entry_t0 = time.time()
         for fast_score, j in candidate_heap:
+            if time.time() - entry_t0 > 30.0:
+                break
             tgt = tgt_cache_list[j]["entry"]
             # For non-Latin script targets, inject IPA-derived lemma so scorer can work
             tgt_for_scoring = tgt
@@ -687,9 +794,23 @@ def score_all_pairs_fast(
                 best_result = max(result.all_results, key=lambda r: r.score)
                 explanation = best_result.explanation
 
-            top_for_this.append(_build_lead(src, tgt, source_lang, target_lang, result, fast_score, explanation))
+            # Semantic scoring
+            gloss_sim = _gloss_sim(src, tgt)
+            concept_sim = concept_matcher.concept_similarity(src, tgt) if concept_matcher else 0.0
+            semantic = max(gloss_sim, concept_sim)
+            combined = result.best_score * 0.7 + semantic * 0.3
 
-        top_for_this.sort(key=lambda x: x["scores"]["multi_method_best"], reverse=True)
+            if semantic_threshold > 0.0 and semantic < semantic_threshold:
+                continue
+
+            lead = _build_lead(src, tgt, source_lang, target_lang, result, fast_score, explanation)
+            lead["scores"]["gloss_similarity"] = round(gloss_sim, 4)
+            lead["scores"]["concept_similarity"] = round(concept_sim, 4)
+            lead["scores"]["semantic_score"] = round(semantic, 4)
+            lead["scores"]["combined_score"] = round(combined, 4)
+            top_for_this.append(lead)
+
+        top_for_this.sort(key=lambda x: x["scores"]["combined_score"], reverse=True)
         leads.extend(top_for_this[:top_k])
 
     print(
@@ -759,6 +880,10 @@ def _build_lead(
             "methods_fired_count": len(result.methods_that_fired),
             "arabic_expansions": result.arabic_expansions_tried,
             "final_combined": result.best_score,
+            "gloss_similarity": 0.0,  # will be overridden by caller
+            "concept_similarity": 0.0,
+            "semantic_score": 0.0,
+            "combined_score": 0.0,
         },
         "evidence": {
             "methods_fired": result.methods_that_fired,
@@ -1140,6 +1265,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--llm", action="store_true", help="Enable Claude API validation for top candidates")
     parser.add_argument("--llm-limit", type=int, default=100, help="Max pairs to send to LLM (default 100)")
     parser.add_argument("--output-dir", type=Path, default=None, help="Output directory (default: outputs/leads/)")
+    parser.add_argument("--semantic-threshold", type=float, default=0.0, help="Min semantic score (0=disabled)")
+    parser.add_argument("--no-gold-supplement", action="store_true", help="Skip gold benchmark supplementation")
     return parser.parse_args()
 
 
@@ -1251,14 +1378,22 @@ def main() -> int:
 
     print(f"  Loaded {len(source_entries)} {source_lang} entries, {len(target_entries)} {target_lang} entries.")
 
+    if not args.no_gold_supplement:
+        src_sup, tgt_sup = supplement_with_gold_multilang(source_entries, target_entries, source_lang, target_lang)
+        if src_sup or tgt_sup:
+            print(f"  Gold supplement: +{src_sup} {source_lang}, +{tgt_sup} {target_lang}")
+
     if not source_entries or not target_entries:
         print("ERROR: Failed to load corpora. Check file paths.")
         return 1
 
     # Stage 2+3: Scoring
     from juthoor_cognatediscovery_lv2.discovery.multi_method_scorer import MultiMethodScorer
+    from juthoor_cognatediscovery_lv2.discovery.concept_matcher import ConceptMatcher
 
     scorer = MultiMethodScorer()
+    concept_matcher = ConceptMatcher(CONCEPTS_FILE)
+    print(f"  ConceptMatcher: {concept_matcher.concept_count} concepts")
     leads: list[dict[str, Any]] = []
 
     if mode == "full":
@@ -1278,6 +1413,8 @@ def main() -> int:
                 source_entries, target_entries, scorer,
                 source_lang=source_lang, target_lang=target_lang,
                 top_k=args.top_k, threshold=args.threshold,
+                concept_matcher=concept_matcher,
+                semantic_threshold=args.semantic_threshold,
             )
     else:
         print("\n[Stage 2+3] Scoring all pairs (fast mode)...")
@@ -1285,6 +1422,8 @@ def main() -> int:
             source_entries, target_entries, scorer,
             source_lang=source_lang, target_lang=target_lang,
             top_k=args.top_k, threshold=args.threshold,
+            concept_matcher=concept_matcher,
+            semantic_threshold=args.semantic_threshold,
         )
 
     leads.sort(key=lambda x: x["scores"].get("final_combined", 0.0), reverse=True)
