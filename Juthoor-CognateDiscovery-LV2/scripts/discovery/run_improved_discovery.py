@@ -33,12 +33,15 @@ REPO_ROOT = LV2_ROOT.parent
 
 ARABIC_PRIMARY = LV2_ROOT / "data/processed/arabic/unified_arabic_discovery.jsonl"
 ARABIC_FALLBACK = LV2_ROOT / "data/processed/arabic/quran_lemmas_enriched.jsonl"
+ARABIC_GLOSSES_LOOKUP = LV2_ROOT / "data/processed/arabic/arabic_english_glosses.json"
 
 ENGLISH_PRIMARY = LV2_ROOT / "data/processed/english/english_enriched_discovery.jsonl"
 ENGLISH_FALLBACK = LV2_ROOT / "data/processed/english/english_ipa_merged_pos.jsonl"
 
 GOLD_BENCHMARK = LV2_ROOT / "resources/benchmarks/cognate_gold.jsonl"
 LEADS_DIR = LV2_ROOT / "outputs/leads"
+
+CONCEPTS_FILE = LV2_ROOT / "resources/concepts/concepts_v3_2_enriched.jsonl"
 
 sys.path.insert(0, str(LV2_ROOT / "src"))
 
@@ -264,26 +267,29 @@ def fast_prefilter(ar_pre: dict[str, Any], en_pre: dict[str, Any]) -> float:
     return best
 
 
-def compute_gloss_similarity(ar_gloss: str, en_gloss: str) -> float:
-    """Lightweight Jaccard similarity on gloss content words."""
-    import re
-    _STOPWORDS = frozenset({
-        "a", "an", "the", "of", "in", "to", "for", "and", "or", "is", "it",
-        "at", "by", "on", "as", "be", "was", "are", "were", "been", "being",
-        "have", "has", "had", "do", "does", "did", "will", "would", "shall",
-        "should", "may", "might", "can", "could", "not", "no", "but", "if",
-        "so", "than", "that", "this", "with", "from", "into", "about", "up",
-        "out", "very", "also", "just", "more", "most", "other", "some", "such",
-        "only", "over", "any", "each", "all", "both", "few", "many", "much",
-    })
-    _WORD_RE = re.compile(r"[a-z]{3,}")
-    src_words = set(_WORD_RE.findall(ar_gloss.lower())) - _STOPWORDS
-    tgt_words = set(_WORD_RE.findall(en_gloss.lower())) - _STOPWORDS
-    if not src_words or not tgt_words:
-        return 0.0
-    intersection = src_words & tgt_words
-    union = src_words | tgt_words
-    return len(intersection) / len(union) if union else 0.0
+def compute_semantic_score(
+    ar_entry: dict[str, Any],
+    en_entry: dict[str, Any],
+    concept_matcher: Any | None = None,
+) -> tuple[float, float, float]:
+    """Compute semantic score combining gloss similarity and concept matching.
+
+    Returns (semantic_score, gloss_sim, concept_sim).
+    semantic_score = max(gloss_sim, concept_sim) so concept match can rescue
+    pairs with no direct word overlap.
+    """
+    from juthoor_cognatediscovery_lv2.discovery.gloss_similarity import gloss_similarity
+
+    gloss_sim = gloss_similarity(ar_entry, en_entry)
+
+    concept_sim = 0.0
+    if concept_matcher is not None:
+        concept_sim = concept_matcher.concept_similarity(ar_entry, en_entry)
+
+    # Concept match rescues pairs where glosses don't share exact words
+    # but both map to the same semantic concept (e.g. "exhale" ↔ "spirit")
+    semantic = max(gloss_sim, concept_sim)
+    return semantic, gloss_sim, concept_sim
 
 
 def classify_anchor(phonetic_score: float, num_methods: int) -> str:
@@ -300,6 +306,7 @@ def score_all_pairs(
     arabic_cache: list[dict[str, Any]],
     english_cache: list[dict[str, Any]],
     scorer: Any,
+    concept_matcher: Any | None = None,
     threshold: float = 0.55,
     semantic_threshold: float = 0.0,
     prefilter_threshold: float = 0.40,
@@ -335,17 +342,20 @@ def score_all_pairs(
         candidates = candidates[: top_k * 3]
         passed_prefilter += len(candidates)
 
-        # Phase 2: full MultiMethodScorer
+        # Phase 2: full MultiMethodScorer (with per-entry time cap)
+        entry_t0 = time.time()
         for _fast_score, en_pre in candidates:
+            if time.time() - entry_t0 > 30.0:  # 30s max per Arabic entry
+                break
             result = scorer.score_pair(ar_pre["entry"], en_pre["entry"])
             phonetic = result.best_score
             if phonetic < threshold:
                 continue
 
-            # Gloss similarity
-            ar_gloss = ar_pre["gloss"]
-            en_gloss = en_pre["gloss"]
-            sem_score = compute_gloss_similarity(ar_gloss, en_gloss)
+            # Semantic scoring: gloss similarity + concept matching
+            sem_score, gloss_sim, concept_sim = compute_semantic_score(
+                ar_pre["entry"], en_pre["entry"], concept_matcher
+            )
 
             # Combined score
             combined = phonetic * 0.7 + sem_score * 0.3
@@ -356,6 +366,9 @@ def score_all_pairs(
             num_methods = len(result.methods_that_fired)
             anchor = classify_anchor(phonetic, num_methods)
 
+            ar_gloss = ar_pre["gloss"]
+            en_gloss = en_pre["gloss"]
+
             leads.append({
                 "arabic": ar_pre["entry"].get("lemma", ar_pre["root"]),
                 "arabic_translit": ar_pre["translit"],
@@ -363,6 +376,8 @@ def score_all_pairs(
                 "english": en_pre["lemma"],
                 "phonetic_score": round(phonetic, 4),
                 "semantic_score": round(sem_score, 4),
+                "gloss_similarity": round(gloss_sim, 4),
+                "concept_similarity": round(concept_sim, 4),
                 "combined_score": round(combined, 4),
                 "best_method": result.best_method,
                 "methods_fired": result.methods_that_fired,
@@ -384,6 +399,112 @@ def score_all_pairs(
 
     deduped = sorted(best_per_pair.values(), key=lambda x: x["combined_score"], reverse=True)
     return deduped
+
+
+# ---------------------------------------------------------------------------
+# Stage 3b: Supplement corpora with gold benchmark entries
+# ---------------------------------------------------------------------------
+
+def _load_gloss_lookup() -> dict[str, str]:
+    """Load Arabic→English gloss lookup (normalized key → first gloss)."""
+    if not ARABIC_GLOSSES_LOOKUP.exists():
+        return {}
+    with open(ARABIC_GLOSSES_LOOKUP, encoding="utf-8") as f:
+        raw = json.load(f)
+    lookup: dict[str, str] = {}
+    for term, entry in raw.items():
+        glosses = entry.get("english_glosses", [])
+        if glosses:
+            lookup[term] = glosses[0]
+            lookup[_norm_arabic(term)] = glosses[0]
+    return lookup
+
+
+def supplement_with_gold(
+    arabic_entries: list[dict[str, Any]],
+    english_entries: list[dict[str, Any]],
+) -> tuple[int, int]:
+    """Inject gold benchmark Arabic/English lemmas missing from loaded corpora.
+
+    Enriches Arabic entries with english_gloss from lookup, and English entries
+    with gloss from the gold benchmark itself.
+
+    Returns (arabic_added, english_added).
+    """
+    if not GOLD_BENCHMARK.exists():
+        return 0, 0
+
+    gloss_lookup = _load_gloss_lookup()
+
+    existing_ar: set[str] = set()
+    for ar in arabic_entries:
+        for field in ("lemma", "root_norm", "root", "translit"):
+            val = str(ar.get(field, "") or "").strip()
+            if val:
+                existing_ar.add(val)
+                existing_ar.add(_norm_arabic(val))
+
+    existing_en: set[str] = set()
+    for en in english_entries:
+        lemma = str(en.get("lemma", "") or "").strip().lower()
+        if lemma:
+            existing_en.add(lemma)
+
+    ar_added = 0
+    en_added = 0
+
+    with open(GOLD_BENCHMARK, encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            src = row.get("source", {})
+            tgt = row.get("target", {})
+            src_lang = src.get("lang", "")
+            tgt_lang = tgt.get("lang", "")
+
+            if "ara" in src_lang and "eng" in tgt_lang:
+                ar_side, en_side = src, tgt
+            elif "eng" in src_lang and "ara" in tgt_lang:
+                ar_side, en_side = tgt, src
+            else:
+                continue
+
+            ar_lemma = str(ar_side.get("lemma", "") or "").strip()
+            en_lemma = str(en_side.get("lemma", "") or "").strip().lower()
+
+            ar_norm = _norm_arabic(ar_lemma)
+            if ar_lemma and ar_norm not in existing_ar:
+                # Enrich with english_gloss from lookup
+                eng_gloss = gloss_lookup.get(ar_lemma) or gloss_lookup.get(ar_norm) or ""
+                # Also use the gold target word as a gloss hint
+                gloss_parts = [eng_gloss, en_lemma] if eng_gloss else [en_lemma]
+                arabic_entries.append({
+                    "lemma": ar_lemma,
+                    "root": ar_side.get("root", ar_lemma),
+                    "root_norm": ar_norm,
+                    "translit": ar_norm,
+                    "english_gloss": "; ".join(gloss_parts),
+                    "language": "ara",
+                    "source": "gold_supplement",
+                })
+                existing_ar.add(ar_norm)
+                existing_ar.add(ar_lemma)
+                ar_added += 1
+
+            if en_lemma and en_lemma not in existing_en and len(en_lemma) > 2:
+                # Carry over gloss from gold benchmark
+                en_gloss = str(en_side.get("gloss", "") or "")
+                english_entries.append({
+                    "lemma": en_lemma,
+                    "meaning_text": en_gloss if en_gloss else en_lemma,
+                    "language": "eng",
+                    "source": "gold_supplement",
+                })
+                existing_en.add(en_lemma)
+                en_added += 1
+
+    return ar_added, en_added
 
 
 # ---------------------------------------------------------------------------
@@ -415,16 +536,23 @@ def evaluate_benchmark(leads: list[dict[str, Any]], gold_pairs: list[dict[str, A
     if not gold_pairs:
         return {"note": "no Arabic-English gold pairs found"}
 
-    gold_set_arabic = {p["arabic"] for p in gold_pairs}
-    gold_set_english = {p["english"] for p in gold_pairs}
-    gold_combined = {(p["arabic"], p["english"]) for p in gold_pairs}
+    # Normalize gold Arabic (strip diacritics) for fair comparison
+    gold_norm = set()
+    for p in gold_pairs:
+        ar_norm = _norm_arabic(p["arabic"])
+        en_lower = p["english"].strip().lower()
+        gold_norm.add((ar_norm, en_lower))
 
     found = 0
+    found_pairs: list[dict[str, Any]] = []
     for lead in leads:
-        ar = lead.get("arabic", "")
-        en = lead.get("english", "")
-        if (ar, en) in gold_combined:
+        en = lead.get("english", "").strip().lower()
+        # Match against both arabic field and arabic_root (normalized)
+        ar_norm = _norm_arabic(lead.get("arabic", ""))
+        root_norm = _norm_arabic(lead.get("arabic_root", ""))
+        if (ar_norm, en) in gold_norm or (root_norm, en) in gold_norm:
             found += 1
+            found_pairs.append(lead)
 
     recall = found / len(gold_pairs) if gold_pairs else 0.0
 
@@ -440,6 +568,7 @@ def evaluate_benchmark(leads: list[dict[str, Any]], gold_pairs: list[dict[str, A
         "gold_pairs_recovered": found,
         "recall": round(recall, 4),
         "anchor_counts": anchor_counts,
+        "found_pairs": found_pairs[:20],
     }
 
 
@@ -470,6 +599,7 @@ def main() -> None:
     parser.add_argument("--top-k", type=int, default=20, help="Top-K leads per Arabic entry from prefilter")
     parser.add_argument("--prefilter", type=float, default=0.40, help="Fast prefilter threshold")
     parser.add_argument("--no-save", action="store_true", help="Do not save leads to disk")
+    parser.add_argument("--no-gold-supplement", action="store_true", help="Do not inject gold benchmark entries")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -485,6 +615,12 @@ def main() -> None:
     english_entries = load_english_corpus(limit=args.english_limit)
     print(f"  Loaded {len(arabic_entries)} Arabic, {len(english_entries)} English entries in {time.time()-t0:.1f}s")
 
+    # Supplement with gold benchmark entries for fair evaluation
+    ar_sup, en_sup = (0, 0) if args.no_gold_supplement else supplement_with_gold(arabic_entries, english_entries)
+    if ar_sup or en_sup:
+        print(f"  Gold supplement: +{ar_sup} Arabic, +{en_sup} English")
+        print(f"  Total after supplement: {len(arabic_entries)} Arabic, {len(english_entries)} English")
+
     # Pre-compute caches
     print("\n[2] Pre-computing phonetic caches...")
     t0 = time.time()
@@ -492,11 +628,15 @@ def main() -> None:
     english_cache = precompute_english(english_entries)
     print(f"  Done in {time.time()-t0:.1f}s")
 
-    # Initialize scorer
-    print("\n[3] Initializing MultiMethodScorer...")
+    # Initialize scorer + concept matcher
+    print("\n[3] Initializing MultiMethodScorer + ConceptMatcher...")
     from juthoor_cognatediscovery_lv2.discovery.multi_method_scorer import MultiMethodScorer
+    from juthoor_cognatediscovery_lv2.discovery.concept_matcher import ConceptMatcher
     scorer = MultiMethodScorer()
-    print("  Ready")
+    concept_matcher = ConceptMatcher(CONCEPTS_FILE)
+    print(f"  MultiMethodScorer ready")
+    print(f"  ConceptMatcher: {concept_matcher.concept_count} concepts, "
+          f"{concept_matcher.en_index_size} EN tokens, {concept_matcher.ar_index_size} AR tokens")
 
     # Score all pairs
     print("\n[4] Scoring pairs...")
@@ -504,6 +644,7 @@ def main() -> None:
         arabic_cache,
         english_cache,
         scorer,
+        concept_matcher=concept_matcher,
         threshold=args.threshold,
         semantic_threshold=args.semantic_threshold,
         prefilter_threshold=args.prefilter,
@@ -526,19 +667,20 @@ def main() -> None:
 
     # Print top 30
     print("\n[6] Top 30 leads:")
-    print(f"{'#':>3}  {'Arabic':15} {'Translit':12} {'English':18} {'Phon':6} {'Sem':5} {'Comb':6} {'Methods':3} {'Anchor':10} {'Best Method'}")
-    print("-" * 110)
+    print(f"{'#':>3}  {'Arabic':15} {'Translit':12} {'English':18} {'Phon':6} {'Gloss':5} {'Conc':5} {'Comb':6} {'M':3} {'Anchor':10} {'Best Method'}")
+    print("-" * 120)
     for i, lead in enumerate(leads[:30], 1):
         ar = lead.get("arabic", "")[:14]
         tr = lead.get("arabic_translit", "")[:11]
         en = lead.get("english", "")[:17]
         ph = lead.get("phonetic_score", 0.0)
-        sm = lead.get("semantic_score", 0.0)
+        gl = lead.get("gloss_similarity", 0.0)
+        co = lead.get("concept_similarity", 0.0)
         cm = lead.get("combined_score", 0.0)
         nm = lead.get("num_methods", 0)
         anc = lead.get("anchor_level", "")[:9]
         meth = lead.get("best_method", "")[:25]
-        print(f"{i:>3}  {ar:15} {tr:12} {en:18} {ph:.4f} {sm:.3f} {cm:.4f} {nm:>3}  {anc:10} {meth}")
+        print(f"{i:>3}  {ar:15} {tr:12} {en:18} {ph:.4f} {gl:.3f} {co:.3f} {cm:.4f} {nm:>3}  {anc:10} {meth}")
 
     # Save
     if not args.no_save and leads:

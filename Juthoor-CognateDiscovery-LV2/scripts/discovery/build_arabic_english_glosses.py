@@ -24,6 +24,8 @@ CONCEPT_CANDIDATE_PATHS = (
     LV2_ROOT / "resources/concepts/concepts_v3_2_enriched.jsonl",
 )
 WIKTIONARY_SAMPLE_GLOB = "*Arabic-English*_sample.jsonl"
+WIKTIONARY_FULL_DIR = LV2_ROOT / "data/processed/wiktionary_stardict/filtered"
+WIKTIONARY_FULL_GLOB = "*Arabic-English*.jsonl"
 
 _ARABIC_DIACRITICS = {
     "\u0610",
@@ -307,6 +309,24 @@ def load_wiktionary_samples(accumulator: GlossAccumulator) -> tuple[int, list[st
     return loaded, used_files
 
 
+def load_wiktionary_full(accumulator: GlossAccumulator) -> tuple[int, list[str]]:
+    """Load glosses from the full filtered Wiktionary Arabic-English file (12K+ entries)."""
+    if not WIKTIONARY_FULL_DIR.exists():
+        return 0, []
+    full_files = sorted(WIKTIONARY_FULL_DIR.glob(WIKTIONARY_FULL_GLOB))
+    loaded = 0
+    used_files: list[str] = []
+
+    for path in full_files:
+        used_files.append(str(path.relative_to(LV2_ROOT)))
+        for row in iter_jsonl(path):
+            lemma = str(row.get("lemma") or "").strip()
+            glosses = extract_glosses(row.get("gloss_plain") or row.get("gloss_html") or "")
+            if accumulator.add(lemma, glosses, "wiktionary_full"):
+                loaded += 1
+    return loaded, used_files
+
+
 def write_lookup(path: Path, payload: dict[str, dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as handle:
@@ -343,7 +363,10 @@ def main() -> None:
     source_counts["concepts"] = load_concepts(accumulator, concepts_path)
 
     wiktionary_loaded, wiktionary_files = load_wiktionary_samples(accumulator)
-    source_counts["wiktionary"] = wiktionary_loaded
+    source_counts["wiktionary_sample"] = wiktionary_loaded
+
+    wiktionary_full_loaded, wiktionary_full_files = load_wiktionary_full(accumulator)
+    source_counts["wiktionary_full"] = wiktionary_full_loaded
 
     output_payload = accumulator.as_output()
     write_lookup(OUTPUT_LOOKUP_PATH, output_payload)
@@ -353,12 +376,13 @@ def main() -> None:
     print(f"Gold benchmark additions: {source_counts['gold_benchmark']}")
     print(f"Beyond the Name additions: {source_counts['beyond_name']}")
     print(f"Concept additions: {source_counts['concepts']}")
-    print(f"Wiktionary additions: {source_counts['wiktionary']}")
+    print(f"Wiktionary sample additions: {source_counts['wiktionary_sample']}")
+    print(f"Wiktionary full additions: {source_counts['wiktionary_full']}")
     print(f"Concept file used: {concepts_path.relative_to(LV2_ROOT) if concepts_path else 'missing'}")
     if wiktionary_files:
-        print(f"Wiktionary files used: {', '.join(wiktionary_files)}")
-    else:
-        print("Wiktionary files used: none")
+        print(f"Wiktionary sample files: {', '.join(wiktionary_files)}")
+    if wiktionary_full_files:
+        print(f"Wiktionary full files: {', '.join(wiktionary_full_files)}")
     print(f"Arabic lookup entries: {len(output_payload)}")
     print(f"Arabic entries with English glosses: {updated_entries} / {total_entries}")
     print(f"Lookup written to: {OUTPUT_LOOKUP_PATH}")

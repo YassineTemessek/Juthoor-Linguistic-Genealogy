@@ -164,6 +164,36 @@ PROFILES: dict[str, ScoringProfile] = {
         final_threshold=0.50,
         description="Fast phonetic-only mode: no embedding-dependent bonuses.",
     ),
+
+    # Arabic to Old English — balanced weights, less phonetic drift than modern English
+    "ara_old_english": ScoringProfile(
+        name="ara_old_english",
+        semantic_weight=0.50,
+        form_weight=0.50,
+        phonetic_law_cap=0.16,
+        genome_cap=0.10,
+        multi_method_cap=0.12,
+        cross_pair_cap=0.08,
+        root_quality_cap=0.08,
+        prefilter_threshold=0.40,
+        final_threshold=0.40,
+        description="Arabic to Old English: balanced weights, less phonetic drift than modern English",
+    ),
+
+    # Arabic to Middle English — higher semantic weight due to poor IPA coverage (26%)
+    "ara_middle_english": ScoringProfile(
+        name="ara_middle_english",
+        semantic_weight=0.55,
+        form_weight=0.45,
+        phonetic_law_cap=0.14,
+        genome_cap=0.10,
+        multi_method_cap=0.12,
+        cross_pair_cap=0.08,
+        root_quality_cap=0.08,
+        prefilter_threshold=0.40,
+        final_threshold=0.42,
+        description="Arabic to Middle English: higher semantic weight due to poor IPA coverage (26%)",
+    ),
 }
 
 
@@ -188,3 +218,35 @@ def get_profile(name: str) -> ScoringProfile:
         stacklevel=2,
     )
     return PROFILES["ara_eng_default"]
+
+
+# ---------------------------------------------------------------------------
+# Language-pair routing
+# ---------------------------------------------------------------------------
+
+_PAIR_TO_PROFILE: dict[tuple[str, str], str] = {
+    ("ara", "ang"): "ara_old_english",
+    ("ara", "enm"): "ara_middle_english",
+    ("ara", "lat"): "ara_classical_ie",
+    ("ara", "grc"): "ara_classical_ie",
+    ("ara", "eng"): "ara_eng_default",
+}
+
+
+def get_profile_for_pair(source_lang: str, target_lang: str) -> str:
+    """Return the profile name for a (source_lang, target_lang) pair.
+
+    Parameters
+    ----------
+    source_lang:
+        ISO 639-3 / BCP-47 language code for the source language (e.g. "ara").
+    target_lang:
+        ISO 639-3 / BCP-47 language code for the target language (e.g. "ang").
+
+    Returns
+    -------
+    str
+        Profile name suitable for passing to :func:`get_profile`.
+        Falls back to ``"ara_eng_default"`` for unrecognised pairs.
+    """
+    return _PAIR_TO_PROFILE.get((source_lang, target_lang), "ara_eng_default")
