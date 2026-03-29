@@ -14,10 +14,10 @@ This monorepo consolidates the full stack: LV0 data ingestion, LV1 Arabic genome
 
 | Level | Module | Current status |
 | :--- | :--- | :--- |
-| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | ~2.64M lexemes across 11 languages (Arabic, English, Latin, Greek, Hebrew, Persian, Aramaic, Old/Middle English, Turkish, Akkadian). Foundation layer complete. |
-| **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | Research Factory complete: 4 hypotheses supported (H2 field coherence >11sigma, H5 order matters, H8 positional semantics 86%, H12 meaning predictability cosine=0.716). 498 tests. |
-| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | Full discovery engine: 12-method scorer, 14-feature reranker, 7 language pairs, **47,071-edge cognate graph** across 7 languages. 1,889 gold benchmark pairs. 32.1% gold coverage. 394 tests. |
-| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Theory bootstrap active: 10 corridor cards, 3-tier anchor gates, validation methodology, 14,494 validated leads flowing from LV2. Theory synthesis document written. |
+| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | ~2.64M lexemes across 12 languages (Arabic, English, Latin, Ancient Greek, Hebrew, Persian, Aramaic, Old/Middle English, Quranic Arabic). Foundation layer complete. 167 tests. |
+| **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | Research Factory complete: 12,333 roots, 4 hypotheses supported (H2, H5, H8, H12). Promoted evidence cards feed LV2. 498 tests. |
+| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | Operational — forward (Arabic→target, 7 languages) + reverse (target→Arabic) discovery pipelines. 54K-key reverse index, 1,889-pair gold benchmark, 47,071-edge cognate graph, 32.1% gold coverage. 498 tests. |
+| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Theory bootstrap active: 10 corridor cards, 3-tier anchor gates, 14,494 validated leads from LV2. Theory synthesis written. |
 
 ## Architecture & Layers
 
@@ -73,14 +73,18 @@ python scripts/generate_lv1_dashboard.py
 
 **3. Discovery (LV2)**
 ```bash
-python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_discovery_retrieval.py
+# Reverse discovery — recommended (target → Arabic)
+python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_reverse_discovery.py --target ang --no-semantic
+python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_reverse_discovery.py --target lat --limit 5000
+
+# Forward multilang discovery
+python Juthoor-CognateDiscovery-LV2/scripts/discovery/run_discovery_multilang.py --source ara --target lat --fast --limit 500
 ```
 
 **4. Evaluate / Benchmark (LV2)**
 ```bash
-python Juthoor-CognateDiscovery-LV2/scripts/discovery/evaluate.py \
-  Juthoor-CognateDiscovery-LV2/outputs/leads/discovery_YYYYMMDD_HHMMSS.jsonl \
-  --benchmark Juthoor-CognateDiscovery-LV2/resources/benchmarks/cognate_gold.jsonl
+# Direct gold pair scoring for any language pair
+python Juthoor-CognateDiscovery-LV2/scripts/discovery/evaluate_gold_pairs_multilang.py --source ara --target lat
 ```
 
 ---
