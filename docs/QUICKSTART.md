@@ -7,6 +7,7 @@
 git clone https://github.com/YassineTemessek/Juthoor-Linguistic-Genealogy.git
 cd Juthoor-Linguistic-Genealogy
 uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-ArabicGenome-LV1 -e Juthoor-CognateDiscovery-LV2
+uv pip install -e Juthoor-Origins-LV3
 
 # Verify
 python -m pytest Juthoor-CognateDiscovery-LV2/tests/ -q  # Should see 400+ tests pass
@@ -37,8 +38,12 @@ python Juthoor-CognateDiscovery-LV2/scripts/discovery/dashboard.py
 |------|-----------------|
 | `outputs/cognate_graph.json` | Cross-language cognate network (12K nodes, 47K edges) |
 | `outputs/cross_pair_convergent_leads.jsonl` | Arabic roots matching 3+ languages |
-| `outputs/leads/*.jsonl` | Raw discovery leads per run |
+| `Juthoor-CognateDiscovery-LV2/outputs/leads/*.jsonl` | Raw LV2 discovery leads per run |
 | `resources/benchmarks/cognate_gold.jsonl` | 1,889 gold benchmark pairs |
+
+## Deployment Note
+
+This repository is intended to run as a **full monorepo checkout with editable installs**. Standalone wheel/PyPI-style installation of a single LV package is not a supported deployment target.
 
 ## Key Findings
 

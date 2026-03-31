@@ -291,8 +291,9 @@ def main() -> None:
     args = _parse_args()
 
     script_dir = Path(__file__).resolve().parent
-    repo_root = script_dir.parent.parent  # scripts/discovery → scripts → LV2 root
-    leads_dir = repo_root / "outputs" / "leads"
+    lv2_root = script_dir.parent.parent  # scripts/discovery → scripts → LV2 root
+    repo_root = lv2_root.parent
+    leads_dir = lv2_root / "outputs" / "leads"
 
     if not leads_dir.exists():
         print(f"[ERROR] Leads directory not found: {leads_dir}", file=sys.stderr)

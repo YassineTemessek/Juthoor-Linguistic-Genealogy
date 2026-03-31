@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from juthoor_cognatediscovery_lv2.discovery.artifact_paths import resolve_cognate_graph_path
+
 
 class CrossPairScorer:
     """Count cross-language convergence support for Arabic graph nodes."""
@@ -15,7 +17,7 @@ class CrossPairScorer:
 
     @staticmethod
     def _default_graph_path() -> Path:
-        return Path(__file__).resolve().parents[3] / "outputs" / "cognate_graph.json"
+        return resolve_cognate_graph_path()
 
     @staticmethod
     def _load_graph(graph_path: Path) -> dict:

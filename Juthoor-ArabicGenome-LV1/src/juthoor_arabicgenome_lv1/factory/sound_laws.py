@@ -26,6 +26,37 @@ ARABIC_NORMALIZE_MAP = str.maketrans(
 
 ARABIC_CONSONANT_RE = re.compile(r"[\u0621-\u064A]")
 
+ARABIC_MAKHRAJ_IDS: dict[str, int] = {
+    "ء": 1,
+    "ه": 1,
+    "ع": 2,
+    "ح": 2,
+    "غ": 3,
+    "خ": 3,
+    "ق": 4,
+    "ك": 5,
+    "ج": 6,
+    "ش": 6,
+    "ي": 6,
+    "ض": 7,
+    "ل": 8,
+    "ن": 9,
+    "ر": 10,
+    "ط": 11,
+    "د": 11,
+    "ت": 11,
+    "ظ": 12,
+    "ذ": 12,
+    "ث": 12,
+    "ص": 13,
+    "ز": 13,
+    "س": 13,
+    "ف": 14,
+    "ب": 15,
+    "م": 15,
+    "و": 15,
+}
+
 
 KHASHIM_SOUND_LAWS: dict[str, tuple[str, ...]] = {
     "ف": ("f", "p"),
@@ -88,6 +119,19 @@ def normalize_arabic_root(root: str) -> str:
     return "".join(letters)
 
 
+def makhraj_id(letter: str) -> int | None:
+    normalized = normalize_arabic_root(letter)
+    if not normalized:
+        return None
+    return ARABIC_MAKHRAJ_IDS.get(normalized[0])
+
+
+def are_makhraj_neighbors(letter_a: str, letter_b: str, *, max_distance: int = 1) -> bool:
+    id_a = makhraj_id(letter_a)
+    id_b = makhraj_id(letter_b)
+    return bool(id_a is not None and id_b is not None and abs(id_a - id_b) <= max_distance)
+
+
 def succession_group(letter: str) -> str | None:
     normalized = normalize_arabic_root(letter)
     if not normalized:
@@ -103,6 +147,70 @@ def are_in_same_succession_group(letter_a: str, letter_b: str) -> bool:
     group_a = succession_group(letter_a)
     group_b = succession_group(letter_b)
     return bool(group_a and group_a == group_b)
+
+
+def semantic_corridor_letters(
+    letter: str,
+    *,
+    max_makhraj_distance: int = 1,
+    include_self: bool = False,
+) -> tuple[str, ...]:
+    """Return nearby Arabic letters for fallback semantic comparison.
+
+    This is a diagnostic heuristic for unresolved root analysis, not a claim
+    that phonetic neighbors are synonymous. The intended use is to bound the
+    semantic search corridor: if a root like صقر is unclear, compare nearby
+    forms such as سقر and ذقر before jumping to a remote meaning field.
+    """
+    normalized = normalize_arabic_root(letter)
+    if not normalized:
+        return ()
+
+    char = normalized[0]
+    base_id = ARABIC_MAKHRAJ_IDS.get(char)
+    if base_id is None:
+        return (char,) if include_self else ()
+
+    ordered: OrderedDict[str, None] = OrderedDict()
+    for distance in range(0, max_makhraj_distance + 1):
+        for candidate, candidate_id in ARABIC_MAKHRAJ_IDS.items():
+            if abs(candidate_id - base_id) != distance:
+                continue
+            if not include_self and candidate == char:
+                continue
+            ordered[candidate] = None
+    return tuple(ordered.keys())
+
+
+def semantic_corridor_roots(
+    root: str,
+    *,
+    max_makhraj_distance: int = 1,
+    max_variants: int = 64,
+) -> tuple[str, ...]:
+    """Generate one-step Arabic root variants within the phonetic corridor.
+
+    The output is meant for manual or later algorithmic review when direct LV1
+    decomposition is weak. It should be treated as a constrained comparison set,
+    not as proof that the generated variants share the same meaning.
+    """
+    normalized = normalize_arabic_root(root)
+    if not normalized:
+        return ()
+
+    variants: OrderedDict[str, None] = OrderedDict()
+    for index, letter in enumerate(normalized):
+        for replacement in semantic_corridor_letters(
+            letter,
+            max_makhraj_distance=max_makhraj_distance,
+            include_self=False,
+        ):
+            variant = normalized[:index] + replacement + normalized[index + 1 :]
+            if variant != normalized:
+                variants[variant] = None
+            if len(variants) >= max_variants:
+                return tuple(variants.keys())
+    return tuple(variants.keys())
 
 
 def substitution_options(letter: str, include_group_expansion: bool = True) -> tuple[str, ...]:

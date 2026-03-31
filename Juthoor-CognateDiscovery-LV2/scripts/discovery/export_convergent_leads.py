@@ -3,10 +3,13 @@ import json, sys, collections
 from pathlib import Path
 
 LV2_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = LV2_ROOT.parent
 
 def main():
-    graph_path = LV2_ROOT / "outputs" / "cognate_graph.json"
-    output_path = LV2_ROOT / "outputs" / "cross_pair_convergent_leads.jsonl"
+    graph_path = REPO_ROOT / "outputs" / "cognate_graph.json"
+    if not graph_path.exists():
+        graph_path = LV2_ROOT / "outputs" / "cognate_graph.json"
+    output_path = REPO_ROOT / "outputs" / "cross_pair_convergent_leads.jsonl"
 
     with open(graph_path, encoding="utf-8") as f:
         g = json.load(f)
