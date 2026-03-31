@@ -807,3 +807,55 @@ Each discovery run produces a JSONL file where each line is a JSON object:
 | Reranker v3 design | `Juthoor-CognateDiscovery-LV2/docs/RERANKER_V3_DESIGN.md` | Reranker architecture |
 | Method effectiveness | `Juthoor-CognateDiscovery-LV2/docs/METHOD_EFFECTIVENESS_REPORT.md` | Per-method precision data |
 | Consonant correspondence | `Juthoor-CognateDiscovery-LV2/data/processed/consonant_correspondence_matrix.json` | Empirical correspondence weights |
+| LLM annotations | `Juthoor-CognateDiscovery-LV2/data/llm_annotations/` | Morphology, semantics, correspondence annotations |
+
+---
+
+## 10. LLM-Assisted Annotation Phase (Active)
+
+### 10.1 Rationale
+
+The pipeline is operational and producing real signal (153 convergent roots, Z > 2.58 null model significance). However, scripts are blind in three areas where per-word linguistic knowledge is required:
+
+1. **Target morphology** — `_strip_prefix()` has no guard against false prefix matches (e.g., "regio" → "gio" when the root is "reg-"). Latin consonant stem nouns (rex→reg-, cor→cord-) have hidden consonants.
+2. **Semantic coverage** — The gloss similarity filter works for English (83% coverage) but returns 0.0 for Latin/Greek/OE because glosses are in the source language, not English.
+3. **Consonant correspondences** — The correspondence matrix covers only Arabic-English (861 pairs). No positional data, no per-language breakdowns.
+
+These are knowledge gaps, not algorithm problems. An LLM can fill them temporarily as an annotation instrument — returning structural facts that scripts will eventually encode as deterministic rules.
+
+### 10.2 Design Principles
+
+- **LLM as annotator, not judge.** The LLM returns structural morphological facts, English translations, and consonant mappings. It never decides whether a pair is cognate.
+- **Small batches, iterative review.** Every layer runs in batches of 30-50 items. After each batch, results are reviewed before proceeding. No bulk runs.
+- **Confirmation bias control.** Layer 3 (consonant mapping) includes matched unconfirmed controls at 1:1 ratio. Only correspondences significantly more frequent in confirmed positives than in controls are promoted.
+- **Promotion requires held-out improvement.** A learned rule must improve gold evaluation metrics, not just show high annotation frequency.
+- **Language-specific rules stay in LV2.** Learned correspondences go into `scoring_profiles.py` (LV2), not into global `sound_laws.py` (LV1), unless confirmed across 3+ target languages.
+- **Original data preserved.** Enriched fields are added alongside original glosses, never replacing them.
+
+### 10.3 The 4 Layers
+
+**Layer 1: Target Morphology** — LLM decomposes Latin/Greek/OE words into true stems, identifying false prefix matches and consonant stem nouns. Output stored as a lookup dictionary.
+
+**Layer 2: Semantic Normalization** — LLM translates historical-language lemmas into English semantic fields (translations, semantic extensions, derivational class). One-time enrichment enabling the semantic filter for historical languages.
+
+**Layer 3: Consonant Correspondence** — LLM maps each Arabic consonant to its target-language reflex, annotated with position and mapping type. Matched unconfirmed controls prevent overfitting to positive examples.
+
+**Layer 4: Pre-Ranker Redesign** — Engineering analysis (no LLM) on data cleaned by Layers 1-3. The current SequenceMatcher pre-filter is anti-correlated with true cognates (reranker weight -0.70) and will be replaced based on actual failure-mode analysis.
+
+### 10.4 Transition to Automation
+
+For each layer, the LLM-assisted phase ends when:
+- Automated rules reproduce LLM decisions at 95%+ accuracy on held-out data
+- Or the enrichment is a one-time data product (Layer 2)
+
+Annotation files are stored in `data/llm_annotations/` as JSONL for reproducibility and auditability.
+
+---
+
+## 11. Toward LV3: The Old Arab Tongue Hypothesis
+
+The pipeline exists to generate evidence for a specific theoretical claim: that an ancestral tongue older than both Classical Arabic and Proto-Indo-European is better preserved in the Arabic root system than in any PIE reconstruction.
+
+LV2 discovery feeds LV3 theory synthesis. The 153 convergent roots, the systematic phonetic corridors (guttural deletion, emphatic collapse, bilabial interchange), and the cross-language replication pattern are the empirical foundation. LV3 interprets this evidence and proposes a coherent alternative to the PIE model.
+
+This pipeline is not neutral infrastructure — it is built to test a specific hypothesis. The design choices (Arabic as high-resolution source, no PIE filtering, no LLM judging) follow from this hypothesis. If the evidence does not support the claim, the pipeline will show that too.
