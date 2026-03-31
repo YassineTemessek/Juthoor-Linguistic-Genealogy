@@ -8,6 +8,10 @@ Cross-lingual cognate discovery engine. Compares Arabic 3-letter roots against I
 
 LV2 is discovery-first: outputs are ranked leads for human review, not final claims about historical relationships.
 
+## Supported Deployment Model
+
+LV2 is supported inside the **Juthoor monorepo checkout** with editable installs. Shared cross-level artifacts use the repo-root `outputs/` directory. Standalone installation of LV2 without the rest of the monorepo is not a supported target.
+
 ## Current Status
 
 - **498 tests passing**
@@ -112,14 +116,29 @@ outputs/             — local run artifacts (gitignored)
 data/                — local datasets (gitignored)
 ```
 
+## Next Phase: LLM-Assisted Annotation
+
+The pipeline is entering a controlled annotation phase where LLMs fill knowledge gaps that scripts cannot handle. The LLM acts as a temporary annotator — not a judge — returning structural facts that get promoted into deterministic rules once patterns stabilize.
+
+| Layer | Purpose | Status |
+|-------|---------|--------|
+| 1. Target Morphology | Correct stems, false prefixes, consonant stem nouns | Starting |
+| 2. Semantic Normalization | English translations for Latin/Greek/OE glosses | Planned |
+| 3. Consonant Correspondence | Per-consonant mapping with matched controls | Planned |
+| 4. Pre-Ranker Redesign | Engineering analysis on clean data | After 1-3 |
+
+Small batches (30-50 items), reviewed iteratively. No bulk runs. See `docs/pipeline_specification.md` for full methodology.
+
 ## Documentation
 
-- `docs/pipeline_specification.md` — comprehensive pipeline spec
+- `docs/pipeline_specification.md` — comprehensive pipeline spec + LLM annotation methodology
 
 ## Repo Policy
 
 - Large datasets under `data/raw/` and `outputs/` are not committed.
 - Gold benchmark under `resources/benchmarks/` is tracked.
+- Canonical shared artifacts such as `cognate_graph.json` and `cross_pair_convergent_leads.jsonl` live under the repo-root `outputs/` directory.
+- LV2-local run artifacts such as discovery lead files stay under `Juthoor-CognateDiscovery-LV2/outputs/`.
 
 ## Contact
 

@@ -4,9 +4,21 @@
 
 ### Tracing the DNA of Human Language
 
-**Juthoor** (Arabic: *Roots*) is a computational linguistics engine designed to decode genealogical relationships between languages, with the Arabic root system treated as a measurable structural core rather than only a descriptive lexicographic artifact.
+**Juthoor** (Arabic: جذور *Roots*) is a computational linguistics research engine investigating whether the Arabic triconsonantal root system preserves the structure of an ancestral tongue older than both Classical Arabic and Proto-Indo-European (PIE).
 
-This monorepo consolidates the full stack: LV0 data ingestion, LV1 Arabic genome construction, LV2 cognate discovery, and LV3 theory synthesis.
+The core thesis: Arabic's 28-consonant phonemic inventory and root-template morphology represent a **high-resolution preservation** of a deep ancestral system. Indo-European languages are lower-resolution projections of this system, where pharyngeal, emphatic, and uvular consonants were deleted or merged. The project builds computational evidence for this hypothesis through cross-lingual cognate discovery, systematic phonetic correspondence mapping, and convergent multi-language analysis.
+
+This monorepo consolidates the full stack: LV0 data ingestion, LV1 Arabic genome construction, LV2 cognate discovery, and LV3 theory synthesis toward an alternative model of language origins.
+
+## Supported Deployment Model
+
+Juthoor is supported as a **monorepo checkout with editable installs**.
+
+- Clone the full repository and install the workspace packages with `uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-ArabicGenome-LV1 -e Juthoor-CognateDiscovery-LV2 -e Juthoor-Origins-LV3`
+- Treat the repo-root `outputs/` directory as the canonical location for shared cross-level artifacts such as `cognate_graph.json`
+- Do not treat the individual LV packages as standalone PyPI-style distributions; several runtime paths intentionally assume the full monorepo checkout and shared data/outputs layout
+
+Wheel builds in CI are kept for workspace integrity checks, not as a promise of standalone package portability.
 
 ---
 
@@ -17,7 +29,7 @@ This monorepo consolidates the full stack: LV0 data ingestion, LV1 Arabic genome
 | **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | ~2.64M lexemes across 12 languages (Arabic, English, Latin, Ancient Greek, Hebrew, Persian, Aramaic, Old/Middle English, Quranic Arabic). Foundation layer complete. 167 tests. |
 | **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | Research Factory complete: 12,333 roots, 4 hypotheses supported (H2, H5, H8, H12). Promoted evidence cards feed LV2. 498 tests. |
 | **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | Operational — forward (Arabic→target, 7 languages) + reverse (target→Arabic) discovery pipelines. 54K-key reverse index, 1,889-pair gold benchmark, 47,071-edge cognate graph, 32.1% gold coverage. 498 tests. |
-| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Theory bootstrap active: 10 corridor cards, 3-tier anchor gates, 14,494 validated leads from LV2. Theory synthesis written. |
+| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Theory synthesis active: building toward an alternative to PIE reconstruction based on convergent Arabic-IE evidence from 153 cross-language root families. 10 corridor cards, 14,494 validated leads. |
 
 ## Architecture & Layers
 
@@ -26,7 +38,7 @@ This monorepo consolidates the full stack: LV0 data ingestion, LV1 Arabic genome
 | **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | **The Foundation.** Data engine that ingests, normalizes, validates, and packages canonical lexical datasets for the rest of the stack. |
 | **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | **The Genome & Research Factory.** Models Arabic binary nuclei and triliteral roots, scores composition models, and exports promoted theory assets. |
 | **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | **The Laboratory.** Cross-lingual cognate discovery engine using semantic retrieval, character-form retrieval, genome-informed scoring, and benchmarked reranking. |
-| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | **The Theory.** Synthesis layer for broader genealogical hypotheses and origin-level interpretation. |
+| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | **The Theory.** Synthesis of convergent evidence into an alternative model of language origins — proposing an ancestral tongue older than both Classical Arabic and PIE, preserved best in the Arabic root system. |
 
 ---
 
@@ -46,7 +58,7 @@ uv venv .venv --python 3.11
 source .venv/bin/activate  # Linux/macOS
 # .venv\Scripts\activate   # Windows
 
-uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-ArabicGenome-LV1 -e Juthoor-CognateDiscovery-LV2
+uv pip install -e . -e Juthoor-DataCore-LV0 -e Juthoor-ArabicGenome-LV1 -e Juthoor-CognateDiscovery-LV2 -e Juthoor-Origins-LV3
 uv pip install "juthoor-cognatediscovery-lv2[embeddings]"
 ```
 
