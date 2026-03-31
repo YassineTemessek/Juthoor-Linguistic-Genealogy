@@ -5,6 +5,7 @@ import shutil
 import uuid
 from pathlib import Path
 
+from juthoor_cognatediscovery_lv2.discovery.artifact_paths import resolve_cognate_graph_path
 from juthoor_cognatediscovery_lv2.discovery.cross_pair_scorer import CrossPairScorer
 
 
@@ -96,7 +97,7 @@ def test_convergent_evidence_matches_root_across_multiple_arabic_nodes():
 
 def test_convergent_evidence_uses_default_lv2_graph_asset():
     scorer = CrossPairScorer()
-    graph_path = Path("Juthoor-CognateDiscovery-LV2/outputs/cognate_graph.json")
+    graph_path = resolve_cognate_graph_path()
     graph = json.loads(graph_path.read_text(encoding="utf-8"))
 
     first_ara_node_id, first_ara_node = next(

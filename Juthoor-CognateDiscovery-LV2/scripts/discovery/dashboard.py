@@ -3,6 +3,7 @@ import json, sys, glob, collections
 from pathlib import Path
 
 LV2_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = LV2_ROOT.parent
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -27,7 +28,9 @@ def main():
         print(f"  {pair}: {n}")
 
     # 2. Cognate graph
-    graph_path = LV2_ROOT / "outputs/cognate_graph.json"
+    graph_path = REPO_ROOT / "outputs" / "cognate_graph.json"
+    if not graph_path.exists():
+        graph_path = LV2_ROOT / "outputs" / "cognate_graph.json"
     if graph_path.exists():
         with open(graph_path, encoding="utf-8") as f:
             g = json.load(f)
@@ -50,7 +53,9 @@ def main():
     print(f"\nTest Suite: run 'python -m pytest' to verify")
 
     # 5. Convergent evidence
-    conv_path = LV2_ROOT / "outputs/cross_pair_convergent_leads.jsonl"
+    conv_path = REPO_ROOT / "outputs" / "cross_pair_convergent_leads.jsonl"
+    if not conv_path.exists():
+        conv_path = LV2_ROOT / "outputs" / "cross_pair_convergent_leads.jsonl"
     if conv_path.exists():
         conv_count = sum(1 for _ in open(conv_path, encoding="utf-8") if _.strip())
         print(f"\nConvergent Leads: {conv_count} roots with 3+ language evidence")

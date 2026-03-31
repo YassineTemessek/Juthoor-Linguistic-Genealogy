@@ -97,6 +97,12 @@ The Juthoor analysis found that the binary nucleus is a stronger semantic anchor
 - Cross-linguistically, the binary prefix (first two consonants) is what survives into cognate languages — not the full root and not the isolated letter
 - Composition works most reliably at the nucleus level; above the nucleus (adding the third letter), the system becomes more probabilistic
 
+### Diagnostic fallback: the phonetic corridor
+
+When a root remains unclear after direct LV1 decomposition, use nearby phonetic variants as a **bounded comparison set**. Compare the unclear form to roots whose differing consonant comes from the same makhraj or an adjacent makhraj. For example, if **صقر** remains opaque, inspect nearby corridor forms such as **سقر** and **ذقر** before proposing a distant semantic field.
+
+This is a fallback heuristic, not a claim of synonymy and not a universal law that same-makhraj substitutions are always semantically close. The narrower claim is that Arabic phonetic refinement often preserves a shared conceptual corridor even when nuance changes.
+
 ---
 
 ## 5. The Triliteral Root: Third-Letter Modification

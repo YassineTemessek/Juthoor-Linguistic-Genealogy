@@ -2,10 +2,14 @@ from __future__ import annotations
 
 from juthoor_arabicgenome_lv1.factory.sound_laws import (
     KHASHIM_SOUND_LAWS,
+    are_makhraj_neighbors,
     are_in_same_succession_group,
+    makhraj_id,
     normalize_arabic_root,
     project_root_by_target,
     project_root_sound_laws,
+    semantic_corridor_letters,
+    semantic_corridor_roots,
     substitution_options,
     succession_group,
 )
@@ -31,6 +35,26 @@ def test_succession_groups_capture_khashim_families() -> None:
     assert succession_group("ش") == "sibilants"
     assert are_in_same_succession_group("ف", "ب")
     assert not are_in_same_succession_group("ف", "ق")
+
+
+def test_makhraj_neighbors_capture_adjacent_front_of_mouth_letters() -> None:
+    assert makhraj_id("ص") == 13
+    assert makhraj_id("ذ") == 12
+    assert are_makhraj_neighbors("ص", "ذ")
+    assert not are_makhraj_neighbors("ص", "ع")
+
+
+def test_semantic_corridor_letters_include_same_and_adjacent_makhraj_options() -> None:
+    corridor = set(semantic_corridor_letters("ص"))
+    assert "س" in corridor
+    assert "ذ" in corridor
+    assert "ص" not in corridor
+
+
+def test_semantic_corridor_roots_generate_arabic_neighbor_forms() -> None:
+    variants = set(semantic_corridor_roots("صقر", max_variants=128))
+    assert "سقر" in variants
+    assert "ذقر" in variants
 
 
 def test_project_root_sound_laws_generates_khashim_style_variants() -> None:

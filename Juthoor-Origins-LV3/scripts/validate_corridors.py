@@ -26,7 +26,7 @@ CORRIDOR_METHOD_MAP = {
 
 def main():
     # Load cognate graph
-    graph_path = LV2_ROOT / "outputs" / "cognate_graph.json"
+    graph_path = REPO_ROOT / "outputs" / "cognate_graph.json"
     with open(graph_path, encoding="utf-8") as f:
         g = json.load(f)
 

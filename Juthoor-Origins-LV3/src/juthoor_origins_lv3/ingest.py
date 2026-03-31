@@ -24,7 +24,7 @@ def repo_root() -> Path:
 
 
 def input_graph_path() -> Path:
-    return repo_root() / "Juthoor-CognateDiscovery-LV2" / "outputs" / "cognate_graph.json"
+    return repo_root() / "outputs" / "cognate_graph.json"
 
 
 def output_leads_path() -> Path:

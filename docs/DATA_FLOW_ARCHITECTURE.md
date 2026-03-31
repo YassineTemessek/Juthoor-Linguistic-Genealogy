@@ -89,7 +89,7 @@ Target Corpus ──> MultiMethodScorer (12 methods)
 |------------|------|-------------|
 | Cognate Graph | `outputs/cognate_graph.json` | Cross-pair evidence for corridor validation |
 | Convergent Leads | `outputs/cross_pair_convergent_leads.jsonl` | Gold anchor candidates |
-| Discovery Leads | `outputs/leads/*.jsonl` | Raw evidence for corridor cards |
+| Discovery Leads | `Juthoor-CognateDiscovery-LV2/outputs/leads/*.jsonl` | Raw evidence for corridor cards |
 | Gold Benchmark | `resources/benchmarks/cognate_gold.jsonl` | Validation ground truth |
 | Correspondence Matrix | `data/processed/consonant_correspondence_matrix.json` | Empirical merger rules |
 
