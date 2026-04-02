@@ -16,6 +16,8 @@ import re
 import unicodedata
 from typing import Iterator
 
+from juthoor_cognatediscovery_lv2.discovery.artifact_paths import layer1_annotation_path
+
 
 # ---------------------------------------------------------------------------
 # Vowel / consonant helpers
@@ -161,6 +163,33 @@ _MIN_STEM = 2  # minimum stem length after stripping
 
 
 # ---------------------------------------------------------------------------
+# Layer 1 annotation cache (lazy-loaded from llm_annotations/layer1_morphology.jsonl)
+# ---------------------------------------------------------------------------
+
+_layer1_cache: dict[tuple[str, str], dict] | None = None
+
+
+def _load_layer1_annotations() -> dict[tuple[str, str], dict]:
+    global _layer1_cache
+    if _layer1_cache is not None:
+        return _layer1_cache
+    _layer1_cache = {}
+    path = layer1_annotation_path()
+    if not path.exists():
+        return _layer1_cache
+    import json
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            obj = json.loads(line)
+            key = (obj["word"].lower(), obj["lang"])
+            _layer1_cache[key] = obj
+    return _layer1_cache
+
+
+# ---------------------------------------------------------------------------
 # Helper: strip one suffix from a word (returns None if no valid strip)
 # ---------------------------------------------------------------------------
 
@@ -251,6 +280,30 @@ def decompose_target(word: str, lang: str) -> list[str]:
         Unique candidate stems, original first.
     """
     word_lower = word.lower().strip()
+
+    # Check Layer 1 annotations first
+    annot = _load_layer1_annotations().get((word_lower, lang))
+    if annot is not None:
+        result = [word_lower]
+        seen = {word_lower}
+        ts = annot.get("true_stem", "").lower()
+        if ts and ts not in seen and len(ts) >= _MIN_STEM:
+            result.append(ts)
+            seen.add(ts)
+        ob = annot.get("oblique_stem")
+        if ob:
+            ob = ob.lower()
+            if ob not in seen and len(ob) >= _MIN_STEM:
+                result.append(ob)
+                seen.add(ob)
+        parts = annot.get("compound_parts")
+        if parts:
+            for p in parts:
+                p = p.lower()
+                if p not in seen and len(p) >= _MIN_STEM:
+                    result.append(p)
+                    seen.add(p)
+        return result
 
     seen: dict[str, None] = {word_lower: None}  # insertion-ordered set
     candidates: list[str] = []  # additional stems (not the original)
