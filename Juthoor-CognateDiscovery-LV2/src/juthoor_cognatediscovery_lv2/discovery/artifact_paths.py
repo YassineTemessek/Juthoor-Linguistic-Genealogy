@@ -63,3 +63,7 @@ def resolve_convergent_leads_path(preferred: Path | None = None) -> Path:
         return legacy
 
     return canonical
+
+
+def layer1_annotation_path() -> Path:
+    return lv2_root() / "data" / "llm_annotations" / "layer1_morphology.jsonl"
