@@ -168,13 +168,22 @@ def load_arabic_roots(
                 continue
             seen_roots.add(arabic_root_norm)
 
-            # Extract consonant skeleton
-            ar_skel = _arabic_skel(arabic_root_norm)
+            # Use pre-computed skeleton field if present (genome discovery format)
+            # Otherwise extract from Arabic script
+            prebuilt_skeleton = str(row.get("skeleton", "") or "").strip()
+            if prebuilt_skeleton and prebuilt_skeleton.isascii():
+                # genome roots file has a pre-computed ASCII skeleton
+                primary_latin = prebuilt_skeleton
+                ar_skel = arabic_root_norm  # keep original for display
+            else:
+                # Extract consonant skeleton from Arabic script
+                ar_skel = _arabic_skel(arabic_root_norm)
+                primary_latin = _strip_diac(
+                    "".join(LATIN_EQ.get(ch, (ch,))[0] for ch in ar_skel)
+                )
 
-            # Build Latin skeleton (primary)
-            primary_latin = _strip_diac(
-                "".join(LATIN_EQ.get(ch, (ch,))[0] for ch in ar_skel)
-            )
+            if not primary_latin or len(primary_latin) < 2:
+                continue
 
             roots.append({
                 "arabic_root": arabic_root,
@@ -182,7 +191,11 @@ def load_arabic_roots(
                 "ar_skel": ar_skel,
                 "primary_latin": primary_latin,
                 "translit": str(row.get("translit", "") or ""),
-                "english_gloss": str(row.get("english_gloss", "") or ""),
+                "english_gloss": (
+                    str(row.get("english_gloss", "") or "")
+                    or str(row.get("mafahim_gloss", "") or "")
+                    or str(row.get("masadiq_gloss", "") or "")
+                ),
             })
 
             if limit and len(roots) >= limit:
@@ -204,10 +217,13 @@ def load_target_lemmas(
     """Load unique lemmas for the target language.
 
     Also checks for a pre-built dedup file at:
-      data/processed/{lang}_unique_lemmas.jsonl
+      data/processed/{name}_unique_lemmas.jsonl
     """
     # Check for pre-built dedup file first
-    prebuilt = LV2_ROOT / f"data/processed/{lang}_unique_lemmas.jsonl"
+    # Dedup script uses full language names, not ISO codes
+    DEDUP_NAMES = {"lat": "latin", "grc": "greek", "ang": "english_old", "enm": "english_middle"}
+    dedup_name = DEDUP_NAMES.get(lang, lang)
+    prebuilt = LV2_ROOT / f"data/processed/{dedup_name}_unique_lemmas.jsonl"
     if source_override:
         prebuilt = source_override
 
@@ -277,24 +293,25 @@ def load_target_lemmas(
 
 
 # ---------------------------------------------------------------------------
-# Step 3: Pre-compute all Arabic skeletons (including phonetic variants)
+# Step 3: Pre-compute all Arabic skeletons (primary + alternates only)
 # ---------------------------------------------------------------------------
 
 def build_arabic_skeleton_index(
     roots: list[dict[str, Any]],
     lang: str,
 ) -> list[dict[str, Any]]:
-    """For each Arabic root, build the full set of consonant skeleton variants.
+    """For each Arabic root, build consonant skeleton variants.
 
-    Uses:
-    1. Primary Latin skeleton from _arabic_consonant_skeleton + LATIN_EQUIVALENTS
-    2. All secondary projections from LATIN_EQUIVALENTS (alternate consonant mappings)
-    3. Phonetic variants from target_morphology.phonetic_variants
+    Strategy (performance-first):
+    - Primary Latin skeleton (from LATIN_EQUIVALENTS primary mapping)
+    - Alternate skeletons: one-position substitutions from LATIN_EQUIVALENTS
+      (limited to max 8 per root to control candidate explosion)
+    - skel_chars: frozenset of chars in PRIMARY skeleton only (for tight inverted index)
+    - all_skels_sets: list of frozensets for fast Jaccard in inner loop
 
-    Returns the list augmented with 'all_skeletons' (set of str) and
-    'skel_chars' (frozenset of chars from primary_latin, for inverted index).
+    The primary skeleton chars drive the inverted index. Only targets sharing
+    >= min_overlap primary chars become candidates. This is the key pre-filter.
     """
-    tm = _load_target_morphology()
     _arabic_skel, _strip_diac, LATIN_EQ = _load_phonetic_modules()
 
     augmented: list[dict[str, Any]] = []
@@ -302,51 +319,43 @@ def build_arabic_skeleton_index(
         ar_skel = root_info["ar_skel"]
         primary_latin = root_info["primary_latin"]
 
-        # Collect all Latin projections from LATIN_EQUIVALENTS
-        # Each Arabic consonant can map to multiple Latin equivalents
+        if not primary_latin or len(primary_latin) < 2:
+            continue
+
+        # Build alternate projections (one-position substitution from LATIN_EQ)
         all_proj_sets: list[list[str]] = []
         for ch in ar_skel:
             options = list(LATIN_EQ.get(ch, (ch,)))
-            # Keep only ASCII-clean options (remove diacriticized equivalents)
-            clean_options = [_strip_diac(o) for o in options if o]
-            clean_options = [o for o in clean_options if o and o.isascii()]
-            if not clean_options:
-                clean_options = [_strip_diac(LATIN_EQ.get(ch, (ch,))[0])]
-                clean_options = [o for o in clean_options if o]
-            if not clean_options:
-                clean_options = [ch] if ch.isascii() else []
-            all_proj_sets.append(clean_options if clean_options else [""])
+            clean = [_strip_diac(o) for o in options if o]
+            clean = [o for o in clean if o and o.isascii()]
+            if not clean:
+                clean = [primary_latin[len(all_proj_sets)] if len(all_proj_sets) < len(primary_latin) else ""]
+            all_proj_sets.append(clean if clean else [""])
 
-        # Build skeleton variants: start with primary, then expand each position
-        seen_skels: dict[str, None] = {}
+        seen_skels: dict[str, None] = {primary_latin: None}
 
         def _add_skel(s: str) -> None:
             s = s.strip()
-            if s and s not in seen_skels:
+            if s and len(s) >= 2 and s not in seen_skels and len(seen_skels) < 8:
                 seen_skels[s] = None
 
-        _add_skel(primary_latin)
-
-        # Generate one-position substitution variants from LATIN_EQ
+        # One-position substitutions
         for i, options in enumerate(all_proj_sets):
-            for opt in options:
+            for opt in options[1:]:  # skip [0] = primary
                 parts = [all_proj_sets[j][0] for j in range(len(all_proj_sets))]
                 parts[i] = opt
-                candidate = "".join(parts)
-                _add_skel(_strip_diac(candidate))
+                _add_skel(_strip_diac("".join(parts)))
 
-        # Add phonetic variants of the primary skeleton
-        for var in tm.phonetic_variants(primary_latin, lang):
-            _add_skel(var)
+        all_skels = list(seen_skels.keys())
 
-        all_skels = set(seen_skels.keys()) - {""}
-        if not all_skels:
-            continue
+        # Pre-compute frozensets for fast Jaccard in inner loop
+        all_skels_sets = [frozenset(s) for s in all_skels]
 
         augmented.append({
             **root_info,
             "all_skeletons": all_skels,
-            # Use primary_latin chars for the inverted index (most common case)
+            "all_skels_sets": all_skels_sets,
+            # skel_chars kept for compatibility; bigrams used for actual filtering
             "skel_chars": frozenset(primary_latin) - {" ", "-"},
         })
 
@@ -361,46 +370,104 @@ def build_target_skeleton_index(
     lemmas: list[dict[str, Any]],
     lang: str,
 ) -> list[dict[str, Any]]:
-    """For each target lemma, build all consonant skeleton variants.
+    """For each target lemma, build consonant skeleton variants.
+
+    DEDUPLICATION: Multiple lemmas sharing the same primary skeleton are
+    collapsed into one entry (representative lemma kept, others in 'alt_lemmas').
+    This reduces ~815K Latin lemmas to ~236K unique-skeleton groups, making
+    the inner matching loop 3-4x faster.
 
     Uses extract_all_skeletons(word, ipa, lang) from target_morphology.
-    Returns augmented list with 'all_skeletons' (set) and 'skel_chars' (frozenset).
+    Pre-computes:
+      - all_skeletons: list of skeleton strings (from primary lemma)
+      - all_skels_sets: list of frozensets for fast Jaccard
     """
     tm = _load_target_morphology()
-    augmented: list[dict[str, Any]] = []
+
+    # Track by primary skeleton for deduplication
+    by_primary_skel: dict[str, dict[str, Any]] = {}
+    total_in = 0
+    total_skipped = 0
+
     for entry in lemmas:
         lemma = entry["lemma"]
         ipa = entry.get("ipa") or None
         skels = tm.extract_all_skeletons(lemma, ipa, lang)
         if not skels:
+            total_skipped += 1
             continue
 
-        # Compute union of all chars in all skeletons (for inverted index)
-        all_chars: set[str] = set()
-        for s in skels:
-            all_chars.update(s)
+        # Filter: skip short skeletons (single-char are too noisy)
+        skels = [s for s in skels if len(s) >= 2]
+        if not skels:
+            total_skipped += 1
+            continue
 
-        augmented.append({
-            **entry,
-            "all_skeletons": set(skels),
-            "skel_chars": frozenset(all_chars) - {""},
-        })
+        primary_skel = skels[0]
+        total_in += 1
 
+        if primary_skel not in by_primary_skel:
+            all_skels_sets = [frozenset(s) for s in skels]
+            by_primary_skel[primary_skel] = {
+                "lemma": lemma,
+                "lang": lang,
+                "all_skeletons": skels,
+                "all_skels_sets": all_skels_sets,
+                "alt_lemmas": [],
+            }
+        else:
+            # Collapse into existing entry — just record the lemma
+            by_primary_skel[primary_skel]["alt_lemmas"].append(lemma)
+
+    augmented = list(by_primary_skel.values())
+    print(
+        f"  Deduplicated {total_in} lemmas → {len(augmented)} unique-skeleton groups "
+        f"({total_skipped} skipped, skeleton dedup ratio: {total_in/max(1,len(augmented)):.1f}x)",
+        file=sys.stderr,
+    )
     return augmented
 
 
 # ---------------------------------------------------------------------------
-# Step 5: Build inverted index (consonant → target lemma indices)
+# Step 5: Build inverted index (sorted consonant pairs)
 # ---------------------------------------------------------------------------
+
+def _sorted_pairs(skel: str) -> set[str]:
+    """Return all sorted 2-char consonant combinations from a skeleton.
+
+    E.g., "krm" → {"km", "kr", "mr"}
+    These are order-insensitive, so "krm" and "mkr" produce the same pairs.
+    Using sorted pairs (vs consecutive bigrams) gives a much tighter pre-filter:
+    requiring 2+ pair hits means the target shares effectively all consonants.
+    """
+    chars = list(skel)
+    pairs: set[str] = set()
+    for i in range(len(chars)):
+        for j in range(i + 1, len(chars)):
+            pairs.add("".join(sorted([chars[i], chars[j]])))
+    return pairs
+
 
 def build_inverted_index(
     target_entries: list[dict[str, Any]],
 ) -> dict[str, list[int]]:
-    """Map each consonant char → list of target entry indices containing that char."""
+    """Map each sorted consonant PAIR → list of target indices containing that pair.
+
+    Using sorted pairs (2-consonant combos) as keys creates a much tighter index:
+    - A 3-char skeleton like "krm" produces 3 pairs: {km, kr, mr}
+    - Requiring 2+ hits means a target must share 2 of 3 consonant pairs
+    - This reduces candidate set to ~4-8% vs 33-40% with unigrams
+
+    A target is indexed under all pairs from ALL its skeleton variants.
+    """
     inv: dict[str, list[int]] = defaultdict(list)
     for idx, entry in enumerate(target_entries):
-        for ch in entry["skel_chars"]:
-            inv[ch].append(idx)
+        all_pairs: set[str] = set()
+        for skel in entry["all_skeletons"]:
+            if len(skel) >= 2:
+                all_pairs.update(_sorted_pairs(skel))
+        for pair in all_pairs:
+            inv[pair].append(idx)
     return dict(inv)
 
 
@@ -408,19 +475,46 @@ def build_inverted_index(
 # Step 6: Jaccard + ordered overlap computation
 # ---------------------------------------------------------------------------
 
-def jaccard(a: frozenset | set, b: frozenset | set) -> float:
-    inter = len(a & b)
-    union = len(a | b)
-    if union == 0:
-        return 0.0
-    return inter / union
+def best_jaccard_pair(
+    ar_skel_sets: list[frozenset],
+    tgt_skel_sets: list[frozenset],
+) -> tuple[float, int, int]:
+    """Find the best Jaccard score across all Arabic×target skeleton pairs.
+
+    Fast path: if only one skel on each side, compute directly.
+    Returns (best_score, ar_idx, tgt_idx).
+    """
+    best_score = 0.0
+    best_ai = 0
+    best_ti = 0
+
+    if len(ar_skel_sets) == 1 and len(tgt_skel_sets) == 1:
+        a, b = ar_skel_sets[0], tgt_skel_sets[0]
+        inter = len(a & b)
+        if inter > 0:
+            best_score = inter / len(a | b)
+        return best_score, 0, 0
+
+    for ai, a in enumerate(ar_skel_sets):
+        for ti, b in enumerate(tgt_skel_sets):
+            inter = len(a & b)
+            if inter == 0:
+                continue
+            score = inter / len(a | b)
+            if score > best_score:
+                best_score = score
+                best_ai = ai
+                best_ti = ti
+                if best_score >= 1.0:
+                    return best_score, best_ai, best_ti
+
+    return best_score, best_ai, best_ti
 
 
 def ordered_overlap(skel_a: str, skel_b: str) -> list[str]:
-    """Find consonants that appear in both skeletons in the same relative order.
+    """Find consonants appearing in both skeletons in the same relative order.
 
-    Uses a greedy left-to-right scan (not full LCS, fast).
-    Returns list of matching consonants in order.
+    Uses a greedy left-to-right scan. Returns matching consonants in order.
     """
     j = 0
     matches: list[str] = []
@@ -445,14 +539,16 @@ def run_matching(
     lang: str,
     threshold: float = 0.3,
     min_overlap: int = 2,
-) -> list[dict[str, Any]]:
-    """Run the skeleton matching with inverted-index acceleration.
+) -> tuple[list[dict[str, Any]], float]:
+    """Run skeleton matching with inverted-index acceleration.
 
-    For each Arabic root:
-      1. Find candidate targets sharing >= min_overlap consonant chars via inverted index
-      2. For each candidate, compute best Jaccard across all skeleton pair combinations
-      3. Also check ordered overlap as fallback
-      4. Emit match if Jaccard >= threshold OR ordered_overlap >= min_overlap
+    Performance strategy:
+    1. For each Arabic root, look up candidates via primary-skeleton inverted index
+    2. Count per-target how many Arabic PRIMARY chars it shares
+    3. Only process targets sharing >= min_overlap chars
+    4. Compute best Jaccard using pre-computed frozensets (fast set ops)
+    5. Ordered overlap only as tie-breaker on primary skeletons
+    6. Emit match if Jaccard >= threshold OR ordered_overlap >= min_overlap
     """
     matches: list[dict[str, Any]] = []
 
@@ -470,59 +566,58 @@ def run_matching(
                 file=sys.stderr,
             )
 
-        ar_skels = ar_entry["all_skeletons"]
-        ar_chars = ar_entry["skel_chars"]
+        ar_skel_sets = ar_entry["all_skels_sets"]
+        primary_latin = ar_entry["primary_latin"]
 
-        # Collect candidate target indices via inverted index
+        # 1. Sorted-pair inverted index lookup from primary Latin skeleton
+        # sorted_pairs are order-insensitive consonant combos — highly selective
+        ar_pairs = _sorted_pairs(primary_latin) if len(primary_latin) >= 2 else set()
+        # Also add pairs from alternate skeletons (up to first 3 variants)
+        for alt_skel in ar_entry["all_skeletons"][1:4]:
+            if len(alt_skel) >= 2:
+                ar_pairs.update(_sorted_pairs(alt_skel))
+
         candidate_counts: dict[int, int] = defaultdict(int)
-        for ch in ar_chars:
-            if ch in inv_index:
-                for idx in inv_index[ch]:
+        for pair in ar_pairs:
+            if pair in inv_index:
+                for idx in inv_index[pair]:
                     candidate_counts[idx] += 1
 
-        # Only process targets sharing >= min_overlap consonants
-        candidate_indices = [
-            idx for idx, cnt in candidate_counts.items()
-            if cnt >= min_overlap
-        ]
+        # 2. Require >= 2 shared consonant pairs (much tighter filter than unigrams)
+        # A 3-char skeleton has 3 pairs total, so 2+ hits means 2/3 consonants match
+        required_hits = min_overlap if min_overlap >= 2 else 2
+        for idx, cnt in candidate_counts.items():
+            if cnt < required_hits:
+                continue
 
-        for idx in candidate_indices:
             tgt_entry = target_entries[idx]
-            tgt_skels = tgt_entry["all_skeletons"]
+            tgt_skel_sets = tgt_entry["all_skels_sets"]
 
-            best_jaccard = 0.0
-            best_ar_skel = ""
-            best_tgt_skel = ""
-            best_overlap: list[str] = []
+            # 3. Best Jaccard across all skel pair combinations
+            best_j, best_ai, best_ti = best_jaccard_pair(ar_skel_sets, tgt_skel_sets)
 
-            # Test all combinations of (Arabic skel variant, target skel variant)
-            for ar_skel in ar_skels:
-                ar_set = frozenset(ar_skel)
-                for tgt_skel in tgt_skels:
-                    tgt_set = frozenset(tgt_skel)
-                    j_score = jaccard(ar_set, tgt_set)
-                    if j_score > best_jaccard:
-                        best_jaccard = j_score
-                        best_ar_skel = ar_skel
-                        best_tgt_skel = tgt_skel
-                        best_overlap = list(ar_set & tgt_set)
+            # 4. Ordered overlap on primary skeletons (fallback / bonus)
+            primary_tgt = tgt_entry["all_skeletons"][0]
+            ord_ov = ordered_overlap(primary_latin, primary_tgt)
 
-            # Also check ordered overlap on primary skeletons
-            primary_ar = ar_entry["primary_latin"]
-            primary_tgt = next(iter(tgt_skels)) if tgt_skels else ""
-            ord_overlap = ordered_overlap(primary_ar, primary_tgt) if primary_ar and primary_tgt else []
+            # 5. Emit if passes threshold or ordered overlap
+            if best_j >= threshold or len(ord_ov) >= min_overlap:
+                best_ar_skel = ar_entry["all_skeletons"][best_ai]
+                best_tgt_skel = tgt_entry["all_skeletons"][best_ti]
+                overlap_chars = sorted(ar_skel_sets[best_ai] & tgt_skel_sets[best_ti])
+                alt_lemmas = tgt_entry.get("alt_lemmas", [])
 
-            # Emit if passes threshold or ordered overlap
-            if best_jaccard >= threshold or len(ord_overlap) >= min_overlap:
                 matches.append({
                     "arabic_root": ar_entry["arabic_root"],
-                    "arabic_skeleton": best_ar_skel or ar_entry["primary_latin"],
+                    "arabic_skeleton": best_ar_skel,
                     "target_lemma": tgt_entry["lemma"],
-                    "target_skeleton": best_tgt_skel or primary_tgt,
-                    "jaccard": round(best_jaccard, 4),
-                    "overlap_consonants": sorted(best_overlap),
-                    "ordered_overlap": ord_overlap,
+                    "target_skeleton": best_tgt_skel,
+                    "jaccard": round(best_j, 4),
+                    "overlap_consonants": overlap_chars,
+                    "ordered_overlap": ord_ov,
                     "lang": lang,
+                    # alt_lemmas: other lemmas sharing the same primary skeleton
+                    "n_lemmas": 1 + len(alt_lemmas),
                 })
 
     elapsed = time.time() - t0
