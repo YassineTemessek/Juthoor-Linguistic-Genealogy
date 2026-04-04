@@ -59,14 +59,19 @@ ARABIC_SOURCES: list[Path] = [
 # Imports (imported lazily to give clear error messages)
 # ---------------------------------------------------------------------------
 
-def _load_phonetic_modules() -> tuple:
-    """Load Arabic skeleton extraction helpers from phonetic_law_scorer."""
+def _load_phonetic_modules(lang: str = "lat") -> tuple:
+    """Load Arabic skeleton extraction helpers from phonetic_law_scorer.
+
+    Returns language-appropriate equivalents table:
+    - "lat" → LATIN_EQUIVALENTS (default)
+    - "grc" → GREEK_EQUIVALENTS (aspirated stops, guttural deletion, etc.)
+    """
     from juthoor_cognatediscovery_lv2.discovery.phonetic_law_scorer import (
         _arabic_consonant_skeleton,
         _strip_diacriticals,
-        LATIN_EQUIVALENTS,
+        get_language_equivalents,
     )
-    return _arabic_consonant_skeleton, _strip_diacriticals, LATIN_EQUIVALENTS
+    return _arabic_consonant_skeleton, _strip_diacriticals, get_language_equivalents(lang)
 
 
 def _load_target_morphology() -> Any:
@@ -112,14 +117,18 @@ def _pos_ok(pos: list | str | None) -> bool:
 def load_arabic_roots(
     source_override: Path | None = None,
     limit: int = 0,
+    lang: str = "lat",
 ) -> list[dict[str, Any]]:
     """Load Arabic genome roots from the best available source.
 
     Returns a list of dicts with at minimum:
       - arabic_root: Arabic script root string
       - translit: ASCII transliteration (may be empty)
+
+    The ``lang`` parameter selects which equivalents table to use for the
+    primary skeleton projection (e.g., LATIN_EQUIVALENTS vs GREEK_EQUIVALENTS).
     """
-    _arabic_skel, _strip_diac, LATIN_EQ = _load_phonetic_modules()
+    _arabic_skel, _strip_diac, LANG_EQ = _load_phonetic_modules(lang)
 
     # Determine source path
     candidates = [source_override] if source_override else ARABIC_SOURCES
@@ -168,18 +177,17 @@ def load_arabic_roots(
                 continue
             seen_roots.add(arabic_root_norm)
 
-            # Use pre-computed skeleton field if present (genome discovery format)
-            # Otherwise extract from Arabic script
+            # Extract consonant skeleton from Arabic script
+            ar_skel = _arabic_skel(arabic_root_norm)
+
+            # Use pre-computed skeleton only for Latin (it was built with
+            # LATIN_EQUIVALENTS); for other languages, always re-derive
             prebuilt_skeleton = str(row.get("skeleton", "") or "").strip()
-            if prebuilt_skeleton and prebuilt_skeleton.isascii():
-                # genome roots file has a pre-computed ASCII skeleton
+            if lang == "lat" and prebuilt_skeleton and prebuilt_skeleton.isascii():
                 primary_latin = prebuilt_skeleton
-                ar_skel = arabic_root_norm  # keep original for display
             else:
-                # Extract consonant skeleton from Arabic script
-                ar_skel = _arabic_skel(arabic_root_norm)
                 primary_latin = _strip_diac(
-                    "".join(LATIN_EQ.get(ch, (ch,))[0] for ch in ar_skel)
+                    "".join(LANG_EQ.get(ch, (ch,))[0] for ch in ar_skel)
                 )
 
             if not primary_latin or len(primary_latin) < 2:
@@ -312,7 +320,7 @@ def build_arabic_skeleton_index(
     The primary skeleton chars drive the inverted index. Only targets sharing
     >= min_overlap primary chars become candidates. This is the key pre-filter.
     """
-    _arabic_skel, _strip_diac, LATIN_EQ = _load_phonetic_modules()
+    _arabic_skel, _strip_diac, LANG_EQ = _load_phonetic_modules(lang)
 
     augmented: list[dict[str, Any]] = []
     for root_info in roots:
@@ -322,10 +330,10 @@ def build_arabic_skeleton_index(
         if not primary_latin or len(primary_latin) < 2:
             continue
 
-        # Build alternate projections (one-position substitution from LATIN_EQ)
+        # Build alternate projections (one-position substitution from LANG_EQ)
         all_proj_sets: list[list[str]] = []
         for ch in ar_skel:
-            options = list(LATIN_EQ.get(ch, (ch,)))
+            options = list(LANG_EQ.get(ch, (ch,)))
             clean = [_strip_diac(o) for o in options if o]
             clean = [o for o in clean if o and o.isascii()]
             if not clean:
@@ -694,8 +702,10 @@ def main() -> None:
         output_path = LV2_ROOT / "outputs" / f"eye1_full_scale_{lang}.jsonl"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    eq_name = "GREEK_EQUIVALENTS" if lang == "grc" else "LATIN_EQUIVALENTS"
     print(f"=== Eye 1 Full-Scale Skeleton Matcher ===", file=sys.stderr)
     print(f"  Target language : {lang}", file=sys.stderr)
+    print(f"  Equivalents     : {eq_name}", file=sys.stderr)
     print(f"  Threshold       : {args.threshold}", file=sys.stderr)
     print(f"  Min overlap     : {args.min_overlap}", file=sys.stderr)
     print(f"  Output          : {output_path}", file=sys.stderr)
@@ -706,7 +716,7 @@ def main() -> None:
     # ---- Step 1: Load Arabic roots ----
     t0 = time.time()
     arabic_source = Path(args.arabic_source) if args.arabic_source else None
-    raw_arabic = load_arabic_roots(source_override=arabic_source, limit=args.arabic_limit)
+    raw_arabic = load_arabic_roots(source_override=arabic_source, limit=args.arabic_limit, lang=lang)
     if not raw_arabic:
         print("ERROR: No Arabic roots loaded. Exiting.", file=sys.stderr)
         sys.exit(1)
