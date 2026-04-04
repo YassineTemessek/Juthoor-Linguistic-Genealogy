@@ -194,6 +194,15 @@ def build_profile(
             elif len(lex_root) >= 2:
                 binary_root = lex_root[:2]
 
+    # --- Fallback 3: morphological root extraction ---
+    if not root:
+        from juthoor_cognatediscovery_lv2.discovery.arabic_root_extractor import extract_root as _extract_root
+        _extracted, _extr_status = _extract_root(lemma)
+        if _extracted:
+            root = _extracted
+            _root_norm_tmp = normalize_arabic(_extracted)
+            binary_root = _root_norm_tmp[:2] if len(_root_norm_tmp) >= 2 else _root_norm_tmp
+
     root_norm = normalize_arabic(root) if root else None
 
     # --- 2. Binary field (mafahim) ---
