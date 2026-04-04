@@ -28,7 +28,7 @@ Wheel builds in CI are kept for workspace integrity checks, not as a promise of 
 | :--- | :--- | :--- |
 | **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | ~2.64M lexemes across 12 languages (Arabic, English, Latin, Ancient Greek, Hebrew, Persian, Aramaic, Old/Middle English, Quranic Arabic). Foundation layer complete. 167 tests. |
 | **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | Research Factory complete: 12,333 roots, 4 hypotheses supported (H2, H5, H8, H12). Promoted evidence cards feed LV2. 498 tests. |
-| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | Operational — forward (Arabic→target, 7 languages) + reverse (target→Arabic) discovery pipelines. 54K-key reverse index, 1,889-pair gold benchmark, 47,071-edge cognate graph, 32.1% gold coverage. 498 tests. |
+| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | Operational — forward + reverse discovery pipelines, 7 languages, 1,889-pair gold benchmark, 47,071-edge cognate graph. LLM annotation Layers 1-2 complete (244 morphology + 244 semantic), Arabic semantic profiles built (954 lemmas). Eye 2 LLM semantic scoring in progress. 523 tests. |
 | **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Theory synthesis active: building toward an alternative to PIE reconstruction based on convergent Arabic-IE evidence from 153 cross-language root families. 10 corridor cards, 14,494 validated leads. |
 
 ## Architecture & Layers

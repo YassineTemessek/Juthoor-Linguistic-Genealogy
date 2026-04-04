@@ -2,7 +2,7 @@
 
 ![level](https://img.shields.io/badge/level-LV2-6f42c1)
 ![license](https://img.shields.io/badge/license-MIT-blue)
-![tests](https://img.shields.io/badge/tests-498%20passing-brightgreen)
+![tests](https://img.shields.io/badge/tests-523%20passing-brightgreen)
 
 Cross-lingual cognate discovery engine. Compares Arabic 3-letter roots against Indo-European lexemes using semantic, phonetic, and form-based evidence, then ranks candidates for review.
 
@@ -14,12 +14,14 @@ LV2 is supported inside the **Juthoor monorepo checkout** with editable installs
 
 ## Current Status
 
-- **498 tests passing**
+- **523 tests passing**
 - **Forward discovery** (Arabic → target): 7 language pairs operational
-- **Reverse discovery** (target → Arabic): new primary pipeline, 54K-key reverse Arabic root index
+- **Reverse discovery** (target → Arabic): primary pipeline, 54K-key reverse Arabic root index
 - **Gold benchmark**: 1,889 pairs across 13 language pairs
 - **Cognate graph**: 12,455 nodes, 47,071 edges across 7 languages
-- **Gold coverage**: 32.1% (269/837 pairs) after Arabic source fix
+- **LLM annotation layers**: Layer 1 (morphology) + Layer 2 (semantic) complete for ara-lat
+- **Arabic semantic profiles**: 954 lemmas with mafahim (genome) + masadiq (dictionary)
+- **Eye 2 LLM semantic scoring**: in progress — replaces broken gloss-based semantic with LLM reasoning
 
 ## Role in the Stack
 
@@ -57,6 +59,8 @@ Consumes canonical lexeme tables from LV0 and promoted evidence cards from LV1. 
 | `build_unified_arabic_source.py` | Unified Arabic corpus (37K entries) |
 | `build_enriched_english_corpus.py` | Enriched English corpus with glosses |
 | `null_model_test.py` | Permutation statistical validation |
+| `eval_layer1_impact.py` | A/B evaluation of Layer 1 morphology impact |
+| `build_arabic_profiles.py` | Combine mafahim + masadiq for Arabic semantic profiles |
 
 ## Target Languages
 
@@ -108,26 +112,47 @@ python -m pytest tests/ -q
 src/juthoor_cognatediscovery_lv2/
   discovery/         — scoring + pipeline modules
   data/              — data access utilities
-scripts/discovery/   — runnable pipeline entrypoints
-tests/               — 498 tests
+scripts/             — runnable pipeline entrypoints + annotation builders
+tests/               — 523 tests
 resources/benchmarks/ — 1,889-pair gold benchmark (13 language pairs)
+data/llm_annotations/ — Layer 1-2 annotations + Arabic profiles (tracked)
 docs/                — pipeline specification and documentation
 outputs/             — local run artifacts (gitignored)
-data/                — local datasets (gitignored)
+data/raw/, data/processed/ — local datasets (gitignored)
 ```
 
-## Next Phase: LLM-Assisted Annotation
+## LLM-Assisted Annotation Phase
 
-The pipeline is entering a controlled annotation phase where LLMs fill knowledge gaps that scripts cannot handle. The LLM acts as a temporary annotator — not a judge — returning structural facts that get promoted into deterministic rules once patterns stabilize.
+The pipeline uses LLMs as annotators (never judges) to fill knowledge gaps. Results are promoted into deterministic rules once patterns stabilize.
+
+### Completed Layers
+
+| Layer | Purpose | Status | Artifacts |
+|-------|---------|--------|-----------|
+| 1. Target Morphology | Latin etymological stems, false prefix fixes | **DONE** (244/244) | `data/llm_annotations/layer1_morphology.jsonl` |
+| 2. Semantic Normalization | English glosses for Latin gold pairs | **DONE** (244/244) | `data/llm_annotations/layer2_semantic_mapping.jsonl` |
+| Arabic Profiles | Mafahim (genome) + masadiq (dictionary) for Arabic sources | **DONE** (954 lemmas) | `data/llm_annotations/arabic_semantic_profiles.jsonl` |
+
+**Layer 1 impact** (A/B validated): 50 pairs improved, 5 degraded (10:1 ratio), skeleton hits at >0.45 threshold: 96 → 112 (+16).
+
+### In Progress
 
 | Layer | Purpose | Status |
 |-------|---------|--------|
-| 1. Target Morphology | Correct stems, false prefixes, consonant stem nouns | Starting |
-| 2. Semantic Normalization | English translations for Latin/Greek/OE glosses | Planned |
+| Eye 2: LLM Semantic | Smart LLM scores semantic relatedness using mafahim + masadiq | **In progress** |
 | 3. Consonant Correspondence | Per-consonant mapping with matched controls | Planned |
-| 4. Pre-Ranker Redesign | Engineering analysis on clean data | After 1-3 |
+| 4. Pre-Ranker Redesign | Engineering analysis on clean data | After Eye 2 |
 
-Small batches (30-50 items), reviewed iteratively. No bulk runs. See `docs/pipeline_specification.md` for full methodology.
+**Eye 2 architecture**: Eye 1 (phonetic/skeleton) produces candidate matches → Eye 2 (LLM) evaluates semantic plausibility. The LLM checks dictionary meaning (masadiq) first for obvious connections, then uses deep root meaning (mafahim) for hidden links. This replaces the broken gloss-based semantic scorer (4.1% coverage → expected 95%+).
+
+### Key Finding: Pipeline Bottleneck Analysis
+
+The semantic channel (55% of total score weight) was effectively dead:
+- 98.8% of ara-lat gold pairs had zero semantic score
+- 80% of Arabic sources lacked any gloss
+- Gloss-matching cannot capture conceptual depth (e.g., كومة "heap" → cemetery "sleeping place of dead")
+
+Eye 2 solves this by replacing mechanical gloss matching with LLM reasoning.
 
 ## Documentation
 
