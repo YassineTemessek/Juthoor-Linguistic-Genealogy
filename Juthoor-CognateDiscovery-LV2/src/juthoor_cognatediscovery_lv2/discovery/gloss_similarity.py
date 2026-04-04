@@ -4,10 +4,15 @@ No GPU required. Uses Jaccard similarity on gloss words as a proxy for
 semantic relatedness. This is much weaker than BGE-M3 embeddings but
 provides SOME semantic filtering to distinguish real cognates from
 random consonant overlaps.
+
+When a pre-computed Eye 2 LLM score is available for a pair, it is used
+instead of the Jaccard gloss computation.
 """
 from __future__ import annotations
 import re
 from typing import Any
+
+from juthoor_cognatediscovery_lv2.discovery.eye2_scorer import eye2_semantic_score
 
 _STOPWORDS = frozenset({
     "a", "an", "the", "of", "in", "to", "for", "and", "or", "is", "it",
@@ -32,7 +37,18 @@ def gloss_similarity(source: dict[str, Any], target: dict[str, Any]) -> float:
     """Compute Jaccard similarity between source and target glosses.
 
     Returns 0.0-1.0. Uses meaning_text, gloss, gloss_plain, short_gloss fields.
+
+    When a pre-computed Eye 2 LLM score is available for this (source, target)
+    pair, it is returned immediately instead of the Jaccard computation.
     """
+    # Eye 2 override: use LLM score when available
+    src_lemma = str(source.get("lemma", "") or "").strip()
+    tgt_lemma = str(target.get("lemma", "") or "").strip()
+    if src_lemma and tgt_lemma:
+        eye2 = eye2_semantic_score(src_lemma, tgt_lemma)
+        if eye2 is not None:
+            return eye2
+
     src_text = " ".join(filter(None, [
         str(source.get("english_gloss", "") or ""),  # Arabic entries with English gloss
         str(source.get("meaning_text", "") or ""),

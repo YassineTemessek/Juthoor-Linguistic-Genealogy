@@ -67,3 +67,11 @@ def resolve_convergent_leads_path(preferred: Path | None = None) -> Path:
 
 def layer1_annotation_path() -> Path:
     return lv2_root() / "data" / "llm_annotations" / "layer1_morphology.jsonl"
+
+
+def eye2_scores_path() -> Path:
+    return lv2_root() / "data" / "llm_annotations" / "eye2_semantic_scores.jsonl"
+
+
+def eye2_eng_scores_path() -> Path:
+    return lv2_root() / "data" / "llm_annotations" / "eye2_eng_semantic_scores.jsonl"
