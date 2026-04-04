@@ -115,6 +115,56 @@ except ImportError:
     _HAS_TARGET_PROJECTION = False
 
 
+# ---------------------------------------------------------------------------
+# Greek equivalents: Arabic consonants → romanized Ancient Greek
+# ---------------------------------------------------------------------------
+# Greek target morphology transliterates: φ→ph, θ→th, χ→kh, β→b, γ→g, δ→d
+# Key differences from LATIN_EQUIVALENTS:
+#   ف→ph (aspiration), ث→th (preserved), ع→∅/g (ghayin variant),
+#   ح→kh/∅ (no pharyngeal), emphatics→aspirated (ق→kh, ط→th),
+#   devoicing (ج→k, ض→t, ب→ph), ζ was /zd/ (ز→d component)
+# Sources: phonetic_mergers_greek.jsonl, PHONETIC_MERGERS.md,
+#   Brill Semitic Loanwords in Greek, Phoenician alphabet scholarship,
+#   Grassmann's law, Semitic devoicing patterns in Greek loans
+GREEK_EQUIVALENTS: dict[str, tuple[str, ...]] = {
+    "ا": ("", "a"),           # alif → silent or vowel
+    "ب": ("b", "p", "ph"),    # ba → β / π / φ (devoicing + aspiration chain)
+    "ت": ("t", "d"),          # ta → τ (tau) / δ (delta)
+    "ث": ("th",),             # tha → θ (theta) — preserved in Greek
+    "ج": ("g", "k"),          # jim → γ (gamma) / κ (devoicing: gamal→kamelos)
+    "ح": ("kh", "", "h"),     # ḥa → χ (chi) / deleted / rough breathing
+    "خ": ("kh",),             # kha → χ (chi)
+    "د": ("d", "t"),          # dal → δ (delta) / τ (tau)
+    "ذ": ("d", "th", "z"),    # dhal → δ / θ (theta) / ζ (zeta)
+    "ر": ("r",),              # ra → ρ (rho)
+    "ز": ("z", "s", "d"),     # zayn → ζ (zeta=/zd/) / σ / δ (zd-cluster)
+    "س": ("s",),              # sin → σ (sigma)
+    "ش": ("s", "kh"),         # shin → σ (sigma) / χ (chi)
+    "ص": ("s", "z"),          # ṣad → σ / ζ (tsade affricate, voiced variant)
+    "ض": ("d", "t"),          # ḍad → δ / τ (systematic devoicing)
+    "ط": ("t", "th"),         # ṭa → τ (tau) / θ (theta) — emphatic→aspirated
+    "ظ": ("z", "d", "th"),    # ẓa → ζ / δ / θ — emphatic interdental
+    "ع": ("", "g"),           # ʿayn → DELETED / γ (ghayin: Gaza, Gomorrah)
+    "غ": ("g",),              # ghayn → γ (gamma)
+    "ف": ("ph", "p", "b"),    # fa → φ (phi=aspirated p) / π / β
+    "ق": ("k", "kh"),         # qaf → κ / χ (emphatic→aspirated pattern)
+    "ك": ("k", "kh"),         # kaf → κ / χ (kaph without dagesh = chi)
+    "ل": ("l",),              # lam → λ (lambda)
+    "م": ("m",),              # mim → μ (mu)
+    "ن": ("n",),              # nun → ν (nu)
+    "ه": ("h", ""),           # ha → rough breathing or deleted
+    "و": ("w", "u", ""),      # waw → w / υ / deleted (post-digamma loss)
+    "ي": ("y", "i"),          # ya → ι (iota)
+}
+
+
+def get_language_equivalents(lang: str) -> dict[str, tuple[str, ...]]:
+    """Return the Arabic→target consonant equivalents table for the given language."""
+    if lang == "grc":
+        return GREEK_EQUIVALENTS
+    return LATIN_EQUIVALENTS
+
+
 _DIACRITICAL_MAP = str.maketrans(
     {"ṭ": "t", "ṣ": "s", "ḥ": "h", "ḍ": "d", "ẓ": "z", "ʕ": "", "ġ": "g", "ḫ": "kh"}
 )
