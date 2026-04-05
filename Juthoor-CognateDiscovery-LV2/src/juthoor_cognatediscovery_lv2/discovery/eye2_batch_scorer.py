@@ -16,8 +16,14 @@ _LANG_NAMES = {"lat": "Latin", "grc": "Greek", "eng": "English", "deu": "German"
 def _lv2_root() -> Path:
     return Path(__file__).resolve().parents[3]
 
+def _repo_root() -> Path:
+    return _lv2_root().parent
+
 def _default_profiles_path() -> Path:
     return _lv2_root() / "data" / "llm_annotations" / "arabic_semantic_profiles.jsonl"
+
+def _default_lv0_lexemes_path() -> Path:
+    return _repo_root() / "Juthoor-DataCore-LV0" / "data" / "processed" / "arabic" / "classical" / "lexemes.jsonl"
 
 # -- Arabic semantic profiles (lazy) ----------------------------------------
 
@@ -40,7 +46,42 @@ def _load_profiles(profiles_path: Path) -> dict[str, dict[str, str]]:
             lemma = obj.get("lemma", "").strip()
             if lemma:
                 _profiles_cache[lemma] = {"masadiq_gloss": obj.get("masadiq_gloss", ""), "mafahim_gloss": obj.get("mafahim_gloss", "")}
+    print(f"[info] Loaded {len(_profiles_cache)} Arabic semantic profiles.", file=sys.stderr)
     return _profiles_cache
+
+# -- LV0 Arabic definitions (fallback for roots without profiles) -----------
+
+_lv0_cache: dict[str, str] | None = None
+
+def _load_lv0_definitions(lv0_path: Path | None = None) -> dict[str, str]:
+    """Load Arabic definitions from LV0 lexemes (short_gloss field, Arabic text).
+
+    These cover ~100% of Eye 1 roots. Used as fallback when no masadiq/mafahim
+    profile exists. The LLM reads Arabic natively.
+    """
+    global _lv0_cache
+    if _lv0_cache is not None:
+        return _lv0_cache
+    _lv0_cache = {}
+    path = lv0_path or _default_lv0_lexemes_path()
+    if not path.exists():
+        print(f"[warn] LV0 lexemes not found: {path}", file=sys.stderr)
+        return _lv0_cache
+    with open(path, encoding="utf-8") as fh:
+        for raw in fh:
+            raw = raw.strip()
+            if not raw:
+                continue
+            try:
+                obj = json.loads(raw)
+            except json.JSONDecodeError:
+                continue
+            root = (obj.get("root_norm") or "").strip()
+            defn = (obj.get("short_gloss") or obj.get("definition") or "").strip()
+            if root and defn and root not in _lv0_cache:
+                _lv0_cache[root] = defn
+    print(f"[info] Loaded {len(_lv0_cache)} LV0 Arabic definitions (fallback).", file=sys.stderr)
+    return _lv0_cache
 
 # -- Eye 1 loading -----------------------------------------------------------
 
@@ -99,6 +140,8 @@ def _build_prompt(pairs: list[dict[str, Any]], lang: str) -> str:
         f"You are scoring semantic connections between Arabic words and {lang_name} words for cognate discovery.\n\n"
         "Scoring rules:\n"
         "- Use masadiq (dictionary meaning) FIRST; only use mafahim for hidden links\n"
+        "- The Arabic meaning may be in Arabic script — read it directly\n"
+        "- You know the {lang_name} vocabulary — use your knowledge of the target word's meaning\n"
         "- Score 0.0-1.0: 0.0=no connection, 0.5=weak, 0.8+=strong, 0.95+=near-certain\n"
         '- method: "masadiq_direct" | "mafahim_deep" | "combined" | "weak" (score<0.3)\n\n'
         "Pairs:\n" + "\n".join(lines) +
@@ -145,11 +188,26 @@ def score_candidates(candidates: list[dict[str, Any]], profiles: dict[str, dict[
     if not to_score:
         print("[info] Nothing left to score.", file=sys.stderr); return 0
 
+    # Enrich with Arabic meanings (profiles first, LV0 fallback)
+    lv0_defs = _load_lv0_definitions()
+    enriched = 0
+    for c in to_score:
+        prof = profiles.get(c["arabic_root"], {})
+        c["masadiq_gloss"] = prof.get("masadiq_gloss", "")
+        c["mafahim_gloss"] = prof.get("mafahim_gloss", "")
+        # Fallback: LV0 Arabic definition (Arabic text — LLM reads it natively)
+        if not c["masadiq_gloss"] and not c["mafahim_gloss"]:
+            c["masadiq_gloss"] = lv0_defs.get(c["arabic_root"], "")
+        if c["masadiq_gloss"] or c["mafahim_gloss"]:
+            enriched += 1
+
+    print(f"[info] {enriched}/{len(to_score)} pairs enriched with Arabic meaning ({enriched/max(1,len(to_score))*100:.1f}%).", file=sys.stderr)
     print(f"[info] Scoring {len(to_score)} pairs in batches of {batch_size}.", file=sys.stderr)
 
     if dry_run:
         for c in to_score[:5]:
-            print(f"  [dry-run] {c['arabic_root']} <-> {c['target_lemma']}", file=sys.stderr)
+            gloss = (c.get("masadiq_gloss") or "")[:50]
+            print(f"  [dry-run] {c['arabic_root']} ({gloss}) <-> {c['target_lemma']}", file=sys.stderr)
         if len(to_score) > 5:
             print(f"  [dry-run] ... and {len(to_score)-5} more.", file=sys.stderr)
         return 0
@@ -161,11 +219,6 @@ def score_candidates(candidates: list[dict[str, Any]], profiles: dict[str, dict[
     import anthropic
     client = anthropic.Anthropic(api_key=api_key)
     model_id = _MODEL_MAP.get(model_alias, model_alias)
-
-    for c in to_score:
-        prof = profiles.get(c["arabic_root"], {})
-        c["masadiq_gloss"] = prof.get("masadiq_gloss", "")
-        c["mafahim_gloss"] = prof.get("mafahim_gloss", "")
 
     scored = 0
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -226,7 +279,6 @@ def main(argv: list[str] | None = None) -> None:
                                       top_n_per_root=args.top_n_per_root, lang_filter=args.lang)
     print(f"[info] {len(candidates)} candidates after filtering.", file=sys.stderr)
     profiles = _load_profiles(profiles_path)
-    print(f"[info] Loaded {len(profiles)} Arabic semantic profiles.", file=sys.stderr)
     score_candidates(candidates=candidates, profiles=profiles, output_path=output_path,
                      model_alias=args.model, lang=args.lang, batch_size=args.batch_size,
                      resume=args.resume, dry_run=args.dry_run, batch_label=batch_label)
