@@ -28,7 +28,7 @@ def test_materialize_benchmark_slice_cli(tmp_path: Path):
     proc = subprocess.run(
         [
             sys.executable,
-            "Juthoor-CognateDiscovery-LV2/scripts/discovery/materialize_benchmark_slice.py",
+            "Juthoor-CognateDiscovery-LV2/scripts/discovery/archive/materialize_benchmark_slice.py",
             "--benchmark",
             str(benchmark),
             "--source",
