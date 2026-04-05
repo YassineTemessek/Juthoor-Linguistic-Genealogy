@@ -27,7 +27,7 @@ def test_benchmark_coverage_cli_reports_partial_coverage(tmp_path: Path):
     proc = subprocess.run(
         [
             sys.executable,
-            "Juthoor-CognateDiscovery-LV2/scripts/discovery/benchmark_coverage.py",
+            "Juthoor-CognateDiscovery-LV2/scripts/discovery/archive/benchmark_coverage.py",
             "--benchmark",
             str(benchmark),
             "--source",
