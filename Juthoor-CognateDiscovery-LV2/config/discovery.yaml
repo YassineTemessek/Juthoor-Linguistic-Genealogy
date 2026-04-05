@@ -1,0 +1,40 @@
+# Juthoor LV2 — Discovery Pipeline Configuration
+# Used by run_pipeline.py and individual Eye 1/Eye 2 scripts
+
+languages:
+  lat:
+    equivalents: latin
+    corpus: latin/classical/sources/kaikki.jsonl
+    dedup_name: latin
+    scoring_profile: ara_classical_ie
+  grc:
+    equivalents: greek
+    corpus: ancient_greek/sources/kaikki.jsonl
+    dedup_name: greek
+    scoring_profile: ara_classical_ie
+  ang:
+    equivalents: latin          # Old English uses Latin-derived equivalents for now
+    corpus: english_old/sources/kaikki.jsonl
+    dedup_name: english_old
+    scoring_profile: ara_old_english
+  enm:
+    equivalents: latin
+    corpus: english_middle/sources/kaikki.jsonl
+    dedup_name: english_middle
+    scoring_profile: ara_middle_english
+
+eye1:
+  threshold: 0.3
+  min_overlap: 2
+  top_k: 200
+
+eye2:
+  batch_size: 10
+  first_pass_model: sonnet
+  deep_models:
+    - opus
+    - codex
+  min_discovery_score: 0.6
+  auto_accept_above: 0.9
+  auto_reject_below: 0.15
+  top_n_per_root: 50
