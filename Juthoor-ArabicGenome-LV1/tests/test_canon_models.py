@@ -8,7 +8,7 @@ from juthoor_arabicgenome_lv1.core.canon_models import (
     AtomicFeature,
     BinaryFieldEntry,
     BinaryNucleus,
-    CompositionResult,
+    CanonCompositionResult,
     FEATURE_CATEGORIES,
     LetterAtom,
     LetterRegistryEntry,
@@ -161,7 +161,7 @@ def test_frozen_immutability() -> None:
 
 # ---------------------------------------------------------------------------
 # New dataclasses — AtomicFeature, LetterAtom, LetterRegistryEntry,
-# BinaryNucleus, TriliteralRootEntry, CompositionResult + constants
+# BinaryNucleus, TriliteralRootEntry, CanonCompositionResult + constants
 # ---------------------------------------------------------------------------
 
 def test_valid_scholars_is_tuple_with_expected_values() -> None:
@@ -363,7 +363,7 @@ def test_trilateral_root_entry_with_prediction() -> None:
 
 
 def test_composition_result_valid_scores() -> None:
-    result = CompositionResult(
+    result = CanonCompositionResult(
         nucleus="حس",
         model="model_b",
         scholar_letters="hassan_abbas",
@@ -382,7 +382,7 @@ def test_composition_result_valid_scores() -> None:
 
 
 def test_composition_result_frozen() -> None:
-    result = CompositionResult(
+    result = CanonCompositionResult(
         nucleus="حس",
         model="model_a",
         scholar_letters="jabal",

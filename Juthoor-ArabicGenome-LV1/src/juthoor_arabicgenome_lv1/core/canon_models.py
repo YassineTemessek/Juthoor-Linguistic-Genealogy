@@ -290,7 +290,7 @@ class TriliteralRootEntry:
 # ---------------------------------------------------------------------------
 
 @dataclass(frozen=True)
-class CompositionResult:
+class CanonCompositionResult:
     """Result of applying a composition model to a binary nucleus.
 
     Produced by running one of the four composition models (A-D) against
