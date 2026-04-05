@@ -15,6 +15,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import heapq
 import json
 import sys
 import time
@@ -540,6 +541,34 @@ def ordered_overlap(skel_a: str, skel_b: str) -> list[str]:
 # Step 7: Main matching loop (inverted-index accelerated)
 # ---------------------------------------------------------------------------
 
+def _discovery_score(
+    jaccard: float,
+    ord_ov_len: int,
+    ar_len: int,
+    tgt_len: int,
+) -> float:
+    """Composite ranking score for a candidate match.
+
+    Combines multiple signals — all computed from data already in hand:
+    - Jaccard (consonant set overlap): base similarity
+    - Ordered overlap ratio (sequential structure): positional coherence
+    - Length ratio (similar skeleton lengths): penalizes wild mismatches
+    - Length bonus (longer shared skeletons = rarer = higher signal)
+    """
+    min_len = min(ar_len, tgt_len)
+    max_len = max(ar_len, tgt_len)
+    ord_ov_ratio = ord_ov_len / min_len if min_len > 0 else 0.0
+    len_ratio = min_len / max_len if max_len > 0 else 0.0
+    len_bonus = min(min_len / 4.0, 1.0)
+
+    return (
+        jaccard * 0.35
+        + ord_ov_ratio * 0.30
+        + len_ratio * 0.15
+        + len_bonus * 0.20
+    )
+
+
 def run_matching(
     arabic_entries: list[dict[str, Any]],
     target_entries: list[dict[str, Any]],
@@ -547,21 +576,28 @@ def run_matching(
     lang: str,
     threshold: float = 0.3,
     min_overlap: int = 2,
+    top_k: int = 200,
 ) -> tuple[list[dict[str, Any]], float]:
-    """Run skeleton matching with inverted-index acceleration.
+    """Run skeleton matching with inverted-index acceleration and ranked output.
 
-    Performance strategy:
-    1. For each Arabic root, look up candidates via primary-skeleton inverted index
-    2. Count per-target how many Arabic PRIMARY chars it shares
-    3. Only process targets sharing >= min_overlap chars
-    4. Compute best Jaccard using pre-computed frozensets (fast set ops)
-    5. Ordered overlap only as tie-breaker on primary skeletons
-    6. Emit match if Jaccard >= threshold OR ordered_overlap >= min_overlap
+    Strategy:
+    1. For each Arabic root, look up candidates via sorted-pair inverted index
+    2. Compute best Jaccard + ordered overlap for each candidate
+    3. Compute composite discovery_score from multiple signals
+    4. Maintain per-root bounded heap (top_k best matches per root)
+    5. Output ranked candidates — Eye 2 consumes top candidates first
+
+    When top_k=0, all matches above threshold are kept (exhaustive mode).
     """
-    matches: list[dict[str, Any]] = []
+    # Per-root bounded heaps: (discovery_score, tie_breaker, match_dict)
+    # Using tie_breaker (counter) to avoid dict comparison in heapq
+    root_heaps: dict[str, list] = defaultdict(list)
+    tie_counter = 0
+    total_considered = 0
+    total_passed = 0
 
     total = len(arabic_entries)
-    report_step = max(1, total // 20)  # report every 5%
+    report_step = max(1, total // 20)
 
     t0 = time.time()
 
@@ -569,18 +605,18 @@ def run_matching(
         if i % report_step == 0:
             elapsed = time.time() - t0
             rate = (i + 1) / elapsed if elapsed > 0 else 0
+            heap_total = sum(len(h) for h in root_heaps.values())
             print(
-                f"  [{i+1}/{total}] {rate:.0f} roots/s | matches so far: {len(matches)}",
+                f"  [{i+1}/{total}] {rate:.0f} roots/s | kept: {heap_total} | considered: {total_considered}",
                 file=sys.stderr,
             )
 
         ar_skel_sets = ar_entry["all_skels_sets"]
         primary_latin = ar_entry["primary_latin"]
+        ar_len = len(primary_latin)
 
-        # 1. Sorted-pair inverted index lookup from primary Latin skeleton
-        # sorted_pairs are order-insensitive consonant combos — highly selective
-        ar_pairs = _sorted_pairs(primary_latin) if len(primary_latin) >= 2 else set()
-        # Also add pairs from alternate skeletons (up to first 3 variants)
+        # 1. Sorted-pair inverted index lookup
+        ar_pairs = _sorted_pairs(primary_latin) if ar_len >= 2 else set()
         for alt_skel in ar_entry["all_skeletons"][1:4]:
             if len(alt_skel) >= 2:
                 ar_pairs.update(_sorted_pairs(alt_skel))
@@ -591,9 +627,11 @@ def run_matching(
                 for idx in inv_index[pair]:
                     candidate_counts[idx] += 1
 
-        # 2. Require >= 2 shared consonant pairs (much tighter filter than unigrams)
-        # A 3-char skeleton has 3 pairs total, so 2+ hits means 2/3 consonants match
+        # 2. Process candidates sharing >= required consonant pairs
         required_hits = min_overlap if min_overlap >= 2 else 2
+        ar_root = ar_entry["arabic_root"]
+        heap = root_heaps[ar_root]
+
         for idx, cnt in candidate_counts.items():
             if cnt < required_hits:
                 continue
@@ -601,34 +639,80 @@ def run_matching(
             tgt_entry = target_entries[idx]
             tgt_skel_sets = tgt_entry["all_skels_sets"]
 
-            # 3. Best Jaccard across all skel pair combinations
+            # 3. Best Jaccard across all skeleton pair combinations
             best_j, best_ai, best_ti = best_jaccard_pair(ar_skel_sets, tgt_skel_sets)
 
-            # 4. Ordered overlap on primary skeletons (fallback / bonus)
+            # 4. Ordered overlap on primary skeletons
             primary_tgt = tgt_entry["all_skeletons"][0]
+            tgt_len = len(primary_tgt)
             ord_ov = ordered_overlap(primary_latin, primary_tgt)
+            ord_ov_len = len(ord_ov)
 
-            # 5. Emit if passes threshold or ordered overlap
-            if best_j >= threshold or len(ord_ov) >= min_overlap:
-                best_ar_skel = ar_entry["all_skeletons"][best_ai]
-                best_tgt_skel = tgt_entry["all_skeletons"][best_ti]
-                overlap_chars = sorted(ar_skel_sets[best_ai] & tgt_skel_sets[best_ti])
-                alt_lemmas = tgt_entry.get("alt_lemmas", [])
+            # 5. Gate: pass if Jaccard >= threshold OR ordered_overlap >= min_overlap
+            if best_j < threshold and ord_ov_len < min_overlap:
+                continue
 
-                matches.append({
-                    "arabic_root": ar_entry["arabic_root"],
-                    "arabic_skeleton": best_ar_skel,
-                    "target_lemma": tgt_entry["lemma"],
-                    "target_skeleton": best_tgt_skel,
-                    "jaccard": round(best_j, 4),
-                    "overlap_consonants": overlap_chars,
-                    "ordered_overlap": ord_ov,
-                    "lang": lang,
-                    # alt_lemmas: other lemmas sharing the same primary skeleton
-                    "n_lemmas": 1 + len(alt_lemmas),
-                })
+            total_considered += 1
+
+            # 6. Compute composite discovery score
+            score = _discovery_score(best_j, ord_ov_len, ar_len, tgt_len)
+
+            # 7. Per-root top-K heap (or unlimited if top_k=0)
+            if top_k > 0:
+                tie_counter += 1
+                if len(heap) < top_k:
+                    heapq.heappush(heap, (score, tie_counter, idx, best_j, best_ai, best_ti, ord_ov))
+                elif score > heap[0][0]:
+                    heapq.heapreplace(heap, (score, tie_counter, idx, best_j, best_ai, best_ti, ord_ov))
+            else:
+                # Unlimited mode — store directly
+                tie_counter += 1
+                heap.append((score, tie_counter, idx, best_j, best_ai, best_ti, ord_ov))
+
+    # Flatten heaps into sorted output
+    matches: list[dict[str, Any]] = []
+    for ar_entry in arabic_entries:
+        ar_root = ar_entry["arabic_root"]
+        heap = root_heaps.get(ar_root)
+        if not heap:
+            continue
+
+        # Sort descending by discovery_score
+        for score, _tie, idx, best_j, best_ai, best_ti, ord_ov in sorted(heap, reverse=True):
+            tgt_entry = target_entries[idx]
+            best_ar_skel = ar_entry["all_skeletons"][best_ai]
+            best_tgt_skel = tgt_entry["all_skeletons"][best_ti]
+            ar_skel_sets = ar_entry["all_skels_sets"]
+            tgt_skel_sets = tgt_entry["all_skels_sets"]
+            overlap_chars = sorted(ar_skel_sets[best_ai] & tgt_skel_sets[best_ti])
+            primary_tgt = tgt_entry["all_skeletons"][0]
+
+            matches.append({
+                "arabic_root": ar_entry["arabic_root"],
+                "arabic_skeleton": best_ar_skel,
+                "target_lemma": tgt_entry["lemma"],
+                "target_skeleton": best_tgt_skel,
+                "jaccard": round(best_j, 4),
+                "overlap_consonants": overlap_chars,
+                "ordered_overlap": ord_ov,
+                "lang": lang,
+                "n_lemmas": 1 + len(tgt_entry.get("alt_lemmas", [])),
+                "discovery_score": round(score, 4),
+                "ordered_overlap_ratio": round(
+                    len(ord_ov) / min(len(ar_entry["primary_latin"]), len(primary_tgt))
+                    if min(len(ar_entry["primary_latin"]), len(primary_tgt)) > 0 else 0, 3
+                ),
+                "ar_skel_len": len(ar_entry["primary_latin"]),
+                "tgt_skel_len": len(primary_tgt),
+            })
 
     elapsed = time.time() - t0
+    total_passed = sum(len(h) for h in root_heaps.values())
+    print(
+        f"  Matching done: {total_considered} candidates considered, "
+        f"{total_passed} kept (top-{top_k}/root)" if top_k > 0 else f"{total_passed} kept (all)",
+        file=sys.stderr,
+    )
     return matches, elapsed
 
 
@@ -677,6 +761,12 @@ def parse_args() -> argparse.Namespace:
         help="Path to target lemmas JSONL file (default: auto-detect)",
     )
     p.add_argument(
+        "--top-k",
+        type=int,
+        default=200,
+        help="Keep top K matches per Arabic root (0 = all, default 200)",
+    )
+    p.add_argument(
         "--arabic-limit",
         type=int,
         default=0,
@@ -703,11 +793,13 @@ def main() -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     eq_name = "GREEK_EQUIVALENTS" if lang == "grc" else "LATIN_EQUIVALENTS"
+    top_k_label = f"top-{args.top_k}/root" if args.top_k > 0 else "all (unlimited)"
     print(f"=== Eye 1 Full-Scale Skeleton Matcher ===", file=sys.stderr)
     print(f"  Target language : {lang}", file=sys.stderr)
     print(f"  Equivalents     : {eq_name}", file=sys.stderr)
     print(f"  Threshold       : {args.threshold}", file=sys.stderr)
     print(f"  Min overlap     : {args.min_overlap}", file=sys.stderr)
+    print(f"  Top-K           : {top_k_label}", file=sys.stderr)
     print(f"  Output          : {output_path}", file=sys.stderr)
     print(file=sys.stderr)
 
@@ -758,6 +850,7 @@ def main() -> None:
         lang=lang,
         threshold=args.threshold,
         min_overlap=args.min_overlap,
+        top_k=args.top_k,
     )
 
     # ---- Write output ----
@@ -782,16 +875,32 @@ def main() -> None:
     print(f"  Throughput       : {rate:,.0f} pairs/s (theoretical max)", file=sys.stderr)
     print(f"  Output           : {output_path}", file=sys.stderr)
 
-    # Print sample matches
+    # Discovery score distribution
     if matches:
+        scores = [m["discovery_score"] for m in matches]
+        bins = [0.0, 0.2, 0.4, 0.6, 0.8, 1.01]
         print(file=sys.stderr)
-        print("Top 5 matches by Jaccard:", file=sys.stderr)
-        top5 = sorted(matches, key=lambda x: x["jaccard"], reverse=True)[:5]
+        print("=== Discovery Score Distribution ===", file=sys.stderr)
+        for lo, hi in zip(bins[:-1], bins[1:]):
+            count = sum(1 for s in scores if lo <= s < hi)
+            pct = count / len(scores) * 100
+            bar = "#" * int(pct / 2)
+            label = f"{lo:.1f}-{min(hi, 1.0):.1f}"
+            print(f"  {label}: {count:>8,} ({pct:5.1f}%) {bar}", file=sys.stderr)
+        print(f"  Mean: {sum(scores)/len(scores):.3f}  "
+              f"Median: {sorted(scores)[len(scores)//2]:.3f}  "
+              f"Max: {max(scores):.3f}", file=sys.stderr)
+
+        # Top 5 by discovery_score
+        print(file=sys.stderr)
+        print("Top 5 matches by discovery_score:", file=sys.stderr)
+        top5 = sorted(matches, key=lambda x: x["discovery_score"], reverse=True)[:5]
         for m in top5:
             print(
                 f"  {m['arabic_root']} ({m['arabic_skeleton']}) ↔ "
                 f"{m['target_lemma']} ({m['target_skeleton']})  "
-                f"J={m['jaccard']:.3f}  overlap={m['overlap_consonants']}",
+                f"ds={m['discovery_score']:.3f}  J={m['jaccard']:.3f}  "
+                f"ov_ratio={m['ordered_overlap_ratio']:.2f}",
                 file=sys.stderr,
             )
 
