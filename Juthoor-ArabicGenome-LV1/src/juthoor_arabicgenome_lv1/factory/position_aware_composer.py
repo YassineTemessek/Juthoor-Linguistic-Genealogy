@@ -6,17 +6,10 @@ appears in a binary nucleus. This model respects that positional difference.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
 from typing import Any
 
 from juthoor_arabicgenome_lv1.core.feature_decomposition import FEATURE_TO_CATEGORY, decompose_semantic_text
-
-
-@dataclass(frozen=True)
-class CompositionResult:
-    model_name: str
-    predicted_features: tuple[str, ...]
-    supporting_categories: tuple[str, ...]
+from juthoor_arabicgenome_lv1.factory.composition_models import CompositionResult
 
 
 def _ordered_unique(items: list[str]) -> tuple[str, ...]:
