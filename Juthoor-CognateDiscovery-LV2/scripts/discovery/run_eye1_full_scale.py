@@ -96,7 +96,12 @@ _HAMZA_TR = str.maketrans({
 
 def _norm_arabic(text: str) -> str:
     text = _ARABIC_DIACRITICS_RE.sub("", text)
-    return text.translate(_HAMZA_TR).strip()
+    text = text.translate(_HAMZA_TR).strip()
+    # Strip definite article ال if present at start
+    # Only strip if the remaining root has at least 3 letters (avoids short words)
+    if text.startswith("ال") and len(text) >= 5:
+        text = text[2:]
+    return text
 
 
 # ---------------------------------------------------------------------------
