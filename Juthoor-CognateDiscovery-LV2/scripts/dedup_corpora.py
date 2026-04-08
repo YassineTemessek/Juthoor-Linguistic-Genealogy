@@ -63,13 +63,22 @@ def dedup(lang: str, path: Path) -> int:
                     "form_count": 1,
                 }
 
+    # Filter out pure-inflection entries
+    # (entries where ALL glosses matched _FORM_REF, so no semantic info remains)
+    before_filter = len(lemmas)
+    lemmas = {
+        k: v for k, v in lemmas.items()
+        if not (_FORM_REF.match((v.get("gloss") or "").lower()))
+    }
+    filtered = before_filter - len(lemmas)
+
     out_name = {"lat": "latin_unique_lemmas.jsonl", "grc": "greek_unique_lemmas.jsonl"}
     out_path = OUTPUT_DIR / out_name[lang]
     with open(out_path, "w", encoding="utf-8") as f:
         for entry in sorted(lemmas.values(), key=lambda x: x["lemma"]):
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
-    print(f"{lang}: {total:,} forms → {len(lemmas):,} unique lemmas → {out_path.name}")
+    print(f"{lang}: {total:,} forms → {before_filter:,} unique → {len(lemmas):,} lemmas (dropped {filtered:,} inflections) → {out_path.name}")
     return len(lemmas)
 
 
