@@ -52,165 +52,119 @@ def build_arabic_lookup() -> dict:
 # ── Discovery loading & enrichment ─────────────────────────────────────────────
 
 def load_discoveries(ipa_grc: dict, ipa_lat: dict, ar_lookup: dict) -> list:
-    records = []
+    """Load ALL scored pairs from every source, merge into unified language categories.
+
+    Language mapping: grc, lat, eng, fra, deu, ang, spa, ita, fa, syc, non, other.
+    No separate 'gold reference' category — everything merges into its proper language.
+    Dedup by (arabic, target) key — keep the highest score.
+    """
+    # Unified language normalization
+    LANG_MAP = {
+        "grc": "grc", "lat": "lat", "eng": "eng", "fra": "fra",
+        "deu": "deu", "ang": "ang", "spa": "spa", "ita": "ita",
+        "fa": "fa", "syc": "syc", "non": "non",
+    }
+
+    # Collect all pairs keyed by (ar, tgt) — keep highest score
+    best: dict[tuple, dict] = {}
+
+    def _add(ar, tgt, score, lang, method, reasoning, model, tgt_ipa="", tgt_gloss=""):
+        key = (ar, tgt)
+        if key in best and best[key]["score"] >= score:
+            return
+        ar_def = ""
+        ar_translit = ""
+        if ar in ar_lookup:
+            ar_def = ar_lookup[ar]["def"]
+            ar_translit = ar_lookup[ar]["translit"]
+        # IPA + gloss enrichment from lookup maps
+        if not tgt_ipa and not tgt_gloss:
+            if lang == "grc" and tgt in ipa_grc:
+                tgt_ipa = (ipa_grc[tgt].get("ipa") or "").strip()
+                tgt_gloss = (ipa_grc[tgt].get("gloss") or "").strip()
+            elif lang == "lat" and tgt in ipa_lat:
+                tgt_ipa = (ipa_lat[tgt].get("ipa") or "").strip()
+                tgt_gloss = (ipa_lat[tgt].get("gloss") or "").strip()
+        best[key] = {
+            "ar": ar, "tgt": tgt,
+            "score": round(score, 3),
+            "lang": LANG_MAP.get(lang, "other"),
+            "method": (method or "weak").strip(),
+            "reasoning": (reasoning or "").strip()[:200],
+            "model": (model or "unknown").strip(),
+            "tgt_ipa": tgt_ipa, "tgt_gloss": (tgt_gloss or "")[:120],
+            "ar_def": (ar_def or "")[:160], "ar_translit": ar_translit,
+        }
+
+    # Source 1: Pipeline discoveries (Greek + Latin)
     for lang, fname in [("grc", "eye2_final_grc.jsonl"), ("lat", "eye2_final_lat.jsonl")]:
         path = LV2 / "outputs" / fname
         if not path.exists():
-            print(f"[warn] {path} not found, skipping", file=sys.stderr)
             continue
-        ipa_map = ipa_grc if lang == "grc" else ipa_lat
         count = 0
-        ipa_hits = 0
-        ar_hits  = 0
         with open(path, encoding="utf-8") as fh:
             for line in fh:
-                if not line.strip():
-                    continue
+                if not line.strip(): continue
                 r = json.loads(line)
-                if r.get("semantic_score", 0) < 0.3:
-                    continue
-
-                ar   = r.get("source_lemma", "")
-                tgt  = r.get("target_lemma", "")
-                method = (r.get("method", "weak") or "weak").strip()
-
-                # IPA + gloss enrichment
-                tgt_ipa   = ""
-                tgt_gloss = ""
-                if tgt in ipa_map:
-                    entry     = ipa_map[tgt]
-                    tgt_ipa   = (entry.get("ipa")   or "").strip()
-                    tgt_gloss = (entry.get("gloss")  or "").strip()
-                    ipa_hits += 1
-
-                # Arabic definition enrichment
-                ar_def      = ""
-                ar_translit = ""
-                if ar in ar_lookup:
-                    ar_def      = ar_lookup[ar]["def"]
-                    ar_translit = ar_lookup[ar]["translit"]
-                    ar_hits += 1
-
-                records.append({
-                    "ar":          ar,
-                    "tgt":         tgt,
-                    "score":       round(r.get("semantic_score", 0), 3),
-                    "lang":        lang,
-                    "method":      method,
-                    "reasoning":   (r.get("reasoning", "") or "").strip(),
-                    "model":       (r.get("final_model") or r.get("model") or "unknown").strip(),
-                    "tgt_ipa":     tgt_ipa,
-                    "tgt_gloss":   tgt_gloss[:120] if tgt_gloss else "",
-                    "ar_def":      ar_def[:160]     if ar_def     else "",
-                    "ar_translit": ar_translit,
-                })
+                if r.get("semantic_score", 0) < 0.3: continue
+                _add(r.get("source_lemma", ""), r.get("target_lemma", ""),
+                     r.get("semantic_score", 0), lang,
+                     r.get("method", ""), r.get("reasoning", ""),
+                     r.get("final_model") or r.get("model", ""))
                 count += 1
+        print(f"[{lang}] {count} pipeline records", file=sys.stderr)
 
-        ipa_pct = f"{100*ipa_hits/count:.1f}%" if count else "n/a"
-        ar_pct  = f"{100*ar_hits/count:.1f}%"  if count else "n/a"
-        print(
-            f"[{lang}] {count} records  |  IPA coverage: {ipa_pct}"
-            f"  |  AR def coverage: {ar_pct}",
-            file=sys.stderr,
-        )
-
-    # ── Beyond the Name gold reference pairs ───────────────────────────────────
-    btn_path = LV2 / "outputs" / "eye2_final_beyond_name.jsonl"
-    if btn_path.exists():
-        btn_count = 0
-        ar_hits_btn = 0
-        with open(btn_path, encoding="utf-8") as fh:
-            for line in fh:
-                if not line.strip():
-                    continue
-                r = json.loads(line)
-                if r.get("semantic_score", 0) < 0.3:
-                    continue
-
-                ar     = r.get("source_lemma", "")
-                tgt    = r.get("target_lemma", "")
-                method = (r.get("method", "weak") or "weak").strip()
-
-                # Arabic definition enrichment (no IPA map for BTN)
-                ar_def      = ""
-                ar_translit = ""
-                if ar in ar_lookup:
-                    ar_def      = ar_lookup[ar]["def"]
-                    ar_translit = ar_lookup[ar]["translit"]
-                    ar_hits_btn += 1
-
-                records.append({
-                    "ar":          ar,
-                    "tgt":         tgt,
-                    "score":       round(r.get("semantic_score", 0), 3),
-                    "lang":        "btn",
-                    "sub_lang":    (r.get("target_lang") or "").strip(),
-                    "method":      method,
-                    "reasoning":   (r.get("reasoning", "") or "").strip(),
-                    "model":       (r.get("model") or "unknown").strip(),
-                    "tgt_ipa":     "",
-                    "tgt_gloss":   "",
-                    "ar_def":      ar_def[:160] if ar_def else "",
-                    "ar_translit": ar_translit,
-                })
-                btn_count += 1
-
-        ar_pct_btn = f"{100*ar_hits_btn/btn_count:.1f}%" if btn_count else "n/a"
-        print(
-            f"[btn] {btn_count} records  |  AR def coverage: {ar_pct_btn}",
-            file=sys.stderr,
-        )
-    else:
-        print(f"[warn] {btn_path} not found, skipping BTN", file=sys.stderr)
-
-    # ── Original Eye 2 gold pair scores (English + Latin, sessions 8-10) ──────
-    for gold_lang, gold_fname, gold_tag in [
-        ("eng", "eye2_eng_semantic_scores.jsonl", "eng"),
-        ("lat", "eye2_semantic_scores.jsonl", "lat-gold"),
-    ]:
-        gold_path = LV2 / "data" / "llm_annotations" / gold_fname
-        if not gold_path.exists():
-            print(f"[warn] {gold_path} not found, skipping", file=sys.stderr)
+    # Source 2: Scored pairs from all sources — merge into proper language
+    for fname in ["eye2_final_beyond_name.jsonl"]:
+        path = LV2 / "outputs" / fname
+        if not path.exists():
             continue
-        gold_count = 0
-        seen = {(r["ar"], r["tgt"]) for r in records}  # avoid duplicates
-        with open(gold_path, encoding="utf-8") as fh:
+        count = 0
+        with open(path, encoding="utf-8") as fh:
             for line in fh:
-                if not line.strip():
-                    continue
+                if not line.strip(): continue
                 r = json.loads(line)
-                if r.get("semantic_score", 0) < 0.3:
-                    continue
-                ar = r.get("source_lemma", "")
-                tgt = r.get("target_lemma", "")
-                if (ar, tgt) in seen:
-                    continue
-                seen.add((ar, tgt))
+                if r.get("semantic_score", 0) < 0.3: continue
+                # Use target_lang to route to proper language category
+                target_lang = (r.get("target_lang") or "eng").strip()
+                _add(r.get("source_lemma", ""), r.get("target_lemma", ""),
+                     r.get("semantic_score", 0), target_lang,
+                     r.get("method", ""), r.get("reasoning", ""),
+                     r.get("model", ""))
+                count += 1
+        print(f"[merged] {count} records from {fname}", file=sys.stderr)
 
-                method = (r.get("method", "weak") or "weak").strip()
-                ar_def = ""
-                ar_translit = ""
-                if ar in ar_lookup:
-                    ar_def = ar_lookup[ar]["def"]
-                    ar_translit = ar_lookup[ar]["translit"]
+    # Source 3: Original Eye 2 gold pair scores (English + Latin)
+    for gold_fname, default_lang in [
+        ("eye2_eng_semantic_scores.jsonl", "eng"),
+        ("eye2_semantic_scores.jsonl", "lat"),
+    ]:
+        path = LV2 / "data" / "llm_annotations" / gold_fname
+        if not path.exists():
+            continue
+        count = 0
+        with open(path, encoding="utf-8") as fh:
+            for line in fh:
+                if not line.strip(): continue
+                r = json.loads(line)
+                if r.get("semantic_score", 0) < 0.3: continue
+                lang_pair = r.get("lang_pair", "")
+                lang = lang_pair.split("-")[-1] if "-" in lang_pair else default_lang
+                _add(r.get("source_lemma", ""), r.get("target_lemma", ""),
+                     r.get("semantic_score", 0), lang,
+                     r.get("method", ""), r.get("reasoning", "") or r.get("path", ""),
+                     r.get("annotator", "") or "claude")
+                count += 1
+        print(f"[{default_lang}] {count} original Eye 2 records", file=sys.stderr)
 
-                records.append({
-                    "ar":          ar,
-                    "tgt":         tgt,
-                    "score":       round(r.get("semantic_score", 0), 3),
-                    "lang":        gold_tag,
-                    "method":      method,
-                    "reasoning":   (r.get("reasoning", "") or r.get("path", "") or "").strip()[:200],
-                    "model":       (r.get("annotator", "") or "claude").strip(),
-                    "tgt_ipa":     "",
-                    "tgt_gloss":   "",
-                    "ar_def":      ar_def[:160] if ar_def else "",
-                    "ar_translit": ar_translit,
-                })
-                gold_count += 1
-        print(f"[{gold_tag}] {gold_count} gold pair records added", file=sys.stderr)
-
-    records.sort(key=lambda x: -x["score"])
+    records = sorted(best.values(), key=lambda x: -x["score"])
+    # Print summary by language
+    from collections import Counter
+    langs = Counter(r["lang"] for r in records)
+    print(f"\nTotal unique records: {len(records):,}", file=sys.stderr)
+    for lang, cnt in langs.most_common():
+        above05 = sum(1 for r in records if r["lang"] == lang and r["score"] >= 0.5)
+        print(f"  {lang}: {cnt} records, {above05} >=0.5", file=sys.stderr)
     return records
 
 
@@ -762,7 +716,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
 <header>
   <div class="header-left">
     <h1>Juthoor LV2 &mdash; Cognate Discoveries</h1>
-    <p>Arabic &harr; Greek, Latin &amp; Gold Reference Pairs</p>
+    <p>Arabic &harr; Greek, Latin, English &amp; Other Languages</p>
   </div>
   <div class="theme-switcher">
     <button class="theme-btn active" data-t="light"  onclick="setTheme('light')">Light</button>
@@ -785,7 +739,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
     <div class="stat-value" id="stat-lat">&mdash;</div>
   </div>
   <div class="stat-card stat-btn">
-    <div class="stat-label">Gold Ref</div>
+    <div class="stat-label">English</div>
     <div class="stat-value" id="stat-btn">&mdash;</div>
   </div>
   <div class="stat-card stat-hi">
@@ -805,8 +759,8 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
   <button class="chip"        data-chip="hidden"      onclick="setChip(this)">Hidden Cognates</button>
   <button class="chip"        data-chip="grc"         onclick="setChip(this)">Greek</button>
   <button class="chip"        data-chip="lat"         onclick="setChip(this)">Latin</button>
-  <button class="chip"        data-chip="btn"         onclick="setChip(this)" style="border-color:#d4a017;color:#92400e;">Gold Reference</button>
   <button class="chip"        data-chip="eng"         onclick="setChip(this)" style="border-color:#059669;color:#065f46;">English</button>
+  <button class="chip"        data-chip="other"      onclick="setChip(this)" style="border-color:#7c3aed;color:#5b21b6;">Other Languages</button>
 </div>
 
 <div id="filter-bar">
@@ -839,7 +793,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
   <div class="chart-legend" style="font-size:0.72rem; color:var(--text-muted); margin-top:0.3rem;">
     <span><span class="legend-dot" style="background:var(--chart-grc)"></span>Greek</span>
     <span><span class="legend-dot" style="background:var(--chart-lat)"></span>Latin</span>
-    <span><span class="legend-dot" style="background:var(--chart-btn)"></span>Gold Ref</span>
+    <span><span class="legend-dot" style="background:var(--chart-btn)"></span>Other</span>
   </div>
 </div>
 
@@ -965,8 +919,8 @@ function applyFilters() {
     if (method && d.method !== method) return false;
     if (chip === "grc" && d.lang !== "grc") return false;
     if (chip === "lat" && d.lang !== "lat") return false;
-    if (chip === "btn" && d.lang !== "btn") return false;
-    if (chip === "eng" && d.lang !== "eng" && d.lang !== "lat-gold") return false;
+    if (chip === "eng" && d.lang !== "eng") return false;
+    if (chip === "other" && ["grc","lat","eng"].includes(d.lang)) return false;
     if (chip === "direct"  && d.method !== "masadiq_direct") return false;
     if (chip === "hidden"  && d.method !== "mafahim_deep")   return false;
     if (search) {
@@ -1018,14 +972,13 @@ function updateStats() {
   const total = filtered.length;
   const grcN  = filtered.filter(d => d.lang === "grc").length;
   const latN  = filtered.filter(d => d.lang === "lat").length;
-  const btnN  = filtered.filter(d => d.lang === "btn").length;
-  const engN  = filtered.filter(d => d.lang === "eng" || d.lang === "lat-gold").length;
+  const engN  = filtered.filter(d => d.lang === "eng").length;
   const hiN   = filtered.filter(d => d.score >= 0.8).length;
   const medN  = filtered.filter(d => d.score >= 0.6).length;
   document.getElementById("stat-total").textContent = total.toLocaleString();
   document.getElementById("stat-grc").textContent   = grcN.toLocaleString();
   document.getElementById("stat-lat").textContent   = latN.toLocaleString();
-  document.getElementById("stat-btn").textContent   = btnN.toLocaleString();
+  document.getElementById("stat-btn").textContent   = engN.toLocaleString();
   document.getElementById("stat-hi").textContent    = hiN.toLocaleString();
   document.getElementById("stat-med").textContent   = medN.toLocaleString();
 }
@@ -1039,20 +992,20 @@ function updateChart() {
   const counts = BANDS.map(([lo, hi]) => ({
     grc: filtered.filter(d => d.lang==="grc" && d.score>=lo && d.score<hi).length,
     lat: filtered.filter(d => d.lang==="lat" && d.score>=lo && d.score<hi).length,
-    btn: filtered.filter(d => d.lang==="btn" && d.score>=lo && d.score<hi).length,
+    oth: filtered.filter(d => !["grc","lat"].includes(d.lang) && d.score>=lo && d.score<hi).length,
   }));
-  const maxN = Math.max(...counts.map(c => c.grc + c.lat + c.btn), 1);
+  const maxN = Math.max(...counts.map(c => c.grc + c.lat + c.oth), 1);
   container.innerHTML = counts.map((c, i) => {
     const gW = ((c.grc / maxN) * 100).toFixed(1);
     const lW = ((c.lat / maxN) * 100).toFixed(1);
-    const bW = ((c.btn / maxN) * 100).toFixed(1);
-    const tot = c.grc + c.lat + c.btn;
+    const oW = ((c.oth / maxN) * 100).toFixed(1);
+    const tot = c.grc + c.lat + c.oth;
     return `<div class="chart-row">
       <span class="chart-band-label">${BAND_LABELS[i]}</span>
-      <div class="chart-bars" title="Greek: ${c.grc}, Latin: ${c.lat}, Gold Ref: ${c.btn}">
+      <div class="chart-bars" title="Greek: ${c.grc}, Latin: ${c.lat}, Other: ${c.oth}">
         <div class="chart-bar-grc" style="width:${gW}%"></div>
         <div class="chart-bar-lat" style="width:${lW}%"></div>
-        <div class="chart-bar-btn" style="width:${bW}%"></div>
+        <div class="chart-bar-btn" style="width:${oW}%"></div>
       </div>
       <span class="chart-count">${tot > 0 ? tot.toLocaleString() : ""}</span>
     </div>`;
@@ -1089,9 +1042,7 @@ function renderPage() {
       ? `<span class="lang-badge badge-grc">GRC</span>`
       : d.lang === "lat"
       ? `<span class="lang-badge badge-lat">LAT</span>`
-      : d.lang === "eng" ? `<span class="lang-badge" style="background:#d1fae5;color:#065f46" title="Arabic-English">ENG</span>`
-      : d.lang === "lat-gold" ? `<span class="lang-badge" style="background:#fce7f3;color:#9d174d" title="Latin Gold Pair">LAT-G</span>`
-      : `<span class="lang-badge badge-btn" title="Gold Reference">${esc((d.sub_lang || "btn").toUpperCase())}</span>`;
+      : `<span class="lang-badge badge-btn" title="${esc(d.lang.toUpperCase())}">${esc(d.lang.toUpperCase())}</span>`;
     const arTranslit = d.ar_translit ? `<span class="ar-translit">${esc(d.ar_translit)}</span>` : "";
     const tgtIpa     = d.tgt_ipa     ? `<span class="tgt-ipa">${esc(d.tgt_ipa)}</span>`         : "";
 
@@ -1150,7 +1101,7 @@ function changePage(delta) {
 
 /* ─── Export ─────────────────────────────────────────────────────────────────  */
 function exportCSV() {
-  const cols = ["ar","tgt","lang","sub_lang","score","method","ar_def","ar_translit","tgt_ipa","tgt_gloss","reasoning","model"];
+  const cols = ["ar","tgt","lang","score","method","ar_def","ar_translit","tgt_ipa","tgt_gloss","reasoning","model"];
   const header = cols.join(",") + "\n";
   const rows = filtered.map(d =>
     cols.map(c => {
