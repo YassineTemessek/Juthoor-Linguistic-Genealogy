@@ -17,6 +17,38 @@ For each pair, ask THREE questions:
 2. Does the CONCEPTUAL CORE (mafahim) connect, even if dictionaries don't show it? → mafahim_deep
 3. Could the Arabic meaning have evolved into the {LANG_NAME} meaning through metaphor, specialization, or generalization? → combined
 
+## POLYSEMY RULE
+Arabic roots typically have 3-10 distinct meanings. Before scoring, mentally expand the Arabic root to ALL its known meanings. The connection often lies in a RARE or ARCHAIC meaning, not the common one.
+
+Example: علم = (1) knowledge (2) sign/flag/mark (3) upper lip (4) mountain
+  - semiology uses meaning #2 (sign), not #1 (knowledge)
+Example: كي = (1) cauterization (2) branding/marking → ink uses meaning #2
+
+Do NOT score only against the first definition given. Check all semantic layers.
+
+## MULTI-STEP CHAINS
+Trace etymological paths up to 5 steps through intermediate languages. Arabic → Aramaic → Greek → Latin → French → English is a common path.
+
+Example: جُبّة (cloak) → Latin cappa (cape) → capella (short cloak/shrine) → chapel (4 steps)
+Example: بصر (sight) → Latin invidia (looking against) → envy (evil eye concept, 3 steps)
+
+Do NOT limit yourself to 1-2 steps. Real etymologies often need 3-5 steps. If you can trace a plausible multi-step chain, score accordingly (0.6-0.75 range).
+
+## PREFIX MATCHING
+Arabic functional words can correspond to Greek/Latin prefixes:
+- Arabic بدون (without) = Greek ἀ-/ἀν- = Latin in-/im-/dis-
+- Arabic فوق (above) = Greek ὑπέρ- = Latin super-
+- Arabic تحت (under) = Greek ὑπο- = Latin sub-
+
+When scoring, strip negation/location prefixes and compare the ROOT forms. A match at the root level with prefix correspondence is a valid cognate pattern.
+
+## DERIVATION FAMILIES
+If the target word belongs to a word family, check whether the Arabic root matches ANY member of that family:
+- "chapel, chaplain, chaperon, cap, cape" all derive from Latin cappa
+- Arabic جُبّة matches cappa (cloak), therefore it matches the whole family
+
+When you see a target word, mentally expand it to its broader derivation family before scoring.
+
 ## SEMANTIC DRIFT PATTERNS TO LOOK FOR
 - Body part → tool/vessel (يد hand → handle)
 - Action → result of action (كتب to write → book/scripture)
@@ -25,6 +57,7 @@ For each pair, ask THREE questions:
 - Object → quality (ذهب gold → to go/depart — shared root concept of "departure/precious")
 - Both sides of a concept (إثم sin ↔ θέμις divine law = moral order)
 - Agent → place/instrument (حكم to judge → tribunal)
+- Negation cognates (أفنى perish ↔ ἄφθιτον imperishable — OPPOSITE but same root concept)
 
 ## PROPER NOUNS
 Greek/Latin proper nouns CAN be meaningful:
@@ -37,18 +70,40 @@ Greek/Latin proper nouns CAN be meaningful:
 - 0.1 = same very broad field, no specific link
 - 0.2-0.3 = faint conceptual overlap, speculative
 - 0.4-0.5 = plausible semantic path, needs evidence
-- 0.6-0.7 = clear semantic chain with 1-2 logical steps
+- 0.6-0.7 = clear semantic chain with 1-2 logical steps, OR multi-step chain (3-5 steps) that is plausible
 - 0.8-0.9 = strong direct or near-direct meaning match
 - 0.95+ = near-identical meaning
 
-## CALIBRATION EXAMPLES
+## CALIBRATION ANCHORS (confirmed discoveries)
+Direct loanwords and near-certain:
+- اصطبل → στάβλον/stabulum = 0.98 (stable, direct loanword)
+- ساسم → σήσαμον/sesamum = 0.98 (sesame)
+- قمص → καμίσιον = 0.95 (shirt)
+- بلسم → βάλσαμον = 0.95 (balsam)
+- البربط → βάρβιτον = 0.97 (lute)
+
+Strong semantic matches:
+- الصندل → σάνδαλον = 0.85 (sandalwood)
+- القرمد → κεραμίδιον = 0.90 (ceramic)
+- الفرات → Εὐφράτας = 0.90 (Euphrates)
+- درهم → δραχμαῖς = 0.90 (drachma)
+- سبت → σάββατον = 0.90 (Sabbath)
+- نفت → νάφθα = 0.90 (naphtha)
 - شرب (to drink, suck in) → absorb = 0.85 (both: DRAW LIQUID INWARD)
 - كلب (dog, biting/rabid) → canine = 0.95 (direct: DOG)
 - غور (deep hollow, cave) → gorge = 0.80 (both: DEEP PENETRATING SPACE)
 - مرج (to mix, mingle) → merge = 0.85 (both: BLENDING INTO ONE)
-- اثم (sin, scrupulousness) → Θέμις (divine law) = 0.65 (MORAL ORDER: one violates, one IS the law)
+
+Conceptual and cross-language chains (score carefully — these ARE valid):
+- اثم (sin, scrupulousness) → Θέμις (divine law) = 0.65 (MORAL ORDER: one violates, one IS the law — BOTH SIDES of concept)
+- افثي → ἄφθιτον = 0.65 (perish ↔ imperishable — NEGATION cognate, same root concept)
+- جُبّة → chapel = 0.70 (cloak → capella → chapel — MULTI-STEP chain, 4 steps)
+- بصر → envy = 0.65 (sight → evil eye → envy — CROSS-LANGUAGE semantic drift)
+- علم → semiology = 0.65 (sign/flag meaning #2, not knowledge #1 — POLYSEMY)
 - اتقن (to master, nature/innate) → τέκνον (child/offspring) = 0.40 (NATURE/INNATE: faint conceptual bridge)
 - اتمهل (became tall and strong) → θέμεθλα (foundations) = 0.55 (STRUCTURAL FIRMNESS)
+
+Low scores (correctly rejected):
 - خمر (wine, ferment) → cream = 0.10 (too remote: different substances)
 - random Arabic word → Greek proper noun = 0.0
 

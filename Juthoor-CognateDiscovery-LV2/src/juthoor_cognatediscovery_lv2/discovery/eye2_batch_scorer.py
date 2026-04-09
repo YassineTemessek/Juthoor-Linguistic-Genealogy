@@ -13,6 +13,11 @@ from typing import Any
 _MODEL_MAP = {"sonnet": "claude-sonnet-4-6", "opus": "claude-opus-4-6"}
 _LANG_NAMES = {"lat": "Latin", "grc": "Greek", "eng": "English", "deu": "German", "fra": "French", "spa": "Spanish"}
 
+_IPA_GLOSS_PATHS = {
+    "grc": "data/processed/greek_ipa_gloss_lookup.json",
+    "lat": "data/processed/latin_ipa_gloss_lookup.json",
+}
+
 def _lv2_root() -> Path:
     return Path(__file__).resolve().parents[3]
 
@@ -24,6 +29,59 @@ def _default_profiles_path() -> Path:
 
 def _default_lv0_lexemes_path() -> Path:
     return _repo_root() / "Juthoor-DataCore-LV0" / "data" / "processed" / "arabic" / "classical" / "lexemes.jsonl"
+
+# -- Target IPA+gloss lookup (lazy, per lang) --------------------------------
+
+_target_glosses_cache: dict[str, dict[str, dict[str, str]]] = {}
+
+def _load_target_glosses(lang: str) -> dict[str, dict[str, str]]:
+    """Load IPA+gloss lookup for the target language. Returns {lemma: {ipa, gloss}}."""
+    global _target_glosses_cache
+    if lang in _target_glosses_cache:
+        return _target_glosses_cache[lang]
+    _target_glosses_cache[lang] = {}
+    rel_path = _IPA_GLOSS_PATHS.get(lang)
+    if rel_path is None:
+        print(f"[warn] No IPA gloss path configured for lang={lang!r}", file=sys.stderr)
+        return _target_glosses_cache[lang]
+    full_path = _lv2_root() / rel_path
+    if not full_path.exists():
+        print(f"[warn] Target gloss file not found: {full_path}", file=sys.stderr)
+        return _target_glosses_cache[lang]
+    with open(full_path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    # Normalise: expect either {lemma: {ipa, gloss}} or {lemma: {...}} — keep as-is
+    _target_glosses_cache[lang] = {k: {"ipa": v.get("ipa", ""), "gloss": v.get("gloss", "")} for k, v in data.items() if isinstance(v, dict)}
+    print(f"[info] Loaded {len(_target_glosses_cache[lang])} target glosses for lang={lang!r}.", file=sys.stderr)
+    return _target_glosses_cache[lang]
+
+# -- Deep Arabic glossary (lazy) ---------------------------------------------
+
+_deep_glossary_cache: dict[str, Any] | None = None
+
+def _load_deep_glossary() -> dict[str, Any]:
+    """Load arabic_deep_glossary.jsonl if it exists. Returns {root_norm: {...}}."""
+    global _deep_glossary_cache
+    if _deep_glossary_cache is not None:
+        return _deep_glossary_cache
+    _deep_glossary_cache = {}
+    path = _lv2_root() / "data" / "enriched" / "arabic_deep_glossary.jsonl"
+    if not path.exists():
+        return _deep_glossary_cache
+    with open(path, encoding="utf-8") as fh:
+        for raw in fh:
+            raw = raw.strip()
+            if not raw:
+                continue
+            try:
+                obj = json.loads(raw)
+            except json.JSONDecodeError:
+                continue
+            root = (obj.get("root_norm") or "").strip()
+            if root:
+                _deep_glossary_cache[root] = obj
+    print(f"[info] Loaded {len(_deep_glossary_cache)} entries from deep glossary.", file=sys.stderr)
+    return _deep_glossary_cache
 
 # -- Arabic semantic profiles (lazy) ----------------------------------------
 
@@ -133,6 +191,8 @@ def _build_prompt(pairs: list[dict[str, Any]], lang: str) -> str:
         ara_m = (f"masadiq: {p['masadiq_gloss']}" if p.get("masadiq_gloss") else "(no gloss)")
         if p.get("mafahim_gloss"):
             ara_m += f" | mafahim: {p['mafahim_gloss']}"
+        if p.get("arabic_meanings_expanded"):
+            ara_m += " | ALL MEANINGS: " + "; ".join(m["sense"] for m in p["arabic_meanings_expanded"][:7] if isinstance(m, dict) and m.get("sense"))
         tgt_p = f' ({p["target_meaning"]})' if p.get("target_meaning") else ""
         lines.append(f'{i}. Arabic "{p["arabic_root"]}" ({ara_m}) <-> {lang_name} "{p["target_lemma"]}"{tgt_p}')
     n = len(pairs)
@@ -202,6 +262,23 @@ def score_candidates(candidates: list[dict[str, Any]], profiles: dict[str, dict[
             enriched += 1
 
     print(f"[info] {enriched}/{len(to_score)} pairs enriched with Arabic meaning ({enriched/max(1,len(to_score))*100:.1f}%).", file=sys.stderr)
+
+    # Enrich with target-language glosses
+    target_glosses = _load_target_glosses(lang)
+    deep = _load_deep_glossary()
+    tgt_enriched = 0
+    deep_enriched = 0
+    for c in to_score:
+        tgt_entry = target_glosses.get(c["target_lemma"], {})
+        c["target_meaning"] = tgt_entry.get("gloss", "")
+        if c["target_meaning"]:
+            tgt_enriched += 1
+        expanded = deep.get(c["arabic_root"], {}).get("meanings", [])
+        c["arabic_meanings_expanded"] = expanded
+        if expanded:
+            deep_enriched += 1
+    print(f"[info] {tgt_enriched} pairs with target meaning, {deep_enriched} with deep glossary.", file=sys.stderr)
+
     print(f"[info] Scoring {len(to_score)} pairs in batches of {batch_size}.", file=sys.stderr)
 
     if dry_run:
