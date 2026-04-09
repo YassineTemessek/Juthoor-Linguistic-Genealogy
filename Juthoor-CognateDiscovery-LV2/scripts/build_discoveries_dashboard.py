@@ -114,6 +114,55 @@ def load_discoveries(ipa_grc: dict, ipa_lat: dict, ar_lookup: dict) -> list:
             file=sys.stderr,
         )
 
+    # ── Beyond the Name gold reference pairs ───────────────────────────────────
+    btn_path = LV2 / "outputs" / "eye2_final_beyond_name.jsonl"
+    if btn_path.exists():
+        btn_count = 0
+        ar_hits_btn = 0
+        with open(btn_path, encoding="utf-8") as fh:
+            for line in fh:
+                if not line.strip():
+                    continue
+                r = json.loads(line)
+                if r.get("semantic_score", 0) < 0.3:
+                    continue
+
+                ar     = r.get("source_lemma", "")
+                tgt    = r.get("target_lemma", "")
+                method = (r.get("method", "weak") or "weak").strip()
+
+                # Arabic definition enrichment (no IPA map for BTN)
+                ar_def      = ""
+                ar_translit = ""
+                if ar in ar_lookup:
+                    ar_def      = ar_lookup[ar]["def"]
+                    ar_translit = ar_lookup[ar]["translit"]
+                    ar_hits_btn += 1
+
+                records.append({
+                    "ar":          ar,
+                    "tgt":         tgt,
+                    "score":       round(r.get("semantic_score", 0), 3),
+                    "lang":        "btn",
+                    "sub_lang":    (r.get("target_lang") or "").strip(),
+                    "method":      method,
+                    "reasoning":   (r.get("reasoning", "") or "").strip(),
+                    "model":       (r.get("model") or "unknown").strip(),
+                    "tgt_ipa":     "",
+                    "tgt_gloss":   "",
+                    "ar_def":      ar_def[:160] if ar_def else "",
+                    "ar_translit": ar_translit,
+                })
+                btn_count += 1
+
+        ar_pct_btn = f"{100*ar_hits_btn/btn_count:.1f}%" if btn_count else "n/a"
+        print(
+            f"[btn] {btn_count} records  |  AR def coverage: {ar_pct_btn}",
+            file=sys.stderr,
+        )
+    else:
+        print(f"[warn] {btn_path} not found, skipping BTN", file=sys.stderr)
+
     records.sort(key=lambda x: -x["score"])
     return records
 
@@ -151,6 +200,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --score-lo-bg:  #e9ecef; --score-lo-text:  #495057;
   --badge-grc-bg: #cce5ff; --badge-grc-text: #004085;
   --badge-lat-bg: #f8d7da; --badge-lat-text: #721c24;
+  --badge-btn-bg: #fef3c7; --badge-btn-text: #92400e;
+  --chart-btn: #d4a017;
+  --stat-btn-color: #b07d10;
   --method-masadiq-bg:  #d1ecf1; --method-masadiq-text:  #0c5460;
   --method-mafahim-bg:  #e2d9f3; --method-mafahim-text:  #4a1d7c;
   --method-combined-bg: #fce8d5; --method-combined-text: #8a3200;
@@ -182,6 +234,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --score-lo-bg:  #e8dcc2; --score-lo-text:  #5c4827;
   --badge-grc-bg: #b3d9ff; --badge-grc-text: #003366;
   --badge-lat-bg: #ffd0d0; --badge-lat-text: #660000;
+  --badge-btn-bg: #fde68a; --badge-btn-text: #78350f;
+  --chart-btn: #d4a017;
+  --stat-btn-color: #b07d10;
   --method-masadiq-bg:  #b2ebf2; --method-masadiq-text:  #00363a;
   --method-mafahim-bg:  #d7bdf7; --method-mafahim-text:  #2d0060;
   --method-combined-bg: #ffd9b0; --method-combined-text: #7a2200;
@@ -213,6 +268,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --score-lo-bg:  #31324400; --score-lo-text:  #707080;
   --badge-grc-bg: #1a2a50; --badge-grc-text: #80b0ff;
   --badge-lat-bg: #3a1a1a; --badge-lat-text: #ff9080;
+  --badge-btn-bg: #3a2800; --badge-btn-text: #f6c842;
+  --chart-btn: #d4a017;
+  --stat-btn-color: #f6c842;
   --method-masadiq-bg:  #0c2e36; --method-masadiq-text:  #5ecfde;
   --method-mafahim-bg:  #2a1a44; --method-mafahim-text:  #c090ff;
   --method-combined-bg: #321a0a; --method-combined-text: #ffaa60;
@@ -306,6 +364,7 @@ header {
 }
 .stat-grc .stat-value  { color: #1d6fb5; }
 .stat-lat .stat-value  { color: #c0392b; }
+.stat-btn .stat-value  { color: var(--stat-btn-color, #b07d10); }
 .stat-hi  .stat-value  { color: #1e7e34; }
 .stat-med .stat-value  { color: #d08000; }
 
@@ -434,6 +493,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
 }
 .chart-bar-grc { background: var(--chart-grc); height: 100%; transition: width 0.25s; }
 .chart-bar-lat { background: var(--chart-lat); height: 100%; transition: width 0.25s; }
+.chart-bar-btn { background: var(--chart-btn); height: 100%; transition: width 0.25s; }
 .chart-count {
   font-size: 0.68rem;
   color: var(--text-muted);
@@ -584,6 +644,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
 }
 .badge-grc { background: var(--badge-grc-bg); color: var(--badge-grc-text); }
 .badge-lat { background: var(--badge-lat-bg); color: var(--badge-lat-text); }
+.badge-btn { background: var(--badge-btn-bg); color: var(--badge-btn-text); }
 
 /* ── Method badge ── */
 .method-badge {
@@ -654,7 +715,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
 <header>
   <div class="header-left">
     <h1>Juthoor LV2 &mdash; Cognate Discoveries</h1>
-    <p>Arabic &harr; Greek &amp; Latin</p>
+    <p>Arabic &harr; Greek, Latin &amp; Gold Reference Pairs</p>
   </div>
   <div class="theme-switcher">
     <button class="theme-btn active" data-t="light"  onclick="setTheme('light')">Light</button>
@@ -676,6 +737,10 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
     <div class="stat-label">Latin</div>
     <div class="stat-value" id="stat-lat">&mdash;</div>
   </div>
+  <div class="stat-card stat-btn">
+    <div class="stat-label">Gold Ref</div>
+    <div class="stat-value" id="stat-btn">&mdash;</div>
+  </div>
   <div class="stat-card stat-hi">
     <div class="stat-label">Score &ge;0.8</div>
     <div class="stat-value" id="stat-hi">&mdash;</div>
@@ -693,6 +758,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
   <button class="chip"        data-chip="hidden"      onclick="setChip(this)">Hidden Cognates</button>
   <button class="chip"        data-chip="grc"         onclick="setChip(this)">Greek</button>
   <button class="chip"        data-chip="lat"         onclick="setChip(this)">Latin</button>
+  <button class="chip"        data-chip="btn"         onclick="setChip(this)" style="border-color:#d4a017;color:#92400e;">Gold Reference</button>
 </div>
 
 <div id="filter-bar">
@@ -725,6 +791,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
   <div class="chart-legend" style="font-size:0.72rem; color:var(--text-muted); margin-top:0.3rem;">
     <span><span class="legend-dot" style="background:var(--chart-grc)"></span>Greek</span>
     <span><span class="legend-dot" style="background:var(--chart-lat)"></span>Latin</span>
+    <span><span class="legend-dot" style="background:var(--chart-btn)"></span>Gold Ref</span>
   </div>
 </div>
 
@@ -825,7 +892,7 @@ function setChip(el) {
     mSel.value = "masadiq_direct";
   } else if (activeChip === "hidden") {
     mSel.value = "mafahim_deep";
-  } else if (activeChip === "grc" || activeChip === "lat") {
+  } else if (activeChip === "grc" || activeChip === "lat" || activeChip === "btn") {
     mSel.value = "";
   } else {
     /* all — reset method filter if it was set by a chip */
@@ -850,6 +917,7 @@ function applyFilters() {
     if (method && d.method !== method) return false;
     if (chip === "grc" && d.lang !== "grc") return false;
     if (chip === "lat" && d.lang !== "lat") return false;
+    if (chip === "btn" && d.lang !== "btn") return false;
     if (chip === "direct"  && d.method !== "masadiq_direct") return false;
     if (chip === "hidden"  && d.method !== "mafahim_deep")   return false;
     if (search) {
@@ -901,11 +969,13 @@ function updateStats() {
   const total = filtered.length;
   const grcN  = filtered.filter(d => d.lang === "grc").length;
   const latN  = filtered.filter(d => d.lang === "lat").length;
+  const btnN  = filtered.filter(d => d.lang === "btn").length;
   const hiN   = filtered.filter(d => d.score >= 0.8).length;
   const medN  = filtered.filter(d => d.score >= 0.6).length;
   document.getElementById("stat-total").textContent = total.toLocaleString();
   document.getElementById("stat-grc").textContent   = grcN.toLocaleString();
   document.getElementById("stat-lat").textContent   = latN.toLocaleString();
+  document.getElementById("stat-btn").textContent   = btnN.toLocaleString();
   document.getElementById("stat-hi").textContent    = hiN.toLocaleString();
   document.getElementById("stat-med").textContent   = medN.toLocaleString();
 }
@@ -919,17 +989,20 @@ function updateChart() {
   const counts = BANDS.map(([lo, hi]) => ({
     grc: filtered.filter(d => d.lang==="grc" && d.score>=lo && d.score<hi).length,
     lat: filtered.filter(d => d.lang==="lat" && d.score>=lo && d.score<hi).length,
+    btn: filtered.filter(d => d.lang==="btn" && d.score>=lo && d.score<hi).length,
   }));
-  const maxN = Math.max(...counts.map(c => c.grc + c.lat), 1);
+  const maxN = Math.max(...counts.map(c => c.grc + c.lat + c.btn), 1);
   container.innerHTML = counts.map((c, i) => {
     const gW = ((c.grc / maxN) * 100).toFixed(1);
     const lW = ((c.lat / maxN) * 100).toFixed(1);
-    const tot = c.grc + c.lat;
+    const bW = ((c.btn / maxN) * 100).toFixed(1);
+    const tot = c.grc + c.lat + c.btn;
     return `<div class="chart-row">
       <span class="chart-band-label">${BAND_LABELS[i]}</span>
-      <div class="chart-bars" title="Greek: ${c.grc}, Latin: ${c.lat}">
+      <div class="chart-bars" title="Greek: ${c.grc}, Latin: ${c.lat}, Gold Ref: ${c.btn}">
         <div class="chart-bar-grc" style="width:${gW}%"></div>
         <div class="chart-bar-lat" style="width:${lW}%"></div>
+        <div class="chart-bar-btn" style="width:${bW}%"></div>
       </div>
       <span class="chart-count">${tot > 0 ? tot.toLocaleString() : ""}</span>
     </div>`;
@@ -964,7 +1037,9 @@ function renderPage() {
     const gi = start + idx;  /* global index into filtered */
     const langBadge = d.lang === "grc"
       ? `<span class="lang-badge badge-grc">GRC</span>`
-      : `<span class="lang-badge badge-lat">LAT</span>`;
+      : d.lang === "lat"
+      ? `<span class="lang-badge badge-lat">LAT</span>`
+      : `<span class="lang-badge badge-btn" title="Gold Reference">${esc((d.sub_lang || "btn").toUpperCase())}</span>`;
     const arTranslit = d.ar_translit ? `<span class="ar-translit">${esc(d.ar_translit)}</span>` : "";
     const tgtIpa     = d.tgt_ipa     ? `<span class="tgt-ipa">${esc(d.tgt_ipa)}</span>`         : "";
 
@@ -1023,7 +1098,7 @@ function changePage(delta) {
 
 /* ─── Export ─────────────────────────────────────────────────────────────────  */
 function exportCSV() {
-  const cols = ["ar","tgt","lang","score","method","ar_def","ar_translit","tgt_ipa","tgt_gloss","reasoning","model"];
+  const cols = ["ar","tgt","lang","sub_lang","score","method","ar_def","ar_translit","tgt_ipa","tgt_gloss","reasoning","model"];
   const header = cols.join(",") + "\n";
   const rows = filtered.map(d =>
     cols.map(c => {
