@@ -163,6 +163,53 @@ def load_discoveries(ipa_grc: dict, ipa_lat: dict, ar_lookup: dict) -> list:
     else:
         print(f"[warn] {btn_path} not found, skipping BTN", file=sys.stderr)
 
+    # ── Original Eye 2 gold pair scores (English + Latin, sessions 8-10) ──────
+    for gold_lang, gold_fname, gold_tag in [
+        ("eng", "eye2_eng_semantic_scores.jsonl", "eng"),
+        ("lat", "eye2_semantic_scores.jsonl", "lat-gold"),
+    ]:
+        gold_path = LV2 / "data" / "llm_annotations" / gold_fname
+        if not gold_path.exists():
+            print(f"[warn] {gold_path} not found, skipping", file=sys.stderr)
+            continue
+        gold_count = 0
+        seen = {(r["ar"], r["tgt"]) for r in records}  # avoid duplicates
+        with open(gold_path, encoding="utf-8") as fh:
+            for line in fh:
+                if not line.strip():
+                    continue
+                r = json.loads(line)
+                if r.get("semantic_score", 0) < 0.3:
+                    continue
+                ar = r.get("source_lemma", "")
+                tgt = r.get("target_lemma", "")
+                if (ar, tgt) in seen:
+                    continue
+                seen.add((ar, tgt))
+
+                method = (r.get("method", "weak") or "weak").strip()
+                ar_def = ""
+                ar_translit = ""
+                if ar in ar_lookup:
+                    ar_def = ar_lookup[ar]["def"]
+                    ar_translit = ar_lookup[ar]["translit"]
+
+                records.append({
+                    "ar":          ar,
+                    "tgt":         tgt,
+                    "score":       round(r.get("semantic_score", 0), 3),
+                    "lang":        gold_tag,
+                    "method":      method,
+                    "reasoning":   (r.get("reasoning", "") or r.get("path", "") or "").strip()[:200],
+                    "model":       (r.get("annotator", "") or "claude").strip(),
+                    "tgt_ipa":     "",
+                    "tgt_gloss":   "",
+                    "ar_def":      ar_def[:160] if ar_def else "",
+                    "ar_translit": ar_translit,
+                })
+                gold_count += 1
+        print(f"[{gold_tag}] {gold_count} gold pair records added", file=sys.stderr)
+
     records.sort(key=lambda x: -x["score"])
     return records
 
@@ -759,6 +806,7 @@ select:focus, #search-input:focus { border-color: #2d6a4f; }
   <button class="chip"        data-chip="grc"         onclick="setChip(this)">Greek</button>
   <button class="chip"        data-chip="lat"         onclick="setChip(this)">Latin</button>
   <button class="chip"        data-chip="btn"         onclick="setChip(this)" style="border-color:#d4a017;color:#92400e;">Gold Reference</button>
+  <button class="chip"        data-chip="eng"         onclick="setChip(this)" style="border-color:#059669;color:#065f46;">English</button>
 </div>
 
 <div id="filter-bar">
@@ -918,6 +966,7 @@ function applyFilters() {
     if (chip === "grc" && d.lang !== "grc") return false;
     if (chip === "lat" && d.lang !== "lat") return false;
     if (chip === "btn" && d.lang !== "btn") return false;
+    if (chip === "eng" && d.lang !== "eng" && d.lang !== "lat-gold") return false;
     if (chip === "direct"  && d.method !== "masadiq_direct") return false;
     if (chip === "hidden"  && d.method !== "mafahim_deep")   return false;
     if (search) {
@@ -970,6 +1019,7 @@ function updateStats() {
   const grcN  = filtered.filter(d => d.lang === "grc").length;
   const latN  = filtered.filter(d => d.lang === "lat").length;
   const btnN  = filtered.filter(d => d.lang === "btn").length;
+  const engN  = filtered.filter(d => d.lang === "eng" || d.lang === "lat-gold").length;
   const hiN   = filtered.filter(d => d.score >= 0.8).length;
   const medN  = filtered.filter(d => d.score >= 0.6).length;
   document.getElementById("stat-total").textContent = total.toLocaleString();
@@ -1039,6 +1089,8 @@ function renderPage() {
       ? `<span class="lang-badge badge-grc">GRC</span>`
       : d.lang === "lat"
       ? `<span class="lang-badge badge-lat">LAT</span>`
+      : d.lang === "eng" ? `<span class="lang-badge" style="background:#d1fae5;color:#065f46" title="Arabic-English">ENG</span>`
+      : d.lang === "lat-gold" ? `<span class="lang-badge" style="background:#fce7f3;color:#9d174d" title="Latin Gold Pair">LAT-G</span>`
       : `<span class="lang-badge badge-btn" title="Gold Reference">${esc((d.sub_lang || "btn").toUpperCase())}</span>`;
     const arTranslit = d.ar_translit ? `<span class="ar-translit">${esc(d.ar_translit)}</span>` : "";
     const tgtIpa     = d.tgt_ipa     ? `<span class="tgt-ipa">${esc(d.tgt_ipa)}</span>`         : "";
