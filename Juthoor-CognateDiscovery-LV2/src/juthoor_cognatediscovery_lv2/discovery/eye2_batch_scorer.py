@@ -184,6 +184,28 @@ def load_scored_pairs(output_path: Path) -> set[tuple[str, str]]:
 
 # -- LLM helpers -------------------------------------------------------------
 
+_prompt_template_cache: str | None = None
+
+
+def _load_prompt_template() -> str:
+    """Load the V2 prompt template from config/eye2_prompt_template.txt."""
+    global _prompt_template_cache
+    if _prompt_template_cache is not None:
+        return _prompt_template_cache
+    template_path = _lv2_root() / "config" / "eye2_prompt_template.txt"
+    if template_path.exists():
+        _prompt_template_cache = template_path.read_text(encoding="utf-8")
+    else:
+        # Minimal fallback if template file is missing
+        _prompt_template_cache = (
+            "You are scoring semantic connections between Arabic words and {LANG_NAME} words.\n"
+            "Score 0.0-1.0. Method: masadiq_direct, mafahim_deep, combined, weak.\n\n"
+            "{TASK_INSTRUCTION}\n"
+            "Return ONLY a JSON array, no markdown fences."
+        )
+    return _prompt_template_cache
+
+
 def _build_prompt(pairs: list[dict[str, Any]], lang: str) -> str:
     lang_name = _LANG_NAMES.get(lang, lang.upper())
     lines: list[str] = []
@@ -196,19 +218,15 @@ def _build_prompt(pairs: list[dict[str, Any]], lang: str) -> str:
         tgt_p = f' ({p["target_meaning"]})' if p.get("target_meaning") else ""
         lines.append(f'{i}. Arabic "{p["arabic_root"]}" ({ara_m}) <-> {lang_name} "{p["target_lemma"]}"{tgt_p}')
     n = len(pairs)
-    return (
-        f"You are scoring semantic connections between Arabic words and {lang_name} words for cognate discovery.\n\n"
-        "Scoring rules:\n"
-        "- Use masadiq (dictionary meaning) FIRST; only use mafahim for hidden links\n"
-        "- The Arabic meaning may be in Arabic script — read it directly\n"
-        "- You know the {lang_name} vocabulary — use your knowledge of the target word's meaning\n"
-        "- Score 0.0-1.0: 0.0=no connection, 0.5=weak, 0.8+=strong, 0.95+=near-certain\n"
-        '- method: "masadiq_direct" | "mafahim_deep" | "combined" | "weak" (score<0.3)\n\n'
-        "Pairs:\n" + "\n".join(lines) +
-        f'\n\nReturn a JSON array of exactly {n} objects: '
+
+    task_instruction = (
+        "Score these pairs:\n" + "\n".join(lines) +
+        f"\n\nReturn a JSON array of exactly {n} objects: "
         '[{"pair_index":0,"score":0.85,"reasoning":"...","method":"masadiq_direct"},...]\n'
-        "ONLY the JSON array, no markdown."
     )
+
+    template = _load_prompt_template()
+    return template.replace("{LANG_NAME}", lang_name).replace("{TASK_INSTRUCTION}", task_instruction)
 
 def _call_llm(client: Any, model_id: str, prompt: str, retries: int = 3) -> list[dict[str, Any]]:
     """Call Anthropic API; parse JSON array; retry with backoff on failure."""
