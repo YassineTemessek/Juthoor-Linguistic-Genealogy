@@ -92,14 +92,16 @@ _HAMZA_TR = str.maketrans({
     "أ": "ا", "إ": "ا", "آ": "ا", "ٱ": "ا",
     "ؤ": "و", "ئ": "ي", "ء": "ا",
 })
+# Reject roots containing non-Arabic chars (parentheses, Latin, digits, etc.)
+_GARBAGE_ROOT_RE = _re.compile(r"[a-zA-Z0-9()\[\]{}<>\"؛;,]")
 
 
 def _norm_arabic(text: str) -> str:
     text = _ARABIC_DIACRITICS_RE.sub("", text)
     text = text.translate(_HAMZA_TR).strip()
     # Strip definite article ال if present at start
-    # Only strip if the remaining root has at least 3 letters (avoids short words)
-    if text.startswith("ال") and len(text) >= 5:
+    # Only strip if there are at least 2 letters after ال (minimum valid root)
+    if text.startswith("ال") and len(text) >= 4:
         text = text[2:]
     return text
 
@@ -173,6 +175,10 @@ def load_arabic_roots(
             if not arabic_root:
                 continue
 
+            # Reject garbage roots (parens, Latin chars, etc.)
+            if _GARBAGE_ROOT_RE.search(arabic_root):
+                continue
+
             # Normalize the root
             arabic_root_norm = _norm_arabic(arabic_root)
             if len(arabic_root_norm) < 2:
@@ -200,8 +206,9 @@ def load_arabic_roots(
                 continue
 
             roots.append({
-                "arabic_root": arabic_root,
+                "arabic_root": arabic_root_norm,
                 "arabic_root_norm": arabic_root_norm,
+                "arabic_root_original": arabic_root,
                 "ar_skel": ar_skel,
                 "primary_latin": primary_latin,
                 "translit": str(row.get("translit", "") or ""),
@@ -860,6 +867,23 @@ def main() -> None:
 
     # ---- Write output ----
     print(f"\nWriting {len(matches)} matches to {output_path} ...", file=sys.stderr)
+    # Sanity check: catch regressions of the ال normalization bug. We expect
+    # almost zero ال prefixes in the stored arabic_root field (a few len<4
+    # residuals like "الا" are acceptable).
+    al_residuals = sum(1 for m in matches if m.get("arabic_root", "").startswith("ال"))
+    if al_residuals > 0:
+        residual_pct = al_residuals / max(1, len(matches)) * 100
+        if residual_pct > 1.0:  # more than 1% = regression, not residual noise
+            print(
+                f"  WARNING: {al_residuals:,} matches ({residual_pct:.2f}%) "
+                f"have arabic_root starting with ال — possible normalization regression",
+                file=sys.stderr,
+            )
+        else:
+            print(
+                f"  note: {al_residuals} len<4 ال-prefix residuals (expected)",
+                file=sys.stderr,
+            )
     with open(output_path, "w", encoding="utf-8") as f:
         for m in matches:
             f.write(json.dumps(m, ensure_ascii=False) + "\n")

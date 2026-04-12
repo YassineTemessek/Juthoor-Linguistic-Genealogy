@@ -5,10 +5,34 @@ CLI: python -m juthoor_cognatediscovery_lv2.discovery.eye2_batch_scorer \\
 """
 from __future__ import annotations
 
-import argparse, json, os, sys, time
+import argparse, json, os, re, sys, time
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
+
+# Arabic normalization (mirrors run_eye1_full_scale._norm_arabic for symmetric
+# lookup — ensures profiles/LV0/deep-glossary keys match Eye 1 output keys).
+_ARABIC_DIACRITICS_RE = re.compile(r"[\u064B-\u065F\u0670\u0640]")
+_HAMZA_TR = str.maketrans({
+    "أ": "ا", "إ": "ا", "آ": "ا", "ٱ": "ا",
+    "ؤ": "و", "ئ": "ي", "ء": "ا",
+})
+
+
+def _norm_arabic_lookup(text: str) -> str:
+    """Normalize an Arabic string for dictionary lookup.
+
+    Mirrors run_eye1_full_scale._norm_arabic: strip diacritics, normalize
+    hamza variants, strip leading ال (if at least 2 letters remain).
+    """
+    if not text:
+        return text
+    text = _ARABIC_DIACRITICS_RE.sub("", text)
+    text = text.translate(_HAMZA_TR).strip()
+    if text.startswith("ال") and len(text) >= 4:
+        text = text[2:]
+    return text
+
 
 _MODEL_MAP = {"sonnet": "claude-sonnet-4-6", "opus": "claude-opus-4-6"}
 _LANG_NAMES = {"lat": "Latin", "grc": "Greek", "eng": "English", "deu": "German", "fra": "French", "spa": "Spanish"}
@@ -79,13 +103,53 @@ def _load_deep_glossary() -> dict[str, Any]:
                 continue
             root = (obj.get("root_norm") or "").strip()
             if root:
-                _deep_glossary_cache[root] = obj
+                key = _norm_arabic_lookup(root)
+                if key and key not in _deep_glossary_cache:
+                    _deep_glossary_cache[key] = obj
     print(f"[info] Loaded {len(_deep_glossary_cache)} entries from deep glossary.", file=sys.stderr)
     return _deep_glossary_cache
 
 # -- Arabic semantic profiles (lazy) ----------------------------------------
 
 _profiles_cache: dict[str, dict[str, str]] | None = None
+
+
+def _extract_masadiq_gloss(masadiq: Any) -> str:
+    """Extract a concise masadiq string from the nested profile structure.
+
+    Profile file stores masadiq as {short_gloss, definition, meaning_text}.
+    """
+    if not isinstance(masadiq, dict):
+        return str(masadiq).strip() if masadiq else ""
+    sg = (masadiq.get("short_gloss") or "").strip()
+    if sg:
+        return sg
+    defn = (masadiq.get("definition") or "").strip()
+    if defn:
+        return defn[:200] + ("\u2026" if len(defn) > 200 else "")
+    return (masadiq.get("meaning_text") or "").strip()
+
+
+def _extract_mafahim_gloss(mafahim: Any) -> str:
+    """Extract a concise mafahim (genome) string from the nested profile.
+
+    Profile file stores mafahim as {binary_field_gloss, axial_meaning,
+    letter_meanings: [...], quran_example}.
+    """
+    if not isinstance(mafahim, dict):
+        return str(mafahim).strip() if mafahim else ""
+    parts: list[str] = []
+    axial = (mafahim.get("axial_meaning") or "").strip()
+    if axial:
+        parts.append(f"CORE: {axial}")
+    letters = mafahim.get("letter_meanings") or []
+    if isinstance(letters, list) and letters:
+        parts.append("letters: " + "; ".join(str(l) for l in letters))
+    quran = (mafahim.get("quran_example") or "").strip()
+    if quran:
+        parts.append(f"quran: {quran[:100]}")
+    return " | ".join(parts)
+
 
 def _load_profiles(profiles_path: Path) -> dict[str, dict[str, str]]:
     global _profiles_cache
@@ -95,19 +159,40 @@ def _load_profiles(profiles_path: Path) -> dict[str, dict[str, str]]:
     if not profiles_path.exists():
         print(f"[warn] Arabic profiles not found: {profiles_path}", file=sys.stderr)
         return _profiles_cache
+    populated = 0
     with open(profiles_path, encoding="utf-8") as fh:
         for raw in fh:
             raw = raw.strip()
             if not raw:
                 continue
             obj = json.loads(raw)
-            lemma = obj.get("lemma", "").strip()
-            if lemma:
-                _profiles_cache[lemma] = {"masadiq_gloss": obj.get("masadiq_gloss", ""), "mafahim_gloss": obj.get("mafahim_gloss", "")}
-    print(f"[info] Loaded {len(_profiles_cache)} Arabic semantic profiles.", file=sys.stderr)
+            lemma = (obj.get("lemma") or "").strip()
+            if not lemma:
+                continue
+            key = _norm_arabic_lookup(lemma)
+            if not key:
+                continue
+            # Read actual nested dict fields (masadiq, mafahim) — NOT the
+            # non-existent masadiq_gloss/mafahim_gloss flat fields.
+            masadiq_str = _extract_masadiq_gloss(obj.get("masadiq") or {})
+            mafahim_str = _extract_mafahim_gloss(obj.get("mafahim") or {})
+            if masadiq_str or mafahim_str:
+                populated += 1
+            _profiles_cache[key] = {
+                "masadiq_gloss": masadiq_str,
+                "mafahim_gloss": mafahim_str,
+            }
+    print(
+        f"[info] Loaded {len(_profiles_cache)} Arabic semantic profiles "
+        f"({populated} with glosses).",
+        file=sys.stderr,
+    )
     return _profiles_cache
 
 # -- LV0 Arabic definitions (fallback for roots without profiles) -----------
+
+# Strip leading metadata prefixes from dictionary glosses: "(ء ب خَ)", "(K:)", "(و)"
+_LV0_PAREN_PREFIX_RE = re.compile(r"^\([^)]{1,20}\)\s*")
 
 _lv0_cache: dict[str, str] | None = None
 
@@ -136,8 +221,12 @@ def _load_lv0_definitions(lv0_path: Path | None = None) -> dict[str, str]:
                 continue
             root = (obj.get("root_norm") or "").strip()
             defn = (obj.get("short_gloss") or obj.get("definition") or "").strip()
-            if root and defn and root not in _lv0_cache:
-                _lv0_cache[root] = defn
+            # Strip leading dictionary metadata like "(ء ب خَ)" or "(K:)"
+            defn = _LV0_PAREN_PREFIX_RE.sub("", defn)
+            if root and defn:
+                key = _norm_arabic_lookup(root)
+                if key and key not in _lv0_cache:
+                    _lv0_cache[key] = defn
     print(f"[info] Loaded {len(_lv0_cache)} LV0 Arabic definitions (fallback).", file=sys.stderr)
     return _lv0_cache
 
@@ -267,15 +356,21 @@ def score_candidates(candidates: list[dict[str, Any]], profiles: dict[str, dict[
         print("[info] Nothing left to score.", file=sys.stderr); return 0
 
     # Enrich with Arabic meanings (profiles first, LV0 fallback)
+    # Cache a normalized lookup key per candidate — ensures profiles/LV0/deep
+    # glossary lookups hit regardless of residual ال or hamza variants.
+    for c in to_score:
+        c["_ar_key"] = _norm_arabic_lookup(c["arabic_root"])
+
     lv0_defs = _load_lv0_definitions()
     enriched = 0
     for c in to_score:
-        prof = profiles.get(c["arabic_root"], {})
+        ar_key = c["_ar_key"]
+        prof = profiles.get(ar_key, {})
         c["masadiq_gloss"] = prof.get("masadiq_gloss", "")
         c["mafahim_gloss"] = prof.get("mafahim_gloss", "")
         # Fallback: LV0 Arabic definition (Arabic text — LLM reads it natively)
         if not c["masadiq_gloss"] and not c["mafahim_gloss"]:
-            c["masadiq_gloss"] = lv0_defs.get(c["arabic_root"], "")
+            c["masadiq_gloss"] = lv0_defs.get(ar_key, "")
         if c["masadiq_gloss"] or c["mafahim_gloss"]:
             enriched += 1
 
@@ -291,7 +386,7 @@ def score_candidates(candidates: list[dict[str, Any]], profiles: dict[str, dict[
         c["target_meaning"] = tgt_entry.get("gloss", "")
         if c["target_meaning"]:
             tgt_enriched += 1
-        expanded = deep.get(c["arabic_root"], {}).get("meanings", [])
+        expanded = deep.get(c["_ar_key"], {}).get("meanings", [])
         c["arabic_meanings_expanded"] = expanded
         if expanded:
             deep_enriched += 1
