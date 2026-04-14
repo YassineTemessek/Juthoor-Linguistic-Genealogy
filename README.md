@@ -155,7 +155,6 @@ Juthoor-Linguistic-Genealogy/
 
 ## Documentation
 
-- **[Next Moves Plan](./docs/NEXT_MOVES_PLAN_APR2026.md)**: 7-phase roadmap for scaling to 10+ languages (Pro 20x).
 - **[LV1 Complete Overview](./docs/LV1_COMPLETE_OVERVIEW.md)**: Arabic genome and research-factory overview.
 - **[Data Flow Architecture](./docs/DATA_FLOW_ARCHITECTURE.md)**: Pipeline data flow and scoring architecture.
 - **[LV2 Benchmarks](./Juthoor-CognateDiscovery-LV2/resources/benchmarks/README.md)**: Evaluation assets and workflow.
