@@ -115,15 +115,19 @@ python Juthoor-CognateDiscovery-LV2/scripts/discovery/evaluate_gold_pairs_multil
 
 ## Supported Languages
 
-The discovery stack can query any language supported by the embedding backend, but the following languages currently have active LV0 data and benchmark usage:
-
-| Category | Languages |
-| :--- | :--- |
-| **Modern Semitic** | Arabic (`ara`), Hebrew (`heb`) |
-| **Classical/Ancient Semitic** | Quranic Arabic (`ar-qur`), Aramaic (`arc`) |
-| **Indo-Iranian** | Persian (`fa`) |
-| **Indo-European (Ancient)** | Latin (`lat`), Ancient Greek (`grc`) |
-| **Indo-European (Germanic)** | Modern English (`en`), Middle English (`enm`), Old English (`ang`) |
+| Category | In Pipeline | Queued (Wave 1-3) |
+| :--- | :--- | :--- |
+| **Semitic** | Arabic (`ara`), Quranic Arabic (`ar-qur`), Hebrew (`heb`), Aramaic (`arc`) | |
+| **Indo-Iranian** | Persian (`fa`) | |
+| **Hellenic** | Ancient Greek (`grc`) | |
+| **Italic** | Latin (`lat`) | |
+| **Germanic (West)** | Modern English (`en`), Middle English (`enm`), Old English (`ang`) | Old High German (`goh`) |
+| **Germanic (East)** | | Gothic (`got`) |
+| **Germanic (North)** | | Old Norse (`non`) |
+| **Celtic (Goidelic)** | | Old Irish (`sga`) |
+| **Celtic (Brythonic)** | | Welsh (`cy`) |
+| **Tocharian** | | Tocharian B (`txb`) |
+| **Anatolian** | | Hittite (special project) |
 
 ---
 
