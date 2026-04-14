@@ -166,6 +166,6 @@ Juthoor-Linguistic-Genealogy/
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE).
+This project is licensed under the MIT License with an attribution clause. Any use in publications, research, or derivative works must credit the author. See [LICENSE](./LICENSE).
 
 **Author:** Yassine Temessek
