@@ -1,11 +1,44 @@
 # Juthoor — Master Status Tracker
 **Purpose:** Single source of truth for resuming work after any interruption.
-**Last updated:** 2026-03-27 (MEGA SPRINT: 29 commits, 1069 tests, 47K-edge cognate graph, 10 corridor cards, LV3 theory bootstrap, 1889 gold pairs, reranker v3)
+**Last updated:** 2026-04-14
 
 ---
 
-## Active Plan: LV1 Phase 2-3 Scoring + Cross-Lingual (Claude + Codex)
-**Plan file:** `docs/plans/2026-03-23-lv1-phase2-3-orchestration.md`
+## Active Plan: Next Moves (Pro 20x)
+**Plan file:** `docs/NEXT_MOVES_PLAN_APR2026.md`
+
+### Session 2026-04-13/14: Phase 0 + Project Cleanup
+
+| Task | Status | Result |
+|------|--------|--------|
+| Null model test rewired to hybrid scoring | DONE | BGE-M3 + ByT5 + compute_hybrid() |
+| Null model validation run | DONE | z=3.23 (PARTIAL, gate 3.29) |
+| prepare_arabic_discovery.py ال fix | DONE | Was missing, now strips ال |
+| .gitignore temp dirs cleanup | DONE | .codex_tmp/, .pytest_local/, tmp*/ |
+| Gothic + Old Irish Kaikki download | DONE | 23K + 6.4K entries |
+| Co-Authored-By stripped from history | DONE | 180 commits cleaned, force-pushed |
+| Next Moves Plan updated for Pro 20x | DONE | 4-6 weeks, ~$600 API |
+| Dashboard V6 redesign | DONE | Warm scholarly theme |
+| 21 scoring scripts archived | DONE | scripts/archive/ now 54 files |
+| Obsolete docs purged | DONE | 21 files removed (old plans, archives, sessions) |
+| README + CLAUDE.md + docs updated | DONE | Reflects April 2026 state |
+
+### Phase 0 result
+- z=3.23 on count-based test (3,854 real vs 3,644 null mean, p=0.0006)
+- z=1.58 on mean-score test (not significant)
+- Root cause: noisy Arabic glosses + junk English entries
+- Next: fix gloss quality, increase sample, re-run
+
+### Current priorities
+1. Fix Phase 0 data quality and re-run (push past z>3.29)
+2. Phase 1: word families + Tier 2 matcher + Latin rescore
+3. Phase 2: Old English diachronic test
+4. Phase 3: Gothic + Old Irish (Wave 1)
+
+---
+
+## Previous: LV1 Phase 2-3 Scoring + Cross-Lingual (Claude + Codex)
+**Plan file:** `docs/plans/2026-03-23-lv1-phase2-3-orchestration.md` (archived)
 **Dispatch board:** `docs/plans/BOARD.md`
 **Baseline commit:** `5fbd510`
 

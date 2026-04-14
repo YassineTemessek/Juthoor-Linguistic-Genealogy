@@ -22,14 +22,26 @@ Wheel builds in CI are kept for workspace integrity checks, not as a promise of 
 
 ---
 
+## Current Status (April 2026)
+
+| Metric | Value |
+| :--- | :--- |
+| **Discoveries** | 907 Arabic-Greek/Latin cognate pairs (Greek: 854, Latin: 53) |
+| **Pairs scored** | 55,694 via Eye 2 LLM semantic scoring |
+| **Arabic roots** | 12,333 in genome (binary nuclei validated >11 sigma) |
+| **Languages** | 12 in LV0 + Gothic and Old Irish queued for Wave 1 |
+| **Tests** | 1,206 across LV0/LV1/LV2 |
+| **Null model** | z=3.23 (partial signal, gate at 3.29 -- gloss quality fix pending) |
+| **Scoring** | Hybrid: BGE-M3 semantic 50% + sound 22% + ByT5 form 18% + skeleton 5% |
+
 ## Project Status
 
 | Level | Module | Current status |
 | :--- | :--- | :--- |
-| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | ~2.64M lexemes across 12 languages (Arabic, English, Latin, Ancient Greek, Hebrew, Persian, Aramaic, Old/Middle English, Quranic Arabic). Foundation layer complete. 167 tests. |
+| **LV0** | **[Juthoor-DataCore-LV0](./Juthoor-DataCore-LV0)** | ~2.76M lexemes across 12 languages. Gothic and Old Irish data downloaded for Wave 1 expansion. 167 tests. |
 | **LV1** | **[Juthoor-ArabicGenome-LV1](./Juthoor-ArabicGenome-LV1)** | Research Factory complete: 12,333 roots, 4 hypotheses supported (H2, H5, H8, H12). Promoted evidence cards feed LV2. 498 tests. |
-| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | Operational — forward + reverse discovery pipelines, 7 languages, 1,889-pair gold benchmark, 47,071-edge cognate graph. LLM annotation Layers 1-2 complete (244 morphology + 244 semantic), Arabic semantic profiles built (954 lemmas). Eye 2 LLM semantic scoring in progress. 523 tests. |
-| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Theory synthesis active: building toward an alternative to PIE reconstruction based on convergent Arabic-IE evidence from 153 cross-language root families. 10 corridor cards, 14,494 validated leads. |
+| **LV2** | **[Juthoor-CognateDiscovery-LV2](./Juthoor-CognateDiscovery-LV2)** | 907 discoveries across Greek and Latin. Eye 1 skeleton matching + Eye 2 LLM scoring operational. Hybrid scoring pipeline with tiered architecture planned (Tier 1 mechanical + Tier 2 sound laws + Tier 3 AI reasoning). 541 tests. |
+| **LV3** | **[Juthoor-Origins-LV3](./Juthoor-Origins-LV3)** | Null model validation rewired to hybrid scoring (z=3.23 partial). Theory synthesis: 10 corridor cards, convergent Arabic-IE evidence. |
 
 ## Architecture & Layers
 
@@ -45,7 +57,7 @@ Wheel builds in CI are kept for workspace integrity checks, not as a promise of 
 ## Getting Started
 
 ### Prerequisites
-- Python 3.11+
+- Python 3.12+
 - [uv](https://github.com/astral-sh/uv) or standard pip
 
 ### Installation
@@ -54,7 +66,7 @@ Wheel builds in CI are kept for workspace integrity checks, not as a promise of 
 git clone https://github.com/YassineTemessek/Juthoor-Linguistic-Genealogy.git
 cd Juthoor-Linguistic-Genealogy
 
-uv venv .venv --python 3.11
+uv venv .venv --python 3.12
 source .venv/bin/activate  # Linux/macOS
 # .venv\Scripts\activate   # Windows
 
@@ -143,9 +155,9 @@ Juthoor-Linguistic-Genealogy/
 
 ## Documentation
 
+- **[Next Moves Plan](./docs/NEXT_MOVES_PLAN_APR2026.md)**: 7-phase roadmap for scaling to 10+ languages (Pro 20x).
 - **[LV1 Complete Overview](./docs/LV1_COMPLETE_OVERVIEW.md)**: Arabic genome and research-factory overview.
-- **[Data Flow](./docs/RAW_DATA_FLOW.md)**: Resource-to-processed-data flow.
-- **[Progress Log](./docs/PROGRESS_LOG.md)**: Project milestone log.
+- **[Data Flow Architecture](./docs/DATA_FLOW_ARCHITECTURE.md)**: Pipeline data flow and scoring architecture.
 - **[LV2 Benchmarks](./Juthoor-CognateDiscovery-LV2/resources/benchmarks/README.md)**: Evaluation assets and workflow.
 - **[Status Tracker](./docs/plans/STATUS_TRACKER.md)**: Resume point after interruptions.
 

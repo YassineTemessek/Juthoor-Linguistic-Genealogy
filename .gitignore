@@ -35,6 +35,11 @@ __pycache__/
 nul
 uv.lock
 
+# Temp/cache directories
+.codex_tmp/
+.pytest_local/
+tmp*/
+
 # Local build artifacts
 **/dist/
 

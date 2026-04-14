@@ -36,7 +36,12 @@ def normalize(text: str) -> str:
     text = _DIACRITICS.sub("", text)
     text = text.replace("\u0640", "")
     text = re.sub(r"[إأآ]", "ا", text)
-    return text.strip("،, \t\n")
+    text = text.strip("،, \t\n")
+    # Strip definite article ال if present at start
+    # Only strip if at least 2 characters remain after ال (minimum valid root)
+    if text.startswith("ال") and len(text) >= 4:
+        text = text[2:]
+    return text
 
 
 def arabic_to_skeleton(root: str) -> str:
