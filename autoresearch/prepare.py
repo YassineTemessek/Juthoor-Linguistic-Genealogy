@@ -245,7 +245,9 @@ def load_arabic(limit: int = 100) -> list[dict]:
 def load_english(limit: int = 200) -> list[dict]:
     total = sum(1 for l in open(ENGLISH_CORPUS, encoding="utf-8") if l.strip())
     stride = max(1, total // (limit * 2))
-    return load_corpus(ENGLISH_CORPUS, limit=limit, stride=stride)
+    # English corpus has no gloss fields — embed the lemma directly
+    return load_corpus(ENGLISH_CORPUS, limit=limit, stride=stride,
+                       require_gloss=False)
 
 
 # ---------------------------------------------------------------------------
