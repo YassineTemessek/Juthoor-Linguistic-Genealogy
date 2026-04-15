@@ -35,7 +35,9 @@ sys.path.insert(0, str(LV2_ROOT / "src"))
 
 # Corpora paths (symlink these into autoresearch/data/ if preferred)
 ARABIC_CORPUS = LV2_ROOT / "data/processed/arabic/unified_arabic_discovery.jsonl"
-ENGLISH_CORPUS = LV2_ROOT / "data/processed/english/english_ipa_merged_pos.jsonl"
+# Use Greek as target — that's where our actual discoveries are (854 Greek cognates).
+# English has too much Arabic loanword contact, making null models indistinguishable.
+TARGET_CORPUS = LV2_ROOT / "data/processed/greek_unique_lemmas.jsonl"
 ARABIC_GLOSSES = LV2_ROOT / "data/processed/arabic/arabic_english_glosses.json"
 
 # Optional: Greek/Latin corpora for multi-language evaluation
@@ -242,12 +244,12 @@ def load_arabic(limit: int = 100) -> list[dict]:
     return good[:limit]
 
 
-def load_english(limit: int = 200) -> list[dict]:
-    total = sum(1 for l in open(ENGLISH_CORPUS, encoding="utf-8") if l.strip())
+def load_target(limit: int = 200) -> list[dict]:
+    """Load target language corpus (Greek by default)."""
+    total = sum(1 for l in open(TARGET_CORPUS, encoding="utf-8") if l.strip())
     stride = max(1, total // (limit * 2))
-    # English corpus has no gloss fields — embed the lemma directly
-    return load_corpus(ENGLISH_CORPUS, limit=limit, stride=stride,
-                       require_gloss=False)
+    return load_corpus(TARGET_CORPUS, limit=limit, stride=stride,
+                       require_gloss=True)
 
 
 # ---------------------------------------------------------------------------
@@ -284,8 +286,8 @@ def pairwise_cosine(a: np.ndarray, b: np.ndarray) -> np.ndarray:
 # ---------------------------------------------------------------------------
 # Scoring (uses experiment config)
 # ---------------------------------------------------------------------------
-def score_all_pairs(arabic, english, sem_sim, form_sim, cfg):
-    """Score all Arabic×English pairs using the experiment config weights."""
+def score_all_pairs(arabic, target, sem_sim, form_sim, cfg):
+    """Score all Arabic×target pairs using the experiment config weights."""
     from juthoor_cognatediscovery_lv2.lv3.discovery.hybrid_scoring import (
         compute_hybrid, HybridWeights,
     )
@@ -296,7 +298,7 @@ def score_all_pairs(arabic, english, sem_sim, form_sim, cfg):
     )
     scores = []
     for i, ar in enumerate(arabic):
-        for j, en in enumerate(english):
+        for j, en in enumerate(target):
             semantic = float(sem_sim[i, j])
             form = float(form_sim[i, j])
             result = compute_hybrid(
@@ -343,14 +345,14 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
     if verbose:
         print("\n[1/5] Loading corpora...")
     arabic = load_arabic(100)
-    english = load_english(200)
+    target = load_target(200)
     if verbose:
-        print(f"  Arabic: {len(arabic)} | English: {len(english)} | "
-              f"Pairs: {len(arabic) * len(english):,}")
+        print(f"  Arabic: {len(arabic)} | Target: {len(target)} | "
+              f"Pairs: {len(arabic) * len(target):,}")
 
-    if len(arabic) < 5 or len(english) < 10:
+    if len(arabic) < 5 or len(target) < 10:
         result = {
-            "error": f"Too few entries (Arabic={len(arabic)}, English={len(english)})",
+            "error": f"Too few entries (Arabic={len(arabic)}, Target={len(target)})",
             "z_best": -999,
             "accepted": False,
         }
@@ -364,8 +366,8 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
     from juthoor_cognatediscovery_lv2.lv3.discovery.embeddings import BgeM3Embedder
     sem_embedder = BgeM3Embedder()
     ar_sem = compute_embeddings(arabic, sem_embedder)
-    # English semantic embeddings are cached (they never change)
-    en_sem = compute_embeddings(english, sem_embedder, cache_key="en_sem_200")
+    # Target semantic embeddings are cached (they never change)
+    tgt_sem = compute_embeddings(target, sem_embedder, cache_key="tgt_sem_200")
     if verbose:
         print(f"  Done in {time.time() - t0:.1f}s")
 
@@ -376,7 +378,7 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
     form_embedder = ByT5Embedder()
     # Form embeddings depend on lemma orthography only — cache both
     ar_form = compute_embeddings(arabic, form_embedder, cache_key="ar_form_50")
-    en_form = compute_embeddings(english, form_embedder, cache_key="en_form_200")
+    tgt_form = compute_embeddings(target, form_embedder, cache_key="tgt_form_200")
     if verbose:
         print(f"  Done in {time.time() - t0:.1f}s")
 
@@ -384,9 +386,9 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
     if verbose:
         print("\n[4/5] Scoring REAL pairs...")
     t0 = time.time()
-    real_sem_sim = pairwise_cosine(ar_sem, en_sem)
-    real_form_sim = pairwise_cosine(ar_form, en_form)
-    real_scores = score_all_pairs(arabic, english, real_sem_sim, real_form_sim, cfg)
+    real_sem_sim = pairwise_cosine(ar_sem, tgt_sem)
+    real_form_sim = pairwise_cosine(ar_form, tgt_form)
+    real_scores = score_all_pairs(arabic, target, real_sem_sim, real_form_sim, cfg)
     real_count = count_above_threshold(real_scores, cfg.null_threshold)
     real_mean = float(np.mean(real_scores))
     if verbose:
@@ -421,10 +423,10 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
 
         # Recompute semantic embeddings (glosses changed)
         ar_sem_shuffled = compute_embeddings(shuffled_arabic, sem_embedder)
-        null_sem_sim = pairwise_cosine(ar_sem_shuffled, en_sem)
+        null_sem_sim = pairwise_cosine(ar_sem_shuffled, tgt_sem)
         # Form embeddings stay the same (lemma orthography unchanged)
         null_scores = score_all_pairs(
-            shuffled_arabic, english, null_sem_sim, real_form_sim, cfg
+            shuffled_arabic, target, null_sem_sim, real_form_sim, cfg
         )
         null_counts.append(count_above_threshold(null_scores, cfg.null_threshold))
         null_means.append(float(np.mean(null_scores)))
@@ -467,7 +469,7 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
         "null_threshold": cfg.null_threshold,
         "n_permutations": n_permutations,
         "n_arabic": len(arabic),
-        "n_english": len(english),
+        "n_target": len(target),
         "config": {
             "semantic_weight": cfg.semantic_weight,
             "form_weight": cfg.form_weight,
