@@ -342,7 +342,7 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
     # ---- Load data ----
     if verbose:
         print("\n[1/5] Loading corpora...")
-    arabic = load_arabic(50)
+    arabic = load_arabic(100)
     english = load_english(200)
     if verbose:
         print(f"  Arabic: {len(arabic)} | English: {len(english)} | "
@@ -394,6 +394,12 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
               f"Mean: {real_mean:.4f} | Above {cfg.null_threshold}: {real_count}")
 
     # ---- Null permutations ----
+    # Shuffle Arabic root↔gloss associations: each Arabic entry keeps its
+    # lemma (orthographic form) but gets a random OTHER entry's root and
+    # gloss. This breaks the real linguistic connection while preserving
+    # the surface form. Semantic embeddings are recomputed because the
+    # gloss (meaning) changes. Form/sound/skeleton features stay similar
+    # since the lemma shape is preserved.
     if verbose:
         print(f"\n[5/5] Running {n_permutations} null permutations...")
     t0 = time.time()
@@ -402,18 +408,21 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
 
     for perm in range(n_permutations):
         shuffled_arabic = [dict(ar) for ar in arabic]
-        glosses = [
+        # Collect the semantic payload (glosses + root)
+        payloads = [
             {k: ar.get(k) for k in
              ("english_gloss", "meaning_text", "gloss", "short_gloss",
               "gloss_plain", "root", "root_norm")}
             for ar in shuffled_arabic
         ]
-        random.shuffle(glosses)
-        for ar, g_val in zip(shuffled_arabic, glosses):
-            ar.update(g_val)
+        random.shuffle(payloads)
+        for ar, p in zip(shuffled_arabic, payloads):
+            ar.update(p)
 
+        # Recompute semantic embeddings (glosses changed)
         ar_sem_shuffled = compute_embeddings(shuffled_arabic, sem_embedder)
         null_sem_sim = pairwise_cosine(ar_sem_shuffled, en_sem)
+        # Form embeddings stay the same (lemma orthography unchanged)
         null_scores = score_all_pairs(
             shuffled_arabic, english, null_sem_sim, real_form_sim, cfg
         )
