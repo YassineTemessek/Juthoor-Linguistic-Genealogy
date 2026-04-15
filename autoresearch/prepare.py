@@ -36,6 +36,7 @@ sys.path.insert(0, str(LV2_ROOT / "src"))
 # Corpora paths (symlink these into autoresearch/data/ if preferred)
 ARABIC_CORPUS = LV2_ROOT / "data/processed/arabic/unified_arabic_discovery.jsonl"
 ENGLISH_CORPUS = LV2_ROOT / "data/processed/english/english_ipa_merged_pos.jsonl"
+ARABIC_GLOSSES = LV2_ROOT / "data/processed/arabic/arabic_english_glosses.json"
 
 # Optional: Greek/Latin corpora for multi-language evaluation
 GREEK_CORPUS = LV2_ROOT / "data/processed/greek/greek_lexemes.jsonl"
@@ -156,8 +157,89 @@ def load_corpus(path: Path, limit: int = 200, require_gloss: bool = True,
     return entries
 
 
-def load_arabic(limit: int = 50) -> list[dict]:
-    return load_corpus(ARABIC_CORPUS, limit=limit, require_root=True)
+# Grammatical labels that leak into Wiktionary glosses — filter these out
+_GRAMMAR_NOISE = frozenset({
+    "transitive", "intransitive", "ditransitive", "reflexive", "causative",
+    "passive", "imperfective", "perfective", "verbal noun", "participle",
+    "active", "stative", "denominative", "elative", "diminutive",
+    "masculine", "feminine", "plural", "singular", "dual",
+    "form i", "form ii", "form iii", "form iv", "form v",
+    "form vi", "form vii", "form viii", "form ix", "form x",
+})
+
+_GLOSS_CACHE: dict[str, str] | None = None
+
+
+def _load_good_glosses() -> dict[str, str]:
+    """Load arabic_english_glosses.json and build a clean lookup."""
+    global _GLOSS_CACHE
+    if _GLOSS_CACHE is not None:
+        return _GLOSS_CACHE
+
+    import re
+    _GLOSS_CACHE = {}
+    if not ARABIC_GLOSSES.exists():
+        return _GLOSS_CACHE
+
+    raw = json.loads(ARABIC_GLOSSES.read_text(encoding="utf-8"))
+    diacritics_re = re.compile(r"[\u064B-\u065F\u0670\u0640]")
+
+    for ar_word, entry in raw.items():
+        glosses = entry.get("english_glosses", [])
+        # Filter out grammar noise and very short labels
+        clean = [
+            g for g in glosses
+            if g.lower().strip() not in _GRAMMAR_NOISE
+            and len(g.strip()) >= 3
+            and not g.strip().lower().startswith("form ")
+        ]
+        if not clean:
+            continue
+        # Take the first 3 meaningful glosses
+        best = ", ".join(clean[:3])
+        # Store under both raw and stripped-diacritics keys
+        _GLOSS_CACHE[ar_word] = best
+        stripped = diacritics_re.sub("", ar_word)
+        if stripped != ar_word and stripped not in _GLOSS_CACHE:
+            _GLOSS_CACHE[stripped] = best
+
+    # Manual overrides for known bad Wiktionary entries
+    _GLOSS_CACHE["الله"] = "God, deity, the supreme being"
+    _GLOSS_CACHE["اللَّه"] = "God, deity, the supreme being"
+    _GLOSS_CACHE["بصر"] = "sight, vision, eyesight"
+    _GLOSS_CACHE["بَصَر"] = "sight, vision, eyesight"
+    _GLOSS_CACHE["هدى"] = "guidance, right path, to guide"
+    _GLOSS_CACHE["هَدَى"] = "guidance, right path, to guide"
+    _GLOSS_CACHE["هُدًى"] = "guidance, right path, to guide"
+
+    return _GLOSS_CACHE
+
+
+def _enrich_arabic_glosses(entries: list[dict]) -> list[dict]:
+    """Replace noisy english_gloss with better Wiktionary glosses where available."""
+    import re
+    glosses = _load_good_glosses()
+    diacritics_re = re.compile(r"[\u064B-\u065F\u0670\u0640]")
+    enriched = 0
+    for entry in entries:
+        lemma = entry.get("lemma", "")
+        root = entry.get("root", "")
+        stripped = diacritics_re.sub("", lemma)
+        # Try: stripped lemma, raw lemma, root
+        better = glosses.get(stripped) or glosses.get(lemma) or glosses.get(root)
+        if better:
+            entry["english_gloss"] = better
+            enriched += 1
+    return entries
+
+
+def load_arabic(limit: int = 100) -> list[dict]:
+    entries = load_corpus(ARABIC_CORPUS, limit=limit * 3, require_root=True)
+    entries = _enrich_arabic_glosses(entries)
+    # Keep only entries with a reasonable gloss after enrichment
+    good = [e for e in entries
+            if len(str(e.get("english_gloss") or "").strip()) >= 3]
+    return good[:limit]
 
 
 def load_english(limit: int = 200) -> list[dict]:
