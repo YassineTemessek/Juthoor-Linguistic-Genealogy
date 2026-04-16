@@ -1,0 +1,112 @@
+[
+  {
+    "id": "T1",
+    "arabic_root": "مطحنة",
+    "arabic_skeleton": "thn",
+    "arabic_meaning": "mill, grinding machine",
+    "target_word": "mill",
+    "target_lang": "lat",
+    "target_skeleton": "ml",
+    "target_meaning": "grinding machine",
+    "note": "KNOWN FALSE POSITIVE — should say no_path"
+  },
+  {
+    "id": "T2",
+    "arabic_root": "جذم",
+    "arabic_skeleton": "gdm",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "godaim",
+    "target_lang": "got",
+    "target_skeleton": "gdm",
+    "target_meaning": "(investigate)",
+    "discovery_score": 0.95
+  },
+  {
+    "id": "T3",
+    "arabic_root": "ندصت",
+    "arabic_skeleton": "ndst",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "andastauin",
+    "target_lang": "got",
+    "target_skeleton": "ndstn",
+    "target_meaning": "(investigate)",
+    "discovery_score": 0.97
+  },
+  {
+    "id": "T4",
+    "arabic_root": "بنس",
+    "arabic_skeleton": "bns",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "abans",
+    "target_lang": "got",
+    "target_skeleton": "bns",
+    "target_meaning": "(investigate)",
+    "discovery_score": 0.95
+  },
+  {
+    "id": "T5",
+    "arabic_root": "غماريد",
+    "arabic_skeleton": "gmrd",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "gatimrida",
+    "target_lang": "got",
+    "target_skeleton": "gdmrd",
+    "target_meaning": "(investigate)",
+    "discovery_score": 0.97
+  },
+  {
+    "id": "T6",
+    "arabic_root": "دلك",
+    "arabic_skeleton": "dlc",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "dolc",
+    "target_lang": "ang",
+    "target_skeleton": "dlc",
+    "target_meaning": "(investigate)",
+    "discovery_score": 0.95
+  },
+  {
+    "id": "T7",
+    "arabic_root": "سلط",
+    "arabic_skeleton": "slt",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "slit",
+    "target_lang": "ang",
+    "target_skeleton": "slt",
+    "target_meaning": "(investigate)",
+    "discovery_score": 0.95
+  },
+  {
+    "id": "T8",
+    "arabic_root": "جرس",
+    "arabic_skeleton": "grs",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "gras",
+    "target_lang": "ang",
+    "target_skeleton": "grs",
+    "target_meaning": "(investigate)",
+    "discovery_score": 0.95
+  },
+  {
+    "id": "T9",
+    "arabic_root": "جلعد",
+    "arabic_skeleton": "gld",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "geilid",
+    "target_lang": "sga",
+    "target_skeleton": "gld",
+    "target_meaning": "(investigate)",
+    "discovery_score": 0.95
+  },
+  {
+    "id": "T10",
+    "arabic_root": "كندلي",
+    "arabic_skeleton": "cndl",
+    "arabic_meaning": "(investigate from root letters)",
+    "target_word": "caindel",
+    "target_lang": "sga",
+    "target_skeleton": "cndl",
+    "target_meaning": "(investigate)",
+    "discovery_score": 1.0
+  }
+]

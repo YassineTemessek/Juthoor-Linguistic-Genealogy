@@ -1,0 +1,82 @@
+[
+  {
+    "pair_id": "T1",
+    "finding": "no_path",
+    "semantic_journey": "Arabic skeleton thn vs Latin ml — zero consonant overlap. Translation equivalence: every grain-farming civilization independently names its grinding tool.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "key_insight": "Same meaning but incompatible consonant structures — translation, not cognate."
+  },
+  {
+    "pair_id": "T2",
+    "finding": "no_path",
+    "semantic_journey": "Arabic severance/amputation (j-dh-m) and Gothic moral goodness occupy entirely unrelated semantic fields.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "key_insight": "Skeleton match is coincidental; no semantic bridge between cutting and goodness."
+  },
+  {
+    "pair_id": "T3",
+    "finding": "path_found",
+    "semantic_journey": "Arabic n-d-s = to thrust/push against with force. Gothic andastauin = to stand against/resist. Both encode directed physical opposition — force meeting resistance.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "key_insight": "Physical opposition concept preserved: thrusting against = standing against."
+  },
+  {
+    "pair_id": "T4",
+    "finding": "path_found",
+    "semantic_journey": "Arabic b-n-s = to stretch/lie flat. Gothic abans = even/level/flat. Both encode the concept of an unvarying flat surface.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "key_insight": "Flat surface description preserved: stretching flat = level/even."
+  },
+  {
+    "pair_id": "T5",
+    "finding": "no_path",
+    "semantic_journey": "Flooding/submersion vs timber construction have no plausible semantic contact. The skeleton overlap is coincidental.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "key_insight": "No semantic bridge between overwhelming/flooding and building/constructing."
+  },
+  {
+    "pair_id": "T6",
+    "finding": "path_found",
+    "semantic_journey": "Arabic d-l-k = to rub/massage/polish by friction. Old English dolc = wound/scar/gash. Concrete-to-result drift: rubbing -> abrasion -> wound/scar. Arabic covers the full spectrum of friction; OE narrowed to the extreme result.",
+    "journey_type": "semantic_drift",
+    "confidence": "high",
+    "key_insight": "Friction action -> its extreme result: rubbing becomes the wound left by rubbing."
+  },
+  {
+    "pair_id": "T7",
+    "finding": "path_found",
+    "semantic_journey": "Arabic s-l-t = forceful cutting/striking through resistance (also: power/sultan). Old English slit = a cut/incision. Arabic later abstracted to power/authority; OE preserved the literal blade-sense.",
+    "journey_type": "specialization",
+    "confidence": "high",
+    "key_insight": "Forceful cutting preserved literally in OE while Arabic abstracted to authority/power."
+  },
+  {
+    "pair_id": "T8",
+    "finding": "no_path",
+    "semantic_journey": "Sound-making (bell) vs ground-covering plant have no semantic connection. Gras is inherited pan-Germanic vocabulary, not a borrowing.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "key_insight": "Bell-ringing and grass occupy entirely different semantic fields; skeleton overlap is coincidental."
+  },
+  {
+    "pair_id": "T9",
+    "finding": "path_found",
+    "semantic_journey": "Arabic j-l-d family = skin/hide; thick-hided robust animal. Old Irish geilid = to eat/graze (of livestock). Metonymic path: the thick-hided beast -> that beast defining action (grazing).",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "key_insight": "Tough-hided livestock animal -> the act that defines livestock: grazing."
+  },
+  {
+    "pair_id": "T10",
+    "finding": "no_path",
+    "semantic_journey": "Both are independent borrowings from Latin candela. Arabic borrowed via Greek/trade; Old Irish via Christian missionaries. The perfect c-n-d-l match reflects a shared Latin source, not Arabic-Irish genealogy.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "key_insight": "Shared Latin loanword, not an Arabic-origin cognate. Classifying this as a discovery would be a methodological error."
+  }
+]
