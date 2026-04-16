@@ -49,6 +49,7 @@ CORPUS_PATHS: dict[str, str] = {
     "ang": "english_old/sources/kaikki.jsonl",
     "enm": "english_middle/sources/kaikki.jsonl",
     "got": "gothic/sources/kaikki.jsonl",
+    "sga": "old_irish/sources/kaikki.jsonl",
 }
 
 ARABIC_SOURCES: list[Path] = [
@@ -243,7 +244,7 @@ def load_target_lemmas(
     """
     # Check for pre-built dedup file first
     # Dedup script uses full language names, not ISO codes
-    DEDUP_NAMES = {"lat": "latin", "grc": "greek", "ang": "english_old", "enm": "english_middle", "got": "gothic"}
+    DEDUP_NAMES = {"lat": "latin", "grc": "greek", "ang": "english_old", "enm": "english_middle", "got": "gothic", "sga": "old_irish"}
     dedup_name = DEDUP_NAMES.get(lang, lang)
     prebuilt = LV2_ROOT / f"data/processed/{dedup_name}_unique_lemmas.jsonl"
     if source_override:
