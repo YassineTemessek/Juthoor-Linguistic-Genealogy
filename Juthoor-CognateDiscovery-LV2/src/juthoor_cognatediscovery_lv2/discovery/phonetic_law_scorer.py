@@ -158,10 +158,64 @@ GREEK_EQUIVALENTS: dict[str, tuple[str, ...]] = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Old English equivalents: Arabic consonants → Old English consonants
+# ---------------------------------------------------------------------------
+# Key differences from LATIN_EQUIVALENTS:
+#   ث → þ/th (thorn, /θ/) — OE preserved the dental fricative
+#   ذ → ð/th  (eth, /ð/)  — OE preserved the voiced dental fricative
+#   ف → f     (OE had no /v/ phoneme word-initially; /f/ covered both)
+#   و → w     (OE retained w- robustly; modern English sometimes lost it)
+#   ج → g/c   (OE /g/ covered both stops and fricatives; c = /k/)
+#   ق → c/k   (OE used c for /k/ before back vowels)
+#   ك → c/k   (same: OE c = /k/)
+#   ع → ∅/h   (pharyngeal deleted, sometimes breathy-h in early OE)
+#   ح → h     (OE had robust /h/, maps pharyngeal ح cleanly)
+#   خ → h/k   (OE h- before consonant was the velar fricative /x/)
+#   غ → g/∅   (ghayin → OE g or deleted)
+#   ش → sc/s  (OE sc = /ʃ/, so Arabic ش maps to OE sc or s)
+#   ص/ض/ط/ظ → emphatic flattening same as Latin (no OE emphatics)
+#   hw → Arabic ح+و compound (OE hw- in "hwæt", "hwil" etc.)
+# Sources: OE phonology (Campbell 1959), Grimm's Law for stop series,
+#   Juthoor phonetic_mergers_eng.jsonl, feedback_phonetic_merger.md
+OLD_ENGLISH_EQUIVALENTS: dict[str, tuple[str, ...]] = {
+    "ا": ("", "a"),             # alif → silent or vowel carrier
+    "ب": ("b", "p"),            # ba → b (Grimm: PIE *bh → OE b)
+    "ت": ("t", "d"),            # ta → t / d (Grimm voicing in medial)
+    "ث": ("þ", "th", "t", "s"), # tha → þ (thorn /θ/) / th / t / s
+    "ج": ("g", "c", "j"),       # jim → g / c (/k/) / j (after Norman influence crept in)
+    "ح": ("h",),                # ḥa → h (OE strong /h/)
+    "خ": ("h", "k", "c"),       # kha → h (/x/ in OE) / k / c
+    "د": ("d", "t"),            # dal → d / t (Grimm)
+    "ذ": ("ð", "th", "d", "z"), # dhal → ð (eth /ð/) / th / d / z
+    "ر": ("r",),                # ra → r
+    "ز": ("z", "s"),            # zayn → z / s
+    "س": ("s",),                # sin → s
+    "ش": ("sc", "s", "sh"),     # shin → OE sc (/ʃ/) / s / sh
+    "ص": ("s",),                # ṣad → s (emphatic flattened)
+    "ض": ("d",),                # ḍad → d
+    "ط": ("t",),                # ṭa → t
+    "ظ": ("z", "d"),            # ẓa → z / d
+    "ع": ("", "h"),             # ʿayn → deleted / h (breathy onset)
+    "غ": ("g", ""),             # ghayn → g / deleted
+    "ف": ("f",),                # fa → f (OE f covers /f/ and /v/ allophonically)
+    "ق": ("c", "k", "cw"),      # qaf → c (/k/) / k / cw (OE qu = cw)
+    "ك": ("c", "k"),            # kaf → c / k
+    "ل": ("l",),                # lam → l
+    "م": ("m",),                # mim → m
+    "ن": ("n",),                # nun → n
+    "ه": ("h", ""),             # ha → h / deleted
+    "و": ("w", "v"),            # waw → w (OE retained w strongly) / v
+    "ي": ("g", "y", "i"),       # ya → OE g (palatal /j/) / y / i
+}
+
+
 def get_language_equivalents(lang: str) -> dict[str, tuple[str, ...]]:
     """Return the Arabic→target consonant equivalents table for the given language."""
     if lang == "grc":
         return GREEK_EQUIVALENTS
+    if lang == "ang":
+        return OLD_ENGLISH_EQUIVALENTS
     return LATIN_EQUIVALENTS
 
 
