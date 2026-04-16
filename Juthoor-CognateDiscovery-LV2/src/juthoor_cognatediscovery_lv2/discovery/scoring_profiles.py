@@ -194,6 +194,43 @@ PROFILES: dict[str, ScoringProfile] = {
         final_threshold=0.42,
         description="Arabic to Middle English: higher semantic weight due to poor IPA coverage (26%)",
     ),
+
+    # Arabic to Gothic — slightly higher form weight: single-scribe orthography is very consistent
+    "ara_gothic": ScoringProfile(
+        name="ara_gothic",
+        semantic_weight=0.48,
+        form_weight=0.52,
+        phonetic_law_cap=0.16,
+        genome_cap=0.10,
+        multi_method_cap=0.12,
+        cross_pair_cap=0.08,
+        root_quality_cap=0.08,
+        prefilter_threshold=0.40,
+        final_threshold=0.40,
+        description=(
+            "Arabic to Gothic: slightly higher form weight because Wulfila's single-scribe "
+            "orthography is highly consistent; Grimm's Law stop series applied."
+        ),
+    ),
+
+    # Arabic to Old Irish — heavy radical sound changes (p-loss, lenition system)
+    # Reduce form weight significantly; rely more on semantics and genome signals.
+    "ara_old_irish": ScoringProfile(
+        name="ara_old_irish",
+        semantic_weight=0.62,
+        form_weight=0.38,
+        phonetic_law_cap=0.14,
+        genome_cap=0.10,
+        multi_method_cap=0.12,
+        cross_pair_cap=0.08,
+        root_quality_cap=0.08,
+        prefilter_threshold=0.38,
+        final_threshold=0.40,
+        description=(
+            "Arabic to Old Irish: reduced form weight for radical sound changes "
+            "(p-loss, lenition mutations); higher semantic weight to compensate."
+        ),
+    ),
 }
 
 
@@ -230,6 +267,8 @@ _PAIR_TO_PROFILE: dict[tuple[str, str], str] = {
     ("ara", "lat"): "ara_classical_ie",
     ("ara", "grc"): "ara_classical_ie",
     ("ara", "eng"): "ara_eng_default",
+    ("ara", "got"): "ara_gothic",
+    ("ara", "sga"): "ara_old_irish",
 }
 
 

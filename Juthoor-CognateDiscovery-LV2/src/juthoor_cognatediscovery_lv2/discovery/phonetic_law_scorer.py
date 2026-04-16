@@ -210,12 +210,119 @@ OLD_ENGLISH_EQUIVALENTS: dict[str, tuple[str, ...]] = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Old Irish equivalents: Arabic consonants → Old Irish consonants
+# ---------------------------------------------------------------------------
+# Key differences from LATIN_EQUIVALENTS:
+#   PIE *p was LOST in Old Irish entirely (pater → athir). Arabic ف/ب have NO
+#     Irish p-match; ف → f only (OIr. retained f < PIE *sw, *sp variants).
+#   Lenition system: base consonants are c, t, b, d, g, m, s, f, n, l, r.
+#     Lenited ch=/x/→Arabic خ, lenited th=/θ/→Arabic ث.
+#     Skeleton matching operates on BASE (unlenited) consonants.
+#   Nasalisation mutations (eclipsis): gc, dt, mb, nd, ng — initial mutation
+#     letter stripped by _decompose_old_irish; we match the base consonant.
+#   ع (guttural) has NO Old Irish match — pharyngeal deleted (as in Greek).
+#   ح (pharyngeal) has NO Old Irish match — pharyngeal simplified to h or ∅.
+#   Arabic خ → Old Irish ch (written digraph, /x/ fricative).
+#   Arabic ث → Old Irish th (/θ/ dental fricative).
+#   Arabic غ → g (spirantised in medial, but skeletal base is g).
+#   Arabic ق → c/k (OIr. c = /k/ before back vowels).
+#   Arabic ش → s (no sh phoneme in Old Irish).
+#   Arabic ج → g (OIr. /g/ covers the palatal stop position).
+# Sources: McCone (1996) Towards a Relative Chronology of Ancient and
+#   Medieval Celtic Sound Change; Thurneysen (1946) A Grammar of Old Irish;
+#   Juthoor phonetic corridor design notes (feedback_phonetic_merger.md).
+OLD_IRISH_EQUIVALENTS: dict[str, tuple[str, ...]] = {
+    "ا": ("", "a"),           # alif → silent or vowel carrier
+    "ب": ("b",),              # ba → b (no p shift; PIE *p lost in OIr.)
+    "ت": ("t", "d"),          # ta → t / d
+    "ث": ("th", "t"),         # tha → th (/θ/) / t (dental fricative retained)
+    "ج": ("g",),              # jim → g (no j phoneme in Old Irish)
+    "ح": ("h", ""),           # ḥa → h (pharyngeal simplified) / deleted
+    "خ": ("ch", "k"),         # kha → ch (/x/) / k
+    "د": ("d", "t"),          # dal → d / t
+    "ذ": ("d", "th"),         # dhal → d / th
+    "ر": ("r",),              # ra → r
+    "ز": ("s", "z"),          # zayn → s / z (OIr. had limited /z/)
+    "س": ("s",),              # sin → s
+    "ش": ("s",),              # shin → s (no sh phoneme in Old Irish)
+    "ص": ("s",),              # ṣad → s (emphatic flattened)
+    "ض": ("d",),              # ḍad → d
+    "ط": ("t",),              # ṭa → t
+    "ظ": ("d", "t"),          # ẓa → d / t
+    "ع": ("",),               # ʿayn → DELETED (guttural deletion, no OIr. match)
+    "غ": ("g", ""),           # ghayn → g / deleted
+    "ف": ("f", "b"),          # fa → f / b (PIE *p lost; f from *sw/*sp clusters)
+    "ق": ("c", "k"),          # qaf → c (/k/) / k
+    "ك": ("c", "k"),          # kaf → c / k
+    "ل": ("l",),              # lam → l
+    "م": ("m",),              # mim → m
+    "ن": ("n",),              # nun → n
+    "ه": ("h", ""),           # ha → h / deleted
+    "و": ("f", "b", ""),      # waw → f (OIr. w > f/bh) / b / deleted
+    "ي": ("g", "i", "y"),     # ya → g (palatal /j/ > g) / i / y
+}
+
+
+# ---------------------------------------------------------------------------
+# Gothic equivalents: Arabic consonants → Gothic consonants
+# ---------------------------------------------------------------------------
+# Gothic (4th c. CE, Wulfila's Bible) is East Germanic with very consistent
+# orthography (single scribe tradition), making form-matching more reliable.
+# Key sound correspondences:
+#   Gothic has NO native /p/ from Grimm's Law (PIE *p → PGmc *f → Got f)
+#     → Arabic ف maps to f (primary), Arabic ب maps to b/f
+#   Gothic þ (thorn) = /θ/ → Arabic ث (direct match)
+#   Gothic ƕ (hwair) = /hw/ → possible Arabic خ (velar fricative + w)
+#   Gothic q = /kw/ → Arabic ق (emphatic velar)
+#   Gothic preserves /z/ (later rhotacized in West Germanic) → Arabic ز
+#   Gothic h = /x/ in some positions (before consonants) → Arabic خ/ح
+#   Gothic g can be /ɣ/ intervocalically → Arabic غ
+#   Gothic b/d/g are fricatives intervocalically (/β/, /ð/, /ɣ/) → Arabic ب/د/غ
+# Sources: Wright's Gothic Grammar (1910), Grimm's Law stop series,
+#   Juthoor phonetic_mergers.md, feedback_phonetic_merger.md
+GOTHIC_EQUIVALENTS: dict[str, tuple[str, ...]] = {
+    "ا": ("", "a"),              # alif → silent or vowel carrier
+    "ب": ("b", "f"),             # ba → b / f (Grimm: no PIE *b word-initially; f from PIE *p)
+    "ت": ("t", "d"),             # ta → t / d (Grimm voicing variants)
+    "ث": ("þ", "th", "t"),       # tha → þ (thorn /θ/) — preserved in Gothic; also th/t
+    "ج": ("g", "k"),             # jim → g / k (Gothic g covers stop and fricative)
+    "ح": ("h",),                 # ḥa → h (Gothic h = /x/ in some positions)
+    "خ": ("h", "ƕ", "k"),        # kha → h (/x/) / ƕ (hwair /hw/) / k
+    "د": ("d", "t"),             # dal → d / t (Grimm)
+    "ذ": ("d", "þ", "z"),        # dhal → d / þ (thorn) / z
+    "ر": ("r",),                 # ra → r
+    "ز": ("z", "s"),             # zayn → z (Gothic preserved /z/, not yet rhotacized) / s
+    "س": ("s",),                 # sin → s
+    "ش": ("s",),                 # shin → s (no /ʃ/ phoneme in Gothic)
+    "ص": ("s",),                 # ṣad → s (emphatic flattened)
+    "ض": ("d",),                 # ḍad → d
+    "ط": ("t",),                 # ṭa → t
+    "ظ": ("z", "d"),             # ẓa → z / d
+    "ع": ("", "h"),              # ʿayn → deleted / h (pharyngeal lost in Germanic)
+    "غ": ("g", ""),              # ghayn → g (intervocalic /ɣ/) / deleted
+    "ف": ("f", "b"),             # fa → f (primary: Grimm PIE *p→f; Gothic f also covers b)
+    "ق": ("q", "k", "kw"),       # qaf → q / k / kw (Gothic q = /kw/)
+    "ك": ("k",),                 # kaf → k
+    "ل": ("l",),                 # lam → l
+    "م": ("m",),                 # mim → m
+    "ن": ("n",),                 # nun → n
+    "ه": ("h", ""),              # ha → h / deleted
+    "و": ("w", "v", "u"),        # waw → w / v / u (Gothic waw cluster)
+    "ي": ("j", "y", "i"),        # ya → j (Gothic j = /j/) / y / i
+}
+
+
 def get_language_equivalents(lang: str) -> dict[str, tuple[str, ...]]:
     """Return the Arabic→target consonant equivalents table for the given language."""
     if lang == "grc":
         return GREEK_EQUIVALENTS
     if lang == "ang":
         return OLD_ENGLISH_EQUIVALENTS
+    if lang == "sga":
+        return OLD_IRISH_EQUIVALENTS
+    if lang == "got":
+        return GOTHIC_EQUIVALENTS
     return LATIN_EQUIVALENTS
 
 

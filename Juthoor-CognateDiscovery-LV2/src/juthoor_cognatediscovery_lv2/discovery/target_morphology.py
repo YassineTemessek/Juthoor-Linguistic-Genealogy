@@ -159,6 +159,81 @@ OE_PREFIXES: tuple[str, ...] = (
     "on", "to",
 )
 
+
+# ---------------------------------------------------------------------------
+# Gothic morphology tables
+# ---------------------------------------------------------------------------
+
+# Ordered longest-first for greedy matching
+GOTHIC_SUFFIXES: tuple[str, ...] = (
+    # Adjective suffixes (longest first)
+    "eigs", "isks",
+    "ata", "aba",
+    # Verb suffixes
+    "aith", "anda",
+    "jan", "nan", "ith",
+    "on", "an",
+    # Noun suffixes
+    "ans", "ins", "uns",
+    "os",
+    "is", "us",
+    "a", "s",
+)
+
+GOTHIC_PREFIXES: tuple[str, ...] = (
+    "wiþra", "undar",
+    "fair", "fra", "and",
+    "dis", "ana", "miþ",
+    "at", "af", "bi", "du", "uf", "us",
+    "ga",
+)
+
+
+# ---------------------------------------------------------------------------
+# Old Irish morphology tables
+# ---------------------------------------------------------------------------
+
+# Prefixes ordered longest-first
+OI_PREFIXES: tuple[str, ...] = (
+    "frith",   # against, counter- (longest first)
+    "imm",     # around
+    "air",     # before, east
+    "ass", "ess",  # out of
+    "com", "con",  # together
+    "for",     # over, on
+    "ad",      # toward
+    "as",      # out
+    "di",      # from, of
+    "do",      # to, for
+    "fo",      # under
+    "in",      # in
+    "ro",      # perfective preverb
+    "to",      # toward, intensive
+)
+
+# Noun suffixes ordered longest-first
+OI_NOUN_SUFFIXES: tuple[str, ...] = (
+    "echt",    # abstract: -acht variant
+    "acht",    # abstract nouns: flaith + acht → flaitacht
+    "ine",     # feminine abstract: fír + ine → fírine
+    "the",     # verbal noun suffix
+    "de",      # genitive/adjective suffix
+    "ach",     # possessive/adjective suffix: cloch + ach → clocha
+    "iu",      # dative/instrumental ending
+    "e",       # genitive singular (a-stems)
+    "u",       # genitive/dative singular (u-stems)
+)
+
+# Verb suffixes ordered longest-first
+OI_VERB_SUFFIXES: tuple[str, ...] = (
+    "ithir",   # deponent present sg. 3rd
+    "thar",    # deponent present pl. 3rd (also passive)
+    "tar",     # variant of -thar
+    "aid",     # 3rd sg. present active (a-stem verbs)
+    "id",      # 3rd sg. present (i-stem verbs)
+    "ad",      # past/subjunctive suffix
+)
+
 _MIN_STEM = 2  # minimum stem length after stripping
 
 
@@ -271,8 +346,8 @@ def decompose_target(word: str, lang: str) -> list[str]:
     word:
         The word form as it appears in the corpus (may be inflected).
     lang:
-        Language code: "lat", "grc", or "ang".  Other codes receive the
-        original word only (no-op decomposition).
+        Language code: "lat", "grc", "ang", "got", or "sga".  Other codes
+        receive the original word only (no-op decomposition).
 
     Returns
     -------
@@ -319,6 +394,10 @@ def decompose_target(word: str, lang: str) -> list[str]:
         candidates = _decompose_greek(word_lower_latin)
     elif lang == "ang":
         candidates = _decompose_old_english(word_lower)
+    elif lang == "got":
+        candidates = _decompose_gothic(word_lower)
+    elif lang == "sga":
+        candidates = _decompose_old_irish(word_lower)
     # else: no-op
 
     result: list[str] = [word_lower]
@@ -437,6 +516,99 @@ def _decompose_old_english(word: str) -> list[str]:
     return stems
 
 
+def _decompose_gothic(word: str) -> list[str]:
+    """Decompose a Gothic word into candidate stems.
+
+    Gothic (4th c. CE) has consistent orthography from a single scribe tradition
+    (Wulfila's Bible), so suffix stripping is more reliable than for OE or OIr.
+
+    Strategy:
+    1. Strip ALL matching suffixes (noun, verb, adjective), try prefix on result.
+    2. Strip prefix from original, try suffix on result.
+    """
+    stems: list[str] = []
+
+    # 1. Strip all matching suffixes
+    for suffix_stem in _strip_all_suffixes(word, GOTHIC_SUFFIXES):
+        stems.append(suffix_stem)
+        pre_of_suf = _strip_prefix(suffix_stem, GOTHIC_PREFIXES)
+        if pre_of_suf:
+            stems.append(pre_of_suf)
+
+    # 2. Strip prefix from original
+    prefix_stem = _strip_prefix(word, GOTHIC_PREFIXES)
+    if prefix_stem:
+        stems.append(prefix_stem)
+        suf_of_pre = _strip_suffix(prefix_stem, GOTHIC_SUFFIXES)
+        if suf_of_pre:
+            stems.append(suf_of_pre)
+
+    stems.sort(key=len, reverse=True)
+    return stems
+
+
+def _decompose_old_irish(word: str) -> list[str]:
+    """Decompose an Old Irish word into candidate stems.
+
+    Three passes:
+    1. Strip lenition markers: if word begins with a consonant+h digraph (ch,
+       th, bh, dh, gh, mh, fh, sh, ph), try the base consonant form (strip h).
+    2. Strip nasalisation (eclipsis) prefixes: gc-, dt-, mb-, nd-, ng- — the
+       prefixed letter is the mutation; strip it to expose the base consonant.
+    3. Strip verb or noun suffixes, then optionally a preverb prefix.
+    """
+    stems: list[str] = []
+
+    # 1. Lenition: consonant + h → try base consonant (strip the h)
+    #    e.g. "chath" (cat lenited) → base "cath"
+    _LENITION_DIGRAPHS = ("ch", "th", "bh", "dh", "gh", "mh", "fh", "sh", "ph")
+    if len(word) >= 3 and word[:2] in _LENITION_DIGRAPHS:
+        base = word[0] + word[2:]   # drop the h: "ch..." → "c..."
+        if len(base) >= _MIN_STEM:
+            stems.append(base)
+        # also try completely dropping the initial lenited consonant+h
+        de_aspirated = word[2:]
+        if len(de_aspirated) >= _MIN_STEM:
+            stems.append(de_aspirated)
+
+    # 2. Nasalisation (eclipsis): strip prefixed mutation letter
+    #    gc- → c, dt- → t, mb- → b, nd- → d, ng- → g
+    _ECLIPSIS = {
+        "gc": "c", "dt": "t", "mb": "b", "nd": "d", "ng": "g",
+    }
+    for prefix, base_letter in _ECLIPSIS.items():
+        if word.startswith(prefix):
+            de_eclipsed = base_letter + word[len(prefix):]
+            if len(de_eclipsed) >= _MIN_STEM:
+                stems.append(de_eclipsed)
+            break
+
+    # 3. Strip verb suffixes
+    for suf_stem in _strip_all_suffixes(word, OI_VERB_SUFFIXES):
+        stems.append(suf_stem)
+        pre_of_suf = _strip_prefix(suf_stem, OI_PREFIXES)
+        if pre_of_suf:
+            stems.append(pre_of_suf)
+
+    # 4. Strip noun suffixes
+    for suf_stem in _strip_all_suffixes(word, OI_NOUN_SUFFIXES):
+        stems.append(suf_stem)
+        pre_of_suf = _strip_prefix(suf_stem, OI_PREFIXES)
+        if pre_of_suf:
+            stems.append(pre_of_suf)
+
+    # 5. Strip preverb prefix from original
+    prefix_stem = _strip_prefix(word, OI_PREFIXES)
+    if prefix_stem:
+        stems.append(prefix_stem)
+        # Try suffix stripping on the de-prefixed stem
+        for suf_stem in _strip_all_suffixes(prefix_stem, OI_NOUN_SUFFIXES + OI_VERB_SUFFIXES):
+            stems.append(suf_stem)
+
+    stems.sort(key=len, reverse=True)
+    return stems
+
+
 def _oe_compound_split(word: str) -> list[str]:
     """Try splitting an OE compound word at consonant cluster boundaries.
 
@@ -499,6 +671,22 @@ GREEK_PHONETIC: dict[str, list[str]] = {
     "ks": ["k", "ks"],
 }
 
+# Old Irish lenition digraph shifts
+# Written lenited digraphs recover the base consonant for skeleton matching.
+# ch=/x/ → k/kh (underlying c); th=/θ/ → t; bh=/v/ → b; dh=/ɣ/ → d
+# gh=/ɣ/ → g; mh=/v~w/ → m; fh=∅ → f; sh=∅ → s; ph→f/p (p→ph→f in OIr.)
+OLD_IRISH_PHONETIC: dict[str, list[str]] = {
+    "ch": ["k", "kh"],    # lenited c: /x/ → base k/kh
+    "th": ["t", "d"],     # lenited t: /θ/ → base t
+    "bh": ["b", "v"],     # lenited b: /v/ → base b
+    "dh": ["d"],          # lenited d: /ɣ/ → base d
+    "gh": ["g"],          # lenited g: /ɣ/ → base g
+    "mh": ["m"],          # lenited m: /v~w/ → base m
+    "fh": ["f", ""],      # lenited f: silent → base f or deleted
+    "sh": ["s", ""],      # lenited s: silent → base s or deleted
+    "ph": ["f", "p"],     # lenited p: /f/ → f or p (OIr. p loss pathway)
+}
+
 # Epenthetic patterns applied to ALL languages
 _EPENTHETIC_PATTERNS: list[tuple[str, str]] = [
     ("mb", "b"),
@@ -552,14 +740,14 @@ def phonetic_variants(skeleton: str, lang: str) -> list[str]:
     Applies three layers:
     1. Universal corridors (bilabial, dental, velar, sibilant interchange)
     2. Epenthetic removal + double-consonant normalization
-    3. Language-specific shifts (Grimm for OE, digraphs for Latin/Greek)
+    3. Language-specific shifts (Grimm for OE, digraphs for Latin/Greek/OIr.)
 
     Parameters
     ----------
     skeleton:
         Consonant skeleton string (ASCII, lowercase).
     lang:
-        Language code: "lat", "grc", "ang", or other.
+        Language code: "lat", "grc", "ang", "sga", or other.
 
     Returns
     -------
@@ -595,6 +783,8 @@ def phonetic_variants(skeleton: str, lang: str) -> list[str]:
         _apply_digraph_variants(skel, LATIN_PHONETIC, _add)
     elif lang == "grc":
         _apply_digraph_variants(skel, GREEK_PHONETIC, _add)
+    elif lang == "sga":
+        _apply_digraph_variants(skel, OLD_IRISH_PHONETIC, _add)
 
     return result
 
