@@ -13,6 +13,8 @@ LV2 = REPO / "Juthoor-CognateDiscovery-LV2"
 CORPORA = {
     "lat": LV0 / "data/processed/latin/classical/sources/kaikki.jsonl",
     "grc": LV0 / "data/processed/ancient_greek/sources/kaikki.jsonl",
+    "got": LV0 / "data/processed/gothic/sources/kaikki.jsonl",
+    "sga": LV0 / "data/processed/old_irish/sources/kaikki.jsonl",
 }
 
 OUTPUT_DIR = LV2 / "data" / "processed"
@@ -72,7 +74,12 @@ def dedup(lang: str, path: Path) -> int:
     }
     filtered = before_filter - len(lemmas)
 
-    out_name = {"lat": "latin_unique_lemmas.jsonl", "grc": "greek_unique_lemmas.jsonl"}
+    out_name = {
+        "lat": "latin_unique_lemmas.jsonl",
+        "grc": "greek_unique_lemmas.jsonl",
+        "got": "gothic_unique_lemmas.jsonl",
+        "sga": "old_irish_unique_lemmas.jsonl",
+    }
     out_path = OUTPUT_DIR / out_name[lang]
     with open(out_path, "w", encoding="utf-8") as f:
         for entry in sorted(lemmas.values(), key=lambda x: x["lemma"]):

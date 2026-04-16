@@ -3,7 +3,8 @@ Ingest Kaikki.org Wiktionary JSONL dumps into LV0 canonical JSONL.
 
 Supports: Ancient Greek (grc), Latin (la), Old English (ang),
           Middle English (enm), Modern English (en), Hebrew (he),
-          Persian/Farsi (fa), Aramaic (arc), Akkadian (akk), Turkish (tr).
+          Persian/Farsi (fa), Aramaic (arc), Akkadian (akk), Turkish (tr),
+          Gothic (got), Old Irish (sga).
 
 Default input locations (relative to repo root, or under LC_RESOURCES_DIR):
   grc  -> Resources/ancient_greek/kaikki.org-dictionary-AncientGreek.jsonl
@@ -16,6 +17,8 @@ Default input locations (relative to repo root, or under LC_RESOURCES_DIR):
   arc  -> Resources/aramaic/kaikki.org-dictionary-Aramaic.jsonl
   akk  -> Resources/akkadian/kaikki.org-dictionary-Akkadian.jsonl
   tr   -> Resources/turkish/kaikki.org-dictionary-Turkish.jsonl
+  got  -> Resources/gothic/kaikki.org-dictionary-Gothic.jsonl
+  sga  -> Resources/old_irish/kaikki.org-dictionary-OldIrish.jsonl
 
 Default output locations (relative to repo root):
   grc  -> data/processed/ancient_greek/sources/kaikki.jsonl
@@ -28,6 +31,8 @@ Default output locations (relative to repo root):
   arc  -> data/processed/aramaic/classical/sources/kaikki.jsonl
   akk  -> data/processed/akkadian/sources/kaikki.jsonl
   tr   -> data/processed/turkish/sources/kaikki.jsonl
+  got  -> data/processed/gothic/sources/kaikki.jsonl
+  sga  -> data/processed/old_irish/sources/kaikki.jsonl
 """
 
 from __future__ import annotations
@@ -67,6 +72,8 @@ LANG_MAP: dict[str, tuple[str, str, str]] = {
     "arc": ("arc", "classical", "Hebr"),
     "akk": ("akk", "ancient", "Xsux"),
     "tr":  ("tur", "modern", "Latn"),
+    "got": ("got", "ancient", "Latn"),
+    "sga": ("sga", "old", "Latn"),
 }
 
 # lang_code -> relative path WITHIN Resources/ (no Resources/ prefix)
@@ -81,6 +88,8 @@ LANG_CODE_TO_FILE: dict[str, str] = {
     "arc": "aramaic/kaikki.org-dictionary-Aramaic.jsonl",
     "akk": "akkadian/kaikki.org-dictionary-Akkadian.jsonl",
     "tr":  "turkish/kaikki.org-dictionary-Turkish.jsonl",
+    "got": "gothic/kaikki.org-dictionary-Gothic.jsonl",
+    "sga": "old_irish/kaikki.org-dictionary-OldIrish.jsonl",
 }
 
 _DEFAULT_OUTPUT: dict[str, str] = {
@@ -94,6 +103,8 @@ _DEFAULT_OUTPUT: dict[str, str] = {
     "arc": "data/processed/aramaic/classical/sources/kaikki.jsonl",
     "akk": "data/processed/akkadian/sources/kaikki.jsonl",
     "tr":  "data/processed/turkish/sources/kaikki.jsonl",
+    "got": "data/processed/gothic/sources/kaikki.jsonl",
+    "sga": "data/processed/old_irish/sources/kaikki.jsonl",
 }
 
 _TURKISH_FALLBACK_ENTRIES: tuple[tuple[str, str, str, str], ...] = (
