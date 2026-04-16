@@ -664,10 +664,12 @@ def run_matching(
             # 3. Best Jaccard across all skeleton pair combinations
             best_j, best_ai, best_ti = best_jaccard_pair(ar_skel_sets, tgt_skel_sets)
 
-            # 4. Ordered overlap on primary skeletons
-            primary_tgt = tgt_entry["all_skeletons"][0]
-            tgt_len = len(primary_tgt)
-            ord_ov = ordered_overlap(primary_latin, primary_tgt)
+            # 4. Ordered overlap on the BEST matched skeleton pair (not primary)
+            best_ar = ar_entry["all_skeletons"][best_ai]
+            best_tgt = tgt_entry["all_skeletons"][best_ti]
+            best_ar_len = len(best_ar)
+            best_tgt_len = len(best_tgt)
+            ord_ov = ordered_overlap(best_ar, best_tgt)
             ord_ov_len = len(ord_ov)
 
             # 5. Gate: pass if Jaccard >= threshold OR ordered_overlap >= min_overlap
@@ -676,8 +678,8 @@ def run_matching(
 
             total_considered += 1
 
-            # 6. Compute composite discovery score
-            score = _discovery_score(best_j, ord_ov_len, ar_len, tgt_len)
+            # 6. Compute composite discovery score using best-matched pair
+            score = _discovery_score(best_j, ord_ov_len, best_ar_len, best_tgt_len)
 
             # 7. Per-root top-K heap (or unlimited if top_k=0)
             if top_k > 0:
