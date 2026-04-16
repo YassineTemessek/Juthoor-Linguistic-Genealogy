@@ -97,7 +97,9 @@ def load_discoveries(ipa_grc: dict, ipa_lat: dict, ar_lookup: dict) -> list:
         }
 
     # Source 1: Pipeline discoveries (Greek + Latin)
-    for lang, fname in [("grc", "eye2_final_grc.jsonl"), ("lat", "eye2_final_lat.jsonl")]:
+    for lang, fname in [("grc", "eye2_final_grc.jsonl"), ("lat", "eye2_final_lat.jsonl"),
+                         ("got", "eye2_final_got.jsonl"), ("ang", "eye2_final_ang.jsonl"),
+                         ("sga", "eye2_final_sga.jsonl")]:
         path = LV2 / "outputs" / fname
         if not path.exists():
             continue
