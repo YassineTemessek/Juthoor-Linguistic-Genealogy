@@ -344,8 +344,8 @@ def run_evaluation(n_permutations: int = 100, verbose: bool = False) -> dict:
     # ---- Load data ----
     if verbose:
         print("\n[1/5] Loading corpora...")
-    arabic = load_arabic(100)
-    target = load_target(200)
+    arabic = load_arabic(200)
+    target = load_target(300)
     if verbose:
         print(f"  Arabic: {len(arabic)} | Target: {len(target)} | "
               f"Pairs: {len(arabic) * len(target):,}")
