@@ -112,12 +112,18 @@ def _norm_arabic(text: str) -> str:
 # POS filter for kaikki corpora
 # ---------------------------------------------------------------------------
 
+_CONTENT_POS = frozenset({
+    "noun", "verb", "adj", "adv", "adjective", "adverb",
+    "name", "proper noun", "numeral", "",
+})
+
+
 def _pos_ok(pos: list | str | None) -> bool:
     if pos is None:
         return True
     if isinstance(pos, list):
-        return any(p in ("noun", "verb", "adj", "adv", "adjective", "adverb", "") for p in pos)
-    return True
+        return any(p.lower() in _CONTENT_POS for p in pos)
+    return pos.lower() in _CONTENT_POS
 
 
 # ---------------------------------------------------------------------------
@@ -439,8 +445,10 @@ def build_target_skeleton_index(
                 "alt_lemmas": [],
             }
         else:
-            # Collapse into existing entry — just record the lemma
-            by_primary_skel[primary_skel]["alt_lemmas"].append(lemma)
+            # Collapse into existing entry — store full info for recovery
+            by_primary_skel[primary_skel]["alt_lemmas"].append({
+                "lemma": lemma, "ipa": ipa or "", "lang": lang,
+            })
 
     augmented = list(by_primary_skel.values())
     print(
@@ -699,9 +707,14 @@ def run_matching(
             ar_skel_sets = ar_entry["all_skels_sets"]
             tgt_skel_sets = tgt_entry["all_skels_sets"]
             overlap_chars = sorted(ar_skel_sets[best_ai] & tgt_skel_sets[best_ti])
-            primary_tgt = tgt_entry["all_skeletons"][0]
 
-            matches.append({
+            # Bug 3 fix: use the BEST matched skeleton pair for ratio/length,
+            # not the primary skeleton which may be a different variant
+            ar_skel_for_ratio = best_ar_skel
+            tgt_skel_for_ratio = best_tgt_skel
+            min_len = min(len(ar_skel_for_ratio), len(tgt_skel_for_ratio))
+
+            match_record = {
                 "arabic_root": ar_entry["arabic_root"],
                 "arabic_skeleton": best_ar_skel,
                 "target_lemma": tgt_entry["lemma"],
@@ -713,12 +726,20 @@ def run_matching(
                 "n_lemmas": 1 + len(tgt_entry.get("alt_lemmas", [])),
                 "discovery_score": round(score, 4),
                 "ordered_overlap_ratio": round(
-                    len(ord_ov) / min(len(ar_entry["primary_latin"]), len(primary_tgt))
-                    if min(len(ar_entry["primary_latin"]), len(primary_tgt)) > 0 else 0, 3
+                    len(ord_ov) / min_len if min_len > 0 else 0, 3
                 ),
-                "ar_skel_len": len(ar_entry["primary_latin"]),
-                "tgt_skel_len": len(primary_tgt),
-            })
+                "ar_skel_len": len(ar_skel_for_ratio),
+                "tgt_skel_len": len(tgt_skel_for_ratio),
+            }
+            matches.append(match_record)
+
+            # Bug 1 fix: emit alt_lemmas as separate records so Eye 2 sees all
+            for alt in tgt_entry.get("alt_lemmas", []):
+                alt_record = dict(match_record)
+                alt_lemma = alt["lemma"] if isinstance(alt, dict) else alt
+                alt_record["target_lemma"] = alt_lemma
+                alt_record["is_alt"] = True
+                matches.append(alt_record)
 
     elapsed = time.time() - t0
     total_passed = sum(len(h) for h in root_heaps.values())
