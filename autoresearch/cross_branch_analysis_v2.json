@@ -1,5 +1,5 @@
 {
-  "total_findings": 694,
+  "total_findings": 736,
   "by_language": {
     "grc": {
       "confirmed_cognate": 54,
@@ -22,12 +22,12 @@
       "plausible_link": 0
     },
     "non": {
-      "confirmed_cognate": 13,
-      "plausible_link": 229
+      "confirmed_cognate": 17,
+      "plausible_link": 260
     },
     "cy": {
       "confirmed_cognate": 2,
-      "plausible_link": 12
+      "plausible_link": 19
     }
   },
   "cross_branch_roots": [
@@ -288,6 +288,26 @@
         [
           "cy",
           "ymosodiad",
+          "plausible_link"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "بجح",
+      "branches": [
+        "Celtic-Brythonic",
+        "North-Germanic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "non",
+          "fágandi",
+          "plausible_link"
+        ],
+        [
+          "cy",
+          "awch",
           "plausible_link"
         ]
       ]
