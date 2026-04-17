@@ -1,173 +1,295 @@
-"""Build the Juthoor LV2 Discoveries Dashboard (single HTML file with embedded data).
+"""Build the Juthoor LV2 Discoveries Dashboard — detective-mode findings.
 
-Enriches each record with:
-  - tgt_ipa, tgt_gloss  : from greek_ipa_gloss_lookup.json / latin_ipa_gloss_lookup.json
-  - ar_def, ar_translit : from LV0 lexemes.jsonl (root_norm lookup)
+Data sources (in priority order):
+  1. autoresearch/grc_lat_reinvestigation.json  — 907 Greek/Latin pairs reinvestigated
+  2. autoresearch/wave1_reinvestigation.json     — 137 got/ang/sga pairs reinvestigated
+  3. autoresearch/confirmed_cognates_analysis.json — 135 confirmed cognates (cross-branch)
+  4. outputs/eye2_results/non/                  — Old Norse pilot batch findings
+     (pair metadata: outputs/eye2_agent_batches/non/)
+  5. Legacy: eye2_final_*.jsonl                 — old score-based records (backwards compat)
 """
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 LV2  = ROOT / "Juthoor-CognateDiscovery-LV2"
-LV0  = ROOT / "Juthoor-DataCore-LV0"
+AUTORESEARCH = ROOT / "autoresearch"
+
+# ── Language metadata ──────────────────────────────────────────────────────────
+
+BRANCH_MAP = {
+    "grc": "Hellenic",
+    "lat": "Italic",
+    "got": "Germanic-East",
+    "ang": "Germanic-West",
+    "sga": "Celtic",
+    "non": "North-Germanic",
+    "eng": "Germanic-West",
+    "deu": "Germanic-West",
+    "fra": "Italic",
+    "spa": "Italic",
+    "ita": "Italic",
+    "fa":  "Indo-Iranian",
+    "syc": "Semitic",
+}
+
+LANG_LABEL = {
+    "grc": "Ancient Greek",
+    "lat": "Latin",
+    "got": "Gothic",
+    "ang": "Old English",
+    "sga": "Old Irish",
+    "non": "Old Norse",
+    "eng": "English",
+    "deu": "German",
+    "fra": "French",
+    "spa": "Spanish",
+    "ita": "Italian",
+    "fa":  "Persian",
+    "syc": "Syriac",
+}
 
 
-# ── Lookup builders ────────────────────────────────────────────────────────────
+# ── Data loading ───────────────────────────────────────────────────────────────
 
-def build_ipa_lookup(lang: str) -> dict:
-    fname = "greek_ipa_gloss_lookup.json" if lang == "grc" else "latin_ipa_gloss_lookup.json"
-    path  = LV2 / "data" / "processed" / fname
-    if not path.exists():
-        print(f"[warn] IPA lookup not found: {path}", file=sys.stderr)
-        return {}
-    data = json.loads(path.read_text(encoding="utf-8"))
-    print(f"[{lang}] IPA/gloss lookup: {len(data):,} entries", file=sys.stderr)
-    return data
-
-
-def build_arabic_lookup() -> dict:
-    """Build root_norm -> {def, translit} from LV0 lexemes. First occurrence wins."""
-    path = LV0 / "data" / "processed" / "arabic" / "classical" / "lexemes.jsonl"
-    if not path.exists():
-        print(f"[warn] Arabic lexemes not found: {path}", file=sys.stderr)
+def load_non_meta() -> dict:
+    """Build pair_id -> {arabic_root, target_lemma} from NON agent-batch metadata."""
+    meta_dir = LV2 / "outputs" / "eye2_agent_batches" / "non"
+    if not meta_dir.exists():
+        print("[warn] NON meta dir not found:", meta_dir, file=sys.stderr)
         return {}
     lookup: dict = {}
-    with open(path, encoding="utf-8") as fh:
-        for line in fh:
-            if not line.strip():
-                continue
-            r = json.loads(line)
-            rn = r.get("root_norm", "")
-            if rn and rn not in lookup:
-                defn = (r.get("definition") or r.get("short_gloss") or "").strip()
-                lookup[rn] = {
-                    "def":     defn[:160] if defn else "",
-                    "translit": (r.get("translit") or "").strip(),
+    for fp in sorted(meta_dir.glob("*_meta.json")):
+        with open(fp, encoding="utf-8") as fh:
+            records = json.load(fh)
+        for r in records:
+            pid = r.get("pair_id", "")
+            if pid:
+                lookup[pid] = {
+                    "arabic_root":  r.get("arabic_root", ""),
+                    "target_lemma": r.get("target_lemma", ""),
                 }
-    print(f"[ara] Lexeme lookup: {len(lookup):,} entries", file=sys.stderr)
+    print(f"[non] Meta lookup: {len(lookup):,} pair IDs", file=sys.stderr)
     return lookup
 
 
-# ── Discovery loading & enrichment ─────────────────────────────────────────────
-
-def load_discoveries(ipa_grc: dict, ipa_lat: dict, ar_lookup: dict) -> list:
-    """Load ALL scored pairs from every source, merge into unified language categories.
-
-    Language mapping: grc, lat, eng, fra, deu, ang, spa, ita, fa, syc, non, other.
-    No separate 'gold reference' category — everything merges into its proper language.
-    Dedup by (arabic, target) key — keep the highest score.
-    """
-    # Unified language normalization
-    LANG_MAP = {
-        "grc": "grc", "lat": "lat", "eng": "eng", "fra": "fra",
-        "deu": "deu", "ang": "ang", "spa": "spa", "ita": "ita",
-        "fa": "fa", "syc": "syc", "non": "non",
-    }
-
-    # Collect all pairs keyed by (ar, tgt) — keep highest score
-    best: dict[tuple, dict] = {}
-
-    def _add(ar, tgt, score, lang, method, reasoning, model, tgt_ipa="", tgt_gloss=""):
-        key = (ar, tgt)
-        if key in best and best[key]["score"] >= score:
-            return
-        ar_def = ""
-        ar_translit = ""
-        if ar in ar_lookup:
-            ar_def = ar_lookup[ar]["def"]
-            ar_translit = ar_lookup[ar]["translit"]
-        # IPA + gloss enrichment from lookup maps
-        if not tgt_ipa and not tgt_gloss:
-            if lang == "grc" and tgt in ipa_grc:
-                tgt_ipa = (ipa_grc[tgt].get("ipa") or "").strip()
-                tgt_gloss = (ipa_grc[tgt].get("gloss") or "").strip()
-            elif lang == "lat" and tgt in ipa_lat:
-                tgt_ipa = (ipa_lat[tgt].get("ipa") or "").strip()
-                tgt_gloss = (ipa_lat[tgt].get("gloss") or "").strip()
-        best[key] = {
-            "ar": ar, "tgt": tgt,
-            "score": round(score, 3),
-            "lang": LANG_MAP.get(lang, "other"),
-            "method": (method or "weak").strip(),
-            "reasoning": (reasoning or "").strip()[:200],
-            "model": (model or "unknown").strip(),
-            "tgt_ipa": tgt_ipa, "tgt_gloss": (tgt_gloss or "")[:120],
-            "ar_def": (ar_def or "")[:160], "ar_translit": ar_translit,
-        }
-
-    # Source 1: Pipeline discoveries (Greek + Latin)
-    for lang, fname in [("grc", "eye2_final_grc.jsonl"), ("lat", "eye2_final_lat.jsonl"),
-                         ("got", "eye2_final_got.jsonl"), ("ang", "eye2_final_ang.jsonl"),
-                         ("sga", "eye2_final_sga.jsonl")]:
-        path = LV2 / "outputs" / fname
-        if not path.exists():
-            continue
-        count = 0
-        with open(path, encoding="utf-8") as fh:
-            for line in fh:
-                if not line.strip(): continue
-                r = json.loads(line)
-                if r.get("semantic_score", 0) < 0.3: continue
-                _add(r.get("source_lemma", ""), r.get("target_lemma", ""),
-                     r.get("semantic_score", 0), lang,
-                     r.get("method", ""), r.get("reasoning", ""),
-                     r.get("final_model") or r.get("model", ""))
-                count += 1
-        print(f"[{lang}] {count} pipeline records", file=sys.stderr)
-
-    # Source 2: Scored pairs from all sources — merge into proper language
-    for fname in ["eye2_final_beyond_name.jsonl"]:
-        path = LV2 / "outputs" / fname
-        if not path.exists():
-            continue
-        count = 0
-        with open(path, encoding="utf-8") as fh:
-            for line in fh:
-                if not line.strip(): continue
-                r = json.loads(line)
-                if r.get("semantic_score", 0) < 0.3: continue
-                # Use target_lang to route to proper language category
-                target_lang = (r.get("target_lang") or "eng").strip()
-                _add(r.get("source_lemma", ""), r.get("target_lemma", ""),
-                     r.get("semantic_score", 0), target_lang,
-                     r.get("method", ""), r.get("reasoning", ""),
-                     r.get("model", ""))
-                count += 1
-        print(f"[merged] {count} records from {fname}", file=sys.stderr)
-
-    # Source 3: Original Eye 2 gold pair scores (English + Latin)
-    for gold_fname, default_lang in [
-        ("eye2_eng_semantic_scores.jsonl", "eng"),
-        ("eye2_semantic_scores.jsonl", "lat"),
-    ]:
-        path = LV2 / "data" / "llm_annotations" / gold_fname
-        if not path.exists():
-            continue
-        count = 0
-        with open(path, encoding="utf-8") as fh:
-            for line in fh:
-                if not line.strip(): continue
-                r = json.loads(line)
-                if r.get("semantic_score", 0) < 0.3: continue
-                lang_pair = r.get("lang_pair", "")
-                lang = lang_pair.split("-")[-1] if "-" in lang_pair else default_lang
-                _add(r.get("source_lemma", ""), r.get("target_lemma", ""),
-                     r.get("semantic_score", 0), lang,
-                     r.get("method", ""), r.get("reasoning", "") or r.get("path", ""),
-                     r.get("annotator", "") or "claude")
-                count += 1
-        print(f"[{default_lang}] {count} original Eye 2 records", file=sys.stderr)
-
-    records = sorted(best.values(), key=lambda x: -x["score"])
-    # Print summary by language
-    from collections import Counter
-    langs = Counter(r["lang"] for r in records)
-    print(f"\nTotal unique records: {len(records):,}", file=sys.stderr)
-    for lang, cnt in langs.most_common():
-        above05 = sum(1 for r in records if r["lang"] == lang and r["score"] >= 0.5)
-        print(f"  {lang}: {cnt} records, {above05} >=0.5", file=sys.stderr)
+def load_grc_lat_reinvestigation() -> list:
+    """Load grc_lat_reinvestigation.json — 907 pairs."""
+    path = AUTORESEARCH / "grc_lat_reinvestigation.json"
+    if not path.exists():
+        print("[warn] grc_lat_reinvestigation.json not found", file=sys.stderr)
+        return []
+    with open(path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    records = []
+    for r in data:
+        lang = r.get("lang", "grc")
+        records.append({
+            "lang":            lang,
+            "branch":          BRANCH_MAP.get(lang, "Unknown"),
+            "arabic_root":     r.get("arabic_root", ""),
+            "target_lemma":    r.get("target_lemma", ""),
+            "verdict":         r.get("verdict", ""),
+            "confidence":      r.get("confidence", ""),
+            "journey_type":    r.get("journey_type", ""),
+            "semantic_journey": r.get("semantic_journey", ""),
+            "key_insight":     r.get("key_insight", ""),
+            "original_score":  r.get("original_score", 0.0),
+            "original_method": r.get("original_method", ""),
+            "source":          "grc_lat_reinvestigation",
+        })
+    print(f"[grc_lat] Loaded {len(records):,} reinvestigation records", file=sys.stderr)
     return records
+
+
+def load_wave1_reinvestigation() -> list:
+    """Load wave1_reinvestigation.json — 137 got/ang/sga pairs."""
+    path = AUTORESEARCH / "wave1_reinvestigation.json"
+    if not path.exists():
+        print("[warn] wave1_reinvestigation.json not found", file=sys.stderr)
+        return []
+    with open(path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    records = []
+    for r in data:
+        lang = r.get("lang", "got")
+        records.append({
+            "lang":            lang,
+            "branch":          BRANCH_MAP.get(lang, "Unknown"),
+            "arabic_root":     r.get("arabic_root", ""),
+            "target_lemma":    r.get("target_lemma", ""),
+            "verdict":         r.get("verdict", ""),
+            "confidence":      r.get("confidence", ""),
+            "journey_type":    r.get("journey_type", ""),
+            "semantic_journey": r.get("semantic_journey", ""),
+            "key_insight":     r.get("key_insight", ""),
+            "original_score":  r.get("original_score", 0.0),
+            "original_method": "",
+            "source":          "wave1_reinvestigation",
+        })
+    print(f"[wave1] Loaded {len(records):,} reinvestigation records", file=sys.stderr)
+    return records
+
+
+def load_non_pilot(non_meta: dict) -> list:
+    """Load Old Norse Eye 2 pilot batch findings, merging with metadata."""
+    results_dir = LV2 / "outputs" / "eye2_results" / "non"
+    if not results_dir.exists():
+        print("[warn] NON results dir not found:", results_dir, file=sys.stderr)
+        return []
+    records = []
+    for fp in sorted(results_dir.glob("batch_*.json")):
+        with open(fp, encoding="utf-8") as fh:
+            batch = json.load(fh)
+        for r in batch:
+            pid = r.get("pair_id", "")
+            meta = non_meta.get(pid, {})
+            ar   = meta.get("arabic_root", "")
+            tgt  = meta.get("target_lemma", "")
+            if not ar or not tgt:
+                continue  # skip if we can't identify the pair
+            records.append({
+                "lang":            "non",
+                "branch":          "North-Germanic",
+                "arabic_root":     ar,
+                "target_lemma":    tgt,
+                "verdict":         r.get("verdict", ""),
+                "confidence":      r.get("confidence", ""),
+                "journey_type":    r.get("journey_type", ""),
+                "semantic_journey": r.get("semantic_journey", ""),
+                "key_insight":     r.get("key_insight", ""),
+                "original_score":  0.0,
+                "original_method": "",
+                "source":          "non_pilot",
+            })
+    print(f"[non] Loaded {len(records):,} pilot records", file=sys.stderr)
+    return records
+
+
+def load_confirmed_analysis() -> dict:
+    """Load confirmed_cognates_analysis.json for cross-branch cognate set."""
+    path = AUTORESEARCH / "confirmed_cognates_analysis.json"
+    if not path.exists():
+        print("[warn] confirmed_cognates_analysis.json not found", file=sys.stderr)
+        return {"cross_branch_roots": [], "all_confirmed": []}
+    with open(path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    return data
+
+
+def load_legacy_records() -> list:
+    """Load old eye2_final_*.jsonl files as legacy records (backwards compat)."""
+    legacy = []
+    for lang, fname in [("grc", "eye2_final_grc.jsonl"),
+                        ("lat", "eye2_final_lat.jsonl"),
+                        ("got", "eye2_final_got.jsonl"),
+                        ("ang", "eye2_final_ang.jsonl"),
+                        ("sga", "eye2_final_sga.jsonl")]:
+        path = LV2 / "outputs" / fname
+        if not path.exists():
+            continue
+        count = 0
+        with open(path, encoding="utf-8") as fh:
+            for line in fh:
+                if not line.strip():
+                    continue
+                r = json.loads(line)
+                score = r.get("semantic_score", 0)
+                if score < 0.5:
+                    continue
+                legacy.append({
+                    "lang":            lang,
+                    "branch":          BRANCH_MAP.get(lang, "Unknown"),
+                    "arabic_root":     r.get("source_lemma", ""),
+                    "target_lemma":    r.get("target_lemma", ""),
+                    "verdict":         "legacy_scored",
+                    "confidence":      "medium" if score >= 0.8 else "low",
+                    "journey_type":    r.get("method", "unknown"),
+                    "semantic_journey": r.get("reasoning", ""),
+                    "key_insight":     r.get("reasoning", "")[:120],
+                    "original_score":  round(score, 3),
+                    "original_method": r.get("method", ""),
+                    "source":          "legacy_eye2",
+                })
+                count += 1
+        print(f"[legacy] {count} records from {fname}", file=sys.stderr)
+    return legacy
+
+
+def merge_records(all_records: list, cross_branch_roots: list) -> list:
+    """Deduplicate by (arabic_root, target_lemma) — prefer detective findings over legacy.
+    Then annotate cross-branch cognates."""
+    source_priority = {
+        "grc_lat_reinvestigation": 0,
+        "wave1_reinvestigation":   1,
+        "non_pilot":               2,
+        "legacy_eye2":             3,
+    }
+    best: dict = {}
+    for r in all_records:
+        key = (r["arabic_root"].strip(), r["target_lemma"].strip())
+        if not key[0] or not key[1]:
+            continue
+        existing = best.get(key)
+        if existing is None:
+            best[key] = r
+        else:
+            # prefer lower source priority number (detective > legacy)
+            if source_priority.get(r["source"], 99) < source_priority.get(existing["source"], 99):
+                best[key] = r
+
+    # Build cross-branch set for annotation
+    cross_branch_ar = {r["arabic_root"] for r in cross_branch_roots}
+
+    records = []
+    for r in best.values():
+        r = dict(r)
+        r["cross_branch"] = r["arabic_root"] in cross_branch_ar
+        records.append(r)
+
+    # Sort: confirmed first, then by confidence, then alphabetically
+    verdict_order = {
+        "confirmed_cognate": 0,
+        "confirmed":         0,
+        "plausible_link":    1,
+        "shared_loanword":   2,
+        "proper_name":       3,
+        "false_positive":    4,
+        "legacy_scored":     5,
+    }
+    confidence_order = {"high": 0, "medium": 1, "low": 2}
+    records.sort(key=lambda r: (
+        verdict_order.get(r["verdict"], 9),
+        confidence_order.get(r["confidence"], 9),
+        r["arabic_root"],
+    ))
+    return records
+
+
+def print_summary(records: list):
+    """Print a summary of the merged records."""
+    print(f"\nTotal unique pairs: {len(records):,}", file=sys.stderr)
+    verdicts = Counter(r["verdict"] for r in records)
+    print("\nBy verdict:", file=sys.stderr)
+    for v, cnt in verdicts.most_common():
+        print(f"  {v}: {cnt}", file=sys.stderr)
+
+    langs = Counter(r["lang"] for r in records)
+    print("\nBy language:", file=sys.stderr)
+    for lang, cnt in langs.most_common():
+        confirmed = sum(1 for r in records
+                        if r["lang"] == lang
+                        and r["verdict"] in ("confirmed_cognate", "confirmed"))
+        print(f"  {lang} ({LANG_LABEL.get(lang, lang)}): {cnt} total, "
+              f"{confirmed} confirmed", file=sys.stderr)
+
+    jtypes = Counter(r["journey_type"] for r in records
+                     if r["verdict"] in ("confirmed_cognate", "confirmed"))
+    print("\nConfirmed by journey type:", file=sys.stderr)
+    for jt, cnt in jtypes.most_common():
+        print(f"  {jt}: {cnt}", file=sys.stderr)
 
 
 # ── HTML template ──────────────────────────────────────────────────────────────
@@ -177,7 +299,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Juthoor Codex &mdash; Cognate Discoveries</title>
+<title>Juthoor Codex &mdash; Detective Findings</title>
 <style>
 /* ── CSS custom properties / themes ── */
 :root, [data-theme="light"] {
@@ -204,28 +326,21 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --input-border:     #e8e0d4;
   --input-shadow:     inset 0 1px 3px rgba(44,36,32,0.06);
   --table-hover:      rgba(26,61,52,0.04);
-  --score-hi-bg:      #d4edda; --score-hi-text:  #1e7a46;
-  --score-med-bg:     #fef3c7; --score-med-text: #b8860b;
-  --score-lo-bg:      #f0ebe3; --score-lo-text:  #8a7e72;
-  --badge-grc-border: #1a3d34; --badge-grc-text: #1a3d34;
-  --badge-lat-border: #c2524a; --badge-lat-text: #c2524a;
-  --badge-eng-border: #2d6a2d; --badge-eng-text: #2d6a2d;
-  --badge-oth-border: #b8860b; --badge-oth-text: #b8860b;
-  --chart-grc:        #1a3d34;
-  --chart-lat:        #c2524a;
-  --chart-btn:        #b8860b;
-  --chart-track:      #e8e0d4;
-  --stat-grc-color:   #1a3d34;
-  --stat-lat-color:   #c2524a;
-  --stat-btn-color:   #b8860b;
-  --stat-hi-color:    #1e7a46;
-  --stat-med-color:   #b8860b;
-  --method-masadiq-border:  #1a3d34; --method-masadiq-text:  #1a3d34;
-  --method-mafahim-border:  #6b3fa0; --method-mafahim-text:  #6b3fa0;
-  --method-combined-border: #b8860b; --method-combined-text: #b8860b;
-  --method-weak-border:     #8a7e72; --method-weak-text:     #8a7e72;
-  --detail-bg:        #f7f4ef;
-  --detail-border:    #b8860b;
+  --verdict-confirmed-bg:   #d4edda; --verdict-confirmed-text:  #1e7a46;
+  --verdict-plausible-bg:   #fef3c7; --verdict-plausible-text:  #b8860b;
+  --verdict-loanword-bg:    #e8f0fe; --verdict-loanword-text:   #3b5bdb;
+  --verdict-proper-bg:      #f3e8ff; --verdict-proper-text:     #6b21a8;
+  --verdict-false-bg:       #f5f5f5; --verdict-false-text:      #6b7280;
+  --verdict-legacy-bg:      #fff7ed; --verdict-legacy-text:     #c2410c;
+  --conf-high-color:        #1e7a46;
+  --conf-medium-color:      #b8860b;
+  --conf-low-color:         #8a7e72;
+  --cross-branch-bg:        #fef3c7;
+  --cross-branch-border:    #d97706;
+  --detail-bg:              #f7f4ef;
+  --detail-border:          #b8860b;
+  --journey-bg:             #f9f7f4;
+  --journey-border:         #e8e0d4;
 }
 [data-theme="warm"] {
   --bg:               #f2e8d5;
@@ -251,28 +366,21 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --input-border:     #c8a870;
   --input-shadow:     inset 0 1px 3px rgba(60,30,0,0.08);
   --table-hover:      rgba(26,61,52,0.06);
-  --score-hi-bg:      #c8e6c9; --score-hi-text:  #1b5e20;
-  --score-med-bg:     #fde8a0; --score-med-text: #92600a;
-  --score-lo-bg:      #e8d9be; --score-lo-text:  #7a6040;
-  --badge-grc-border: #1a3d34; --badge-grc-text: #1a3d34;
-  --badge-lat-border: #b03028; --badge-lat-text: #b03028;
-  --badge-eng-border: #256025; --badge-eng-text: #256025;
-  --badge-oth-border: #a07010; --badge-oth-text: #a07010;
-  --chart-grc:        #1a3d34;
-  --chart-lat:        #b03028;
-  --chart-btn:        #c49010;
-  --chart-track:      #d4be96;
-  --stat-grc-color:   #1a3d34;
-  --stat-lat-color:   #b03028;
-  --stat-btn-color:   #c49010;
-  --stat-hi-color:    #1b5e20;
-  --stat-med-color:   #92600a;
-  --method-masadiq-border:  #1a3d34; --method-masadiq-text:  #1a3d34;
-  --method-mafahim-border:  #5a2e90; --method-mafahim-text:  #5a2e90;
-  --method-combined-border: #c49010; --method-combined-text: #c49010;
-  --method-weak-border:     #7a6040; --method-weak-text:     #7a6040;
-  --detail-bg:        #f2e8d5;
-  --detail-border:    #c49010;
+  --verdict-confirmed-bg:   #c8e6c9; --verdict-confirmed-text:  #1b5e20;
+  --verdict-plausible-bg:   #fde8a0; --verdict-plausible-text:  #92600a;
+  --verdict-loanword-bg:    #dce8fc; --verdict-loanword-text:   #2d4ab8;
+  --verdict-proper-bg:      #ead6f5; --verdict-proper-text:     #5b1a8f;
+  --verdict-false-bg:       #e8e0d4; --verdict-false-text:      #5a5040;
+  --verdict-legacy-bg:      #fde8cc; --verdict-legacy-text:     #a03010;
+  --conf-high-color:        #1b5e20;
+  --conf-medium-color:      #92600a;
+  --conf-low-color:         #7a6040;
+  --cross-branch-bg:        #fde8a0;
+  --cross-branch-border:    #b07010;
+  --detail-bg:              #f2e8d5;
+  --detail-border:          #c49010;
+  --journey-bg:             #f7f0e0;
+  --journey-border:         #d4be96;
 }
 [data-theme="dark"] {
   --bg:               #1a1a24;
@@ -298,28 +406,21 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --input-border:     #36363e;
   --input-shadow:     inset 0 1px 3px rgba(0,0,0,0.30);
   --table-hover:      rgba(42,128,96,0.08);
-  --score-hi-bg:      #1a3a22; --score-hi-text:  #4cc870;
-  --score-med-bg:     #2e2010; --score-med-text: #d4a438;
-  --score-lo-bg:      #2e2e3a; --score-lo-text:  #7a7870;
-  --badge-grc-border: #2a8060; --badge-grc-text: #2a8060;
-  --badge-lat-border: #e06860; --badge-lat-text: #e06860;
-  --badge-eng-border: #40a040; --badge-eng-text: #40a040;
-  --badge-oth-border: #d4a438; --badge-oth-text: #d4a438;
-  --chart-grc:        #2a8060;
-  --chart-lat:        #e06860;
-  --chart-btn:        #d4a438;
-  --chart-track:      #36363e;
-  --stat-grc-color:   #2a8060;
-  --stat-lat-color:   #e06860;
-  --stat-btn-color:   #d4a438;
-  --stat-hi-color:    #4cc870;
-  --stat-med-color:   #d4a438;
-  --method-masadiq-border:  #2a8060; --method-masadiq-text:  #2a8060;
-  --method-mafahim-border:  #a070e0; --method-mafahim-text:  #a070e0;
-  --method-combined-border: #d4a438; --method-combined-text: #d4a438;
-  --method-weak-border:     #7a7870; --method-weak-text:     #7a7870;
-  --detail-bg:        #1f1f2c;
-  --detail-border:    #d4a438;
+  --verdict-confirmed-bg:   #1a3a22; --verdict-confirmed-text:  #4cc870;
+  --verdict-plausible-bg:   #2e2010; --verdict-plausible-text:  #d4a438;
+  --verdict-loanword-bg:    #1a2040; --verdict-loanword-text:   #7090e8;
+  --verdict-proper-bg:      #2a1840; --verdict-proper-text:     #c080f0;
+  --verdict-false-bg:       #2e2e3a; --verdict-false-text:      #7a7870;
+  --verdict-legacy-bg:      #2a1808; --verdict-legacy-text:     #e08040;
+  --conf-high-color:        #4cc870;
+  --conf-medium-color:      #d4a438;
+  --conf-low-color:         #7a7870;
+  --cross-branch-bg:        #2e2010;
+  --cross-branch-border:    #d4a438;
+  --detail-bg:              #1f1f2c;
+  --detail-border:          #d4a438;
+  --journey-bg:             #1a1a24;
+  --journey-border:         #36363e;
 }
 
 /* ── Reset ── */
@@ -409,10 +510,7 @@ header {
   cursor: default;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.stat-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--card-shadow-hover);
-}
+.stat-card:hover { transform: translateY(-2px); box-shadow: var(--card-shadow-hover); }
 .stat-label {
   font-size: 0.68rem;
   color: var(--text-muted);
@@ -428,13 +526,15 @@ header {
   line-height: 1.1;
   color: var(--accent);
 }
-.stat-grc .stat-value  { color: var(--stat-grc-color); }
-.stat-lat .stat-value  { color: var(--stat-lat-color); }
-.stat-btn .stat-value  { color: var(--stat-btn-color); }
-.stat-hi  .stat-value  { color: var(--stat-hi-color);  }
-.stat-med .stat-value  { color: var(--stat-med-color); }
+.stat-confirmed .stat-value { color: var(--verdict-confirmed-text); }
+.stat-plausible .stat-value { color: var(--verdict-plausible-text); }
+.stat-cross     .stat-value { color: var(--cross-branch-border); }
+.stat-hellenic  .stat-value { color: #1a3d34; }
+.stat-italic    .stat-value { color: #c2524a; }
+.stat-germanic  .stat-value { color: #6b3fa0; }
+.stat-celtic    .stat-value { color: #2d6a2d; }
 
-/* ── Quick filter chips ── */
+/* ── Filter chips ── */
 #chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -443,6 +543,21 @@ header {
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   align-items: center;
+}
+.chip-section-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-weight: 600;
+  margin-right: 0.2rem;
+  white-space: nowrap;
+}
+.chip-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 0.4rem;
 }
 .chip {
   background: transparent;
@@ -473,43 +588,13 @@ header {
   background: var(--bg-panel);
   border-bottom: 1px solid var(--border);
 }
-.filter-group {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+.filter-group { display: flex; align-items: center; gap: 0.5rem; }
 .filter-label {
   font-size: 0.75rem;
   color: var(--text-muted);
   white-space: nowrap;
   font-weight: 500;
   letter-spacing: 0.03em;
-}
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 140px;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--border);
-  outline: none;
-  cursor: pointer;
-}
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 14px; height: 14px;
-  border-radius: 50%;
-  background: var(--accent);
-  cursor: pointer;
-  border: 2px solid var(--bg);
-  box-shadow: 0 0 0 1px var(--accent);
-}
-#score-val {
-  font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
-  font-size: 0.80rem;
-  color: var(--accent);
-  font-weight: 700;
-  min-width: 2.8rem;
 }
 select, #search-input {
   background: var(--input-bg);
@@ -551,7 +636,7 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
   font-size: 0.68rem;
   color: var(--text-muted);
-  width: 62px;
+  width: 90px;
   text-align: right;
   flex-shrink: 0;
 }
@@ -561,11 +646,11 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   flex: 1;
   border-radius: 3px;
   overflow: hidden;
-  background: var(--chart-track);
+  background: var(--border);
 }
-.chart-bar-grc { background: var(--chart-grc); height: 100%; transition: width 0.25s; }
-.chart-bar-lat { background: var(--chart-lat); height: 100%; transition: width 0.25s; }
-.chart-bar-btn { background: var(--chart-btn); height: 100%; transition: width 0.25s; }
+.chart-bar-confirmed { background: var(--verdict-confirmed-text); height: 100%; transition: width 0.25s; }
+.chart-bar-plausible { background: var(--verdict-plausible-text); height: 100%; transition: width 0.25s; }
+.chart-bar-other     { background: var(--text-muted); height: 100%; transition: width 0.25s; }
 .chart-count {
   font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
   font-size: 0.66rem;
@@ -590,7 +675,6 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
 
 /* ── Table section ── */
 #table-section { padding: 1.25rem 2rem 3rem; }
-
 #pagination {
   display: flex;
   align-items: center;
@@ -599,11 +683,7 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-#page-info {
-  font-size: 0.80rem;
-  color: var(--text-muted);
-  font-style: italic;
-}
+#page-info { font-size: 0.80rem; color: var(--text-muted); font-style: italic; }
 .page-btn {
   background: transparent;
   border: 1px solid var(--border);
@@ -632,17 +712,10 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   font-weight: 500;
   transition: border-color 0.15s, color 0.15s;
 }
-.export-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
+.export-btn:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ── Data table ── */
-#data-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.83rem;
-}
+#data-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
 #data-table th {
   background: transparent;
   color: var(--text-muted);
@@ -660,54 +733,64 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
 #data-table th.sortable:hover { color: var(--text); }
 #data-table th.sort-asc::after  { content: " \25B2"; font-size: 0.58rem; }
 #data-table th.sort-desc::after { content: " \25BC"; font-size: 0.58rem; }
-
 #data-table td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--border);
   vertical-align: top;
 }
 #data-table tr:nth-child(even) > td { background: var(--bg-alt); }
-#data-table tr.data-row:hover > td { background: var(--table-hover); cursor: pointer; }
+#data-table tr.data-row:hover > td  { background: var(--table-hover); cursor: pointer; }
 #data-table tr.detail-row > td {
   background: var(--detail-bg);
   border-left: 3px solid var(--detail-border);
   padding: 1rem 1.25rem;
 }
 
-/* ── Score display ── */
-.score-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3px;
-}
-.score-pill {
-  font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+/* ── Verdict badge ── */
+.verdict-badge {
   display: inline-block;
-  padding: 0.12rem 0.48rem;
+  padding: 0.14rem 0.55rem;
   border-radius: 10px;
-  font-weight: 700;
-  font-size: 0.78rem;
-  min-width: 44px;
-  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
-.score-bar {
-  width: 40px;
-  height: 3px;
-  border-radius: 2px;
-  background: var(--border);
-  overflow: hidden;
+.verdict-confirmed { background: var(--verdict-confirmed-bg); color: var(--verdict-confirmed-text); }
+.verdict-plausible { background: var(--verdict-plausible-bg); color: var(--verdict-plausible-text); }
+.verdict-loanword  { background: var(--verdict-loanword-bg);  color: var(--verdict-loanword-text);  }
+.verdict-proper    { background: var(--verdict-proper-bg);    color: var(--verdict-proper-text);    }
+.verdict-false     { background: var(--verdict-false-bg);     color: var(--verdict-false-text);     }
+.verdict-legacy    { background: var(--verdict-legacy-bg);    color: var(--verdict-legacy-text);    }
+
+/* ── Confidence dot ── */
+.conf-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
 }
-.score-bar-fill {
-  height: 100%;
-  border-radius: 2px;
+.conf-high   { background: var(--conf-high-color);   }
+.conf-medium { background: var(--conf-medium-color);  }
+.conf-low    { background: var(--conf-low-color);     }
+
+/* ── Cross-branch indicator ── */
+.cross-branch-row > td:first-child {
+  border-left: 3px solid var(--cross-branch-border);
 }
-.score-hi  { background: var(--score-hi-bg);  color: var(--score-hi-text);  }
-.score-med { background: var(--score-med-bg); color: var(--score-med-text); }
-.score-lo  { background: var(--score-lo-bg);  color: var(--score-lo-text);  }
-.fill-hi   { background: var(--score-hi-text); }
-.fill-med  { background: var(--score-med-text); }
-.fill-lo   { background: var(--score-lo-text); }
+.cross-tag {
+  display: inline-block;
+  font-size: 0.60rem;
+  background: var(--cross-branch-bg);
+  color: var(--cross-branch-border);
+  border: 1px solid var(--cross-branch-border);
+  border-radius: 3px;
+  padding: 0.06rem 0.3rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-left: 4px;
+  vertical-align: middle;
+}
 
 /* ── Arabic text ── */
 .ar-text {
@@ -719,14 +802,6 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   line-height: 1.6;
   display: block;
 }
-.ar-translit {
-  font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  display: block;
-  margin-top: 0.12rem;
-  font-style: italic;
-}
 
 /* ── Target word ── */
 .tgt-word {
@@ -737,75 +812,47 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   font-weight: 400;
   display: block;
 }
-.tgt-ipa {
-  font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  display: block;
-  margin-top: 0.1rem;
-}
-
-/* ── Meaning text ── */
-.meaning-text {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 200px;
-}
 
 /* ── Lang badge ── */
 .lang-badge {
   display: inline-block;
-  padding: 0.12rem 0.5rem;
+  padding: 0.12rem 0.45rem;
   border-radius: 4px;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   background: transparent;
   border-left: 2px solid currentColor;
-  padding-left: 0.45rem;
 }
-.badge-grc { color: var(--badge-grc-text); border-color: var(--badge-grc-border); }
-.badge-lat { color: var(--badge-lat-text); border-color: var(--badge-lat-border); }
-.badge-eng { color: var(--badge-eng-text); border-color: var(--badge-eng-border); }
-.badge-btn { color: var(--badge-oth-text); border-color: var(--badge-oth-border); }
+.badge-grc { color: #1a3d34; }
+.badge-lat { color: #c2524a; }
+.badge-got { color: #6b3fa0; }
+.badge-ang { color: #2d6a2d; }
+.badge-sga { color: #8b5cf6; }
+.badge-non { color: #0369a1; }
+.badge-oth { color: #b8860b; }
 
-/* ── Method badge ── */
-.method-badge {
+/* ── Journey type badge ── */
+.journey-badge {
   display: inline-block;
   padding: 0.10rem 0.45rem;
   border-radius: 10px;
   border: 1px solid currentColor;
-  font-size: 0.65rem;
+  font-size: 0.63rem;
   font-weight: 500;
   white-space: nowrap;
+  color: var(--text-muted);
   background: transparent;
 }
-.method-masadiq  { color: var(--method-masadiq-text);  border-color: var(--method-masadiq-border);  }
-.method-mafahim  { color: var(--method-mafahim-text);  border-color: var(--method-mafahim-border);  }
-.method-combined { color: var(--method-combined-text); border-color: var(--method-combined-border); }
-.method-weak     { color: var(--method-weak-text);     border-color: var(--method-weak-border);     }
 
-/* ── Reasoning cell ── */
-.reasoning-cell {
+/* ── Key insight cell ── */
+.insight-cell {
   font-size: 0.75rem;
   color: var(--text-muted);
-  max-width: 240px;
+  max-width: 260px;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-/* ── Model text ── */
-.model-text {
-  font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
-  font-size: 0.62rem;
-  color: var(--text-muted);
-  opacity: 0.6;
   white-space: nowrap;
 }
 
@@ -824,11 +871,18 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   letter-spacing: 0.07em;
   margin-bottom: 0.3rem;
 }
-.detail-panel .dp-value {
+.detail-panel .dp-value { color: var(--text); line-height: 1.6; }
+.detail-journey { grid-column: 1 / -1; }
+.journey-text {
+  background: var(--journey-bg);
+  border: 1px solid var(--journey-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  line-height: 1.7;
+  font-size: 0.83rem;
   color: var(--text);
-  line-height: 1.6;
+  white-space: pre-wrap;
 }
-.detail-reasoning { grid-column: 1 / -1; }
 
 /* ── No results ── */
 #no-results {
@@ -840,7 +894,7 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   display: none;
 }
 
-/* ── Export section ── */
+/* ── Export ── */
 #export-section { display: flex; gap: 0.4rem; align-items: center; }
 
 /* ── Responsive ── */
@@ -848,9 +902,8 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   header, #stats-bar, #chip-row, #filter-bar, #chart-section, #table-section {
     padding-left: 1rem; padding-right: 1rem;
   }
-  #data-table th:nth-child(5), #data-table td:nth-child(5),
-  #data-table th:nth-child(8), #data-table td:nth-child(8),
-  #data-table th:nth-child(9), #data-table td:nth-child(9) { display: none; }
+  #data-table th:nth-child(6), #data-table td:nth-child(6),
+  #data-table th:nth-child(7), #data-table td:nth-child(7) { display: none; }
   #search-input { width: 140px; }
   .stat-card { max-width: none; }
   .stat-value { font-size: 1.7rem; }
@@ -863,7 +916,7 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
 <header>
   <div class="header-left">
     <h1>Juthoor Codex</h1>
-    <p>Arabic cognate discoveries &mdash; Greek, Latin, English &amp; other languages</p>
+    <p>Arabic cognate discoveries &mdash; detective-mode semantic journeys</p>
   </div>
   <div class="theme-switcher">
     <button class="theme-btn active" data-t="light"  onclick="setTheme('light')">Light</button>
@@ -873,74 +926,96 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
 </header>
 
 <div id="stats-bar">
-  <div class="stat-card stat-total">
-    <div class="stat-label">Total</div>
+  <div class="stat-card">
+    <div class="stat-label">Total Pairs</div>
     <div class="stat-value" id="stat-total">&mdash;</div>
   </div>
-  <div class="stat-card stat-grc">
+  <div class="stat-card stat-confirmed">
+    <div class="stat-label">Confirmed</div>
+    <div class="stat-value" id="stat-confirmed">&mdash;</div>
+  </div>
+  <div class="stat-card stat-plausible">
+    <div class="stat-label">Plausible</div>
+    <div class="stat-value" id="stat-plausible">&mdash;</div>
+  </div>
+  <div class="stat-card stat-cross">
+    <div class="stat-label">Cross-Branch</div>
+    <div class="stat-value" id="stat-cross">&mdash;</div>
+  </div>
+  <div class="stat-card stat-hellenic">
     <div class="stat-label">Greek</div>
     <div class="stat-value" id="stat-grc">&mdash;</div>
   </div>
-  <div class="stat-card stat-lat">
+  <div class="stat-card stat-italic">
     <div class="stat-label">Latin</div>
     <div class="stat-value" id="stat-lat">&mdash;</div>
   </div>
-  <div class="stat-card stat-btn">
-    <div class="stat-label">English</div>
-    <div class="stat-value" id="stat-btn">&mdash;</div>
+  <div class="stat-card stat-germanic">
+    <div class="stat-label">Germanic</div>
+    <div class="stat-value" id="stat-gmc">&mdash;</div>
   </div>
-  <div class="stat-card stat-hi">
-    <div class="stat-label">Score &ge;0.8</div>
-    <div class="stat-value" id="stat-hi">&mdash;</div>
-  </div>
-  <div class="stat-card stat-med">
-    <div class="stat-label">Score &ge;0.6</div>
-    <div class="stat-value" id="stat-med">&mdash;</div>
+  <div class="stat-card stat-celtic">
+    <div class="stat-label">Celtic</div>
+    <div class="stat-value" id="stat-cel">&mdash;</div>
   </div>
 </div>
 
 <div id="chip-row">
-  <button class="chip active" data-chip="all"    onclick="setChip(this)">All</button>
-  <button class="chip"        data-chip="top50"  onclick="setChip(this)">Top 50</button>
-  <button class="chip"        data-chip="direct" onclick="setChip(this)">Direct Loans</button>
-  <button class="chip"        data-chip="hidden" onclick="setChip(this)">Hidden Cognates</button>
-  <button class="chip"        data-chip="grc"    onclick="setChip(this)">Greek</button>
-  <button class="chip"        data-chip="lat"    onclick="setChip(this)">Latin</button>
-  <button class="chip"        data-chip="eng"    onclick="setChip(this)">English</button>
-  <button class="chip"        data-chip="other"  onclick="setChip(this)">Other Languages</button>
+  <span class="chip-section-label">Verdict:</span>
+  <button class="chip active" data-chip="confirmed" onclick="setChip(this)">Confirmed Only</button>
+  <button class="chip"        data-chip="positive"  onclick="setChip(this)">All Positive</button>
+  <button class="chip"        data-chip="all"        onclick="setChip(this)">All Verdicts</button>
+  <div class="chip-divider"></div>
+  <span class="chip-section-label">Branch:</span>
+  <button class="chip" data-chip="Hellenic"       onclick="setChip(this)">Hellenic</button>
+  <button class="chip" data-chip="Italic"         onclick="setChip(this)">Italic</button>
+  <button class="chip" data-chip="Germanic-East"  onclick="setChip(this)">Gothic</button>
+  <button class="chip" data-chip="Germanic-West"  onclick="setChip(this)">OE/German</button>
+  <button class="chip" data-chip="Celtic"         onclick="setChip(this)">Celtic</button>
+  <button class="chip" data-chip="North-Germanic" onclick="setChip(this)">Old Norse</button>
+  <div class="chip-divider"></div>
+  <button class="chip" data-chip="cross_branch"  onclick="setChip(this)">Cross-Branch</button>
 </div>
 
 <div id="filter-bar">
   <div class="filter-group">
-    <label class="filter-label" for="score-slider">Min Score:</label>
-    <input type="range" id="score-slider" min="0.3" max="1.0" step="0.05" value="0.3"
-           oninput="onScoreChange(this)">
-    <span id="score-val">0.30</span>
+    <label class="filter-label" for="journey-select">Journey Type:</label>
+    <select id="journey-select" onchange="applyFilters()">
+      <option value="">All types</option>
+      <option value="direct_preservation">direct_preservation</option>
+      <option value="material_culture">material_culture</option>
+      <option value="semantic_drift">semantic_drift</option>
+      <option value="specialization">specialization</option>
+      <option value="generalization">generalization</option>
+      <option value="metaphorical_extension">metaphorical_extension</option>
+      <option value="negation_cognate">negation_cognate</option>
+      <option value="mafahim_deep">mafahim_deep</option>
+      <option value="no_connection">no_connection</option>
+    </select>
   </div>
   <div class="filter-group">
-    <label class="filter-label" for="method-select">Method:</label>
-    <select id="method-select" onchange="applyFilters()">
-      <option value="">All methods</option>
-      <option value="masadiq_direct">masadiq_direct</option>
-      <option value="mafahim_deep">mafahim_deep</option>
-      <option value="combined">combined</option>
-      <option value="weak">weak</option>
+    <label class="filter-label" for="conf-select">Confidence:</label>
+    <select id="conf-select" onchange="applyFilters()">
+      <option value="">All</option>
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option>
     </select>
   </div>
   <div class="filter-group">
     <label class="filter-label" for="search-input">Search:</label>
-    <input type="text" id="search-input" placeholder="Arabic, target, meaning..."
+    <input type="text" id="search-input" placeholder="Arabic, target, journey..."
            oninput="applyFilters()">
   </div>
 </div>
 
 <div id="chart-section">
-  <h3>Score Distribution</h3>
+  <h3>Findings by Language Branch</h3>
   <div id="chart-container"></div>
   <div class="chart-legend">
-    <span><span class="legend-dot" style="background:var(--chart-grc)"></span>Greek</span>
-    <span><span class="legend-dot" style="background:var(--chart-lat)"></span>Latin</span>
-    <span><span class="legend-dot" style="background:var(--chart-btn)"></span>Other</span>
+    <span><span class="legend-dot" style="background:var(--verdict-confirmed-text)"></span>Confirmed</span>
+    <span><span class="legend-dot" style="background:var(--verdict-plausible-text)"></span>Plausible</span>
+    <span><span class="legend-dot" style="background:var(--text-muted)"></span>Other</span>
   </div>
 </div>
 
@@ -962,34 +1037,33 @@ select:focus, #search-input:focus { border-color: var(--accent-teal); }
   <table id="data-table">
     <thead>
       <tr>
-        <th class="sortable sort-desc" data-col="score" onclick="setSort('score')">Score</th>
-        <th class="sortable" data-col="ar"    onclick="setSort('ar')">Arabic</th>
-        <th>Arabic Meaning</th>
-        <th class="sortable" data-col="tgt"   onclick="setSort('tgt')">Target</th>
-        <th>Target Meaning</th>
+        <th class="sortable sort-desc" data-col="verdict" onclick="setSort('verdict')">Verdict</th>
+        <th class="sortable"           data-col="arabic_root"  onclick="setSort('arabic_root')">Arabic</th>
+        <th class="sortable"           data-col="target_lemma" onclick="setSort('target_lemma')">Target</th>
         <th>Lang</th>
-        <th>Method</th>
-        <th>Reasoning</th>
-        <th>Model</th>
+        <th>Journey Type</th>
+        <th>Key Insight</th>
+        <th>Confidence</th>
       </tr>
     </thead>
     <tbody id="table-body"></tbody>
   </table>
-  <div id="no-results">No discoveries match the current filters.</div>
+  <div id="no-results">No findings match the current filters.</div>
 </div>
 
 <script>
 /* ─── Data ─────────────────────────────────────────────────────────────────── */
 const D = __DATA_PLACEHOLDER__;
+const CROSS_BRANCH = __CROSS_BRANCH_PLACEHOLDER__;
 
 /* ─── State ─────────────────────────────────────────────────────────────────── */
 const PAGE_SIZE = 50;
 let filtered    = [];
 let currentPage = 0;
-let sortCol     = "score";
-let sortDir     = -1;
-let activeChip  = "all";
-let expandedRow = -1;  // global index in filtered
+let sortCol     = "verdict";
+let sortDir     = 1;
+let activeChip  = "confirmed";
+let expandedRow = -1;
 
 /* ─── Theme ──────────────────────────────────────────────────────────────────  */
 function setTheme(t) {
@@ -1009,74 +1083,85 @@ function trunc(s, n) {
   s = String(s || "");
   return s.length > n ? s.slice(0, n) + "\u2026" : s;
 }
-function scorePill(sc) {
-  const cls  = sc >= 0.8 ? "score-hi" : sc >= 0.5 ? "score-med" : "score-lo";
-  const fcls = sc >= 0.8 ? "fill-hi"  : sc >= 0.5 ? "fill-med"  : "fill-lo";
-  const pct  = Math.round(sc * 100);
-  return `<div class="score-wrap">
-    <span class="score-pill ${cls}">${sc.toFixed(3)}</span>
-    <div class="score-bar"><div class="score-bar-fill ${fcls}" style="width:${pct}%"></div></div>
-  </div>`;
+
+function verdictBadge(v) {
+  const label = {
+    "confirmed_cognate": "confirmed",
+    "confirmed":         "confirmed",
+    "plausible_link":    "plausible",
+    "shared_loanword":   "shared loan",
+    "proper_name":       "proper name",
+    "false_positive":    "false pos.",
+    "legacy_scored":     "legacy",
+  }[v] || v;
+  const cls = v.startsWith("confirmed") ? "verdict-confirmed"
+            : v === "plausible_link"     ? "verdict-plausible"
+            : v === "shared_loanword"    ? "verdict-loanword"
+            : v === "proper_name"        ? "verdict-proper"
+            : v === "false_positive"     ? "verdict-false"
+            : v === "legacy_scored"      ? "verdict-legacy"
+            : "verdict-false";
+  return `<span class="verdict-badge ${cls}">${esc(label)}</span>`;
 }
-function methodBadge(m) {
-  m = m || "weak";
-  const cls = m.includes("masadiq") ? "method-masadiq"
-            : m.includes("mafahim") ? "method-mafahim"
-            : m.includes("combined") ? "method-combined"
-            : "method-weak";
-  return `<span class="method-badge ${cls}">${esc(m)}</span>`;
+
+function confDot(c) {
+  const cls = c === "high" ? "conf-high" : c === "medium" ? "conf-medium" : "conf-low";
+  return `<span class="conf-dot ${cls}" title="${esc(c)}"></span>${esc(c)}`;
+}
+
+function langBadge(lang) {
+  const label = {
+    grc: "GRC", lat: "LAT", got: "GOT", ang: "OE",
+    sga: "OIR", non: "NON", eng: "ENG", deu: "DEU",
+    fra: "FRA", spa: "SPA", ita: "ITA", fa: "FA", syc: "SYC",
+  }[lang] || lang.toUpperCase();
+  const cls = {
+    grc: "badge-grc", lat: "badge-lat", got: "badge-got",
+    ang: "badge-ang", sga: "badge-sga", non: "badge-non",
+  }[lang] || "badge-oth";
+  return `<span class="lang-badge ${cls}">${esc(label)}</span>`;
 }
 
 /* ─── Chip filter ────────────────────────────────────────────────────────────  */
 function setChip(el) {
   activeChip = el.dataset.chip;
   document.querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c === el));
-
-  /* Chip presets: adjust slider/method/search then apply */
-  const slider = document.getElementById("score-slider");
-  const mSel   = document.getElementById("method-select");
-  const srch   = document.getElementById("search-input");
-
-  if (activeChip === "top50") {
-    slider.value = "0.3";
-    document.getElementById("score-val").textContent = "0.30";
-    mSel.value = "";
-    srch.value = "";
-  } else if (activeChip === "direct") {
-    mSel.value = "masadiq_direct";
-  } else if (activeChip === "hidden") {
-    mSel.value = "mafahim_deep";
-  } else if (activeChip === "grc" || activeChip === "lat" || activeChip === "btn") {
-    mSel.value = "";
-  } else {
-    /* all — reset method filter if it was set by a chip */
-  }
   applyFilters();
 }
 
 /* ─── Filters ────────────────────────────────────────────────────────────────  */
-function onScoreChange(el) {
-  document.getElementById("score-val").textContent = parseFloat(el.value).toFixed(2);
-  applyFilters();
+function isPositive(v) {
+  return v === "confirmed_cognate" || v === "confirmed" || v === "plausible_link";
+}
+function isConfirmed(v) {
+  return v === "confirmed_cognate" || v === "confirmed";
 }
 
 function applyFilters() {
-  const minScore = parseFloat(document.getElementById("score-slider").value);
-  const method   = document.getElementById("method-select").value;
-  const search   = document.getElementById("search-input").value.trim().toLowerCase();
-  const chip     = activeChip;
+  const journeyType = document.getElementById("journey-select").value;
+  const conf        = document.getElementById("conf-select").value;
+  const search      = document.getElementById("search-input").value.trim().toLowerCase();
+  const chip        = activeChip;
 
   filtered = D.filter(d => {
-    if (d.score < minScore) return false;
-    if (method && d.method !== method) return false;
-    if (chip === "grc" && d.lang !== "grc") return false;
-    if (chip === "lat" && d.lang !== "lat") return false;
-    if (chip === "eng" && d.lang !== "eng") return false;
-    if (chip === "other" && ["grc","lat","eng"].includes(d.lang)) return false;
-    if (chip === "direct"  && d.method !== "masadiq_direct") return false;
-    if (chip === "hidden"  && d.method !== "mafahim_deep")   return false;
+    // Chip-level filters
+    if (chip === "confirmed"    && !isConfirmed(d.verdict)) return false;
+    if (chip === "positive"     && !isPositive(d.verdict))  return false;
+    if (chip === "cross_branch" && !d.cross_branch)         return false;
+    if (["Hellenic","Italic","Germanic-East","Germanic-West","Celtic","North-Germanic"].includes(chip)
+        && d.branch !== chip) return false;
+
+    // Fine-grained filters
+    if (journeyType && d.journey_type !== journeyType) return false;
+    if (conf && d.confidence !== conf) return false;
+
+    // Search
     if (search) {
-      const hay = (d.ar + " " + d.tgt + " " + (d.ar_def||"") + " " + (d.tgt_gloss||"") + " " + (d.reasoning||"")).toLowerCase();
+      const hay = (
+        d.arabic_root + " " + d.target_lemma + " " +
+        (d.semantic_journey || "") + " " + (d.key_insight || "") + " " +
+        (d.journey_type || "") + " " + (d.branch || "")
+      ).toLowerCase();
       if (!hay.includes(search)) return false;
     }
     return true;
@@ -1084,11 +1169,6 @@ function applyFilters() {
 
   applySort();
   expandedRow = -1;
-
-  if (chip === "top50") {
-    filtered = filtered.slice(0, 50);
-  }
-
   updateStats();
   updateChart();
   currentPage = 0;
@@ -1096,12 +1176,22 @@ function applyFilters() {
 }
 
 /* ─── Sorting ────────────────────────────────────────────────────────────────  */
+const VERDICT_ORDER = {
+  "confirmed_cognate": 0, "confirmed": 0,
+  "plausible_link": 1,
+  "shared_loanword": 2,
+  "proper_name": 3,
+  "false_positive": 4,
+  "legacy_scored": 5,
+};
+const CONF_ORDER = { "high": 0, "medium": 1, "low": 2 };
+
 function setSort(col) {
   if (sortCol === col) {
     sortDir = -sortDir;
   } else {
     sortCol = col;
-    sortDir = col === "score" ? -1 : 1;
+    sortDir = 1;
   }
   document.querySelectorAll("#data-table th").forEach(th => th.classList.remove("sort-asc","sort-desc"));
   const th = document.querySelector(`#data-table th[data-col="${col}"]`);
@@ -1113,65 +1203,82 @@ function setSort(col) {
 }
 function applySort() {
   filtered.sort((a, b) => {
-    const av = a[sortCol] ?? "", bv = b[sortCol] ?? "";
-    if (typeof av === "number") return sortDir * (av - bv);
+    let av, bv;
+    if (sortCol === "verdict") {
+      av = (VERDICT_ORDER[a.verdict] ?? 9) * 10 + (CONF_ORDER[a.confidence] ?? 9);
+      bv = (VERDICT_ORDER[b.verdict] ?? 9) * 10 + (CONF_ORDER[b.confidence] ?? 9);
+      return sortDir * (av - bv);
+    }
+    av = a[sortCol] ?? "";
+    bv = b[sortCol] ?? "";
     return sortDir * String(av).localeCompare(String(bv), undefined, {sensitivity:"base"});
   });
 }
 
 /* ─── Stats ──────────────────────────────────────────────────────────────────  */
 function updateStats() {
-  const total = filtered.length;
-  const grcN  = filtered.filter(d => d.lang === "grc").length;
-  const latN  = filtered.filter(d => d.lang === "lat").length;
-  const engN  = filtered.filter(d => d.lang === "eng").length;
-  const hiN   = filtered.filter(d => d.score >= 0.8).length;
-  const medN  = filtered.filter(d => d.score >= 0.6).length;
-  document.getElementById("stat-total").textContent = total.toLocaleString();
-  document.getElementById("stat-grc").textContent   = grcN.toLocaleString();
-  document.getElementById("stat-lat").textContent   = latN.toLocaleString();
-  document.getElementById("stat-btn").textContent   = engN.toLocaleString();
-  document.getElementById("stat-hi").textContent    = hiN.toLocaleString();
-  document.getElementById("stat-med").textContent   = medN.toLocaleString();
+  const total     = filtered.length;
+  const confirmed = filtered.filter(d => isConfirmed(d.verdict)).length;
+  const plausible = filtered.filter(d => d.verdict === "plausible_link").length;
+  const crossB    = filtered.filter(d => d.cross_branch).length;
+  const grc       = filtered.filter(d => d.lang === "grc").length;
+  const lat       = filtered.filter(d => d.lang === "lat").length;
+  const gmc       = filtered.filter(d => ["got","ang","non","deu","eng"].includes(d.lang)).length;
+  const cel       = filtered.filter(d => d.lang === "sga").length;
+  document.getElementById("stat-total").textContent     = total.toLocaleString();
+  document.getElementById("stat-confirmed").textContent = confirmed.toLocaleString();
+  document.getElementById("stat-plausible").textContent = plausible.toLocaleString();
+  document.getElementById("stat-cross").textContent     = crossB.toLocaleString();
+  document.getElementById("stat-grc").textContent       = grc.toLocaleString();
+  document.getElementById("stat-lat").textContent       = lat.toLocaleString();
+  document.getElementById("stat-gmc").textContent       = gmc.toLocaleString();
+  document.getElementById("stat-cel").textContent       = cel.toLocaleString();
 }
 
 /* ─── Chart ──────────────────────────────────────────────────────────────────  */
-const BANDS       = [[0.3,0.4],[0.4,0.5],[0.5,0.6],[0.6,0.7],[0.7,0.8],[0.8,0.9],[0.9,1.01]];
-const BAND_LABELS = ["0.3-0.4","0.4-0.5","0.5-0.6","0.6-0.7","0.7-0.8","0.8-0.9","0.9-1.0"];
+const BRANCHES = [
+  {key: "Hellenic",       label: "Hellenic (GRC)"},
+  {key: "Italic",         label: "Italic (LAT)"},
+  {key: "Germanic-East",  label: "Gmc-East (GOT)"},
+  {key: "Germanic-West",  label: "Gmc-West (OE)"},
+  {key: "Celtic",         label: "Celtic (OIR)"},
+  {key: "North-Germanic", label: "N-Gmc (NON)"},
+];
 
 function updateChart() {
   const container = document.getElementById("chart-container");
-  const counts = BANDS.map(([lo, hi]) => ({
-    grc: filtered.filter(d => d.lang==="grc" && d.score>=lo && d.score<hi).length,
-    lat: filtered.filter(d => d.lang==="lat" && d.score>=lo && d.score<hi).length,
-    oth: filtered.filter(d => !["grc","lat"].includes(d.lang) && d.score>=lo && d.score<hi).length,
-  }));
-  const maxN = Math.max(...counts.map(c => c.grc + c.lat + c.oth), 1);
-  container.innerHTML = counts.map((c, i) => {
-    const gW = ((c.grc / maxN) * 100).toFixed(1);
-    const lW = ((c.lat / maxN) * 100).toFixed(1);
-    const oW = ((c.oth / maxN) * 100).toFixed(1);
-    const tot = c.grc + c.lat + c.oth;
+  const rows = BRANCHES.map(({key, label}) => {
+    const branch_recs = filtered.filter(d => d.branch === key);
+    const conf = branch_recs.filter(d => isConfirmed(d.verdict)).length;
+    const plaus = branch_recs.filter(d => d.verdict === "plausible_link").length;
+    const oth  = branch_recs.length - conf - plaus;
+    return {label, conf, plaus, oth, total: branch_recs.length};
+  });
+  const maxN = Math.max(...rows.map(r => r.total), 1);
+  container.innerHTML = rows.map(r => {
+    const cW = ((r.conf  / maxN) * 100).toFixed(1);
+    const pW = ((r.plaus / maxN) * 100).toFixed(1);
+    const oW = ((r.oth   / maxN) * 100).toFixed(1);
     return `<div class="chart-row">
-      <span class="chart-band-label">${BAND_LABELS[i]}</span>
-      <div class="chart-bars" title="Greek: ${c.grc}, Latin: ${c.lat}, Other: ${c.oth}">
-        <div class="chart-bar-grc" style="width:${gW}%"></div>
-        <div class="chart-bar-lat" style="width:${lW}%"></div>
-        <div class="chart-bar-btn" style="width:${oW}%"></div>
+      <span class="chart-band-label">${esc(r.label)}</span>
+      <div class="chart-bars" title="Confirmed: ${r.conf}, Plausible: ${r.plaus}, Other: ${r.oth}">
+        <div class="chart-bar-confirmed" style="width:${cW}%"></div>
+        <div class="chart-bar-plausible" style="width:${pW}%"></div>
+        <div class="chart-bar-other"     style="width:${oW}%"></div>
       </div>
-      <span class="chart-count">${tot > 0 ? tot.toLocaleString() : ""}</span>
+      <span class="chart-count">${r.total > 0 ? r.total.toLocaleString() : ""}</span>
     </div>`;
   }).join("");
 }
 
 /* ─── Table rendering ────────────────────────────────────────────────────────  */
 function renderPage() {
-  const tbody    = document.getElementById("table-body");
-  const noRes    = document.getElementById("no-results");
-  const total    = filtered.length;
-  const start    = currentPage * PAGE_SIZE;
-  const end      = Math.min(start + PAGE_SIZE, total);
-  const slice    = filtered.slice(start, end);
+  const tbody = document.getElementById("table-body");
+  const noRes = document.getElementById("no-results");
+  const total = filtered.length;
+  const start = currentPage * PAGE_SIZE;
+  const end   = Math.min(start + PAGE_SIZE, total);
+  const slice = filtered.slice(start, end);
 
   if (total === 0) {
     tbody.innerHTML = "";
@@ -1189,49 +1296,59 @@ function renderPage() {
 
   const rows = [];
   slice.forEach((d, idx) => {
-    const gi = start + idx;  /* global index into filtered */
-    const langBadge = d.lang === "grc"
-      ? `<span class="lang-badge badge-grc">GRC</span>`
-      : d.lang === "lat"
-      ? `<span class="lang-badge badge-lat">LAT</span>`
-      : d.lang === "eng"
-      ? `<span class="lang-badge badge-eng">ENG</span>`
-      : `<span class="lang-badge badge-btn" title="${esc(d.lang.toUpperCase())}">${esc(d.lang.toUpperCase())}</span>`;
-    const arTranslit = d.ar_translit ? `<span class="ar-translit">${esc(d.ar_translit)}</span>` : "";
-    const tgtIpa     = d.tgt_ipa     ? `<span class="tgt-ipa">${esc(d.tgt_ipa)}</span>`         : "";
+    const gi = start + idx;
+    const crossTag = d.cross_branch ? `<span class="cross-tag">CROSS</span>` : "";
+    const rowClass = d.cross_branch ? "data-row cross-branch-row" : "data-row";
 
-    rows.push(`<tr class="data-row" onclick="toggleDetail(${gi})" data-gi="${gi}">
-      <td>${scorePill(d.score)}</td>
-      <td><span class="ar-text">${esc(d.ar)}</span>${arTranslit}</td>
-      <td><span class="meaning-text">${esc(trunc(d.ar_def, 80))}</span></td>
-      <td><span class="tgt-word">${esc(d.tgt)}</span>${tgtIpa}</td>
-      <td><span class="meaning-text">${esc(trunc(d.tgt_gloss, 80))}</span></td>
-      <td>${langBadge}</td>
-      <td>${methodBadge(d.method)}</td>
-      <td><span class="reasoning-cell">${esc(trunc(d.reasoning, 100))}</span></td>
-      <td><span class="model-text">${esc(d.model)}</span></td>
+    rows.push(`<tr class="${rowClass}" onclick="toggleDetail(${gi})" data-gi="${gi}">
+      <td>${verdictBadge(d.verdict)}</td>
+      <td><span class="ar-text">${esc(d.arabic_root)}</span></td>
+      <td><span class="tgt-word">${esc(d.target_lemma)}</span>${crossTag}</td>
+      <td>${langBadge(d.lang)}</td>
+      <td><span class="journey-badge">${esc((d.journey_type||"").replace(/_/g," "))}</span></td>
+      <td><span class="insight-cell" title="${esc(d.key_insight)}">${esc(trunc(d.key_insight, 110))}</span></td>
+      <td>${confDot(d.confidence)}</td>
     </tr>`);
 
     if (expandedRow === gi) {
+      const journey = d.semantic_journey || "(no semantic journey recorded)";
       rows.push(`<tr class="detail-row">
-        <td colspan="9">
+        <td colspan="7">
           <div class="detail-panel">
             <div>
-              <div class="dp-label">Arabic Definition</div>
-              <div class="dp-value">${esc(d.ar_def || "(no definition available)")}</div>
+              <div class="dp-label">Arabic Root</div>
+              <div class="dp-value"><span class="ar-text">${esc(d.arabic_root)}</span></div>
             </div>
             <div>
-              <div class="dp-label">Target Gloss</div>
-              <div class="dp-value">${esc(d.tgt_gloss || "(no gloss available)")}${d.tgt_ipa ? " &mdash; <em>" + esc(d.tgt_ipa) + "</em>" : ""}</div>
-            </div>
-            <div class="detail-reasoning">
-              <div class="dp-label">Reasoning</div>
-              <div class="dp-value">${esc(d.reasoning || "(no reasoning)")}</div>
+              <div class="dp-label">Target &mdash; ${esc(d.lang.toUpperCase())} / ${esc(d.branch)}</div>
+              <div class="dp-value"><em>${esc(d.target_lemma)}</em></div>
             </div>
             <div>
-              <div class="dp-label">Score / Method / Model</div>
-              <div class="dp-value">${d.score.toFixed(3)} &mdash; ${esc(d.method)} &mdash; ${esc(d.model)}</div>
+              <div class="dp-label">Verdict / Confidence</div>
+              <div class="dp-value">${verdictBadge(d.verdict)} &nbsp; ${confDot(d.confidence)}</div>
             </div>
+            <div>
+              <div class="dp-label">Journey Type</div>
+              <div class="dp-value">${esc((d.journey_type||"—").replace(/_/g," "))}</div>
+            </div>
+            <div class="detail-journey">
+              <div class="dp-label">Semantic Journey</div>
+              <div class="journey-text">${esc(journey)}</div>
+            </div>
+            <div>
+              <div class="dp-label">Key Insight</div>
+              <div class="dp-value">${esc(d.key_insight || "—")}</div>
+            </div>
+            ${d.original_score > 0 ? `<div>
+              <div class="dp-label">Original Eye 2 Score</div>
+              <div class="dp-value">${d.original_score.toFixed(3)} &mdash; ${esc(d.original_method || "—")}</div>
+            </div>` : ""}
+            ${d.cross_branch ? `<div>
+              <div class="dp-label">Cross-Branch Cognate</div>
+              <div class="dp-value" style="color:var(--cross-branch-border);font-weight:600;">
+                This Arabic root appears confirmed in 2+ language branches.
+              </div>
+            </div>` : ""}
           </div>
         </td>
       </tr>`);
@@ -1255,7 +1372,8 @@ function changePage(delta) {
 
 /* ─── Export ─────────────────────────────────────────────────────────────────  */
 function exportCSV() {
-  const cols = ["ar","tgt","lang","score","method","ar_def","ar_translit","tgt_ipa","tgt_gloss","reasoning","model"];
+  const cols = ["arabic_root","target_lemma","lang","branch","verdict","confidence",
+                "journey_type","key_insight","semantic_journey","cross_branch","source"];
   const header = cols.join(",") + "\n";
   const rows = filtered.map(d =>
     cols.map(c => {
@@ -1283,35 +1401,67 @@ applyFilters();
 
 
 def main():
-    # Build lookup tables
-    ipa_grc  = build_ipa_lookup("grc")
-    ipa_lat  = build_ipa_lookup("lat")
-    ar_lookup = build_arabic_lookup()
+    # Load NON metadata for pair_id lookup
+    non_meta = load_non_meta()
 
-    # Load & enrich discoveries
-    records = load_discoveries(ipa_grc, ipa_lat, ar_lookup)
-    if not records:
+    # Load all detective-mode findings
+    grc_lat  = load_grc_lat_reinvestigation()
+    wave1    = load_wave1_reinvestigation()
+    non_pilot = load_non_pilot(non_meta)
+
+    # Load cross-branch analysis
+    analysis      = load_confirmed_analysis()
+    cross_branch_roots = analysis.get("cross_branch_roots", [])
+
+    # Merge all records
+    all_records = grc_lat + wave1 + non_pilot
+
+    # Load legacy eye2 records (backwards compat, lower priority)
+    legacy = load_legacy_records()
+    all_records += legacy
+
+    if not all_records:
         print("[error] No records loaded — exiting", file=sys.stderr)
         sys.exit(1)
 
-    total     = len(records)
-    ipa_cov   = sum(1 for r in records if r["tgt_ipa"])
-    ar_cov    = sum(1 for r in records if r["ar_def"])
-    print(f"\nTotal embedded : {total:,}", file=sys.stderr)
-    print(f"IPA coverage   : {ipa_cov:,} / {total:,}  ({100*ipa_cov/total:.1f}%)", file=sys.stderr)
-    print(f"AR def coverage: {ar_cov:,} / {total:,}  ({100*ar_cov/total:.1f}%)", file=sys.stderr)
+    records = merge_records(all_records, cross_branch_roots)
+    print_summary(records)
+
+    # Build serialisable cross-branch lookup
+    cross_branch_data = [
+        {
+            "arabic_root": r.get("arabic_root", ""),
+            "n_branches":  r.get("n_branches", 0),
+            "branches":    r.get("branches", []),
+        }
+        for r in cross_branch_roots
+    ]
 
     # Render HTML
-    data_json = json.dumps(records, ensure_ascii=False)
+    data_json   = json.dumps(records, ensure_ascii=False)
+    cross_json  = json.dumps(cross_branch_data, ensure_ascii=False)
     html = HTML_TEMPLATE.replace("__DATA_PLACEHOLDER__", data_json)
+    html = html.replace("__CROSS_BRANCH_PLACEHOLDER__", cross_json)
 
     out_path = LV2 / "outputs" / "discoveries_dashboard.html"
     out_path.write_text(html, encoding="utf-8")
 
     size_kb = out_path.stat().st_size / 1024
     print(f"\nDashboard -> {out_path}  ({size_kb:.0f} KB)", file=sys.stderr)
-    if size_kb < 100:
-        print("[warn] Dashboard is smaller than expected (<100 KB)", file=sys.stderr)
+    if size_kb < 50:
+        print("[warn] Dashboard is smaller than expected (<50 KB)", file=sys.stderr)
+
+    # Final counts by language and verdict for reporting
+    print("\n=== Final counts by language + verdict ===", file=sys.stderr)
+    for lang in ["grc", "lat", "got", "ang", "sga", "non"]:
+        lang_recs = [r for r in records if r["lang"] == lang]
+        if not lang_recs:
+            continue
+        verdicts = Counter(r["verdict"] for r in lang_recs)
+        label = LANG_LABEL.get(lang, lang)
+        print(f"  {lang} ({label}): {len(lang_recs)} total", file=sys.stderr)
+        for v, cnt in sorted(verdicts.items()):
+            print(f"    {v}: {cnt}", file=sys.stderr)
 
 
 if __name__ == "__main__":
