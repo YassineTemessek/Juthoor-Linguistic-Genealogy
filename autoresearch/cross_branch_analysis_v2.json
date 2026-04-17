@@ -1,0 +1,296 @@
+{
+  "total_findings": 694,
+  "by_language": {
+    "grc": {
+      "confirmed_cognate": 54,
+      "plausible_link": 291
+    },
+    "lat": {
+      "confirmed_cognate": 10,
+      "plausible_link": 12
+    },
+    "got": {
+      "confirmed_cognate": 25,
+      "plausible_link": 0
+    },
+    "ang": {
+      "confirmed_cognate": 25,
+      "plausible_link": 0
+    },
+    "sga": {
+      "confirmed_cognate": 21,
+      "plausible_link": 0
+    },
+    "non": {
+      "confirmed_cognate": 13,
+      "plausible_link": 229
+    },
+    "cy": {
+      "confirmed_cognate": 2,
+      "plausible_link": 12
+    }
+  },
+  "cross_branch_roots": [
+    {
+      "arabic_root": "ابد",
+      "branches": [
+        "Celtic-Goidelic",
+        "Germanic-East",
+        "Germanic-West"
+      ],
+      "n_branches": 3,
+      "hits": [
+        [
+          "got",
+          "bad",
+          "confirmed_cognate"
+        ],
+        [
+          "ang",
+          "abide",
+          "confirmed_cognate"
+        ],
+        [
+          "sga",
+          "baid",
+          "confirmed_cognate"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "نفت",
+      "branches": [
+        "Celtic-Goidelic",
+        "Hellenic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "grc",
+          "νάφθα",
+          "confirmed_cognate"
+        ],
+        [
+          "sga",
+          "infét",
+          "confirmed_cognate"
+        ],
+        [
+          "sga",
+          "doinfet",
+          "confirmed_cognate"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "دحر",
+      "branches": [
+        "Hellenic",
+        "North-Germanic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "grc",
+          "διαχωρίζω",
+          "plausible_link"
+        ],
+        [
+          "non",
+          "aldr",
+          "confirmed_cognate"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "اثم",
+      "branches": [
+        "Celtic-Goidelic",
+        "Hellenic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "grc",
+          "Θέμις",
+          "plausible_link"
+        ],
+        [
+          "sga",
+          "etham",
+          "confirmed_cognate"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "دخن",
+      "branches": [
+        "Hellenic",
+        "North-Germanic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "grc",
+          "διαχύνω",
+          "plausible_link"
+        ],
+        [
+          "non",
+          "duna",
+          "plausible_link"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "ملج",
+      "branches": [
+        "Celtic-Goidelic",
+        "Hellenic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "grc",
+          "μάλαγμα",
+          "plausible_link"
+        ],
+        [
+          "sga",
+          "melg",
+          "confirmed_cognate"
+        ],
+        [
+          "sga",
+          "mligid",
+          "confirmed_cognate"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "مرر",
+      "branches": [
+        "Hellenic",
+        "Italic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "grc",
+          "Μύρρα",
+          "confirmed_cognate"
+        ],
+        [
+          "lat",
+          "amarior",
+          "confirmed_cognate"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "ارمعن",
+      "branches": [
+        "Germanic-West",
+        "Hellenic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "grc",
+          "ὁρμήν",
+          "plausible_link"
+        ],
+        [
+          "grc",
+          "ὁρμώμενοι",
+          "plausible_link"
+        ],
+        [
+          "ang",
+          "riman",
+          "confirmed_cognate"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "مرج",
+      "branches": [
+        "Germanic-West",
+        "Hellenic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "grc",
+          "μάργος",
+          "plausible_link"
+        ],
+        [
+          "ang",
+          "merge",
+          "confirmed_cognate"
+        ],
+        [
+          "ang",
+          "mergum",
+          "confirmed_cognate"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "حبس",
+      "branches": [
+        "Germanic-East",
+        "North-Germanic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "got",
+          "habais",
+          "confirmed_cognate"
+        ],
+        [
+          "got",
+          "gahabaiþs",
+          "confirmed_cognate"
+        ],
+        [
+          "got",
+          "anahabaiþs",
+          "confirmed_cognate"
+        ],
+        [
+          "non",
+          "hvæsa",
+          "plausible_link"
+        ]
+      ]
+    },
+    {
+      "arabic_root": "اشخذ",
+      "branches": [
+        "Celtic-Brythonic",
+        "North-Germanic"
+      ],
+      "n_branches": 2,
+      "hits": [
+        [
+          "non",
+          "skýtr",
+          "plausible_link"
+        ],
+        [
+          "non",
+          "skunda",
+          "plausible_link"
+        ],
+        [
+          "cy",
+          "ymosodiad",
+          "plausible_link"
+        ]
+      ]
+    }
+  ]
+}
