@@ -1,5 +1,5 @@
 {
-  "total_findings": 802,
+  "total_findings": 805,
   "by_language": {
     "grc": {
       "confirmed_cognate": 54,
@@ -23,7 +23,7 @@
     },
     "non": {
       "confirmed_cognate": 23,
-      "plausible_link": 317
+      "plausible_link": 320
     },
     "cy": {
       "confirmed_cognate": 2,
