@@ -313,6 +313,112 @@ GOTHIC_EQUIVALENTS: dict[str, tuple[str, ...]] = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Old Norse equivalents: Arabic consonants → Old Norse consonants
+# ---------------------------------------------------------------------------
+# Old Norse (ON) is North Germanic, preserving proto-Germanic features while
+# developing its own innovations (umlaut, syncope, etc.).
+# Key consonant correspondences:
+#   ON preserves þ (thorn /θ/) → Arabic ث  (dental fricative retained)
+#   ON preserves ð (eth /ð/) → Arabic ذ  (voiced dental fricative retained)
+#   ON has /x/ phoneme (written g before e/i, or written as gh) → Arabic خ
+#   ON g can be /ɣ/ intervocalically → Arabic غ (spirant, same as Gothic)
+#   ON f = /f/ word-initially, /v/ medially (like OE) → Arabic ف/ب
+#   ON v = /v/ (from *w in many environments) → Arabic و/ب
+#   ON h = /x/ before consonants → Arabic خ/ح
+#   ON k = /k/ (sometimes from earlier /kj/ with palatal shift) → Arabic ك/ق
+#   ON j = /j/ (palatal glide) → Arabic ي
+#   ON r includes rhotacized forms of earlier /z/ → Arabic ز/ر
+#   ON b/d/g are stops word-initially, fricatives medially
+#   ON has no /p/ word-initially from native stock (PIE *p → PGmc *f)
+#     → Arabic ف maps to f, Arabic ب maps to b/f
+#   Emphatic Arabic consonants flatten to plain stops/fricatives (no emphatics in ON)
+# Sources: Noreen (1923) Altisländische und altnorwegische Grammatik,
+#   Gordon (1957) Introduction to Old Norse, Grimm's Law stop series,
+#   Juthoor phonetic_mergers design notes, Gothic parallel structure
+OLD_NORSE_EQUIVALENTS: dict[str, tuple[str, ...]] = {
+    "ا": ("", "a"),              # alif → silent or vowel carrier
+    "ب": ("b", "f"),             # ba → b / f (Grimm: PIE *p→f; ON b intervocalic = /v/)
+    "ت": ("t", "d"),             # ta → t / d (Grimm voicing variants)
+    "ث": ("þ", "th", "t"),       # tha → þ (thorn /θ/) — preserved in ON; also th/t
+    "ج": ("g", "k"),             # jim → g / k (ON g covers stop and spirant /ɣ/)
+    "ح": ("h",),                 # ḥa → h (ON h = /x/ before consonants)
+    "خ": ("h", "k", "g"),        # kha → h (/x/) / k / g (velar fricative variants)
+    "د": ("d", "t"),             # dal → d / t (Grimm)
+    "ذ": ("ð", "d", "z"),        # dhal → ð (eth /ð/) / d / z
+    "ر": ("r",),                 # ra → r
+    "ز": ("r", "z", "s"),        # zayn → r (ON z > r via rhotacism) / z / s
+    "س": ("s",),                 # sin → s
+    "ش": ("s",),                 # shin → s (no /ʃ/ phoneme in ON)
+    "ص": ("s",),                 # ṣad → s (emphatic flattened)
+    "ض": ("d",),                 # ḍad → d
+    "ط": ("t",),                 # ṭa → t
+    "ظ": ("z", "d"),             # ẓa → z / d
+    "ع": ("", "h"),              # ʿayn → deleted / h (pharyngeal lost in Germanic)
+    "غ": ("g", ""),              # ghayn → g (intervocalic /ɣ/) / deleted
+    "ف": ("f", "v"),             # fa → f (primary: Grimm PIE *p→f) / v (medial allophone)
+    "ق": ("k", "kv"),            # qaf → k / kv (ON kv- cluster)
+    "ك": ("k", "g"),             # kaf → k / g (Grimm stop voicing)
+    "ل": ("l",),                 # lam → l
+    "م": ("m",),                 # mim → m
+    "ن": ("n",),                 # nun → n
+    "ه": ("h", ""),              # ha → h / deleted
+    "و": ("v", "w", "u"),        # waw → v (ON w > v) / w / u
+    "ي": ("j", "g", "i"),        # ya → j (ON j = /j/) / g (palatal before front vowel) / i
+}
+
+
+# ---------------------------------------------------------------------------
+# Welsh equivalents: Arabic consonants → Welsh consonants
+# ---------------------------------------------------------------------------
+# Key features of Welsh phonology relevant to Arabic matching:
+#   Welsh KEEPS PIE *p → Arabic ف/ب both map to p/b (unlike Old Irish)
+#   Soft mutation: c→g, p→b, t→d (match on unmutated base form preferred)
+#   Nasal mutation: c→ngh, p→mh, t→nh
+#   Aspirate mutation: c→ch, p→ph, t→th
+#   ff=/f/ vs f=/v/ (Arabic ف→ff or f; Arabic ب→b/v/f)
+#   dd=/ð/ → Arabic ذ (voiced dental fricative, direct match)
+#   th=/θ/ → Arabic ث (voiceless dental fricative, direct match)
+#   ch=/x/ → Arabic خ (velar fricative, exact match)
+#   ll=/ɬ/ (voiceless lateral) → nearest Arabic match: ل
+#   rh=/r̥/ (voiceless r) → Arabic ر
+#   ng=/ŋ/ → Arabic ن (nasal)
+#   Welsh w = consonant /w/ or vowel → Arabic و
+#   Welsh y in initial position = /j/ → Arabic ي
+# Sources: King (2003) A Comprehensive Welsh Grammar; Thorne (1993)
+#   A Comprehensive Welsh Grammar.
+WELSH_EQUIVALENTS: dict[str, tuple[str, ...]] = {
+    "ا": ("", "a"),             # alif → silent or vowel carrier
+    "ب": ("b", "p"),            # ba → b / p (Welsh KEEPS p; ب→b, also maps to p)
+    "ت": ("t", "d"),            # ta → t / d (soft mutation t→d)
+    "ث": ("th", "t"),           # tha → th (/θ/) / t — Welsh th direct match
+    "ج": ("g", "c"),            # jim → g / c (c=/k/; soft mutation c→g)
+    "ح": ("h", ""),             # ḥa → h / deleted
+    "خ": ("ch", "h"),           # kha → ch (/x/) / h — Welsh ch = Arabic خ exactly
+    "د": ("d", "t"),            # dal → d / t
+    "ذ": ("dd", "d", "th"),     # dhal → dd (/ð/) / d / th — Welsh dd=/ð/
+    "ر": ("r", "rh"),           # ra → r / rh (voiceless r variant)
+    "ز": ("s", "z"),            # zayn → s / z (Welsh has limited /z/)
+    "س": ("s",),                # sin → s
+    "ش": ("s",),                # shin → s (no /ʃ/ in native Welsh)
+    "ص": ("s",),                # ṣad → s (emphatic flattened)
+    "ض": ("d", "dd"),           # ḍad → d / dd
+    "ط": ("t",),                # ṭa → t
+    "ظ": ("dd", "d"),           # ẓa → dd (/ð/) / d
+    "ع": ("", "h"),             # ʿayn → DELETED / h (pharyngeal lost)
+    "غ": ("g", ""),             # ghayn → g / deleted
+    "ف": ("f", "ff", "p", "b"), # fa → f(/v/) / ff(/f/) / p / b (Welsh f=/v/, ff=/f/)
+    "ق": ("c", "g"),            # qaf → c (/k/) / g (soft mutation)
+    "ك": ("c", "k"),            # kaf → c / k
+    "ل": ("l", "ll"),           # lam → l / ll (Welsh ll=/ɬ/)
+    "م": ("m",),                # mim → m
+    "ن": ("n", "ng"),           # nun → n / ng (/ŋ/) nasal mutation pathway
+    "ه": ("h", ""),             # ha → h / deleted
+    "و": ("w", "f", ""),        # waw → w / f (Welsh f=/v/≈w) / deleted
+    "ي": ("i", "y", "j"),       # ya → i / y (initial y=/j/) / j
+}
+
+
 def get_language_equivalents(lang: str) -> dict[str, tuple[str, ...]]:
     """Return the Arabic→target consonant equivalents table for the given language."""
     if lang == "grc":
@@ -323,6 +429,10 @@ def get_language_equivalents(lang: str) -> dict[str, tuple[str, ...]]:
         return OLD_IRISH_EQUIVALENTS
     if lang == "got":
         return GOTHIC_EQUIVALENTS
+    if lang == "non":
+        return OLD_NORSE_EQUIVALENTS
+    if lang == "cy":
+        return WELSH_EQUIVALENTS
     return LATIN_EQUIVALENTS
 
 

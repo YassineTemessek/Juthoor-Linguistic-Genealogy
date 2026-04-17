@@ -15,6 +15,8 @@ CORPORA = {
     "grc": LV0 / "data/processed/ancient_greek/sources/kaikki.jsonl",
     "got": LV0 / "data/processed/gothic/sources/kaikki.jsonl",
     "sga": LV0 / "data/processed/old_irish/sources/kaikki.jsonl",
+    "non": LV0 / "data/processed/old_norse/sources/kaikki.jsonl",
+    "cy":  LV0 / "data/processed/welsh/sources/kaikki.jsonl",
 }
 
 OUTPUT_DIR = LV2 / "data" / "processed"
@@ -79,6 +81,8 @@ def dedup(lang: str, path: Path) -> int:
         "grc": "greek_unique_lemmas.jsonl",
         "got": "gothic_unique_lemmas.jsonl",
         "sga": "old_irish_unique_lemmas.jsonl",
+        "non": "old_norse_unique_lemmas.jsonl",
+        "cy":  "welsh_unique_lemmas.jsonl",
     }
     out_path = OUTPUT_DIR / out_name[lang]
     with open(out_path, "w", encoding="utf-8") as f:
@@ -90,7 +94,13 @@ def dedup(lang: str, path: Path) -> int:
 
 
 if __name__ == "__main__":
-    for lang, path in CORPORA.items():
+    import argparse as _argparse
+    _ap = _argparse.ArgumentParser(description="Deduplicate corpora to unique base lemmas.")
+    _ap.add_argument("--lang", default=None, help="Run only for this language code (e.g. non). Default: all.")
+    _args = _ap.parse_args()
+
+    to_run = {_args.lang: CORPORA[_args.lang]} if _args.lang and _args.lang in CORPORA else CORPORA
+    for lang, path in to_run.items():
         if path.exists():
             dedup(lang, path)
         else:

@@ -4,7 +4,7 @@ Ingest Kaikki.org Wiktionary JSONL dumps into LV0 canonical JSONL.
 Supports: Ancient Greek (grc), Latin (la), Old English (ang),
           Middle English (enm), Modern English (en), Hebrew (he),
           Persian/Farsi (fa), Aramaic (arc), Akkadian (akk), Turkish (tr),
-          Gothic (got), Old Irish (sga).
+          Gothic (got), Old Irish (sga), Old Norse (non).
 
 Default input locations (relative to repo root, or under LC_RESOURCES_DIR):
   grc  -> Resources/ancient_greek/kaikki.org-dictionary-AncientGreek.jsonl
@@ -19,6 +19,7 @@ Default input locations (relative to repo root, or under LC_RESOURCES_DIR):
   tr   -> Resources/turkish/kaikki.org-dictionary-Turkish.jsonl
   got  -> Resources/gothic/kaikki.org-dictionary-Gothic.jsonl
   sga  -> Resources/old_irish/kaikki.org-dictionary-OldIrish.jsonl
+  non  -> Resources/old_norse/kaikki.org-dictionary-OldNorse.jsonl
 
 Default output locations (relative to repo root):
   grc  -> data/processed/ancient_greek/sources/kaikki.jsonl
@@ -33,6 +34,7 @@ Default output locations (relative to repo root):
   tr   -> data/processed/turkish/sources/kaikki.jsonl
   got  -> data/processed/gothic/sources/kaikki.jsonl
   sga  -> data/processed/old_irish/sources/kaikki.jsonl
+  non  -> data/processed/old_norse/sources/kaikki.jsonl
 """
 
 from __future__ import annotations
@@ -74,6 +76,8 @@ LANG_MAP: dict[str, tuple[str, str, str]] = {
     "tr":  ("tur", "modern", "Latn"),
     "got": ("got", "ancient", "Latn"),
     "sga": ("sga", "old", "Latn"),
+    "non": ("non", "old", "Latn"),
+    "cy":  ("cym", "modern", "Latn"),
 }
 
 # lang_code -> relative path WITHIN Resources/ (no Resources/ prefix)
@@ -90,6 +94,8 @@ LANG_CODE_TO_FILE: dict[str, str] = {
     "tr":  "turkish/kaikki.org-dictionary-Turkish.jsonl",
     "got": "gothic/kaikki.org-dictionary-Gothic.jsonl",
     "sga": "old_irish/kaikki.org-dictionary-OldIrish.jsonl",
+    "non": "old_norse/kaikki.org-dictionary-OldNorse.jsonl",
+    "cy":  "welsh/kaikki.org-dictionary-Welsh.jsonl",
 }
 
 _DEFAULT_OUTPUT: dict[str, str] = {
@@ -105,6 +111,8 @@ _DEFAULT_OUTPUT: dict[str, str] = {
     "tr":  "data/processed/turkish/sources/kaikki.jsonl",
     "got": "data/processed/gothic/sources/kaikki.jsonl",
     "sga": "data/processed/old_irish/sources/kaikki.jsonl",
+    "non": "data/processed/old_norse/sources/kaikki.jsonl",
+    "cy":  "data/processed/welsh/sources/kaikki.jsonl",
 }
 
 _TURKISH_FALLBACK_ENTRIES: tuple[tuple[str, str, str, str], ...] = (

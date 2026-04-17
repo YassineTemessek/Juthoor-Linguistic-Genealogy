@@ -231,6 +231,45 @@ PROFILES: dict[str, ScoringProfile] = {
             "(p-loss, lenition mutations); higher semantic weight to compensate."
         ),
     ),
+
+    # Arabic to Old Norse — North Germanic; þ/ð preserved, z > r rhotacism,
+    # consistent Grimm's Law stop series. Balanced weights close to Gothic.
+    "ara_old_norse": ScoringProfile(
+        name="ara_old_norse",
+        semantic_weight=0.48,
+        form_weight=0.52,
+        phonetic_law_cap=0.16,
+        genome_cap=0.10,
+        multi_method_cap=0.12,
+        cross_pair_cap=0.08,
+        root_quality_cap=0.08,
+        prefilter_threshold=0.40,
+        final_threshold=0.40,
+        description=(
+            "Arabic to Old Norse: balanced Germanic profile; þ/ð preserved, "
+            "z>r rhotacism handled, Grimm's Law stop series applied."
+        ),
+    ),
+
+    # Arabic to Welsh — moderate form weight; Welsh keeps PIE *p (unlike Old Irish)
+    # but has a complex mutation system (soft/nasal/aspirate) that shifts initial
+    # consonants. Balanced between Old English and Old Irish profiles.
+    "ara_welsh": ScoringProfile(
+        name="ara_welsh",
+        semantic_weight=0.55,
+        form_weight=0.45,
+        phonetic_law_cap=0.15,
+        genome_cap=0.10,
+        multi_method_cap=0.12,
+        cross_pair_cap=0.08,
+        root_quality_cap=0.08,
+        prefilter_threshold=0.40,
+        final_threshold=0.40,
+        description=(
+            "Arabic to Welsh: balanced weights; Welsh keeps PIE *p but has "
+            "soft/nasal/aspirate mutation system that shifts initial consonants."
+        ),
+    ),
 }
 
 
@@ -269,6 +308,8 @@ _PAIR_TO_PROFILE: dict[tuple[str, str], str] = {
     ("ara", "eng"): "ara_eng_default",
     ("ara", "got"): "ara_gothic",
     ("ara", "sga"): "ara_old_irish",
+    ("ara", "non"): "ara_old_norse",
+    ("ara", "cy"):  "ara_welsh",
 }
 
 

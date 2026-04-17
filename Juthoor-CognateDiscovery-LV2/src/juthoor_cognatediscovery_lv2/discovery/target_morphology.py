@@ -190,6 +190,67 @@ GOTHIC_PREFIXES: tuple[str, ...] = (
 
 
 # ---------------------------------------------------------------------------
+# Old Norse morphology tables
+# ---------------------------------------------------------------------------
+
+# Prefixes ordered longest-first
+ON_PREFIXES: tuple[str, ...] = (
+    "gagn",   # against, back- (counter-)
+    "mis",    # mis-
+    "and",    # against, counter-
+    "fram",   # forward
+    "sam",    # together, co-
+    "van",    # lacking, un- (negative)
+    "af",     # off, away
+    "al",     # all-, entirely
+    "at",     # at, toward
+    "be",     # be- (intensive)
+    "for",    # for-, very (intensive/pejorative)
+    "of",     # over-, too much
+    "um",     # around, re-
+    "ú",      # un-, not (negative prefix)
+)
+
+# Noun/adjective suffixes ordered longest-first
+ON_NOUN_SUFFIXES: tuple[str, ...] = (
+    "ingar",   # plural gen. of -ingr nouns (e.g. víkingr → víkingar)
+    "ligr",    # adjective: -like, -ly
+    "leikr",   # abstract noun: -ness, quality
+    "semi",    # abstract noun (feminine)
+    "ing",     # -ing abstract/agent suffix
+    "ung",     # -ung diminutive/abstract
+    "nar",     # gen. pl. of weak masc.
+    "ar",      # gen. sg. / nom. pl. strong masc.
+    "ir",      # nom. pl. i-stem / dat. sg.
+    "ur",      # nom. sg. strong masc. (most common ON ending)
+    "an",      # acc. sg. weak masc.
+    "in",      # definite suffix (weak) / nom. sg. weak fem.
+    "na",      # acc. pl. weak
+    "ja",      # -ja stem marker (verb inf. ending)
+    "a",       # gen. pl. / inf. ending / weak noun ending
+    "i",       # dat. sg. / nom. sg. weak fem.
+    "r",       # nom. sg. strong masc. short form
+    "s",       # gen. sg.
+)
+
+# Verb suffixes ordered longest-first
+ON_VERB_SUFFIXES: tuple[str, ...] = (
+    "andi",    # present participle: -andi
+    "aðr",     # past participle: -aðr
+    "inn",     # past participle strong: -inn
+    "ast",     # middle/reflexive: -ast
+    "ask",     # middle/reflexive: -ask (later form)
+    "uðu",     # past pl. 3rd weak
+    "aði",     # past sg. 3rd weak
+    "ið",      # past pl. 3rd strong
+    "um",      # past pl. 1st
+    "at",      # past inf.? / supine
+    "an",      # infinitive marker (some verbs)
+    "a",       # infinitive ending
+)
+
+
+# ---------------------------------------------------------------------------
 # Old Irish morphology tables
 # ---------------------------------------------------------------------------
 
@@ -235,6 +296,73 @@ OI_VERB_SUFFIXES: tuple[str, ...] = (
 )
 
 _MIN_STEM = 2  # minimum stem length after stripping
+
+
+# ---------------------------------------------------------------------------
+# Welsh morphology tables
+# ---------------------------------------------------------------------------
+
+# Prefixes ordered longest-first
+CY_PREFIXES: tuple[str, ...] = (
+    "gwrth",   # against, counter-
+    "rhag",    # before, fore-
+    "cyd",     # co-, together
+    "cyf",     # co-, together (variant)
+    "cyn",     # former, pre-
+    "dad",     # un-, de- (reversal)
+    "dar",     # intensive/completive
+    "gor",     # over-, super-, hyper-
+    "ym",      # reflexive / in-
+    "ad",      # re-, again
+    "all",     # other, beyond
+    "am",      # around, about
+    "an",      # negative (like un-)
+    "di",      # without, un-
+    "go",      # slightly, rather
+    "hy",      # bold, easy (positive intensive)
+    "tra",     # over-, excessively
+)
+
+# Noun/adjective suffixes ordered longest-first
+CY_NOUN_SUFFIXES: tuple[str, ...] = (
+    "rwydd",   # abstract: -rwydd (ease, -ness)
+    "aeth",    # abstract nouns: -aeth
+    "dod",     # state/condition: -dod
+    "edd",     # abstract: -edd
+    "iant",    # verbal noun: -iant
+    "aid",     # collective/material: -aid
+    "wch",     # abstract quality: -wch
+    "og",      # possessive/adj: -og
+    "ol",      # adjective: -ol
+    "id",      # abstract: -id
+    "ig",      # adjective: -ig
+    "in",      # diminutive/adj: -in
+    "an",      # diminutive: -an
+    "en",      # feminine/singular: -en
+    "eg",      # collective: -eg
+    "es",      # feminine agent: -es
+    "wr",      # agent (masc.): -wr
+    "ydd",     # agent/abstract: -ydd
+    "yn",      # diminutive: -yn
+    "ad",      # verbal noun: -ad
+    "i",       # plural/adj: -i
+)
+
+# Verb suffixes ordered longest-first
+CY_VERB_SUFFIXES: tuple[str, ...] = (
+    "wyd",     # impersonal past: -wyd
+    "wn",      # 1st sg. conditional/imperfect
+    "ant",     # 3rd pl. present/future
+    "ais",     # 1st sg. past
+    "odd",     # 3rd sg. past
+    "ach",     # 2nd pl.
+    "af",      # 1st sg. present/future
+    "ir",      # impersonal present
+    "er",      # impersonal present (alt)
+    "u",       # infinitive marker
+    "o",       # subjunctive/verbal noun
+    "i",       # infinitive (soft mutation environment)
+)
 
 
 # ---------------------------------------------------------------------------
@@ -398,6 +526,10 @@ def decompose_target(word: str, lang: str) -> list[str]:
         candidates = _decompose_gothic(word_lower)
     elif lang == "sga":
         candidates = _decompose_old_irish(word_lower)
+    elif lang == "non":
+        candidates = _decompose_old_norse(word_lower)
+    elif lang == "cy":
+        candidates = _decompose_welsh(word_lower)
     # else: no-op
 
     result: list[str] = [word_lower]
@@ -547,6 +679,107 @@ def _decompose_gothic(word: str) -> list[str]:
     return stems
 
 
+def _decompose_old_norse(word: str) -> list[str]:
+    """Decompose an Old Norse word into candidate stems.
+
+    Three passes:
+    1. Strip common noun/adjective suffixes (ON has many case/gender endings).
+       Most important: -r (nom. sg. masc.), -ar, -ir, -ur, -a, -i, -s.
+    2. Strip verb suffixes (-a infinitive, -andi participle, -aðr past ptcp., etc.)
+    3. Strip preverb/prefix from original word.
+    4. Handle umlaut-alternation: vowels before -i/-j suffixes may be umlauted
+       in the stem; orthographic skeleton matching handles this naturally since
+       we only match consonants.
+    """
+    stems: list[str] = []
+
+    # 1. Strip ALL matching noun/adjective suffixes
+    for suf_stem in _strip_all_suffixes(word, ON_NOUN_SUFFIXES):
+        stems.append(suf_stem)
+        pre_of_suf = _strip_prefix(suf_stem, ON_PREFIXES)
+        if pre_of_suf:
+            stems.append(pre_of_suf)
+
+    # 2. Strip verb suffixes
+    for suf_stem in _strip_all_suffixes(word, ON_VERB_SUFFIXES):
+        stems.append(suf_stem)
+        pre_of_suf = _strip_prefix(suf_stem, ON_PREFIXES)
+        if pre_of_suf:
+            stems.append(pre_of_suf)
+
+    # 3. Strip prefix from original
+    prefix_stem = _strip_prefix(word, ON_PREFIXES)
+    if prefix_stem:
+        stems.append(prefix_stem)
+        for suf_stem in _strip_all_suffixes(prefix_stem, ON_NOUN_SUFFIXES + ON_VERB_SUFFIXES):
+            stems.append(suf_stem)
+
+    stems.sort(key=len, reverse=True)
+    return stems
+
+
+def _decompose_welsh(word: str) -> list[str]:
+    """Decompose a Welsh word into candidate stems.
+
+    Three passes:
+    1. Soft-mutation reversal: initial b→p, d→t, dd→rh, f→b, ff→p, g→c,
+       l→ll, m→b, n→d, ng→g, rh→r (strip mutation to expose base consonant).
+    2. Strip noun/adjective suffixes, then optionally a prefix.
+    3. Strip verb suffixes, then optionally a prefix.
+    4. Strip prefix from original word.
+
+    Welsh mutation system is complex; this focuses on the most common
+    soft mutations that affect initial consonants in the corpus.
+    """
+    stems: list[str] = []
+
+    # 1. Soft mutation reversal: unmutate initial consonant
+    _SOFT_MUTATION_REVERSE = (
+        ("dd", "rh"),  # dd ← rh (nasal mutation of rh)
+        ("ff", "p"),   # ff ← p (aspirate mutation: p→ff=/f/)
+        ("ng", "g"),   # ng ← g (nasal mutation)
+        ("nh", "t"),   # nh ← t (nasal mutation: t→nh)
+        ("mh", "p"),   # mh ← p (nasal mutation: p→mh)
+        ("ngh", "c"),  # ngh ← c (nasal mutation: c→ngh)
+        ("ch", "c"),   # ch ← c (aspirate mutation: c→ch)
+        ("ph", "p"),   # ph ← p (aspirate mutation: p→ph)
+        ("th", "t"),   # th ← t (aspirate mutation: t→th)
+        ("f", "b"),    # f ← b (soft mutation: b→f=/v/)
+        ("d", "t"),    # d ← t (soft mutation: t→d)
+        ("b", "p"),    # b ← p (soft mutation: p→b)
+        ("g", "c"),    # g ← c (soft mutation: c→g)
+    )
+    for mutated, base in _SOFT_MUTATION_REVERSE:
+        if word.startswith(mutated) and len(word) > len(mutated):
+            candidate = base + word[len(mutated):]
+            if len(candidate) >= _MIN_STEM:
+                stems.append(candidate)
+
+    # 2. Strip ALL matching noun/adjective suffixes
+    for suf_stem in _strip_all_suffixes(word, CY_NOUN_SUFFIXES):
+        stems.append(suf_stem)
+        pre_of_suf = _strip_prefix(suf_stem, CY_PREFIXES)
+        if pre_of_suf:
+            stems.append(pre_of_suf)
+
+    # 3. Strip verb suffixes
+    for suf_stem in _strip_all_suffixes(word, CY_VERB_SUFFIXES):
+        stems.append(suf_stem)
+        pre_of_suf = _strip_prefix(suf_stem, CY_PREFIXES)
+        if pre_of_suf:
+            stems.append(pre_of_suf)
+
+    # 4. Strip prefix from original
+    prefix_stem = _strip_prefix(word, CY_PREFIXES)
+    if prefix_stem:
+        stems.append(prefix_stem)
+        for suf_stem in _strip_all_suffixes(prefix_stem, CY_NOUN_SUFFIXES + CY_VERB_SUFFIXES):
+            stems.append(suf_stem)
+
+    stems.sort(key=len, reverse=True)
+    return stems
+
+
 def _decompose_old_irish(word: str) -> list[str]:
     """Decompose an Old Irish word into candidate stems.
 
@@ -687,6 +920,28 @@ OLD_IRISH_PHONETIC: dict[str, list[str]] = {
     "ph": ["f", "p"],     # lenited p: /f/ → f or p (OIr. p loss pathway)
 }
 
+# Welsh mutation digraph shifts
+# Soft mutations, aspirate mutations, and nasal mutations recover base consonants.
+# These are the same logic used in _decompose_welsh but applied to skeletons.
+# dd=/ð/ → d (base consonant); th=/θ/ → t; ch=/x/ → c/k; ff=/f/ → p; rh → r
+# ll=/ɬ/ → l; ph → p; mh → m; ngh → c
+WELSH_PHONETIC: dict[str, list[str]] = {
+    "dd": ["d"],          # dd=/ð/ → base d (soft mutation of d, also ð→d)
+    "th": ["t", "d"],     # th=/θ/ → base t (aspirate mutation of t)
+    "ch": ["c", "k"],     # ch=/x/ → base c (aspirate mutation of c)
+    "ff": ["f", "p"],     # ff=/f/ → base p (aspirate: p→ph→ff) or f
+    "ph": ["p", "f"],     # ph=/f/ → base p (aspirate mutation of p)
+    "rh": ["r"],          # rh=/r̥/ → r (base consonant)
+    "ll": ["l"],          # ll=/ɬ/ → l (base consonant class match)
+    "mh": ["m"],          # mh → base m (nasal mutation of p)
+    "ngh": ["c", "g"],    # ngh → base c (nasal mutation of c) or g
+    "nh": ["t"],          # nh → base t (nasal mutation of t)
+    "f": ["b", "v"],      # f=/v/ → base b (soft mutation: b→f) or v
+    "b": ["p"],           # b ← p (soft mutation reversal)
+    "d": ["t"],           # d ← t (soft mutation reversal)
+    "g": ["c", "k"],      # g ← c (soft mutation reversal)
+}
+
 # Epenthetic patterns applied to ALL languages
 _EPENTHETIC_PATTERNS: list[tuple[str, str]] = [
     ("mb", "b"),
@@ -777,7 +1032,8 @@ def phonetic_variants(skeleton: str, lang: str) -> list[str]:
     _apply_map_variants(skel, UNIVERSAL_CORRESPONDENCES, _add)
 
     # 4. Language-specific shifts (on top of universal)
-    if lang == "ang":
+    if lang in ("ang", "got", "non"):
+        # Germanic languages: apply Grimm's Law stop series
         _apply_map_variants(skel, GRIMM_MAP, _add)
     elif lang == "lat":
         _apply_digraph_variants(skel, LATIN_PHONETIC, _add)
@@ -785,6 +1041,8 @@ def phonetic_variants(skeleton: str, lang: str) -> list[str]:
         _apply_digraph_variants(skel, GREEK_PHONETIC, _add)
     elif lang == "sga":
         _apply_digraph_variants(skel, OLD_IRISH_PHONETIC, _add)
+    elif lang == "cy":
+        _apply_digraph_variants(skel, WELSH_PHONETIC, _add)
 
     return result
 
