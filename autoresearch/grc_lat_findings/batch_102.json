@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0816",
+    "finding": "no_path",
+    "semantic_journey": "Arabic nasttas = physician/knower (itself borrowed from Greek). Greek gnostos = known/well-known. Arabic nasttas is a Greek loanword in Arabic. Comparing it back to another Greek term is circular. Shared loanword with Arabic as recipient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic nasttas is borrowed from Greek; comparing it back to Greek gnostos is circular; Arabic is the loanword recipient."
+  },
+  {
+    "pair_id": "GRC_0817",
+    "finding": "path_found",
+    "semantic_journey": "Arabic salaja = to swallow, take in by gulping. Greek syllegomai = to gather/collect for oneself (middle of syllego). Core: intake/collection. 1-step drift: gulping-intake -> gathering/collecting-in.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic swallowing/gulping (taking in by mouth) and Greek gathering/collecting share the intake/collection concept."
+  },
+  {
+    "pair_id": "GRC_0818",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-fawl = fava bean (specific legume). Greek elaiofullon = olive-leaf (elaia+phullon). Both plants but in entirely different botanical categories with no semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic fava bean and Greek olive-leaf are both plants but in entirely different botanical categories."
+  },
+  {
+    "pair_id": "GRC_0819",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qarf = bark of a tree; skin/hide shavings (outer covering that peels off). Greek karphos = dry twig, chip of wood (small dry piece of plant material). Core: dry outer plant material that comes off. 1-step specialization: bark/shavings -> dry-chip/twig.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic bark/skin-shavings and Greek dry twig/chip are both dried outer plant material; Arabic is the broader covering, Greek the specific small piece."
+  },
+  {
+    "pair_id": "GRC_0820",
+    "finding": "path_found",
+    "semantic_journey": "Arabic kabura = to be great, mighty (kabir = great). Greek Kabeiroi = the Great Gods of Samothrace (a well-documented Semitic loanword from k-b-r = great). Arabic kabir directly generated the Semitic religious epithet. Material-culture religious transmission.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic great/mighty (k-b-r) and Greek Kabeiroi (the Great Gods) are a direct Semitic religious loanword; Kabeiroi explicitly derives from Semitic k-b-r meaning great."
+  },
+  {
+    "pair_id": "GRC_0821",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-shanaa = ugly, repulsive, abominable. Greek lysalgoon = in painful distress. Ugly-causes-suffering chain requires 3 steps: ugly -> causing-beholder-to-suffer -> painful-distress. Crosses aesthetic-to-pain domain.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic ugly/abominable and Greek painful-distress are in different domains; the aesthetic-to-pain chain requires 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0822",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kamawi = luminous moonlight. Greek leukomelan = white-and-black, grey-colored. Luminosity and grey-color are both in pale-light domain but different: light-emission vs achromatic color. Getting from moonlight to grey requires 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic luminous moonlight and Greek grey-color are adjacent in pale-light but categorically different requiring 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0823",
+    "finding": "path_found",
+    "semantic_journey": "Arabic fan = splendor, radiance, appearance (baha = brilliance/appearance). Greek epiphaneia = appearance, manifestation, especially divine (epi+phainein = to appear). Core: shining radiant appearance. 1-step direct preservation: radiant-appearance -> visible-manifestation.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic radiance/appearance and Greek epiphaneia (divine appearance) share the concept of a shining visible appearance of something glorious."
+  }
+]

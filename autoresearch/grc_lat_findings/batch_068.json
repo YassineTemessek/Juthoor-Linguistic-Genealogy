@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0544",
+    "finding": "path_found",
+    "semantic_journey": "Arabic استرغزه = found him weak, softened him (finding someone yielding/soft). Greek στραγγίζω = to squeeze out, strain (pressing to extract liquid through compression). Both encode PRESSING TO EXTRACT through applying force to something soft/yielding: Arabic = finding softness/weakness under pressure; Greek = pressing to squeeze out content. A 1-step path: finding something soft/yielding -> pressing the soft thing to extract. Phonetic similarity r-gh-z / str-ng-z supports this.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic finding-softness/weakness (استرغزه) and Greek squeezing/straining (στραγγίζω) share the core of applying pressure to something soft to extract."
+  },
+  {
+    "pair_id": "GRC_0545",
+    "finding": "path_found",
+    "semantic_journey": "Arabic سفي = cloudiness, turbidity (the quality of being unclear/muddy). Greek σαφής = clear, plain, manifest. The original reasoning calls this a negation cognate: cloudiness (Arabic) vs clarity (Greek) are opposite ends of the transparency axis. This is a valid negation cognate: Arabic preserves the UNCLEAR/CLOUDY side; Greek preserves the CLEAR/MANIFEST side. Both sides of one transparency concept.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic cloudiness/turbidity (سفي) and Greek clarity (σαφής) are negation cognates — opposite poles of the same transparency concept."
+  },
+  {
+    "pair_id": "GRC_0546",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سنخ = root, base, foundation (the embedded firm base of something). Greek εἰς ὄνυχα = to/into the nail (dative, referring to a fingernail or toenail). The original reasoning maps rootedness/firm-embedding to nail/exact-end. But a root/base (embedded deeply below) and a nail (small pointed surface feature at extremity) are different: one is the deepest embedded part, the other is the most superficial extremity. Opposite ends of the body concept.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic root/base (deep embedded foundation) and Greek nail (superficial extremity) are opposite ends of body structure with no path."
+  },
+  {
+    "pair_id": "GRC_0547",
+    "finding": "no_path",
+    "semantic_journey": "Arabic أدم/إدام = condiment, seasoning, relish (what accompanies and flavors bread). Greek Δήμητερ = Demeter (the goddess of grain). This is a proper mythological name, excluded by methodology. Even analytically, Demeter's etymology is pre-Greek, possibly from 'earth mother' (Dā + mātēr), not from Arabic condiment.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Δήμητερ is a proper mythological name (goddess of grain) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0548",
+    "finding": "path_found",
+    "semantic_journey": "Arabic السكركة = a thick fermented grain drink (made from sorghum/millet — characteristically viscous and sticky). Greek γλίσχρος = sticky, viscous, adhesive, claggy. The semantic journey: the fermented grain drink (substance) -> its sticky/viscous quality (property). Arabic preserves the SUBSTANCE; Greek preserves the DEFINING PROPERTY of that substance. A 1-step substance-to-property path. Fermented grain drinks are specifically characterized by their thick sticky texture.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic thick fermented grain drink (السكركة) and Greek sticky/viscous (γλίσχρος) share the viscosity quality — the drink's defining textural property preserved in Greek."
+  },
+  {
+    "pair_id": "GRC_0549",
+    "finding": "path_found",
+    "semantic_journey": "Arabic شتم = to insult, curse, abuse verbally; مشتوم = the insulted one. Greek στόμα = mouth; στόματι = dative singular (with the mouth). Both directly encode the MOUTH-VERBAL ABUSE relationship: Arabic = the act of verbal abuse; Greek = the instrument (mouth) through which abuse is delivered. A 1-step action-to-instrument: verbal abuse -> the mouth that delivers it. Phonetic similarity sh-t-m / st-m-t reinforces this.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic verbal abuse/insult (شتم) and Greek mouth (στόμα) share the abuse-speech domain — action and its instrument."
+  },
+  {
+    "pair_id": "GRC_0550",
+    "finding": "no_path",
+    "semantic_journey": "Arabic درك = to catch up with, to reach, to overtake (closing the gap to something ahead). Greek διέρχεται = he passes through (from δια + ἔρχομαι = through + come). The original reasoning maps catching-up to passing-through as directed movement. But catching up with something (closing a gap, pursuing) and passing through (traversing a space) are different movement types: pursuit vs transit. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic catching-up/overtaking (pursuit) and Greek passing-through (transit) are different movement types with no direct path."
+  },
+  {
+    "pair_id": "GRC_0551",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الإثم = sin, guilt, moral burden (being loaded with the weight of sin). Greek λυόμεθα = we are being released/loosened (passive of λύω = to loosen, release, set free). The concept of RELEASE FROM SIN (λύω τὰς ἁμαρτίας = to release from sins) is central to Greek religious language. Arabic encodes the SIN/BURDEN; Greek encodes the RELEASE FROM THAT BURDEN. This is a negation cognate: Arabic = the binding weight of sin; Greek = the loosening/release of that weight.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sin/moral-burden (الإثم) and Greek being-released/loosened (λυόμεθα) are negation cognates — the burden and its release."
+  }
+]

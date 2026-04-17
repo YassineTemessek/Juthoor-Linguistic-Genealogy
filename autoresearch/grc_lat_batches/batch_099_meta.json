@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0792",
+    "arabic_root": "ذمت",
+    "target_lemma": "διαιτημάτων",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic emaciation/change can plausibly connect to Greek 'regimens, ways of life' through diet causing bodily alteration. This is a credible action-to-result chain."
+  },
+  {
+    "pair_id": "GRC_0793",
+    "arabic_root": "بغداد",
+    "target_lemma": "Βαγαδάτης",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both contain bghd/baga element (Iranian 'god-given'). Baghdad=Bagh+dad, Bagadates=same root. Plausible loan."
+  },
+  {
+    "pair_id": "GRC_0794",
+    "arabic_root": "غفر",
+    "target_lemma": "Γάφαρα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic ghafara = forgive/cover; Greek Gaphara = place in Africa (Tunisia). Shared Semitic/Punic substrate plausible for place name."
+  },
+  {
+    "pair_id": "GRC_0795",
+    "arabic_root": "خبي",
+    "target_lemma": "χάβος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic khiba'/khaba = made/set up a tent, hiding place. Greek chabos (Hesychius) = muzzle, kemos. Both denote covering/concealing structures. Phonetic resemblance khib/chab is direct. Strong combined link."
+  },
+  {
+    "pair_id": "GRC_0796",
+    "arabic_root": "ششقل",
+    "target_lemma": "ἰσοσκελής",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic includes assaying or evaluating dinars, and Greek means equal-sided. The bridge is measurement, balance, and exact proportion, which makes the match plausible but not direct."
+  },
+  {
+    "pair_id": "GRC_0797",
+    "arabic_root": "مكث",
+    "target_lemma": "μοχθέω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "مكث=to linger/delay/tarry; μοχθέω=to be weary with toil. Related via notion of prolonged effort/stay"
+  },
+  {
+    "pair_id": "GRC_0798",
+    "arabic_root": "القمل",
+    "target_lemma": "Λευκίμμη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic swollen belly suggests bulging projection, which can conceptually align with a promontory jutting outward."
+  },
+  {
+    "pair_id": "GRC_0799",
+    "arabic_root": "خضن",
+    "target_lemma": "χόδανος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic مخاضنة includes obscene exchange, and Greek buttocks belongs to the same coarse bodily domain."
+  }
+]

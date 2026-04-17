@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0200",
+    "finding": "path_found",
+    "semantic_journey": "Arabic اللق (al-laqq/laqlaqa) = to make a loud repetitive sound; لقلاق = stork, named for its bill-clattering noise. Greek λάλαξ = a babbler, one who chatters or croaks. Both are onomatopoeic/phonosemantic words for noisy, repetitive vocalization. Arabic noisy-clattering/chattering sound → Greek babbler/croaker is a direct 1-step match in the sound-production semantic field.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic laqlaqa (noisy chattering, stork) and Greek lalax (babbler) share the onomatopoeic concept of repetitive noisy vocalization."
+  },
+  {
+    "pair_id": "GRC_0201",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حلتب (hultub) = stingy, miserly, one who withholds. Greek χαλεπώτατος = most difficult, harshest, most severe (superlative of χαλεπός). Stinginess and harshness/difficulty are both negative qualities but they are categorically different: stinginess is about withholding goods, harshness is about severity of conditions or personality. The two concepts do not share a 1-2 step semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic stinginess (withholding) and Greek harshness/difficulty are distinct negative qualities with no clean semantic bridge."
+  },
+  {
+    "pair_id": "GRC_0202",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سجر (sajara) = to fill with water (a river flooded/filled), to inflame (a fire), to kindle. Greek Σάγρα = the Sagra River in Calabria, a proper toponym. While the Arabic root has water-filling senses, Σάγρα is a proper place name. Even if the toponym derived from a Semitic root meaning filled-with-water, the Greek form is a proper name and should be excluded. Additionally, the phonetic match is marginal.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Sagra is a Greek river toponym; even if Semitic-influenced, comparing to Arabic sajara treats a proper name as a common noun."
+  },
+  {
+    "pair_id": "GRC_0203",
+    "finding": "path_found",
+    "semantic_journey": "Arabic زوج (zawj) = a pair, couple; to be paired/married; to yoke together. Greek Ζεῦγμα = a joining, a yoke; name of the city at the Euphrates crossing ('the bridge/joining'). The shared concept is yoking/joining two things together. Arabic paired-couple/yoking → Greek joining/bridge is a direct 1-step match: both encode the joining of two separate things. Note: Zeugma as a place name refers directly to a bridge/joining, not a person's name — it is a common-noun toponym, which makes this a material-culture transmission of the yoke/join concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic zawj (pairing/yoking) and Greek Zeugma (joining/yoke) share the Semitic concept of joining two elements — transmitted in the bridge/yoking toponym."
+  },
+  {
+    "pair_id": "GRC_0204",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حاق (haqqa) = to befall, descend upon, be realized (what was decreed comes to pass). Greek καχέκτης = one in poor bodily condition, someone with bad constitution (κακός 'bad' + ἕξις 'condition'). The connection requires: what befalls → bad condition that befalls someone → person suffering a bad condition — that is 3+ steps. Greek kakektes has transparent internal etymology (bad + holding/condition) with no Semitic required.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic befalling/descending and Greek poor-bodily-condition are too distant; the Greek compound has transparent internal etymology."
+  },
+  {
+    "pair_id": "GRC_0205",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ساخ (sakha) = to settle, sink, become fixed in place (sand, ground absorbing). Greek ἐσχήκει = he had held/possessed (perfect of ἔχω). The connection settling/sinking-into-place → having/holding requires: Arabic settling-fixation → established state → holding. The sinking-into-earth sense of sakha and the possession sense of ekhein are semantically distant enough that the path requires 3 steps. Same issue as GRC_0134.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sinking/settling into ground and Greek having/holding are too conceptually distant for a 2-step cognate path."
+  },
+  {
+    "pair_id": "GRC_0206",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القنوت (al-qunut) = a specific Islamic prayer form; also: devotion, submission, prolonged standing in prayer. Also: to curse enemies (qunut an-nawazil). Greek ὀλέκοντο = they were being destroyed/perishing (imperfect of ὄλλυμι). The connection: cursing enemies → their destruction. While a curse may lead to destruction, the Arabic word primarily means prayerful devotion/submission; the destruction-curse sense is secondary. The chain prayerful-devotion → curse-invocation → enemy-destruction is 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic devotional prayer/submission and Greek perishing/destruction are too distant even via the curse-invocation intermediate."
+  },
+  {
+    "pair_id": "GRC_0207",
+    "finding": "path_found",
+    "semantic_journey": "Arabic بلصم (balsam/bilsam) = balsam resin, the precious aromatic substance. Greek ὀποβάλσαμον = juice of balsam (ὀπός 'juice/sap' + βάλσαμον 'balsam'). The root b-l-s-m is a Semitic word for the balsam plant and its resin that traveled the ancient trade routes. Arabic balsam resin → Greek balsam juice is a direct material culture preservation. The Semitic root balsam is the origin of the Greek word.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic balsam resin (bilsam) is the Semitic origin of Greek balsamon — the precious aromatic resin traveled with its Semitic name."
+  }
+]

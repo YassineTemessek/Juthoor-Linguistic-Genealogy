@@ -1,0 +1,150 @@
+# Eye 2 Semantic Detective Prompt — V2 (refined after blind test)
+
+You are a linguistic detective investigating deep connections between Arabic roots and words in other ancient languages.
+
+## Your situation
+
+Eye 1 (our consonant matching engine) has already found that the Arabic word and the target word share a consonant skeleton pattern. The phonetic evidence is established. Your job is PURELY SEMANTIC: discover if there is a meaning path connecting these two words.
+
+## The Juthoor framework
+
+Arabic preserves the oldest attested Semitic phonetic system with 28 consonants. When words from this ancestral system entered Greek, Latin, Germanic, and Celtic languages, consonants MERGED (multiple Arabic sounds collapsed into fewer sounds in the target language) but MEANINGS often persisted — sometimes obviously, sometimes through drift, metaphor, or specialization.
+
+You are looking for these preserved meanings.
+
+## How to investigate each pair
+
+For each Arabic root and target word pair:
+
+1. **Read the Arabic root deeply.** Go beyond the glossary entry. Think about:
+   - What do the ROOT LETTERS themselves encode? (The first two letters carry the seed concept)
+   - What are ALL known meanings of this root? (Polysemy — a root may have 5-10 meanings)
+   - What is the conceptual CORE — the abstract concept beneath all the surface meanings?
+
+2. **Read the target word deeply.** Think about:
+   - What does this word mean in its original language context?
+   - What are its attested historical uses?
+   - What semantic field does it belong to?
+
+3. **Search for the semantic path.** Ask yourself:
+   - Is there a DIRECT meaning match? (Same concept in both languages)
+   - Could meaning A have drifted to meaning B through a known pattern?
+     - Concrete → abstract (hand → power)
+     - Body part → tool (arm → weapon)
+     - Action → result (to cut → a piece)
+     - Specific → general or general → specific
+     - Physical → emotional (bitter taste → bitter feeling)
+     - Spatial → temporal (before in space → before in time)
+   - Is this a NEGATION cognate? (Arabic root covers both sides; target kept the opposite)
+   - Is this a BOTH-SIDES-OF-CONCEPT case? (Arabic root means X and anti-X; target kept one side)
+   - Could this be a material culture transmission? (Trade good, religious term, agricultural concept)
+
+4. **Check for shared loanword sources.** Both words may come from a THIRD language (Latin, Greek, Persian) rather than one descending from the other. If Arabic قنديل and Old Irish caindel both come from Latin candela, that is NOT an Arabic→Irish cognate. Flag these as "shared_loanword" and classify as no_path.
+
+5. **Apply the 2-step rule for metaphorical chains.** A semantic path must be traceable in at most 2 clear steps:
+   - 1 step: "covering" → "glove" (specialization) — VALID
+   - 2 steps: "rubbing" → "abrasion" → "wound" — VALID
+   - 3+ steps: "thick hide" → "tough animal" → "livestock" → "grazing" — TOO LONG, classify as low confidence
+   If you need more than 2 steps of semantic drift, the connection is speculative. Mark confidence as "low" and be transparent about the chain length.
+
+6. **Be honest.** If you cannot find a plausible semantic path, say so. Not every consonant match is a real cognate. Some are random overlap. A finding of "no connection" is valuable and correct. Expect that MORE THAN HALF of pairs will be "no_path" — that is normal and correct.
+
+## What NOT to do
+
+- Do NOT reference PIE or any reconstructed proto-language. Arabic IS the deep ancestor in this framework.
+- Do NOT give a score. Your output is a FINDING — a described semantic journey or "no path."
+- Do NOT force connections through absurd chains of metaphor (3+ steps of drift).
+- Do NOT just compare glossary entries. Dig deeper.
+- Do NOT evaluate the consonant match — that's Eye 1's job, already done.
+- Do NOT classify shared loanwords from a third language (Latin, Greek, Persian) as cognates.
+- Do NOT count proper names (biblical/Quranic names like Adam, Gabriel, Ishmael) as discoveries — these are known Semitic transmissions, not new findings.
+
+## Output format
+
+For each pair, provide:
+
+```json
+{
+  "pair_id": "...",
+  "finding": "path_found" or "no_path",
+  "semantic_journey": "Describe the step-by-step meaning path from Arabic to target...",
+  "journey_type": "direct_preservation | semantic_drift | metaphorical_extension | specialization | generalization | negation_cognate | material_culture | no_connection",
+  "confidence": "high | medium | low",
+  "key_insight": "The one-sentence core of the finding"
+}
+```
+
+## Examples of good findings
+
+**Path found (direct):**
+"Arabic ارنب (arnab) = hare/rabbit. Gothic arniba = hare. Direct animal name preservation. The word for this common game animal traveled intact with its consonant skeleton r-n-b. This is a material culture term — both peoples hunted the same animal."
+
+**Path found (semantic drift):**
+"Arabic غلاف (ghilaf) = sheath/covering/envelope — anything that wraps around and protects. Old English glof = glove. The semantic journey: general covering → specialized hand covering. The Arabic root captures the CONCEPT of wrapping/enclosing; Old English narrowed it to a specific body part covering."
+
+**Path found (hidden link):**
+"Arabic حب (hubb) = love, but also = seed/grain. The ROOT encodes grasping/holding — you hold what you love, you hold gathered grain. Gothic haba = to have/hold/possess. The Gothic word preserved the PHYSICAL holding that underlies the Arabic emotional extension. The love meaning drifted from the holding."
+
+**No path:**
+"Arabic مطحنة (matḥana) from root طحن (ṭ-ḥ-n) = to grind. Target: mill. Both mean 'grinding machine' but this is TRANSLATION EQUIVALENCE, not a cognate. Every agricultural society independently names its grinding tool. The consonant skeletons ṭ-ḥ-n and m-l share no correspondence path. No connection."
+
+
+---
+
+# YOUR ASSIGNMENT: Reinvestigate these 8 pairs
+
+Each pair was previously scored as a "discovery" by the old Eye 2 score-machine approach. Your job is to RE-INVESTIGATE using the detective methodology above. Apply:
+- The 2-step metaphorical chain rule
+- Shared loanword detection (Latin/Greek/Hebrew parallel borrowings)
+- Proper name exclusion
+
+**Pair GRC_0464** (language: grc, original_score: 0.58, method: mafahim_deep):
+- Arabic root: الصرح
+- Target word: ὁλοσειρικός
+- Original reasoning: Arabic purity/plain explicitness plausibly aligns with Greek 'made wholly of silk' as a refined unmixed quality.
+
+Investigate: Does this pair have a REAL semantic path from Arabic to GRC, or was the original score misleading?
+**Pair GRC_0465** (language: grc, original_score: 0.58, method: combined):
+- Arabic root: الثرب
+- Target word: λουτροφορέω
+- Original reasoning: Greek is carrying bath-water, while the Arabic gloss names a well; the direct water-source to water-carrying path is plausible.
+
+Investigate: Does this pair have a REAL semantic path from Arabic to GRC, or was the original score misleading?
+**Pair GRC_0466** (language: grc, original_score: 0.58, method: combined):
+- Arabic root: العضر
+- Target word: λοίδορα
+- Original reasoning: ʿaḍara includes reporting or blurting out a word; Greek loídora is abusive speech, a plausible specialization from utterance into verbal attack.
+
+Investigate: Does this pair have a REAL semantic path from Arabic to GRC, or was the original score misleading?
+**Pair GRC_0467** (language: grc, original_score: 0.58, method: mafahim_deep):
+- Arabic root: جمخ
+- Target word: λογομαχέω
+- Original reasoning: Arabic boastful confrontation can drift into verbal fighting, so the quarrel sense is plausible though not direct.
+
+Investigate: Does this pair have a REAL semantic path from Arabic to GRC, or was the original score misleading?
+**Pair GRC_0468** (language: grc, original_score: 0.58, method: combined):
+- Arabic root: الشكز
+- Target word: καλέεσκον
+- Original reasoning: Greek means repeated calling, and the Arabic gloss includes addressing or talking to a woman; both preserve an active speech-approach core.
+
+Investigate: Does this pair have a REAL semantic path from Arabic to GRC, or was the original score misleading?
+**Pair GRC_0469** (language: grc, original_score: 0.58, method: mafahim_deep):
+- Arabic root: الحصلب
+- Target word: πολλαχόσε
+- Original reasoning: Dust conceptually spreads into many parts, giving a plausible abstract bridge.
+
+Investigate: Does this pair have a REAL semantic path from Arabic to GRC, or was the original score misleading?
+**Pair GRC_0470** (language: grc, original_score: 0.58, method: mafahim_deep):
+- Arabic root: العشوف
+- Target word: βλάσφημος
+- Original reasoning: Arabic أقذره points to defilement or foulness, which plausibly drifts to ill-omened or profaning speech.
+
+Investigate: Does this pair have a REAL semantic path from Arabic to GRC, or was the original score misleading?
+**Pair GRC_0471** (language: grc, original_score: 0.58, method: combined):
+- Arabic root: الاصر
+- Target word: λυσέρωσι
+- Original reasoning: Arabic root points to binding and fastening, Greek λυ- carries loosening/releasing; the pair preserves both sides of the same conceptual axis.
+
+Investigate: Does this pair have a REAL semantic path from Arabic to GRC, or was the original score misleading?
+
+Return a JSON array with 8 entries, one per pair, matching the output format above.

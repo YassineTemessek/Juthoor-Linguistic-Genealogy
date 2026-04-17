@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0784",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khawtha = fullness, being completely full. Greek ikhthyodes = full of fish, abounding in fish. Core: fullness/abundance. 1-step specialization: general-fullness -> specific-fullness-of-fish.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic general-fullness and Greek full-of-fish share the fullness/abundance concept; Greek specializes to fish-abundance."
+  },
+  {
+    "pair_id": "GRC_0785",
+    "finding": "path_found",
+    "semantic_journey": "Arabic hada = to calm, quiet (tahdia = calming). Greek heude = sleep (imperative of heudein). Core: calm/quiet. Sleep is the ultimate calm state. 1-step direct preservation: calming/quieting -> sleep as deepest calm.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic calming/quieting and Greek sleep share settling into stillness; sleep is the ultimate form of calm."
+  },
+  {
+    "pair_id": "GRC_0786",
+    "finding": "no_path",
+    "semantic_journey": "Arabic gharra = crease, fold (ghurar = skin folds). Greek Gerara = Gerar, a biblical place in Palestine (proper name). Proper name exclusion applies. Arabic skin-folds do not plausibly name the biblical city.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gerar is a biblical proper toponym; Arabic skin-folds/creases do not plausibly generate this place-name."
+  },
+  {
+    "pair_id": "GRC_0787",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hamala = to carry, bear. Greek aikhmaloo = to take prisoner. Carrying and taking-prisoner are adjacent but 3 steps apart: carrying -> carrying-away -> forcibly -> capturing.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic carrying/bearing and Greek taking-prisoner are adjacent but 3 steps apart; physical transport and military capture differ."
+  },
+  {
+    "pair_id": "GRC_0788",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hamasha = thin-shanked, scant in flesh (slender limbs). Greek aikhmas = spear-points (plural of aikhme). Slender-limbs and metal-spear-points share only slenderness as a physical property across different domains. The shape-bridge alone is insufficient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic thin-shanked/slender-limbs and Greek spear-points share slenderness but are in different domains; shape-match alone is insufficient."
+  },
+  {
+    "pair_id": "GRC_0789",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dahmara = to fill, contain. Greek diadekhomai = to receive in succession. Filling/containing and successive-reception are in different domains requiring 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic filling/containing and Greek receiving-in-succession are in different domains with no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0790",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hamata = protector of the sanctuary. Greek eikhometha = we were holding/clinging (imperfect of ekhein). Protecting-a-sanctuary and general-holding are adjacent but the specific guardian role does not derive from general-holding in 2 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sanctuary-protector and Greek holding/clinging are adjacent but 3 steps apart; specific guardian role differs from general holding."
+  },
+  {
+    "pair_id": "GRC_0791",
+    "finding": "no_path",
+    "semantic_journey": "Arabic safsaq = visible striations on a sword. Greek saphesin = dative plural of saphes = clear, plain, distinct. Sword-striations (visible surface marks) and conceptual-clarity (clear/plain adjective) require 3+ steps to connect.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sword-striations (surface marks) and Greek clear/plain (conceptual clarity) are in different categories requiring 3+ steps."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0488",
+    "finding": "no_path",
+    "semantic_journey": "Arabic التفاح = apple (the fruit). Greek Λωτοφάγος = Lotus-eater (from λωτός + φαγεῖν = lotus plant + to eat). This is a proper mythological designation (Lotus-eaters in the Odyssey). Both involve eating fruit, but at the level of generic fruit-eating category, not cognacy. Also Λωτοφάγος is a proper mythological name. Excluded by methodology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Λωτοφάγος is a proper mythological designation (Lotus-eaters) — proper names are excluded; also apple and lotus are different fruits."
+  },
+  {
+    "pair_id": "GRC_0489",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الخيعرة = lightness, flightiness, volatile/frivolous character. Greek λέχριος = sideways, oblique, awry (going diagonally/askew). The original reasoning maps frivolous instability to loose/wanton or unstable character. But Arabic is a CHARACTER trait (frivolous); Greek is a DIRECTIONAL/GEOMETRIC descriptor (sideways/oblique). The path frivolous -> unstable -> going sideways requires 3 steps and a domain jump from character to geometry.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic frivolous character and Greek sideways/oblique (geometric direction) are different categories requiring 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0490",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفنا = multitude, group (many people together). Greek πολυφωνία = polyphony, variety of voices/tones (from πολύ + φωνή = many + voice). Both involve multiplicity, but Arabic multiplicity of people and Greek multiplicity of musical tones/voices are different kinds of many-ness. The path group of people -> many things -> many voices/tones requires: social multiplicity -> generic plurality -> musical plurality. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic multitude of people and Greek variety of musical tones both involve plurality but of entirely different things — not cognacy."
+  },
+  {
+    "pair_id": "GRC_0491",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثقب = a hole, perforation; the action of piercing/drilling a hole. Greek ὁπλοθήκη = an armory, weapon-storage room (from ὅπλον + θήκη = weapon + case/container). The original reasoning: piercing leads to weapon storage. But a pierced hole and a weapon storeroom require: hole -> tool that makes holes -> tools -> weapons -> weapon storage. 5+ steps. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic piercing/hole and Greek weapon-storage are entirely unrelated with no credible path."
+  },
+  {
+    "pair_id": "GRC_0492",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حوذ = to drive animals rapidly, to hustle/rush (driving a herd quickly). Greek χυδαῖος = common, vulgar, in great quantity, copious (from χέω = to pour). The original reasoning maps rapid driving to copious pouring through forceful outward movement. But driving animals rapidly and pouring/being copious are different actions in different domains. The path fast-driving -> outward force -> pouring -> copious requires 4+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic rapid animal-driving and Greek copious/common-vulgar (χυδαῖος) are entirely unrelated domains."
+  },
+  {
+    "pair_id": "GRC_0493",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رجا = to defer, postpone, hold back (same root as GRC_0305 ارجا). Greek εἴργω = to shut in, keep back, confine, restrain. This is the same pair as GRC_0305 with a slight Arabic root variant (رجا vs ارجا are the same root). Both encode HOLDING BACK: Arabic temporally (deferral); Greek physically (confinement/restraint). Confirmed plausible link, same analysis as GRC_0305.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Same pair as GRC_0305: Arabic deferral (رجا) and Greek restraint/confinement (εἴργω) share the holding-back core — temporal and physical dimensions."
+  },
+  {
+    "pair_id": "GRC_0494",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رشح = to nominate, prepare someone for a role; also to ooze/seep (liquid seeping through a surface). Greek προσέρχομαι = to come toward, approach (from πρός + ἔρχομαι = toward + come). The original reasoning: a nominated person comes forward. But Arabic رشح is the act of nominating (done by others), while Greek coming-forward is self-directed movement. The path someone-is-nominated -> they come forward requires: passive nomination -> active self-directed approach. Different directions and different agents.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic nomination (passive action done by others) and Greek coming-forward (self-directed movement) have different agents and directions."
+  },
+  {
+    "pair_id": "GRC_0495",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثعل = an extra supernumerary teat/nipple above the udder (an anatomical anomaly in livestock). Greek τελέθω = to be, to exist, to come forth, to grow (poetic equivalent of εἶναι/γίγνομαι). The original reasoning maps the extra teat (growth) to coming-forth/growing. But an anatomical surplus-nipple and the poetic verb for being/growing are entirely different: one is a specific body part anomaly; the other is the most generic concept of existence/growth.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic extra supernumerary nipple (specific anatomical anomaly) and Greek generic being/growing (τελέθω) are entirely different levels of specificity."
+  }
+]

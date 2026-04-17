@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0040",
+    "arabic_root": "دقس",
+    "target_lemma": "Δουκᾶς",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic gloss explicitly preserves a proper name, and Greek is likewise a preserved proper name form."
+  },
+  {
+    "pair_id": "GRC_0041",
+    "arabic_root": "سبت",
+    "target_lemma": "σάββατον",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "combined",
+    "original_reasoning": "Arabic deep sleep or cessation strongly matches Sabbath as rest or stoppage."
+  },
+  {
+    "pair_id": "GRC_0042",
+    "arabic_root": "دخرص",
+    "target_lemma": "διάχρυσος",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "تيريز الثوب والأرض points to patterned inlay or banding, close to interwoven with gold."
+  },
+  {
+    "pair_id": "GRC_0043",
+    "arabic_root": "الحرث",
+    "target_lemma": "ἕλκηθρον",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الحرث is tillage/ploughing, and ἕλκηθρον is the stock of the plough; this is a strong action-to-tool match."
+  },
+  {
+    "pair_id": "GRC_0044",
+    "arabic_root": "اصخات",
+    "target_lemma": "ἡσυχάζετε",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "The Arabic gloss directly centers on subsiding, calming, and becoming still, which strongly matches ἡσυχάζετε, be quiet or at rest."
+  },
+  {
+    "pair_id": "GRC_0045",
+    "arabic_root": "شبرت",
+    "target_lemma": "Σύβριτα",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic explicitly gives a fortress or place-name, and Greek is likewise the place-name Sybrita; this is a strong toponymic match."
+  },
+  {
+    "pair_id": "GRC_0046",
+    "arabic_root": "بركن",
+    "target_lemma": "βαρακίνη",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "βαρακίνη refers to a kind of garment/cloth, which aligns closely with the Arabic gloss 'a black cloak'."
+  },
+  {
+    "pair_id": "GRC_0047",
+    "arabic_root": "السعتر",
+    "target_lemma": "λῃστρίς",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الشاطر here carries rogue or outlaw agency, which matches Greek robber very closely."
+  }
+]

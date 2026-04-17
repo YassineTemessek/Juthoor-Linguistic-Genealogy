@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0336",
+    "arabic_root": "الطني",
+    "target_lemma": "τέναγος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "both relate to water/waterways — clear semantic match"
+  },
+  {
+    "pair_id": "GRC_0337",
+    "arabic_root": "العرد",
+    "target_lemma": "ἐργώδης",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: hard/difficult — Greek: laborious/troublesome — clear match"
+  },
+  {
+    "pair_id": "GRC_0338",
+    "arabic_root": "العرزم",
+    "target_lemma": "ἁρμόζω",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "both express gathering/assembly — clear semantic match"
+  },
+  {
+    "pair_id": "GRC_0339",
+    "arabic_root": "العلق",
+    "target_lemma": "λάκκος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "both relate to water/waterways — clear semantic match"
+  },
+  {
+    "pair_id": "GRC_0340",
+    "arabic_root": "حكا",
+    "target_lemma": "καυχάομαι",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: narrating/recounting — Greek: speaking/proclaiming — clear semantic match"
+  },
+  {
+    "pair_id": "GRC_0341",
+    "arabic_root": "حكي",
+    "target_lemma": "καυχάομαι",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: narrating/recounting — Greek: speaking/proclaiming — clear semantic match"
+  },
+  {
+    "pair_id": "GRC_0342",
+    "arabic_root": "خبن",
+    "target_lemma": "κνάφος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "both refer to cloth/garment processing — clear semantic match"
+  },
+  {
+    "pair_id": "GRC_0343",
+    "arabic_root": "دلع",
+    "target_lemma": "δέλτα",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic دلع (tongue sticking out, elongated shape) → Greek Δέλτα. Letter delta (Δ) resembles triangular tongue shape; Semitic-Greek letter correspondence."
+  }
+]

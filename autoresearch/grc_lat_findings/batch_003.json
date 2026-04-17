@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0024",
+    "finding": "no_path",
+    "semantic_journey": "Arabic Slav ethnonym is itself borrowed FROM Greek. Arabic did not originate this ethnonym. Both words name the same people; Arabic received the term from Greek. Shared ethnonym with Arabic receiving from Greek, not the reverse.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic Slav ethnonym borrowed FROM Greek - ethnonym traveled Greek-to-Arabic, not the reverse."
+  },
+  {
+    "pair_id": "GRC_0025",
+    "finding": "path_found",
+    "semantic_journey": "Arabic farkh = chick, nestling, young bird (Semitic root for young of a bird). Greek pharkes = young birds, nestlings, chicks (Hesychius: neossoi = nestlings). The semantic match is direct and precise: both mean exactly young birds/nestlings. The Semitic root f-r-kh for young bird is preserved in Greek. Genuine direct preservation - same bird-life vocabulary with no drift.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic farkh (nestling/chick) directly matches Greek pharkes (nestlings) - genuine direct preservation of bird-life vocabulary."
+  },
+  {
+    "pair_id": "GRC_0026",
+    "finding": "path_found",
+    "semantic_journey": "Arabic naft = naphtha, petroleum, the naturally occurring flammable liquid. Greek naftha = naphtha. Semitic root n-f-t for the substance was transmitted to Greek. This is a documented Semitic loanword into Greek - the flammable earth-substance and its Semitic name were transmitted together. Material culture transmission.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Semitic naphtha term (n-f-t) entered Greek - genuine material culture cognate for petroleum."
+  },
+  {
+    "pair_id": "GRC_0027",
+    "finding": "path_found",
+    "semantic_journey": "Arabic farkhash = variant root related to young bird/chick (similar to farkh in GRC_0025). Greek pharkes = young birds/nestlings. Same as GRC_0025 - direct preservation of Semitic bird-life vocabulary. The root variant still centers on young bird.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Root variant of GRC_0025 - Arabic young-bird concept preserved in Greek pharkes, medium confidence due to root variant uncertainty."
+  },
+  {
+    "pair_id": "GRC_0028",
+    "finding": "no_path",
+    "semantic_journey": "Arabic thunderbolt/being struck senseless (physical impact). Greek means to be faint-hearted, to be of little spirit/courage (psychological state). Physical impact by lightning and inner psychological weakness are distinct concepts. The chain thunderbolt -> struck senseless -> faint -> faint-hearted requires 3+ steps. No clear path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic thunderbolt/being struck and Greek faint-heartedness are distinct semantic domains - 3+ step stretch."
+  },
+  {
+    "pair_id": "GRC_0029",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek are proper names from different cultures and regions (Thracian prince vs Arabic name form). Coincidental phonetic resemblance. Excluded as proper names.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Two unrelated proper names (Thracian prince vs Arabic name) - accidental phonetic resemblance."
+  },
+  {
+    "pair_id": "GRC_0030",
+    "finding": "no_path",
+    "semantic_journey": "Arabic henna = henna (Lawsonia inermis, a dye plant). Greek lakhamon = garden vegetable/edible herb. Henna is a dye plant not a food herb; Greek specifically means edible garden greens. These are different categories of cultivated plants. The semantic distance (dye plant vs food vegetable) is too large. No clear semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic henna (dye plant) and Greek garden vegetable (lakhamon) are different plant categories - not a real match."
+  },
+  {
+    "pair_id": "GRC_0031",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek appear to be proper place names or transmitted name forms. Without clear documentation of a productive Arabic root driving the connection, this is at best a proper name coincidence. Classified as proper name.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "proper_name",
+    "key_insight": "Possible place-name continuity but insufficient evidence for a productive root cognate - classified as proper name."
+  }
+]

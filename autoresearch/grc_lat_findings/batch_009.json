@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0072",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hatama = crushing or breaking. Greek ikhthyemata = fish scraps/shavings (plural of ikhthyema = fish scale/scraping). The original reasoning: crushing -> scrapings as result of breaking. However, ikhthyemata specifically means fish-scale scrapings or fish residues - a very specific material. The chain crushing -> scrapings in general -> fish-scale scrapings specifically requires 2+ unspecified steps (what is crushed? why fish?). Also phonetics are very distant. No real path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic crushing/breaking and Greek fish-scale scrapings are too specific and distant - phonetics also very different."
+  },
+  {
+    "pair_id": "GRC_0073",
+    "finding": "path_found",
+    "semantic_journey": "Arabic zafara = to exhale forcefully, to breathe out strongly, to pant/groan (the Semitic root z-f-r encodes forceful exhalation). Greek Zephyros = the West Wind (from Zeus + phero according to folk etymology, but the deeper root is the wind as breath/exhalation). The semantic journey: forceful breath/exhalation -> wind. The Arabic root captures the act of forceful breathing out; the Greek wind god name preserves the breath-as-wind concept. One step: forceful exhalation -> wind. This is a genuine mafahim deep link.",
+    "journey_type": "mafahim_deep",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic forceful exhalation/breath (zafara) and Greek wind-name (Zephyros) share the breath-as-wind concept."
+  },
+  {
+    "pair_id": "GRC_0074",
+    "finding": "path_found",
+    "semantic_journey": "Arabic saban = a type of fabric/cloth (from the root s-b-n related to weaving or fabric type). Greek sebeninos = made of palm fibre, a cloth material. Both name a specific fabric type. Arabic denotes a named cloth kind; Greek names the palm-fibre material. The textile domain is shared. If Arabic saban refers to palm-fibre cloth specifically, this could be a direct material culture preservation. Plausible link with medium confidence.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fabric/cloth type (saban) and Greek palm-fibre material (sebeninos) share the textile material domain."
+  },
+  {
+    "pair_id": "GRC_0075",
+    "finding": "path_found",
+    "semantic_journey": "Arabic hadraj = to roll, to twist (the root h-d-r-j encodes a rolling/twisting motion that forms a rounded shape). Greek khondros = a lump, a grain, a rounded mass (especially groats/grains; also cartilage as a hard rounded body). The semantic journey: rolling/twisting into a shape -> a rounded lump/mass. Arabic captures the formative action; Greek names the result (rounded lump/grain). One step: rolling action -> rounded result. Genuine semantic connection.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic rolling/twisting into shape (hadraj) and Greek rounded lump/grain (khondros) share the round-formed-mass concept."
+  },
+  {
+    "pair_id": "GRC_0076",
+    "finding": "path_found",
+    "semantic_journey": "Arabic jalfaha = trimming/cutting (removing outer material by cutting). Greek glupho = to carve/engrave, to cut into a surface. Both encode a precise cutting/shaping action on a surface. Arabic captures trimming/paring; Greek names carving/engraving (cutting marks into). The cutting-shaping domain is shared. One step: trimming/cutting surface -> carving into surface.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic trimming/cutting and Greek carving/engraving share the cutting-shaping-a-surface concept."
+  },
+  {
+    "pair_id": "GRC_0077",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dal = sneaking gait; to conceal/trick (a root about deception/concealment). Greek delta = the letter delta (Phoenician daleth = door). The original reasoning tries to connect via Phoenician daleth (door/guide). However: Arabic dal (to conceal/deceive) and Phoenician daleth (door) are different semantic fields. The letter name delta/daleth has a specific documented origin (door-shape of the letter). Arabic dal meaning deception is not the source of Greek delta. Phonetic coincidence - both happen to begin with d.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sneaking/concealment (dal) and Greek letter delta (from Phoenician door) are different semantic fields - phonetic coincidence."
+  },
+  {
+    "pair_id": "GRC_0078",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dallala = to guide, to show the way, to point/indicate (the root d-l-l = to guide/indicate). Greek delta = the letter delta (Phoenician daleth = door). The original reasoning notes Phoenician daleth means door/guide. While Arabic dallala (to guide) and Phoenician daleth (door = opening/passage = guiding through) have a conceptual overlap, the Greek letter delta simply preserves the Phoenician letter name. This is not a productive Arabic-to-Greek cognate but a Phoenician alphabetical transmission that both Arabic and Greek independently inherit. The connection is to Phoenician, not Arabic-to-Greek specifically.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "The letter name (daleth/delta) comes from Phoenician - the Arabic root guides/indicates but the letter name is Phoenician alphabetical heritage, not Arabic-to-Greek transmission."
+  },
+  {
+    "pair_id": "GRC_0079",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dakhada = weapons of predatory animals (the tool used for splitting/tearing). Greek dikhotomia = cutting in two, division into two parts (from dikha = in two + temnein = to cut). The original reasoning: instruments of splitting -> dividing in two. However, Arabic names claws/animal weapons, and Greek names a precise bisection. Animal claws and mathematical/logical bisection are distant semantic fields. The Greek term is a compound from native Greek words, not from a Semitic root.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic animal-weapons/claws and Greek mathematical bisection (dikhotomia) are different fields - Greek is native compound."
+  }
+]

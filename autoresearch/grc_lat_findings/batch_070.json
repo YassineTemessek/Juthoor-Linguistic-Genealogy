@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0560",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الشعفه = love that overwhelms/covers the heart from above (specific emotional state). Greek διαλυσίφιλος = dissolving friendship/love (from δια+λύω+φίλος = through+loosen+friendship). Arabic encodes love OVERWHELMING (intensifying, covering), while Greek encodes love DISSOLVING (losing its bond). These are opposite poles of love's action: overwhelming love and dissolving love are antonyms of love's trajectory. Also this is the same Greek compound from GRC_0330/similar pairs already rejected. The path overwhelming-love -> dissolving-love requires reversing the concept entirely.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic overwhelming love (الشعفه) and Greek friendship-dissolution (διαλυσίφιλος) are opposite poles of love — intensifying vs dissolving."
+  },
+  {
+    "pair_id": "GRC_0561",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القعثره = uprooting, pulling up from the root, dragging up from the soil (forceful extraction from below). Greek ἕλκηθρον = the plough-stock or share that drags through soil (from ἕλκω = to drag, draw, pull). Both encode DRAGGING/PULLING THROUGH SOIL: Arabic = the forceful act of uprooting from soil; Greek = the instrument that drags through soil. A 1-step action-to-tool relationship: the dragging-uprooting action -> the instrument that performs that dragging. Both preserve the core of forceful ground-dragging.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic uprooting/dragging-from-soil (القعثره) and Greek plough-stock that drags soil (ἕλκηθρον) share the core of forceful dragging through ground."
+  },
+  {
+    "pair_id": "GRC_0562",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الطنس = intense darkness (the state of being plunged in deep darkness, hidden from sight). Greek λανθάνουσα = hiding, escaping notice, being unperceived (present participle of λανθάνω = to escape notice, be hidden). Both encode CONCEALMENT/INVISIBILITY: Arabic = the physical state of darkness that hides; Greek = the state of being hidden from perception. A 1-step equivalence: deep darkness (which conceals) -> the state of being concealed from notice. The darkness IS the mechanism of concealment.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic intense darkness (الطنس) and Greek escaping-notice/being-hidden (λανθάνουσα) share the concealment concept — darkness is the medium of hiddenness."
+  },
+  {
+    "pair_id": "GRC_0563",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سلعوس = a proper place name (a location in the Arabian Peninsula). Greek Σελλασία = a proper place name (city in Laconia, southern Greece, site of battle 222 BC). Both are proper toponyms. Per methodology, proper place names are excluded from cognacy analysis. Even analytically, matching two different place names in different regions is toponymic coincidence, not lexical discovery.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both سلعوس and Σελλασία are proper place names — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0564",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خندريس = aged date-wine or groats; explicitly flagged by Ibn Durayd as a non-Arabic foreign loan. Greek χόνδρος = groats, coarse meal, lump of grain. The Arabic word خندريس is a Greek loanword (borrowed INTO Arabic FROM Greek χόνδρος or a derivative). Comparing a Greek loanword in Arabic back to its Greek source is circular — this is not Arabic-to-Greek cognacy but rather Greek-to-Arabic borrowing identified and documented.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic خندريس is a documented Greek loanword (from χόνδρος or derivative) — comparing it back to Greek is circular, not cognacy."
+  },
+  {
+    "pair_id": "GRC_0565",
+    "finding": "path_found",
+    "semantic_journey": "Arabic هدن = truce, cessation of hostilities, a state of settled calm (the suspension of conflict producing quietude). Greek εὗδον = they slept (aorist of εὕδω = to sleep, to be at rest). Both encode PEACEFUL CESSATION/REST: Arabic = the ceasing of conflict producing calm; Greek = the bodily rest of sleep. A 1-step semantic drift: settled calm of truce -> the bodily rest/sleep that calm enables. Both encode the STATE OF QUIET REPOSE after activity ceases.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic truce/calm (هدن) and Greek sleeping/at-rest (εὗδον) share the core of quiet repose — the cessation of activity into a settled state."
+  },
+  {
+    "pair_id": "GRC_0566",
+    "finding": "path_found",
+    "semantic_journey": "Arabic التناوه = abandoning/ceasing discussion (ترك المذاكرة = leaving off study/conversation). Greek καταλυθέν = having been dissolved/ended (aorist passive participle of καταλύω = to dissolve, bring to an end, disband). Both encode CESSATION/BRINGING TO AN END: Arabic = abandoning/ceasing a discussion; Greek = having been dissolved/ended. A 1-step direct equivalence: ceasing an activity (Arabic) -> the state of having been ended (Greek). The cessation-of-activity concept is directly preserved.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic ceasing/abandoning discussion (التناوه) and Greek having-been-dissolved/ended (καταλυθέν) directly share the cessation concept."
+  },
+  {
+    "pair_id": "GRC_0567",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رسف = to fetter, to put in leg-irons, to bind with shackles (constraining mobility through binding). Greek ὄρεσφι = dative plural of ὄρος = mountains (on/in the mountains). The original reasoning maps fettering to what is fixed/anchored like a mountain. But shackle-binding (actively constraining movement of a person) and mountains (a geological formation) are entirely different: one is a deliberate act of restraint on living beings; the other is a static landmass. Binding -> fixed -> mountains requires: action -> property -> geological object. 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic leg-iron binding (رسف) and Greek mountains (ὄρεσφι) are entirely different — constraining action and geological landform require 3+ steps."
+  }
+]

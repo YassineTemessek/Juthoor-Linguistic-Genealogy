@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0088",
+    "arabic_root": "هرقل",
+    "target_lemma": "Ἡρακλῆς",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "هرقل=Heraclius (Byzantine emperor) — direct borrowing of Heracles name into Arabic; same person/name"
+  },
+  {
+    "pair_id": "GRC_0089",
+    "arabic_root": "سبخت",
+    "target_lemma": "σαβαχθανι",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Subbukht (Arabic surname) — same Aramaic root as sabachthani (you have forsaken me); shared Semitic origin, same consonant cluster"
+  },
+  {
+    "pair_id": "GRC_0090",
+    "arabic_root": "الثجره",
+    "target_lemma": "λιθάργυρος",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "ثفل and low-lying residue align well with litharge as metallic dross or sediment; the material-result sense is preserved."
+  },
+  {
+    "pair_id": "GRC_0091",
+    "arabic_root": "حضر",
+    "target_lemma": "χόνδρος",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "combined",
+    "original_reasoning": "الحضير is something collected into a mass; Greek lump is a close concrete counterpart."
+  },
+  {
+    "pair_id": "GRC_0092",
+    "arabic_root": "الطرخه",
+    "target_lemma": "Κλείταρχος",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "combined",
+    "original_reasoning": "Arabic explicitly includes 'name for the noble chief', and Greek Cleitarchus is transparently built on fame plus rule/leadership; this is a clear leadership match."
+  },
+  {
+    "pair_id": "GRC_0093",
+    "arabic_root": "اللجاج",
+    "target_lemma": "λαλαγέω",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "combined",
+    "original_reasoning": "Arabic explicitly includes stammering or repetition in speech, while Greek means babble or prattle. This is a clear semantic chain with matching speech behavior."
+  },
+  {
+    "pair_id": "GRC_0094",
+    "arabic_root": "الحشو",
+    "target_lemma": "λέχεσι",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "combined",
+    "original_reasoning": "حشو is stuffing or what is put inside, and λέχος is a bed/couch that takes filling and padding."
+  },
+  {
+    "pair_id": "GRC_0095",
+    "arabic_root": "الحشو",
+    "target_lemma": "λέχεσσι",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "combined",
+    "original_reasoning": "حشو is stuffing or what is put inside, and λέχος is a bed/couch that takes filling and padding."
+  }
+]

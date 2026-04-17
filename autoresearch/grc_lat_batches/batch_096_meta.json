@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0768",
+    "arabic_root": "كسره",
+    "target_lemma": "κρησέρα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Breaking/crushing vs 'flour sieve' - possibly grinding/breaking grain"
+  },
+  {
+    "pair_id": "GRC_0769",
+    "arabic_root": "دخن",
+    "target_lemma": "ἄνδιχα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Smoke dispersing into separated parts gives a plausible spread-to-division semantic chain."
+  },
+  {
+    "pair_id": "GRC_0770",
+    "arabic_root": "الشفق",
+    "target_lemma": "διαλυσιφίλου",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic compassionate caution and tender fear preserve a core of caring concern, which plausibly overlaps a love-oriented Greek compound."
+  },
+  {
+    "pair_id": "GRC_0771",
+    "arabic_root": "دخل",
+    "target_lemma": "δολίχαυλος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "دخل centers on entering an interior, plausibly matching the long tubular passage idea."
+  },
+  {
+    "pair_id": "GRC_0772",
+    "arabic_root": "القنعب",
+    "target_lemma": "πελεκάν",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'greedy, ravenous' plausibly matches Greek 'pelican' by a strong devouring/big-eater image."
+  },
+  {
+    "pair_id": "GRC_0773",
+    "arabic_root": "الكتد",
+    "target_lemma": "τηλικαύται",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Plausible conceptual overlap: Arabic points to groups or clustered masses; Greek means 'so many/so great'."
+  },
+  {
+    "pair_id": "GRC_0774",
+    "arabic_root": "اللمط",
+    "target_lemma": "λελείμμεθα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "التَمَطَ بحقي ذهب به can overlap with a take-away or leave-away notion."
+  },
+  {
+    "pair_id": "GRC_0775",
+    "arabic_root": "قسمه",
+    "target_lemma": "διακοσμέω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qisma = 'division, apportionment'; Greek = 'to divide and marshal'. Plausible conceptual overlap of dividing."
+  }
+]

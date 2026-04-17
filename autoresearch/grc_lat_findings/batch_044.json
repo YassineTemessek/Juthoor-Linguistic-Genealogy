@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0352",
+    "finding": "no_path",
+    "semantic_journey": "Arabic اردول = uncertain/obscure Arabic term. Greek ἀρδάλιον = a slop-bucket, vessel for dirty water. The original reasoning invokes transmitted place/object name, but Arabic اردول is not a well-attested root with clear meaning. Matching an obscure Arabic term to a Greek slop-bucket based on consonantal frame alone, with no semantic bridge, is insufficient. Cannot identify a credible path without knowing the Arabic meaning.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic اردول lacks clear attested meaning, making semantic comparison with the Greek slop-bucket impossible."
+  },
+  {
+    "pair_id": "GRC_0353",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القتب = camel pack-saddle (the wooden frame fitted on a camel's back for carrying loads). Greek πλέκετε = you weave (present imperative of πλέκω). The original reasoning connects saddle-making to weaving as craft. But a camel saddle is a wooden structural frame, not a woven item. The path saddle -> craft -> weaving requires: saddle-making is a craft -> weaving is a craft -> therefore related. This is category-level matching (both are crafts), not semantic cognacy.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A camel saddle (wooden frame) and weaving are unrelated crafts — shared membership in craft category does not constitute cognacy."
+  },
+  {
+    "pair_id": "GRC_0354",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البعر = camel/goat dung, pellet droppings. Greek λάβρος = furious, violent, impetuous, greedy. The original reasoning mentions Arabic الغضبة (divine anger) — but that is a different root. البعر means animal dung. Connecting dung to violent fury requires 3+ steps and a wrong starting word. No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic animal dung (البعر) and Greek furious/violent (λάβρος) have no semantic connection — the original reasoning used a wrong Arabic root."
+  },
+  {
+    "pair_id": "GRC_0355",
+    "finding": "no_path",
+    "semantic_journey": "Arabic شغف = to penetrate the heart with passion, to captivate deeply (emotional penetration). Greek εἰσγράφω = to write in, inscribe, register (physical inscription). The original reasoning maps entering into to inscription, sharing core of entering/marking within. But Arabic emotional penetration of passion and Greek physical writing/inscription are in entirely different domains. Passion does not inscribe; writing does not captivate. Requires 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic passionate-heart-penetration and Greek writing/inscription share only the metaphor of entering — entirely different semantic domains."
+  },
+  {
+    "pair_id": "GRC_0356",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ربطه = to tie, bind, tether (horses on a frontier post). Greek παραβοηθέω = to come to aid, assist, rescue (from βοηθέω = to aid). The original reasoning: stationing tied horses on frontier -> support/aid duty. But tethering horses is a CONTAINMENT action; aiding/rescuing is a MOVEMENT-TOWARD action. The path tethered horses -> they provide defense -> defense is aid -> rescuing requires 4+ steps. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Tethering horses for frontier guard and Greek coming-to-aid are fundamentally different actions requiring 4+ drift steps."
+  },
+  {
+    "pair_id": "GRC_0357",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رفا = to mend, repair, patch (cloth or fabric); rafa' al-thawb = to repair a garment by stitching torn edges. Greek ἐρέφω = to roof over, to cover with a roof or thatch. The semantic journey: mending/patching cloth (covering a gap by layering material over it) -> roofing/covering (covering a gap or space by laying material over it). Both encode the action of COVERING OVER AN OPENING with layered material. A clean 1-step generalization: covering a torn cloth -> covering an open space above.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic cloth-mending (covering a tear) and Greek roofing (covering a space) share the core action of covering an opening with layered material."
+  },
+  {
+    "pair_id": "GRC_0358",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الطسوج = an administrative district (Persian loan into Arabic, from Aramaic). Greek διάλεκτος = dialect, manner of speech. The original reasoning: a district produces a dialect. But this is a FUNCTIONAL RELATIONSHIP between two different concepts, not a semantic path within one root. Every district has a dialect, but district does not semantically generate dialect within the same root. Also الطسوج is a Persian loanword into Arabic, so any comparison would require tracing through Persian, not direct Arabic-Greek cognacy.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Administrative district and dialect are functionally related but semantically independent; also الطسوج is a Persian loanword making direct Arabic-Greek cognacy impossible."
+  },
+  {
+    "pair_id": "GRC_0359",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الشكوثي = a variant name for كشوثاء (dodder, a parasitic plant). Greek λυκοσκυτάλιον = a plant name (possibly a type of iris or related plant). Both are plant names. But matching two plant names as cognates requires species identity or at least overlapping use, not just shared category. These name different plants with no evidence of shared botanical tradition or transmission.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Two different plant names in the same botanical category does not constitute cognacy — species identity or shared tradition is needed."
+  }
+]

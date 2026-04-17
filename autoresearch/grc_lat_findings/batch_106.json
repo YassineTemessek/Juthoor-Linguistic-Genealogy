@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0848",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qastanas = a type of wood (strong hard wood). Greek kastana = sweet chestnuts (Castanea sativa). The original correctly notes that Arabic al-qastanas is almost certainly a loanword from Greek kastanon (chestnut tree). Arabic is the borrower of the Greek botanical term. This is a documented Greek -> Arabic loanword, not an Arabic -> Greek cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic al-qastanas is borrowed from Greek kastanon/kastana (chestnut); Arabic is the recipient of this Greek botanical loanword, not the source."
+  },
+  {
+    "pair_id": "GRC_0849",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qantaris = a plant name (cross-reference to centaury). Greek Kentauros = Centaur (mythological horse-man creature). The Arabic al-qanturiyun (centaury plant) is itself borrowed from Greek kentaureion (the plant named after the Centaur Chiron who used it medicinally). This is a Greek -> Arabic plant-name loanword. The Greek Kentauros is a proper mythological name. Both entries are: Arabic borrowed plant-name <- Greek; Greek mythological proper name. Shared loanword with Arabic as recipient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic centaury plant name is borrowed from Greek kentaureion; Arabic is the recipient of this Greek loanword, not the source."
+  },
+  {
+    "pair_id": "GRC_0850",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-karnas = horn-like protrusion (variant of al-qarnas, same root as GRC_0847). Greek koronopous = buck's horn plantain (named for horn-shaped leaves). Same analysis as GRC_0847. Core: horn/protrusion shape. 1-step direct preservation: horn-protrusion -> horn-shaped-leaf.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Same analysis as GRC_0847; Arabic horn-protrusion and Greek horn-plantain share the horn shape as defining concept."
+  },
+  {
+    "pair_id": "GRC_0851",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-kastyj = a thick cord/rope that Zoroastrians tie around their waist as a ritual belt (covering the body). Greek katastegos = covered in, roofed over (kata+stege = completely covered). Core: the concept of covering. Arabic encodes a ritual belt that covers/binds the body; Greek encodes being covered/roofed over. 1-step shared concept: covering/enclosing the body or structure.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic Zoroastrian ritual belt (body-covering/binding) and Greek covered-over share the concept of covering or enclosing."
+  },
+  {
+    "pair_id": "GRC_0852",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khawf = fear, dread. Greek ekpheugein = to flee out, to escape. Core: fear and flight are cognitively coupled. Arabic encodes the fear state; Greek encodes the flight response that fear produces. 1-step direct cause-to-result: fear -> flight-from-fear. This is the classic fear-flight pairing universal across languages.",
+    "journey_type": "semantic_drift",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic fear (khawf) and Greek fleeing/escaping are cognitively coupled as cause and immediate result; fear produces flight."
+  },
+  {
+    "pair_id": "GRC_0853",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khayf = fear, dread (variant of khawf). Greek ekpheugein = to flee out, to escape. Same analysis as GRC_0852. Core: fear -> flight. 1-step direct cause-to-result.",
+    "journey_type": "semantic_drift",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Same as GRC_0852; Arabic fear (khayf) and Greek fleeing are cognitively coupled as fear produces flight."
+  },
+  {
+    "pair_id": "LAT_0854",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hindiky = Indian person (ethnonym for someone from India). Latin hindicus = Indian (adjective). Both are the same ethnonym for Indian origin. However, Arabic hindiky is itself derived from Hind (India), a name coming through Persian from Sanskrit Sindhu. Latin hindicus was borrowed from Arabic or from the same shared source. This is a shared ethnonym, not an Arabic original cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic hindiky and Latin hindicus are the same ethnonym for Indian, both derived from Persian/Sanskrit Sindhu; this is a shared borrowed ethnonym, not an Arabic-Latin cognate."
+  },
+  {
+    "pair_id": "LAT_0855",
+    "finding": "no_path",
+    "semantic_journey": "Arabic istaabl = stable for animals (borrowed from Latin stabulum). Latin stabilio = to stabilize, make firm (from stabilis = stable, from stare = to stand). The original correctly identifies that Arabic istaabl is borrowed FROM Latin stabulum. Comparing Arabic istaabl back to Latin stabilio is circular. Arabic is the loanword recipient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic istaabl is borrowed FROM Latin stabulum; comparing it back to Latin stabilio is circular; Arabic is the recipient."
+  }
+]

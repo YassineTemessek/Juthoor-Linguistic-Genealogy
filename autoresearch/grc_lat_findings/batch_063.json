@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0504",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الخلي = a plucked/gathered herb or plant (specifically green fodder, cut herbage). Greek γλήχων = pennyroyal (Mentha pulegium, a specific aromatic herb). Both refer to GATHERED HERBAL PLANTS used for specific purposes. Arabic = the gathered/plucked herb category; Greek = a specific valued herb. The step: gathered/plucked herb -> the specific valued aromatic herb most commonly gathered. A material culture transmission of a plant-category name.",
+    "journey_type": "specialization",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic plucked/gathered herb (الخلي) and Greek pennyroyal (γλήχων) share the gathered-herb domain — low confidence due to different species."
+  },
+  {
+    "pair_id": "GRC_0505",
+    "finding": "path_found",
+    "semantic_journey": "Arabic صبب = to pour, cause to flow into; to pour liquid into a vessel or down a slope. Greek εἰσβιβάζω = to cause to go into, to bring into, to embark (causative of going into). Both encode CAUSING SOMETHING TO ENTER A SPACE: Arabic = pouring liquid in; Greek = causing (people/things) to enter. The semantic journey: pouring into (causing liquid to enter) -> causing to go into (causing animate entry). A 1-step generalization from liquid-causative to general-causative.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic pouring into (causative liquid entry) and Greek causing-to-go-into (causative entry generally) share the causative-entry core."
+  },
+  {
+    "pair_id": "GRC_0506",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الشمطالة = a specific piece of meat with fat attached (بضعة من اللحم فيها شحم = piece of meat with fat). Greek ἵλασμα = propitiation offering, atonement sacrifice. In ancient Semitic and Mediterranean sacrificial religion, the FAT PIECE of meat was THE offering. The fat (شحم) is explicitly mentioned in Arabic; and the fat portions of sacrificial animals were the specific atonement-offering portions in both Semitic and Greek religious practice. Arabic preserves the SUBSTANCE; Greek preserves the RITUAL FUNCTION of that substance.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic fatty meat piece (الشمطالة) and Greek propitiatory sacrifice (ἵλασμα) are directly connected — the fat piece of sacrificial meat IS the ancient atonement offering in both traditions."
+  },
+  {
+    "pair_id": "GRC_0507",
+    "finding": "no_path",
+    "semantic_journey": "Duplicate of GRC_0384/0391/0422 (same Arabic root الشفشليق/الشفلح vs Greek διαλυσιφίλους). Same analysis: Arabic physical slackness of aged person vs Greek friendship-dissolution compound are unrelated. False positive.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Duplicate entry: Arabic physical slackness and Greek dissolving-friendships are unrelated despite both involving looseness."
+  },
+  {
+    "pair_id": "GRC_0508",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الدستجة = a hand-moved vessel or container (possibly a hand-held jug or pitcher). Greek λάδδουσθη = an obscure form possibly related to λαμβάνω = to take, seize, grasp. The original reasoning maps hand-vessel to grasping. But a hand-held vessel and the act of seizing/grasping are different: one is a container, the other is the manual action of taking. An object cannot be cognate with an action unless there is a clear action-to-result relationship, which is absent here.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic hand-vessel (object) and Greek grasping (action) are different categories — container and the action of grabbing are not cognate."
+  },
+  {
+    "pair_id": "GRC_0509",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السمع = hearing, the sense of hearing (to hear). Greek λίσσομαι = to beseech, entreat, supplicate (verbal petition directed at another). The original reasoning: a supplicant begs to be heard. But hearing (passive reception of sound) and beseeching (active verbal petition) are different sides of a communication act. Being heard is the GOAL of supplication, not the same as supplicating. They are opposite poles of the same communicative act, not semantic cognates.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic hearing (passive reception) and Greek beseeching (active petition) are opposite poles of communication — the goal of supplication is not the same as the act of supplicating."
+  },
+  {
+    "pair_id": "GRC_0510",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العنثج = fat, bulky, fleshy (of a person or animal — large and plump). Greek γάλινθοι = chickpeas (round edible legumes). The original reasoning: plump round form to round edible item. But bulky/fleshy (body descriptor) and chickpeas (a food plant) are in different domains. The path plump -> round -> round legume requires: body fatness -> roundness -> specifically chickpea-roundness. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic fat/plump body and Greek chickpeas share roundness only — body fatness does not generate legume names in 1-2 steps."
+  },
+  {
+    "pair_id": "GRC_0511",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الروذق = flayed skin, a hide (animal skin that has been removed). Greek ἁλουργίδα = a purple-dyed garment (sea-purple fabric). The original reasoning maps flayed hide to processed covering. But a raw flayed hide and a finished purple-dyed luxury garment are at very different stages of material processing: raw hide -> cured hide -> processed fabric -> dyed fabric -> purple garment. 5 steps. Also purple dye came from sea-mollusks, not from hides.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic raw flayed hide and Greek sea-purple luxury garment are separated by 5 processing steps and different materials — no genuine path."
+  }
+]

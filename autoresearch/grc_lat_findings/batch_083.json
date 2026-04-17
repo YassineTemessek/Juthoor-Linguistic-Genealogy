@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0664",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qarabut = pommel of a saddle (the raised front part supporting the rider). Greek krabbatos = couch, mattress, pallet. Both encode a raised supporting surface for the human body. Saddle-pommel supports a rider elevated; a couch supports a resting body. 2-step drift: elevated-body-support -> resting-support -> couch.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic saddle-pommel (elevated body support) and Greek couch/pallet (horizontal body support) share the concept of a structure supporting the human body."
+  },
+  {
+    "pair_id": "GRC_0665",
+    "finding": "no_path",
+    "semantic_journey": "Arabic daqas = a kingly title/name. Greek dioiketes = administrator, governor (from dioikeo = to manage/administer). A royal proper title and a functional administrative title derived from a transparent Greek verb share only the authority domain, not a lexical descent path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A royal proper title and a Greek administrative officer-title from a transparent Greek verb share only the authority domain, not a lexical path."
+  },
+  {
+    "pair_id": "GRC_0666",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khasama = to dispute, quarrel, also to split by adversarial action; khasim = adversary. Greek khasmata = chasms, gaping gaps (plural of khasma). Core concept: division through conflict or force. 2-step drift: splitting-by-dispute -> physical-split-result -> chasm/gap. At the edge of the 2-step limit.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic dispute/splitting and Greek chasms share the concept of forced division: dispute creates rupture, rupture becomes a gap."
+  },
+  {
+    "pair_id": "GRC_0667",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kamus = weak sight, dim vision. Greek leukomelan = white-and-black, grey-colored. Weak sight as visual impairment and grey as a color concept are different domains. Getting from dim-sight to the color grey requires 3+ steps and wrongly equates vision quality with color perception.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Weak sight (visual impairment) and grey/white-and-black (color) are different domains; the chain requires 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0668",
+    "finding": "path_found",
+    "semantic_journey": "Arabic sarf = to turn, exchange; sayraf = money-changer who balances values. Greek isorropeo = to be equally balanced (isos=equal + rhope=inclination). Core: balancing/equilibrium in exchange. 1-step drift: balancing-of-accounts -> equal-balance state.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic money-changing/account-balancing and Greek being-equally-balanced share the core concept of equilibrium in exchange."
+  },
+  {
+    "pair_id": "GRC_0669",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khawtha = vile, despicable (character attribute). Greek ekhtheto = was vexed/angered (imperfect passive of ekhthainein). Being vile/despicable (character attribute) and being vexed/angered (emotional reaction) are different semantic categories. No valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic vileness (character attribute) and Greek being-vexed (emotional reaction) are different semantic categories with no valid path."
+  },
+  {
+    "pair_id": "GRC_0670",
+    "finding": "no_path",
+    "semantic_journey": "Arabic daelaja = variegated traces or many-colored garments. Greek dilogos = double-tongued, speaking both ways (dis=twice + logos). Variegated/many-colored (visual plurality) and double-tongued (linguistic duplicity) are in different domains. The chain many-colored -> two-sided -> double-tongued crosses domain boundaries and requires 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Variegated/many-colored (visual) and double-tongued (linguistic duplicity) are in different domains with no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0671",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qazz = removal from impurity (purification). Greek soloikizo = to commit incorrect speech, to speak barbarously. Purification (removal of ritual impurity) and linguistic incorrectness are different domains. Even under negation-cognate frame these are too far apart across different semantic fields.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic ritual purification and Greek speaking-incorrectly are in different domains (ritual purity vs linguistic correctness) with no valid path."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0192",
+    "finding": "no_path",
+    "semantic_journey": "Arabic قنطار (qintar) = a unit of weight (100 ratls); itself from Latin centenarium via Aramaic. Greek κεντηνάριον = 100 librae, also from Latin centenarium. Both Arabic qintar and Greek kentenarion are loanwords from the SAME Latin source word (centenarium). This is a shared loanword from Latin, not an Arabic-to-Greek cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Both Arabic qintar and Greek kentenarion derive from Latin centenarium; this is Latin transmitted into two languages separately, not Arabic-to-Greek."
+  },
+  {
+    "pair_id": "GRC_0193",
+    "finding": "path_found",
+    "semantic_journey": "Arabic اثم (ithm) = sin, moral transgression, guilt — what is morally forbidden. Greek Θέμις = divine law, right order, sacred custom — what is divinely ordained. These are two sides of the same moral-legal concept: ithm is the VIOLATION, Themis is the LAW being violated. Arabic moral-transgression → Greek divine-law is a negation-cognate relationship: the Arabic word defines the wrong act, the Greek word defines the right order that was broken.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sin/transgression (ithm) and Greek divine law (Themis) are the two sides of the same moral-legal concept: violation vs. the law violated."
+  },
+  {
+    "pair_id": "GRC_0194",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خضر (khudr/akhdar) = green, verdant, fresh, unripe (specifically the fresh green state before ripening). Greek χῖδρον = unripe grain, parched unripe barley grains. Both encode the unripe/fresh green state of grain. Arabic green-unripe → Greek unripe-grain is a direct 1-step specialization: Arabic covers the general fresh/green state, Greek names the specific unripe grain product.",
+    "journey_type": "specialization",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic green/unripe (khudr) directly matches Greek unripe grain (khidron) — the freshness/unripeness concept preserved in grain terminology."
+  },
+  {
+    "pair_id": "GRC_0195",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القشنيزه (al-qushnaiza) = coriander (Coriandrum sativum), a culinary herb. Greek γάλαξιν = related to γάλα (milk); possibly referring to a milky plant or the galaxy. The reasoning 'eaten by people and loved by sheep' connects only at the broadest agricultural level. Coriander and milk/milky-plants are entirely different botanical categories. No meaningful semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Coriander and Greek milk-related term share only the loosest pastoral association; completely different botanical and semantic categories."
+  },
+  {
+    "pair_id": "GRC_0196",
+    "finding": "path_found",
+    "semantic_journey": "Arabic سرنج (saranj) = a form of crafted mosaic or inlaid work; intricate patterned material. Greek σαργάνη = plaited/braided rope, a woven cord or basket made by plaiting. Both encode intricate material patterning through repeated inter-weaving. Arabic inlaid-pattern craft → Greek plaited/braided work is a 1-step parallel: both describe structured interlacing to create a composite material.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic inlaid mosaic-work (saranj) and Greek plaited rope/basket (sargane) share the conceptual core of structured interlacing."
+  },
+  {
+    "pair_id": "GRC_0197",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القعس (al-qas) = bent backward, arched shape (specifically the backward arch of the spine or a bow). Greek ἕλιξ = spiral, coil, anything curved or twisted. Both encode a specific curved/arched geometric form. Arabic backward-arch → Greek spiral/coil is the same 1-step generalization pattern seen in GRC_0159 and GRC_0182: Arabic names a specific arc, Greek generalizes to any coil/curve.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic backward-arch form (qaas) and Greek spiral/coil (helix) share the geometric core of curved form."
+  },
+  {
+    "pair_id": "GRC_0198",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دفيء (dafi) = warmth, being warm, gentle warmth. Greek δέφω = to soften by warmth, to knead, to work leather or bread dough by warming. Both encode warmth-based softening. Arabic warmth → Greek soften-by-warmth is a direct 1-step connection: dafi is the heat, depho is what heat does to material (softens it).",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic warmth (dafi) and Greek soften-by-warmth/knead (depho) share the core of gentle heat acting on material."
+  },
+  {
+    "pair_id": "GRC_0199",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دخن (dukhan) = smoke; to smoke, emit smoke. Greek διαχύνω = to pour out through, diffuse, spread widely. Both encode the diffusing/spreading action of something that moves through space. Arabic smoke spreading/diffusing → Greek diffusing/spreading outward is a 1-step parallel: smoke is the canonical example of something that pours and diffuses through the air.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic smoke (dukhan) spreading through air maps directly to Greek diffusing/pouring-through (diakhy) — smoke as the model of diffusion."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0056",
+    "arabic_root": "الطشاه",
+    "target_lemma": "ἀλαλητός",
+    "lang": "grc",
+    "original_score": 0.88,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "The Arabic gloss explicitly includes the dull, inarticulate man, which matches ἀλαλητός 'speechless/inarticulate' very closely."
+  },
+  {
+    "pair_id": "GRC_0057",
+    "arabic_root": "الشمس",
+    "target_lemma": "παραλληλισμός",
+    "lang": "grc",
+    "original_score": 0.87,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "The Arabic gloss explicitly says نظيرها وعِدلها, its counterpart or equal, and Greek παραλληλισμός is parallelism. Both preserve a clear core of matching, equivalence, and side-by-side correspondence."
+  },
+  {
+    "pair_id": "GRC_0058",
+    "arabic_root": "اخسن",
+    "target_lemma": "αἴσχεσιν",
+    "lang": "grc",
+    "original_score": 0.86,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Greek relates to shame/disgrace; Arabic gloss is humiliation after honor."
+  },
+  {
+    "pair_id": "GRC_0059",
+    "arabic_root": "سلق",
+    "target_lemma": "σολοικίζω",
+    "lang": "grc",
+    "original_score": 0.86,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "The Arabic gloss explicitly includes faulty grammar, and σολοικίζω means to speak or write incorrectly; this is a direct semantic match."
+  },
+  {
+    "pair_id": "GRC_0060",
+    "arabic_root": "نبط",
+    "target_lemma": "Ναβαταῖος",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "نبط=Nabateans (people); Ναβαταῖος=Nabataean. Direct ethnonym match"
+  },
+  {
+    "pair_id": "GRC_0061",
+    "arabic_root": "ملته",
+    "target_lemma": "μάλθα",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "combined",
+    "original_reasoning": "ملته includes notion of softening/pliable material; μάλθα=wax-pitch mixture (soft caulking). Strong phonetic and semantic match — both denote soft pliable substance"
+  },
+  {
+    "pair_id": "GRC_0062",
+    "arabic_root": "مندل",
+    "target_lemma": "μάνδαλος",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "combined",
+    "original_reasoning": "مندل=Mandali (place/aromatic wood); μάνδαλος=door bolt. Strong phonetic match, both semantic via 'bound/closed'"
+  },
+  {
+    "pair_id": "GRC_0063",
+    "arabic_root": "الصعقر",
+    "target_lemma": "γλίσχρος",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "γλίσχρος means sticky, adhesive, or clinging; the Arabic gloss is fish roe, whose salient physical quality is its sticky, viscous texture. This is a strong physical-concept match."
+  }
+]

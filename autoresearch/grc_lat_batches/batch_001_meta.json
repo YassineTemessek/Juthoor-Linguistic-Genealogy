@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0008",
+    "arabic_root": "سمهوط",
+    "target_lemma": "Σύμαιθος",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides point to a river/place-name shape with very close phonetic preservation, making this essentially an identical toponymic match."
+  },
+  {
+    "pair_id": "GRC_0009",
+    "arabic_root": "سجلاطس",
+    "target_lemma": "συγκλήτοις",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic explicitly names a Roman type, and the Greek gloss is the senate or senatorial assembly."
+  },
+  {
+    "pair_id": "GRC_0010",
+    "arabic_root": "دانال",
+    "target_lemma": "Δανιήλ",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both are the same foreign personal name, Daniel, with direct lexical identity."
+  },
+  {
+    "pair_id": "GRC_0011",
+    "arabic_root": "سجلاطس",
+    "target_lemma": "συγκλητικαί",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic points to a Roman institutional term, matching Greek 'senatorial' very closely."
+  },
+  {
+    "pair_id": "GRC_0012",
+    "arabic_root": "سرال",
+    "target_lemma": "Ἰσραηλίτης",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "This is a direct semantic match: the Arabic gloss points to Israel and the Greek lemma means Israelite."
+  },
+  {
+    "pair_id": "GRC_0013",
+    "arabic_root": "قمص",
+    "target_lemma": "καμίσιον",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic qamīṣ = shirt; Greek kamision/kamisia = shirt. Direct Mediterranean Wanderwort cognate, both borrowed from the same source (possibly Semitic). Very clear match."
+  },
+  {
+    "pair_id": "GRC_0014",
+    "arabic_root": "شطن",
+    "target_lemma": "Σατάν",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Strong direct Semitic match: Arabic شطن 'be far, remote' aligns well with Satan as the far-removed adversarial figure."
+  },
+  {
+    "pair_id": "GRC_0015",
+    "arabic_root": "دمشق",
+    "target_lemma": "Δαμασκός",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Near-identical form and referent; direct preservation of Damascus."
+  }
+]

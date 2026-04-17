@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0536",
+    "arabic_root": "صابل",
+    "target_lemma": "εἰσβολαί",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic sabil/dabil = calamity, disaster (also a tribal usage variant). Greek eisbolai = nom.pl of eisbole 'inroads, invasions, irruptions' (eis+ballo 'throw into'). Calamities and invasions: invasion IS the disaster. Strong direct link."
+  },
+  {
+    "pair_id": "GRC_0537",
+    "arabic_root": "شمت",
+    "target_lemma": "σήματ'",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic names or designates; Greek means signs or marks, a plausible signification chain."
+  },
+  {
+    "pair_id": "GRC_0538",
+    "arabic_root": "الفاه",
+    "target_lemma": "Πολύφημος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic al-fah = wide-mouthed, eloquent (from fam/fah 'mouth'). Greek Polyphemos = 'much-spoken/much-famed' (poly+pheme 'speech'), also the Cyclops's name. Both encode mouth/speech prominence — wide-mouth and much-spoken. The conceptual chain is direct via the mouth-speech mafhum. Strong link."
+  },
+  {
+    "pair_id": "GRC_0539",
+    "arabic_root": "العنفك",
+    "target_lemma": "φλήναφος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الأحمق and nonsense/idle talk share a clear folly/stupidity field, though one is a person and the other speech."
+  },
+  {
+    "pair_id": "GRC_0540",
+    "arabic_root": "سيوط",
+    "target_lemma": "-ιστί",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Greek suffix marks speaking in the language of a people or place; Arabic gloss includes Asyut, so both touch the place-to-language side of meaning."
+  },
+  {
+    "pair_id": "GRC_0541",
+    "arabic_root": "الشخا",
+    "target_lemma": "λευκίσκος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic sabkha often foregrounds pale salt-whiteness, and Greek λευκίσκος belongs directly to the white/whitish field."
+  },
+  {
+    "pair_id": "GRC_0542",
+    "arabic_root": "جنن",
+    "target_lemma": "γεγονέναι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic includes growth and emergence of blossom after enclosure, which can plausibly meet Greek becoming through a coming-forth core."
+  },
+  {
+    "pair_id": "GRC_0543",
+    "arabic_root": "دستوي",
+    "target_lemma": "Ἰνδιστί",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic marks something foreign or non-Arabic, giving a plausible chain to speaking in the language of the Indians."
+  }
+]

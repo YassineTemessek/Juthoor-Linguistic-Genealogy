@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0384",
+    "arabic_root": "الشفلح",
+    "target_lemma": "διαλυσιφίλους",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic slack coarse physicality matches the Greek form best at the conceptual level of looseness rather than surface definition."
+  },
+  {
+    "pair_id": "GRC_0385",
+    "arabic_root": "دخص",
+    "target_lemma": "δέχεσθαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "The filled-out body sense supports receive or be filled more than directly."
+  },
+  {
+    "pair_id": "GRC_0386",
+    "arabic_root": "كحي",
+    "target_lemma": "καυχάομαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Kaha - boast/speak loudly vs 'to speak loud, boast, brag' - direct semantic match"
+  },
+  {
+    "pair_id": "GRC_0387",
+    "arabic_root": "الشمظ",
+    "target_lemma": "λίσσομ'",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الشمظ=يشمظ الإنسان بكلام / تحريك دون العنف (one speaks gently with words / movement without violence). λίσσομαι=to beseech, entreat, pray. Both describe soft, non-violent verbal acts directed at another person seeking favor. Strong overlap in the gentle-persuasion domain."
+  },
+  {
+    "pair_id": "GRC_0388",
+    "arabic_root": "نستر",
+    "target_lemma": "Νέστορα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "weak",
+    "original_reasoning": "نستر=place name; Νέστορα=Nestor (accusative). Possible Greek proper name loan"
+  },
+  {
+    "pair_id": "GRC_0389",
+    "arabic_root": "جمل",
+    "target_lemma": "Γαυγάμηλα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "The second element strongly recalls camel, but as a compound place name the semantic preservation is less direct than Gamala."
+  },
+  {
+    "pair_id": "GRC_0390",
+    "arabic_root": "درعوس",
+    "target_lemma": "ἁδρός",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic good bodily form and Greek full-grown or adult share a clear field of mature physical development."
+  },
+  {
+    "pair_id": "GRC_0391",
+    "arabic_root": "الشفلح",
+    "target_lemma": "διαλυσιφίλου",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic describes a coarse thick-formed but slack old person; the Greek compound plausibly shares the core of looseness or relaxation."
+  }
+]

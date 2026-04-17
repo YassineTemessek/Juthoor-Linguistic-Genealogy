@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0672",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-anatil = hyenas tearing prey to pieces; also meaning hard, severe. Greek aneilonto = they took up/killed/destroyed (aorist middle of anaireo). Core: violent taking/killing by force. Arabic hyenas-tearing encodes violent killing; Greek aneilonto encodes taking-up/killing. 1-step drift: tearing-to-pieces -> taking-by-force/killing.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic hyenas tearing prey and Greek they-killed/took-up share the violent taking/killing concept in a direct 1-step relationship."
+  },
+  {
+    "pair_id": "GRC_0673",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-anf = nose; also arrogant rejection of truth, following one's nose. Greek phlenaphos = idle talk, nonsense, babbling. Arrogant disregard (attitude) to idle-babbling (verbal behavior) is 3+ steps: arrogance -> rejecting-truth -> inventing-falsehoods -> babbling. Too long.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic arrogance/nose and Greek idle-babbling are different semantic categories; the chain is 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0674",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khatarba = cut it up (cutting action). Greek okhthoibos = a stripe on a tunic (decorative linear pattern). A cutting action and a woven decorative stripe are in different categories. Cutting cloth produces a cut piece, not a woven stripe. No valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic cutting-action and Greek decorative-stripe-on-cloth are in different categories with no valid path."
+  },
+  {
+    "pair_id": "GRC_0675",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-buyaynith = a sea fish (specific marine creature name). Greek polybenthos = very deep of sea (polu=much + benthos=depth). A fish name and a depth-of-sea descriptor are in different semantic categories. Shared marine domain does not make them cognates.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A sea fish name and a Greek depth-of-sea descriptor are in different categories; shared marine domain is not cognate evidence."
+  },
+  {
+    "pair_id": "GRC_0676",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-tass = to go away, disappear; also to submerge in water. Greek teleutee = end, death, completion. Core: cessation/disappearance. Arabic going-away/disappearing maps to ending/dying as the ultimate disappearance. 1-step drift: disappearing -> ending/dying.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic disappearing/going-away and Greek end/death share cessation, with Greek specializing to the ultimate form of disappearance."
+  },
+  {
+    "pair_id": "GRC_0677",
+    "finding": "no_path",
+    "semantic_journey": "Arabic daqqa = to pound, beat (also pounding instruments). Greek andikha = asunder, in twain (directional adverb). Pounding and the directional adverb asunder share no semantic path. Andikha is a directional adverb, not a result noun of splitting.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic pounding-action and Greek asunder-adverb are different categories; pounding actions and directional adverbs of separation do not form cognates."
+  },
+  {
+    "pair_id": "GRC_0678",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-sakhab = noisy clamor, loud commotion. Greek leske = a talking-place/conversation hall, also public gossip. Core: loud social speech/noise. Arabic encodes the clamor itself; Greek encodes the social space of talk. 1-step drift: noisy-clamor -> social-talking-space.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic noisy clamor and Greek talking-hall/gossip-place both occupy the domain of loud social speech/noise."
+  },
+  {
+    "pair_id": "GRC_0679",
+    "finding": "no_path",
+    "semantic_journey": "Arabic barid = postal horse/courier system. Greek beredes = post-horse (from Latin veredus, from Gaulish). The original reasoning correctly notes Arabic barid was borrowed FROM Latin veredus via the Byzantine postal system, not vice versa. Arabic is the recipient of this loanword. This is shared loanword with Arabic as recipient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic barid was borrowed FROM Latin veredus (Byzantine postal system), not vice versa; this is a documented Arabic borrowing from Latin, not an Arabic origin."
+  }
+]

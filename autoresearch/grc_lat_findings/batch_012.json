@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0096",
+    "finding": "path_found",
+    "semantic_journey": "Arabic afara (from the root a-f-r) = intense presence/bringing forcefully (the gloss says shiddat al-ihdhar = intensity of bringing/presenting). Greek epiphero = to bring upon/apply to, to bring against (epi + phero = to carry/bring). Both encode bringing/applying with force or intensity. Arabic: the intense/forceful bringing; Greek: to bring upon/apply. Direct semantic overlap in the bringing/presenting domain. One step.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic intense bringing/presenting and Greek to-bring-upon share the forceful bringing/applying concept."
+  },
+  {
+    "pair_id": "GRC_0097",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-dathir = a force that knocks things over, toppling/overturning. Greek alindathra = a place where horses roll (a rolling/wallowing place). Arabic: toppling force; Greek: a place for rolling/wallowing. These are semantically distant: toppling vs rolling (different motions) and force vs place (different grammatical categories). The tumbling-rolling connection is too loose.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic toppling/knocking-over force and Greek horse-rolling place are different motions and categories - too loose."
+  },
+  {
+    "pair_id": "GRC_0098",
+    "finding": "path_found",
+    "semantic_journey": "Arabic haza = to drive away (birds specifically; to shoo/chase away). Greek khazomai = to give way, to retreat, to draw back (the effect of being driven away). The semantic journey: driving away (active) -> giving way/retreating (result). Arabic captures the driving-away action; Greek captures the result-side - what the driven creature does. Action-to-result: driving away -> retreating. One clear step.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic driving-away (haza) and Greek retreating/giving-way share the drive-retreat causation chain."
+  },
+  {
+    "pair_id": "GRC_0099",
+    "finding": "path_found",
+    "semantic_journey": "Arabic arza = firmness/fixedness in the ground, being firmly planted (the root r-z encodes firm planting). Greek arazo = to anchor/to settle/to make firm, to fix in place. Both encode firm fixation in/to the ground. Arabic: state of being firmly planted; Greek: the act of anchoring/settling. Direct semantic overlap in firm-fixation concept. One step.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic firmness/fixedness in ground (arza) and Greek anchoring/settling firmly (arazo) share the firm-fixation concept."
+  },
+  {
+    "pair_id": "GRC_0100",
+    "finding": "path_found",
+    "semantic_journey": "Arabic hatar = keeping away by separation, protecting through barrier/prohibition (the root h-t-r = to protect by keeping at a distance). Greek ekhyrotera = more fortified/stronger as a defense (from ekhyros = strong/fortified/secure). Both encode defensive protection through separation/barrier. Arabic: the action of keeping/protecting by separation; Greek: the state of being fortified/defended. One step: protecting by separation -> being fortified.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic protective separation/barrier and Greek fortified/defended share the defensive-protection concept."
+  },
+  {
+    "pair_id": "GRC_0101",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-hazz = cutting, making a notch/incision (the root h-z-z = to cut/notch). Greek lonkhiazo = to pierce with a lance/spear (from lonkhe = spear). Both encode the cutting/piercing action on a surface or body. Arabic: making a cut/notch; Greek: piercing with a spear. The cutting-piercing domain is shared. One step: making a cut -> piercing with a pointed weapon. Plausible.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic cutting/notching and Greek spear-piercing share the cutting-piercing action domain."
+  },
+  {
+    "pair_id": "GRC_0102",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-hasaba = to pelt with stones, to throw projectiles (a directed throwing action). Greek pollakhose = in many directions/to many sides (an adverb of spatial distribution). The original reasoning: stone-pelting -> scattering in many directions. However, Greek pollakhose is purely about spatial multiplicity/spread, not about throwing. The chain pelting stones -> scattering to many sides is a 2-3 step interpretation. Also, the primary Arabic action (stone-pelting at a target) is directed, not scattered. No real path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic stone-pelting (directed action) does not connect to Greek in-many-directions (spatial adverb) - different categories."
+  },
+  {
+    "pair_id": "GRC_0103",
+    "finding": "path_found",
+    "semantic_journey": "Arabic hazawi = driving off birds (same root as GRC_0098 with different morphology). Greek khazomai = to give way, to retreat. Same finding as GRC_0098: driving away -> the result of retreating. One clear step.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Variant of GRC_0098 - Arabic driving-away and Greek retreating share the drive-retreat causation chain."
+  }
+]

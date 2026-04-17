@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0096",
+    "arabic_root": "افر",
+    "target_lemma": "ἐπιφέρω",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "أفر يفيد شدة الإحضار، وἐπιφέρω يفيد الجلب أو الإتيان على الشيء؛ هذا أقرب زوج في الدفعة دلاليا."
+  },
+  {
+    "pair_id": "GRC_0097",
+    "arabic_root": "الدعثر",
+    "target_lemma": "ἀλινδήθρα",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic is force that knocks things over, while Greek is a place for horses to roll. Both share tumbling and rolling movement."
+  },
+  {
+    "pair_id": "GRC_0098",
+    "arabic_root": "حزي",
+    "target_lemma": "χάζομαι",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "حزي explicitly includes driving birds away, which matches the result concept of retreating or giving way."
+  },
+  {
+    "pair_id": "GRC_0099",
+    "arabic_root": "ارز",
+    "target_lemma": "ἀράζω",
+    "lang": "grc",
+    "original_score": 0.78,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic gloss explicitly gives firmness and being fixed in the ground; Greek ἀράζω anchors/settles, a clear semantic chain."
+  },
+  {
+    "pair_id": "GRC_0100",
+    "arabic_root": "حطر",
+    "target_lemma": "ἐχυρωτέρα",
+    "lang": "grc",
+    "original_score": 0.76,
+    "original_method": "combined",
+    "original_reasoning": "حطر carries keeping away or protecting by separation; fortified is a clear defensive extension."
+  },
+  {
+    "pair_id": "GRC_0101",
+    "arabic_root": "الحز",
+    "target_lemma": "λογχιάζω",
+    "lang": "grc",
+    "original_score": 0.76,
+    "original_method": "combined",
+    "original_reasoning": "Across Arabic meanings, حز centers on cutting or making a notch, which strongly approaches piercing or transfixing with a spear."
+  },
+  {
+    "pair_id": "GRC_0102",
+    "arabic_root": "الحصبه",
+    "target_lemma": "πολλαχόσε",
+    "lang": "grc",
+    "original_score": 0.76,
+    "original_method": "combined",
+    "original_reasoning": "حَصَبَهُ is to pelt or throw with stones, giving a direct scatter-to-many-sides chain."
+  },
+  {
+    "pair_id": "GRC_0103",
+    "arabic_root": "حزوي",
+    "target_lemma": "χάζομαι",
+    "lang": "grc",
+    "original_score": 0.76,
+    "original_method": "combined",
+    "original_reasoning": "زجر and driving off in حزوي align well with the result-side meaning 'give way, retreat'."
+  }
+]

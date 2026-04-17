@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0496",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سيح = a type of cloth/fabric (woven textile). Greek σύκχος = a kind of shoe or sock (foot-covering). The original reasoning maps cloth to footwear as both in textile-wear domain. But a cloth fabric and a shoe/sock are different items — one is raw fabric, the other is a specific formed garment. The path cloth -> shaped into shoe requires: fabric -> sewn/shaped -> footwear. 3 steps plus manufacturing process.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic woven cloth and Greek shoe/sock are different textile items — raw fabric does not directly generate footwear."
+  },
+  {
+    "pair_id": "GRC_0497",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سجن = imprisonment, confinement (locking someone in a jail). Greek συγγένεια = kinship, family relationship, blood ties. The original reasoning maps imprisonment to kinship through being-bound-together. But imprisonment is FORCED confinement by an external authority; kinship is natural BELONGING to a family group. These are opposite kinds of binding: coercive vs natural. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic forced imprisonment and Greek natural kinship are opposite kinds of binding — coercion vs natural belonging — not a semantic path."
+  },
+  {
+    "pair_id": "GRC_0498",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ربط = to tie, bind, fasten with strings/cords (binding action). Greek βάρβιτον = a type of stringed instrument (lyre-like, with strings that must be fastened/tied). The semantic journey: tying/binding strings -> a stringed instrument (whose strings are tied to the frame). Both belong to the domain of CORD/STRING FASTENING: Arabic = the action of tying; Greek = an instrument defined by its tied strings. A 1-step action-to-instrument relationship within string technology.",
+    "journey_type": "specialization",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic tying/binding (ربط) and Greek stringed instrument (βάρβιτον) share the string-fastening domain — but this is low confidence since many instruments have tied strings."
+  },
+  {
+    "pair_id": "GRC_0499",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ذفط = mating action involving bodily pressing/working. Greek δέφω = to soften, knead with the hands (also used euphemistically). Both encode PRESSING/WORKING THE BODY with hands: Arabic = bodily pressing in a physical/sexual context; Greek = kneading/softening with manual pressure. The step: bodily manual pressing (Arabic) -> manual kneading/working (Greek). Both preserve the core of MANUAL PHYSICAL WORKING of flesh/material.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic bodily pressing (ذفط) and Greek hand-kneading/working (δέφω) share the core of manual physical manipulation of flesh."
+  },
+  {
+    "pair_id": "GRC_0500",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حاطه = to enclose, build an enclosure/pen (for animals or produce). Greek ἰχθυώδης = abounding in fish, fish-like (from ἰχθύς + -ώδης = fish + resembling/abounding). The original reasoning maps a food pen/enclosure to containment and fullness. But Arabic animal enclosure and Greek fish-abounding are in entirely different domains. An enclosure for animals and a place abounding with fish require: pen -> contains animals -> contains fish -> abounds with fish. 4 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic animal pen/enclosure and Greek fish-abounding are entirely unrelated domains with no credible path."
+  },
+  {
+    "pair_id": "GRC_0501",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الصخ = a loud cry, shouting (forceful vocal emission). Greek καλέω (καλέεσκον = iterative: kept calling) = to call, to summon by voice. Both encode STRONG VOCAL UTTERANCE directed at others: Arabic = the loud cry; Greek = the calling/summoning. A near-direct preservation of the strong-voiced calling concept. Arabic preserves the intensity (loud cry); Greek preserves the directed function (calling/summoning).",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic loud cry (الصخ) and Greek calling/summoning (καλέεσκον) share the core of directed strong vocal utterance."
+  },
+  {
+    "pair_id": "GRC_0502",
+    "finding": "path_found",
+    "semantic_journey": "Arabic بست = a type of walking/travel, a manner of going (a specific gait or travel). Greek ἀπεβήσετο = he stepped away, stepped off (aorist of ἀποβαίνω = to step away/off). Both encode STEPPING/WALKING MOVEMENT: Arabic = a manner of walking/travel; Greek = a specific stepping-away/departure. The semantic journey: manner of walking -> stepping off/away. Both preserve movement-through-steps. A direct material culture cognate of walking/stepping.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic walking/travel manner (بست) and Greek stepping-away (ἀπεβήσετο) share the stepping/walking movement concept."
+  },
+  {
+    "pair_id": "GRC_0503",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البثنة = soft sandy ground (رملة لينة = soft sand). Greek πολυβενθής = of great depth (πολύ + βένθος = much + depth). The original reasoning: soft sand suggests deep terrain (you sink into it). But sinking into soft sand is a physical experience, not the MEANING of the Arabic word. The word means soft sand; Greek means great depth. Softness (tactile quality) does not directly generate depth (spatial measurement). The path soft -> sink -> deep requires: soft texture -> you sink -> therefore deep. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic soft sandy ground (texture) and Greek great-depth (spatial measurement) are different properties requiring 3 steps."
+  }
+]

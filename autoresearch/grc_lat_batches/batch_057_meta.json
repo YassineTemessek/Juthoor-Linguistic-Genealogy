@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0456",
+    "arabic_root": "رجد",
+    "target_lemma": "ἐργώδης",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Shaking, trembling, and thunder-like disturbance align plausibly with what is troublesome or difficult."
+  },
+  {
+    "pair_id": "GRC_0457",
+    "arabic_root": "حرك",
+    "target_lemma": "ἐγχειρέω",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "From moving or setting upon something, حرك can deepen into undertaking or attempting an action."
+  },
+  {
+    "pair_id": "GRC_0458",
+    "arabic_root": "الشنج",
+    "target_lemma": "κάλοισιν",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "If Greek κάλοισιν is in the rope-cable field, Arabic شنج with taut sinews preserves a clear tension-cord mafhum: stretched strands under pull."
+  },
+  {
+    "pair_id": "GRC_0459",
+    "arabic_root": "العبش",
+    "target_lemma": "εὐλαβής",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic includes soundness or propriety in things; Greek means cautious, reverent, morally careful."
+  },
+  {
+    "pair_id": "GRC_0460",
+    "arabic_root": "جشات",
+    "target_lemma": "ἐξηγήσαιτο",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "القوم خرجوا من بلد إلى بلد preserves an outward-leading motion that plausibly aligns with the old core behind ἐξηγέομαι."
+  },
+  {
+    "pair_id": "GRC_0461",
+    "arabic_root": "العذر",
+    "target_lemma": "λοίδορα",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "عذر carries excuse and shortcoming; abusive words sit on the opposing social side of blame and reproach."
+  },
+  {
+    "pair_id": "GRC_0462",
+    "arabic_root": "حظا",
+    "target_lemma": "σχίζα",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "A splinter is a cut-off short piece; Arabic shortness gives a plausible result-side bridge."
+  },
+  {
+    "pair_id": "GRC_0463",
+    "arabic_root": "خزع",
+    "target_lemma": "χάζομαι",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "خزع carries a sense of removal or breaking away, and χάζομαι means to give way or retreat; the shared core is withdrawal."
+  }
+]

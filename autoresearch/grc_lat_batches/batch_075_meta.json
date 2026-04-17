@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0600",
+    "arabic_root": "الكندر",
+    "target_lemma": "χόνδρος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "gum resin=rounded lump; compact solid mass"
+  },
+  {
+    "pair_id": "GRC_0601",
+    "arabic_root": "الشربش",
+    "target_lemma": "σαράβαρα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "outer garment / foreign dress: both denote non-Arab clothing items in similar borrowing register"
+  },
+  {
+    "pair_id": "GRC_0602",
+    "arabic_root": "النبراس",
+    "target_lemma": "νέβρινος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "النبراس shares root ن-ب-ر with Greek νέβρος (fawn) — phonetic kinship, possible ancient connection"
+  },
+  {
+    "pair_id": "GRC_0603",
+    "arabic_root": "خسس",
+    "target_lemma": "αἶσχος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic خسيس = contemptible/vile, Greek αἶσχος = shame/disgrace — both in dishonor semantic field"
+  },
+  {
+    "pair_id": "GRC_0604",
+    "arabic_root": "الشجن",
+    "target_lemma": "συγγένεια",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "شجن = entangled branches/connections; συγγένεια = kinship — shared 'connection' concept"
+  },
+  {
+    "pair_id": "GRC_0605",
+    "arabic_root": "مصصته",
+    "target_lemma": "μαστός",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic masasa=to suck/drink by suckling; Greek mastos=breast: both belong to the nursing/suckling semantic domain"
+  },
+  {
+    "pair_id": "GRC_0606",
+    "arabic_root": "الكهف",
+    "target_lemma": "ἐκφεύγω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: swift motion — Greek: flee/escape — both rapid motion, related"
+  },
+  {
+    "pair_id": "GRC_0607",
+    "arabic_root": "خبق",
+    "target_lemma": "ἐκφεύγω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: swift motion — Greek: flee/escape — both rapid motion, related"
+  }
+]

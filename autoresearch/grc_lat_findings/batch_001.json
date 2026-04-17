@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0008",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek are proper names from different geographic regions (Sicilian river vs Arabic toponym) with no documented etymological link. Proper names - excluded.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Two unrelated proper names (Sicilian river vs Arabic toponym) - accidental phonetic resemblance."
+  },
+  {
+    "pair_id": "GRC_0009",
+    "finding": "no_path",
+    "semantic_journey": "Arabic form is a rendering of the Roman Latin institutional term senatus. Greek is a calque for the Roman senate. Both independently render a Roman political institution. Arabic borrowed a Latinism; Greek created its own term. Neither derives from a native Arabic root.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Both are renderings of the Roman senatorial institution - Arabic using a Latin borrowing, not a native Semitic root."
+  },
+  {
+    "pair_id": "GRC_0010",
+    "finding": "no_path",
+    "semantic_journey": "Arabic Daniel and Greek Daniel are the same Hebrew personal name transmitted into Greek via the Septuagint. Biblical proper names are excluded by the methodology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Biblical proper name Daniel - known Semitic name transmitted via scriptures, excluded by methodology."
+  },
+  {
+    "pair_id": "GRC_0011",
+    "finding": "no_path",
+    "semantic_journey": "Variant of GRC_0009 with a different Greek grammatical form (senatorial feminine plural). Same issue: Arabic rendering of a Latin institution. Not a native Arabic root cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Variant of GRC_0009 - Arabic borrowed Latin institutional term, not native Semitic root."
+  },
+  {
+    "pair_id": "GRC_0012",
+    "finding": "no_path",
+    "semantic_journey": "Arabic form relates to Israel and Greek is Israelite. The name Israel is a biblical Hebrew proper name transmitted into Greek via the Septuagint. Biblical proper names are explicitly excluded by the methodology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Biblical proper name Israel - Semitic name transmitted via Hebrew scriptures, excluded by methodology."
+  },
+  {
+    "pair_id": "GRC_0013",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qamis = shirt (Semitic garment term). Greek kamision = shirt/tunic (attested from 4th-5th century CE). The Semitic root q-m-s names a specific upper-body garment. Greek borrowed the word from Semitic (Aramaic/Hebrew kamesu) as late antique peoples traded clothing across the Mediterranean. The garment and its name traveled together. Genuine material culture Semitic-to-Greek transmission.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Semitic shirt word (q-m-s) entered Greek as kamision - genuine material culture cognate."
+  },
+  {
+    "pair_id": "GRC_0014",
+    "finding": "no_path",
+    "semantic_journey": "Arabic means to be far/remote. Greek Satan borrowed directly from Hebrew adversary/accuser via the Septuagint. The Hebrew root s-t-n (to oppose/accuse) is the direct source, not Arabic. This is a proper religious name transmitted Hebrew-to-Greek via scripture.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "proper_name",
+    "key_insight": "Greek Satan from Hebrew via Septuagint - scriptural proper name, not via Arabic root of remoteness."
+  },
+  {
+    "pair_id": "GRC_0015",
+    "finding": "no_path",
+    "semantic_journey": "Arabic Damascus and Greek Damascus both name the same ancient city. The toponym derives from an ancient Semitic substrate (Aramaic Dammeseq). Both languages independently preserve the city name. Proper name identity - a city toponym, not a lexical root cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both name the ancient city of Damascus - a Semitic toponym preserved in both languages, not a productive root cognate."
+  }
+]

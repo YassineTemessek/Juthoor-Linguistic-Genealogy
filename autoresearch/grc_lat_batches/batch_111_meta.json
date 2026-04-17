@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0888",
+    "arabic_root": "يزر",
+    "target_lemma": "oryza",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "weak",
+    "original_reasoning": "يزر = place in Khorasan known for rice; oryza = rice — geographical-botanical link"
+  },
+  {
+    "pair_id": "LAT_0889",
+    "arabic_root": "حضرم",
+    "target_lemma": "hadrumetinus",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic حضرم = Hadramawt (حضرموت), the ancient South Arabian region/people. Latin Hadrumetinus = of/from Hadrumetum, a Phoenician colony in North Africa (modern Sousse, Tunisia). Both derive from Semitic toponyms. Hadrumetum was founded by Phoenicians — the name likely carries a Semitic root ḥ-ḍ-r (to settle, be present). The connection is through shared Semitic colonial naming patterns: حضر = to be present/settled → settlements named for this root across Semitic world. More than coincidence — genuine Semitic toponym cognate."
+  },
+  {
+    "pair_id": "LAT_0890",
+    "arabic_root": "بتل",
+    "target_lemma": "betulla",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic بتل (root b-t-l) = (1) to cut off, separate, sever, (2) بَتول = virgin (one 'cut off' from men), (3) to detach. Latin betulla = birch tree. Birch bark is famous for peeling/separating in strips — the birch is literally 'the tree that strips/peels off.' The phonetic match b-t-l → betull- is excellent. The semantic chain 'to cut/strip/separate' → 'the stripping tree' is a plausible naming pattern (trees named for their characteristic action). Upgrading from Sonnet's 0.40."
+  },
+  {
+    "pair_id": "LAT_0891",
+    "arabic_root": "مسط",
+    "target_lemma": "mistum",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic مسط (root m-s-ṭ) = to extract liquid by pressing/squeezing (from intestines, womb), to draw out moisture. Latin mistum (from misceo) = mixed, particularly wine mixed with water. At surface, extracting vs mixing seem different. But the deeper chain: مسط involves pressing liquid out for combination with another substance, and mistum is the result of combining liquids. The phonetic m-s-ṭ → mist- is strong. Both sit in the domain of liquid manipulation. Upgrading moderately."
+  },
+  {
+    "pair_id": "LAT_0892",
+    "arabic_root": "برفطي",
+    "target_lemma": "berfredus",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic برفطى = a village near a river/fortress (possibly Persian-influenced toponym). Latin/Medieval Latin berfredus = a wooden tower, watchtower on a wall (also belfry, from Germanic *bergfrid = protecting peace). Both relate to fortification/defensive structures. The phonetic chain b-r-f-ṭ → berfred- preserves b-r-f. If the Arabic term describes a settlement near a fortress, and the Latin term describes the tower of a fortress, both may reflect a shared Mediterranean/Crusader-era fortification vocabulary. Plausible loanword territory."
+  },
+  {
+    "pair_id": "LAT_0893",
+    "arabic_root": "حشد",
+    "target_lemma": "hutesium",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic حشد (root ḥ-sh-d) = (1) to gather/assemble quickly, (2) to respond urgently to a call/summons, (3) حشد الناس = to rally people together. Latin hutesium = hue and cry, the legal obligation to pursue a criminal with clamor. Both describe the specific act of rapid communal assembly in response to an urgent call. This is not generic 'gathering' — both specifically encode 'emergency summoning of people.' The semantic precision is high. Phonetic ḥ-sh-d → hutes- shows h correspondence and sibilant shift. Upgrading."
+  },
+  {
+    "pair_id": "LAT_0894",
+    "arabic_root": "بطل",
+    "target_lemma": "battualia",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic بطل (root b-ṭ-l) = (1) hero, champion, brave warrior, (2) to be brave/courageous, (3) بطولة = heroism. Latin battualia = military exercises, combat training, gladiatorial practice (from battuere = to beat/strike). Both sit squarely in the warrior/combat domain: بطل is the warrior himself, battualia is what warriors do (combat practice). The phonetic b-ṭ-l → battual- preserves b-t-l with gemination. The conceptual chain 'hero/warrior → warrior training/combat' is tight. This is a better match than Sonnet's 0.25 — the Arabic root specifically means 'warrior/hero' and the Latin specifically means 'warrior exercises.'"
+  },
+  {
+    "pair_id": "LAT_0895",
+    "arabic_root": "تبت",
+    "target_lemma": "tebeth",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic تبت: root ت-ب-ت relates to (1) تَبَّتْ يَدَا = 'may the hands perish' (Quran 111:1), meaning ruin/loss, (2) but also the month name connection. Latin tebeth = Tevet/Tebeth, the 10th month of the Jewish calendar (from Hebrew/Akkadian). The Hebrew month name טֵבֵת (Tevet) comes from Akkadian tebetu = sinking/immersion (the rainy season). Arabic تبت could share the Akkadian root for 'sinking/immersion/ruin.' The phonetic t-b-t → tebet- is exact. Both are Semitic words with the t-b-t skeleton, likely sharing the ancient Akkadian root. Upgrading."
+  }
+]

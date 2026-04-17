@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0136",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خزي (khizya) = shame, disgrace, humiliation. Greek χάζομαι = to draw back, give way, retreat. The semantic path: shame → retreating from social encounter → physical withdrawal. In ancient culture, shame causes one to withdraw and give way. This is a clear 2-step metaphorical extension: shame → social withdrawal → physical retreat. The Greek preserved the behavioral/physical expression of the Arabic emotional state.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic shame (khizya) maps to Greek retreating/giving way — shame is what makes one draw back."
+  },
+  {
+    "pair_id": "GRC_0137",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفيجن (al-fayjin) = a plant name (possibly fenugreek or similar). Greek βαλανηφάγος = acorn-eater (a compound: βάλανος 'acorn' + φαγεῖν 'to eat'). The original reasoning that both share 'eating' is far too loose — Arabic names a plant, Greek describes eating acorns. The consonant skeletons do not correspond. The semantic overlap is generic. No real path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "An Arabic plant name and a Greek compound meaning acorn-eater share nothing beyond broad botanical adjacency."
+  },
+  {
+    "pair_id": "GRC_0138",
+    "finding": "no_path",
+    "semantic_journey": "Arabic جمخ (jamakha) = to be arrogant, boastful, to strut proudly. Greek λογομαχέω = to fight/dispute with words (λόγος 'word' + μάχομαι 'to fight'). The chain 'boastful → verbal contest' requires too many steps: pride → boasting → verbal confrontation → word-fighting. The Greek word is a clear compound with transparent etymology (word + fight). No direct Arabic cognate path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic boasting and Greek word-fighting are separated by too many conceptual steps; the Greek compound has transparent internal etymology."
+  },
+  {
+    "pair_id": "GRC_0139",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حثن (hathana) = a place; fine granular matter, tiny particles. Greek χθονίαις = of the earth, chthonic (dative plural of χθών 'earth'). While both involve ground/earth concepts, the Arabic word's meaning is generic (any place, tiny particles) and χθών is a specific poetic/religious word for earth in Greek with deep Indo-European connections. The phonetic merger path h-th-n vs kh-th-n is plausible, but the semantic connection relies on the generic 'ground/particles' which is insufficient. Low confidence at best.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic generic place/particles and Greek chthonic earth have insufficient semantic specificity to confirm a path."
+  },
+  {
+    "pair_id": "GRC_0140",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفرعون (al-firawn) = Pharaoh (proper name/title, Semitic form of Egyptian pr-ʿ3). Greek πολύφρονα = much-minded, very thoughtful (accusative of πολύφρων). The reasoning attempts to connect 'pharaonic cunning' to 'much-minded' — but الفرعون is a proper name/royal title, and the connection is via the Greek word φρήν (mind) which has no Semitic origin. Excluded: الفرعون is a proper royal title, and the consonantal match is coincidental.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "الفرعون is the title Pharaoh; Greek πολύφρων contains φρήν (mind) which is not Semitic — this is a false match."
+  },
+  {
+    "pair_id": "GRC_0141",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رتل (rattala) = to arrange in order, to space evenly; رتل الكلام = to speak in measured cadence; also رتلت أسنانه = his teeth were evenly arranged. Greek ἀρτίαλα = even-fitted things, things arranged at even intervals (from ἄρτιος 'even, complete'). Both encode the concept of even arrangement/spacing. Arabic even-spacing of teeth or speech → Greek even-fitted arrangement is a direct match of the ordering concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic even arrangement (ratl) and Greek even-fitted (artiala) share a direct core of ordered spacing."
+  },
+  {
+    "pair_id": "GRC_0142",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ارب (araba/arab) = need, aptitude, cunning; also the ethnic term Arab. Greek ἀραβέω = to make a rattling/clattering noise (used of the chattering of teeth). The 'Arab/Arabic association' reasoning is ethnic prejudice, not etymology. The Greek verb ἀραβέω is onomatopoeic for rattling sounds and has no Semitic semantic connection. The pair should be rejected completely.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek ἀραβέω is onomatopoeic for rattling/clattering, not etymologically connected to Arabic ethnic or semantic roots."
+  },
+  {
+    "pair_id": "GRC_0143",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حصم (hasama) = to break, sever, cut off sharply. Greek χάσματα = chasms, gaping openings, fissures (plural of χάσμα from χαίνω 'to gape'). The semantic path: breaking/severing → the resulting opening/gap. Arabic cutting action → Greek result of that cutting (the chasm/gap) is a clean 1-step action-to-result chain.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic breaking/severing maps to Greek chasm as action-to-result: the break creates the gap."
+  }
+]

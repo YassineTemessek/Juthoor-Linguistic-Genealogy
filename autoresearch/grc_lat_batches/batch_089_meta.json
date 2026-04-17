@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0712",
+    "arabic_root": "بطن",
+    "target_lemma": "Βάτναι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Batnae is Aramaic/Syrian place. btn=interior/belly/hidden valley. Shared Semitic substrate plausible."
+  },
+  {
+    "pair_id": "GRC_0713",
+    "arabic_root": "خشع",
+    "target_lemma": "χάσκω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خشع can denote a low, flattened, adhering form; Greek gape/open wide may preserve the opposite side of a terrain-opening concept."
+  },
+  {
+    "pair_id": "GRC_0714",
+    "arabic_root": "القلعم",
+    "target_lemma": "λευκομέλας",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic aged old man or old woman can drift toward grey as an age-marked colour concept."
+  },
+  {
+    "pair_id": "GRC_0715",
+    "arabic_root": "اللكع",
+    "target_lemma": "λάλαξ",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Both point to a contemptible human type; insult and babbler are a plausible pejorative chain."
+  },
+  {
+    "pair_id": "GRC_0716",
+    "arabic_root": "جرثومه",
+    "target_lemma": "ἀγειραίμεθα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic jurthuma = collected earth at tree roots, accumulation, cluster. Greek ageraimetha = 1pl aor middle optative of ageiro 'we should gather/collect'. Both center on gathering/accumulation. Strong direct link."
+  },
+  {
+    "pair_id": "GRC_0717",
+    "arabic_root": "كرمد",
+    "target_lemma": "κεραμίδιον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Karmad (brick, tile-like construction) vs 'small tile' - clear tile/brick link"
+  },
+  {
+    "pair_id": "GRC_0718",
+    "arabic_root": "قاخ",
+    "target_lemma": "καχέκτης",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qakh = 'insides rotted/spoiled by disease'; Greek = 'sick, wasted body'. Plausible semantic link via disease-rotting body."
+  },
+  {
+    "pair_id": "GRC_0719",
+    "arabic_root": "جاز",
+    "target_lemma": "Γάζα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Gaza from Semitic 3zz=strong. Ja'iz=permitted is different root. Phonetic coincidence, possible substrate."
+  }
+]

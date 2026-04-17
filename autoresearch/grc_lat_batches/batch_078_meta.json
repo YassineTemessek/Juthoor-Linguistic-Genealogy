@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0624",
+    "arabic_root": "التوه",
+    "target_lemma": "λήθετε",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "Arabic تاه/هلك can conceptually drift into being lost, hidden, or gone from awareness, which aligns plausibly with λήθη-type concealment/forgetting."
+  },
+  {
+    "pair_id": "GRC_0625",
+    "arabic_root": "افل",
+    "target_lemma": "Φίλαι",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gives disappearance or setting; a frontier or terminal place-name preserves the idea of an end point fairly well."
+  },
+  {
+    "pair_id": "GRC_0626",
+    "arabic_root": "اقطعر",
+    "target_lemma": "καταργέω",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gives cutting off or stopping of breath, and Greek gives making inactive or abolishing; stoppage is a plausible shared core."
+  },
+  {
+    "pair_id": "GRC_0627",
+    "arabic_root": "الثنتل",
+    "target_lemma": "καταλυθέντοιν",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "Corruption after cleanliness preserves a breakdown or dissolution idea with a plausible abstract drift."
+  },
+  {
+    "pair_id": "GRC_0628",
+    "arabic_root": "جلس",
+    "target_lemma": "ἐγκλίσει",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic sitting implies settling into a posture; Greek inclining/leaning shares the bodily posture core."
+  },
+  {
+    "pair_id": "GRC_0629",
+    "arabic_root": "داقه",
+    "target_lemma": "δέχεται",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic entices or draws someone out; Greek receives or takes in, a plausible take-receive chain."
+  },
+  {
+    "pair_id": "GRC_0630",
+    "arabic_root": "الشويثي",
+    "target_lemma": "τελέεσθαι",
+    "lang": "grc",
+    "original_score": 0.51,
+    "original_method": "combined",
+    "original_reasoning": "Arabic is a specific date variety; fruit terminology often carries a ripe or fully-developed sense. Greek τελέεσθαι means to be completed or fulfilled, giving a plausible maturation-completion bridge."
+  },
+  {
+    "pair_id": "GRC_0631",
+    "arabic_root": "قعطره",
+    "target_lemma": "κατέρχομαι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qa'tara = 'fell, collapsed, came down'; Greek = 'come down, descend'. Plausible direct semantic echo of downward motion."
+  }
+]

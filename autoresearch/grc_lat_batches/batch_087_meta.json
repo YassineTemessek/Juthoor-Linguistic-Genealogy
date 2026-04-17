@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0696",
+    "arabic_root": "خلط",
+    "target_lemma": "χολωθείς",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خلط includes mental corruption or confusion, and χολωθείς means angered; both sides meet in disturbed inner state, with action drifting into emotional result."
+  },
+  {
+    "pair_id": "GRC_0697",
+    "arabic_root": "صات",
+    "target_lemma": "-ιστί",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Being loud voiced or becoming well known gives a plausible speech-centered bridge to the language or dialect marker."
+  },
+  {
+    "pair_id": "GRC_0698",
+    "arabic_root": "القرصعنه",
+    "target_lemma": "καλοκαιριανός",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gloss names a plant type, Greek gloss names an eye-salve; a plausible medicinal-botanical chain exists."
+  },
+  {
+    "pair_id": "GRC_0699",
+    "arabic_root": "الغيايه",
+    "target_lemma": "λογχίον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic غاية is limit/end-point, and a spear-head is the pointed terminal part of the weapon."
+  },
+  {
+    "pair_id": "GRC_0700",
+    "arabic_root": "غتل",
+    "target_lemma": "Γαίτουλοι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic = abundant trees/palms; Greek = Gaetuli (North African tribe). Phonetic match g-t-l and Gaetuli were North African which fits geographic overlap; plausible substrate echo."
+  },
+  {
+    "pair_id": "GRC_0701",
+    "arabic_root": "دحمه",
+    "target_lemma": "διαδέχομαι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "نكحها carries taking/receiving a mate, a plausible but not direct link to receive."
+  },
+  {
+    "pair_id": "GRC_0702",
+    "arabic_root": "خاس",
+    "target_lemma": "χάσκω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic includes exposed flesh/fat appearing outward; Greek means to gape or open wide. The shared notion of opening/exposure is plausible."
+  },
+  {
+    "pair_id": "GRC_0703",
+    "arabic_root": "الارنب",
+    "target_lemma": "Πλευρών",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss explicitly includes a place-name, and the Greek lemma is also a place-name, giving a plausible toponymic chain."
+  }
+]

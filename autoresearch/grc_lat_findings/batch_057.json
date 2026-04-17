@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0456",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رجد = to shake, tremble (as in thunderous shaking/trembling). Greek ἐργώδης = laborious, troublesome, difficult. The original reasoning maps thunder-like disturbance to something troublesome. But shaking/trembling is a PHYSICAL PHENOMENON (involuntary physical motion); laborious/troublesome is an EVALUATIVE PROPERTY (how humans assess difficulty). The path trembling -> disturbing -> troublesome requires 3 steps with domain jumps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic shaking/trembling (physical phenomenon) and Greek laborious/troublesome (evaluative) require 3+ steps and a domain jump."
+  },
+  {
+    "pair_id": "GRC_0457",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حرك = to move, to set in motion, to stir into action. Greek ἐγχειρέω = to put one's hand to, to undertake, attempt (from ἐν + χείρ = in + hand). The semantic journey: setting something into motion -> undertaking/attempting an action (putting hand to work). Both encode INITIATING AN ACTION: Arabic = the moving/stirring that starts something; Greek = the putting-hand-to (beginning a task). A 1-step path: general motion initiation -> specific undertaking/attempting.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic setting-in-motion (حرك) and Greek undertaking/attempting (ἐγχειρέω) share the core of initiating action — movement starting and hand-applying."
+  },
+  {
+    "pair_id": "GRC_0458",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الشنج = taut, tightened sinews; cramp/contraction (sinews pulled taut under tension). Greek κάλος (plural κάλοισιν) = rope, ship's cable (a thing made by twisting/braiding fibers under tension). Both encode STRETCHED FIBER UNDER TENSION: Arabic = the taut sinew/cord quality (biological); Greek = the rope/cable (artificial). The semantic journey: taut stretched sinew -> twisted rope made taut. Both preserve the tension-in-fiber concept.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic taut sinew/contraction (الشنج) and Greek rope/cable (κάλος) share the core of fiber under tension — biological cord and artificial rope."
+  },
+  {
+    "pair_id": "GRC_0459",
+    "finding": "path_found",
+    "semantic_journey": "Arabic العبش = soundness, propriety, being right/proper in things (doing things correctly). Greek εὐλαβής = cautious, reverent, taking care; morally circumspect. Both encode TAKING PROPER CARE IN ACTION: Arabic = doing things in a sound/proper manner; Greek = acting with caution and reverence (careful propriety). A near-direct preservation of careful moral propriety.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic soundness/propriety in conduct (العبش) and Greek cautious/reverent propriety (εὐλαβής) directly share the concept of careful, proper behavior."
+  },
+  {
+    "pair_id": "GRC_0460",
+    "finding": "no_path",
+    "semantic_journey": "Arabic جشات = people moving out of one land to another (migration/departure from one territory to another). Greek ἐξηγέομαι = to lead out, to explain, to interpret (from ἐξ + ἡγέομαι = out + lead/guide). The original reasoning maps outward-leading motion to ἐξηγέομαι. But Greek ἐξηγέομαι primarily means to explain/interpret (lead someone through an explanation), not physical leading out. Even in the physical sense (leading out), Arabic migration of a whole people is not the same as an individual guide leading. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic group migration/departure and Greek explaining/interpreting (ἐξηγέομαι) require 3+ steps including a domain jump from physical to intellectual."
+  },
+  {
+    "pair_id": "GRC_0461",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العذر = excuse, justification (making an excuse for shortcoming); also the circumcision ritual in some contexts. Greek λοίδορος = abusive, reviling (abusive speech, insults). The original reasoning maps excuse/shortcoming to abusive words through blame/reproach. But an excuse DEFENDS against blame; abusive speech ATTACKS. These are opposite social moves around blame. No genuine semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic excuse/justification (defense from blame) and Greek abusive speech (attack through blame) are opposite social moves around accusation."
+  },
+  {
+    "pair_id": "GRC_0462",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حظا = shortness, being short/brief. Greek σχίζα = a split piece of wood, a chip (result of splitting). The original reasoning: a splinter is short; Arabic shortness. But a splinter being short is not the MEANING of σχίζα — σχίζα means a split piece (result of splitting), not a short piece. Even if splinters are short, shortness is not the defining semantic feature of σχίζα. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic shortness and Greek split-piece (σχίζα) are different — σχίζα's meaning is split, not short; the incidental shortness of splinters is not the word's meaning."
+  },
+  {
+    "pair_id": "GRC_0463",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خزع = to remove, break away, cut off (separating part from whole; also retreat/withdrawal). Greek χάζομαι = to give way, retreat, fall back (to move away from one's position). Both directly encode WITHDRAWAL/BREAKING AWAY from a position: Arabic = the physical cutting-off/removal; Greek = the military retreating/giving way. A 1-step path: cutting away/removing (physical separation) -> retreating/giving way (positional separation).",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic breaking-away/removal (خزع) and Greek retreating/giving-way (χάζομαι) share the core of withdrawal — physical and positional separation."
+  }
+]

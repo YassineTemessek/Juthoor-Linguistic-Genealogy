@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0120",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-atrab = sumac (Rhus coriaria, an acidic culinary/medicinal plant). Greek heliotropion = heliotrope (Heliotropium europaeum, a plant that turns toward the sun). Both are plant names but from completely different plant families with different properties. Sumac is a Levantine acidic shrub; heliotrope is a small flowering plant. Categorizing both as just plants is too broad - every plant is a plant. No real connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sumac and Greek heliotrope are different plant species with different properties - same botanical category is too broad."
+  },
+  {
+    "pair_id": "GRC_0121",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-hasaf = raising pebbles in running water, stones moved by a stream. Greek pollakhose = to many directions/sides (adverb of spatial spread). The chain: pebbles scattered by running water -> scattering in many directions is a metaphorical 2-3 step connection. Also Greek pollakhose is purely a directional adverb while Arabic names a physical phenomenon. Different grammatical categories. No real path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic pebbles-in-running-water and Greek in-many-directions are different categories - no real semantic path."
+  },
+  {
+    "pair_id": "GRC_0122",
+    "finding": "path_found",
+    "semantic_journey": "Arabic muhadraj = rolled/twisted (that which has been rolled, creating rounded shapes; specifically rolled/crushed grain). Greek khidron = unripe grain, rubbed/parched groats. Both concern grain that has been processed by rolling/rubbing. Arabic captures the rolling action creating a rounded grain; Greek names the processed grain result (rubbed/parched groats). One step: rolled grain -> rubbed groats.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic rolled/twisted grain (muhadraj) and Greek rubbed groats (khidron) share grain-processing through rolling/rubbing."
+  },
+  {
+    "pair_id": "GRC_0123",
+    "finding": "path_found",
+    "semantic_journey": "Arabic haza = to divide, to cut a figure into parts (the root h-z-z = to cut/divide). Greek skhiza = a cut-off piece, a splinter, a shard (from skhizo = to split/cleave). Both encode the cutting-splitting action and its result. Arabic: the act of dividing by cutting; Greek: the piece that results from cutting. Action-to-result: cutting -> the cut-off piece. One clear step.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic cutting/dividing (haza) and Greek cut-off piece/splinter (skhiza) share the cutting-to-result chain."
+  },
+  {
+    "pair_id": "GRC_0124",
+    "finding": "no_path",
+    "semantic_journey": "Arabic rahaba = spacious/wide/to welcome with wide open arms (the root r-h-b = wide/spacious/welcoming). Greek parekhei = it provides/offers/furnishes (from parekhein = to provide/furnish). The original reasoning: spacious welcome -> giving room -> providing. That is 2-3 steps and the Greek word is a generic provision/offering term, not specifically about space or welcome. No clear 1-2 step path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic spacious/welcoming (rahaba) and Greek to-provide/offer (parekhei) require too many steps - different core concepts."
+  },
+  {
+    "pair_id": "GRC_0125",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-amrut = a wily thief who takes everything (a specific criminal archetype). Greek tolmerotatos = most daring/most audacious (superlative of tolmeros = bold/daring). Both involve boldness/audacity, but: a wily thief and maximum daring are only generally related. The wily thief concept includes cunning (not just boldness). The Greek superlative of daring does not specifically connect to Arabic thievery. Loose semantic overlap.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic wily thief and Greek most-daring are only loosely related - cunning thievery and maximum audacity are different concepts."
+  },
+  {
+    "pair_id": "GRC_0126",
+    "finding": "no_path",
+    "semantic_journey": "Arabic jamaha = unruly behavior, sudden onset of uncontrolled motion (a horse that bolts). Greek logomakheo = to fight/quarrel with words, to engage in verbal dispute. The original reasoning: unruliness -> outbreak of contention -> word-fighting. That chain requires: unruly bolting -> verbal dispute - which adds the specific verbal domain without justification. Arabic unruliness is physical (a bolting horse); Greek is specifically verbal combat. Different specific domains.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical unruliness/bolting (jamaha) and Greek verbal word-fighting (logomakheo) are different specific domains."
+  },
+  {
+    "pair_id": "GRC_0127",
+    "finding": "path_found",
+    "semantic_journey": "Arabic iqlaafa = skin shrinking inward, contracting/shriveling (the skin pulling back and tightening as an outer layer). Greek keluphos = shell, husk, outer case, pod (the outer enclosing layer). Both preserve the concept of a tight outer enclosing layer. Arabic: the contracted/shriveled outer skin; Greek: the enclosing shell/husk. The conceptual core of outer enclosing layer is shared. One step: contracted outer skin -> enclosing outer shell.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic contracted outer skin (iqlaafa) and Greek enclosing shell/husk (keluphos) share the outer-enclosing-layer concept."
+  }
+]

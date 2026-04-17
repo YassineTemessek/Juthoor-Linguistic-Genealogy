@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0512",
+    "arabic_root": "يبرين",
+    "target_lemma": "Βέροιαν",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "يبرين=Yabrin/Berea (town near Aleppo); Βέροιαν=Beroia/Berea. Direct place-name Semitic-Greek match"
+  },
+  {
+    "pair_id": "GRC_0513",
+    "arabic_root": "الشرنتي",
+    "target_lemma": "λαλιστέραιν",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الشرنتي = a bird (طائر). λαλίστερος = more talkative/chattering (comparative of λάλος). Birds are the archetypal chatterers in every language. A bird named الشرنتي and an adjective meaning 'more chattering' meet perfectly at the bird-song/chatter intersection."
+  },
+  {
+    "pair_id": "GRC_0514",
+    "arabic_root": "الامص",
+    "target_lemma": "λαιμός",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الآمِص = طعام يتّخذ من لحم عجل بجلده (a food prepared from calf meat with its skin). λαιμός = throat, gullet. Food and the throat are directly linked through the act of eating — food is what passes through the throat. The anatomical pathway of consumption connects them strongly."
+  },
+  {
+    "pair_id": "GRC_0515",
+    "arabic_root": "حقص",
+    "target_lemma": "χάσκω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Driving away creates separation or opening; gape/open wide is a plausible abstract drift."
+  },
+  {
+    "pair_id": "GRC_0516",
+    "arabic_root": "الخضا",
+    "target_lemma": "οὐλοχύται",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الخضا: تفتّت الشيء الرطب / وانفضاخه (crumbling/breaking apart of moist matter). οὐλοχύται=barley grains poured over sacrificial victim. Both involve granular matter being broken/scattered. Crumbling moist substance and scattered grain share the particulate-dispersion concept."
+  },
+  {
+    "pair_id": "GRC_0517",
+    "arabic_root": "سرح",
+    "target_lemma": "εἰσέρχομαι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic going forth or roaming freely overlaps with Greek entering through the broader core of directed movement."
+  },
+  {
+    "pair_id": "GRC_0518",
+    "arabic_root": "صبب",
+    "target_lemma": "ἐσβιβάσας",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic صبّ 'pour/make flow into' vs Greek 'caused to go into' (participle of εἰσβιβάζω); both involve directed flow/entry into"
+  },
+  {
+    "pair_id": "GRC_0519",
+    "arabic_root": "اصخات",
+    "target_lemma": "σχέτε",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "اصخات is the calming or subsiding of swelling and recovery, which plausibly meets σχέτε in the sense of holding or being in a settled state."
+  }
+]

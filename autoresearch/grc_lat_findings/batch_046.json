@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0368",
+    "finding": "path_found",
+    "semantic_journey": "Arabic السفه = foolishness, rashness, irreverence, moral lightness (سفيه = fool/rash person acting without moral weight). Greek βλάσφημος = speaking impiously, abusive/profane speech (from βλάπτω + φήμη = harming + speech). The semantic journey: moral rashness/irreverence -> expressing that irreverence through impious/abusive speech. Arabic encodes the CHARACTER; Greek encodes the VERBAL EXPRESSION of that character. A 1-step action-from-character path.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic moral foolishness/irreverence and Greek impious/abusive speech share the core of irreverent character expressed through action."
+  },
+  {
+    "pair_id": "GRC_0369",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الاليغ = one who babbles foolishly, speaks incoherently; extreme foolishness in speech. Greek λαλαγέω = to babble, chatter, make continuous noise. Both directly encode INCOHERENT/CONTINUOUS FOOLISH SPEECH. Arabic = the person who babbles foolishly; Greek = the action of babbling. A direct 1-step preservation of the babbling-speech concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic foolish-babbler (الاليغ) and Greek to-babble (λαλαγέω) directly share the concept of incoherent continuous speech."
+  },
+  {
+    "pair_id": "GRC_0370",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حرش = rough, harsh, coarse (of texture or land); barren rough terrain. Greek αἰσχράς = ugly, shameful, base (aesthetic and moral ugliness). The original reasoning maps coarse/rough to ugly/shameful. But roughness is a TACTILE/PHYSICAL quality; ugliness and shame are AESTHETIC/MORAL qualities. The path rough texture -> ugly appearance -> shameful requires: physical coarseness -> visual unpleasantness -> moral shame. 3 steps, each requiring a domain jump.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical roughness/coarseness and Greek moral/aesthetic ugliness/shame require 3 domain-jumping steps."
+  },
+  {
+    "pair_id": "GRC_0371",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ازج/آزاج = arched ceiling, vaulted structure, paired arch (from the idea of two sides meeting at a point). Greek Ζεῦγμα = yoking, joining (from ζεύγνυμι = to yoke together) — also used as a city name for a bridge-crossing. The semantic journey: paired arch (two sides joined at apex) -> yoking/joining two things together. An arch joins two sides; a yoke joins two oxen. Both encode the PAIRING/JOINING of two elements. A 1-step structural metaphor.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic arched/paired structure and Greek yoking/joining share the core of two elements meeting or being joined."
+  },
+  {
+    "pair_id": "GRC_0372",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفرعون = Pharaoh (proper title/name of Egyptian kings). Greek ὀλοόφρονος = of destructive mind, baleful in thought. Even if the Pharaonic character was considered destructive-minded, الفرعون is a proper title (proper name) and must be excluded by methodology. Comparing a proper royal title to a Greek adjective is not valid.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "الفرعون (Pharaoh) is a proper royal title — proper names are excluded from cognacy analysis by methodology."
+  },
+  {
+    "pair_id": "GRC_0373",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دجم = a kind, type, species (variety of something). Greek δεῖγμα = a sample, specimen, example (that which demonstrates the kind). The semantic journey: kind/type -> a specimen that shows the kind. Arabic encodes the CATEGORY; Greek encodes the REPRESENTATIVE INSTANCE of that category. A clean 1-step generalization: type -> sample representing that type.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic kind/type (دجم) and Greek sample/specimen (δεῖγμα) share the core of categorical representation — type and its demonstrative instance."
+  },
+  {
+    "pair_id": "GRC_0374",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حضر = to be present, to gather (حضير = gathered matter, settled mass). Also حضر = the presence of accumulated/gathered things. Greek χῖδρον = rubbed barley groats, coarse grain (grain that has been gathered and processed by rubbing). Both refer to GATHERED/PROCESSED GRAIN MATERIAL: Arabic encodes the gathering/presence; Greek encodes the rubbed grain that is gathered. A 1-step specialization: gathered material -> specifically gathered-and-rubbed grain.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic gathered matter (حضير) and Greek rubbed barley groats both describe collected, processed granular material."
+  },
+  {
+    "pair_id": "GRC_0375",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفرات = the Euphrates River (a proper geographic name), also meaning very sweet/fresh water. Greek λουτροφορέω = to carry water for bathing (from λουτρόν + φορέω). The Arabic term الفرات is primarily a proper name (the Euphrates). Even taking its meaning (sweet fresh water), the path sweet fresh water -> carrying water for bathing requires: sweet water -> any water -> carried for bathing. That connects only at the generic level of water. No specific cognacy.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Sweet/fresh water and water-carrying for bathing share only the generic substance (water) — no specific semantic path, and الفرات is primarily a proper name."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0760",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dakka = to crush, bury, level flat. Greek adikekei = has wronged/done injustice. Physical crushing and doing-injustice require 3+ steps: crush -> harm -> cause-harm -> wrong-someone. Different domains.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic crushing/leveling (physical) and Greek doing-injustice (moral/legal) require 3+ steps to connect."
+  },
+  {
+    "pair_id": "GRC_0761",
+    "finding": "no_path",
+    "semantic_journey": "Arabic daha = to spread out, open out. Greek andikha = asunder, in twain (directional adverb from anti+dikha). Spreading-out and the asunder-adverb are adjacent but andikha derives from Greek morphology not from Arabic. No valid derivation path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic spreading-out and Greek asunder-adverb are adjacent but the adverb has Greek internal morphology; no valid derivation path."
+  },
+  {
+    "pair_id": "GRC_0762",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-anqash = emaciation, loss of flesh. Greek klinikos = of/for a bed-patient (kline=bed + -ikos). Emaciation and bed-patient are related but 3+ steps apart: emaciation -> weakness -> unable-to-walk -> bed-confined.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic emaciation and Greek bed-patient/clinical are related but 3+ semantic steps apart."
+  },
+  {
+    "pair_id": "GRC_0763",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-qandhaw = calamities (same root as GRC_0642). Greek olekonto = were being destroyed/perishing. Calamity -> destruction -> perishing is a 2-step chain: calamity-event -> experiencing-destruction -> perishing. Borderline at low confidence.",
+    "journey_type": "semantic_drift",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic calamities and Greek being-destroyed/perishing are 2 steps apart; borderline plausible at low confidence."
+  },
+  {
+    "pair_id": "GRC_0764",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shakhasa = visible irregularity, things jutting apart. Greek aiskesi = shame, ugliness (dative plural of aiskhos). Irregularity/divergence and shame/ugliness are adjacent in negative-valuation but distinct. Getting from irregularity to shame requires 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic visible irregularity and Greek shame/ugliness are adjacent but distinct requiring 3+ steps to connect."
+  },
+  {
+    "pair_id": "GRC_0765",
+    "finding": "path_found",
+    "semantic_journey": "Arabic fashat = to spread, diffuse (of disease or news). Greek paraphyas = a side-growth, lateral shoot. Core: lateral spreading. 1-step action-to-result: spreading-outward -> side-growth as botanical result of spreading.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic spreading/diffusion and Greek side-shoot share lateral spreading; Arabic is the action, Greek is the botanical result."
+  },
+  {
+    "pair_id": "GRC_0766",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shanaqa = to hang by cord, to strangle/bind. Greek synoikizo = to make people live together, to settle together. Binding/hanging and cohabitation are in entirely different semantic domains with no valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic binding/hanging-with-cord and Greek making-people-live-together are entirely different semantic domains."
+  },
+  {
+    "pair_id": "GRC_0767",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-karath = a calamitous or harmful matter. Greek okhlokratia = mob rule. Both negative social phenomena but 3+ steps apart: harmful-matter -> social-harm -> social-chaos -> mob-rule.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic calamitous matter and Greek mob-rule are both negative but 3+ semantic steps apart."
+  }
+]

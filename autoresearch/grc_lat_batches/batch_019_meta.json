@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0152",
+    "arabic_root": "حسن",
+    "target_lemma": "χρύσινος",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Golden commonly carries the sense of beauty, excellence, and attractive quality, close to حسن at the surface level."
+  },
+  {
+    "pair_id": "GRC_0153",
+    "arabic_root": "الخسيج",
+    "target_lemma": "λέχεσσι",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "الخسيج means a tent or pavilion, and λέχεσσι means beds/lairs; both converge on an enclosed resting place or lodging."
+  },
+  {
+    "pair_id": "GRC_0154",
+    "arabic_root": "الرسل",
+    "target_lemma": "λυσέρωσι",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic core is letting go, sending forth, or allowing passage; Greek likely belongs to release/loosening, which is a strong conceptual match."
+  },
+  {
+    "pair_id": "GRC_0155",
+    "arabic_root": "العجز",
+    "target_lemma": "λαγγάζω",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Inability and weakness in عجز align well with slackening, relaxing, and becoming lazy."
+  },
+  {
+    "pair_id": "GRC_0156",
+    "arabic_root": "شجر",
+    "target_lemma": "συγκρούομαι",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic شجر between people means dispute or clash, and Greek means collide; this is a clear direct match on the conflict side of the concept."
+  },
+  {
+    "pair_id": "GRC_0157",
+    "arabic_root": "العسنق",
+    "target_lemma": "κάλοισιν",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic التام الحسن and Greek beauty are a direct semantic match at the surface level."
+  },
+  {
+    "pair_id": "GRC_0158",
+    "arabic_root": "حري",
+    "target_lemma": "ἐγχειρέω",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "حري includes aiming toward or intending a side; that deepens cleanly into setting oneself to an act, hence 'attempt'."
+  },
+  {
+    "pair_id": "GRC_0159",
+    "arabic_root": "القوس",
+    "target_lemma": "ἕλιξ",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic qaws is bow or curve; Greek helix is something twisted or spiral. The curved form is clearly preserved."
+  }
+]

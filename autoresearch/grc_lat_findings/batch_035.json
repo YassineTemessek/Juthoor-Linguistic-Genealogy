@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0280",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الرسن (al-rasan) = a halter, tying-cord, lead rope for animals. Greek λινουργός = a flax-worker, one who works with linen (λίνον 'flax/linen' + ἔργον 'work'). The reasoning: halter/cord is made of flax → flax-worker. The path is: Arabic cord/rope → the material cords are made from (flax) → the person who processes that material. That is 3 steps, and the Greek compound's meaning comes entirely from its transparent internal etymology (flax + work). No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic halter/cord and Greek flax-worker are 3 steps apart; Greek linen-worker has transparent compound etymology."
+  },
+  {
+    "pair_id": "GRC_0281",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رتاه (ratiha) = strengthening, drawing gently, careful stretching. Greek εὐρυθμία = good rhythm, graceful regular motion (εὐ 'well' + ῥυθμός 'rhythm'). The connection: careful stretching → measured regularity → rhythm. While regular stretching could metaphorically relate to rhythm, the Arabic encodes a physical action (drawing taut) and the Greek encodes an abstract aesthetic quality (rhythm/graceful order). The path requires: stretching → regularity → measured-motion → rhythm — 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic gentle stretching and Greek good rhythm are conceptually adjacent but too many steps apart for a direct cognate."
+  },
+  {
+    "pair_id": "GRC_0282",
+    "finding": "no_path",
+    "semantic_journey": "Arabic شحك (shahaka) = to restrain suckling by inserting a stick in the animal's mouth. Greek ἐσχήκει = he had held/possessed (perfect of ἔχω). Same root as GRC_0270/GRC_0282 repetition. Same assessment: specific oral-restraint mechanism → generic holding/having is too large a semantic gap. Rejected.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Specific oral-restraint and generic holding/having are too distant; this pairing appears multiple times across the dataset with the same rejection."
+  },
+  {
+    "pair_id": "GRC_0283",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رمص (ramasa) = to make right, repair, mend; also: to close up, to join edges. Greek ἁρμός = a joint, a fastening, a fitted seam (from ἁρμόζω 'to fit together, join'). Both encode the concept of joining/fitting things together. Arabic repairing/closing-up-joins → Greek joint/fitted-seam is a direct 1-step match: Arabic describes the action of joining, Greek names the resulting joined structure.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic repairing/joining-edges (ramas) and Greek joint/fitted-seam (harmos) share the concept of joining/fitting elements together."
+  },
+  {
+    "pair_id": "GRC_0284",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحلكم (al-hulkum) = intense blackness, deep darkness of color. Greek μελαγχολία = melancholy, black bile (μέλας 'black' + χολή 'bile'). The original reasoning is that blackness maps to black bile/melancholy. However, μελαγχολία already contains μέλας (Greek 'black') internally — it is a transparent Greek compound meaning 'black-bile.' The Arabic blackness word did not influence this Greek medical term; Greek named the condition with its own word for black. Furthermore, the Hippocratic theory of humors developed within Greek medicine.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek melancholia is a transparent compound (black + bile) using Greek melas (black); Arabic blackness did not contribute to this Greek medical compound."
+  },
+  {
+    "pair_id": "GRC_0285",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العجمضي (al-ujamdi) = small dates, the smallest grade of dates. Greek λαίγματα = pastries, small edible morsels. Both are small edible items, but from different botanical/culinary categories: dates (fruit of the palm) vs. pastries (baked grain products). The shared 'small edible' category is far too generic for a cognate claim.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Small dates and small pastries share only the generic category of small edibles; different food types with no specific semantic path."
+  },
+  {
+    "pair_id": "GRC_0286",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ذاقه (dhaqahu) = to taste, take a portion of; also: to take, handle, grasp (of spears). Greek ἐκδοχαί = receptions, interpretations, meanings received from a text (from ἐκδέχομαι 'to receive from'). Both encode the concept of receiving/taking something. Arabic taking/handling → Greek receiving/accepting is a 1-step parallel: both describe the act of taking hold of something (physical taking → abstract reception).",
+    "journey_type": "generalization",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic taking/handling (dhawq) generalizes to Greek receiving/accepting (ekdokhai) through the core act of taking something in."
+  },
+  {
+    "pair_id": "GRC_0287",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحشي (al-hashiy) = filled, padded; stuffing material. Greek λέχεσσι = beds, couches (dative plural of λέχος). Same as GRC_0146/GRC_0153 (الخسيج vs λέχεσι). Stuffing/padding material → bed requires: stuffing → what is stuffed (a mattress) → what contains the mattress (a bed) — 3 steps. Rejected with the same reasoning as the other λέχος pairs.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic stuffing/padding material and Greek bed/couch require 3 steps (stuffing → mattress → bed); not a valid 2-step path."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0744",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-aatrif = strong, robust camel. Greek polytrophos = well-fed, plump. Good feeding produces robustness: 2-step drift: good-feeding -> well-nourished -> strong/robust.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic strong-robust-camel and Greek well-fed/plump share the causal connection that good nourishment produces strength."
+  },
+  {
+    "pair_id": "GRC_0745",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hamraqa = wool (textile from goat). Greek khimarkhos = leader/chief of goats (khimaros+arkhos). Wool material and goat-herding-command-role are both in the goat/pastoral domain but in different semantic functions. No valid 2-step path from textile-material to herding-command.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic goat-wool (material) and Greek goat-leader (herding role) are both goat-domain but in different semantic functions."
+  },
+  {
+    "pair_id": "GRC_0746",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qaml = bulk, swelling protrusions. Greek Lakmon = mountain in Epirus (proper toponym). Same as GRC_0706. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Lakmon is a proper mountain toponym; Arabic bulk/swelling does not generate this proper name."
+  },
+  {
+    "pair_id": "GRC_0747",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-fawd = benefit, usefulness, profit. Greek eileeiphate = you have taken/received. Benefit-state and taking-action are 3 steps apart: benefit -> possessing-benefit -> having-taken-it -> you-have-received.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic benefit/usefulness and Greek you-have-taken are adjacent but 3 steps apart."
+  },
+  {
+    "pair_id": "GRC_0748",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qatt = past-time-depth marker (ever/never in past context). Greek telikaytai = so great, of such magnitude. Past-time-depth marker and magnitude adjective are entirely different grammatical and semantic categories.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic past-time-depth marker and Greek magnitude adjective are entirely different categories."
+  },
+  {
+    "pair_id": "GRC_0749",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khazm = nose-ring; the piercing/perforating action through nose-cartilage. Greek aikhmato = hurl a spear (from aikhme = spear-point). Core: sharp piercing implement. 2-step drift: piercing-implement -> sharp-point -> spear-point-action. Low confidence.",
+    "journey_type": "semantic_drift",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic nose-ring-piercing and Greek hurling-a-spear-point share the sharp-piercing-implement concept at 2 steps."
+  },
+  {
+    "pair_id": "GRC_0750",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qariya = gathering cud into one cheek (lateral anatomical positioning). Greek lekhrios = slanting, crosswise, oblique (geometric orientation). One-sided chewing and geometric obliqueness are both sideward but in different contexts with no valid derivation path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic one-sided chewing and Greek geometric-obliqueness are sideward in different contexts with no valid path."
+  },
+  {
+    "pair_id": "GRC_0751",
+    "finding": "path_found",
+    "semantic_journey": "Arabic daraba = rolling downward, repeated continuous motion. Greek diatripto = to rub away, wear down by friction, consume through repeated motion. Core: repeated motion that wears down. 2-step drift: rolling-continuously -> repeated-motion -> rubbing/wearing-away.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic rolling-downward (continuous motion) and Greek rubbing/wearing-down share repeated motion that consumes or erodes."
+  }
+]

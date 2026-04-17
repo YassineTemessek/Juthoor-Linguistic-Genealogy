@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0824",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hadan = calm, quiet (hadana = to calm). Greek hadinon = thick, deep, plentiful (an Homeric hapax meaning dense/crowded). Calmness and thickness/density/plenty are in different domains. Calm encodes stillness; thick/deep/plentiful encodes density. No valid 2-step path from stillness to density.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic calmness/quiet and Greek thick/deep/plentiful are in different domains; stillness and density are different concepts."
+  },
+  {
+    "pair_id": "GRC_0825",
+    "finding": "no_path",
+    "semantic_journey": "Arabic takhara = a place/ethnonym related to the Tocharians. Greek Tokharos = Tocharoi, a Central Asian people (proper name). Both are proper names for the same Central Asian people/region. This is the same proper name transmitted through different language channels. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both Arabic takhara and Greek Tokharos are proper names for the same Tocharian Central Asian people; proper name exclusion applies."
+  },
+  {
+    "pair_id": "GRC_0826",
+    "finding": "path_found",
+    "semantic_journey": "Arabic kabata = to fill with grief/suppress, to be weighed down by sorrow. Greek ek batheon = from the depths (of heart) (ek=from + bathos=depth). Core: deep inner distress. Arabic being-filled-with-grief/suppressed and Greek from-the-depths-of-heart both encode profound inner suffering. 1-step direct preservation: filled-with-suppressed-grief -> from-the-depths (of inner anguish).",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic suppressed inner grief and Greek from-the-depths-of-heart share the concept of profound inner emotional depth/distress."
+  },
+  {
+    "pair_id": "GRC_0827",
+    "finding": "path_found",
+    "semantic_journey": "Arabic kabata = suppression/being filled with grief (same root as GRC_0826). Greek ek batheon = from the depths of the heart. Same analysis as GRC_0826. Core: deep inner emotional depth. 1-step: suppressed-grief -> from-the-depths-of-heart.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Same root and analysis as GRC_0826; Arabic suppressed grief and Greek from-the-depths share profound inner emotional depth."
+  },
+  {
+    "pair_id": "GRC_0828",
+    "finding": "no_path",
+    "semantic_journey": "Arabic basala = brave/fierce/courageous warrior (basil = bold warrior). Greek Basileios = royal, kingly (from basileus = king). Arabic brave-warrior and Greek royal/kingly are both leadership/excellence concepts but in different domains: warrior-courage vs royal-rank. The chain warrior -> leader -> king requires 3 steps. Also Greek basileus has its own documented etymology (possibly from earlier Aegean substrate).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic brave-warrior and Greek royal/kingly are both leadership concepts but in different domains; warrior-to-king requires 3 steps."
+  },
+  {
+    "pair_id": "GRC_0829",
+    "finding": "no_path",
+    "semantic_journey": "Arabic lataha = woman giving birth (a description of the birthing process). Greek Eileithuia = Eileithyia, the goddess of childbirth (proper name, well-attested Greek goddess). Eileithyia is a proper Greek divine name with its own mythology. The connection between an Arabic birth-description and a Greek divine name is merely thematic. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Eileithyia is a proper Greek divine name; Arabic birth-description and a Greek divine name share only the childbirth theme."
+  },
+  {
+    "pair_id": "GRC_0830",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-barkhash = uproar, confusion, clamor. Greek brakhesi = dative plural of brakhys = short, brief. The original correctly notes semantic mismatch: clamor and short/brief are in entirely different domains. No valid path exists. Phonological match br-kh-sh is notable but semantics fail completely.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic clamor/uproar and Greek short/brief are in entirely different semantic domains; phonological match alone is insufficient."
+  },
+  {
+    "pair_id": "GRC_0831",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-baland = root of henna plant. Greek Blanda = a city in Basilicata, Italy (proper name). A henna plant root and an Italian city name share no semantic path. Proper name exclusion applies; even if the toponym has a Mediterranean plant-name substrate, this is speculative without documented evidence.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Blanda is a proper Italian toponym; Arabic henna-root and an Italian city share no documented connection."
+  }
+]

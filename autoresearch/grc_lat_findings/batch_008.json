@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0064",
+    "finding": "path_found",
+    "semantic_journey": "Arabic saqata = to fall/drop, to trickle down (the fundamental motion of descent). Greek stakte = distilled/dripped substance, specifically myrrh distillate (something that has dripped down). The semantic journey: falling/dropping -> the dripped result. Arabic encodes the action of falling/dripping; Greek names the resulting dripped substance. Action-to-result in one step. This is a genuine connection: the concept of something that drips/falls down -> the distilled substance.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic falling/dripping (saqata) and Greek dripped substance (stakte) share the dripping-down concept - action to result."
+  },
+  {
+    "pair_id": "GRC_0065",
+    "finding": "path_found",
+    "semantic_journey": "Arabic nardat = a plant used in perfumery (nard-related plant). Greek narte = a plant used in perfumery (giant fennel, Ferula communis, used in ancient pharmacology and perfumery). Both name plants used in the same context - perfumery/medicine. The Semitic root n-r-d for nard/aromatic plant is attested across Semitic languages and entered Greek as nardon. This appears to be the same aromatic plant term in different morphological forms. Material culture transmission of a perfumery plant name.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic perfumery plant (nardat) and Greek perfumery plant (narte) plausibly share an aromatic plant term."
+  },
+  {
+    "pair_id": "GRC_0066",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-sandal = sandalwood (fragrant medicinal wood from India/Arabia). Greek sandalon = sandal (footwear). The original reasoning correctly notes both are loanwords from the same Sanskrit/Old Iranian source. However: Arabic borrowed the wood name from Sanskrit (chandana = sandalwood); Greek borrowed the footwear name from Persian/Aramaic (sandal/shoe). These are two DIFFERENT words from Sanskrit/Persian that happen to sound similar - the wood and the shoe are distinct items. Shared loanword from separate Sanskrit/Persian roots that happen to resemble each other.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sandalwood and Greek sandal (footwear) are different loanwords from Sanskrit/Persian - false cognate despite phonetic similarity."
+  },
+  {
+    "pair_id": "GRC_0067",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-qalf = bark/peel/husk; pomegranate rind; tree bark; foreskin - the outer encasing layer of something. Greek keluphos = sheath, case, shell, husk, pod - the outer enclosing shell of something. Both directly mean the outer shell/husk/case of something. Arabic encodes the peeling/stripping action and its result; Greek names the outer shell/case. Direct semantic preservation of the outer-enclosing-layer concept. The phonetic match (q-l-f vs k-l-ph) is strong.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic outer husk/bark/peel (al-qalf) directly matches Greek outer shell/case (keluphos) - confirmed direct preservation."
+  },
+  {
+    "pair_id": "GRC_0068",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dalnaz = fat/plump person (heavy body). Greek sandalon = sandal (footwear). A fat person and a sandal are completely unrelated semantic fields. The original scoring appears to be a phonetic accident with no semantic justification. The original reasoning even cites a calibration anchor at 0.65 suggesting this is borderline - but fat person and sandal have no real connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic fat/plump person and Greek sandal (footwear) are completely unrelated semantic fields - false positive."
+  },
+  {
+    "pair_id": "GRC_0069",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-hatt = to put down/lower, to descend. Greek oulokhutai = barley groats poured down in ritual sacrifice (from oulokhutai = ritual barley). The Arabic concept of putting down/lowering is generic; the Greek refers to a specific ritual act of pouring barley. The chain: putting down -> pouring barley in ritual requires knowing: (1) the substance is barley, (2) the context is ritual. Too many unspecified steps. The specific ritual context of the Greek word is not derivable from the Arabic root.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic putting down/lowering does not specifically connect to Greek ritual barley-pouring - too many inferential steps."
+  },
+  {
+    "pair_id": "GRC_0070",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qash and Greek Aiolikos = Aeolic (pertaining to the Aeolian Greek dialect). The original reasoning says both involve dialect/language variety. Arabic al-qash has unclear meaning relevant here; Greek Aiolikos is a proper ethnic/linguistic adjective (Aeolian = from Aeolia). This is a proper ethnic/dialect name, not a lexical cognate. Even if Arabic has a word for dialect, Aeolic is a specific proper ethnolinguistic designation.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Aiolikos is a proper ethnic-linguistic designation (Aeolian dialect) - not a lexical root cognate."
+  },
+  {
+    "pair_id": "GRC_0071",
+    "finding": "path_found",
+    "semantic_journey": "Arabic hata = strong palm-grasping, enclosing with the hand (the act of firmly taking hold). Greek eikhete = you had/you held (imperfect of ekho = to have/hold). Both encode the concept of holding/grasping. Arabic centers on the physical act of seizing with the palm; Greek preserves the state of having/holding. The core concept of holding/possession is directly shared. One step: palm-grasping -> state of holding/having.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic palm-grasping/enclosing and Greek to-have/hold share the core holding/possession concept."
+  }
+]

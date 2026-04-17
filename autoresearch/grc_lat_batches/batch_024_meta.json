@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0192",
+    "arabic_root": "قنطر",
+    "target_lemma": "κεντηνάριον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic qintar = unit of weight (100 raṭl); Greek kentenarion = 100 librae, unit of weight. Both are Latin-derived centenarium but Arabic qintar and Greek kentenarion share the same Mediterranean measurement-term stratum."
+  },
+  {
+    "pair_id": "GRC_0193",
+    "arabic_root": "اثم",
+    "target_lemma": "Θέμις",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "إثم = sin, guilt, moral transgression; تحرّج عنه وكفّ = abstained from it scrupulously. Θέμις = divine law, right order, what is divinely ordained. These are two sides of the SAME moral-legal concept: إثم is the violation of Θέμις. Sin exists only relative to divine law. The phonetic match (th-m) reinforces this. This is a strong cognate candidate — the concept split into 'the law' vs 'breaking the law'."
+  },
+  {
+    "pair_id": "GRC_0194",
+    "arabic_root": "خضر",
+    "target_lemma": "χῖδρον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خضر strongly evokes green or unripe freshness, matching Greek unripe grain well."
+  },
+  {
+    "pair_id": "GRC_0195",
+    "arabic_root": "القشنيزه",
+    "target_lemma": "γάλαξιν",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Eaten by people and loved by sheep fits a milk-food pastoral field."
+  },
+  {
+    "pair_id": "GRC_0196",
+    "arabic_root": "سرنج",
+    "target_lemma": "σαργάνη",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic crafted mosaic-like work and Greek 'plait, braid' share a concrete made-pattern concept."
+  },
+  {
+    "pair_id": "GRC_0197",
+    "arabic_root": "القعس",
+    "target_lemma": "ἕλιξ",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic q-ʿ-s denotes bent or arched shape, and Greek helix is twisted or spiral; the shape concept persists clearly."
+  },
+  {
+    "pair_id": "GRC_0198",
+    "arabic_root": "دفيء",
+    "target_lemma": "δέφω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic warmth directly supports the result of softening; Greek 'soften, knead' is a clear semantic continuation."
+  },
+  {
+    "pair_id": "GRC_0199",
+    "arabic_root": "دخن",
+    "target_lemma": "διαχύνω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Smoke naturally spreads and diffuses; that gives a clear concrete chain to Greek pouring out or scattering."
+  }
+]

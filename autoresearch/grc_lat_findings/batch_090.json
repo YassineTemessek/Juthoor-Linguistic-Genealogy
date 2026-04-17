@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0720",
+    "finding": "no_path",
+    "semantic_journey": "Arabic Andalus = al-Andalus (named after the Vandals who conquered Iberia). Greek Ouandalos = Vandal (Germanic tribal name). Arabic al-Andalus was named AFTER the Vandals via Arabic borrowing of the Germanic tribal name. Proper name, Arabic is the borrower not the source.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic al-Andalus derives from the Vandal tribal name (Germanic); proper name exclusion applies."
+  },
+  {
+    "pair_id": "GRC_0721",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-khushu = lowering, bodily submission, sinking down. Greek lekhessi = on beds/couches (dative plural of lekhos). Core: lowered, settled body position. Same analysis as GRC_0682. 1-step drift: bodily-lowering -> lying-down-on-beds.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic bodily-submission/lowering and Greek lying-on-beds share the lowered horizontal body position (same as GRC_0682)."
+  },
+  {
+    "pair_id": "GRC_0722",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kanish = roots from which branches spread. Greek Leukanos = Lucanian (ethnic adjective from Lucania, Italy). Roots-spreading and an Italian regional ethnic name share no semantic path. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Leukanos is a proper ethnic adjective from Lucania; Arabic root-spreading does not plausibly generate this toponym."
+  },
+  {
+    "pair_id": "GRC_0723",
+    "finding": "path_found",
+    "semantic_journey": "Arabic saykha = firmness, embeddedness, fixed structure. Greek eskhekei = had held/possessed (pluperfect of ekhein). Core: stably settled and held. Arabic being-firmly-fixed -> Greek having-held-firmly. 1-step drift.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic firmness/embeddedness and Greek having/holding share the concept of something stably settled and possessed."
+  },
+  {
+    "pair_id": "GRC_0724",
+    "finding": "no_path",
+    "semantic_journey": "Arabic daelaqa = persistent inquiry into a thing. Greek dededelokas = you have shown/made clear. Persistent inquiry and making-something-clear are cause and effect but 3+ semantic steps apart (inquiry -> finding truth -> revealing -> showing clearly). Too long.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic persistent-inquiry and Greek making-clear are cause and effect but 3+ semantic steps apart."
+  },
+  {
+    "pair_id": "GRC_0725",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-samiyan = poured down on, the matter befell him. Greek leepsomene = about to take/receive/seize (future participle of lambanein). Core: something descending upon and being received. 1-step drift: matter-befalling -> being-seized-by.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic something-befalling/pouring-down and Greek about-to-receive share the concept of something descending upon a recipient."
+  },
+  {
+    "pair_id": "GRC_0726",
+    "finding": "path_found",
+    "semantic_journey": "Arabic saratahu = to take and swallow (seize and consume). Greek apestereethe = was deprived of, was robbed of. Two sides of the same forcible-removal action: Arabic is the taker; Greek is the deprived. 1-step negation-cognate.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic seizing/swallowing and Greek being-deprived are two sides of the same forcible-removal action."
+  },
+  {
+    "pair_id": "GRC_0727",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-shinat = well-cooked/roasted meats. Greek alaiphanto = they anointed/rubbed with oil/fat. Core: fat/oil applied to surface in preparation. Roasting involves fat; anointing involves oil. Both encode fat/oil as medium applied to a surface. 1-step shared concept: fat/oil-applied-to-surface.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic roasted-meats (fat-cooked) and Greek anointing-with-fat share fat/oil as the medium applied to a surface."
+  }
+]

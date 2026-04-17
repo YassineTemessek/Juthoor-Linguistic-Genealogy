@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0176",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دكاهم (dakahum) = they pushed/jostled each other mutually. Greek διαδέχομαι = to receive in succession, take the place of, succeed (διά + δέχομαι). The reasoning attempts mutual-contact → reciprocal-exchange → succession. But Arabic mutual jostling is physical force/contact, while Greek διαδέχομαι is legal/abstract succession (taking someone's place, inheriting a role). The drift from physical jostling to abstract succession is 3+ steps. No clean path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic mutual jostling and Greek succession/inheriting-a-role are too distant for a 2-step semantic path."
+  },
+  {
+    "pair_id": "GRC_0177",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حرقه (harqa/hariq) = burning, scorching, heat-driven intensity; from root حرق = to burn. Greek χαρακίας = a caustic or burning plant, a plant that causes burning/blistering (related to χαρακτήρ 'branding mark'). Both encode the concept of burning/caustic intensity. Arabic burning heat → Greek plant that causes burning is a clear 1-step material culture specialization: the plant is named for its burning/caustic property.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic burning (harq) and Greek burning-plant (charakias) share the caustic burning concept — the plant named for its burning effect."
+  },
+  {
+    "pair_id": "GRC_0178",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دفق (dafaqa) = to pour out, gush, flow outward forcefully. Greek διαφεύγω = to flee through/away, escape, slip away. The semantic path: flowing outward forcefully → escaping/slipping away. Rushing water escapes/slips through openings; the Arabic gushing-outward and Greek escaping-through share the core motion of force escaping confinement outward. This is a 1-step drift from physical gushing to the abstract/animate equivalent (escaping).",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic forceful gushing outward (dafq) maps metaphorically to Greek escaping/flowing away (diapheugein) — the motion of force slipping out."
+  },
+  {
+    "pair_id": "GRC_0179",
+    "finding": "path_found",
+    "semantic_journey": "Arabic اصطب (istab) = flax fiber, the coarse tow or rough shreds of flax used for stuffing/padding. Greek στιβάδιον = a small rough bed or pallet made of straw/leaves/shredded plant material. Both refer to coarse plant fiber material used for bedding/padding. Arabic flax-tow stuffing material → Greek small rough pallet made of such material is a direct 1-step specialization from the material to the object made of it.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic flax-tow stuffing material (istab) and Greek rough pallet made of plant fibers (stibadon) share the plant-fiber bedding concept."
+  },
+  {
+    "pair_id": "GRC_0180",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خمدت (khamada) = to sink down, subside, be extinguished; fire goes out; excitement subsides; body collapses. Greek χαμάδις = to the ground, down to the earth (adverb from χαμαί 'on the ground'). Both encode downward sinking/settling. Arabic subsiding/collapsing to ground → Greek motion to the ground is a direct 1-step match: the Arabic action results in the Greek positional state.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sinking/collapsing (khamada) and Greek down-to-ground (khamadis) share the downward-settling motion concept."
+  },
+  {
+    "pair_id": "GRC_0181",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الكنهدل (al-kanhudal) = something bulky, thick, massive and round. Greek κολοκύνθη = bottle gourd, a large round bulky vegetable. Both encode bulky roundness. Arabic bulky/thick/massive → Greek large round gourd is a 1-step specialization: the gourd is named precisely for its bulky, round, massive shape. This is a plausible material culture term — the gourd's defining characteristic (bulky roundness) is preserved in the Greek name.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic bulk/thickness (kanhudal) and Greek bottle gourd (kolokynte) share the concept of massive roundness — the gourd named for its shape."
+  },
+  {
+    "pair_id": "GRC_0182",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القنوه (al-qanwah) = the arched/aquiline shape; specifically an arched nose; curving outward. Greek ἑλίκοιν = of spirals, coils (genitive of ἕλιξ). Both encode curved/arched form. Arabic arched/curved shape → Greek spiral/coil preserves the curved geometry concept. This is similar to GRC_0159 (qaws vs helix) — Arabic specific arc → Greek general coil/spiral.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic aquiline-arch shape (qanwah) and Greek spiral/coil (helix) share the geometric concept of curving form."
+  },
+  {
+    "pair_id": "GRC_0183",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القزل (al-qazal) = worst form of lameness, severe limping gait defect. Greek σολοικίζω = to speak incorrectly, make a grammatical/linguistic error, speak 'like a Soloi person' (from Soloi, a city famous for Greek dialect errors). The semantic path: physical defect in gait → metaphorical defect in speech. Arabic bodily crookedness/lameness → Greek linguistic crookedness/error is a 1-step metaphorical extension (physical defect → linguistic defect). This is a documented semantic drift pattern.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic severe lameness (qazal) maps metaphorically to Greek linguistic error (soloikismos) — both encode defective/crooked performance."
+  }
+]

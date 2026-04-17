@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0688",
+    "finding": "path_found",
+    "semantic_journey": "Arabic akhna = time extended long over him, prolonged burden. Greek kekhena = I have gaped/yawned (perfect of khainein). Both encode a prolonged open state of weary waiting. 2-step: prolonged-time-burden -> weariness -> yawning/gaping.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic prolonged-time-burden and Greek yawning share the concept of prolonged open-mouthed weariness."
+  },
+  {
+    "pair_id": "GRC_0689",
+    "finding": "path_found",
+    "semantic_journey": "Arabic jady = kid, young goat (also Capricorn). Greek aigida = aegis, the goatskin shield of Zeus/Athena (from aix/aigos = goat). Core: goat. Arabic names the animal; Greek names the object made from its skin. 1-step material-culture: goat -> goatskin object. Direct animal-to-product path.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic young-goat and Greek goatskin-aegis share the goat as core referent; Arabic names the animal, Greek names the goatskin product."
+  },
+  {
+    "pair_id": "GRC_0690",
+    "finding": "path_found",
+    "semantic_journey": "Arabic gharf = to scoop/draw water. Greek -graphos = writer, one who scratches/draws (from graphein = scratch/draw/write). Core: drawing action. Arabic draw-water and Greek draw/scratch-marks share the drawing action. 1-step specialization: draw/scoop -> scratch/mark on surface.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic drawing/scooping and Greek scratching/writing share the drawing action; Arabic applies to liquids, Greek specializes to marking surfaces."
+  },
+  {
+    "pair_id": "GRC_0691",
+    "finding": "path_found",
+    "semantic_journey": "Arabic kharaja = to go out, bring forth, produce. Greek kharag ma = engraved mark, something produced on a surface (from kharasso = to engrave). Core: bringing-forth/producing. 1-step action-to-result: going-out/bringing-forth -> the-produced-mark.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic going-out/bringing-forth and Greek engraved-mark share production: Arabic is the action, Greek is the result."
+  },
+  {
+    "pair_id": "GRC_0692",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-abish = one who adorns the courtyard and entrance of a house. Greek balbis = starting-line/barrier at a racecourse, also threshold. Both involve threshold/boundary areas but Arabic encodes entrance-beautification while Greek encodes a functional race-start barrier. Different functions at threshold locations; no valid semantic derivation.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic entrance-adorner and Greek racecourse-starting-barrier both involve thresholds but serve different functions with no derivation path."
+  },
+  {
+    "pair_id": "GRC_0693",
+    "finding": "no_path",
+    "semantic_journey": "Arabic baghdad = Baghdad (from Iranian baga-data = god-given). Greek Bagadates = an Iranian-Greek proper name (same baga-data root). Both Arabic Baghdad and Greek Bagadates derive from the same Iranian root directly. This is parallel Iranian borrowing, not Arabic-to-Greek cognation. Proper name, shared loanword.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Both Arabic Baghdad and Greek Bagadates derive from Iranian baga-data; this is parallel Iranian borrowing, not Arabic-to-Greek cognation."
+  },
+  {
+    "pair_id": "GRC_0694",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-faw'a = the sharp biting quality of poison. Greek glupho = to carve, engrave. Poison sharpness is a toxic/sensory quality; carving is a mechanical surface action. No valid 2-step path from toxic-sharpness to surface-carving.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic poison-sharpness and Greek surface-carving share only the broad notion of sharpness; toxic-sharpness and tool-cutting are different semantic operations."
+  },
+  {
+    "pair_id": "GRC_0695",
+    "finding": "path_found",
+    "semantic_journey": "Arabic fard = single, solitary; also a doe that left the herd (separated individual). Greek phroydos = gone, fled, departed, no longer present. Core: separated/departed individual. 1-step drift: single-separated-individual -> gone/departed.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic single/solitary-one-who-left and Greek gone/departed share the concept of an individual separated from the group and no longer present."
+  }
+]

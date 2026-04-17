@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0344",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حوط = to encircle, enclose, guard a field or flock; الحوط = enclosure/fence around livestock or land. Greek εἴχετε = 2nd plural imperfect of ἔχω = you had/held/possessed. The semantic journey: enclosing/guarding (active physical containment) -> holding/possessing (ownership through containment). The Semitic concept of guarding a field naturally generates the idea of holding/possessing it. Arabic encodes the physical act; Greek encodes the resulting ownership state. A 1-step action-to-state path.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic enclosing/guarding property and Greek holding/possessing property share the core of contained possession."
+  },
+  {
+    "pair_id": "GRC_0345",
+    "finding": "no_path",
+    "semantic_journey": "Arabic جيث = to pass heavily, to move with weight/bulk. Greek εὐμεγέθης = large in size, of great dimensions. The original reasoning maps heavy passing to large size. But heavy passing is a DYNAMIC quality (how something moves); large size is a STATIC quality (how big something is). Connecting movement quality to size requires: heavy movement -> implies heavy object -> implies large object. This is 3+ steps and inferential, not direct. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Heavy movement and large size are different semantic categories — dynamic quality of motion does not directly generate static dimension."
+  },
+  {
+    "pair_id": "GRC_0346",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خزق = to pierce, split, cut with an implement (a pointed tool). Greek σχίζα = a split piece of wood, a chip (result of splitting). The semantic journey: the ACTION of piercing/splitting -> the RESULT (split piece). Arabic preserves the verb; Greek preserves the noun of result. A clean 1-step action-to-result relationship, parallel to GRC_0332 (خزع/σχίζα).",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic piercing/splitting (خزق) and Greek split-piece (σχίζα) are action-to-result cognates sharing the cutting concept."
+  },
+  {
+    "pair_id": "GRC_0347",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السني = to approve, find good, beautify; also elevation/high quality. Greek ἀγαλλιῴησαν = they exulted, rejoiced greatly (from ἀγαλλιάω = to exult/rejoice). The original reasoning maps approval/admiration to rejoicing. But approving something (finding it good) is different from exulting/leaping with joy. The path approval -> admiration -> joy -> exultation requires 3+ steps. Arabic conveys aesthetic approval; Greek conveys intense physical-emotional expression of joy.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Finding something good/beautiful and exulting with joy are different emotional registers requiring 3+ semantic drift steps."
+  },
+  {
+    "pair_id": "GRC_0348",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الرشوة = bribe (payment to cause someone to look the other way/release restraint). Greek λυσέρωσι = they may release/loosen (from λύω = to loose, release). The original reasoning maps bribery's FUNCTION (causing release) to the Greek word for release itself. But the FUNCTION of a bribe is not the same as the ACT of releasing. This requires: bribe -> causes release -> the release itself. That makes Arabic the cause and Greek the effect, but they are different lexical items encoding different things.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "A bribe (instrument of persuasion) and the act of releasing are different concepts — the functional outcome of bribery is not the same as the word for release."
+  },
+  {
+    "pair_id": "GRC_0349",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حرق = burning, scorching, to set on fire. Greek χαρακίας = a type of plant (wood spurge, Euphorbia characias) — named for its burning/caustic latex sap that causes skin irritation like a burn. The semantic journey: burning/scorching quality -> plant named for its burning, caustic effect on skin. Arabic preserves the quality (burning); Greek preserves the plant named after that quality (the burning-plant). A 1-step material culture connection through the plant's distinguishing property.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic burning/scorching and Greek wood-spurge plant share the burning quality — the plant is named for its caustic skin-burning sap."
+  },
+  {
+    "pair_id": "GRC_0350",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رثا = to eulogize the dead, to compose an elegy, to mourn in verse (literary mourning). Greek εὐρυθμία = good rhythm, proper measure, harmonious order (from εὔ + ῥυθμός). The original reasoning maps repairing/setting right to rhythm. But Arabic رثا is specifically FUNERARY VERSE — elegizing the dead — not about restoring order. The connection elegizing -> rhythm via measure is extremely indirect (poetry has rhythm -> elegies are poetry -> therefore elegies connect to rhythm). 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic elegizing the dead and Greek good rhythm/measure are unrelated — funerary verse and harmonious order require 3+ drift steps."
+  },
+  {
+    "pair_id": "GRC_0351",
+    "finding": "path_found",
+    "semantic_journey": "Arabic جمح = to bolt, run away uncontrollably (of a horse); jumuH = the unruly forward rush of a horse breaking free. Greek ἐγρεμάχης = one who rouses battle, battle-rouser (from ἐγείρω + μάχη = rouse + battle). The semantic journey: uncontrolled bolting/rushing forward -> rousing/rushing into battle. Both encode FORCEFUL UNCONTROLLED FORWARD MOVEMENT into conflict. Arabic = the bolt (animal instinct); Greek = the battle-rousing (intentional but with the same violent forward energy). A 1-step action-to-application drift.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic horse-bolting/uncontrolled rush (جمح) and Greek battle-rouser share the core of forceful, unrestrained forward momentum into conflict."
+  }
+]

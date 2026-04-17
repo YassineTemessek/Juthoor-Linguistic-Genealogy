@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0560",
+    "arabic_root": "الشعفه",
+    "target_lemma": "διαλυσιφίλου",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "شعفة=love that overwhelms/covers the heart from above (غشّى الحبّ القلب). διαλυσίφιλος=dissolving friendship/love. Both are about love's transformative power - one overwhelming, the other dissolving. The love domain is shared but the direction differs."
+  },
+  {
+    "pair_id": "GRC_0561",
+    "arabic_root": "القعثره",
+    "target_lemma": "ἕλκηθρον",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qa'thara = uprooting, pulling up from the root. Greek helkethron = stock/sole of the plough (from helko 'drag, draw, pull'). Both center on dragging-up-from-soil action. Strong concrete link: uprooting tool meets ploughing tool, both pull through earth."
+  },
+  {
+    "pair_id": "GRC_0562",
+    "arabic_root": "الطنس",
+    "target_lemma": "λανθάνουσα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الطنس is intense darkness and λανθάνουσα is hidden/escaping notice; both share the mafhum of concealment and obscurity."
+  },
+  {
+    "pair_id": "GRC_0563",
+    "arabic_root": "سلعوس",
+    "target_lemma": "Σελλασία",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides point to a specific place-name; this looks like toponymic preservation more than ordinary lexical meaning."
+  },
+  {
+    "pair_id": "GRC_0564",
+    "arabic_root": "خندريس",
+    "target_lemma": "χόνδρος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic khandaris = aged date/wine, marked as foreign loan by ibn Durayd. Greek chondros = groats, lump. Direct loan etymology — khandaris is from chondros derivative. Strong borrowing link."
+  },
+  {
+    "pair_id": "GRC_0565",
+    "arabic_root": "هدن",
+    "target_lemma": "εὗδον",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "هدن=truce/calm; εὗδον=sleeping. Possible semantic link via rest/quiet"
+  },
+  {
+    "pair_id": "GRC_0566",
+    "arabic_root": "التناوه",
+    "target_lemma": "καταλυθέν",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "التناوه=ترك المذاكرة (abandoning discussion/study). καταλύω=to dissolve, destroy, bring to an end. Abandoning discussion IS a dissolution/ending of the activity. The cessation concept maps well: ترك (leaving off) parallels κατα-λύω (un-doing)."
+  },
+  {
+    "pair_id": "GRC_0567",
+    "arabic_root": "رسف",
+    "target_lemma": "ὄρεσφι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Fettering and binding can extend to what is fixed or anchored like a mountain mass."
+  }
+]

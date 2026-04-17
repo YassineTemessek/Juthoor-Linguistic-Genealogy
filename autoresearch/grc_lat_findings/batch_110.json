@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0880",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hadramawt = Hadhramaut, an ancient South Arabian region. Latin Hadrumetinus = adjective for Hadrumetum, a Phoenician colony in North Africa. Two different Semitic proper place names. Hadrumetum was Phoenician; Hadhramaut is South Arabian. Proper name exclusion applies to both.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both are Semitic proper nouns from different Semitic peoples: Hadrumetum is Phoenician North Africa, Hadhramaut is South Arabian; not connected."
+  },
+  {
+    "pair_id": "LAT_0881",
+    "finding": "no_path",
+    "semantic_journey": "Arabic babil = Babel, the city of confounded speech (Genesis 11). Latin babulus = babbler. Babel in Hebrew (Akkadian Bab-ilu = Gate of God) is a proper name. Excluded under proper name rule. The connection relies on Genesis 11 folk etymology, not on a root cognate path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Babel is a biblical proper name; the connection to babulus is folk etymology from Genesis 11."
+  },
+  {
+    "pair_id": "LAT_0882",
+    "finding": "no_path",
+    "semantic_journey": "Arabic babil = Babel, Tower of linguistic confusion. Latin babello = to babble, stammer. The Genesis 11 folk etymology linking Babel to babble is excluded under the proper name rule. Babel appears in both Quran and Bible as a proper name. The verb babello is likely independently onomatopoeic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Babel is a biblical/Quranic proper name; the connection to babello relies on Genesis 11 folk etymology, which is excluded."
+  },
+  {
+    "pair_id": "LAT_0883",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-bathagh = blood appearing on lips and skin surface, blood seeping passively. Latin phlebotomia = bloodletting, deliberately opening a vein (from Greek phlebotomia = phlebs/vein + tome/cutting). Passive blood-surfacing vs deliberate vein-cutting: different acts. Latin phlebotomia is a Greek compound loanword, not from Semitic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Latin phlebotomia is a Greek compound (phlebs + tome); Arabic al-bathagh describes passive blood-surfacing, not vein-cutting."
+  },
+  {
+    "pair_id": "LAT_0884",
+    "finding": "no_path",
+    "semantic_journey": "Arabic yanbut = thorny Yanbut tree with berries, a specific Arabian plant. Latin cynosbatos = dog-rose or wild briar, a thorny shrub (from Greek kynos-batos = dog + thornbush). Latin cynosbatos is a Greek compound loanword. Both are thorny plants with berries but this is translation-equivalence at the plant-category level, not a name cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Both are thorny berry plants but the Latin is a transparent Greek compound (kynos + batos); sharing the plant category is not etymology."
+  },
+  {
+    "pair_id": "LAT_0885",
+    "finding": "path_found",
+    "semantic_journey": "Arabic rahaka = to grind, crush between stones, to pound (related to raha = millstone). Latin rhexis = fracture, rupture, tearing (from Greek rhexis = a breaking, from rhegnumi = to break). Step 1: grinding and crushing -> fracture and rupture. Both involve material being broken apart by applied force. Both encode violent material fragmentation.",
+    "journey_type": "semantic_drift",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic rahaka (to grind/crush) and Latin rhexis (fracture/rupture via Greek) both encode violent material destruction."
+  },
+  {
+    "pair_id": "LAT_0886",
+    "finding": "no_path",
+    "semantic_journey": "Arabic salawa = honey (sulawanat = honeydew). Latin salar = trout (possibly a Gaulish or Iberian substrate word for the fish). Honey and trout are completely different categories of food: plant/insect product vs fish. Sharing the food category is not a semantic connection. The Latin salar is likely a substrate word from Iberian or Gaulish, unrelated to Arabic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic honey-word and Latin trout-word share only the meta-category of food; the Latin salar is likely a Celtic or Iberian substrate word."
+  },
+  {
+    "pair_id": "LAT_0887",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shafa = to heal, to cure (shifa = healing, cure). Latin pascha = Passover/Easter (from Hebrew pesah = the Passover). Arabic shafa has no etymological connection to pascha. Completely unrelated words in entirely different semantic domains: religious calendrical commemoration vs medical healing.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic shafa (to heal) and Latin pascha (Passover) are completely unrelated; pascha derives from Hebrew pesah, not from any Arabic healing-root."
+  }
+]

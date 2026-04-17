@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0656",
+    "finding": "no_path",
+    "semantic_journey": "Arabic sahtahu = to slip away, lose grip. Greek skhesthai = to have/hold for oneself (aorist middle infinitive of ekhein). Loss-of-grip and holding are antonyms. Opposite poles do not constitute a cognate without strong phonetic+semantic evidence.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic slipping-away and Greek holding are antonyms; opposite poles do not make cognates."
+  },
+  {
+    "pair_id": "GRC_0657",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hatada = to abide firmly in a place. Greek ikhthyodes = fish-like, abounding in fish. Abiding firmly in a place and being fish-like share no 2-step path. Getting to fish-filled requires 3+ steps via settled-place -> filled-place -> fish-filled.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic abiding-firmly and Greek fish-like/fish-filled share no plausible 2-step semantic path."
+  },
+  {
+    "pair_id": "GRC_0658",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hakat = to recount/narrate. Greek oukh hekista = especially/not-least (adverbial phrase). Narrating and the adverb especially are entirely different semantic categories with no path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic recounting and Greek especially/not-least are entirely different semantic categories."
+  },
+  {
+    "pair_id": "GRC_0659",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dhaibil = calamity, disaster. Greek diabolos = slanderer, devil (Greek compound dia+ballo). Diabolos is a transparent Greek construction. Both negative but diabolos encodes false-accusation/slander specifically, not general disaster. Greek internal etymology is clear; no Semitic input needed.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek diabolos is a transparent Greek compound; Arabic calamity and Greek slanderer share only a negative domain, not a lexical path."
+  },
+  {
+    "pair_id": "GRC_0660",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ghafara = to cover/forgive. Greek Gaphara = a place in North Africa (Punic/Berber substrate). If the toponym has a Semitic root, this is Punic substrate toponymy, not an Arabic-Greek cognate. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gaphara is a North African proper toponym; even a Semitic etymology makes it substrate toponymy, not a cognate."
+  },
+  {
+    "pair_id": "GRC_0661",
+    "finding": "no_path",
+    "semantic_journey": "Arabic sahtahu = loss of grip (same root as GRC_0656). Greek skhetheesetai = will be held/checked (future passive of ekhein). Arabic slipping-away and Greek future-holding are antonyms. Same analysis as GRC_0656.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Same root as GRC_0656; Arabic slipping-away and Greek being-held are antonyms without sufficient evidence for cognate status."
+  },
+  {
+    "pair_id": "GRC_0662",
+    "finding": "path_found",
+    "semantic_journey": "Arabic aqadhanna = produced many faults/defects. Greek kindunos = danger, peril, risk. 2-step causal chain: many-defects -> structurally-compromised -> dangerous. Each step is plausible: a thing with many faults is compromised, and a compromised thing is dangerous. Valid at 2 steps but low confidence due to abstractness.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic producing-many-defects and Greek danger share a 2-step causal chain: defectiveness -> compromise -> danger."
+  },
+  {
+    "pair_id": "GRC_0663",
+    "finding": "no_path",
+    "semantic_journey": "Arabic karafa = piled clouds (clouds heaped up). Greek karphos = dry twig, chip of wood. Piled clouds and dry twigs share no semantic path. Piling is spatial heaping; dryness is material quality. No valid connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Piled clouds and dry twigs are entirely different materials with no semantic path."
+  }
+]

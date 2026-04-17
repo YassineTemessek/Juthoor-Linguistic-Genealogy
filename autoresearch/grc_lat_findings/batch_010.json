@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0080",
+    "finding": "no_path",
+    "semantic_journey": "Arabic surt and Greek Sarte are proper place names. Surt is a coastal city in Libya; Sarte was an ancient city in Macedonia. These are geographically unrelated proper names. Excluded as proper names.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Two unrelated proper place names (Libyan coastal city vs Macedonian city) - excluded as proper names."
+  },
+  {
+    "pair_id": "GRC_0081",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-tannaz = a mocker, one who ridicules (the root t-n-z encodes the act of mockery/ridicule). Greek geloiotatain = most laughable/most ridiculous (superlative of geloios = laughable). Both center on ridicule and making others objects of laughter. Arabic: the agent who ridicules; Greek: that which is most ridiculous (the object). Two sides of the same mockery-ridicule concept. One step: mocker -> what is most ridiculous.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic mocker/ridiculer (al-tannaz) and Greek most-laughable/ridiculous share the mockery-ridicule semantic domain."
+  },
+  {
+    "pair_id": "GRC_0082",
+    "finding": "path_found",
+    "semantic_journey": "Arabic malaqa = to flatter, to be soft/gentle, to be smooth (the root m-l-q encodes softness and ingratiation). Greek malakos = soft, gentle, delicate, mild. Both encode softness/gentleness as a core concept. Arabic preserves both the physical softness and the behavioral softness (flattery = being soft toward someone); Greek malakos covers the full range of soft/gentle/mild. Direct semantic preservation of the soft/gentle concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic soft/gentle/flattering (malaqa) directly matches Greek soft/gentle (malakos) - confirmed direct preservation."
+  },
+  {
+    "pair_id": "GRC_0083",
+    "finding": "path_found",
+    "semantic_journey": "Arabic rasikha = firmness, being fixed in place, being deeply rooted (the root r-s-kh encodes firm establishment). Greek ararisiko = to join/fasten, to fit tightly together, to make firm. Both encode firm fixation. Arabic: the state of being firmly established; Greek: the action of making firmly joined. The firmness-fixation concept is preserved. One step: being firmly rooted -> to join/fasten firmly.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic firmness/fixation (rasikha) and Greek joining/fastening firmly (ararisiko) share the firm-establishment concept."
+  },
+  {
+    "pair_id": "GRC_0084",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hamala = to carry/load/bear (the action of carrying something). Greek aikhmaloo = to take prisoner, to capture (specifically capturing in war). The original reasoning: capturing entails carrying off. However, the specific meaning of carrying a prisoner as a captive is a specialized extension that requires: carry -> carry off forcibly -> take as prisoner. That is 2-3 steps and the core Arabic meaning (to carry/bear a load) is very different from the core Greek meaning (to capture a prisoner in battle). Carrying a load and capturing a war prisoner are distinct conceptual domains.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic to-carry/load and Greek to-take-prisoner are different domains - the carrying-off chain requires too many steps."
+  },
+  {
+    "pair_id": "GRC_0085",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-ashnaq = tall and handsome (the gloss mentions beauty/elegance). Greek kaloisin = beautiful ones (dative plural of kalos = beautiful). The Arabic appears to describe a tall handsome person; Greek is a general adjective for beautiful. While both relate to attractive appearance, the phonetics are very distant (al-shnq vs k-l-s) and this appears to be a semantic coincidence in the broad beauty domain. No real path beyond both meaning something about appearance.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic tall/handsome and Greek beautiful ones are too broadly similar - both in appearance domain but no real phonetic or specific semantic connection."
+  },
+  {
+    "pair_id": "GRC_0086",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ataytuhu = where he was/road junction (a locative concept of place). Greek autoth = right there/on the spot (locative adverb). Both are locative/deictic expressions meaning at a place. However, locative concepts develop independently in every language - every language needs words for here/there/where. There is no evidence this is a borrowing rather than independent development of basic deictic vocabulary. The phonetics are also very different (a-t-y-t-h vs a-w-t-th). No productive Semitic-to-Greek path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Basic locative/deictic vocabulary (here/there) develops independently - not a Semitic-to-Greek cognate."
+  },
+  {
+    "pair_id": "GRC_0087",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-barniq = a type of truffle or sediment; also mentioned as a clan name. Greek Berenike = Berenice (a personal name meaning bearer of victory from Macedonian Greek). The Arabic proper name form appears to be a different toponym/clan reference. Berenice is a known Macedonian Greek name (Pherenike = victory-bearer). No productive Arabic root connection to this Greek proper name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Berenice is a Macedonian personal name (Pherenike = victory-bearer) - not related to Arabic truffle/sediment root."
+  }
+]

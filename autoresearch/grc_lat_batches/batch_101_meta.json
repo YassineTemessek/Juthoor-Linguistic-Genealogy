@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0808",
+    "arabic_root": "الصيم",
+    "target_lemma": "καταλυσίμους",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Same pair as above in accusative plural. الصيم (compact/hard) vs καταλύσιμος (dissolvable) are antonyms on the same structural axis."
+  },
+  {
+    "pair_id": "GRC_0809",
+    "arabic_root": "البرص",
+    "target_lemma": "βλαβερός",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "البرص = leprosy; سام أبرص = large gecko (associated with disease/harm). βλαβερός = harmful, pernicious. Leprosy is the paradigmatic harmful disease. The Arabic root carries intrinsic harm, and the Greek adjective means exactly harmful. Strong semantic alignment."
+  },
+  {
+    "pair_id": "GRC_0810",
+    "arabic_root": "البرشاع",
+    "target_lemma": "βλαβερός",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic = coarse, troublesome, oafish person. Greek = harmful, pernicious. Both describe a harmful/troublesome character. Plausible semantic chain from coarse-troublesome to harmful."
+  },
+  {
+    "pair_id": "GRC_0811",
+    "arabic_root": "خرز",
+    "target_lemma": "διαχωρίζω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'that which is strung/arranged' and Greek 'separate' can reflect two sides of handling units: binding versus unbinding."
+  },
+  {
+    "pair_id": "GRC_0812",
+    "arabic_root": "فزع",
+    "target_lemma": "πεφυζότες",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic faz' = 'panic, fleeing'; Greek = 'having fled'. Plausible conceptual overlap."
+  },
+  {
+    "pair_id": "GRC_0813",
+    "arabic_root": "مرج",
+    "target_lemma": "μάργος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Mixed/pasture/wild vs 'mad, furious, rampant' - faint via wild pasturing"
+  },
+  {
+    "pair_id": "GRC_0814",
+    "arabic_root": "خطب",
+    "target_lemma": "ἐπέχετε",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic خِطاب is directed speech or exchange, and Greek hold toward or attend can preserve the interactional core."
+  },
+  {
+    "pair_id": "GRC_0815",
+    "arabic_root": "خذيت",
+    "target_lemma": "κάθευδε",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic slackening or loosening can conceptually meet Greek sleep as a state of relaxation or sinking from tension."
+  }
+]

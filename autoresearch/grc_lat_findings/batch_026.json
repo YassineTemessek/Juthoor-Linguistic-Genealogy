@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0208",
+    "finding": "no_path",
+    "semantic_journey": "Arabic غزو (ghazw) = to raid, invade, wage war. Greek Γάζα = Gaza, the city name. While the original reasoning notes that Greek Gaza derives from Semitic 'azza (strong), the Arabic root غزو (raid) is a DIFFERENT Semitic root. Gaza's Semitic etymology is from 'zz (strength), not ghzw (raid). These are distinct roots; the phonetic similarity is coincidental. Furthermore, Γάζα is a proper toponym. Excluded.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Γάζα is a Semitic toponym from root 'zz (strong), not from Arabic ghazw (raid) — different roots, and it is a proper name."
+  },
+  {
+    "pair_id": "GRC_0209",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القعص (al-qas) = twisted, bent; also انثنى = bent back. Greek ἕλιξ = spiral, coil, any curved/wound form. Arabic bending/twisting → Greek spiral/coil is the same arc-to-coil pattern seen in GRC_0159, GRC_0182, GRC_0197. The curved geometry concept is preserved across this family of Arabic roots.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic twisted/bent (qaas) and Greek spiral/coil (helix) share the geometric core of curving form."
+  },
+  {
+    "pair_id": "GRC_0210",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خوض (khawd) = to wade into, plunge through, enter a fluid medium; to be immersed in water. Greek χυδαῖος = poured out, flowing abundantly, copious (from χέω 'to pour'). Both encode the concept of liquid spreading/moving through space in abundance. Arabic wading-into/immersing-in-fluid → Greek copious-flowing-outward is a 1-step parallel: both capture the image of liquid movement without restraint.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic wading/immersing in fluid (khawd) and Greek copious outpouring (khudaios) share the image of unrestrained liquid movement."
+  },
+  {
+    "pair_id": "GRC_0211",
+    "finding": "no_path",
+    "semantic_journey": "Arabic بسن (Baysan) = Beisan, the Arabic name for the ancient city Beth-Shean in the Jordan Valley. Greek Βυσναῖοι = the people of Bysna/Beisan. Both refer to the same Semitic settlement Beit Shean/Baysan. This is a shared proper toponym/ethnonym transmitted via the Semitic name of the city. Excluded: proper name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both forms name the same city (Beisan/Beth-Shean) and its inhabitants; this is a shared Semitic toponym, not a cognate."
+  },
+  {
+    "pair_id": "GRC_0212",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خشم (khashm) = nose, snout; the nasal passage/opening; also: to break the nose. Greek χάσματα = chasms, gaping openings. Both encode an aperture/opening in a surface. Arabic nasal-opening/nostril → Greek gaping-opening is a 1-step generalization: the nostril is a specific opening in the face; chasm is a general gaping opening in the earth. The core is the same: a void opening through a solid surface.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic nostril/nasal-opening (khashm) generalizes to Greek gaping chasm (khasma) — both encode an opening through a solid surface."
+  },
+  {
+    "pair_id": "GRC_0213",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الصعصع (al-saasa) = rows moving from their places; people scattering from their positions. Greek ἀλλάσσω = to change, alter, exchange, substitute. The connection scattered-movement → change is too broad — any kind of movement could be called change. The Arabic specifically encodes dispersal/scattering, while Greek ἀλλάσσω encodes exchange/alteration. These are different types of change. No clean 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic scattered dispersal and Greek exchange/alteration are different types of change; no specific semantic path connects them."
+  },
+  {
+    "pair_id": "GRC_0214",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الغاغ (al-ghagh) = a plant name (perhaps a shrub or weed). Greek γάλαγγα = galangal (Alpinia galanga), the Asian spice. Both are plant names, but different plants in different botanical families with different properties. Galangal is a Southeast Asian spice that entered Mediterranean trade; Arabic الغاغ names an unrelated local plant. Plant-category matching is insufficient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two unrelated plant names sharing only the botanical category is not sufficient for a cognate claim."
+  },
+  {
+    "pair_id": "GRC_0215",
+    "finding": "path_found",
+    "semantic_journey": "Arabic كلف (kalaf) = skin discoloration, blemish on the skin; the changed/marked surface of skin; also: anything covering the surface. Greek κέλυφος = shell, husk, outer covering, case (the outer layer that encloses something). Both encode the concept of an outer surface layer. Arabic skin-discoloration/surface-marking → Greek outer-shell/husk/covering is a 1-step parallel: both refer to the outermost covering layer of something.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic skin surface/blemish (kalaf) and Greek shell/outer-covering (kelyphos) share the concept of an outer surface layer."
+  }
+]

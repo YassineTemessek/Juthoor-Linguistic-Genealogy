@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0576",
+    "arabic_root": "خوت",
+    "target_lemma": "εἴχετε",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "خوت here is stealthily taking prey, and εἴχετε is you had or held; seizure and having form a plausible action-to-result chain."
+  },
+  {
+    "pair_id": "GRC_0577",
+    "arabic_root": "الغور",
+    "target_lemma": "ἀλληγορία",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic غور = depth, hidden interior, going deep into a thing. Greek allegoria literally 'speaking otherwise/hidden meaning' from allos+agoreuein. The conceptual core 'hidden depth of meaning' aligns directly — Arabic ghawr al-kalam means 'depth of speech', exactly the allegorical dimension. Strong mafahim link."
+  },
+  {
+    "pair_id": "GRC_0578",
+    "arabic_root": "شفزه",
+    "target_lemma": "σφαδάζω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic shafaza = kicked someone with the front of the foot. Greek sphadazo = struggle convulsively, kick about, writhe. Both denote violent kicking/spasming motion. Phonetic resemblance shafz/sphad is striking. Strong concrete link."
+  },
+  {
+    "pair_id": "GRC_0579",
+    "arabic_root": "صفو",
+    "target_lemma": "σαφέσι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic صفو 'pure, clear, unclouded' vs σαφής 'clear, plain, manifest'. Both center on clarity concept; real semantic overlap"
+  },
+  {
+    "pair_id": "GRC_0580",
+    "arabic_root": "الكال",
+    "target_lemma": "καλκουλάτωρ",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic al-kal includes 'buying or selling a debt you have on one man with a debt another has on him' — debt-trading/accounting. Greek kalkoulator (Latin loan, calculator) = accountant. Direct semantic match in the accounting/debt-management field. Strong link."
+  },
+  {
+    "pair_id": "GRC_0581",
+    "arabic_root": "القسطاس",
+    "target_lemma": "ἐλάχιστα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Scale or balance can extend to leastness on a measure continuum."
+  },
+  {
+    "pair_id": "GRC_0582",
+    "arabic_root": "حبر",
+    "target_lemma": "χερουβεῖς",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic habr = beauty, fine appearance, also 'rabbi/scholar' (al-habr). Greek cheroubeis = pl of cheroub 'cherub' (Hebrew loan). Both relate to sacred holy figures — Arabic habr (rabbi/scholar) and cherub are religious-sacred terms with Semitic origin. Strong combined link."
+  },
+  {
+    "pair_id": "GRC_0583",
+    "arabic_root": "خندريس",
+    "target_lemma": "χόνδρινος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic khandaris = old aged date/wine, also 'I think it is foreign-borrowed'. Greek chondrinos = made of groats/coarse meal (from chondros 'groats'). The Arabic word is itself a Greek loan from chondros/chondrinos. Phonetic resemblance is direct. Strong borrowing link."
+  }
+]

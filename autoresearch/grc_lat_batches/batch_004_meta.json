@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0032",
+    "arabic_root": "زاجل",
+    "target_lemma": "ζεύγλη",
+    "lang": "grc",
+    "original_score": 0.91,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الزؤاجل names a concrete implement, and Greek ζεύγλη is the yoke-loop; this is a strong masadiq-level object match."
+  },
+  {
+    "pair_id": "GRC_0033",
+    "arabic_root": "جمل",
+    "target_lemma": "Γάμαλα",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "combined",
+    "original_reasoning": "Arabic camel and the place name Gamala plausibly meet through camel-backed shape or direct naming from camel imagery."
+  },
+  {
+    "pair_id": "GRC_0034",
+    "arabic_root": "الفاثج",
+    "target_lemma": "λειφθείη",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic explicitly gives نقص and ترك, while Greek λείπω means leave/be lacking; this is a direct semantic match."
+  },
+  {
+    "pair_id": "GRC_0035",
+    "arabic_root": "الفاثج",
+    "target_lemma": "λέλειφθε",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic نقص and ترك align directly with Greek λείπω in its perfect form."
+  },
+  {
+    "pair_id": "GRC_0036",
+    "arabic_root": "بلسم",
+    "target_lemma": "ὀποβάλσαμον",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "opobalsamon=juice of balsam; balsam compound with Arabic balsam. Strong link."
+  },
+  {
+    "pair_id": "GRC_0037",
+    "arabic_root": "نفت",
+    "target_lemma": "νάφθα",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "نفت=nafṭ (naphtha, petroleum); νάφθα=naphtha. Direct Semitic loan to Greek — strong match"
+  },
+  {
+    "pair_id": "GRC_0038",
+    "arabic_root": "جوغان",
+    "target_lemma": "Γίγωνον",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "combined",
+    "original_reasoning": "Both sides function as proper names, so the strongest link is preserved onomastic identity rather than lexical meaning."
+  },
+  {
+    "pair_id": "GRC_0039",
+    "arabic_root": "العصر",
+    "target_lemma": "λάσαρον",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "ʿaṣr is pressing/squeezing, and one direct result is juice; Greek 'laser, plant juice' matches the extracted-result side clearly."
+  }
+]

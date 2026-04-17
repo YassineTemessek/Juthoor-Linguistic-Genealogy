@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0248",
+    "arabic_root": "حملج",
+    "target_lemma": "αἰχμαλόω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic is to twist tightly; Greek is to take prisoner. Binding and captivity form a clear action-to-result chain."
+  },
+  {
+    "pair_id": "GRC_0249",
+    "arabic_root": "كرف",
+    "target_lemma": "κάρφος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Sniffing/dry vs 'arid stalk, dry twig' - direct dryness match, strong link"
+  },
+  {
+    "pair_id": "GRC_0250",
+    "arabic_root": "حمس",
+    "target_lemma": "αἰχμάς",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic gives zeal, ardor, and bravery; Greek is spear points. Weapon and martial valor form a clear war-domain chain."
+  },
+  {
+    "pair_id": "GRC_0251",
+    "arabic_root": "القرضي",
+    "target_lemma": "λυκόσκορδον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic gloss is a wild tree/plant and Greek is wild leek; the shared botanical-wild domain is a clear semantic chain."
+  },
+  {
+    "pair_id": "GRC_0252",
+    "arabic_root": "دخم",
+    "target_lemma": "διαδέχομαι",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "دفع and a kind of intercourse both preserve exchange or mutual taking, close to receive from another."
+  },
+  {
+    "pair_id": "GRC_0253",
+    "arabic_root": "الكرفي",
+    "target_lemma": "λευκογραφέω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic includes pot-foam whitening on boiling, which gives a real conceptual bridge to Greek paint in white."
+  },
+  {
+    "pair_id": "GRC_0254",
+    "arabic_root": "سقت",
+    "target_lemma": "σχέτε",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "سقت 'without blessing/lacking' stands against the imperative 'have, hold'; this is a clear negation pair."
+  },
+  {
+    "pair_id": "GRC_0255",
+    "arabic_root": "الثنط",
+    "target_lemma": "Θάνατος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic الثنط: splitting/cracking (in a hadith: 'when the earth was spread out, it split'). Greek Θάνατος: Death. Death as the great splitting/tearing — the Arabic root means the very act that cosmologically creates boundaries, death being the ultimate splitting. Phonological match th-n-t vs. th-n-t."
+  }
+]

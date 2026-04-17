@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0704",
+    "arabic_root": "خشنام",
+    "target_lemma": "εὐσχημοσύνη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic good name and Greek gracefulness/elegance can meet in the abstract field of good form and social propriety."
+  },
+  {
+    "pair_id": "GRC_0705",
+    "arabic_root": "القنداو",
+    "target_lemma": "γαλάκτοιν",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic bad nourishment and Greek milk sit on opposite sides of the nourishment concept, so the semantic field is shared though polarity differs."
+  },
+  {
+    "pair_id": "GRC_0706",
+    "arabic_root": "القمعل",
+    "target_lemma": "Λάκμων",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic buds or lumps can conceptually point to protrusion, and a mountain peak preserves a raised protruding landform sense."
+  },
+  {
+    "pair_id": "GRC_0707",
+    "arabic_root": "الصيم",
+    "target_lemma": "καταλυσίμου",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الصيم = الصلب الشديد المجتمع الخلق (hard, strong, compactly built). καταλύσιμος = dissolvable, destructible. These are genuine antonyms on the same axis: what is صيم (solid/unbreakable) is the opposite of καταλύσιμος (breakable). Both concepts presuppose the same structural-integrity framework. Antonymic cognates are a real phenomenon in Semitic-IE contact."
+  },
+  {
+    "pair_id": "GRC_0708",
+    "arabic_root": "شكيت",
+    "target_lemma": "στακτή",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic shakiyya = the remainder, residue. Greek stakte = oil of myrrh, distillate, what-drips-out (from stazo 'drip'). Both encode 'what is left after extraction'. Strong residue/distillate link. Phonetic resemblance shak/stak."
+  },
+  {
+    "pair_id": "GRC_0709",
+    "arabic_root": "القوه",
+    "target_lemma": "λογχίον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Plausible link through striking/throwing: Arabic gloss includes being hit or cast at; Greek is a spear-head."
+  },
+  {
+    "pair_id": "GRC_0710",
+    "arabic_root": "دحو",
+    "target_lemma": "δέχεται",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "دحا can involve spreading and taking the woman, which plausibly meets receive/take."
+  },
+  {
+    "pair_id": "GRC_0711",
+    "arabic_root": "كتح",
+    "target_lemma": "κατάχυσμα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Wind striking with gravel/uncovering vs 'something poured/showered down' - shared pouring-down action"
+  }
+]

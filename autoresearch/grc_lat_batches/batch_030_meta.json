@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0240",
+    "arabic_root": "نءمس",
+    "target_lemma": "νεμεσήσεται",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ناموس=law/divine order; νεμεσήσεται=he will be indignant (divine retribution). Strong semantic link"
+  },
+  {
+    "pair_id": "GRC_0241",
+    "arabic_root": "بعثه",
+    "target_lemma": "ἐπιβοηθέω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "epiboētheō=help/send aid; b3th=send/wake. Strong semantic and phonetic match."
+  },
+  {
+    "pair_id": "GRC_0242",
+    "arabic_root": "فزع",
+    "target_lemma": "φύζα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic faz' = 'terror, panic, fleeing for refuge'; Greek phyza = 'panicked rout'. Clear semantic match of panic/terror-induced flight."
+  },
+  {
+    "pair_id": "GRC_0243",
+    "arabic_root": "اجد",
+    "target_lemma": "αἰγίδα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الجدي=young goat (also constellation Capricorn). αἰγίς=goat-skin (aegis). Both derive from the goat concept. الجدي IS a young goat, and αἰγίς is literally goat-hide. This is a strong masadiq match in the goat/caprine domain."
+  },
+  {
+    "pair_id": "GRC_0244",
+    "arabic_root": "الخطل",
+    "target_lemma": "λεχθείς",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic root includes obscene or disordered speech, and Greek means spoken/said; both meet on the core of uttered speech."
+  },
+  {
+    "pair_id": "GRC_0245",
+    "arabic_root": "سطح",
+    "target_lemma": "στοχάζομαι",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Greek 'aim/shoot at' matches the action side that yields the Arabic slain victim/result."
+  },
+  {
+    "pair_id": "GRC_0246",
+    "arabic_root": "هرقل",
+    "target_lemma": "Ἡρακλέους",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "هرقل=Heraclius (Byzantine emperor); Ἡρακλέους=Heracles. Direct Greek name loan via Roman emperor"
+  },
+  {
+    "pair_id": "GRC_0247",
+    "arabic_root": "دفا",
+    "target_lemma": "δέφω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic warmth/heat can naturally yield softening; Greek 'soften, knead' fits that action-result chain."
+  }
+]

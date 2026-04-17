@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0872",
+    "arabic_root": "الحلقه",
+    "target_lemma": "alcohol",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Ar halqa=ring/circle/remaining liquid in vessel; Lat alcohol=kohl/refined substance (via Arabic al-kuhl); shared Arabic origin — Arabic halqa and kuhl both involve refined circular/pure things, clear connection via Arabic derivation pathway"
+  },
+  {
+    "pair_id": "LAT_0873",
+    "arabic_root": "الضفدع",
+    "target_lemma": "paludifer",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Ar difda'=frog; Lat paludifer=marsh-making; frog is the canonical marsh-dwelling creature — ecological semantic connection"
+  },
+  {
+    "pair_id": "LAT_0874",
+    "arabic_root": "نقره",
+    "target_lemma": "insequor",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "نقر=to strike/peck/pursue; insequor=follow/pursue/attack; both involve striking pursuit"
+  },
+  {
+    "pair_id": "LAT_0875",
+    "arabic_root": "الاراك",
+    "target_lemma": "larix",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "أراك=toothbrush-tree (Salvadora persica); larix=larch tree; both are specific named trees"
+  },
+  {
+    "pair_id": "LAT_0876",
+    "arabic_root": "التهبرس",
+    "target_lemma": "colobathra",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "تهبرس=swaggering strut; colobathra=stilts; elevated swaggering gait connection"
+  },
+  {
+    "pair_id": "LAT_0877",
+    "arabic_root": "بابا",
+    "target_lemma": "bombio",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "بأبأ=to buzz/say baba (صوت); bombio=to buzz — onomatopoeic sound match"
+  },
+  {
+    "pair_id": "LAT_0878",
+    "arabic_root": "الحلكه",
+    "target_lemma": "alcohol",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الحلكة from حلك = intense blackness, dark coloring. Latin/Medieval Latin alcohol derives from Arabic الكُحْل (al-kuhl) = kohl, the black antimony eye cosmetic. The connection is through the blackness domain: حلكة (blackness) relates to كحل (black eye cosmetic) as descriptive quality to the substance itself. Not a direct cognate but a shared Semitic color-substance chain. The calibration example الحلقه→alcohol = 0.60 applies similarly here."
+  },
+  {
+    "pair_id": "LAT_0879",
+    "arabic_root": "نقر",
+    "target_lemma": "anquiro",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic نقر (root n-q-r) has rich polysemy: (1) to peck, tap, strike, (2) نَقَّرَ = to investigate, examine, scrutinize (Form II), (3) نقر الرجل = to examine/criticize a person, (4) to dig/hollow out. Latin anquiro (an- + quaero) = to investigate judicially, inquire into, examine carefully. The semantic match on meaning (2-3) is strong: both describe careful, detailed examination/scrutiny of someone or something. The phonetic chain n-q-r → -nquir- shows consonant preservation (n-q-r → n-qu-r). The Latin prefix an- could mask the root. This is a genuine find Sonnet underscored."
+  }
+]

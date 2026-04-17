@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0856",
+    "finding": "no_path",
+    "semantic_journey": "Arabic istaabl = stable for animals (borrowed from Latin stabulum). Latin stabilito = established/made-firm. Same as LAT_0855. Arabic is the loanword recipient of Latin stabulum. Circular comparison.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic istaabl borrowed FROM Latin stabulum; comparing back to Latin stabilito is circular."
+  },
+  {
+    "pair_id": "LAT_0857",
+    "finding": "path_found",
+    "semantic_journey": "Arabic jarra = earthenware jar (jirar = jars). Latin jarra = liquid measure based on jar. This is a documented Arabic -> Spanish/medieval Latin loanword. Arabic encodes the vessel; Latin specializes to the liquid-measure. 1-step material-culture: vessel -> liquid-measure-based-on-vessel.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic jarra (earthenware jar) and Latin jarra (liquid measure) are a documented Arabic -> Latin loanword in the vessel domain."
+  },
+  {
+    "pair_id": "LAT_0858",
+    "finding": "path_found",
+    "semantic_journey": "Arabic marara = bitterness (marra = bitter; marar = bitter taste). Latin amarior = more bitter (comparative of amarus). Core: bitterness as taste quality. 1-step direct preservation: bitter-taste preserved across languages.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic bitter-taste and Latin more-bitter directly share the bitterness quality across languages."
+  },
+  {
+    "pair_id": "LAT_0859",
+    "finding": "no_path",
+    "semantic_journey": "Arabic nata = to hang/suspend. Latin anathema = votive offering hung up (from GREEK anathema = thing hung up, ana+tithenai). Latin anathema is a Greek loanword. Arabic and Greek both describe hanging but Latin took the Greek compound. Shared loanword.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Latin anathema comes from Greek anathema, not from Arabic nata; Arabic hanging and Greek hanging both exist but Latin borrowed from Greek specifically."
+  },
+  {
+    "pair_id": "LAT_0860",
+    "finding": "no_path",
+    "semantic_journey": "Arabic satik = unclear/uncertain meaning (see GRC_0800). Latin stacta = oil of myrrh (from Greek stakte = dripping oil). Latin stacta is a Greek loanword. Arabic satik has unclear meaning. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Latin stacta is a Greek loanword; Arabic satik has unclear meaning; no valid path established."
+  },
+  {
+    "pair_id": "LAT_0861",
+    "finding": "no_path",
+    "semantic_journey": "Arabic yinna = a proper name. Latin hyaena = hyena (from Greek hyaina = hyena, from hys = pig/swine). Arabic proper name and a Latin animal name from Greek have no connection. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic yinna is a proper name; Latin hyaena derives from Greek; proper name exclusion and different etymological sources apply."
+  },
+  {
+    "pair_id": "LAT_0862",
+    "finding": "path_found",
+    "semantic_journey": "Arabic silq = chard/beet plant (Beta vulgaris); also to boil vegetables. Latin siliqua = pod, husk, legume pod. Both in the plant/vegetable domain. 1-step material-culture: specific-vegetable-plant -> plant-container-pod in same agricultural domain.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic chard/beet plant and Latin pod/husk share the edible-plant/vegetable agricultural domain."
+  },
+  {
+    "pair_id": "LAT_0863",
+    "finding": "path_found",
+    "semantic_journey": "Arabic nafsh = to tease apart fibers with fingers (fiber-processing). Latin lanificus = working in wool, spinning/weaving (lana=wool + facere=to make). Core: processing fiber/wool. 1-step direct preservation: fiber-teasing-action -> wool-working-craft.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fiber-teasing (manual separation) and Latin wool-working (general fiber craft) share the fiber-processing domain."
+  }
+]

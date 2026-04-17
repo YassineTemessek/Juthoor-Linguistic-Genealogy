@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0000",
+    "finding": "no_path",
+    "semantic_journey": "Arabic is the place name Samsat/Samosata. Greek is the identical toponym. Both name the same ancient city. This is proper place-name identity not a lexical root cognate. Arabic form derives from Greek or shared Aramaic substrate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Same place name (Samosata/Samsat) in Arabic and Greek - toponymic identity, not a root cognate."
+  },
+  {
+    "pair_id": "GRC_0001",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek forms are both loanwords from Latin stabulum (from stare = to stand). Neither is a native Semitic root meaning stable. Shared Latin loanword transmitted to both Arabic and Greek from Roman culture.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Both Arabic and Greek forms are loanwords from Latin stabulum - shared Latin loanword, not Arabic-origin."
+  },
+  {
+    "pair_id": "GRC_0002",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shamshir and Greek form both borrow from Persian shamshir (curved sword). Arabic borrowed from Persian; Greek borrowed from Persian or via Arabic. Shared Persian loanword not a native Arabic root cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Both Arabic and Greek forms come from Persian shamshir - shared Persian loanword, not native Arabic."
+  },
+  {
+    "pair_id": "GRC_0003",
+    "finding": "path_found",
+    "semantic_journey": "Arabic sesame (Sesamum indicum). Greek sesamon. The Semitic root s-s-m names this Near Eastern domesticated oil crop, attested in Akkadian as shamashshammu. Greek borrowed the word directly from Semitic via agricultural trade - the crop and its name traveled together from ancient Near East to the Mediterranean.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Semitic sesame term (s-s-m) entered Greek via ancient crop trade - textbook material culture Semitic-to-Greek loanword."
+  },
+  {
+    "pair_id": "GRC_0004",
+    "finding": "no_path",
+    "semantic_journey": "Arabic carrot term is explicitly acknowledged as borrowed FROM Greek. Direction of borrowing is Greek-to-Arabic. Presenting this as Arabic-to-Greek inverts the historical flow. The Arabic term is a Greek loanword.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic carrot term borrowed FROM Greek - direction of borrowing inverted in the original scoring."
+  },
+  {
+    "pair_id": "GRC_0005",
+    "finding": "no_path",
+    "semantic_journey": "Arabic lute term is stated to be borrowed from Greek/Iranian. Arabic received the term from Greek. Direction of transmission runs toward Arabic. Not an Arabic-origin cognate for Greek.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic lute term borrowed from Greek/Iranian - transmission runs Greek-to-Arabic, not the reverse."
+  },
+  {
+    "pair_id": "GRC_0006",
+    "finding": "no_path",
+    "semantic_journey": "Greek word derives from native Greek verb (to chew/gnaw), named because islanders chewed this resin. Arabic borrowed the term FROM Greek. The Greek word is native in origin; Arabic received it as a loanword.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Greek mastic word from native Greek verb; Arabic borrowed FROM it - Greek-to-Arabic direction."
+  },
+  {
+    "pair_id": "GRC_0007",
+    "finding": "no_path",
+    "semantic_journey": "Arabic form is a morphological variant of the same Greek loanword for carrot (same as GRC_0004). Arabic borrowed from Greek, not the reverse. Duplicate issue.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Variant of GRC_0004 - Arabic carrot term borrowed from Greek with inverted borrowing direction."
+  }
+]

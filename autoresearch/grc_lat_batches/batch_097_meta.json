@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0776",
+    "arabic_root": "الضرط",
+    "target_lemma": "λοίδορα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic is about farting, an offensive bodily emission, while Greek means insults, an offensive verbal emission; bodily offense and verbal offense form a plausible drift chain."
+  },
+  {
+    "pair_id": "GRC_0777",
+    "arabic_root": "الفوغ",
+    "target_lemma": "πολυφάγος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "If Arabic أفوغ points to a mouth-related defect or openness, that plausibly meets Greek excessive eating through the mouth/eating core."
+  },
+  {
+    "pair_id": "GRC_0778",
+    "arabic_root": "الشمظ",
+    "target_lemma": "ἱλάσματος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الشمظ=يشمظ الإنسان بكلام / تحريك دون العنف (speaking with gentle words / movement without violence). ἵλασμα=propitiation, atonement. Gentle speech aimed at soothing IS a form of propitiation. The appeasing-through-mild-words concept links them."
+  },
+  {
+    "pair_id": "GRC_0779",
+    "arabic_root": "دنع",
+    "target_lemma": "-ίδιον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'worthless fragment/cast-off' and Greek diminutive both preserve smallness/reduction."
+  },
+  {
+    "pair_id": "GRC_0780",
+    "arabic_root": "ردس",
+    "target_lemma": "ῥίζαις",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Stone dropped to gauge depth points toward bottom or base, plausibly near root."
+  },
+  {
+    "pair_id": "GRC_0781",
+    "arabic_root": "الاتو",
+    "target_lemma": "Εἱλώτων",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الإتاوة=الخراج (tribute, tax imposed). Εἵλωτες=Helots (Spartan serfs who paid forced dues). Both relate to forced extraction of wealth/produce from subordinates. The tribute/subjection concept connects them, though one is the payment and the other the people."
+  },
+  {
+    "pair_id": "GRC_0782",
+    "arabic_root": "سطاها",
+    "target_lemma": "στήθεα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Greek 'breasts/chest' shares the bodily-erotic domain with the Arabic intercourse sense."
+  },
+  {
+    "pair_id": "GRC_0783",
+    "arabic_root": "القزو",
+    "target_lemma": "λαικάζω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic play with it or poke at the ground preserves a manipulative or eroticized play notion that can plausibly drift toward the Greek sexual act."
+  }
+]

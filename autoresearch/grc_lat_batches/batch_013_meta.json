@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0104",
+    "arabic_root": "حنك",
+    "target_lemma": "ἀγχίνοος",
+    "lang": "grc",
+    "original_score": 0.76,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'استحكم' points to firmness and seasoned mastery; Greek 'shrewd, ready of wit' is a clear abstract development of established mental competence."
+  },
+  {
+    "pair_id": "GRC_0105",
+    "arabic_root": "الحوز",
+    "target_lemma": "λογχιάζω",
+    "lang": "grc",
+    "original_score": 0.76,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic includes matters that 'cut into hearts' and the wider root field of taking in possession; Greek means to transfix with a spear. The shared core is piercing/penetrating impact."
+  },
+  {
+    "pair_id": "GRC_0106",
+    "arabic_root": "نءمس",
+    "target_lemma": "Νέμεσι",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "نءمس/ناموس=law/custom/divine law; Νέμεσις=Nemesis, goddess of retribution/divine law. Strong semantic match via 'law/just order'"
+  },
+  {
+    "pair_id": "GRC_0107",
+    "arabic_root": "نيسان",
+    "target_lemma": "Νῖσαν",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "نيسان=Nisan (7th Roman month/Syriac name); Νῖσᾰ=place. Nisan is Semitic month name, loan connection"
+  },
+  {
+    "pair_id": "GRC_0108",
+    "arabic_root": "العقل",
+    "target_lemma": "καλκουλάτωρ",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'intelligent, reasoning' aligns well with Greek 'accountant' through the core of calculation and mental ordering."
+  },
+  {
+    "pair_id": "GRC_0109",
+    "arabic_root": "ملكه",
+    "target_lemma": "Μάλχος",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "ملكه=he owned/ruled; Μάλχος=name from Semitic mlk=king. Strong Semitic cognate via loan"
+  },
+  {
+    "pair_id": "GRC_0110",
+    "arabic_root": "سفل",
+    "target_lemma": "σφάλλω",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "being low/downward aligns well with 'topple, overthrow' through descent/fall."
+  },
+  {
+    "pair_id": "GRC_0111",
+    "arabic_root": "البشر",
+    "target_lemma": "λάρβασον",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "combined",
+    "original_reasoning": "Greek antimony or kohl aligns well with beautification, which fits the Arabic sense of being fairer and more beautiful."
+  }
+]

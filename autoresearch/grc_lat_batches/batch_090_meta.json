@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0720",
+    "arabic_root": "اندلس",
+    "target_lemma": "Οὐάνδαλος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "al-Andalus was named after Vandals who conquered Iberia; clear historical connection"
+  },
+  {
+    "pair_id": "GRC_0721",
+    "arabic_root": "الخشوع",
+    "target_lemma": "λέχεσσι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "خشوع centers on lowering, sinking, or bodily submissive settling; lying down in a bed shares that lowered-rest posture."
+  },
+  {
+    "pair_id": "GRC_0722",
+    "arabic_root": "الكنش",
+    "target_lemma": "Λευκανός",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic refers to roots from which branches spread; Greek ethnonym can align through stock, descent, and peoplehood."
+  },
+  {
+    "pair_id": "GRC_0723",
+    "arabic_root": "سيخ",
+    "target_lemma": "ἐσχήκει",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Greek means had or possessed; Arabic points to firmness, embeddedness, and settled structure, giving a plausible deep chain of holding and being fixed."
+  },
+  {
+    "pair_id": "GRC_0724",
+    "arabic_root": "دعلق",
+    "target_lemma": "δεδήλωκας",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Persistent inquiry into a thing can plausibly lead to making it clear or showing it."
+  },
+  {
+    "pair_id": "GRC_0725",
+    "arabic_root": "الصميان",
+    "target_lemma": "ληψομένη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الصميان: انصبّ عليه / الأمر حلّ به (poured down on / the matter befell him). λαμβάνω future=about to take/receive/seize. Something befalling someone (حلّ به) parallels being seized/taken by something. The passive-reception concept connects them."
+  },
+  {
+    "pair_id": "GRC_0726",
+    "arabic_root": "سرطه",
+    "target_lemma": "ἀπεστερήθη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'take and swallow' can align with the result side 'be deprived/robbed of' in Greek."
+  },
+  {
+    "pair_id": "GRC_0727",
+    "arabic_root": "الشناط",
+    "target_lemma": "ἠλείψαντο",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الشناط=اللحمان المنضجة / الشواء (well-cooked/roasted meats). ἀλείφω=to anoint, rub with oil/fat. Roasting meat involves fat/grease; anointing involves oil/fat. The shared medium (fat/oil on surface) makes this a plausible material-domain bridge."
+  }
+]

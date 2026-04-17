@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0048",
+    "finding": "path_found",
+    "semantic_journey": "Arabic hatha = to scatter/strew; al-hatha = scattered soil/dust/strewn earth-matter. Greek khthoni = to/on the earth/ground (from khthon = earth, soil). Both encode earth/soil/ground. Arabic focuses on the particulate earth-matter; Greek on the earth as surface. Shared earth-matter semantic field. Plausible one-step alignment: scattered earth-matter -> the earth/ground.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic scattered dust/soil and Greek earth/ground share the earth-matter semantic field - plausible connection."
+  },
+  {
+    "pair_id": "GRC_0049",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khasam = opponent in dispute, adversary in legal contest. Greek I will fight (physical combat future tense). Legal adversary and physical fighter overlap only at the most general level of conflict. A legal adversary (khasam) is not the same as a fighter. Different types of conflict separated by the legal-vs-physical distinction.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic legal adversary/dispute and Greek physical fighting are different types of conflict - not a real match."
+  },
+  {
+    "pair_id": "GRC_0050",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dirham = silver coin. Greek drachmai = drachma. The Semitic dirham is acknowledged to derive from Greek drachme (via Aramaic). Arabic borrowed FROM Greek. Direction is Greek-to-Arabic via Aramaic. Not an Arabic-origin cognate for Greek.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic dirham borrowed FROM Greek drachme via Aramaic - Greek-to-Arabic direction, not the reverse."
+  },
+  {
+    "pair_id": "GRC_0051",
+    "finding": "no_path",
+    "semantic_journey": "Arabic karmel = Mount Carmel (a mountain in the Levant). Greek Karmalos = Mount Carmel. Both name the same mountain. The name Carmel is an ancient Semitic toponym (k-r-m-l = garden land in Hebrew). Proper name identity - a mountain toponym, not a lexical root cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both name Mount Carmel - a Semitic mountain toponym preserved in Arabic and Greek, not a root cognate."
+  },
+  {
+    "pair_id": "GRC_0052",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-furat = the Euphrates River. Greek Euphrates = the Euphrates River. Both name the same ancient river. The river name derives from Old Persian Ufratush or Elamite Pu-ra-tu, not from a Semitic root. Arabic and Greek both independently adapted the ancient river name from Persian/Elamite substrate. Shared proper toponym.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both name the Euphrates River - ancient toponym from Persian/Elamite substrate, preserved in Arabic and Greek independently."
+  },
+  {
+    "pair_id": "GRC_0053",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-qarmad = fired bricks, baked ceramic (khazaf matbukh = cooked pottery), also plaster - materials made by heating clay. Greek keramidion = small ceramic tile (diminutive of keramion, from kerameus = potter). Both refer to fired clay/ceramic construction materials. The Semitic q-r-m-d for fired ceramic may parallel Greek keram-. The semantic match is strong. Classifying as plausible link due to uncertainty about borrowing direction.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fired bricks/ceramic and Greek ceramic tile share fired-clay material culture - plausible link, borrowing direction uncertain."
+  },
+  {
+    "pair_id": "GRC_0054",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-ladhan = labdanum (the resinous gum of Cistus plants, used in perfumery). Greek ledanon = labdanum. Both name the same aromatic resin from Cistus shrubs, a luxury trade good from the eastern Mediterranean. The Semitic term for labdanum (l-d-n) entered Greek as ledanon. Confirmed material culture transmission of a named aromatic substance.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Semitic labdanum term (l-d-n) entered Greek as ledanon - confirmed aromatic trade commodity loanword."
+  },
+  {
+    "pair_id": "GRC_0055",
+    "finding": "path_found",
+    "semantic_journey": "Arabic salla = to draw/unsheathe (a sword), a sharp pulling motion to extract a blade. Greek psallo = to pluck (a string), to twitch/pull with the fingers. Both encode a sharp drawing/pulling motion. Arabic specialized it to sword-drawing; Greek specialized it to string-plucking. The shared kinesthetic core (sharp pulling motion) is a genuine semantic connection. One step: sharp pull/draw -> pluck a string.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sharp drawing/unsheathing and Greek string-plucking share the kinesthetic core of sharp pulling motion."
+  }
+]

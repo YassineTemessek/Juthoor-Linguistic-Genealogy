@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0840",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-zaghbar = fine fluffy hair/fiber; also an aromatic herb. Greek zingiberis = ginger (the spice). Ginger derives from Sanskrit-Tamil srngaveram via Persian, not from an Arabic fine-herb. Different etymological sources despite phonetic similarity.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Ginger derives from Sanskrit-Tamil via Persian, not from Arabic fine-fibrous-herb; different etymological sources despite phonetic resemblance."
+  },
+  {
+    "pair_id": "GRC_0841",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-salakawt = a type of bird. Greek syllektos = gathered together, collected. A bird name and a collective adjective share no semantic path. Species-name -> flock-behavior -> gathered requires 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic bird name and Greek gathered/collected adjective share no valid semantic path."
+  },
+  {
+    "pair_id": "GRC_0842",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-samarud = tall person; brownish/tawny complexion (samra). Greek smaragdos = emerald (bright green gem). Tawny/brown and bright green are entirely different colors. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic tawny/brown-complexion and Greek bright-green-emerald are in different color domains with no semantic path."
+  },
+  {
+    "pair_id": "GRC_0843",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-sharuf = outer sheath of a palm frond (top covering). Greek hypsorophos = high-roofed, high-ceilinged. Core: elevated covering structure. 1-step material-culture: elevated-natural-covering -> elevated-built-roof.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic palm-frond-outer-sheath (elevated natural covering) and Greek high-roofed share the concept of an elevated covering."
+  },
+  {
+    "pair_id": "GRC_0844",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-tafra = a leap upward; also cream that rises. Greek taphros = ditch, trench, moat. Leaping upward and a downward trench are spatial opposites with no valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic leaping-upward and Greek ditch/trench are spatial opposites (up vs hollow-down); no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0845",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-gharqad = large thorny shrub (Lycium/boxthorn). Greek agriokardon = wild acacia/gum-arabic tree (large thorny shrub). Both are large thorny shrubs in dry arid landscapes. 1-step material-culture: same-ecological-category of large thorny arid shrubs.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic Lycium/boxthorn and Greek wild-acacia are the same ecological category of large thorny shrubs in arid landscapes."
+  },
+  {
+    "pair_id": "GRC_0846",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-faniq = prized male breeding camel. Greek phoinikinos = of the date palm/phoenix tree. Both are the most prized biological resources of the Arabian environment (camel for livestock, date palm for food). 2-step material-culture through shared Arabian resource domain.",
+    "journey_type": "material_culture",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic prized-breeding-camel and Greek date-palm are both peak biological resources of the Arabian environment; low confidence as the connection is through shared domain not direct derivation."
+  },
+  {
+    "pair_id": "GRC_0847",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-qarnas = horn-like protrusion on a mountain or cliff (from qarn = horn/protrusion). Greek koronopous = buck's horn plantain (named for horn-shaped leaf lobes, from korone+pous). Core: horn/protrusion shape. 1-step direct preservation: horn-shaped-protrusion -> horn-shaped-leaf.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic mountain-horn-protrusion and Greek horn-shaped-plantain share the horn/protrusion shape as the defining concept."
+  }
+]

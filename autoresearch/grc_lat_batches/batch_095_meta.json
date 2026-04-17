@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0760",
+    "arabic_root": "دكك",
+    "target_lemma": "ἀδικέκει",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic bury/crush/level can plausibly drift into causing damage or wrong; the link is moderate, not direct."
+  },
+  {
+    "pair_id": "GRC_0761",
+    "arabic_root": "دحو",
+    "target_lemma": "ἄνδιχα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "دحا as spread/open out plausibly reaches apartness or being in two sides."
+  },
+  {
+    "pair_id": "GRC_0762",
+    "arabic_root": "العنقاش",
+    "target_lemma": "κλινικός",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الهزال can align with bedridden clinical weakness; this is a plausible drift from emaciation to the bed-bound patient context."
+  },
+  {
+    "pair_id": "GRC_0763",
+    "arabic_root": "القنذع",
+    "target_lemma": "ὀλέκοντο",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'calamities' can meet Greek 'were being destroyed/perishing' through the ruin outcome."
+  },
+  {
+    "pair_id": "GRC_0764",
+    "arabic_root": "شخس",
+    "target_lemma": "αἴσχεσι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gloss centers on difference, irregularity, or things jutting apart; Greek αἶσχος is shame/ugliness, a plausible abstract result of visible distortion."
+  },
+  {
+    "pair_id": "GRC_0765",
+    "arabic_root": "فشا",
+    "target_lemma": "παραφυάς",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic fashā = 'spread, diffuse (of disease)'; Greek = 'side-growth, shoot'. Plausible conceptual echo via spreading/growing out."
+  },
+  {
+    "pair_id": "GRC_0766",
+    "arabic_root": "شنق",
+    "target_lemma": "συνοικίζω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "The cord sense gives a plausible chain of binding or fastening that can abstract toward making people live together."
+  },
+  {
+    "pair_id": "GRC_0767",
+    "arabic_root": "الكراث",
+    "target_lemma": "ὀχλοκρατία",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Plausible social-harm chain: Arabic has a calamitous or harmful matter; Greek is mob rule."
+  }
+]

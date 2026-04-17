@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0336",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الطني = mud/clay (variant of طين = clay, mud, silt). This is a different Arabic root from الطنء (GRC_0335). Greek τέναγος = shallow water, shoal, ford (often muddy/silty shallow areas). The semantic journey: mud/clay/silt -> the muddy shallow water environment where silt accumulates. A 1-step material-culture connection: river mud -> muddy shallows.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic mud/silt and Greek shallow muddy water are connected — silt is what defines a shoal/shallow ford."
+  },
+  {
+    "pair_id": "GRC_0337",
+    "finding": "path_found",
+    "semantic_journey": "Arabic العرد = hard, stiff, rigid, difficult (of character or material). Greek ἐργώδης = laborious, troublesome, difficult to accomplish. The semantic journey: hard/stiff/rigid (material quality) -> laborious/difficult (what hard things produce when worked). Both encode HARDNESS/DIFFICULTY: Arabic as a physical quality, Greek as the experiential result of encountering something hard. A clean 1-step quality-to-experience mapping.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic hard/rigid (العرد) and Greek laborious/difficult (ἐργώδης) share the core of hardness — quality and its experiential consequence."
+  },
+  {
+    "pair_id": "GRC_0338",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العرزم = gathering, assembling (people or things together). Greek ἁρμόζω = to fit together, join, fasten (mechanical joining/fitting). The original reasoning maps gathering to assembly. But Arabic gathering is people coming together socially; Greek fitting is mechanical precision-joining of parts. These are different operations: social assembly vs mechanical fitting. The semantic path social gathering -> mechanical fitting requires intermediate steps that are not natural.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic social gathering and Greek mechanical fitting/joining are different operations — no direct 1-2 step path between them."
+  },
+  {
+    "pair_id": "GRC_0339",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العلق = bloodsucker/leech; also to cling, hang (علق = to hang/cling); also a clot of blood. Greek λάκκος = a pit, reservoir, cistern (for water). The original reasoning claims both relate to waterways. But Arabic العلق is a leech or blood-clot, not a water body. A leech lives in water, but that is not the word's meaning. λάκκος is a constructed water container. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic leech/blood-clot and Greek cistern/pit share only the incidental fact that leeches live in water — not a semantic path."
+  },
+  {
+    "pair_id": "GRC_0340",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حكا/حكى = to narrate, recount, tell a story, imitate/mimic. Greek καυχάομαι = to boast, brag, speak proudly of oneself. Both involve SPEECH ABOUT EVENTS OR DEEDS: Arabic = recounting/narrating (third-person storytelling); Greek = boasting/proclaiming one's own deeds (first-person). The step: narrating deeds -> boasting of deeds. A 1-step specialization where the neutral storytelling becomes self-promotional speech.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic narrating/recounting and Greek boasting/proclaiming share the core of verbal report of deeds — narration specializing into self-promotion."
+  },
+  {
+    "pair_id": "GRC_0341",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حكي = same root as GRC_0340, to narrate, tell, imitate. Greek καυχάομαι = to boast. Same analysis applies. Duplicate entry of the same root variant. Both encode verbal report of deeds moving toward boastful speech.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Same as GRC_0340: Arabic narrating/imitating and Greek boasting share the verbal-report-of-deeds core."
+  },
+  {
+    "pair_id": "GRC_0342",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خبن = to fold cloth, tuck up, gather fabric (of garments); also refers to cloth processing actions. Greek κνάφος = a teasel or fuller's carding instrument used for processing cloth fiber. The semantic journey: folding/gathering cloth -> the instrument used in cloth-processing. Both belong to the TEXTILE CRAFT domain: Arabic = action performed on cloth, Greek = instrument for processing cloth fiber. A 1-step action-to-tool relationship within the same craft domain.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic cloth-folding/processing and Greek cloth-carding instrument both belong to textile craft — action and tool in the same domain."
+  },
+  {
+    "pair_id": "GRC_0343",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دلع = tongue sticking out, protruding tongue; also to be spoiled/pampered. Greek Δέλτα = the letter delta (Δ), fourth letter of Greek alphabet. The original reasoning claims the letter shape resembles a triangular tongue. But Δέλτα is a proper name (letter name) derived from the Semitic letter DALET (door). The shape of the letter comes from DALET (door), not from a tongue. Even if one accepted the shape argument, letter names are proper names of a different category. This is a false etymology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek Δέλτα derives from Semitic DALET (door), not from tongue-shape — this is a false etymology connecting the wrong Arabic concept."
+  }
+]

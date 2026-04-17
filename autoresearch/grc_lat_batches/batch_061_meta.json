@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0488",
+    "arabic_root": "التفاح",
+    "target_lemma": "Λωτοφάγος",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "Arabic apple and Greek lotus-eater meet in a shared fruit and edible-plant domain, though the match is still indirect."
+  },
+  {
+    "pair_id": "GRC_0489",
+    "arabic_root": "الخيعره",
+    "target_lemma": "λέχριος",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic denotes lightness and flightiness; Greek plausibly carries a loose/wanton or unstable character nuance. The chain through frivolous instability is workable."
+  },
+  {
+    "pair_id": "GRC_0490",
+    "arabic_root": "الفنا",
+    "target_lemma": "πολυφωνία",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'multitude, group' and Greek 'variety of tones' meet in the shared notion of multiplicity."
+  },
+  {
+    "pair_id": "GRC_0491",
+    "arabic_root": "الثقب",
+    "target_lemma": "ὁπλοθήκη",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "Piercing leads naturally to the tool or place for pierced gear and weapon storage; action to container is plausible."
+  },
+  {
+    "pair_id": "GRC_0492",
+    "arabic_root": "حوذ",
+    "target_lemma": "χυδαῖος",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "Arabic rapid driving and Greek copious pouring both preserve forceful outward movement or discharge; concrete motion survives with drift."
+  },
+  {
+    "pair_id": "GRC_0493",
+    "arabic_root": "رجا",
+    "target_lemma": "εἴργω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic raja = defer, postpone, hold back, set aside (the Murji'a sect = 'those who defer'). Greek eirgo = close off, enclose, hold back, restrain. Both encode the 'holding back/deferral' core directly. This is exactly the calibration anchor pattern (ara-defer ↔ grc-hold-back). Strong direct link."
+  },
+  {
+    "pair_id": "GRC_0494",
+    "arabic_root": "رشح",
+    "target_lemma": "προσέρχομαι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "The prepared or nominated person comes forward; this gives a plausible bridge to come or go to."
+  },
+  {
+    "pair_id": "GRC_0495",
+    "arabic_root": "الثعل",
+    "target_lemma": "τελέθω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "The Arabic gloss is an extra teat above the udder; Greek τελέθω expresses coming forth or growing, giving a plausible growth-based chain."
+  }
+]

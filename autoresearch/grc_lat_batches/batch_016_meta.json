@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0128",
+    "arabic_root": "رصخ",
+    "target_lemma": "ἀραρίσκω",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "رَصَخَ means became firm or fixed, and ἀραρίσκω means join or fasten; this is a clear concrete chain."
+  },
+  {
+    "pair_id": "GRC_0129",
+    "arabic_root": "الازر",
+    "target_lemma": "Λάζαρος",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss explicitly contains a personal name, and Lazarus is a preserved Semitic name-form; the name chain is clear."
+  },
+  {
+    "pair_id": "GRC_0130",
+    "arabic_root": "رسف",
+    "target_lemma": "περισφύριον",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "رسف is binding or shackling; an anklet is an ankle-binding ornament, so the concrete fastening sense aligns."
+  },
+  {
+    "pair_id": "GRC_0131",
+    "arabic_root": "الطسق",
+    "target_lemma": "καλαθίσκος",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "A mikyal is a measuring vessel, and καλαθίσκος is a small basket/container; this is a clear vessel/tool match by function."
+  },
+  {
+    "pair_id": "GRC_0132",
+    "arabic_root": "ذاقه",
+    "target_lemma": "δέχεται",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic taking or handling the spears matches Greek receive at the action level."
+  },
+  {
+    "pair_id": "GRC_0133",
+    "arabic_root": "الفن",
+    "target_lemma": "πολυφωνία",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "أخذ في فنون من القول and Greek 'variety of tones' share a clear core of diversified expression."
+  },
+  {
+    "pair_id": "GRC_0134",
+    "arabic_root": "ساكاه",
+    "target_lemma": "ἐσχήκει",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "To press or constrain someone closely matches the Greek holding-possession sense at the conceptual core."
+  },
+  {
+    "pair_id": "GRC_0135",
+    "arabic_root": "رفي",
+    "target_lemma": "ἐρέφω",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic 'patch the garment' is a clear covering action and aligns well with Greek 'cover with a roof'."
+  }
+]

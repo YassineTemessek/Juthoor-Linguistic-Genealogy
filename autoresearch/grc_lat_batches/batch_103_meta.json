@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0824",
+    "arabic_root": "هدن",
+    "target_lemma": "ἁδινόν",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "هدن=calm/quiet; ἁδινόν=thick/deep/plentiful. Possible semantic link via stillness"
+  },
+  {
+    "pair_id": "GRC_0825",
+    "arabic_root": "تخر",
+    "target_lemma": "Τόχαρος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Tocharian; takhar place name. Historically Tocharoi=Central Asian people; plausible Arabic borrowing."
+  },
+  {
+    "pair_id": "GRC_0826",
+    "arabic_root": "كبته",
+    "target_lemma": "ἐκ βαθέων",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Being filled with grief/suppressed vs 'from the depths of the heart'"
+  },
+  {
+    "pair_id": "GRC_0827",
+    "arabic_root": "كبت",
+    "target_lemma": "ἐκ βαθέων",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Suppression/being filled with grief vs 'from the depths of one's heart' - shared emotional depth"
+  },
+  {
+    "pair_id": "GRC_0828",
+    "arabic_root": "بسل",
+    "target_lemma": "Βασίλειος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic basala = brave/fierce/courageous warrior (basil = bold), also 'forbidden/lawful'; Greek Basileios = royal, kingly (from basileus 'king'). The Arabic 'brave warrior/leader' and Greek 'kingly/ruler' share the conceptual field of bold leadership, a real semantic chain though not a direct gloss match."
+  },
+  {
+    "pair_id": "GRC_0829",
+    "arabic_root": "لتاه",
+    "target_lemma": "Εἰλείθυια",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Woman giving birth vs Eileithyia (goddess of childbirth) - semantic match via childbirth"
+  },
+  {
+    "pair_id": "GRC_0830",
+    "arabic_root": "البرخاش",
+    "target_lemma": "βραχέσι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic البرخاش: uproar, confusion, clamor. Greek βραχέσι: dative plural of βραχύς (short/brief). The Arabic mafahim of 'chaotic noise' vs. Greek grammatical form — phonological match br-kh-sh but semantic mismatch. However βραχύς also means 'quick/brief' which can link to the sudden outburst quality."
+  },
+  {
+    "pair_id": "GRC_0831",
+    "arabic_root": "البلند",
+    "target_lemma": "Βλάνδα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic البلند: root of henna plant. Greek Βλάνδα: city in Basilicata, Italy. The toponym Blanda may derive from a Mediterranean plant name (henna-like coastal plant). Consonant match b-l-n-d. Plausible botanical-toponym link."
+  }
+]

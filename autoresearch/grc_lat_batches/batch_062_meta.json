@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0496",
+    "arabic_root": "سيح",
+    "target_lemma": "σύκχος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Greek denotes a kind of shoe or sock, while Arabic includes a kind of cloth; both sit in the concrete textile-wear domain."
+  },
+  {
+    "pair_id": "GRC_0497",
+    "arabic_root": "سجن",
+    "target_lemma": "συγγένεια",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic imprisonment is binding or enclosure, and kinship preserves the idea of being bound together."
+  },
+  {
+    "pair_id": "GRC_0498",
+    "arabic_root": "ربط",
+    "target_lemma": "βάρβιτον",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "A stringed instrument depends on stretched tied strings, giving a plausible concrete link."
+  },
+  {
+    "pair_id": "GRC_0499",
+    "arabic_root": "ذفط",
+    "target_lemma": "δέφω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic mating involves pressing and working the body; Greek is 'soften, knead with the hands'. Shared concrete bodily manipulation gives a plausible chain."
+  },
+  {
+    "pair_id": "GRC_0500",
+    "arabic_root": "حاطه",
+    "target_lemma": "ἰχθυώδης",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "A food pen or built enclosure conceptually matches containment and fullness."
+  },
+  {
+    "pair_id": "GRC_0501",
+    "arabic_root": "الصخ",
+    "target_lemma": "καλέεσκον",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic loud cry and Greek calling both center on emitting a strong voice."
+  },
+  {
+    "pair_id": "GRC_0502",
+    "arabic_root": "بست",
+    "target_lemma": "ἀπεβήσετο",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic bast (b-s-t) = a kind of walking/travel (al-bast min al-sayr), and also Bust city in Khurasan; Greek apebeseto = he stepped off / went away (aorist of apobaino, 'to step away'). Genuine overlap on the concept of walking/stepping/going away."
+  },
+  {
+    "pair_id": "GRC_0503",
+    "arabic_root": "البثنه",
+    "target_lemma": "πολυβενθέος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "البثنة=الرملة الليّنة (soft sandy ground). πολυβενθής=deep-bottomed, of great depth. Soft sand suggests deep terrain (you sink into it), and πολυβενθής describes deep ground/seabed. Both describe ground with depth quality. The terrain-depth concept is shared."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0344",
+    "arabic_root": "حوط",
+    "target_lemma": "εἴχετε",
+    "lang": "grc",
+    "original_score": 0.64,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic guarding/enclosing a field or flock overlaps well with Greek 'you had/held'; both preserve a possession-containment core."
+  },
+  {
+    "pair_id": "GRC_0345",
+    "arabic_root": "جيث",
+    "target_lemma": "εὐμεγέθης",
+    "lang": "grc",
+    "original_score": 0.64,
+    "original_method": "combined",
+    "original_reasoning": "Arabic passing heavily carries a clear bulk or weight notion, which aligns well with Greek large in size."
+  },
+  {
+    "pair_id": "GRC_0346",
+    "arabic_root": "خزق",
+    "target_lemma": "σχίζα",
+    "lang": "grc",
+    "original_score": 0.63,
+    "original_method": "combined",
+    "original_reasoning": "خزق denotes piercing or splitting with an implement, and σχίζα is a cut-off piece; the Greek noun can be the result of the Arabic action."
+  },
+  {
+    "pair_id": "GRC_0347",
+    "arabic_root": "السني",
+    "target_lemma": "ἀγαλλιῴησαν",
+    "lang": "grc",
+    "original_score": 0.63,
+    "original_method": "combined",
+    "original_reasoning": "To approve, admire, or find good can readily drift into rejoicing or exultation."
+  },
+  {
+    "pair_id": "GRC_0348",
+    "arabic_root": "الرشوه",
+    "target_lemma": "λυσέρωσι",
+    "lang": "grc",
+    "original_score": 0.63,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic bribery works by causing someone to let pass or release restraint; Greek release/loosening fits that functional conceptual core well."
+  },
+  {
+    "pair_id": "GRC_0349",
+    "arabic_root": "حرق",
+    "target_lemma": "χαρακίας",
+    "lang": "grc",
+    "original_score": 0.63,
+    "original_method": "combined",
+    "original_reasoning": "حرق centers on burning/scorching, and the plant name can plausibly preserve a 'burning, caustic' property of wood spurge."
+  },
+  {
+    "pair_id": "GRC_0350",
+    "arabic_root": "رثا",
+    "target_lemma": "εὐρυθμία",
+    "lang": "grc",
+    "original_score": 0.63,
+    "original_method": "combined",
+    "original_reasoning": "Repairing or setting right an opinion aligns well with restored order and rhythm."
+  },
+  {
+    "pair_id": "GRC_0351",
+    "arabic_root": "جمح",
+    "target_lemma": "ἐγρεμάχης",
+    "lang": "grc",
+    "original_score": 0.63,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic jumuḥ is bolting, unruly going out, and Greek is rousing battle; both share forceful breakout into conflict."
+  }
+]

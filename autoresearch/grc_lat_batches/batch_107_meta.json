@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0856",
+    "arabic_root": "اصطبل",
+    "target_lemma": "stabilito",
+    "lang": "lat",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic اصطبل < Latin stabulum; stabilito is grammatical form of stabilio — same loanword family"
+  },
+  {
+    "pair_id": "LAT_0857",
+    "arabic_root": "جرر",
+    "target_lemma": "jarra",
+    "lang": "lat",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic جرَّة=earthenware/ceramic jar (جِرار=jars); Latin jarra=liquid measure based on jar size — documented loanword: Arabic جرة → Spanish/Latin jarra/jar"
+  },
+  {
+    "pair_id": "LAT_0858",
+    "arabic_root": "مرر",
+    "target_lemma": "amarior",
+    "lang": "lat",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic مرارة=bitterness (مرّ=bitter); Latin amarior=more bitter (comparative of amarus) — direct semantic match on bitterness"
+  },
+  {
+    "pair_id": "LAT_0859",
+    "arabic_root": "ناطه",
+    "target_lemma": "anathema",
+    "lang": "lat",
+    "original_score": 0.75,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic نَاطَهُ = to hang/suspend; anathema (from Greek ἀνάθημα) = thing hung up as votive offering — direct match on suspension/hanging as offering"
+  },
+  {
+    "pair_id": "LAT_0860",
+    "arabic_root": "ستيك",
+    "target_lemma": "stacta",
+    "lang": "lat",
+    "original_score": 0.72,
+    "original_method": "weak",
+    "original_reasoning": "ستيك: phonetic connection to stacta = oil of myrrh — possible Arabic-Latin contact form"
+  },
+  {
+    "pair_id": "LAT_0861",
+    "arabic_root": "ينه",
+    "target_lemma": "hyaena",
+    "lang": "lat",
+    "original_score": 0.7,
+    "original_method": "weak",
+    "original_reasoning": "ينّة = proper name; hyaena = hyena — contextual connection"
+  },
+  {
+    "pair_id": "LAT_0862",
+    "arabic_root": "سلق",
+    "target_lemma": "siliqua",
+    "lang": "lat",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic سلق (root s-l-q) has multiple meanings: (1) boil/cook vegetables, (2) سِلْق = chard/beet plant (Beta vulgaris), (3) to ascend/climb. Latin siliqua = pod, husk, legume pod. Both refer specifically to edible plant parts. The phonetic correspondence s-l-q → silik- is near-perfect with consonant skeleton preservation. Chard (سلق) and pod-bearing plants (siliqua) share the edible vegetable domain. Strong candidate for shared Semitic agricultural vocabulary that entered Latin via Mediterranean trade."
+  },
+  {
+    "pair_id": "LAT_0863",
+    "arabic_root": "النفش",
+    "target_lemma": "lanificus",
+    "lang": "lat",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Ar nafsh=to tease apart fibers with fingers/sheep grazing at night; Lat lanificus=working in wool (spinning/weaving); shared fiber-processing domain"
+  }
+]

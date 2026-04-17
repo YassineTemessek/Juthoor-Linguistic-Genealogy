@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0112",
+    "arabic_root": "سجر",
+    "target_lemma": "Σαγγάριος",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic root centers on filling watercourses, and the Greek gloss is another river name."
+  },
+  {
+    "pair_id": "GRC_0113",
+    "arabic_root": "ساخت",
+    "target_lemma": "ἡσυχάζετε",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic settling or sinking readily extends to quieting and becoming still; Greek means 'be quiet, rest'."
+  },
+  {
+    "pair_id": "GRC_0114",
+    "arabic_root": "القبرس",
+    "target_lemma": "χαλκοβαρής",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "combined",
+    "original_reasoning": "Arabic explicitly mentions Cyprus and excellent copper, while Greek means 'weighed down with bronze'; both meet clearly in the copper/bronze semantic field."
+  },
+  {
+    "pair_id": "GRC_0115",
+    "arabic_root": "البينيث",
+    "target_lemma": "βένθος",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic البينيث: a type of sea fish (named with ب-ي-ن-ث). Greek βένθος: depth (of sea). A deep-sea fish and the depth of the sea — clear semantic field match. Arabic borrowed the Greek term for the deep to name this fish."
+  },
+  {
+    "pair_id": "GRC_0116",
+    "arabic_root": "التغران",
+    "target_lemma": "Τιγράνης",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic التغران: boiling/effervescence (also as proper name). Greek Τιγράνης: Tigranes (Armenian royal name). The Arabic التغران as a proper name phonologically matches Tigranes, and both likely share an Iranian/Semitic root. Strong phonological convergence."
+  },
+  {
+    "pair_id": "GRC_0117",
+    "arabic_root": "التنتل",
+    "target_lemma": "Τάνταλος",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "combined",
+    "original_reasoning": "Arabic التنتل: short/small person. Greek Τάνταλος: Tantalus (king who suffered eternal hunger/thirst). Tantalus's punishment of being just-out-of-reach connects to the Arabic 'one who is diminished/lacking.' Phonological match near-perfect; mythological borrowing plausible."
+  },
+  {
+    "pair_id": "GRC_0118",
+    "arabic_root": "الشرشق",
+    "target_lemma": "κασωρίς",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الشرشق = a loose/promiscuous woman, Greek κασωρίς = strumpet/prostitute — direct semantic match"
+  },
+  {
+    "pair_id": "GRC_0119",
+    "arabic_root": "السمندل",
+    "target_lemma": "σαλαμάνδρα",
+    "lang": "grc",
+    "original_score": 0.75,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: fire/burning. Greek: fire-related — strong semantic match."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0736",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-shays = ferocity of character; mushayasa = hostility, mutual aversion. Greek halosis = capture, conquest. Ferocity/hostility and military conquest are linked but 3+ steps apart: ferocity -> conflict -> battle -> conquest. Too long.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic ferocity/hostility (character) and Greek conquest/capture (military event) are 3+ semantic steps apart."
+  },
+  {
+    "pair_id": "GRC_0737",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kathna = object made from fresh reeds or branches. Greek kolokynthinos = made from gourds. Both are plant-material objects but from completely different plants (reeds vs gourds). Shared plant-material category is insufficient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Reed-based objects and gourd-based objects are from unrelated plants with different uses; shared plant-material category is insufficient."
+  },
+  {
+    "pair_id": "GRC_0738",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-khashab = thick coarse wood/timber. Greek lekhesi = on beds/couches. Original reasoning: beds are made of wood. This is a logical inference not a semantic derivation. Every culture makes beds from wood; this proves nothing about lexical kinship.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic timber and Greek beds share only the incidental material relationship; logical inference is not a lexical semantic path."
+  },
+  {
+    "pair_id": "GRC_0739",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kads = coming from behind, following in succession. Greek Seleukides = descendant of Seleucus (proper dynastic name). Succession and a proper dynastic name share no semantic path. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Seleucid is a proper dynastic name from the Greek personal name Seleucus; Arabic succession-from-behind does not generate this name."
+  },
+  {
+    "pair_id": "GRC_0740",
+    "finding": "no_path",
+    "semantic_journey": "Arabic jaafaliq = bishop/chief of Christians (Catholicos). Greek enkephalos = brain (en+kephale = in+head). Bishop-as-head is a social metaphor; brain-in-head is a literal anatomical term. Different semantic operations. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic church-head (bishop, metaphorical) and Greek brain (literal anatomical) share only the head metaphor, not a lexical path."
+  },
+  {
+    "pair_id": "GRC_0741",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khazaa = to take away, cut off, separate. Greek skhiza = a piece of wood cut off, splinter, lath. Core: cutting-off action and its result. 1-step action-to-result: cutting-off -> the-cut-off-piece.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic cutting-off/separating and Greek splinter/cut-off-piece share the cutting concept; Arabic is the action, Greek is the result."
+  },
+  {
+    "pair_id": "GRC_0742",
+    "finding": "path_found",
+    "semantic_journey": "Arabic najkha = to make throat noise; throat vocalization. Greek kunanke = tonsillitis/throat disease (dog-strangling = throat-choking). Core: throat affliction/sound. Both center on the throat as locus of unusual sound or sensation. 1-step drift: throat-noise -> throat-disease-location.",
+    "journey_type": "semantic_drift",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic throat-noise and Greek throat-disease share the throat as locus of affliction, though confidence is low."
+  },
+  {
+    "pair_id": "GRC_0743",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kathha = gathering. Greek khalkotheke = bronze-case/treasury (khalko=copper + theke=case). Gathering and a specialized bronze storage case require 3+ steps: gathering -> things-gathered -> container-for-gathered -> specifically-bronze-container. Too long.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic gathering-action and Greek bronze-storage-case are in different semantic categories requiring 3+ steps."
+  }
+]

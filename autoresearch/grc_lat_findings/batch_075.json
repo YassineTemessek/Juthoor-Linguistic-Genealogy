@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0600",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكندر = frankincense/olibanum (a gum resin used in religious and aromatic contexts). Greek χόνδρος = groats, coarse grain, a lump/granule of wheat. The original reasoning maps gum resin (rounded lump) to groats (rounded grain-lump). But frankincense resin and grain groats are entirely different substances in different domains — one is an aromatic sacred resin, the other is a food grain. Resin -> rounded shape -> grain requires: aromatic substance -> physical shape -> food grain. 3 steps. Also the الكندر / χόνδρος phonetic connection is weak (k-n-d vs kh-n-d).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic frankincense resin (الكندر) and Greek grain groats (χόνδρος) are different substances in different domains — aromatic resin and food grain require 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0601",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الشربش = a foreign garment (an outer garment of non-Arab origin, possibly a specific style). Greek σαράβαρα = trousers/breeches (a foreign dress item — a Persian or Median loanword into Greek, denoting barbarian trousers). Both are foreign dress items, but: σαράβαρα is itself a loanword into Greek from Persian/Iranian (Avestan), not a native Greek word. Comparing an Arabic foreign-garment term to a Persian loanword in Greek is not Arabic-Greek cognacy. Also both terms independently describe foreign dress from their respective cultural perspectives.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic الشربش (foreign garment) and Greek σαράβαρα (Persian loanword for trousers) both describe foreign dress but σαράβαρα is Persian-origin in Greek, not native Greek."
+  },
+  {
+    "pair_id": "GRC_0602",
+    "finding": "no_path",
+    "semantic_journey": "Arabic النبراس = a lamp, torch, bright light source (نبراس = سراج = lamp). Greek νέβρινος = of a fawn, made of fawn-skin (adjective from νέβρος = fawn, young deer). The original reasoning proposes phonetic kinship ن-ب-ر with νέβρος. But Arabic lamp/torch and Greek fawn/fawn-skin are entirely different domains — light and young deer are unrelated. The claim of 'phonetic kinship' as the basis for semantic connection collapses: a lamp and a fawn share no semantic relationship in 1-2 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic lamp/torch (النبراس) and Greek fawn/fawn-skin (νέβρινος) are entirely different domains — light-source and young-deer are unrelated."
+  },
+  {
+    "pair_id": "GRC_0603",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خسس = base, vile, contemptible, low-quality (خسيس = vile, ignoble, of low worth). Greek αἶσχος = shame, disgrace, dishonor (that which is contemptible and brings shame). Both encode THE DOMAIN OF CONTEMPTIBLE DISHONOR: Arabic = the quality of being vile/contemptible (the person or thing); Greek = the shame/disgrace associated with contemptible conduct. A 1-step direct mapping: vile/contemptible (Arabic, the quality) -> shame/dishonor (Greek, the social consequence of contemptible behavior). The dishonor concept is directly shared.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic vile/contemptible (خسس/خسيس) and Greek shame/disgrace (αἶσχος) share the contemptible-dishonor concept — the quality of vileness and its social consequence."
+  },
+  {
+    "pair_id": "GRC_0604",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الشجن = (1) entangled branches, complex interweaving of boughs; (2) grief/sorrow (deep emotional entanglement). Greek συγγένεια = kinship, blood ties, family relationship (from σύν + γένος = together + birth/kin). Both encode COMPLEX INTERCONNECTION: Arabic = the physical entanglement of branches, or emotional entanglement of grief; Greek = the social interconnection of family/kinship. A 1-step semantic drift: entangled connections (Arabic, branches/grief) -> kinship connections (Greek, family ties). Both preserve the concept of being deeply tied/connected to another.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic entangled branches/connections (الشجن) and Greek kinship/family-ties (συγγένεια) share the core of deep interconnection — physical entanglement and family bonds."
+  },
+  {
+    "pair_id": "GRC_0605",
+    "finding": "path_found",
+    "semantic_journey": "Arabic مصصته = I sucked it (from root مصص = to suck, draw liquid by suction, to suckle). Greek μαστός = breast (specifically the nursing breast, the source of milk for suckling). Both belong to the NURSING/SUCKLING DOMAIN: Arabic = the act of sucking/suckling (the oral motion of drawing milk); Greek = the breast that provides milk for suckling. A 1-step action-to-source relationship: suckling/sucking (the action) -> the breast (the source from which suckling occurs). This is a direct material culture term for the nursing domain.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic suckling/sucking (مصصته) and Greek breast (μαστός) directly share the nursing domain — the suckling action and its anatomical source."
+  },
+  {
+    "pair_id": "GRC_0606",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكهف = a cave, cavern (a hollow in rock — specifically a natural rock shelter or grotto). Greek ἐκφεύγω = to flee out, escape from (from ἐκ + φεύγω = out + flee). The original reasoning maps 'swift motion' for Arabic, but الكهف does NOT mean swift motion — it means a cave/grotto. A cave and the act of fleeing are entirely different: one is a static geological feature; the other is a dynamic escape action. Cave -> refuge -> escape-place -> fleeing requires: geological feature -> use -> destination -> action. 4+ steps. Also the 'swift motion' Arabic meaning ascribed is incorrect.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic cave/grotto (الكهف) and Greek fleeing/escaping (ἐκφεύγω) are entirely different — geological shelter and escape action require 4+ steps; the 'swift motion' Arabic meaning is incorrect."
+  },
+  {
+    "pair_id": "GRC_0607",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خبق = swift movement, rapid motion (to move quickly). Greek ἐκφεύγω = to flee out, escape from (from ἐκ + φεύγω = out + flee). The original reasoning maps swift motion to fleeing. While fleeing involves swift motion, swift motion (general rapid movement) and fleeing (specifically escaping danger by moving away) require: rapid movement -> rapid movement away from something -> flight/escape. The addition of the 'away from danger' component is a semantic step. Arabic swift movement could go in any direction; Greek fleeing is specifically directionalized escape. A borderline 2-step path but the 'swift' Arabic + 'escape' Greek don't share enough specificity.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic swift motion (خبق) and Greek fleeing/escaping (ἐκφεύγω) differ in directionality and purpose — general speed and directed escape-flight are not the same concept."
+  }
+]

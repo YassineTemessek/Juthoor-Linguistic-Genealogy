@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0400",
+    "arabic_root": "خنطه",
+    "target_lemma": "εἴχοντο",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "خنطه denotes distressing or pressing, and εἴχοντο conveys being held; constraining pressure and being held match reasonably well."
+  },
+  {
+    "pair_id": "GRC_0401",
+    "arabic_root": "بسطه",
+    "target_lemma": "βιάζεσθαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "βιάζεσθαι means 'to be forced' or 'to use force', which overlaps with the Arabic gloss 'to be set upon/overpowered', though not with 'broad, wide'."
+  },
+  {
+    "pair_id": "GRC_0402",
+    "arabic_root": "حتد",
+    "target_lemma": "ἰχθυδόκος",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Fixity and staying put align with holding or containing fish."
+  },
+  {
+    "pair_id": "GRC_0403",
+    "arabic_root": "الدسم",
+    "target_lemma": "μελιηδής",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic is greasy or rich with fat, Greek is honey-sweet; both converge on richness, lusciousness, and pleasant density."
+  },
+  {
+    "pair_id": "GRC_0404",
+    "arabic_root": "الرقيب",
+    "target_lemma": "πολιορκέω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الرقيب=watcher, guardian (حرسه). πολιορκέω=to besiege, blockade (sustained military watching/encirclement). Both involve sustained vigilant observation with control intent. Guarding and besieging are two faces of watch-and-control, from defender and attacker perspectives."
+  },
+  {
+    "pair_id": "GRC_0405",
+    "arabic_root": "سقرقع",
+    "target_lemma": "συγκρούομαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "the gloss has vigorous striking/mixing, which plausibly extends to collision or clashing together."
+  },
+  {
+    "pair_id": "GRC_0406",
+    "arabic_root": "الطنء",
+    "target_lemma": "τελευτήν",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الطنء includes 'لا يعيش صاحبها' (its possessor does not survive - i.e., fatal condition). τελευτή=end, death, completion of life. Direct semantic overlap: a state from which one does not survive = death/end. Strong match in the mortality domain."
+  },
+  {
+    "pair_id": "GRC_0407",
+    "arabic_root": "حلتب",
+    "target_lemma": "χαλέπτω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "A miserly person is conceptually harsh or pressing; oppress/crush is a plausible extension."
+  }
+]

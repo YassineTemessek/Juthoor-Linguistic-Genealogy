@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0648",
+    "arabic_root": "ملخ",
+    "target_lemma": "μελαγχολία",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ملخ=to tear out/madness context; μελαγχολία=melancholy. Possible semantic drift through mental disturbance"
+  },
+  {
+    "pair_id": "GRC_0649",
+    "arabic_root": "قخي",
+    "target_lemma": "καχέκτης",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qakha = 'insides rotted from disease'; Greek = 'in bad habit of body, wasted'. Plausible semantic link via disease wasting body."
+  },
+  {
+    "pair_id": "GRC_0650",
+    "arabic_root": "خطل",
+    "target_lemma": "κατάχυτλον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic liquid-smear imagery can connect to the vessel or tool used for pouring, an action-to-instrument shift."
+  },
+  {
+    "pair_id": "GRC_0651",
+    "arabic_root": "كدشه",
+    "target_lemma": "σκεδασθείς",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Kadasha (informing partly, driving) vs 'having been scattered/dispersed' - faint scatter link"
+  },
+  {
+    "pair_id": "GRC_0652",
+    "arabic_root": "غندر",
+    "target_lemma": "Γίνδαρος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic ghundar = fat plump youth; Greek Gindarus = Jindires (Syrian Semitic place name). Shared Semitic substrate possible."
+  },
+  {
+    "pair_id": "GRC_0653",
+    "arabic_root": "العسقفه",
+    "target_lemma": "ἀλαοσκοπιή",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'asqafa = intended good but did not do it (failed intent). Greek alaoskopie = useless/blind/careless watch (a-+laos+skope). Both encode failed/deficient vigilance/effort. Strong abstract link."
+  },
+  {
+    "pair_id": "GRC_0654",
+    "arabic_root": "شخم",
+    "target_lemma": "σχήμασι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "When milk changes smell it has undergone a changed state or form; Greek σχῆμα 'form, shape' preserves that resultant-state side."
+  },
+  {
+    "pair_id": "GRC_0655",
+    "arabic_root": "ربو",
+    "target_lemma": "ἀραβέω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Breath in the chest can naturally yield audible rattling or chatter-like sound."
+  }
+]

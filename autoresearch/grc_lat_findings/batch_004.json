@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0032",
+    "finding": "no_path",
+    "semantic_journey": "Arabic zajil relates to carrier pigeons or pigeon handlers, not a concrete implement. Greek zeugla = the yoke-loop or neckband of a yoke. Carrier pigeons and agricultural yoke-loops are entirely different semantic fields. The original reasoning appears to misidentify the Arabic root meaning.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic carrier pigeon (zajil) has no connection to Greek yoke-loop (zeugla) - different semantic fields, root misidentified."
+  },
+  {
+    "pair_id": "GRC_0033",
+    "finding": "no_path",
+    "semantic_journey": "Arabic jamal = camel. Greek Gamla = city in the Golan Heights (from Aramaic/Hebrew gamal = camel, named for its camel-hump shaped hill). While the city name Gamla may derive from the camel concept, this is a proper place name - the city of Gamla - not a lexical cognate. City names derived from camel imagery are not discoveries.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "proper_name",
+    "key_insight": "Greek Gamla is a city name possibly from Aramaic camel-shaped hill - a toponym, not a lexical root cognate."
+  },
+  {
+    "pair_id": "GRC_0034",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-fathij includes meanings of naqasa (deficiency/shortage) and taraka (leaving behind/abandoning). Greek leipho = to leave, to lack, to be absent. The Arabic root captures leaving/lacking and Greek preserves exactly this semantic core: to leave = to be absent = to lack. Direct one-step semantic preservation of the leaving/lacking concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic leaving/lacking (al-fathij) aligns with Greek to-leave/lack (leibho) - direct preservation of deficiency concept."
+  },
+  {
+    "pair_id": "GRC_0035",
+    "finding": "path_found",
+    "semantic_journey": "Same Arabic root al-fathij as GRC_0034. Greek is the perfect passive form meaning has been left/left behind. The semantic alignment is the same: Arabic lacking/leaving preserved in the Greek perfect form of the same verb. Same finding as GRC_0034.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Same as GRC_0034 but Greek perfect form - Arabic leaving/lacking concept in Greek perfect passive."
+  },
+  {
+    "pair_id": "GRC_0036",
+    "finding": "path_found",
+    "semantic_journey": "Arabic balsam = balsam resin. Greek opo-balsamon = juice/sap of the balsam tree (opo = juice). The same Semitic balsam term (GRC_0016) appears as a component in a Greek compound meaning balsam juice. The Arabic root b-l-s-m entered Greek directly and was used to form the compound for the liquid form of the resin. Confirmed material culture cognate (same as GRC_0016 in compound form).",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Balsam resin cognate appearing in Greek compound opo-balsamon (balsam juice) - confirmed material culture transmission."
+  },
+  {
+    "pair_id": "GRC_0037",
+    "finding": "path_found",
+    "semantic_journey": "Arabic naft = naphtha, petroleum. Greek naftha = naphtha. Same as GRC_0026 but using the Arabic root naft. The Semitic root n-f-t for the flammable earth-liquid was transmitted to Greek. Material culture cognate confirmed.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic naft (naphtha) = Greek naftha - same Semitic naphtha root as GRC_0026, confirmed material culture cognate."
+  },
+  {
+    "pair_id": "GRC_0038",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek are proper place names. Gigonos was a town in Macedonia; Arabic form is a different toponym. Proper names from different regions with no documented etymological link. Excluded as proper names.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Two proper place names (Macedonian town vs Arabic toponym) - excluded as proper names."
+  },
+  {
+    "pair_id": "GRC_0039",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-asr = pressing/squeezing (the action of extraction). Greek lasaron = laser, the juice of silphium (a specific plant extract from Cyrene). The chain pressing -> extracted liquid -> specifically silphium juice requires 3 steps with the specific plant identification being an unattested inferential leap. Lasaron names a specific resin not generic pressed juice. Too many steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic pressing/squeezing does not connect to specific Greek plant-extract name lasaron - too many inferential steps."
+  }
+]

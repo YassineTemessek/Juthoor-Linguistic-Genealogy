@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0528",
+    "finding": "path_found",
+    "semantic_journey": "Arabic صخم = standing upright, erect posture (the quality of being held upright). Greek σχῆμα = form, posture, figure, shape (the overall configuration/posture of a body or thing). σχήμασι = dative plural (in the forms/postures). Both encode the CONFIGURED UPRIGHT FORM/POSTURE of a body: Arabic = the upright stance specifically; Greek = any configured form/posture (more general). A 1-step specialization: upright posture -> any configured form/posture.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic upright posture (صخم) and Greek form/posture (σχῆμα) share the core of body configuration/stance."
+  },
+  {
+    "pair_id": "GRC_0529",
+    "finding": "path_found",
+    "semantic_journey": "Arabic أنس = familiarity, ease, comfort; also what faces you/what is present with you. Greek γαληνός = calm, serene, tranquil (especially of calm sea). Both encode TRANQUIL EASE/COMFORT in the presence of familiar things: Arabic = the ease of familiarity and presence; Greek = the calm serenity of undisturbed conditions. The step: ease of familiar presence -> the quality of calm serenity. A 1-step emotional equivalence.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic ease/familiarity (أنس) and Greek calm serenity (γαληνός) share the core of tranquil comfort in undisturbed conditions."
+  },
+  {
+    "pair_id": "GRC_0530",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الضرس = a molar tooth; also being irritable/sour from hunger, teeth on edge. Greek λοίδορος = abusive, insulting, reviling. The original reasoning maps irritability-from-hunger to verbal abuse. While irritability can produce abusive speech, Arabic specifically encodes tooth irritability (physical sensation/state), not a character trait. The path tooth-on-edge -> irritable -> verbally abusive requires 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic tooth-on-edge irritability (physical sensation) and Greek verbal abusiveness require 3 steps to connect."
+  },
+  {
+    "pair_id": "GRC_0531",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البساق = a specific obscure Arabic term (possible variant of داهية = calamity/disaster). Greek λώβηξ = an abuser, one who harms/outrages (from λώβη = outrage, harm). The original reasoning maps Arabic calamity to Greek harm/ruin. But even if البساق means calamity, calamity (a natural disaster event) and abuser/outrager (a person who commits harm) are different: event vs person. And the root attribution to الداهية is speculative.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic calamity/disaster and Greek abuser-person (λώβηξ) are different categories even within the harm domain."
+  },
+  {
+    "pair_id": "GRC_0532",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دعمظ = to overwhelm forcefully, to overpower completely (complete domination/entry). Greek δαμάζομαι = to be tamed, subdued, mastered (passive of δαμάζω = to subdue). Both encode FORCEFUL OVERPOWERING leading to subjugation: Arabic = the act of overwhelming/overpowering; Greek = being the result of being mastered/tamed. A 1-step action-to-result path: overwhelming (active) -> being tamed (passive result).",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic forceful overpowering (دعمظ) and Greek being-tamed/subdued (δαμάζομαι) share the subjugation concept — active force and passive result."
+  },
+  {
+    "pair_id": "GRC_0533",
+    "finding": "no_path",
+    "semantic_journey": "Arabic داكه = hostility, dispute, quarreling (two sides in opposition). Greek ἄνδιχα = apart, asunder, in two (spatial/conceptual division). The original reasoning maps dispute to splitting/asunder. But Arabic hostility is a RELATIONAL quality (between parties), while Greek asunder is a SPATIAL concept (physical separation). Dispute -> split into two requires: conflict -> parties pull apart -> they are asunder. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic hostility/dispute and Greek asunder/apart require 3 steps — relational conflict does not directly generate spatial separation."
+  },
+  {
+    "pair_id": "GRC_0534",
+    "finding": "no_path",
+    "semantic_journey": "Duplicate of GRC_0310 and GRC_0400 (same Arabic root خنط = distress/pressure vs Greek εἴχοντο = they held/clung). Same analysis: external oppressive pressure and active self-holding are different directional actions. False positive.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Duplicate of GRC_0310/0400: Arabic external oppressive pressure and Greek active self-holding/clinging are different in direction and agency."
+  },
+  {
+    "pair_id": "GRC_0535",
+    "finding": "path_found",
+    "semantic_journey": "Arabic اشرحف = prepared himself for combat, moved toward confrontation (directed movement toward an adversary in a hostile context). Greek προσέρχομαι = to come toward, approach (from πρός + ἔρχομαι = toward + come). Both encode DIRECTED MOVEMENT TOWARD someone: Arabic = hostile approach for combat; Greek = approach generally. The step: hostile approach (specific) -> approach generally (generalization). A 1-step generalization removing the hostile component.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic hostile approach for combat (اشرحف) and Greek approach/come-toward (προσέρχομαι) share directed movement toward another — Arabic specializes to hostile context."
+  }
+]

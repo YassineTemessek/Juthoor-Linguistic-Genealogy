@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0120",
+    "arabic_root": "العترب",
+    "target_lemma": "ἡλιοτρόπιον",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "combined",
+    "original_reasoning": "Arabic is sumac and Greek is heliotrope; both are plant names, a clear botanical match at the category level."
+  },
+  {
+    "pair_id": "GRC_0121",
+    "arabic_root": "الحصف",
+    "target_lemma": "πολλαχόσε",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "combined",
+    "original_reasoning": "Raising pebbles in running naturally yields scattering into many directions."
+  },
+  {
+    "pair_id": "GRC_0122",
+    "arabic_root": "حدرج",
+    "target_lemma": "χῖδρον",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "combined",
+    "original_reasoning": "المحدرج 'rolled/twisted' matches rubbed groats well through the notion of grain rolled off the ear."
+  },
+  {
+    "pair_id": "GRC_0123",
+    "arabic_root": "حزا",
+    "target_lemma": "σχίζα",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "The Arabic gloss includes dividing or cutting a figure into parts, which aligns well with a cut-off piece or splinter."
+  },
+  {
+    "pair_id": "GRC_0124",
+    "arabic_root": "رحب",
+    "target_lemma": "παρέχει",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "combined",
+    "original_reasoning": "Wide spacious welcome aligns clearly with giving room, offering, and providing."
+  },
+  {
+    "pair_id": "GRC_0125",
+    "arabic_root": "العمروط",
+    "target_lemma": "τολμηρότατος",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "combined",
+    "original_reasoning": "A wily thief who takes all readily aligns with extreme daring or audacity."
+  },
+  {
+    "pair_id": "GRC_0126",
+    "arabic_root": "جمح",
+    "target_lemma": "λογομαχέω",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "combined",
+    "original_reasoning": "Arabic unruliness and sudden going out aligns well with Greek quarrelling or fighting, especially as an outbreak of contention."
+  },
+  {
+    "pair_id": "GRC_0127",
+    "arabic_root": "اقلعف",
+    "target_lemma": "κέλυφος",
+    "lang": "grc",
+    "original_score": 0.74,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gives skin shrinking inward, and Greek means shell or husk; both preserve an enclosing outer layer as conceptual core."
+  }
+]

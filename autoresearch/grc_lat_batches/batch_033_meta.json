@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0264",
+    "arabic_root": "الشرف",
+    "target_lemma": "ὑψόροφος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: الشرف = elevation, high place, nobility, height — the camel's hump is high, the battlements are high. Greek: high-roofed, high-ceilinged. Both share the mafahim of upward elevation/height as a marker of status and physical structure. Clear shared concept."
+  },
+  {
+    "pair_id": "GRC_0265",
+    "arabic_root": "الكركم",
+    "target_lemma": "κροκόμαγμα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الكركم = saffron (الزعفران) and turmeric — a golden-yellow spice/dye substance derived from the crocus/curcuma plant. Greek κροκόμαγμα = the residue/pressed-out remains of saffron unguent (from κρόκος = saffron). Both directly involve the saffron/crocus substance — Arabic as the raw spice, Greek as the saffron extract residue. Strong semantic connection via shared saffron-substance domain."
+  },
+  {
+    "pair_id": "GRC_0266",
+    "arabic_root": "النزك",
+    "target_lemma": "ἀγωνίζομαι",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "both express war/combat — strong semantic match"
+  },
+  {
+    "pair_id": "GRC_0267",
+    "arabic_root": "اقعنصر",
+    "target_lemma": "ῥικνός",
+    "lang": "grc",
+    "original_score": 0.69,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gives shrinking downward or becoming stunted toward the ground, and Greek means shrunken or withered; the conceptual chain is clear."
+  },
+  {
+    "pair_id": "GRC_0268",
+    "arabic_root": "خنطه",
+    "target_lemma": "ἠνείχοντο",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ἠνείχοντο suggests enduring or holding oneself up, which maps well onto خنطه as burden, distress, or pressure borne."
+  },
+  {
+    "pair_id": "GRC_0269",
+    "arabic_root": "السنع",
+    "target_lemma": "ἀγαλλιῴησαν",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Beauty and excellence naturally lead into exultation or rejoicing, so the deeper conceptual chain is fairly strong."
+  },
+  {
+    "pair_id": "GRC_0270",
+    "arabic_root": "شحك",
+    "target_lemma": "ἐσχήκασι",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "Arabic denotes preventing by means of a restraining object in the mouth, while Greek means they have held; this yields a clear holding-restraint chain."
+  },
+  {
+    "pair_id": "GRC_0271",
+    "arabic_root": "جلن",
+    "target_lemma": "γέλενος",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "Arabic includes النجيل, a leafy plant/grass, and Greek gloss points to asphodel or daffodil; plant-reference continuity is plausible."
+  }
+]

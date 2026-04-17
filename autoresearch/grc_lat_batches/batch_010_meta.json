@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0080",
+    "arabic_root": "سرت",
+    "target_lemma": "Σάρτη",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic evidence points to the nisba or place-name Surt, and the Greek gloss is likewise a place name Sarta."
+  },
+  {
+    "pair_id": "GRC_0081",
+    "arabic_root": "الطنز",
+    "target_lemma": "γελοιοτάταιν",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic طَنَّاز is a mocker and γελοιοτάταιν means most laughable/ridiculous; both center on ridicule and making others objects of laughter."
+  },
+  {
+    "pair_id": "GRC_0082",
+    "arabic_root": "ملق",
+    "target_lemma": "μαλακός",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "combined",
+    "original_reasoning": "ملق=to flatter/be soft/gentle; μαλακός=soft, gentle. Strong semantic match"
+  },
+  {
+    "pair_id": "GRC_0083",
+    "arabic_root": "رسخ",
+    "target_lemma": "ἀραρίσκω",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "combined",
+    "original_reasoning": "رسخ is firmness and fixation; Greek join or fasten is a close action-level match."
+  },
+  {
+    "pair_id": "GRC_0084",
+    "arabic_root": "حمل",
+    "target_lemma": "αἰχμαλόω",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "combined",
+    "original_reasoning": "Arabic is to carry, load, or bear; Greek is to take prisoner. Capturing commonly entails carrying off, so the action-result chain is clear."
+  },
+  {
+    "pair_id": "GRC_0085",
+    "arabic_root": "العشنق",
+    "target_lemma": "κάλοισιν",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic بهاء and Greek beauty converge strongly at the surface semantic level."
+  },
+  {
+    "pair_id": "GRC_0086",
+    "arabic_root": "اتيته",
+    "target_lemma": "αὐτόθ'",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Greek means 'right there/on the spot'; Arabic gloss says 'where he was' and also road-junction."
+  },
+  {
+    "pair_id": "GRC_0087",
+    "arabic_root": "البرنيق",
+    "target_lemma": "Βερενίκη",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic البرنيق: a type of truffle or sediment; also a clan name. Greek Βερενίκη: Berenice (personal name meaning 'bearer of victory' from Macedonian). The Arabic proper name بِرْنيق for a man of Banu Sa'd is a phonological borrowing of the Greek/Macedonian name. Strong phonological match."
+  }
+]

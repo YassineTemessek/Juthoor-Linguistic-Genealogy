@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0240",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ناموس (namus) = divine law, sacred order, established code; also: the Law (used for Mosaic Law). Greek νεμεσήσεται = he will be divinely indignant (future of νεμεσάω, from Νέμεσις 'divine retribution'). Both encode divine law and its enforcement. Arabic divine-law → Greek divine-retribution-against-law-violation is a clear 1-step semantic shift: ناموس is the law, Nemesis is what happens when the law is violated. This is the law-enforcement relationship.",
+    "journey_type": "semantic_drift",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic divine law (namus) and Greek divine retribution (Nemesis) are two sides of the same concept — the law and the punishment for violating it."
+  },
+  {
+    "pair_id": "GRC_0241",
+    "finding": "path_found",
+    "semantic_journey": "Arabic بعثه (bathahu) = he sent him, dispatched him (same root as GRC_0217). Greek ἐπιβοηθέω = to send aid, come to assistance. Same assessment as GRC_0217: Arabic sending/dispatching → Greek sending-aid is a direct 1-step match. This is a duplicate of GRC_0217 with a slightly different Arabic form but the same root بعث.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Same confirmed cognate as GRC_0217: Arabic sending/dispatching (bath) and Greek sending-aid (epiboetheo) share the core dispatch concept."
+  },
+  {
+    "pair_id": "GRC_0242",
+    "finding": "path_found",
+    "semantic_journey": "Arabic فزع (faza) = terror, panic; also the response to terror — fleeing for safety/refuge; to be in panic-flight. Greek φύζα = panicked rout, flight driven by terror (especially from battle). Both encode the concept of terror-induced panicked flight. Arabic terror/panic-flight → Greek terror-rout is a direct 1-step match: both describe the same phenomenon of panic causing collective flight.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic terror-panic-flight (faza) and Greek terror-rout (phyza) are direct cognates preserving the same concept of panic-driven flight."
+  },
+  {
+    "pair_id": "GRC_0243",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الجدي (al-jady) = young goat, kid. Greek αἰγίδα = the aegis (accusative of αἰγίς = goat-skin shield). The root encodes young-goat, and the Greek word literally means 'goat-skin' — the protective covering made from a goat's hide. Both come from the goat concept: Arabic names the animal, Greek names the iconic object made from its skin. This is a direct material-culture preservation of the goat concept in the animal vs. its hide artifact.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic young-goat (jady) and Greek goat-skin shield (aigis) share the Semitic goat concept — the animal name preserved in the object made from its hide."
+  },
+  {
+    "pair_id": "GRC_0244",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الخطل (al-khatal) = disordered/abusive speech. Greek λεχθείς = having been said (aorist passive participle of λέγω). Same assessment as GRC_0167: Arabic disordered speech vs. neutral Greek speaking participle. The Greek word is a generic past-spoken form with no connotation of disorder, abuse, or disordering. No valid semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic disordered/abusive speech and neutral Greek speaking participle do not share a valid semantic path."
+  },
+  {
+    "pair_id": "GRC_0245",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سطح (sath) = flat surface; also a victim slaughtered and laid flat. Greek στοχάζομαι = to aim at a target, to guess/conjecture (from στόχος 'target mark'). The connection: Arabic slaughtered-flat → Greek well-aimed strike. The Arabic word primarily means flat surface; its possible slaughter sense is secondary. Greek στοχάζομαι has its own etymology from στόχος (a stake used as an archery target). No Semitic origin needed for this Greek word.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek stokhazomai derives from stokhos (target stake) with no Semitic origin; Arabic flat-surface/slaughter is a different semantic field."
+  },
+  {
+    "pair_id": "GRC_0246",
+    "finding": "no_path",
+    "semantic_journey": "Arabic هرقل (Hirqil) = Heraclius, the Byzantine emperor (Arabic transliteration of the Greek name). Greek Ἡρακλέους = of Heracles (genitive of the mythological hero name). Both are proper names — Heraclius is the Roman emperor named after Heracles. Arabic هرقل is a loanword FROM Greek. This is a proper name borrowed from Greek into Arabic, not an Arabic-to-Greek cognate. Excluded.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic Hirqil is a borrowing of the Greek proper name Herakles/Herakleios; this is Greek→Arabic, not Arabic→Greek."
+  },
+  {
+    "pair_id": "GRC_0247",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دفا (dafa) = warmth, gentle heat; to be warm. Greek δέφω = to soften by warmth, to knead with heat, to work material by warming. Same assessment as GRC_0198 (dafi variant). Arabic warmth → Greek soften-by-warmth is a direct 1-step match: the warmth acts to soften. This appears to be a duplicate of GRC_0198 with slightly different Arabic form (dafa vs. dafi).",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic warmth (dafa) and Greek soften-by-warmth (depho) share the same confirmed path seen in GRC_0198."
+  }
+]

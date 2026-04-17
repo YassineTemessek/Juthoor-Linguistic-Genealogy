@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0184",
+    "finding": "no_path",
+    "semantic_journey": "Arabic قصر (qasr) = palace, castle, court; also: to shorten/restrict. The original reasoning acknowledges that Arabic قصر is itself derived from Latin castrum via Aramaic — it is a Latin loanword into Arabic. Greek Καίσαρι = Caesar (dative of Καῖσαρ). Both Arabic qasr and Greek Caesar ultimately derive from Latin (castrum and Caesar are different Latin words, but both are Latin-origin). This is not an Arabic-Greek cognate — both words come from Latin. Shared loanword from Latin.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic qasr (palace) derives from Latin castrum; Greek Kaisar is Latin Caesar — both are Latin-origin terms, not an Arabic-Greek cognate."
+  },
+  {
+    "pair_id": "GRC_0185",
+    "finding": "no_path",
+    "semantic_journey": "Arabic نبت (nabata) = to grow, sprout, germinate. Greek Ναβαταῖος = Nabataean, the ethnonym of the Nabataean people (the trading civilization centered in Petra). The Nabataean name (Semitic nbṭ) is a proper ethnic/place name. The Arabic root نبت may share the same Semitic root as the ethnic name, but this is an ethnonym — a proper name of a people. Excluded per proper-name rule.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Ναβαταῖος is the proper ethnic name for the Nabataean people; comparing it to Arabic grow/sprout treats a proper name as a common noun."
+  },
+  {
+    "pair_id": "GRC_0186",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خظظ (khazza) / استرخى بطنه = the belly slackened/became loose; giving way/slackening of the belly. Greek χάζετο = he drew back, gave way, retreated (imperfect of χάζομαι). Both encode giving way/loosening. Arabic belly slackening/giving way → Greek physical retreating/giving way is a 1-step drift from bodily slackening to general giving way/retreat — the same yielding concept at body → action level.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic belly-slackening/yielding (khazz) and Greek retreating/giving-way (khazetai) share the core of yielding/slackening."
+  },
+  {
+    "pair_id": "GRC_0187",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خصص (khassasa) = to specify, assign specially, make particular to one person; to appropriate/reserve exclusively. Greek σχήσουσα = she who will have/hold (future participle of ἔχω 'to have/hold'). Both encode the concept of holding/possessing something specifically one's own. Arabic exclusive-assignment → Greek having/holding is a 1-step drift: to assign exclusively to oneself is to hold it.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic exclusive-assignment (khasas) and Greek having/holding (ekhein) share the concept of something being specifically one's own."
+  },
+  {
+    "pair_id": "GRC_0188",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الكون (al-kawwana/al-kawn) variant form = the folding; Arabic كون from كوى = to fold, wind, coil. Greek ἑλίκοιν = of spirals/coils. Both encode coiling/winding movement. Arabic folding/winding → Greek spiral/coil is a direct 1-step match of the geometric winding concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic folding/winding (kawn) and Greek spiral (helix) share the coiling geometric concept."
+  },
+  {
+    "pair_id": "GRC_0189",
+    "finding": "no_path",
+    "semantic_journey": "Arabic برذون (birdhaun) = a packhorse or mule, heavy working horse. Greek βουρδών = mule, packhorse. The original reasoning acknowledges that 'Arabic borrowed from Greek (via Byzantine).' This is the REVERSE direction — Arabic borrowed from Greek βουρδών (itself possibly from Gaulish or Latin burdo). This is not an Arabic-to-Greek cognate; it is Greek-to-Arabic. The direction of borrowing is inverted. False positive due to wrong direction.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic birdhaun was borrowed FROM Greek bourdon (mule); the direction is Greek→Arabic, not Arabic→Greek."
+  },
+  {
+    "pair_id": "GRC_0190",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حيض (haydh) = menstrual blood flow; continued flowing of blood beyond normal period. Greek χυδαῖος = poured out copiously, flowing freely, also: common/vulgar (from χέω 'to pour'). Both encode the concept of copious flowing/pouring. Arabic continued copious blood flow → Greek copious outpouring/flowing is a direct 1-step match: both describe excessive flowing of liquid beyond its proper bounds.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic copious blood flow (haydh) and Greek copious outpouring (khudaios) share the concept of liquid flowing beyond normal bounds."
+  },
+  {
+    "pair_id": "GRC_0191",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الفوز (al-fawz) = success, attainment, winning; أفازه = he caused him to attain/gain/win. Greek εἰλήφατε = you have taken/received (perfect of λαμβάνω 'to take, receive, obtain'). Both encode the concept of obtaining/receiving/gaining something. Arabic causing-to-attain/win → Greek you-have-obtained is a direct 1-step match: attainment = receiving/taking possession of the goal.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic attainment/winning (fawz) and Greek having-taken/received (eilephate) share the core concept of obtaining something successfully."
+  }
+]

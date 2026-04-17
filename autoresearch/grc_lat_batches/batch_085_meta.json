@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0680",
+    "arabic_root": "خضع",
+    "target_lemma": "χυδαῖος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خيضعة can suggest a dense battle surge or strong suckling action, and Greek abundant or poured forth may preserve the outpouring side."
+  },
+  {
+    "pair_id": "GRC_0681",
+    "arabic_root": "خبا",
+    "target_lemma": "χάβος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic means hidden/concealed; a muzzle is a covering that hides or restrains the mouth. This concrete-to-concrete bridge is plausible."
+  },
+  {
+    "pair_id": "GRC_0682",
+    "arabic_root": "الخشوع",
+    "target_lemma": "λέχεσι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "خشوع centers on lowering, sinking, or bodily submissive settling; lying down in a bed shares that lowered-rest posture."
+  },
+  {
+    "pair_id": "GRC_0683",
+    "arabic_root": "كرسم",
+    "target_lemma": "Χοράσμιοι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Grand man/silent elder vs Chorasmii (Khwarezm tribe) - possibly tribal name"
+  },
+  {
+    "pair_id": "GRC_0684",
+    "arabic_root": "فجا",
+    "target_lemma": "ἐκφεύγει",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic فجا relates to 'sudden appearance/flight'; Greek = 'flees out, escapes'. Plausible sudden-event/flight overlap."
+  },
+  {
+    "pair_id": "GRC_0685",
+    "arabic_root": "قدس",
+    "target_lemma": "κύδιστε",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qds = 'holy, revered, glorified'; Greek = 'most glorious' (voc.). Plausible conceptual echo of glorification/holiness."
+  },
+  {
+    "pair_id": "GRC_0686",
+    "arabic_root": "دخرص",
+    "target_lemma": "διαχωρίζω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "A marked strip in cloth or land naturally creates a separating line."
+  },
+  {
+    "pair_id": "GRC_0687",
+    "arabic_root": "شخص",
+    "target_lemma": "αἴσχεσι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "شخص is the visible bodily figure or looming form; Greek αἶσχος can be ugliness or disgrace, plausibly the negative valuation of outward appearance."
+  }
+]

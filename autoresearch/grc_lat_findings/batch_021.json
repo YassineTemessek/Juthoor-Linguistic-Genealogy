@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0168",
+    "finding": "path_found",
+    "semantic_journey": "Arabic البرشاع (al-birsha) = reckless, bulky, coarse, uncouth person — someone who acts with violent lack of restraint. Greek λάβρος = furious, boisterous, violent, impetuous — applied to storms, floods, violent persons. Both encode uncontrolled violent energy/force without restraint. Arabic reckless-violent-coarse → Greek furious-boisterous-impetuous is a direct 1-step match in the semantic field of uncontrolled violent force.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic reckless violent coarseness (birsha) and Greek furious impetuosity (labros) share the same concept of uncontrolled violent force."
+  },
+  {
+    "pair_id": "GRC_0169",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكمع (al-kama) = the side, flank; place beside. Greek Λευκίμμη = Leucimme, a promontory/cape in Epirus (proper place name). The reasoning attempts: Arabic flank/side → Greek promontory extending to the side. But Λευκίμμη is a proper toponym that the Greeks themselves derived from λευκός (white) + ἄκρα (promontory) — meaning 'white promontory.' The Arabic semantic connection is irrelevant to this Greek place name's Greek etymology. Excluded: proper toponym.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Λευκίμμη is a Greek toponym with transparent Greek etymology (white promontory); the Arabic flank connection is spurious."
+  },
+  {
+    "pair_id": "GRC_0170",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العقب (al-aqab) = the heel; successor, the one who follows after. Greek λυκάβας = a year (used in Homeric poetry; from λύκος 'wolf' or uncertain origin + βαίνω 'to go'). The reasoning: successor/following → sequence → year as the next cycle. This requires: following-after → coming next → cyclic sequence → year — that is 3+ steps. Furthermore, λυκάβας is a Homeric poetic word of disputed etymology (possibly 'wolf-going') and shows no Semitic origin. No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic heel/successor and Greek year (lykabas) are too many conceptual steps apart; lykabas has its own disputed Greek etymology."
+  },
+  {
+    "pair_id": "GRC_0171",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خطل (khatal) = disordered, loose; also: tears scattered/dispersed, residue smeared around. Greek χύτλον = water poured over (for washing), libation water. The reasoning: smeared residue → poured liquid. Arabic خطل refers to something scattered or disordered (tears, loose fabric), not specifically to poured liquid. The semantic chain scattered residue → poured water requires: scattered → liquid that scatters → pour — that is too indirect. Greek χύτλον has its own internal connection to χέω (to pour).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic disordered/scattered and Greek poured-liquid have different action types; Greek connects internally to χέω (pour)."
+  },
+  {
+    "pair_id": "GRC_0172",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سستان (Sistan/Seistan) = a region in eastern Iran/Afghanistan. Greek Σιαστανσας = a proper name (satrap or Achaemenid official name). Both are proper names related to the geographical region Sakastan/Sistan. This is a shared regional proper name transmitted via Persian/Achaemenid administrative records, not an Arabic-Greek cognate. Excluded: proper toponym/onomastic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both forms refer to the region Sistan; this is a shared proper toponym via Persian administrative records, not a Semitic-Greek cognate."
+  },
+  {
+    "pair_id": "GRC_0173",
+    "finding": "no_path",
+    "semantic_journey": "Arabic غدر (ghadar) = betrayal; also غدير = pool of standing water. Greek Γάδαρα = Gadara, a Hellenistic city in Palestine (modern Umm Qais). The original reasoning acknowledges this is a Semitic place name — the Aramaic/Hebrew root gdr means 'wall, fence.' This is a Semitic toponym (Aramaic גָּדַר) that entered Greek as a place name, not an Arabic-to-Greek cognate. The Arabic غدر root differs from the Aramaic gdr root. Excluded: proper toponym.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gadara is a Semitic toponym (Aramaic gdr 'wall') transmitted through Hellenistic administrative records; not an Arabic-Greek cognate."
+  },
+  {
+    "pair_id": "GRC_0174",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القعثله (al-qaathlah) = unclear; original glosses relate to transmitted text/wording. Greek λεχθείς = having been said, the thing that was said (aorist passive participle of λέγω). The link between an Arabic word for transmitted text and a Greek past participle for 'spoken' is too generic — any word for speech or text transmission would match any Greek speech verb. No specific semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Generic Arabic text-transmission and Greek speaking-participle overlap only at the broadest communication category; no specific path."
+  },
+  {
+    "pair_id": "GRC_0175",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السطح (al-sath) = flat surface, roof, the flat top; spreading out flat. Greek ἐλᾶαι στοιχάδες = rows of olive trees (ἐλαία 'olive' + στοιχάδες 'arranged in rows'). The reasoning: flatness → ordered rows. But Arabic flatness is a surface property, while Greek names a specific agricultural arrangement (olive tree rows). The connection requires: flat surface → ordered layout → rows of trees — 3+ steps. No path; Greek compound has transparent internal meaning.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic flat surface and Greek olive tree rows share only a loose 'ordered layout' concept; the Greek is a transparent compound with its own meaning."
+  }
+]

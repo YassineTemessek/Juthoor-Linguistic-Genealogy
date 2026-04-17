@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0296",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دعلق (daalaq) = unclear root; possibly related to questioning or engaging forcefully. Greek διάλεκτε = dialect, mode of speech (vocative of διάλεκτος, from διαλέγω 'to converse, discuss'). The original reasoning suggests a connection to questioning/discussion. However, Greek διάλεκτος has transparent Greek etymology (διά 'through' + λέγω 'to speak'). No Semitic source is needed or attested for this Greek word. The Arabic root is obscure and the connection to Greek dialect is phonetically and semantically tenuous.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek dialektos has transparent Greek etymology (dia + legein); no Semitic origin attested or needed for this word."
+  },
+  {
+    "pair_id": "GRC_0297",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ساخت (sakhata) = to subside, sink, settle (a variant of ساخ). Greek σχέτε = hold! have! (aorist imperative of ἔχω). Same as GRC_0205 and GRC_0254: Arabic sinking/settling and Greek holding are too distant. The series of σχέτε/ἐσχήκει matches throughout this dataset have all been rejected for the same reason.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sinking/settling and Greek hold/have are too conceptually distant; this pairing pattern has been consistently rejected throughout the dataset."
+  },
+  {
+    "pair_id": "GRC_0298",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الصيص (al-sayyas) = everything one defends/fortifies oneself with (horns, fortifications, defensive structures). Greek ἅλωσις = capture, conquest, falling of a city. Arabic defense and Greek capture are direct opposites — opposite sides of a siege. For a negation-cognate, the Arabic root must encode BOTH poles. Arabic الصيص specifically encodes the DEFENSE side only. Greek ἅλωσις encodes only the CAPTURE side. These are not two sides of one Arabic root; they are two different concepts. Additionally, the consonant skeleton ص-ي-ص vs ἁλ-ωσις shows no clear merger path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic defense-fortification and Greek capture are opposites but not a valid negation cognate — Arabic root encodes defense only, not both sides."
+  },
+  {
+    "pair_id": "GRC_0299",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الباس (al-baas) / بئيس (baiy) = formidable, dreadful, one who inspires dread. Greek εὐλαβής = cautious, careful, God-fearing, holding fast (εὖ 'well' + λαμβάνω 'to grasp/take'). Greek εὐλαβής has transparent Greek etymology meaning 'taking hold well' or 'grasping well' — its meanings of caution and piety derive from this internal Greek meaning. Arabic formidable-dread and Greek well-grasping/cautious are in different semantic fields. The connection fear-inspiring → fear-avoiding (cautious) requires: dreadful → what dreadful things cause → avoiding dreadful things → caution — 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek eulabeis has transparent Greek etymology (well-grasping); Arabic formidable-dread and Greek cautious-piety are 3+ steps apart."
+  },
+  {
+    "pair_id": "GRC_0300",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حبطا (hubta) = short, fat, big-bellied. Greek ἰχθύβοτος = fish-grazing, fish-feeding (ἰχθύς 'fish' + βόσκω 'to feed/graze'). The original reasoning: big-bellied → well-fed → feeding on fish. This is a 3+ step chain: fat/big-bellied → result of eating much → eating → eating fish specifically → fish-grazing. Greek ἰχθύβοτος is a transparent compound meaning fish-feeding, with no Semitic connection needed.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic big-bellied and Greek fish-grazing are too many semantic steps apart; the Greek compound has transparent internal etymology."
+  },
+  {
+    "pair_id": "GRC_0301",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البرنوف (al-barnuf) = a plant name. Greek γλαβρήνη = possibly related to γλαβρός (smooth, hairless); a plant term. Both are plant terms, but different plants. Plant-category matching is insufficient — this is the same rejection as GRC_0147. Two unrelated plant names sharing only botanical category is not a cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two unrelated plant names sharing only the botanical category is insufficient for a cognate claim."
+  },
+  {
+    "pair_id": "GRC_0302",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ذلق (dhalaqa) = sharp, pointed, having a sharp tip; also: to be eloquent/sharp-tongued. Greek δεδήλωκας = you have made clear/shown (perfect of δηλόω 'to make clear, show, reveal'). The reasoning: Arabic sharp → makes things clear/distinct. While sharpness can metaphorically relate to clarity (a sharp image is clear), the path Arabic sharp/pointed → Greek making-clear requires: sharp → what sharpness does → makes things clear/distinct → you have clarified — 3+ steps. Greek δηλόω has its own Greek etymology from δῆλος (clear, evident).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sharp/pointed and Greek making-clear are 3 steps apart; Greek deloo derives from delos (clear/evident) with no Semitic origin."
+  },
+  {
+    "pair_id": "GRC_0303",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دحصت (dahasa) = became fat, filled out (body becoming plump). Greek δέχεσθαι = to receive, accept, take in (infinitive of δέχομαι). The original reasoning: becoming-fat/filled → taking-in. While receiving food makes one fat, the Arabic encodes the RESULT state (fat/filled) and the Greek encodes the ACTION (receiving). Path: fat-state → what caused the fat state → eating/taking in food → receiving/accepting — that is 3+ steps in reverse direction. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic result-state (becoming fat) and Greek action (receiving) work in opposite causal directions; not a valid 2-step path."
+  }
+]

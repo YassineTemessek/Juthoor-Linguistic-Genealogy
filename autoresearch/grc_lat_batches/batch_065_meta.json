@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0520",
+    "arabic_root": "حضا",
+    "target_lemma": "χυδαῖος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "حضا is stirring up and making fire blaze; Greek abundant or poured forth fits a flaring, overflowing result."
+  },
+  {
+    "pair_id": "GRC_0521",
+    "arabic_root": "خرق",
+    "target_lemma": "ἐγχειρέω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'pierce, break through' can extend to entering into an act; Greek 'to attempt' preserves that deeper sense of pushing into an undertaking."
+  },
+  {
+    "pair_id": "GRC_0522",
+    "arabic_root": "الصرق",
+    "target_lemma": "καλάσιρις",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Greek is a linen garment; Arabic is a thin wafer-like sheet, so both meet in the core of thin spread textile-like layering."
+  },
+  {
+    "pair_id": "GRC_0523",
+    "arabic_root": "رفع",
+    "target_lemma": "ἐρέφω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'raise, lift up' can meet Greek 'cover with a roof' through the act of putting something up over a structure."
+  },
+  {
+    "pair_id": "GRC_0524",
+    "arabic_root": "حزا",
+    "target_lemma": "χάζομαι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "حزا includes driving, collecting, and managing movement; that can plausibly invert into giving way or falling back as the other side of directed motion."
+  },
+  {
+    "pair_id": "GRC_0525",
+    "arabic_root": "الجلي",
+    "target_lemma": "λευγαλέος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "To make clear/reveal and the Greek sense of brightness/gleam can meet through a shared notion of manifest visibility."
+  },
+  {
+    "pair_id": "GRC_0526",
+    "arabic_root": "نصب",
+    "target_lemma": "Νίσιβις",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "نصب=to erect/set up; Νίσιβις=Nisibis (city whose name meant 'pillars' in Semitic). Possible Semitic etymology link"
+  },
+  {
+    "pair_id": "GRC_0527",
+    "arabic_root": "دمر",
+    "target_lemma": "δάμαρ",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic damar = enter without permission; al-damar = ruin, destruction. Greek damar = wife, spouse (from damao 'tame, subdue'). The 'subdue/take/enter' core is shared — and Arabic d-m-r vs Greek damar are phonetically near-identical. The 'taming a wife' or 'entering' bridge is plausible across both Semitic and PIE damage/conquer fields. Strong combined link."
+  }
+]

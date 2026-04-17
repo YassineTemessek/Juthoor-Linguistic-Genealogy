@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0200",
+    "arabic_root": "اللق",
+    "target_lemma": "λάλαξ",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "اللَّقْلاق and babbler/croaker share a direct noisy vocal sense."
+  },
+  {
+    "pair_id": "GRC_0201",
+    "arabic_root": "حلتب",
+    "target_lemma": "χαλεπώτατος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic stingy descriptor and Greek very harsh/difficult meet in a clear severity concept."
+  },
+  {
+    "pair_id": "GRC_0202",
+    "arabic_root": "سجر",
+    "target_lemma": "Σάγρα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic filling by flood or a water-filled place aligns well with the Greek river gloss."
+  },
+  {
+    "pair_id": "GRC_0203",
+    "arabic_root": "زوج",
+    "target_lemma": "Ζεῦγμα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic zawj = pair/couple/yoking together (married couple, pair). Greek Ζεῦγμα = 'joining/yoking' (from ζεύγνυμι 'to yoke'), originally a bridge/place of joining the Euphrates; the toponym's etymology is literally 'yoking'. Arabic zawj and Greek zeugos/zeugma share the conceptual core 'pair/yoke' — this is a well-known Semitic-IE yoking etymon chain (cf. Latin iugum, Sanskrit yuga). The place-name is derived from the very concept matching the Arabic."
+  },
+  {
+    "pair_id": "GRC_0204",
+    "arabic_root": "حاق",
+    "target_lemma": "καχέκτης",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Something that befalls or closes in maps well to an afflicted bodily condition."
+  },
+  {
+    "pair_id": "GRC_0205",
+    "arabic_root": "ساخ",
+    "target_lemma": "ἐσχήκει",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic settling or becoming fixed aligns well with Greek 'had held' through the shared notion of firm holding or established state."
+  },
+  {
+    "pair_id": "GRC_0206",
+    "arabic_root": "القنوت",
+    "target_lemma": "ὀλέκοντο",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'invoked against his enemy' strongly meets Greek destruction/perishing through the curse-to-ruin chain."
+  },
+  {
+    "pair_id": "GRC_0207",
+    "arabic_root": "بلصم",
+    "target_lemma": "ὀποβάλσαμον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Balsam juice; see above."
+  }
+]

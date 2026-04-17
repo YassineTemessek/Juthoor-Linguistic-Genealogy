@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0552",
+    "arabic_root": "استوثن",
+    "target_lemma": "κατασταθέντες",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "استوثن الشيء=بقي (the thing remained/persisted). καθίστημι aorist passive=having been established/set in place. Remaining in place and being established share the concept of stable persistence. Both describe a state of fixity/continuity."
+  },
+  {
+    "pair_id": "GRC_0553",
+    "arabic_root": "حتش",
+    "target_lemma": "ἰχθύεσσι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Gathering or mustering matches the collective swarming image of fish."
+  },
+  {
+    "pair_id": "GRC_0554",
+    "arabic_root": "سفك",
+    "target_lemma": "σκάφη",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "سفك 'to pour out' plausibly relates to the container used for receiving or pouring liquids."
+  },
+  {
+    "pair_id": "GRC_0555",
+    "arabic_root": "حلز",
+    "target_lemma": "χάλαζα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Short compact form can plausibly drift to hard compact pellets such as hail."
+  },
+  {
+    "pair_id": "GRC_0556",
+    "arabic_root": "الثين",
+    "target_lemma": "λανθάνομαι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الثين = مستخرج الدرّة من البحر (the pearl diver, one who extracts pearls from the sea). λανθάνομαι = I am hidden, I am concealed (mediopassive of λανθάνω). The pearl is the hidden treasure concealed in the sea depths. The pearl diver's entire profession is to find what λανθάνει (lies hidden). The hidden-thing-in-the-deep connects both concepts directly."
+  },
+  {
+    "pair_id": "GRC_0557",
+    "arabic_root": "الفتكر",
+    "target_lemma": "ὀλοφύρατο",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'calamity' and Greek 'lamented' are two sides of one event-field: disaster and mourning response."
+  },
+  {
+    "pair_id": "GRC_0558",
+    "arabic_root": "رجو",
+    "target_lemma": "εἴργω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Entering upon the hive and adhering to it gives a plausible concrete bridge to enclosing or being shut in."
+  },
+  {
+    "pair_id": "GRC_0559",
+    "arabic_root": "حتد",
+    "target_lemma": "χθονί",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Stability and remaining in place connect clearly with ground or earth."
+  }
+]

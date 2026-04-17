@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0056",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-tasha = a dull inarticulate person (cognitive/personality description). Greek alalatos = speechless/wordless (from a-privative + laleo = to speak). A dull-witted person and literal speechlessness are different concepts. Phonetics also very distant. No real path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic dull-witted person and Greek voiceless/speechless are different concepts - phonetics also distant."
+  },
+  {
+    "pair_id": "GRC_0057",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-shams = the sun (gloss: its equivalent/counterpart). Greek parallelismos = parallelism/correspondence. The original reasoning uses a secondary metaphorical gloss (its equivalent) from the sun to bridge to Greek parallelism. The primary meaning of al-shams is the sun - using a secondary metaphorical gloss to reach an abstract mathematical concept is a 3-4 step chain. False positive.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sun (al-shams) - secondary gloss equivalent used to reach Greek parallelism is too stretched (3+ steps)."
+  },
+  {
+    "pair_id": "GRC_0058",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ikhsan = humiliation after honor, degradation (honor-loss). Greek aiskhessin = disgrace, shame (from aishkyne = shame/disgrace). Both encode the concept of disgrace/shame - the loss of social standing and honor. Arabic specifically focuses on humiliation AFTER honor (a reversal); Greek aishkyne is the general state of shame. The semantic core is shared: lowering of dignity/honor = shame. One direct step.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic humiliation/degradation and Greek shame/disgrace share the honor-loss semantic core."
+  },
+  {
+    "pair_id": "GRC_0059",
+    "finding": "no_path",
+    "semantic_journey": "Arabic salaqa = to scald/boil. Greek soloikizo = to speak or write incorrectly (from the city Soloi in Cilicia where Greek was spoken badly). Arabic boiling has no connection to grammatical error. The secondary gloss about faulty speech used in the original reasoning is not the established Arabic root meaning. Greek soloikizo is named after a specific city, not from a Semitic root.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic to-boil has no real connection to Greek to-speak-incorrectly - Greek word named after the city Soloi."
+  },
+  {
+    "pair_id": "GRC_0060",
+    "finding": "no_path",
+    "semantic_journey": "Arabic nabat = Nabataeans (the ancient Arab people of Petra). Greek Nabataios = Nabataean. Both use the same ethnic name. This is an ethnonym - a proper name for a people - not a lexical root cognate. Excluded as proper name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both use the Nabataean ethnonym - a Semitic proper name for a people, excluded by methodology."
+  },
+  {
+    "pair_id": "GRC_0061",
+    "finding": "path_found",
+    "semantic_journey": "Arabic malata = softening, making soft/pliable (related to malata = to smooth/soften). Greek maltha = a mixture of wax and pitch used as soft caulking; a soft pliable substance. The core concept is soft/pliable material. Arabic encodes the action of softening; Greek names the soft material itself. Action-to-result: softening -> soft substance. Phonetic similarity (m-l-th vs m-l-th) is strong.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic softening/pliable and Greek soft wax-pitch mixture share the soft/pliable material concept."
+  },
+  {
+    "pair_id": "GRC_0062",
+    "finding": "no_path",
+    "semantic_journey": "Arabic mandal = Mandali (a place in Iraq famous for aromatic wood). Greek mandalos = door bolt, a bar that slides to lock. A named place producing aromatic wood and a door bolt mechanism are semantically very distant. No clear 1-2 step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic aromatic wood/place and Greek door bolt are different semantic fields - no real connection."
+  },
+  {
+    "pair_id": "GRC_0063",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-saqar = fish roe (a food substance). Greek gliskhros = sticky/glutinous/adhesive. The path requires: fish roe -> its texture quality = stickiness -> Greek adjective for sticky. This is 2-3 steps and phonetics are very weak. The Arabic names the substance; Greek is an adjective describing a quality. Different parts of speech encoding different things.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic fish roe to Greek sticky/adhesive requires substance->quality step - too indirect with distant phonetics."
+  }
+]

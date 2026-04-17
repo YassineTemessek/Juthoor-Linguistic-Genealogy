@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0392",
+    "arabic_root": "الامص",
+    "target_lemma": "λιμώσσω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الآمص = طعام يتّخذ من لحم عجل بجلده (food made from calf meat with skin). λιμώσσω = to be hungry, starving, famished. Food and hunger are the two poles of the same nourishment concept — food is what hunger demands, hunger is the absence of food. This is a genuine conceptual pair: the object and its absence define each other."
+  },
+  {
+    "pair_id": "GRC_0393",
+    "arabic_root": "دخش",
+    "target_lemma": "δέχεσθαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "امتلأ لحما preserves a strong receive/fill relation to taking into oneself."
+  },
+  {
+    "pair_id": "GRC_0394",
+    "arabic_root": "الوخز",
+    "target_lemma": "λογχιάζω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "wakhz=prick/stab with spear point; logchiazo=transfix with spear; both are piercing actions; clear semantic chain"
+  },
+  {
+    "pair_id": "GRC_0395",
+    "arabic_root": "كربد",
+    "target_lemma": "Χάρυβδις",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Karbada (rushing in, hastening) vs Charybdis (swirling whirlpool) - shared swift rushing motion"
+  },
+  {
+    "pair_id": "GRC_0396",
+    "arabic_root": "حكي",
+    "target_lemma": "καχέκτης",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "Imitation of someone's act or form aligns with a habitual bodily state or manner."
+  },
+  {
+    "pair_id": "GRC_0397",
+    "arabic_root": "الشعث",
+    "target_lemma": "λύσασθαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic dishevelment and spread can drift conceptually toward loosening or undoing, which fits Greek to loosen."
+  },
+  {
+    "pair_id": "GRC_0398",
+    "arabic_root": "الجزاء",
+    "target_lemma": "ἐκλογίζομαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "Exacting a debt and calculating it out share a credible settlement-accounting chain."
+  },
+  {
+    "pair_id": "GRC_0399",
+    "arabic_root": "الصعصع",
+    "target_lemma": "ἅλωσις",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الصعصع=ranks displaced from positions, scattered apart (صفوفهم زالت عن مواقفها / ذهبوا صعاصع متفرقة). ἅλωσις=capture, conquest. Scattering of ranks is the RESULT of conquest/capture. Strong cause-effect semantic link in the military domain."
+  }
+]

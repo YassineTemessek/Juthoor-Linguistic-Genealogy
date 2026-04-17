@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0736",
+    "arabic_root": "الشيص",
+    "target_lemma": "ἅλωσις",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الشِّياص = شراسة الخلق (ferocity of character); مشايصة = منافرة (hostility, mutual aversion). ἅλωσις = capture, conquest. Ferocity and hostility lead naturally to conflict, and conflict leads to conquest. The chain ferocity→aggression→conquest is a genuine causal-semantic pathway."
+  },
+  {
+    "pair_id": "GRC_0737",
+    "arabic_root": "الكثنه",
+    "target_lemma": "κολοκύνθινος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Plausible crafted-plant overlap: Arabic is an object made from fresh reeds/branches; Greek means made from gourds."
+  },
+  {
+    "pair_id": "GRC_0738",
+    "arabic_root": "الخشب",
+    "target_lemma": "λέχεσι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الخشب: ما غلظ من العيدان (thick/coarse wood/timber). λέχος=bed, couch. Beds are made of wood. This is a clear material-to-product relationship: خشب (timber) → λέχος (bed/wooden furniture). Direct manufacturing chain."
+  },
+  {
+    "pair_id": "GRC_0739",
+    "arabic_root": "الكدس",
+    "target_lemma": "Σελευκίδης",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Plausible succession link: Arabic includes coming from behind, Greek means descendant or child of Seleucus."
+  },
+  {
+    "pair_id": "GRC_0740",
+    "arabic_root": "جعفليق",
+    "target_lemma": "ἐγκέφαλος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic ja'falieq = bishop or chief of Christians (al-jathaliq, catholicos). Greek enkephalos = brain (en+kephale 'in the head'). Bishop-as-head-of-church and brain-in-head share the 'head/governing center' core. Plausible deep link, especially since 'jathaliq' may itself be Greek-derived."
+  },
+  {
+    "pair_id": "GRC_0741",
+    "arabic_root": "خزع",
+    "target_lemma": "σχίζα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic khaza'a = to take away, cut off, separate. Greek schiza = a piece of wood cut off, splinter, lath. Cutting off action and the cut-off piece are direct cause-result. Phonetic resemblance khz/schz is notable. Strong link."
+  },
+  {
+    "pair_id": "GRC_0742",
+    "arabic_root": "نجخ",
+    "target_lemma": "κυνάγχη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "نجخ=to make lustful/throat noise; κυνάγχη=tonsilitis/throat disease. Possible semantic link via throat affliction"
+  },
+  {
+    "pair_id": "GRC_0743",
+    "arabic_root": "الكثحه",
+    "target_lemma": "χαλκοθήκη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Plausible object-core link: Arabic includes gathering, Greek is a case that gathers/stores valuables."
+  }
+]

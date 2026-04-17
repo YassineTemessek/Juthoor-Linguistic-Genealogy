@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0208",
+    "arabic_root": "غزو",
+    "target_lemma": "Γάζα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic ghazu = raid/invade; Greek Gaza from Semitic 'azza (strong). Both are Semitic substrate, shared place-name etymology plausible."
+  },
+  {
+    "pair_id": "GRC_0209",
+    "arabic_root": "القعص",
+    "target_lemma": "ἕλιξ",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic انثنى matches the Greek notion of something twisted or winding."
+  },
+  {
+    "pair_id": "GRC_0210",
+    "arabic_root": "خوض",
+    "target_lemma": "χυδαῖος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "خوض is entering or wading into something, and χυδαῖος is poured forth abundantly; both meet strongly in the image of fluid spreading and immersion."
+  },
+  {
+    "pair_id": "GRC_0211",
+    "arabic_root": "بسن",
+    "target_lemma": "Βυσναῖοι",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Βυσναῖοι denotes the people of Bysna/Beisan, which aligns well with the Arabic gloss naming Beisan as a place in Syria."
+  },
+  {
+    "pair_id": "GRC_0212",
+    "arabic_root": "خشم",
+    "target_lemma": "χάσματα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خيشوم and nasal openings align well with Greek chasms as openings; concrete aperture is the common core."
+  },
+  {
+    "pair_id": "GRC_0213",
+    "arabic_root": "الصعصع",
+    "target_lemma": "ἀλλάσσω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ἀλλάσσω means to change or alter, and the Arabic gloss centers on rows moving from their places and people going off scattered; both share the core of positional change."
+  },
+  {
+    "pair_id": "GRC_0214",
+    "arabic_root": "الغاغ",
+    "target_lemma": "γάλαγγα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic includes a plant gloss and Greek names a plant; species differ, but plant-to-plant is a clear masadiq chain."
+  },
+  {
+    "pair_id": "GRC_0215",
+    "arabic_root": "كلف",
+    "target_lemma": "κέλυφος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Kalaf - skin discoloration/covering vs 'sheath, case, covering' - strong covering/envelope match"
+  }
+]

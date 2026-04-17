@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0328",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الفتيت/الفتوت = crumbled bread or grain food made by crushing/breaking with fingers — a specific ground/broken grain food. Greek ἄλφιτον = barley groats, barley flour (grain processed into coarse meal). Both refer to GRAIN PROCESSED BY GRINDING/CRUSHING into coarse meal or crumbs. The semantic journey: crumbled grain food (finger-broken) -> ground grain meal (mill-ground). Both are in the field of processed grain foodstuffs. Direct material culture match.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic crumbled grain food (فتيت) and Greek barley groats (ἄλφιτον) both name crushed/processed grain food — a clear material culture cognate."
+  },
+  {
+    "pair_id": "GRC_0329",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفانوس = lantern (acknowledged loanword from Greek φανός/φαίνω). Greek διαφανής = transparent, letting light through (from δια + φαίνω = to shine through). Both derive from the Greek root φαίνω (to shine, appear). This is a SHARED LOANWORD situation: Arabic الفانوس was borrowed FROM Greek, so comparing it back to Greek is circular. Arabic took the Greek word; they are not independent cognates.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic الفانوس is a known Greek loanword (from φαίνω) — comparing it back to Greek διαφανής is circular, not a genuine Arabic-Greek cognate."
+  },
+  {
+    "pair_id": "GRC_0330",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القرف = bark/peel of a tree or pomegranate; skin/husk that peels off; dried outer layer. Greek κάρφος = dry twig, dry arid stalk, chip of dried wood. Both refer to DRY OUTER PLANT MATERIAL that has separated from the main plant — bark/peel on the Arabic side, dry twig/chip on the Greek. The semantic journey: bark/peeled layer of tree -> dry outer piece of tree (twig, chip). Both are in the field of dried detached plant material.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic tree bark/peel and Greek dry twig/chip both describe dried outer plant material that has separated from the living plant."
+  },
+  {
+    "pair_id": "GRC_0331",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خروة/خرو = castor oil plant (Ricinus communis) or similar plant. Greek κίχορα = chicory (Cichorium intybus). These are two different plant species. Matching two plant names as cognates solely because both are plants is translation equivalence, not cognacy. No shared meaning path beyond the general category of plant.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two different plant species in the same botanical category does not constitute cognacy — different plants, different uses, no shared path."
+  },
+  {
+    "pair_id": "GRC_0332",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الخزع = to cut, split, sever (cutting apart). Greek σχίζα = a split piece of wood, a chip, a splinter (from σχίζω = to split). The semantic journey: the ACTION of cutting/splitting -> the RESULT (split piece of wood). This is a clean 1-step action-to-result relationship. Arabic preserves the action (to cut/split), Greek preserves the result (the split piece).",
+    "journey_type": "semantic_drift",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic cutting/splitting (خزع) maps directly to Greek split-piece (σχίζα) — action to result in a single step."
+  },
+  {
+    "pair_id": "GRC_0333",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رازم/الرزم = an emaciated camel so weakened it cannot rise; also to be prostrate with exhaustion. Greek μαρασμός = wasting away, progressive bodily emaciation, atrophy (medical term). Both describe PROGRESSIVE BODILY WASTING leading to inability to function. Arabic = the specific animal case (camel unable to rise from emaciation); Greek = the generalized medical concept. The step: specific animal emaciation -> generalized bodily wasting process.",
+    "journey_type": "generalization",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic emaciated-camel-unable-to-rise and Greek medical wasting/atrophy (marasmos) share the core of progressive bodily emaciation to the point of collapse."
+  },
+  {
+    "pair_id": "GRC_0334",
+    "finding": "no_path",
+    "semantic_journey": "Arabic فلقح = to drink all remaining liquid in a vessel, to drain completely. Greek φιλοπότης = lover of drinking, drunkard (from φίλο + πότης = lover + drinker). Both are in the drinking field, but the Arabic describes a specific ACTION (draining a vessel), while Greek describes a CHARACTER TYPE (person who loves drinking). Draining a vessel -> drunkard requires: extreme drinking action -> habitual character -> person defined by that character. 3 steps. Also no phonetic correspondence between فلقح and φιλοπ-.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Draining a vessel and being a drunkard by character are different semantic levels requiring 3+ steps; no genuine path."
+  },
+  {
+    "pair_id": "GRC_0335",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الطنء = a disease or condition of the belly/abdomen involving water retention or fluid; also used for stagnant water in certain contexts. Greek τέναγος = shallow water, shallow ford, shoal (still/stagnant water area). Both relate to STILL/RETAINED WATER: Arabic = pathological water retention in the body; Greek = shallow stagnant water in geography. The step: retained/stagnant bodily water -> shallow stagnant body of water. A plausible 1-step body-to-landscape metaphor.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic abdominal water retention and Greek shallow stagnant water share the core of retained/still water — body to landscape metaphor."
+  }
+]

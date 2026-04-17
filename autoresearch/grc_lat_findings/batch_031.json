@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0248",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حملج (hamlaja) = to twist tightly, to spin tightly; to wind tightly around. Greek αἰχμαλόω = to take prisoner, to capture in war (from αἰχμάλωτος = 'taken with the spear'). The reasoning: tight twisting → binding → captivity. The chain twist → bind someone → take prisoner is a clear 2-step path: tightly winding rope around someone (binding them) is the ancient method of taking prisoners.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic tight-twisting/winding (hamlaja) maps to Greek taking-prisoner (aikhmaloo) through binding — twisting rope around captives."
+  },
+  {
+    "pair_id": "GRC_0249",
+    "finding": "path_found",
+    "semantic_journey": "Arabic كرف (karrafa) = to sniff, smell; also: to become dry and shriveled (from dryness). Greek κάρφος = a dry twig, withered stalk, dry sliver of wood or straw. Both encode dryness/desiccation. Arabic drying/shriveling → Greek dry twig/stalk is a direct 1-step match: both describe the state of desiccated plant material.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic dryness/shriveling (karf) and Greek dry twig/stalk (karphos) share the concept of desiccated plant material."
+  },
+  {
+    "pair_id": "GRC_0250",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حمس (hamas) = ardor, zeal, bravery, intense passionate commitment. Greek αἰχμάς = spear-points. The reasoning: martial ardor → spear weapon. While warriors with ardor carry spears, the connection is: Arabic bravery/zeal → warrior → weapon of warrior → spear-point — that is 3+ steps. The Greek word simply names the weapon; the Arabic names the emotional/motivational state. These are in different semantic categories.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic martial ardor/zeal and Greek spear-points are in different semantic categories — emotional state vs. physical weapon."
+  },
+  {
+    "pair_id": "GRC_0251",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القرضي (al-qardiy) = a wild tree or shrub. Greek λυκόσκορδον = wild leek (λύκος 'wolf/wild' + σκόρδον 'garlic/leek'). Both are wild plants, but different plants in different families. Plant-category matching is insufficient. Greek λυκόσκορδον is a transparent compound (wolf-garlic = wild garlic/leek). No Semitic path to this Greek compound word.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic wild shrub and Greek wolf-garlic (wild leek) share only the botanical-wild category; Greek compound has transparent internal etymology."
+  },
+  {
+    "pair_id": "GRC_0252",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دخم (dakhama) = to push, thrust; also: a kind of intercourse. Greek διαδέχομαι = to receive in succession, succeed to (see GRC_0176). The reasoning: mutual-thrusting → exchange → succession. Arabic mutual pushing is physical force, while Greek succession is abstract legal replacement. Same rejection as GRC_0176: 3+ steps between physical push and abstract succession.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical thrusting and Greek legal succession are too many conceptual steps apart."
+  },
+  {
+    "pair_id": "GRC_0253",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكرفي (al-karfiy) = foam rising on boiling liquid; the white froth on a pot. Greek λευκογραφέω = to paint in white, to write in white. The reasoning: white pot-foam → painting white. Arabic foam is a temporary liquid phenomenon; Greek painting-white is a deliberate pigment application. The path: boiling foam → white color → applying white pigment — that is 3 steps, and the connection between ephemeral foam and deliberate painting is too weak.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic boiling foam and Greek white-painting share only the color white; the actions (accidental foam vs. deliberate painting) are unrelated."
+  },
+  {
+    "pair_id": "GRC_0254",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سقت (saqata) = without blessing, devoid of (lacking), fallen/dropped. Greek σχέτε = hold! have! (aorist imperative of ἔχω). The reasoning: lacking → negation of having → 'have' as negation cognate. While lacking and having are opposites, a true negation cognate requires the Arabic root to encode BOTH sides of a concept. Arabic سقت means 'fell/dropped' or 'devoid of' — it is a deficiency word, not a bilateral concept. The negation-cognate claim is too weak here.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic deficiency/lacking and Greek hold/have are opposites but not a valid negation-cognate — the Arabic root does not encode both sides of the concept."
+  },
+  {
+    "pair_id": "GRC_0255",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثنط (al-thant) = splitting, cracking open of the earth. Greek Θάνατος = Death (personification of death in Greek mythology). The reasoning: cosmic splitting/cracking → death as the great splitting. While poetic, this is a 3+ step metaphorical overreach: earth-splitting → destruction → death → divine personification of death. Θάνατος has its own Greek etymology from θνῄσκω (to die). Excluded: Θάνατος is a proper divine name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Θάνατος is a proper Greek divine name (from thnesko 'to die') with transparent Greek etymology; Arabic earth-splitting is an unrelated concept."
+  }
+]

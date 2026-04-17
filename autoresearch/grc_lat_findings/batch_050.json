@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0400",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خنطه = distressing, pressing, constraining (oppressive pressure applied to someone). Greek εἴχοντο = they held themselves to, they clung to, they grasped (imperfect middle of ἔχω). The original reasoning maps oppressive pressure to being held/constrained. But Arabic applies force FROM OUTSIDE (oppressor pressing victim); Greek is active SELF-HOLDING (they held themselves to something). These are opposite directionalities: external force vs internal clinging. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic external oppressive pressure and Greek active self-clinging are opposite directionalities of force — not a semantic path."
+  },
+  {
+    "pair_id": "GRC_0401",
+    "finding": "no_path",
+    "semantic_journey": "Arabic بسطه = to spread out, extend broadly; also to overpower/set upon someone. Greek βιάζεσθαι = to be forced, to be constrained; to use force. The original reasoning maps overpowering to being forced. But Arabic spreading/overpowering is an ACTIVE force applied; Greek being-forced is PASSIVE receiving of force. Also Arabic بسطة means broadness/spreading which is entirely different from force. Multiple conflated meanings in different directions.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic spreading/overpowering conflates two different Arabic meanings, and the forced/passive Greek reading mismatches Arabic's active application of force."
+  },
+  {
+    "pair_id": "GRC_0402",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حتد = to be fixed, stay put, remain in place (fixity/stationary quality). Greek ἰχθυδόκος = a fish-receiver, a vessel or pond that receives fish (from ἰχθύς + δέχομαι). The original reasoning maps fixity to containing fish. But being stationary/fixed and being a fish-receiving vessel require: fixed -> stays in one place -> water stays -> fish stay in water -> fish-pond. 4+ steps. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic fixity/staying-put and Greek fish-receiving vessel require 4+ drift steps with no credible direct path."
+  },
+  {
+    "pair_id": "GRC_0403",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الدسم = grease, fat, oiliness (rich fatty quality of food). Greek μελιηδής = honey-sweet, sweet as honey. Both are pleasant rich food qualities, but grease/fat and honey-sweetness are different sensory qualities (texture/richness vs taste). The path greasy richness -> pleasant quality -> sweet is 3 steps. No direct semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic greasiness/fat and Greek honey-sweetness are different sensory qualities with no direct path — both pleasant but in different domains."
+  },
+  {
+    "pair_id": "GRC_0404",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الرقيب = a watcher, guard, sentinel (one who observes vigilantly). Greek πολιορκέω = to besiege, blockade a city (sustained military encirclement). The original reasoning maps guarding to besieging as both involving sustained vigilant observation with control intent. But guarding PROTECTS from outside; besieging ATTACKS from outside. These are opposite roles in military contexts. A guard defends; a besieger attacks. No genuine path despite both involving watching.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic guarding/protecting watcher and Greek besieging/attacking encirclement are opposite military roles despite both involving watching."
+  },
+  {
+    "pair_id": "GRC_0405",
+    "finding": "path_found",
+    "semantic_journey": "Arabic سقرقع = vigorous striking/mixing, repeated knocking together (intense repeated contact between objects). Greek συγκρούομαι = to clash together, collide, fight (from σύν + κρούω = together + strike). Both directly encode THINGS STRIKING/CRASHING TOGETHER: Arabic = the vigorous striking/mixing action; Greek = the collision/clash. A direct preservation of the knocking-together concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic vigorous repeated striking (سقرقع) and Greek collision/clash (συγκρούομαι) both encode things violently coming together in impact."
+  },
+  {
+    "pair_id": "GRC_0406",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الطنء = a fatal condition/disease of the belly; specifically a state from which one does not survive (لا يعيش صاحبها = its possessor does not live). Greek τελευτή = end, death, completion of life. Both encode LETHAL TERMINAL OUTCOME: Arabic = a condition that ends in death; Greek = the death/end itself. The step: fatal condition -> the death that results. A 1-step cause-to-result path where Arabic preserves the cause (fatal disease) and Greek preserves the result (death/end).",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fatal condition (الطنء, from which one does not survive) and Greek death/end (τελευτή) share the terminal lethal outcome — cause and result."
+  },
+  {
+    "pair_id": "GRC_0407",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حلتب = a miser, niggardly person (one who withholds/hoards). Greek χαλέπτω = to oppress, cause distress, make harsh (to press hard upon someone). The original reasoning maps miserliness to oppressive harshness. But a miser withholds for themselves (self-directed); an oppressor presses down on others (other-directed). These are different actions in different directions. The step miser -> harsh to others requires: withholds -> is mean -> causes distress to others. 3 steps, not clean.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic self-directed hoarding (miser) and Greek other-directed oppression are different actions in different directions."
+  }
+]

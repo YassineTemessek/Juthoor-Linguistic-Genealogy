@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0608",
+    "arabic_root": "خزعل",
+    "target_lemma": "σχολαῖος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic خزعل: halting limping gait (خزعال = lameness). Greek σχολαῖος: leisurely, slow pace. Both indicate impeded/reduced movement speed."
+  },
+  {
+    "pair_id": "GRC_0609",
+    "arabic_root": "خزق",
+    "target_lemma": "ἄνδιχα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic خزق: to pierce/impale sharply, to split open. Greek ἄνδιχα: asunder/in twain. Both involve forcibly dividing through material."
+  },
+  {
+    "pair_id": "GRC_0610",
+    "arabic_root": "داف",
+    "target_lemma": "δάπτω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic داف (دأف): to finish off/dispatch a prisoner (kill). Greek δάπτω: to devour, as wild beasts. Both involve violent lethal action on prey/victim."
+  },
+  {
+    "pair_id": "GRC_0611",
+    "arabic_root": "خسق",
+    "target_lemma": "χάσκω",
+    "lang": "grc",
+    "original_score": 0.54,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "خسق includes sinking into or opening the ground under hoof or tread, and χάσκω is to gape open; the chain is fairly clear."
+  },
+  {
+    "pair_id": "GRC_0612",
+    "arabic_root": "الاعفث",
+    "target_lemma": "λειφθείη",
+    "lang": "grc",
+    "original_score": 0.54,
+    "original_method": "combined",
+    "original_reasoning": "Arabic means a man much exposed or uncovered; Greek means be left behind, yielding a plausible uncovered-leftover conceptual chain."
+  },
+  {
+    "pair_id": "GRC_0613",
+    "arabic_root": "الثنتل",
+    "target_lemma": "καταλυθέν",
+    "lang": "grc",
+    "original_score": 0.54,
+    "original_method": "combined",
+    "original_reasoning": "Spoiling and becoming foul after cleansing maps plausibly onto being undone or dissolved."
+  },
+  {
+    "pair_id": "GRC_0614",
+    "arabic_root": "الفقي",
+    "target_lemma": "γλύφω",
+    "lang": "grc",
+    "original_score": 0.53,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "مَحارِث work by cutting earth; Greek 'carve, cut, engrave' preserves the cutting action directly."
+  },
+  {
+    "pair_id": "GRC_0615",
+    "arabic_root": "الرفاهه",
+    "target_lemma": "ἁλιπόρφυρος",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ἁλιπόρφυρος means sea-purple or purple-colored; Arabic رفاهة centers on ease, luxury, and refined comfort, which matches the prestige-luxury side of purple."
+  }
+]

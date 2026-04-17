@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0792",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dhamat = emaciation, change of bodily state. Greek diaitematoon = of regimens, ways of life (genitive plural of diaita = regimen/lifestyle). Emaciation (bodily state change) and lifestyle regimens (prescribed ways of living) are adjacent (regimens can cause bodily change) but 3 steps apart: emaciation -> bodily-change-from-diet -> diet -> regimen. Different domains.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic emaciation (bodily state) and Greek lifestyle regimens are adjacent but 3 steps apart; bodily state and prescribed lifestyle are different categories."
+  },
+  {
+    "pair_id": "GRC_0793",
+    "finding": "no_path",
+    "semantic_journey": "Arabic baghdad = Baghdad (from Iranian baga-data). Greek Bagadates = an Iranian-Greek proper name (same baga-data root). Both from the same Iranian root directly. Parallel Iranian borrowings, not Arabic-to-Greek cognation. Same analysis as GRC_0693. Proper name, shared loanword from Iranian.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Both Arabic Baghdad and Greek Bagadates derive directly from Iranian baga-data; parallel Iranian borrowings, not Arabic-to-Greek cognation."
+  },
+  {
+    "pair_id": "GRC_0794",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ghafara = forgive/cover (root gh-f-r). Greek Gaphara = a place in North Africa (Punic substrate). Same analysis as GRC_0660. Even if the toponym has a Semitic covering-root, this is Punic substrate toponymy not an Arabic-Greek cognate. Proper name exclusion.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gaphara is a North African proper toponym with possible Punic/Semitic substrate; substrate toponymy is not an Arabic-Greek cognate."
+  },
+  {
+    "pair_id": "GRC_0795",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khiba/khaba = to make/set up a tent (a concealing/hiding structure); also khiba = a hiding place. Greek khabos = a muzzle (Hesychius; a covering that restrains the mouth). Core: covering structure that conceals or restrains. Arabic encodes the tent/hiding-structure; Greek specializes to a specific restraining-covering for the mouth. 1-step specialization: general-concealment-covering -> specific-covering-of-mouth.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic tent/hiding-place (covering structure) and Greek muzzle (restraining covering) share the core of a covering that conceals or restrains."
+  },
+  {
+    "pair_id": "GRC_0796",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shshqal = assaying/evaluating dinars (testing precious metal purity). Greek isoskeles = equal-sided (isos=equal + skelos=leg). Metal-assaying and geometric equal-sidedness are adjacent in the measurement domain but different: assaying tests purity/value; equal-sidedness is a geometric property. The measurement/balance bridge requires 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic dinar-assaying and Greek equal-sided are adjacent in measurement but in different domains (value-testing vs geometric property) with no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0797",
+    "finding": "path_found",
+    "semantic_journey": "Arabic makatha = to linger, delay, tarry (stay a long time in a place). Greek mokhteo = to be weary with toil, to labor hard. Core: prolonged effortful engagement. Lingering/tarrying implies extended stay requiring effort; laboring implies prolonged effortful work. 2-step drift: lingering/staying-long -> prolonged-effort -> weariness-from-toil.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic lingering/tarrying and Greek laboring/toiling share the concept of prolonged engagement over time that produces weariness."
+  },
+  {
+    "pair_id": "GRC_0798",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qaml = swollen belly (bulging protrusion). Greek Leukimme = a promontory/cape in Epirus (proper name). A swollen belly and a geographic promontory are both protrusions but in different domains (bodily vs topographic). Proper name exclusion applies; Leukimme is a Greek toponym.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic swollen belly and Greek promontory Leukimme are both protrusions in different domains; proper name exclusion applies."
+  },
+  {
+    "pair_id": "GRC_0799",
+    "finding": "path_found",
+    "semantic_journey": "Arabic makhadan = obscene exchange, indecent conversation (from khudhn = obscenity). Greek khodanos = butt, buttocks (Hesychius). Both occupy the domain of coarse bodily obscenity: Arabic encodes obscene speech; Greek encodes the body part most associated with coarse humor. 1-step drift: obscene-speech -> body-part-encoding-obscenity. Same domain as GRC_0641.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic obscene exchange and Greek buttocks share the coarse-bodily-obscenity domain; similar to GRC_0641 analysis."
+  }
+]

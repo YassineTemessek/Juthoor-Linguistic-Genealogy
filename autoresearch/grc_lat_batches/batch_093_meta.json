@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0744",
+    "arabic_root": "العتريف",
+    "target_lemma": "πολύτροφος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "العتريف من الجمال=الشديد (strong, robust camel). πολύτροφος=well-fed, plump. A strong robust animal is often well-nourished. The causal link (good feeding produces strong animals) makes this a solid domain connection."
+  },
+  {
+    "pair_id": "GRC_0745",
+    "arabic_root": "حمرقه",
+    "target_lemma": "χιμάραρχος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic gloss is wool; Greek is lead goat. Both sit in the goat-fleece pastoral domain, so the conceptual field is plausible."
+  },
+  {
+    "pair_id": "GRC_0746",
+    "arabic_root": "القمل",
+    "target_lemma": "Λάκμων",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic bulk and swelling can map to the idea of a high massive peak, so there is a plausible landform bridge."
+  },
+  {
+    "pair_id": "GRC_0747",
+    "arabic_root": "الفود",
+    "target_lemma": "εἰλήφατε",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic benefit/usefulness can plausibly meet Greek you have taken/received through acquiring benefit."
+  },
+  {
+    "pair_id": "GRC_0748",
+    "arabic_root": "القط",
+    "target_lemma": "τηλικαύται",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qaṭṭ marks time-depth in the past, and Greek points to such great age; the time axis is shared."
+  },
+  {
+    "pair_id": "GRC_0749",
+    "arabic_root": "خزم",
+    "target_lemma": "αἰχμάζω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic khazm = nose-ring, hair-circle through nose-cartilage (the piercing/perforating action). Greek aichmazo = throw/hurl a spear (from aichme 'spear-point'). Both center on the sharp piercing implement/action. Strong concrete link."
+  },
+  {
+    "pair_id": "GRC_0750",
+    "arabic_root": "القريه",
+    "target_lemma": "λέχριος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic focuses on gathering cud into one cheek, a clearly lateral or sideward placement, which plausibly matches Greek slanting or crosswise."
+  },
+  {
+    "pair_id": "GRC_0751",
+    "arabic_root": "دربا",
+    "target_lemma": "διατρίβω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic rolling downward can plausibly drift into rubbing away, wearing down, or consuming through repeated motion."
+  }
+]

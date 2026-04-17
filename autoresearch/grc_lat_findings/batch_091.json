@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0728",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kartaa = meddling, interfering in what does not concern one. Greek okhlokratia = mob rule (okhlos+kratos). Individual meddler and collective mob-rule are both social disruptions but at different scales with no 2-step derivation path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic individual-meddling and Greek mob-rule are both social disruptions but at different scales with no derivation path."
+  },
+  {
+    "pair_id": "GRC_0729",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shakhama = milk souring (same root as GRC_0654). Greek paskhoimi = I would suffer/undergo (optative of paskhein). Milk souring is a specific physical change; Greek paskhein is a general experiential verb. Categorically different with no valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic milk-souring (specific quality change) and Greek undergo/suffer (general experiential verb) are categorically different."
+  },
+  {
+    "pair_id": "GRC_0730",
+    "finding": "path_found",
+    "semantic_journey": "Arabic dafaa = to push, drive, thrust. Greek depho = to soften by kneading, to work material by pressing. Core: applying pressing force to material. 1-step specialization: general-pushing-force -> specific-pressing/kneading-of-material.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic pushing/driving force and Greek kneading/pressing share the application of pressing force, with Greek specializing to working soft material."
+  },
+  {
+    "pair_id": "GRC_0731",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-katw = to rise above an enemy, gain superiority. Greek telikaytai = so great, of such greatness. Rising-above-enemy and being-so-great are in different categories. 3+ steps: rising-above -> superior -> being-great.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic competitive-superiority and Greek magnitude-adjective are in different categories with no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0732",
+    "finding": "no_path",
+    "semantic_journey": "Arabic kharz = stringing beads, threading (creating ordered joining). Greek diakhorizom ai = to separate oneself (middle of diakhorizo). Joining and self-separating are opposite processes. Negation-cognate possible but phonetic match is weak and evidence insufficient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic threading/stringing (joining) and Greek self-separating (splitting) are opposites; negation-cognate insufficient without stronger phonetic evidence."
+  },
+  {
+    "pair_id": "GRC_0733",
+    "finding": "path_found",
+    "semantic_journey": "Arabic kalata = to gather/collect, bring together. Greek kalathos = a wicker basket with narrow base for collecting produce. Core: gathering/collection. 1-step action-to-instrument: gathering-action -> vessel-for-gathering.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic gathering/collecting and Greek wicker-gathering-basket share the collecting concept; Arabic is the action, Greek is the instrument."
+  },
+  {
+    "pair_id": "GRC_0734",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-khawa = paid his debt, settled what was owed (qada daynahu). Greek Lakhesis = the Allotter among the Fates who assigns each person their due portion. Core: assigning/settling what is due. Arabic settling-a-debt maps to Greek allotting-due-portion. 1-step direct preservation.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic settling-of-debts and Greek Fate-the-Allotter share the concept of each party receiving their due portion."
+  },
+  {
+    "pair_id": "GRC_0735",
+    "finding": "path_found",
+    "semantic_journey": "Arabic safad = iron skewer for grilling; sifad = mating/mounting of male on female (rhythmic bodily action). Greek sphadazo = to struggle convulsively, kick about violently. Core: violent rhythmic bodily motion. 1-step direct preservation: violent-rhythmic-bodily-motion.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic mounting/mating (rhythmic bodily motion) and Greek convulsive-struggling share violent rhythmic bodily motion as core concept."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0320",
+    "finding": "no_path",
+    "semantic_journey": "Arabic صدر = chest/breast, front, chief seat, to preside. Greek συνέδριον = council, assembly (from σύν + ἕδρα = seat together). The reasoning maps Arabic chief-seat/presiding to Greek sitting-together in assembly. But the semantic fields diverge: Arabic encodes the anatomical chest/front and metaphorically the place of presiding authority; Greek encodes communal seated assembly. Shared word ἕδρα (seat) in Greek has no etymological connection to Arabic صدر. This is forced: both involve seating/authority but through entirely different lexical paths.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic chest/presiding and Greek communal assembly share only the vague notion of authoritative positioning, not a genuine semantic path."
+  },
+  {
+    "pair_id": "GRC_0321",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكور = a bee-hive, a camel saddle, a mass/heap. The gloss mentions honey only indirectly through beehive. Greek γλυκερός = sweet. The original reasoning relies on Arabic including honey. But الكور means the HIVE or VESSEL (beehive/saddle), not the honey itself. The path hive -> honey -> sweet requires 2 steps, and the first step is not attested in the Arabic root meaning. No direct path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic beehive/saddle does not encode sweetness — the honey connection is indirect and requires 2+ drift steps."
+  },
+  {
+    "pair_id": "GRC_0322",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خيل = horses (collective). Greek Ἔχεκλος = a proper name (centaur in mythology). A proper mythological name cannot be treated as a common lexical item for semantic comparison. Even if centaurs are horse-related, this is a proper name exclusion case — proper names, including mythological figures, are excluded from cognacy analysis per methodology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Ἔχεκλος is a mythological proper name — proper names are excluded from cognacy analysis by methodology."
+  },
+  {
+    "pair_id": "GRC_0323",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ذرب = sharpness, keenness (of a blade or tongue); also caustic/sharp quality. Greek διατρίβω = to rub hard, wear away, grind down (from δια + τρίβω = to rub). The semantic journey: sharp/abrasive quality -> the action of grinding/abrading. Sharpness is what causes abrasion; διατρίβω is the result of applying something sharp/abrasive. This is a 1-step action-quality relationship: the abrasive quality -> the abrading process.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sharpness/keenness and Greek hard-rubbing/wearing-away share the core of abrasive force applied to a surface."
+  },
+  {
+    "pair_id": "GRC_0324",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ملل = to be weary/bored; to dictate (imlaʾ); also to continue/prolong tediously. Greek διαμέλλω = to delay continually, to keep putting off. The semantic journey: being weary from prolonged activity -> prolonging/delaying (the action that causes weariness). Both encode TEDIOUS PROLONGATION. Arabic ملل encodes the resulting state (weariness from repetition); Greek encodes the action (continuous delaying). A 1-step cause-effect relationship.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic weariness/tedium and Greek continuous delay share the core of prolonged, drawn-out inaction or repetition."
+  },
+  {
+    "pair_id": "GRC_0325",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القشم = ungrazed/unfelled pasture (pasture not yet exploited). Greek λεῖμαξ = a large slug/snail. The original reasoning maps pasture to meadowland. But Greek λεῖμαξ is not meadowland — it is a SLUG. If this were λειμών (meadow) the match might work, but λεῖμαξ is an animal term. No connection between ungrazed pasture and a slug.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic ungrazed pasture and Greek slug (λεῖμαξ) are entirely unrelated — the original reasoner apparently confused λεῖμαξ with λειμών (meadow)."
+  },
+  {
+    "pair_id": "GRC_0326",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الأزفلى = a crowd/multitude; also anger, sharpness, violence of character. Greek ζάφελος = violent, headstrong, impetuous. The semantic journey: anger/sharpness of character -> violent/headstrong behavior. Arabic preserves the EMOTIONAL STATE (anger, sharp-tempered); Greek preserves the BEHAVIORAL EXPRESSION (violent, impetuous). A clean 1-step emotion-to-behavior mapping.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic anger/sharpness of character and Greek violent/impetuous behavior share the core of intense forceful temperament."
+  },
+  {
+    "pair_id": "GRC_0327",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البراغيل = settlements near water, land between cultivated and desert. Greek Βαργύλια = a city in Caria. This is a proper place name. Proper names cannot be analyzed as common lexical cognates — the methodology explicitly excludes proper names. Moreover, matching any Arabic word for settlement to any Greek city name is not a finding.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Βαργύλια is a proper place name — proper names are excluded from cognacy analysis by methodology."
+  }
+]

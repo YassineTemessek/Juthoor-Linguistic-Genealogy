@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0816",
+    "arabic_root": "نسطاس",
+    "target_lemma": "γνωστός",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "نسطاس=physician/knower (from Greek); γνωστός=known. Both from gnosis root, weak semantic link"
+  },
+  {
+    "pair_id": "GRC_0817",
+    "arabic_root": "سلج",
+    "target_lemma": "συλλέγομαι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Taking in by swallowing can plausibly drift to gathering/collecting as an intake concept."
+  },
+  {
+    "pair_id": "GRC_0818",
+    "arabic_root": "الفول",
+    "target_lemma": "ἐλαιόφυλλον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic فول is a plant term and Greek target is also a plant designation; direct botanical category overlap is plausible."
+  },
+  {
+    "pair_id": "GRC_0819",
+    "arabic_root": "قرف",
+    "target_lemma": "κάρφος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qarf = 'bark, earning; also skin/hide'; Greek = 'dry twig, chip of wood, dry stalk'. Plausible semantic echo via dry bark/hide shavings."
+  },
+  {
+    "pair_id": "GRC_0820",
+    "arabic_root": "كبر",
+    "target_lemma": "Κάβειροι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "'Great, mighty' vs Cabeiri - the Great Gods of Samothrace explicitly means 'the great ones' (same root k-b-r)"
+  },
+  {
+    "pair_id": "GRC_0821",
+    "arabic_root": "الشناعه",
+    "target_lemma": "λυσαλγῶν",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الشناعة: شنيع (ugly, repulsive, abominable). λυσαλγής=in painful distress. What is شنيع (repulsive/ugly) causes suffering in the beholder, connecting to λυσαλγής (painful distress). Both describe intense negative experiences, one aesthetic and one physical."
+  },
+  {
+    "pair_id": "GRC_0822",
+    "arabic_root": "الكموي",
+    "target_lemma": "λευκομέλας",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic luminous moonlight can meet the pale-color side of grey at a conceptual level."
+  },
+  {
+    "pair_id": "GRC_0823",
+    "arabic_root": "فان",
+    "target_lemma": "ἐπιφάνεια",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic فان/بهاء carries 'splendor, appearance'; Greek ἐπιφάνεια = 'appearance, manifestation (esp. divine)'. Plausible conceptual echo of showing/radiance."
+  }
+]

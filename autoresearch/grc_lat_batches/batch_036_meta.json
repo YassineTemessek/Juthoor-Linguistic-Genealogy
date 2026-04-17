@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0288",
+    "arabic_root": "الثويناء",
+    "target_lemma": "λανθάνομαι",
+    "lang": "grc",
+    "original_score": 0.66,
+    "original_method": "combined",
+    "original_reasoning": "التثاون خديعة تعمل في الخفاء، وλανθάνομαι هو الخفاء أو الإفلات من الانتباه؛ السلسلة المفهومية واضحة."
+  },
+  {
+    "pair_id": "GRC_0289",
+    "arabic_root": "رثد",
+    "target_lemma": "ἀρρυθμία",
+    "lang": "grc",
+    "original_score": 0.66,
+    "original_method": "combined",
+    "original_reasoning": "Stacked or well-arranged goods stand in a clear conceptual opposition to lack of rhythm or order."
+  },
+  {
+    "pair_id": "GRC_0290",
+    "arabic_root": "جمخ",
+    "target_lemma": "ἐγρεμάχης",
+    "lang": "grc",
+    "original_score": 0.66,
+    "original_method": "combined",
+    "original_reasoning": "Arabic leaping or boastful challenging fits Greek rousing the fight through the core of aggressive onset."
+  },
+  {
+    "pair_id": "GRC_0291",
+    "arabic_root": "الحشي",
+    "target_lemma": "λέχεσι",
+    "lang": "grc",
+    "original_score": 0.66,
+    "original_method": "combined",
+    "original_reasoning": "حشي carries the sense of being filled or padded, which reaches the notion of bedding."
+  },
+  {
+    "pair_id": "GRC_0292",
+    "arabic_root": "الثعو",
+    "target_lemma": "τελέθω",
+    "lang": "grc",
+    "original_score": 0.66,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss centers on dates becoming soft and ripe, which aligns well with Greek τελέθω 'come to maturity/become'."
+  },
+  {
+    "pair_id": "GRC_0293",
+    "arabic_root": "افرنبج",
+    "target_lemma": "φρύγανον",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "افرنبج جلد الجمل=شُوي (the camel's skin was roasted/scorched). φρύγανον=dry stick, firewood (from φρύγω=to roast/parch). Both belong to the roasting/burning domain. The Arabic describes roasting skin, the Greek names the fuel for roasting. φρύγω itself means to parch/roast."
+  },
+  {
+    "pair_id": "GRC_0294",
+    "arabic_root": "الحرت",
+    "target_lemma": "ἕλκηθρον",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss includes 'root/base of the plant,' and the Greek denotes the stock or main wooden frame of the plough; both share a core of base-stock support."
+  },
+  {
+    "pair_id": "GRC_0295",
+    "arabic_root": "سفه",
+    "target_lemma": "σοφίζω",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "سفه 'folly' stands opposite to making someone wise; the pair fits the negation criterion."
+  }
+]

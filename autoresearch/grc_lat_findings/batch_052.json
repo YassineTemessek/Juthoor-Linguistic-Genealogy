@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0416",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دخمر = to fill completely, to cover/conceal (to hide by covering). Greek διαδέχομαι = to receive in succession, to take over from (to receive after another). The original reasoning maps covering/filling to receiving. But concealing by covering and receiving in succession require: filling/hiding -> making room to receive -> receiving. The Arabic word is about covering/concealing, not about handing over or receiving. 3+ step gap.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic covering/concealing and Greek receiving-in-succession are entirely different actions with no credible 1-2 step path."
+  },
+  {
+    "pair_id": "GRC_0417",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سدل = to let fall, hang down, trail (of cloth); to lower/drape fabric. Greek σάνδαλον = sandal (foot-covering). The original reasoning maps trailing cloth to sandal through hanging below the body. But سدل refers to fabric hanging from the body (like a curtain or garment draping down), while a sandal is strapped to the foot. The path hanging cloth -> something hanging below -> sandal requires: draping -> foot-level -> specifically footwear. 3 steps. Also σάνδαλον has established etymology from a non-Arabic source.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic trailing/draping cloth and Greek sandal require 3+ steps; σάνδαλον has established etymology from other sources."
+  },
+  {
+    "pair_id": "GRC_0418",
+    "finding": "path_found",
+    "semantic_journey": "Arabic التيه = a maze-like desert where travelers become lost/disoriented; bewilderment, being lost in confusion (حيرة في مفازة تيهاء = confusion in a bewildering wasteland). Greek λήθω = to be hidden from notice, to escape notice; λήθετε = you go unnoticed/you forget. The semantic journey: being lost in a bewildering place (spatially hidden/confused) -> being hidden from notice, concealment. Both encode the state of being UNSEEN/UNLOCATABLE: Arabic = lost in physical space; Greek = hidden from perception. A 1-step spatial-to-perceptual metaphor.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic lost-in-bewildering-desert (التيه) and Greek hidden/unnoticed (λήθω) share the core of being unlocatable/unseen — spatial loss mapped to perceptual concealment."
+  },
+  {
+    "pair_id": "GRC_0419",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العكرش = a type of plant used for pasture (salt-tolerant fodder plant). Greek ἑλίχρυσος = everlasting flower/helichrysum (a different aromatic Mediterranean plant). Two different plants from different botanical families. Plant-domain match alone is insufficient for cognacy. No shared tradition or species overlap.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two different plant species in the same botanical category does not constitute cognacy."
+  },
+  {
+    "pair_id": "GRC_0420",
+    "finding": "path_found",
+    "semantic_journey": "Arabic صأصل/صاصل = a specific plant name (variant of صوصلاء). Greek σέσελις = hartwort (Seseli species, an umbelliferous plant). Both are plant names with very similar phonetics: Arabic صاصل and Greek σέσελις share the consonant skeleton s-s-l. This appears to be a direct material culture transmission of a plant name, possibly a Mediterranean medicinal herb whose name traveled with the plant in trade. The phonetic match is tight.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic صاصل and Greek σέσελις (hartwort) share near-identical phonetics — a likely plant-name transmission through Mediterranean trade or herbalism."
+  },
+  {
+    "pair_id": "GRC_0421",
+    "finding": "path_found",
+    "semantic_journey": "Arabic كفن = a burial shroud, winding sheet (cloth that wraps/covers a body for burial); also the act of wrapping in cloth. Greek κνάφος = a teasel or fuller's carding instrument used for PROCESSING CLOTH FIBER. The semantic journey: burial shroud (cloth item) -> cloth-processing instrument (tool for making cloth). Both belong to the TEXTILE domain: Arabic = the finished cloth product (shroud); Greek = the tool for processing cloth fiber. The connection is within the textile material culture domain — processing tool and finished product.",
+    "journey_type": "material_culture",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic burial shroud (cloth product) and Greek cloth-carding instrument (cloth-processing tool) both belong to the textile material culture domain."
+  },
+  {
+    "pair_id": "GRC_0422",
+    "finding": "no_path",
+    "semantic_journey": "Duplicate of GRC_0384/0391 (same Arabic root الشفلح vs Greek διαλυσίφιλα). Same analysis: Arabic physical slackness of aged person vs Greek friendship-dissolution compound are semantically unrelated. False positive.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Duplicate: Arabic physical slackness and Greek dissolving-friendships are unrelated despite both containing looseness."
+  },
+  {
+    "pair_id": "GRC_0423",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الإسكاف = a shoemaker or craftsman (a person who makes shoes/sandals using tools). Greek σκάφη = a bowl, tub, basin (a hollowed vessel). The original reasoning maps craftsman to shaped hollow object through the idea of crafted hollows. But a shoemaker (person) and a bowl (object) are different categories. σκάφη derives from σκάπτω (to dig/scoop) — a bowl is a scooped hollow. Arabic إسكاف is a craftsman title. The connection craftsman -> their product -> bowl requires: shoemaker -> makes shaped objects -> any shaped object -> hollow vessel. 4+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic shoemaker (person) and Greek bowl/basin (object) require 4+ steps — a craftsman is not cognate with a vessel."
+  }
+]

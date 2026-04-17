@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0320",
+    "arabic_root": "صدر",
+    "target_lemma": "συνέδριον",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic صدر 'chest/front/chief seat/preside' vs Greek συνέδριον 'council, assembly seated together' (from σύν+ἕδρα seat). Both involve 'seat of authority/front position'; strong conceptual link through 'sitting at the front'"
+  },
+  {
+    "pair_id": "GRC_0321",
+    "arabic_root": "الكور",
+    "target_lemma": "γλυκεροῖο",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic gloss explicitly includes honey, and Greek means 'sweet'; the semantic core is preserved despite drift in form."
+  },
+  {
+    "pair_id": "GRC_0322",
+    "arabic_root": "خيل",
+    "target_lemma": "Ἔχεκλος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "خيل directly denotes horses, and Ἔχεκλος is glossed as the name of a centaur, preserving a clear horse-side conceptual match."
+  },
+  {
+    "pair_id": "GRC_0323",
+    "arabic_root": "ذرب",
+    "target_lemma": "διατρίβω",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'sharpness' and Greek 'rub hard, wear away' join through abrasive force; concrete quality to destructive action."
+  },
+  {
+    "pair_id": "GRC_0324",
+    "arabic_root": "ملل",
+    "target_lemma": "διαμέλλω",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ملل=to dictate/continue/be weary; διαμέλλω=to delay continually. Semantic overlap via prolongation/delay"
+  },
+  {
+    "pair_id": "GRC_0325",
+    "arabic_root": "القشم",
+    "target_lemma": "λεῖμαξ",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Pasture not yet grazed aligns well with meadowland as shared terrain."
+  },
+  {
+    "pair_id": "GRC_0326",
+    "arabic_root": "الازفل",
+    "target_lemma": "ζάφελος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "Arabic الأزفلى: a crowd/multitude, also anger and sharpness. Greek ζάφελος: violent. The anger/sharpness cluster in Arabic and 'violent' in Greek share a conceptual core of forceful intensity. Consonant skeleton z-f-l matches."
+  },
+  {
+    "pair_id": "GRC_0327",
+    "arabic_root": "البراغيل",
+    "target_lemma": "Βαργύλια",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic البراغيل: settlements near water / land between cultivated and desert. Greek Βαργύλια: city in Caria (coastal). Both refer to inhabited settlements in transitional geographic zones near water. Toponym likely derived from a common Semitic-Anatolian root meaning 'border settlement'."
+  }
+]

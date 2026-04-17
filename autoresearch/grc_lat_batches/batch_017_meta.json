@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0136",
+    "arabic_root": "خزي",
+    "target_lemma": "χάζομαι",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "خزي is shame or disgrace, and shame commonly leads to giving way or retreating; both sides of the same human response are preserved."
+  },
+  {
+    "pair_id": "GRC_0137",
+    "arabic_root": "الفيجن",
+    "target_lemma": "βαλανηφάγος",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Greek is 'acorn-eating' and Arabic explicitly says 'persisted in eating', a clear direct overlap in the eating act."
+  },
+  {
+    "pair_id": "GRC_0138",
+    "arabic_root": "الجمخ",
+    "target_lemma": "λογομαχέω",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "Boasting naturally expands into verbal contest and argumentative word-fighting; this is a clear action-to-discourse chain."
+  },
+  {
+    "pair_id": "GRC_0139",
+    "arabic_root": "حثن",
+    "target_lemma": "χθονίαις",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss includes 'a place' and tiny grain-like matter, which fits an earth/place concept well."
+  },
+  {
+    "pair_id": "GRC_0140",
+    "arabic_root": "الفرعون",
+    "target_lemma": "πολύφρονα",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "Farʿawnah means cunning or pharaonic mentality, and polyphron means much-minded/thoughtful; the semantic core of active intelligence is clear and phron maps well against the Arabic consonantal frame."
+  },
+  {
+    "pair_id": "GRC_0141",
+    "arabic_root": "رتل",
+    "target_lemma": "ἀρτίαλα",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "Well-arranged teeth and orderly articulation align strongly with arranged adornment like earrings."
+  },
+  {
+    "pair_id": "GRC_0142",
+    "arabic_root": "ارب",
+    "target_lemma": "ἀραβέω",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "Arabic أرب carries aptitude, need, and Arab-related formation; Greek ἀραβέω preserves an Arab/Arabic association clearly."
+  },
+  {
+    "pair_id": "GRC_0143",
+    "arabic_root": "حصم",
+    "target_lemma": "χάσματα",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "انحصم is to break; a chasm is a broken opening or fissure, a clear action-to-result chain."
+  }
+]

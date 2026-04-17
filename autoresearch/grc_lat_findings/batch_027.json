@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0216",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البطن (al-batn) = belly, abdomen; interior. Greek βόλβιτον = cow dung. The reasoning: belly → eating → excretion → dung. This is a 3+ step chain (belly → food intake → digestion → waste output → dung). Each step loses meaning from the previous. Belly is not semantically close enough to dung — they are in the same digestive system but at opposite ends. This is false metaphorical overreach.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic belly and Greek cow dung are too many steps apart in the digestive chain; this is not a valid 2-step semantic path."
+  },
+  {
+    "pair_id": "GRC_0217",
+    "finding": "path_found",
+    "semantic_journey": "Arabic بعث (bath) = to send, dispatch, awaken, rouse; specifically to send a military force or messenger. Greek ἐπιβοηθέω = to come to aid, send assistance, dispatch help (ἐπί 'to/upon' + βοηθέω 'to aid'). Both encode sending/dispatching toward someone in need. Arabic dispatching-forces/messengers → Greek sending-aid is a direct 1-step match: both describe the act of sending someone/something to a destination for a purpose.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic sending/dispatching (bath) and Greek sending-aid (epiboetheo) share the core concept of dispatching someone toward a goal."
+  },
+  {
+    "pair_id": "GRC_0218",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القنوت (al-qunut) = devotion, submissive standing in prayer; the qunut supplication. Greek κολοκύνθη = bottle gourd. The original reasoning ('tight skin-container → bottle gourd') uses a completely different reading of القنوت than the standard meaning. The primary meaning is prayerful devotion/submission. Even if an alternate reading of qanawat (pipes/tubes) were used, bottle gourd is not a tube/container in the relevant sense. No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic prayer-devotion (qunut) and Greek bottle gourd have no semantic relationship under any reading of the Arabic."
+  },
+  {
+    "pair_id": "GRC_0219",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دقه (daqqa) = to show, demonstrate, reveal; also to be precise. Greek ἐκδοχαί = interpretations, acceptations, meanings taken from a text (from ἐκδέχομαι 'to receive from, interpret'). The connection showing/revealing → received-interpretations requires: reveal → what is revealed → how it is received → interpretation — that is 3+ steps. Furthermore, Greek ἐκδοχαί is specifically about receiving/extracting meaning from a text, not about showing or revealing.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic showing/revealing and Greek text-interpretations require too many steps; Greek ekdokhai derives from 'receiving from' not 'showing.'"
+  },
+  {
+    "pair_id": "GRC_0220",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكتيت (al-katit) = much talking, chattering, low murmuring. Greek ἐλέχθητε = you were spoken/said (aorist passive of λέγω). Same issue as GRC_0167: Arabic disordered/copious speech vs. neutral Greek speaking verb. The Greek form is simply a past passive of a common speaking verb with no connotation of volume or disorder. No specific semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic chattering/much-talking compared to a neutral Greek speaking verb strips the distinctive Arabic meaning; no valid path."
+  },
+  {
+    "pair_id": "GRC_0221",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خطط (khatta) = to draw lines, mark out a tract of land; a tribal territory defined by lines/marks. Greek χθονί = of the earth (dative of χθών 'earth, ground'). The reasoning: marked-territory → ground → earth. Arabic خط means a line or tract, not earth itself. The connection requires: drawn-line/territory → ground under it → earth in general — that is 3 steps of abstraction. χθών is a deep Greek word for earth/ground with its own distinct etymology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic territory/line-marking and Greek earth/ground are too abstract a connection; χθών has its own Greek etymology."
+  },
+  {
+    "pair_id": "GRC_0222",
+    "finding": "path_found",
+    "semantic_journey": "Arabic سفل (safala) = to be low, descend to a lower position; سافل = low, base. Greek σφάλμα = a stumble, false step, error, failure (from σφάλλω 'to trip, make fall'). Both encode downward-falling failure. Arabic being-low/sinking-down → Greek stumbling/falling is a direct 1-step path: sinking-low is what happens when one stumbles/falls. The physical downward motion is preserved.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sinking-low (safl) and Greek stumbling/false-step (sphalma) share the concept of downward falling/failure."
+  },
+  {
+    "pair_id": "GRC_0223",
+    "finding": "path_found",
+    "semantic_journey": "Arabic سلخ (salakha) = to strip, flay, skin; to peel off the outer layer. Arabic مسلاخ = the sloughed skin, the shed outer layer. Greek σέλαχος = a cartilaginous fish (shark or ray), named for its rough skin. The semantic path: Arabic describes the stripping/shedding of skin → the rough outer skin that can be stripped → a fish named for its characteristic rough-skin surface. This is a 2-step material culture path: Arabic skin-stripping concept → the distinctive rough skin property → Greek fish named for that property.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic skin-stripping (salakh) connects to Greek rough-skinned fish (selakhos) through the distinctive skin property that defines the fish."
+  }
+]

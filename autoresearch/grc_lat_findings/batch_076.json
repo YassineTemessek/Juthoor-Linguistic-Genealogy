@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0608",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khaza'al = lameness, halting limping gait. Greek scholaios = leisurely, slow, unhurried (from skhole = leisure). Lameness is an involuntary physical defect; leisureliness is a voluntary chosen pace. No 2-step chain connects involuntary disability to deliberate unhurriedness.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Lameness (involuntary disability) and leisureliness (voluntary pace) are semantically distinct despite superficially similar slowness."
+  },
+  {
+    "pair_id": "GRC_0609",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khazaqa = to pierce, impale, split. Greek andikha = asunder, in twain (spatial adverb from anti+dikha). Piercing is an action verb; andikha is a directional adverb morphologically built from Greek components. No semantic path connects the act of piercing to a spatial adverb for separation.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek andikha is a morphological Greek compound; piercing-action and asunder-adverb occupy entirely different semantic fields."
+  },
+  {
+    "pair_id": "GRC_0610",
+    "finding": "path_found",
+    "semantic_journey": "Arabic da'afa = to finish off, dispatch a wounded enemy, kill swiftly. Greek dapto = to devour, tear and consume as wild beasts do. Both encode lethal finalizing act on a victim. Arabic keeps human-executioner frame; Greek extends to beast-consumption. 1-step drift: kill-to-finish -> devour-to-consume.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic dispatching a fallen enemy and Greek beast-devouring share the lethal-consumption concept applied to victim or prey."
+  },
+  {
+    "pair_id": "GRC_0611",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khasaqa = to sink into, cause ground to open under pressure (hoof on earth). Greek khasko = to gape open. Core concept: forced aperture. Arabic encodes the forcing action; Greek encodes the resulting open state. 1-step action-to-result.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic ground-opening-under-force and Greek gaping-open share the concept of forced aperture as action then result."
+  },
+  {
+    "pair_id": "GRC_0612",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-a'fath = a man much exposed or uncovered (nakedness). Greek leiphtheihe = be left behind (optative passive of leipo = to leave). Physical exposure and spatial abandonment are unrelated; no 2-step chain connects being uncovered to being abandoned.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Exposed/uncovered (nakedness) and left-behind (abandoned) are unrelated semantic fields with no plausible 2-step path."
+  },
+  {
+    "pair_id": "GRC_0613",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-thantal = spoiling and becoming foul after cleansing. Greek kataluthen = having been dissolved/undone (aorist passive of kataluo). Putrefaction (quality change: pure to foul) is distinct from structural dissolution (breaking down form). Connecting them requires 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Putrefaction and structural dissolution are distinct processes; the semantic chain exceeds 2 steps."
+  },
+  {
+    "pair_id": "GRC_0614",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-faqiy primarily means religious jurist/scholar (faqih). Original reasoning invoked maharith (plow instruments) as secondary gloss. Greek glupho = to carve, engrave. Even accepting plow-cutting, plowing earth and carving stone/wood are different actions on different materials for different purposes.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Al-faqiy primarily means religious scholar; even the plow-cutting secondary sense does not match Greek stone/wood carving."
+  },
+  {
+    "pair_id": "GRC_0615",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-rafaha = ease, luxury, comfort, refined living. Greek haliporpuros = sea-purple dyed. Chain: ease -> luxury -> luxury color -> purple requires 3+ steps of cultural association, not lexical semantics. No lexical path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Comfort/ease and sea-purple share only the cultural association that purple is luxurious, not any lexical semantic descent."
+  }
+]

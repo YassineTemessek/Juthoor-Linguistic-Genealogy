@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0664",
+    "arabic_root": "قربوت",
+    "target_lemma": "κράββατος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qarabut = 'pommel of saddle (=qarbus)'; Greek = 'couch, mattress, pallet'. Plausible Mediterranean loanword echo (both forms of supporting/sitting furniture)."
+  },
+  {
+    "pair_id": "GRC_0665",
+    "arabic_root": "دقس",
+    "target_lemma": "διοικητής",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic includes a kingly title/name, and Greek is an administrative authority; title-to-office is a plausible bridge."
+  },
+  {
+    "pair_id": "GRC_0666",
+    "arabic_root": "خصم",
+    "target_lemma": "χάσματα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خصم can imply splitting by dispute, and Greek chasms may preserve the result side of separation."
+  },
+  {
+    "pair_id": "GRC_0667",
+    "arabic_root": "الكموس",
+    "target_lemma": "λευκομέλας",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Weak sight can conceptually converge with dim, washed, or grey visual perception."
+  },
+  {
+    "pair_id": "GRC_0668",
+    "arabic_root": "صرف",
+    "target_lemma": "ἰσορροπέω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic صرف 'turn/exchange, balancing of accounts (صيرفي=money-changer)' vs Greek 'to be equally balanced'; real conceptual link through balancing/exchange"
+  },
+  {
+    "pair_id": "GRC_0669",
+    "arabic_root": "خثع",
+    "target_lemma": "ἤχθετο",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ἤχθετο denotes being vexed or distressed; خَوْثَع 'vile' can stand on the opposite side of aversion, a plausible deep link."
+  },
+  {
+    "pair_id": "GRC_0670",
+    "arabic_root": "دعلج",
+    "target_lemma": "δίλογος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Variegated traces or many-colored garments plausibly preserve a two-sided or double quality that reaches double-tongued."
+  },
+  {
+    "pair_id": "GRC_0671",
+    "arabic_root": "القز",
+    "target_lemma": "σολοικίζω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic removal from impurity can plausibly map to the opposite side of correct versus corrupted form, and Greek means committing incorrect speech."
+  }
+]

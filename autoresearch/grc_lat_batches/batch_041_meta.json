@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0328",
+    "arabic_root": "الفت",
+    "target_lemma": "ἄλφιτον",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الفتيت/الفتوت = crumbled bread or grain food made by crushing/breaking with fingers. Greek ἄλφιτον = barley-groats, barley flour (grain ground/processed into coarse meal). Both refer to grain food reduced to small particles through grinding or crumbling; the masadiq level connection through crumbled grain food is strong."
+  },
+  {
+    "pair_id": "GRC_0329",
+    "arabic_root": "الفنس",
+    "target_lemma": "διαφανής",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الفانوس = lantern (acknowledged loan; also tale-carrier). Greek διαφανής = diaphanous, transparent, letting light through. A lantern (فانوس) is specifically an object that lets light through; διαφανής = transparent/light-permitting. The Arabic فانوس likely derives from the same root as φαίνω (to show/shine); both share a core of 'allowing light to pass through.'"
+  },
+  {
+    "pair_id": "GRC_0330",
+    "arabic_root": "القرف",
+    "target_lemma": "κάρφος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic القرف = bark/peel of a tree or pomegranate; skin/husk of bread that clings to a clay oven; peeled-off soil with roots. Greek κάρφος = dry arid stalk, dry twig, chip of wood. Both directly describe the dry outer surface material stripped from plants (bark, husk, wood-chip). Strong masadiq connection through plant-skin/bark domain."
+  },
+  {
+    "pair_id": "GRC_0331",
+    "arabic_root": "خروه",
+    "target_lemma": "κίχορα",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "Arabic خروة/خرو and Greek κίχορα (chicory) — plant name in likely shared register"
+  },
+  {
+    "pair_id": "GRC_0332",
+    "arabic_root": "الخزع",
+    "target_lemma": "σχίζα",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "shared concept: cut — masadiq direct match"
+  },
+  {
+    "pair_id": "GRC_0333",
+    "arabic_root": "الرزم",
+    "target_lemma": "μαρασμός",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic rāzim=emaciated camel unable to rise; Greek marasmos=wasting away/atrophy: shared concept of progressive bodily emaciation"
+  },
+  {
+    "pair_id": "GRC_0334",
+    "arabic_root": "فلقح",
+    "target_lemma": "φιλοπότης",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: drinking all in vessel. Greek: lover of drinking/drunkard — direct match."
+  },
+  {
+    "pair_id": "GRC_0335",
+    "arabic_root": "الطنء",
+    "target_lemma": "τέναγος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "both relate to water/waterways — clear semantic match"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0256",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الدمانس (al-Damanis) = a place name in Egypt derived from the Greek personal name. Greek Δαμιανός = the proper name Damianos. The original reasoning acknowledges that the Arabic place name is itself derived FROM the Greek personal name. This is Greek → Arabic (the name entered Arabic as a toponym). Excluded: proper personal/place name, and the direction is inverted.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic al-Damanis is a toponym derived FROM Greek Damianos — the direction is Greek→Arabic, not Arabic→Greek."
+  },
+  {
+    "pair_id": "GRC_0257",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القردم / القردمانى (al-qardamani) = caraway or a pungent seed condiment used in Roman/Levantine cooking. Greek κάρδαμον = garden cress (Lepidium sativum), a pungent-seeded condiment. Both name pungent seed condiments used in Mediterranean cooking. The root q-r-d-m encodes the biting/pungent property of these seeds. This is a material-culture trade-route cognate — the same family as GRC_0165 and GRC_0231. The Semitic name for this class of pungent condiment seeds entered Greek as kardamon.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic qardamani (caraway/pungent spice) and Greek kardamon (cress/pungent condiment) are the same Semitic spice-trade word family."
+  },
+  {
+    "pair_id": "GRC_0258",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القلفع (al-qalfaa) = dried cracked mud that flakes off; iron scale/flakes from smithing; rough flaking surface layer. Greek κέλυφος = outer shell, husk, case, peelable outer covering. Both encode the concept of a brittle outer layer that can separate from the surface beneath. Arabic flaking-outer-layer → Greek shell/husk/peelable-covering is a direct 1-step match: both describe the outermost detachable layer of something.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic flaking outer layer (qalfaa) and Greek outer shell/husk (kelyphos) are direct cognates — both name the detachable outer layer."
+  },
+  {
+    "pair_id": "GRC_0259",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الدنف (al-danf) = chronic illness, lingering painful disease, protracted suffering. Greek ὀδυνήφατος = painkilling, that which kills pain (ὀδύνη 'pain' + φατός 'killed/destroyed'). Both are in the semantic field of pain/disease — Arabic names the chronic suffering state, Greek names what destroys that suffering. This is a negation-cognate: Arabic is the affliction, Greek is its relief/elimination. The two sides of the same pain concept.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic chronic illness/pain (danf) and Greek painkilling (odynephatos) are two sides of the same concept — affliction vs. its destruction."
+  },
+  {
+    "pair_id": "GRC_0260",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الرزداق (al-ruzdak) = Arabicized form of Persian rusta (village, rural settlement). Greek ῥιζικός = of the root (from ῥίζα 'root'). The Arabic form is a Persian loanword into Arabic (not an Arabic root at all). The Greek derives from ῥίζα (root) which is its own Greek word. These are unrelated words from different source languages that happen to sound similar. No Arabic-to-Greek path; the Arabic form itself is Persian-derived.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic ruzdak is a Persian loanword; Greek rhizikos derives from rhiza (root) — these are unrelated words from different sources."
+  },
+  {
+    "pair_id": "GRC_0261",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الرمح (al-rumh) = spear, lance. Greek ἐγρεμάχης = battle-rousing (ἔγρω 'rouse/awaken' + μάχη 'battle'). The Greek is a transparent compound meaning 'one who rouses battle.' Arabic spear → Greek battle-rouser requires: spear → the person who wields it → the person who provokes fighting — that is 3+ steps, and the Greek compound's meaning derives entirely from its transparent Greek components. No Semitic path needed or supported.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic spear and Greek battle-rouser compound are too far apart; the Greek compound has transparent internal Greek etymology."
+  },
+  {
+    "pair_id": "GRC_0262",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السمسار (al-simsiar) = broker, middleman, agent (itself from Persian simsaar). Greek σαμψήρα = shamshir, a curved Persian sword (from Persian shamshir 'curved blade'). Both words are Persian loanwords — one into Arabic (simsar), one into Greek (samshira). These are two different Persian words that both entered different languages. No Arabic-to-Greek path; these are parallel Persian loanwords into different languages.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic simsaar (broker) and Greek sampsera (sword) are both Persian loanwords into different languages, not an Arabic-Greek cognate."
+  },
+  {
+    "pair_id": "GRC_0263",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السنطلة (al-santala) = tallness; walking with drooping head. Greek σάνταλον = sandalwood (Santalum album). The original reasoning admits both are 'likely from the same Sanskrit source.' Sandalwood (Sanskrit chandana) is a South Asian trade commodity whose name entered both Arabic and Greek via trade routes — they are BOTH borrowings from Sanskrit/Prakrit. This is a shared loanword from Sanskrit, not Arabic-to-Greek. Additionally, Arabic tallness/drooping-head has nothing to do with sandalwood.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Sandalwood entered both Arabic and Greek from Sanskrit via trade routes; this is a shared Sanskrit loanword, not an Arabic-Greek cognate."
+  }
+]

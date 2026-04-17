@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0256",
+    "arabic_root": "الدمانس",
+    "target_lemma": "Δαμιανός",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الدمانس = a place in Egypt and a village in Tiflis. Greek Δαμιανός = male name Damianos. The Egyptian place-name الدمانس is clearly a toponym derived from the Greek personal name Δαμιανός (Damianus), indicating direct phonological borrowing. This is a toponymic cognate."
+  },
+  {
+    "pair_id": "GRC_0257",
+    "arabic_root": "القردم",
+    "target_lemma": "κάρδαμον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic القردمانى = caraway (كروياء), described as a Roman/Levantine plant. Greek κάρδαμον = garden cress (Lepidium sativum), a pungent seed condiment. Both are pungent edible seeds used as food condiments/spices in the Mediterranean; the Arabic القردمانى specifically refers to the Greek/Roman κάρδαμον. Strong botanical-culinary parallel."
+  },
+  {
+    "pair_id": "GRC_0258",
+    "arabic_root": "القلفع",
+    "target_lemma": "κέλυφος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic القلفع = dried cracked mud that flakes off; iron scales from smithing; rough camel-skin flakes. Greek κέλυφος = outer shell/sheath/husk. Both involve a flaking/peeling outer layer — the Arabic القلفع = something that separates/flakes as an outer layer, matching κέλυφος = outer covering/shell that can be peeled."
+  },
+  {
+    "pair_id": "GRC_0259",
+    "arabic_root": "الدنف",
+    "target_lemma": "ὀδυνήφατος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: chronic illness, lingering disease — a state of suffering pain. Greek: painkilling, pain-destroying. Both share the semantic field of pain/disease from opposite sides (affliction vs remedy). Clear mafahim connection on pain."
+  },
+  {
+    "pair_id": "GRC_0260",
+    "arabic_root": "الرزداق",
+    "target_lemma": "ῥιζικός",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: الرزداق (Arabicized from Rustā = village, rural settlement / rows of palms). Greek: of or belonging to the root (rhiza). Both share the concept of rural/agrarian rootedness — village settlement vs root-level agricultural concept. Clear combined link."
+  },
+  {
+    "pair_id": "GRC_0261",
+    "arabic_root": "الرمح",
+    "target_lemma": "ἐγρεμάχης",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: spear/lance — the core weapon used in battle. Greek: 'rousing the fight' — battle-rousing epithet. Both are deeply in the semantic field of armed combat/warfare. The spear IS the instrument of battle-rousing in ancient warfare."
+  },
+  {
+    "pair_id": "GRC_0262",
+    "arabic_root": "السمسار",
+    "target_lemma": "σαμψήρα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: السمسار = broker/intermediary between buyer and seller. Greek: σαμψήρα = shamshir sword (a curved blade). Both are likely loanwords from Persian (simsār = broker; shamshir = curved sword). Clear cultural trade-mediation link — the broker who handles weapons and goods. Combined semantic field of commerce/mediation."
+  },
+  {
+    "pair_id": "GRC_0263",
+    "arabic_root": "السنطله",
+    "target_lemma": "σάνταλον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: السنطلة = tallness; to walk with head drooping. Greek: sandalwood (Santalum album). Both share a phonological root that likely traces back to the same Semitic/Sanskrit source for the sandalwood tree. The Arabic word for the plant is صندل (sandal) but this root is adjacent. Clear loanword territory."
+  }
+]

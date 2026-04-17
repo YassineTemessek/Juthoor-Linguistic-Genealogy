@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0384",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الشفلح = a coarse, large-bodied but slack/lax old person (physically loose/flabby). Greek διαλυσιφίλους = accusative plural of a compound: loosening-of-friendships (δια+λύσις+φίλος). The original reasoning maps Arabic physical slackness to Greek loosening. But Greek διαλυσίφιλος appears to be about dissolving friendships (social loosening), not physical slackness. Even if both contain looseness, Arabic physical flabbiness and Greek social-bond-dissolution are unrelated domains.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical slackness of an old person and Greek dissolving-of-friendships compound are semantically unrelated uses of looseness."
+  },
+  {
+    "pair_id": "GRC_0385",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دخص = to fill out (with flesh), to be plump/well-fleshed (of an animal's body). Greek δέχεσθαι = to receive, accept (infinitive of δέχομαι). The original reasoning maps being filled with flesh to receiving. But filling out with flesh (growing plump) and the act of receiving/accepting are entirely different semantic domains — one is a physical state change in a body, the other is a transactional action. No credible path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic becoming plump/flesh-filled and Greek receiving/accepting are entirely different semantic domains with no credible path."
+  },
+  {
+    "pair_id": "GRC_0386",
+    "finding": "path_found",
+    "semantic_journey": "Arabic كحى/كها = to boast, speak loudly, brag (also used for a loud assertive call or proud speech). Greek καυχάομαι = to boast, brag, speak proudly. This is a near-direct semantic match: both encode BOASTFUL SELF-AGGRANDIZING SPEECH. Arabic preserves the action (speaking loudly/boastfully); Greek preserves the same action. A direct preservation of the boasting-speech concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic loud boasting speech (كها) and Greek boasting (καυχάομαι) directly preserve the same concept of self-aggrandizing proclamation."
+  },
+  {
+    "pair_id": "GRC_0387",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الشمظ = to speak gently/softly to someone, to address with mild words, movement without violence. Greek λίσσομαι = to beseech, entreat, pray earnestly (gentle non-violent verbal appeal to someone). Both encode GENTLE NON-VIOLENT VERBAL APPROACH to another person: Arabic = gentle address/mild speech directed at someone; Greek = earnest entreaty/supplication directed at someone. The match is direct: gentle verbal approach without force.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic gentle mild address (الشمظ) and Greek earnest entreaty (λίσσομαι) both encode soft non-violent verbal approach to another."
+  },
+  {
+    "pair_id": "GRC_0388",
+    "finding": "no_path",
+    "semantic_journey": "Arabic نستر = appears to be a place name variant. Greek Νέστορα = Nestor (accusative), the wise elder king from the Iliad. Nestor is a well-known Greek proper name. Per methodology, proper names (even if possibly cognate) are excluded from cognacy analysis. Nestor's name is specifically Greek in character.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Νέστορα is a Greek mythological proper name (Nestor) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0389",
+    "finding": "no_path",
+    "semantic_journey": "Arabic جمل = camel. Greek Γαυγάμηλα = Gaugamela (proper place name, battle site in Assyria). The original reasoning notes the second element recalls camel (γάμηλα?). But Γαυγάμηλα is a proper place name — excluded by methodology. Even analytically, Gaugamela likely derives from Assyrian/Persian roots, not from Arabic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Γαυγάμηλα is a proper place name (battle site) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0390",
+    "finding": "path_found",
+    "semantic_journey": "Arabic درعوس = having a good, well-formed, full-grown body (fine physical form/constitution). Greek ἁδρός = full-grown, mature, large and sturdy, well-developed. Both encode the concept of MATURE PHYSICAL FULLNESS/DEVELOPMENT: a body that has reached its full form. Arabic = possessing fine full-grown body; Greek = being full-grown/sturdy. This is a near-direct preservation of the mature-full-body concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic well-formed full-grown body (درعوس) and Greek full-grown/mature/sturdy (ἁδρός) directly share the concept of mature physical development."
+  },
+  {
+    "pair_id": "GRC_0391",
+    "finding": "no_path",
+    "semantic_journey": "Duplicate of GRC_0384 (same Arabic root الشفلح vs same Greek διαλυσίφιλου, minor case inflection difference). Same analysis: Arabic physical slackness of aged person vs Greek social-bond-dissolution compound are unrelated. False positive.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Duplicate of GRC_0384: Arabic physical slackness and Greek friendship-dissolution compound are semantically unrelated."
+  }
+]

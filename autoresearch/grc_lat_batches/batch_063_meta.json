@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0504",
+    "arabic_root": "الخلي",
+    "target_lemma": "γλήχων",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic specifically includes a plucked herb/plant, while Greek is a herb; the plant domain matches with moderate strength."
+  },
+  {
+    "pair_id": "GRC_0505",
+    "arabic_root": "صبب",
+    "target_lemma": "εἰσβιβάζω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'pour/cause to flow into' vs Greek 'to make to go into'; causative motion-into concept shared"
+  },
+  {
+    "pair_id": "GRC_0506",
+    "arabic_root": "الشمطاله",
+    "target_lemma": "ἱλάσματος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الشمطالة = البضعة من اللحم فيها شحم (a piece of meat with fat). ἵλασμα = propitiation, atonement sacrifice, sin offering. In ancient Semitic and Mediterranean religion, the fat piece of meat IS the offering of atonement. The fatty meat portion was specifically the part offered to the deity. This is a direct ritual-to-substance connection."
+  },
+  {
+    "pair_id": "GRC_0507",
+    "arabic_root": "الشفشليق",
+    "target_lemma": "διαλυσιφίλους",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic describes an old lax woman; Greek appears to carry a loosened or dissolved quality, so the core of slackness is plausibly shared."
+  },
+  {
+    "pair_id": "GRC_0508",
+    "arabic_root": "الدستجه",
+    "target_lemma": "λάδδουσθη",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic is a hand-moved vessel; Greek is to seize or grasp. The shared core is manual handling and taking hold."
+  },
+  {
+    "pair_id": "GRC_0509",
+    "arabic_root": "السمع",
+    "target_lemma": "λίσσομ'",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "السمع = hearing; اسمع مني = hear from me (imperative). λίσσομαι = I beseech/supplicate. The supplicant begs to be heard; hearing is the goal of supplication. These two words sit at opposite ends of the same communicative act -- the speaker pleads (λίσσομαι) and the listener hears (سمع). Strong functional semantic pair."
+  },
+  {
+    "pair_id": "GRC_0510",
+    "arabic_root": "العنثج",
+    "target_lemma": "γάλινθοι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic means fat, bulky, fleshy; Greek gloss is chickpeas. A specialization from plump bulky form to a round edible item is plausible."
+  },
+  {
+    "pair_id": "GRC_0511",
+    "arabic_root": "الروذق",
+    "target_lemma": "ἁλουργίδα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Flayed skin and a purple-dyed garment share a body-covering/material chain: hide to processed covering."
+  }
+]

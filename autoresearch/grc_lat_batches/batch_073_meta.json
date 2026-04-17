@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0584",
+    "arabic_root": "الحرقوص",
+    "target_lemma": "γλίσχρος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "مقاربة الخطا والكلام carries a core of closeness and sticking-together that plausibly matches sticky or adhesive."
+  },
+  {
+    "pair_id": "GRC_0585",
+    "arabic_root": "هيمن",
+    "target_lemma": "ἡγεμόνευεν",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "هيمن=dominate/oversee (Mohaymin); ἡγεμόνευεν=led/governed (from ἡγεμών=leader). Strong semantic match via authority/leadership"
+  },
+  {
+    "pair_id": "GRC_0586",
+    "arabic_root": "اقعث",
+    "target_lemma": "καταθείς",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "أقعث: أجزلها العطية (made the gift generous/abundant). κατατίθημι aorist=having placed down, deposited, laid down (also: having bestowed). Both describe the act of giving/bestowing something. Generous giving (إجزال العطية) parallels depositing/bestowing (κατα-τίθημι)."
+  },
+  {
+    "pair_id": "GRC_0587",
+    "arabic_root": "ذلق",
+    "target_lemma": "διάλεκτε",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic denotes slipperiness and sharp edge; Greek is 'dialect'. Sharp tongue and articulate speech give a plausible chain from physical edge to linguistic form."
+  },
+  {
+    "pair_id": "GRC_0588",
+    "arabic_root": "الاشقر",
+    "target_lemma": "γλίσχρος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الأشقر includes 'من الدم ما صار علقاً' (blood that became clotted). γλίσχρος=sticky, viscous, adhesive. Clotted blood IS sticky/viscous. This is a direct material-property match: coagulated blood shares the exact physical quality described by γλίσχρος."
+  },
+  {
+    "pair_id": "GRC_0589",
+    "arabic_root": "خمد",
+    "target_lemma": "χαμάδις",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic khamad = subside, become low/extinguished (fire). Greek chamadis = 'to the ground, downward' (from chamai 'on the ground'). Both share the 'going down/low' spatial-figurative core. Strong concrete chain — fire dying down meets 'to the ground'. Note phonetic similarity khamad/chamadis."
+  },
+  {
+    "pair_id": "GRC_0590",
+    "arabic_root": "خندرس",
+    "target_lemma": "χόνδρος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic خندريس=name of (old) wine, also = old wheat/groats in classical sources (Lane). Greek khondros=groats, grain, lump (esp. of wheat/barley). The Arabic word is widely cited as a Greek loan precisely from khondros — semantic field of grain/groats matches even if the masadiq line shows only the wine sense. Strong masadiq match via the wheat meaning."
+  },
+  {
+    "pair_id": "GRC_0591",
+    "arabic_root": "الاسكتان",
+    "target_lemma": "σκύτινος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الأسكتان: labia (skin folds at sides of vulva). Greek σκύτινος: made of leather/skin. Both share the semantic field of 'skin/hide material'. The Arabic relates to skin-like anatomical folds; σκύτος = skin. Plausible semantic drift."
+  }
+]

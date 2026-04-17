@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0360",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثقوه = a small bowl, cup, or vessel (drinking vessel). Greek αὐλοθήκη = a case or holder for an aulos (wind instrument). The original reasoning maps container to container. But a drinking bowl and an instrument case are both containers only at the most generic level. Every culture has containers; this is not cognacy. Furthermore, αὐλοθήκη is a compound (αὐλός + θήκη) with transparent Greek etymology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A drinking bowl and an instrument case share only the abstract category of container — this is not a semantic path."
+  },
+  {
+    "pair_id": "GRC_0361",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الت = held back, reduced, suppressed. Greek Εἱλώτων = of the Helots (genitive plural) — the Spartan serf class. Helots (Εἵλωτες) is a proper ethnonym/social category name, not a common adjective meaning subdued. The etymology of Helots is disputed (possibly from the town Helos or from ἁλίσκω = to be captured). Matching a common Arabic adjective to a proper ethnic designation is a proper-name exclusion case.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Εἱλώτων is a proper social/ethnic designation (the Helots) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0362",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ذاطه = to choke, constrict, cause deficiency/lack. Greek δεηθείς = having been in need of, having lacked (aorist passive participle of δέομαι = to need, to lack, to be deficient). The original reasoning maps choking/deficiency to needing/lacking. This has a real connection: deficiency -> lack -> need. But Arabic choking is a PHYSICAL ACTION (constriction), while Greek lacking is a COGNITIVE/EXPERIENTIAL STATE (being in need). Also δεηθείς comes from δέω (to need), not from a root meaning physical constriction. The paths diverge.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical choking/constriction and Greek experiential lacking/needing map adjacent concepts but encode different kinds of states."
+  },
+  {
+    "pair_id": "GRC_0363",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الصدق = truth, truthfulness, sincerity (moral virtue). Greek Λυσιδίκη = a proper name (woman's name meaning loosener-of-justice or justice-solver). This is a proper name. Even if δίκη (justice) is related to صدق conceptually, Λυσιδίκη is a specific personal name and must be excluded per methodology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Λυσιδίκη is a Greek personal proper name — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0364",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الدفء = warmth, physical warmth (thermal quality). Greek Φιλαδέλφεια = brotherly love (place name and concept, from φίλος + ἀδελφός = loving + brother). The original reasoning maps warmth to affection to brotherly love. This requires: physical warmth -> emotional warmth -> love -> specifically brotherly love. 3+ steps. Moreover, Φιλαδέλφεια is transparently a Greek compound with known etymology. No Arabic cognacy possible.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Physical warmth and brotherly love require 3+ metaphorical steps; Φιλαδέλφεια has transparent Greek compound etymology."
+  },
+  {
+    "pair_id": "GRC_0365",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رثي = to eulogize, to compose an elegy for the dead (same root as GRC_0350 variant). Greek εὐρυθμία = good rhythm, harmonious order. Same analysis as GRC_0350: funerary verse composition and harmonious rhythm/order are in different domains requiring 3+ steps. The variant رثي vs رثا does not change the analysis.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Same as GRC_0350: Arabic elegizing the dead and Greek harmonious rhythm are unrelated domains."
+  },
+  {
+    "pair_id": "GRC_0366",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الخاء = the Arabic letter kha (خ), or possibly related to a twisted/knotted form. Greek Λάχεσις = one of the three Fates (Moirai), specifically the one who measures the thread of life (from λαγχάνω = to obtain by lot). The original reasoning connects twisting/cord imagery to Fate's thread-twisting. But Arabic الخاء is a letter name or phonetic term; comparing a letter name to a mythological proper name (Λάχεσις) is comparing categorically incomparable items. Λάχεσις is also a proper name excluded by methodology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Λάχεσις is a mythological proper name (a Fate) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0367",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العرجد = the first emergence of grapes, the earliest grape buds. Greek ἁλουργίδα = a purple garment, specifically purple-dyed fabric (from ἁλουργής = sea-purple, from ἅλς = sea + ἔργον = work). Purple dye came from sea-mollusks (Murex), not from grapes. The path grapes -> grape-derived purple -> purple garment requires: grapes -> purple (from grapes?) -> purple dye -> garment. But grape-derived purple is not how ancient purple dye was made — it came from sea-mollusks. This is a false material culture connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Ancient purple dye (ἁλουργίς) came from sea-mollusks, not grapes — the material culture connection is factually incorrect."
+  }
+]

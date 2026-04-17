@@ -1,0 +1,75 @@
+[
+  {
+    "pair_id": "GRC_0552",
+    "finding": "path_found",
+    "semantic_journey": "Arabic استوثن = remained, persisted in place (the thing stayed where it was). Greek καθίστημι aorist passive = having been established/set in place. Both encode STABLE PERSISTENCE IN A POSITION: Arabic = the state of remaining (staying put); Greek = being placed/established (the act of being set). The step: remaining in place (state) -> being established in place (the act that creates that state). A 1-step state-to-action relationship.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic persisting/remaining in place (استوثن) and Greek being established in place (κατασταθέντες) share the stable persistence concept."
+  },
+  {
+    "pair_id": "GRC_0553",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حتش = to gather, muster (bringing things together into a group). Greek ἰχθύεσσι = dative plural of ἰχθύς = fish (among/to the fishes). The original reasoning maps gathering/mustering to collective fish-swarming. But gathering (abstract action of assembly) and fish (a specific animal noun in dative form) are entirely different categories. A dative noun form cannot be a cognate of an action verb. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "k_insight": "Arabic gathering/mustering and Greek fish (dative) are different categories — a noun inflection and an action verb are not comparable as cognates.",
+    "key_insight": "Arabic gathering action and Greek fish-noun (dative) are categorically incomparable."
+  },
+  {
+    "pair_id": "GRC_0554",
+    "finding": "path_found",
+    "semantic_journey": "Arabic سفك = to pour out, shed (liquid poured out — especially blood shed). Greek σκάφη = a bowl, basin, tub (a vessel that receives poured liquids). The semantic journey: pouring out liquid -> the vessel that receives what is poured. Arabic preserves the ACTION (pouring); Greek preserves the VESSEL for what is poured. A 1-step action-to-container relationship: shedding/pouring liquid -> the basin that collects it.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic pouring/shedding liquid (سفك) and Greek basin/tub for liquid (σκάφη) share the liquid-flow concept — action and receiving vessel."
+  },
+  {
+    "pair_id": "GRC_0555",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حلز = to be compact, short and solid (dense rounded form). Greek χάλαζα = hail, hailstone (small round hard pellets of ice). Both encode SMALL COMPACT HARD ROUNDED FORM: Arabic = the quality of being compact/rounded; Greek = small round hard ice pellets. The step: compact rounded hardness -> the small hard round ice pellet that exemplifies that form. A 1-step quality-to-substance path.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic compact rounded hardness (حلز) and Greek hailstone (χάλαζα) share the small-hard-round-compact form concept."
+  },
+  {
+    "pair_id": "GRC_0556",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الثين = the pearl diver (one who extracts pearls from the sea — the person who searches for hidden treasure in the deep). Greek λανθάνομαι = I am hidden, I am concealed. Both involve HIDDENNESS: Arabic = the person who seeks what is hidden (the pearl is hidden in the sea-bottom); Greek = being hidden/concealed. The step: the hidden-treasure-seeker -> the state of being hidden. The pearl diver is connected to hiddenness — the pearl is the ultimate hidden object, and diving into dark depths involves concealment.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic pearl-diver (الثين, one who seeks hidden things) and Greek being-hidden (λανθάνομαι) share the hiddenness concept — low confidence due to indirect path."
+  },
+  {
+    "pair_id": "GRC_0557",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفتكر = calamity, disaster (a negative event). Greek ὀλοφύρατο = he/she lamented (aorist of ὀλοφύρομαι = to mourn, lament). The original reasoning: calamity and the mourning-response are two sides of one event-field. But calamity (the event) and lamentation (the human response) are CAUSE and EFFECT, not semantic cognates. Different events encoding different things. The path calamity -> causes mourning -> lamentation requires: event -> response. 2 steps, and these are different lexical items.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic calamity (event) and Greek lamentation (response to event) are cause and effect — different lexical items encoding different things."
+  },
+  {
+    "pair_id": "GRC_0558",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رجو = entering upon a hive, adhering to it (perhaps related to رجا = to defer, or رجو = to be enclosed). Greek εἴργω = to shut in, keep back, confine. The original reasoning maps adhering to a hive to being enclosed/shut in. The connection adhering-to-hive -> enclosure is somewhat plausible (hive is an enclosure; adhering to it means being inside it), but this is the same Greek word already matched to GRC_0305 (ارجا/رجا) with a better path. This variant رجو is weaker.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic adhering to a hive and Greek confining/shutting-in require 2+ steps; the better path for εἴργω is through ارجا (GRC_0305)."
+  },
+  {
+    "pair_id": "GRC_0559",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حتد = to be fixed, stay put, remain in place (stationary/grounded). Greek χθών/χθονί = earth, ground (the dative of χθών = the earth/ground — what is fixed and stays in place). Both encode FIXED GROUNDEDNESS: Arabic = the quality of being fixed/stationary; Greek = the earth/ground itself (the ultimate fixed, immovable substance). A 1-step quality-to-substance: the fixed quality -> the fixed substance (earth/ground).",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fixed/stationary quality (حتد) and Greek earth/ground (χθονί) share the concept of what is immovably fixed — quality and its exemplar."
+  }
+]

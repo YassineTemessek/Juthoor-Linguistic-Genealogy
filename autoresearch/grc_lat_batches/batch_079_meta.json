@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0632",
+    "arabic_root": "الدعرم",
+    "target_lemma": "τελεοδρομέω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الدعرمة=قصر الخطو في عجلة (short hurried steps). τελεοδρομέω=to complete the course/race. Both involve locomotion along a path. Short hurried steps vs completing a race share the movement-along-path concept, though scale differs."
+  },
+  {
+    "pair_id": "GRC_0633",
+    "arabic_root": "الكست",
+    "target_lemma": "λυκοσκυτάλιον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides are plant names, so a botanical transfer is plausible even without a direct gloss match."
+  },
+  {
+    "pair_id": "GRC_0634",
+    "arabic_root": "اصتت",
+    "target_lemma": "ἑσταότ'",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "أصتت الأرض: لم يكن فيها بقل ولا كلأ (the land had no vegetation or pasture - barren/still). ἕσταμαι=standing, standing still. Barren land where nothing grows IS land that stands still/stagnant. The concept of motionless sterility connects them."
+  },
+  {
+    "pair_id": "GRC_0635",
+    "arabic_root": "غدر",
+    "target_lemma": "Γίνδαρος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic ghadar relates to ghadir/ghader; Greek = Gindarus (Syria), a Semitic place name. Shared Semitic substrate plausible."
+  },
+  {
+    "pair_id": "GRC_0636",
+    "arabic_root": "خظظ",
+    "target_lemma": "χατίζω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic belly-slackening can imply inner lack or want, which plausibly meets Greek crave or need."
+  },
+  {
+    "pair_id": "GRC_0637",
+    "arabic_root": "غرس",
+    "target_lemma": "Γέρασα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic gharasa = plant; Greek Gerasa = Jerash in Jordan, Semitic place name. Possible substrate match through place naming."
+  },
+  {
+    "pair_id": "GRC_0638",
+    "arabic_root": "سستان",
+    "target_lemma": "Σοσθάνης",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides sit in the onomastic-Persian/royal sphere, giving a plausible direct-name linkage."
+  },
+  {
+    "pair_id": "GRC_0639",
+    "arabic_root": "الغذي",
+    "target_lemma": "λίγδος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic includes cutting with an instrument, and mortar is likewise a hard working tool; the functional core is plausible."
+  }
+]

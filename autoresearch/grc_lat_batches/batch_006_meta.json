@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0048",
+    "arabic_root": "حثي",
+    "target_lemma": "χθονί",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الحثى is explicitly dust, soil, and strewn earth-like matter, directly matching 'to the ground/earth'."
+  },
+  {
+    "pair_id": "GRC_0049",
+    "arabic_root": "خصم",
+    "target_lemma": "μαχήσομαι",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic خصم opponent/dispute and Greek fight are direct counterparts in the conflict domain."
+  },
+  {
+    "pair_id": "GRC_0050",
+    "arabic_root": "درهم",
+    "target_lemma": "δραχμαῖς",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic dirham and Greek drachmas preserve the same monetary masdaq with near-identical function."
+  },
+  {
+    "pair_id": "GRC_0051",
+    "arabic_root": "كرمل",
+    "target_lemma": "Κάρμηλος",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Karmel - mountain in Sham vs Mount Carmel - same referent"
+  },
+  {
+    "pair_id": "GRC_0052",
+    "arabic_root": "الفرات",
+    "target_lemma": "Εὐφράτας",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الفرات = sweet/fresh water; the Euphrates River (named for its sweetness). Greek Εὐφράτας = Euphratas (Old Persian name for the Euphrates). Both directly name the Euphrates River, deriving from the same Old Persian source *ufrātu (= 'the good ford'). The Arabic meaning 'sweet water' preserves the original semantic core."
+  },
+  {
+    "pair_id": "GRC_0053",
+    "arabic_root": "القرمد",
+    "target_lemma": "κεραμίδιον",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic القرمد = fired bricks/tiles; baked ceramic (الخزف المطبوخ والآجر); also plaster. Greek κεραμίδιον = small tile (diminutive of κεράμιον, from κεραμεύς = potter). Both refer directly to fired ceramic tiles/bricks. The Arabic القرمد is clearly cognate with or borrowed from the same root as Greek κεράμιον; direct material/manufacturing connection."
+  },
+  {
+    "pair_id": "GRC_0054",
+    "arabic_root": "اللاذن",
+    "target_lemma": "λήδανον",
+    "lang": "grc",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "labdanum=labdanum; direct loanword"
+  },
+  {
+    "pair_id": "GRC_0055",
+    "arabic_root": "سلل",
+    "target_lemma": "ψάλλω",
+    "lang": "grc",
+    "original_score": 0.88,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides share the concrete action of pulling or drawing sharply: Arabic unsheathing and Greek pluck or twitch."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0216",
+    "arabic_root": "البطن",
+    "target_lemma": "βόλβιτον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic belly and unending eating connect clearly to Greek cow dung through the action-to-result chain of consumption and excretion."
+  },
+  {
+    "pair_id": "GRC_0217",
+    "arabic_root": "بعث",
+    "target_lemma": "ἐπιβοηθέω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "epiboētheō=come to aid; b3th=send, dispatch (especially army). Strong semantic+phonetic chain b-3-th/b-o-ē-th."
+  },
+  {
+    "pair_id": "GRC_0218",
+    "arabic_root": "القنوت",
+    "target_lemma": "κολοκύνθη",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'tight skin-container' strongly meets Greek 'bottle gourd' by the container/vessel function."
+  },
+  {
+    "pair_id": "GRC_0219",
+    "arabic_root": "دقه",
+    "target_lemma": "ἐκδοχαί",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'show/reveal' aligns well with Greek 'interpretations/acceptations' as revealed or received meanings."
+  },
+  {
+    "pair_id": "GRC_0220",
+    "arabic_root": "الكتيت",
+    "target_lemma": "ἐλέχθητε",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Clear chain through speech: Arabic has 'much talking'; Greek is 'you were spoken/said'."
+  },
+  {
+    "pair_id": "GRC_0221",
+    "arabic_root": "خطط",
+    "target_lemma": "χθονί",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خط can denote a tract or place on the ground, matching Greek earth as the concrete spatial base."
+  },
+  {
+    "pair_id": "GRC_0222",
+    "arabic_root": "سفل",
+    "target_lemma": "σφάλμα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "low/downwardness naturally yields stumble or false step; this is a clear semantic chain."
+  },
+  {
+    "pair_id": "GRC_0223",
+    "arabic_root": "سلخ",
+    "target_lemma": "σέλαχος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic مسلاخ refers to sloughed skin or stripped outer layer; Greek names a rough-skinned cartilaginous fish, a clear concrete chain."
+  }
+]

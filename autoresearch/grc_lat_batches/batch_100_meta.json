@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0800",
+    "arabic_root": "ستيك",
+    "target_lemma": "στήκω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "ستيك under tā chapter; steko = to stand. Likely the root س ت/ك meaning 'stand fixed'. Phonetically and semantically aligned. Codex undervalued. Calibration: clear cognate."
+  },
+  {
+    "pair_id": "GRC_0801",
+    "arabic_root": "الافعاء",
+    "target_lemma": "γλύφω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الأفعاء: السمة التي تكون على صورة الأفعى (a brand/mark in the shape of a snake). γλύφω=to carve, engrave, cut out. A snake-shaped brand IS a carved/engraved mark. Both involve incised marks on surfaces. Strong connection through marking/engraving."
+  },
+  {
+    "pair_id": "GRC_0802",
+    "arabic_root": "الكذان",
+    "target_lemma": "χαλκηδόνιον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Plausible mineral-domain overlap: Arabic includes soft stones; Greek denotes antimony or kohl."
+  },
+  {
+    "pair_id": "GRC_0803",
+    "arabic_root": "القنعاث",
+    "target_lemma": "κολοκύνθη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'hairy' can plausibly meet Greek 'gourd' through the fuzzy exterior of gourds."
+  },
+  {
+    "pair_id": "GRC_0804",
+    "arabic_root": "البسل",
+    "target_lemma": "εὐλαβής",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "البسل = آمين (amen, solemn affirmation). εὐλαβής = holding fast, clinging to with reverence/caution. Both occupy the semantic field of solemn careful assent and devout holding. The one who says amen holds firmly to the prayer -- strong convergence."
+  },
+  {
+    "pair_id": "GRC_0805",
+    "arabic_root": "دنو",
+    "target_lemma": "-ίδιον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic nearness/reduced distance plausibly drifts toward smallness, hence a diminutive notion."
+  },
+  {
+    "pair_id": "GRC_0806",
+    "arabic_root": "سقاه",
+    "target_lemma": "ἐσχήκει",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "the water-carrier is one who has/holds water, so 'hold/have' is a plausible direct extension."
+  },
+  {
+    "pair_id": "GRC_0807",
+    "arabic_root": "فحيح",
+    "target_lemma": "ὀφιοῦχος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic فحيح = 'hissing (of snake)'; Greek = 'serpent-handler'. Both involve snakes; conceptually linked though not direct match."
+  }
+]

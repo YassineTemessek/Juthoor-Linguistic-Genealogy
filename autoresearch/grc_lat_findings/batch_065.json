@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0520",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حضا = to stir up fire, to make it blaze (fanning flames). Greek χυδαῖος = common, vulgar, copious, poured-out. The original reasoning maps blazing fire to pouring-forth/abundance. But making fire blaze (intensifying combustion) and being copious/common/vulgar (quantity/social status descriptor) are entirely different domains. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic fire-blazing and Greek copious/vulgar are entirely different domains with no credible path."
+  },
+  {
+    "pair_id": "GRC_0521",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خرق = to pierce, break through (creating an opening by force through a barrier). Greek ἐγχειρέω = to put one's hand to, to undertake, attempt (from ἐν + χείρ = in + hand = to put hand into an undertaking). Both encode BREAKING INTO / ENTERING BY FORCE: Arabic = physically piercing through; Greek = metaphorically breaking into an undertaking. The step: physically breaking through -> figuratively breaking into (attempting) an action. A 1-step concrete-to-abstract path.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic piercing-through (خرق) and Greek undertaking/attempting (ἐγχειρέω = put hand into) share the core of breaking into/entering — physical and metaphorical."
+  },
+  {
+    "pair_id": "GRC_0522",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الصرق = a thin wafer-like sheet (a flattened thin layer). Greek καλάσιρις = a type of linen garment (Egyptian linen dress). The original reasoning maps thin sheet to linen garment through thin spread layering. But a thin wafer and a linen dress require: thin sheet -> spread flat -> woven flat fabric -> garment. 4 steps. Also καλάσιρις is an Egyptian loanword into Greek with no Arabic etymology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic thin wafer-sheet and Greek Egyptian linen garment require 4+ steps; καλάσιρις is also an Egyptian loanword."
+  },
+  {
+    "pair_id": "GRC_0523",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رفع = to raise, lift up (to elevate something to a higher position). Greek ἐρέφω = to roof over, to cover from above (to place a roof on top of a structure). The semantic journey: lifting up -> placing up to cover from above. Both encode PLACING SOMETHING ELEVATED ABOVE: Arabic = the general action of raising; Greek = the specific application of raising a covering over a structure. A 1-step specialization of upward-placing to roof-placing.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic lifting/raising (رفع) and Greek roofing/covering-from-above (ἐρέφω) share the core of placing something elevated above a structure."
+  },
+  {
+    "pair_id": "GRC_0524",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حزا = to drive, collect, manage movement (directing a group or herd). Greek χάζομαι = to give way, retreat, fall back. The original reasoning maps driving-forward to giving-way through the other side of directed motion. But driving others forward and oneself retreating are opposite actions: Arabic is active direction of others; Greek is passive yielding of one's own position. These are opposite roles in movement, not genuine negation cognates.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic driving/managing others' movement (active) and Greek retreating/yielding (passive self-withdrawal) are opposite movement roles — not a negation cognate."
+  },
+  {
+    "pair_id": "GRC_0525",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الجلي = to make clear, to reveal, to clarify (making something plain/evident). Greek λευγαλέος = mournful, woeful, grievous (causing grief/misery). The original reasoning maps clarity/brightness to brightness/gleam. But Greek λευγαλέος does NOT mean bright/gleaming — it means WOEFUL/GRIEVOUS. The original reasoner appears to have confused λευγαλέος with λευκός (white/bright). False match based on incorrect Greek meaning.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic clarity/revealing and Greek woeful/grievous (λευγαλέος, not λευκός) are entirely unrelated — the original confused the Greek meaning."
+  },
+  {
+    "pair_id": "GRC_0526",
+    "finding": "no_path",
+    "semantic_journey": "Arabic نصب = to erect, set up (to raise something vertical). Greek Νίσιβις = Nisibis (proper place name, ancient city in Mesopotamia). This is a proper place name, excluded by methodology. Even analytically, Nisibis derives from Aramaic nisibin (plural of nisba = something set up) — the Arabic cognacy claim might have merit but Nisibis is a proper toponym.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Νίσιβις is a proper place name (ancient Mesopotamian city) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0527",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دمر = to destroy, ruin; to enter without permission; الدمار = utter destruction. Greek δάμαρ = wife, spouse (from δαμάω = to tame, subdue, master). Both encode SUBJUGATION/OVERPOWERING: Arabic = destroying/entering by force (conquering); Greek = the woman who has been tamed/mastered (the wife as one subdued). A genuine 1-step path: forceful entry/subduing -> the person who is subdued (wife as tamed). The root concept of mastering/overpowering is shared.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic destruction/forceful-entry (دمر) and Greek wife (δάμαρ = tamed one, from δαμάω = subdue) share the root concept of overpowering/subjugation."
+  }
+]

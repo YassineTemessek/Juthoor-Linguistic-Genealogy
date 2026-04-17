@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0688",
+    "arabic_root": "كخني",
+    "target_lemma": "κέχηνα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Akhna - time extended long over him vs 'I have yawned/gaped' - both suggest spreading/opening wide"
+  },
+  {
+    "pair_id": "GRC_0689",
+    "arabic_root": "جدي",
+    "target_lemma": "αἰγίδα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic جدي=kid, young goat (also constellation Capricorn); جدية=blood-trace, saddle-cloth. Greek aigida=aegis (acc. of aigis), the goatskin shield of Zeus/Athena, derived from aig-/aix=goat. Direct semantic match: both root meanings center on goat/young goat. The Arabic gloss focuses on the 'blood trace' sense which is the secondary meaning, but the core جدي=goat-kid clearly matches Greek aig-=goat. Strong root match through the goat sense."
+  },
+  {
+    "pair_id": "GRC_0690",
+    "arabic_root": "غرف",
+    "target_lemma": "-γράφος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic gharf = scoop/draw (water), gharif = dense trees; Greek graphos = writer/scratcher. Both from scratching/drawing action — plausible deep root resonance."
+  },
+  {
+    "pair_id": "GRC_0691",
+    "arabic_root": "خرج",
+    "target_lemma": "χάραγμα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خروج is going out or bringing forth, while Greek is an engraved mark, something cut out or produced on a surface; the action-result link is plausible."
+  },
+  {
+    "pair_id": "GRC_0692",
+    "arabic_root": "الابش",
+    "target_lemma": "βαλβίς",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الآبش=الذي يزيّن فناء الرجل وباب داره (one who adorns the courtyard and door of a man's house). βαλβίς=the rope/barrier marking start/finish of a racecourse (also: threshold, starting point). Both involve a marked boundary/entrance point. The doorway/threshold concept connects them."
+  },
+  {
+    "pair_id": "GRC_0693",
+    "arabic_root": "بغداذ",
+    "target_lemma": "Βαγαδάτης",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Variant spelling of Baghdad; shares Iranian baga-data base with Bagadates."
+  },
+  {
+    "pair_id": "GRC_0694",
+    "arabic_root": "الفوعه",
+    "target_lemma": "γλύφω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic poison's sharp edge can plausibly align with cutting or engraving through the notion of sharp incision."
+  },
+  {
+    "pair_id": "GRC_0695",
+    "arabic_root": "فرد",
+    "target_lemma": "φροῦδος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic fard = 'single, solitary, doe that left the herd'; Greek = 'gone, fled, departed'. Plausible conceptual echo via separation/solitude."
+  }
+]

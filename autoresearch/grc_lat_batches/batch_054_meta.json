@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0432",
+    "arabic_root": "الزوج",
+    "target_lemma": "Ζεῦγμα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Husband/wife/pair/couple vs Zeugma (city named for 'bridge/yoking'). Zeugnumi means 'to yoke/join'; Arabic zawj means 'pair/couple/spouse'. Both share core meaning of 'joining/pairing two together'. Clear semantic connection."
+  },
+  {
+    "pair_id": "GRC_0433",
+    "arabic_root": "العرب",
+    "target_lemma": "ἀραβέω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabs (Arab people) vs to clatter/chatter/make Arab-like sounds. Greek verb derived from 'Arab' to denote their speech style. Direct etymological/semantic link."
+  },
+  {
+    "pair_id": "GRC_0434",
+    "arabic_root": "الفربيون",
+    "target_lemma": "Εὔφορβος",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Euphorbia plant (medicinal/purging) vs Euphorbus (figure in Iliad, whose name means 'well-fed'). Arabic is clearly a loanword from Euphorbus/Euphorbia. Direct botanical-nominal link."
+  },
+  {
+    "pair_id": "GRC_0435",
+    "arabic_root": "الماج",
+    "target_lemma": "Μάγος",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Stupid confused person/fighting vs magician/mage/sorcerer. The Arabic Maj (مَاجَ) relates to the Magi (Magus), Persian priestly/scholarly class. Conceptual overlap through the Magi who were also seen as tricksters/conjurers."
+  },
+  {
+    "pair_id": "GRC_0436",
+    "arabic_root": "ذرف",
+    "target_lemma": "δακρυόφι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "eyes tearing/weeping vs oblique form of tear/teardrop — direct semantic match: tears"
+  },
+  {
+    "pair_id": "GRC_0437",
+    "arabic_root": "برهوت",
+    "target_lemma": "βάραθρον",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "a deep well/abyss in Hadhramaut where souls of the wicked gather vs a gulf/cleft/pit at Athens where criminals were thrown — both are named abyssal pits with religious/judicial significance"
+  },
+  {
+    "pair_id": "GRC_0438",
+    "arabic_root": "امض",
+    "target_lemma": "μεταυδάω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: speech/discourse — Greek: speaking — clear semantic match"
+  },
+  {
+    "pair_id": "GRC_0439",
+    "arabic_root": "العثن",
+    "target_lemma": "ἐλθόντα",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic explicitly includes the first coming of wind or rain, and Greek means having come, so the arrival concept matches directly."
+  }
+]

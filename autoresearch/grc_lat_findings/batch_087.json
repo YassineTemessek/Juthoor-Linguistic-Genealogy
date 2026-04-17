@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0696",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khalata = to mix, confuse, corrupt (also mental confusion). Greek kholotheis = angered (aorist passive participle of kholoo = to anger). Core: disturbed/corrupted inner state. Arabic mental-corruption/mixing maps to Greek inner-disturbance/anger. 1-step drift: mental-corruption/confusion -> inner-disturbance/anger.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic mental mixing/confusion and Greek angered share the core of disturbed inner state, with Arabic encoding cognitive disruption and Greek the emotional result."
+  },
+  {
+    "pair_id": "GRC_0697",
+    "finding": "no_path",
+    "semantic_journey": "Arabic sata = to be loud-voiced, to become well-known. Greek -isti = adverbial suffix forming language/manner adverbs (e.g. Hellenis ti = in Greek). Being loud-voiced or well-known does not semantically derive the grammatical suffix -isti which means in the manner/language of. These are entirely different semantic categories.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic being-loud/well-known and the Greek grammatical suffix -isti (in the manner of) are entirely different semantic categories."
+  },
+  {
+    "pair_id": "GRC_0698",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qarsaniya = a plant type. Greek kalokairianos = of summer, summery (kalo+kairos+ianos). A plant name and a seasonal adjective derived from Greek kairos (time/season) share no semantic path. The original reasoning (botanical -> medical) requires: plant -> medicinal-plant -> eye-salve, which is 3+ steps. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A plant name and a Greek seasonal adjective from kairos share no semantic derivation path."
+  },
+  {
+    "pair_id": "GRC_0699",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-ghayaya = limit, end-point; also a standard/banner. Greek logkhion = a small spear-head (diminutive of lonkhe = spear). A limit/end-point and a small spear-head are conceptually distant. Even the reasoning that a spear-head is the terminal part of a weapon requires: end-point -> terminal-part-of-weapon -> spear-point, which crosses domain boundaries in 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic end-point/limit and Greek small-spear-head are conceptually distant; making the spear-head a terminal-end requires 3+ steps across different domains."
+  },
+  {
+    "pair_id": "GRC_0700",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ghatal = abundant trees, palm grove. Greek Gaitouloi = Gaetuli, a North African tribal group (proper name). A botanical abundance term and an ethnic group name share no semantic path. Even if the Gaetuli inhabited forested regions, this is not a lexical cognate. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gaetuli is a proper ethnic name; Arabic tree-abundance does not plausibly generate a North African tribal name."
+  },
+  {
+    "pair_id": "GRC_0701",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dahama = to have intercourse with (a wife); to push/thrust. Greek diadekhomai = to receive in succession, to take over. Thrusting/intercourse and receiving-in-succession are in different semantic domains. The original reasoning (taking/receiving a mate -> receive) is too indirect; 3+ steps required.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic intercourse/thrusting and Greek receiving-in-succession are in different semantic domains with no valid path."
+  },
+  {
+    "pair_id": "GRC_0702",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khasa = exposed flesh/fat appearing outward. Greek khasko = to gape open. Core concept: opening/exposure. Arabic encodes flesh/content becoming exposed/visible; Greek encodes the mouth/gap opening wide. 1-step drift: exposed-flesh-appearing -> gaping-open.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic exposed-flesh-appearing-outward and Greek gaping-open share the core concept of something interior becoming exposed through an opening."
+  },
+  {
+    "pair_id": "GRC_0703",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-arnab = hare/rabbit; also a place name associated with it in the Arabic gloss. Greek Pleuron = Pleuron, a city in Aetolia, Greece (proper name with Greek etymology from pleuron = rib/side). Two place names in completely different cultural contexts. Proper name exclusion applies to both.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Pleuron has clear Greek etymology (rib/side); an Arabic hare place-name and a Greek rib-city are not related."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0472",
+    "arabic_root": "البوت",
+    "target_lemma": "βόλβιτον",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Arabic names a tree, and Greek βόλβιτον refers to a bulb or plant growth; the botanical core is plausibly preserved."
+  },
+  {
+    "pair_id": "GRC_0473",
+    "arabic_root": "الصرح",
+    "target_lemma": "ὁλοσηρικαί",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic ṣarīḥ can mean pure, unmixed, explicit; Greek means wholly silken, meeting in the core of pure refined material/state."
+  },
+  {
+    "pair_id": "GRC_0474",
+    "arabic_root": "الاجز",
+    "target_lemma": "λαγγάζω",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gives bending or sinking onto a cushion, and Greek denotes becoming slack or languid; both preserve a clear chain of relaxation and drooping."
+  },
+  {
+    "pair_id": "GRC_0475",
+    "arabic_root": "العمرس",
+    "target_lemma": "τολμηρός",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "Strong harshness can plausibly specialize into boldness and daring."
+  },
+  {
+    "pair_id": "GRC_0476",
+    "arabic_root": "خزي",
+    "target_lemma": "ἀκαχίζω",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "خزي and ἀκαχίζω meet in the domain of inner distress: shame on the Arabic side and grief or pain on the Greek side."
+  },
+  {
+    "pair_id": "GRC_0477",
+    "arabic_root": "الاعفث",
+    "target_lemma": "λέλειφθε",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "Greek is perfect passive 'has been left'; Arabic centers on exposure and being left uncovered, which aligns moderately well."
+  },
+  {
+    "pair_id": "GRC_0478",
+    "arabic_root": "شطاه",
+    "target_lemma": "ἀάσθητε",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic رزأناه suggests being struck, diminished, or afflicted; Greek passive of ἀάω also carries harm/ruin, giving a plausible suffering chain."
+  },
+  {
+    "pair_id": "GRC_0479",
+    "arabic_root": "السمت",
+    "target_lemma": "ἱλάσματος",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "Arabic includes preparing proper speech and invoking God; Greek is propitiation, so both meet in ritual right-ordering and appeasement."
+  }
+]

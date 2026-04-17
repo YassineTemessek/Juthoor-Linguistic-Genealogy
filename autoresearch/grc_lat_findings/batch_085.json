@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0680",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khida'a = dense battle surge or strong suckling. Greek khudaios = common, vulgar, poured-forth. Dense battle-surge and common/vulgar are different semantic fields. No valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic battle-surge and Greek common/vulgar are different semantic fields with no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0681",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khaba = to be hidden, concealed; to set up a tent. Greek khabos = a muzzle (Hesychius). Core: covering that hides or restrains. 1-step specialization: general-concealment -> specific-covering-of-mouth.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic hiding/concealment and Greek muzzle share the core concept of a covering that conceals or restrains."
+  },
+  {
+    "pair_id": "GRC_0682",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-khushu' = lowering oneself, bodily submission, sinking down. Greek lekhesi = on beds/couches (dative plural of lekhos = bed). Core: the lowered, settled bodily position. Arabic khushu' encodes deliberate bodily-lowering; Greek lekhos encodes the furniture for lying-down. 1-step drift: bodily-lowering-in-submission -> lying-down-in-rest.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic bodily-submission/lowering and Greek lying-on-beds share the concept of the body settled into a lowered horizontal position."
+  },
+  {
+    "pair_id": "GRC_0683",
+    "finding": "no_path",
+    "semantic_journey": "Arabic karsama = grand man/silent elder. Greek Khorasmioi = Chorasmians (people of Khwarezm, proper ethnic name). A descriptive phrase for an elder does not plausibly generate an ethnic group name. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Chorasmians is a proper ethnic name with Iranian etymology; Arabic elder-descriptors do not generate ethnic names."
+  },
+  {
+    "pair_id": "GRC_0684",
+    "finding": "path_found",
+    "semantic_journey": "Arabic faja = sudden appearance/emergence, sudden flight. Greek ekpheugei = flees out, escapes. Both encode sudden rapid departure from a location. 1-step direct preservation of sudden-flight semantics.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sudden appearance/flight and Greek flees-out/escapes share the core concept of sudden rapid departure."
+  },
+  {
+    "pair_id": "GRC_0685",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qds = holy, revered, glorified. Greek kudiste = most glorious (vocative superlative of kudros). Both describe the highest form of reverence/distinction. 1-step drift: divine-holiness -> supreme-glory. Both occupy the domain of supreme honor.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic holy/reverenced and Greek most-glorious share the concept of supreme honor, with Arabic in the sacred domain and Greek in the social-honor domain."
+  },
+  {
+    "pair_id": "GRC_0686",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dakhrs = a marked strip or colored band. Greek diakhorizo = to separate, distinguish. A marked-stripe noun and an act-of-separating verb are conceptually adjacent but not cognates; the stripe does not derive from the act of separating.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A marked stripe (visual marker noun) and separating/dividing (action verb) are adjacent but not cognates."
+  },
+  {
+    "pair_id": "GRC_0687",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shakhsa = the visible bodily figure, person as seen. Greek aiskesi = dative plural of aiskhos = ugliness, shame. Visible-form and ugliness-of-form are in different semantic dimensions: presence vs negative evaluation. Connecting them requires 3 steps: visible-figure -> appearance -> ugly-appearance -> shame.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic visible bodily figure and Greek ugliness/disgrace are in different dimensions; positive visibility and negative evaluation do not cognate."
+  }
+]

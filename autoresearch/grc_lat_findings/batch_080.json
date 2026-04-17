@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0640",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-lawdh = side/flank, also a refuge/shelter. Greek alludis = to another place (directional adverb allos+udis). Refuge/shelter is a noun of place; to-another-place is a directional adverb. No semantic path connects a sheltering place to a directional adverb.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic refuge/shelter and Greek to-another-place are different grammatical and semantic categories with no derivation path."
+  },
+  {
+    "pair_id": "GRC_0641",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khanaza = obscene/foul speech, also fahish (lewdness). Greek khodanos = butt, buttocks (Hesychius). Both occupy the domain of bodily obscenity/vulgarity. Arabic encodes verbal obscenity; Greek encodes the bodily part most associated with crude humor. 1-step drift: verbal obscenity -> body part encoding obscenity.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic foul/obscene speech and Greek buttocks share the vulgarity-obscenity domain, verbal in Arabic and bodily in Greek."
+  },
+  {
+    "pair_id": "GRC_0642",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qandhaw = calamities, disasters. Greek katalutiken = dissolving/destructive. Calamities and structural dissolution share only a vague undoing sense requiring 3+ steps: calamity -> destruction -> dissolution. Greek kataluo specifically encodes structural breakdown, not general harm.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Calamities (harmful events) and structurally-dissolving share only a vague undoing sense requiring 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0643",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-sowh = the wall or bank of a valley (topographic bounded edge). Greek leske = a hall or place of talk, public gathering (social space). Bounded topographic edge and social talking-hall are both enclosed spaces but semantically unrelated domains.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A valley bank/wall (topographic feature) and a public talking-hall (social space) are both enclosed but semantically unrelated."
+  },
+  {
+    "pair_id": "GRC_0644",
+    "finding": "path_found",
+    "semantic_journey": "Arabic farsh/firash = bedding, cloak-spread, anything spread as a covering surface. Greek pharos = a large piece of cloth, cloak, mantle. Core concept: large spread cloth used as covering. 1-step specialization: spreading-cloth -> specific cloth garment. The Arabic root encodes the act and result of spreading; Greek specialized to the specific cloth item.",
+    "journey_type": "specialization",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic farsh (spread/bedding) and Greek pharos (large cloth/cloak) share the core of large spread cloth used as covering."
+  },
+  {
+    "pair_id": "GRC_0645",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-saqb = young camel calf (offspring), also camel legs. Greek blosko = to come, to go (motion verb). The reasoning tried to link birth/emergence of offspring to general motion verb. Birth as emergence is too abstract a bridge to a general movement verb. No 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A camel-calf noun (offspring) and a general motion verb (come/go) share no plausible 2-step semantic path."
+  },
+  {
+    "pair_id": "GRC_0646",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-thiyya = a shelter/hiding place for sheep (mawa al-ghanam). Greek lethete = to be hidden, escape notice (from lanthano = to be hidden, related to lethe). Core concept: concealment. Arabic encodes a physical place of concealment; Greek encodes the state of being hidden. 1-step drift: hidden-place -> hidden-state.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sheep-shelter (physical concealment place) and Greek being-hidden share the core concept of concealment from view."
+  },
+  {
+    "pair_id": "GRC_0647",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kahr = grimacing, scowling (facial contortion of displeasure). Greek lekhrios = slanting, crosswise, oblique (spatial orientation). Emotional facial expression to geometric obliqueness requires 3+ steps. Scowling is not literally slanted.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Facial grimacing (emotional expression) and geometric obliqueness (spatial orientation) are distinct concepts with no valid 2-step path."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0280",
+    "arabic_root": "الرسن",
+    "target_lemma": "λινουργός",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic centers on a halter or tying-cord; Greek is a flax-worker, and flax is a prime cord-making material, yielding a solid tool-material chain."
+  },
+  {
+    "pair_id": "GRC_0281",
+    "arabic_root": "رتاه",
+    "target_lemma": "εὐρυθμία",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "Strengthening and drawing gently both fit measured order and regular motion quite well."
+  },
+  {
+    "pair_id": "GRC_0282",
+    "arabic_root": "شحك",
+    "target_lemma": "ἐσχήκει",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "Arabic means restraining suckling by placing a stick in the mouth, and Greek means had or held; both meet in the concept of holding back or restraining."
+  },
+  {
+    "pair_id": "GRC_0283",
+    "arabic_root": "رمص",
+    "target_lemma": "ἁρμός",
+    "lang": "grc",
+    "original_score": 0.67,
+    "original_method": "combined",
+    "original_reasoning": "Arabic رمص includes the sense of making right or repairing, and Greek ἁρμός is a joint; both meet on fastening and joining."
+  },
+  {
+    "pair_id": "GRC_0284",
+    "arabic_root": "الحلكم",
+    "target_lemma": "μελαγχολία",
+    "lang": "grc",
+    "original_score": 0.67,
+    "original_method": "combined",
+    "original_reasoning": "حلكمة is blackness, and melancholy is classically tied to black bile; the mafhum chain from blackness to a dark humor is clear."
+  },
+  {
+    "pair_id": "GRC_0285",
+    "arabic_root": "العجمضي",
+    "target_lemma": "λαίγματα",
+    "lang": "grc",
+    "original_score": 0.67,
+    "original_method": "combined",
+    "original_reasoning": "Small dates align well with pastries or seeds as small edible items; the semantic class is close."
+  },
+  {
+    "pair_id": "GRC_0286",
+    "arabic_root": "ذاقه",
+    "target_lemma": "ἐκδοχαί",
+    "lang": "grc",
+    "original_score": 0.66,
+    "original_method": "combined",
+    "original_reasoning": "Arabic taking or handling supports Greek receptions through a clear action to result chain."
+  },
+  {
+    "pair_id": "GRC_0287",
+    "arabic_root": "الحشي",
+    "target_lemma": "λέχεσσι",
+    "lang": "grc",
+    "original_score": 0.66,
+    "original_method": "combined",
+    "original_reasoning": "حشي carries the sense of being filled or padded, which reaches the notion of bedding."
+  }
+]

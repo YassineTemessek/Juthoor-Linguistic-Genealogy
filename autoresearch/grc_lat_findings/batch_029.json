@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0232",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سخخ (sakhkha) = soft earth into which something is inserted; the locust's tail inserting into ground. Greek ἐσχήκει = he had held/possessed (perfect of ἔχω). The connection: soft-earth-receiving-insertion → being fixed → holding. This is 3+ steps: receiving insertion → being embedded → fixed → holding. The same ἐσχήκει has appeared multiple times; each Arabic variant proposed is unconvincing. No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic soft-earth-insertion and Greek having/holding require too many intermediate steps; ἐσχήκει has been repeatedly mismatched in this dataset."
+  },
+  {
+    "pair_id": "GRC_0233",
+    "finding": "path_found",
+    "semantic_journey": "Arabic بلصم / بلسم (balsam) = balsam resin (same root as GRC_0207, variant form). Greek βάλσαμον = balsam (the aromatic resin tree and its product). This is the same confirmed Semitic-origin material culture term as GRC_0207 — the balsam tree and its aromatic resin traveled from the Near East into Greek with the Semitic name b-l-s-m intact.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic balsam (bilsam) is the Semitic origin of Greek balsamon — the same confirmed trade-route cognate as GRC_0207."
+  },
+  {
+    "pair_id": "GRC_0234",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكمع (al-kama) = side, flank, place beside. Greek Λάκμων = Lacmon, a mountain in Epirus (proper toponym). The reasoning connects Arabic 'place/side' to a Greek mountain name. Λάκμων is a proper toponym with its own Greek or local Epirote etymology. Excluded: proper toponym.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Λάκμων is a proper mountain toponym in Epirus; the Arabic flank/place connection is irrelevant to this proper name."
+  },
+  {
+    "pair_id": "GRC_0235",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خشم (khashm) = nose, snout; the forward-projecting tip of the face. Greek αἰχμάς = spear-points, the forward-projecting tips of weapons. Both encode the concept of a forward-projecting pointed tip. Arabic nose/snout-tip (the forward projection of the face) → Greek spear-tip (the forward projection of a weapon) is a direct 1-step parallel: both are the prominent forward point of their respective objects.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic nose/snout-tip (khashm, forward projection of face) maps to Greek spear-tip (aikhme) — both are the foremost projecting point."
+  },
+  {
+    "pair_id": "GRC_0236",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دمس (damasa) = to intensify, be severe, make something dark/gloomy. Greek Δεῖμος = Deimos, personification of dread/terror (proper name, son of Ares). Both involve darkness/severity, but Δεῖμος is a proper divine name in Greek mythology. Even if the conceptual overlap were valid (intensity → dread), this is a proper name and excluded. Additionally, δεῖμα (dread) in Greek has its own etymology from δείδω (to fear).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Δεῖμος is a proper divine name (Greek personification of terror) with its own Greek etymology; excluded as proper name."
+  },
+  {
+    "pair_id": "GRC_0237",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خثي (khathy) = dunging, depositing excrement (animals dunging the ground). Greek χθονί = of the earth (dative of χθών). The reasoning: dung → earth (dung fertilizes earth). While ancient peoples understood dung-earth connection, Arabic names the act of dunging and Greek names the earth itself. The path requires: dunging → what is dunged → the earth — 3 steps. Also χθών is a deep Greek word with its own etymology; comparing it to Arabic dunging is too speculative.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic dunging and Greek earth are connected only through the agricultural use of dung as fertilizer — too indirect for a cognate."
+  },
+  {
+    "pair_id": "GRC_0238",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دخض (dakhada) = to push away; claws of a beast used to rend. Greek ἄνδιχα = asunder, apart, in two (adverb meaning split/separated). The reasoning: rending claws → being-asunder. While claws rend things apart, Arabic دخض means the weapon/instrument (claw), while Greek ἄνδιχα is the result state (apart). The chain instrument-of-tearing → tearing → being-torn → apart is 3+ steps. Too speculative.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic beast-claws/rending and Greek asunder/apart are action vs. result with too many intermediate steps."
+  },
+  {
+    "pair_id": "GRC_0239",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكلج (al-kalj) = a measuring vessel or measure. Greek καλκουλάτωρ = accountant, calculator (from Latin calculātor). This is primarily a Latin loanword into Greek — καλκουλάτωρ derives from Latin calculus (pebble used in counting) + -tor. Arabic measuring vessel and Latin-derived Greek accountant share only the broad category of quantification/reckoning. Shared Latin loanword into Greek; no Arabic-to-Greek path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Greek kalkulatōr is a Latin loanword (from calculus); Arabic measuring vessel and Latin-Greek accountant share only generic quantification."
+  }
+]

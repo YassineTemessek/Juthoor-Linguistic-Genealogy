@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0424",
+    "arabic_root": "البرغز",
+    "target_lemma": "Βαρύγαζα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic البرغز: young calf. Greek Βαρύγαζα: ancient port city (Bharuch, India). The toponym may derive from a local word for 'heavy/abundant' place; the Arabic 'young calf' shares no direct link, but both br-gh-z consonants match the ancient port name which historically appears in Semitic trade records."
+  },
+  {
+    "pair_id": "GRC_0425",
+    "arabic_root": "الجعفر",
+    "target_lemma": "Γάφαρα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "Arabic الجعفر: small/large river, full flowing stream. Greek Γάφαρα: place name in Tunisia. Both j-f-r / g-ph-r consonant skeletons match; the place name may derive from a Semitic root for 'flowing/water.' Plausible toponym-from-common-noun derivation."
+  },
+  {
+    "pair_id": "GRC_0426",
+    "arabic_root": "الحرج",
+    "target_lemma": "χάραγμα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الحرج: narrow/enclosed wooded space, also sin/prohibition. Greek χάραγμα: engraved/branded mark. Both relate to marks/boundaries — a prohibited space is marked/enclosed, an engraved mark demarcates. Consonant match h-r-j / kh-r-gm."
+  },
+  {
+    "pair_id": "GRC_0427",
+    "arabic_root": "الحرز",
+    "target_lemma": "χαρίζομαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الحرز: amulet/protection, also a fortified place. Greek χαρίζομαι: to grant as a favor, to deliver/rescue. Both carry the concept of protective deliverance — an amulet protects, and χαρίζομαι means to rescue/forgive. Strong mafahim link through protection."
+  },
+  {
+    "pair_id": "GRC_0428",
+    "arabic_root": "الغبث",
+    "target_lemma": "γαβάθα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الغبيثة = a mixed dish of curds/dry cheese beaten with clarified butter (a specific food). Greek γαβάθα = bowl/dish (vessel for food). The Arabic dish الغبيثة is served in/named after a bowl; γαβάθα = the bowl itself. Direct connection through food vessel and the specific mixed food preparation."
+  },
+  {
+    "pair_id": "GRC_0429",
+    "arabic_root": "الغلقه",
+    "target_lemma": "γλήχων",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الغلقة = bitter shrub from Hijaz/Tihama used for leather tanning; Ethiopians poison weapons with it. Greek γλήχων = pennyroyal (Mentha pulegium), an aromatic bitter medicinal herb. Both are bitter aromatic plants with strong medicinal/toxic properties used in treatment and preservation; direct botanical parallel in the bitter-herb domain."
+  },
+  {
+    "pair_id": "GRC_0430",
+    "arabic_root": "ماثه",
+    "target_lemma": "μαθητεύω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic ماث root shares م-ث with Greek μαθ- (learn) — mafahim-level connection"
+  },
+  {
+    "pair_id": "GRC_0431",
+    "arabic_root": "التناوح",
+    "target_lemma": "στενάχω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Mutual lamentation/wailing/moaning (women mourning, paired mourning) vs to sigh, groan. Clear semantic connection: both denote audible grief/mourning sounds."
+  }
+]

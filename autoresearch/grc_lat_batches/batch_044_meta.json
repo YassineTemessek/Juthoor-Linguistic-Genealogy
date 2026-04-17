@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0352",
+    "arabic_root": "اردول",
+    "target_lemma": "ἀρδάλιον",
+    "lang": "grc",
+    "original_score": 0.63,
+    "original_method": "combined",
+    "original_reasoning": "Likely a transmitted place/object name with stable consonantal frame and only minor vocalic reshaping."
+  },
+  {
+    "pair_id": "GRC_0353",
+    "arabic_root": "القتب",
+    "target_lemma": "πλέκετε",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Arabic concerns camels fitted with a saddle, and Greek is 'you weave'; saddle-making and woven tack meet in a plausible craft domain."
+  },
+  {
+    "pair_id": "GRC_0354",
+    "arabic_root": "البعر",
+    "target_lemma": "λάβρος",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Arabic الغضبة in God and Greek impetuous violence share a plausible core of heated force and vehemence."
+  },
+  {
+    "pair_id": "GRC_0355",
+    "arabic_root": "شغف",
+    "target_lemma": "εἰσγράφω",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic شغف 'penetrate the heart, cover inwardly with passion' aligns well with Greek 'write in, inscribe' through the shared core of entering into and marking within."
+  },
+  {
+    "pair_id": "GRC_0356",
+    "arabic_root": "ربطه",
+    "target_lemma": "παραβοηθέω",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Stationing tied horses on a frontier extends well to support, aid, and rescue duty."
+  },
+  {
+    "pair_id": "GRC_0357",
+    "arabic_root": "رفا",
+    "target_lemma": "ἐρέφω",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic rafa in the sense of mending or patching cloth can extend to covering, which is close to Greek 'roof, cover'."
+  },
+  {
+    "pair_id": "GRC_0358",
+    "arabic_root": "الطسوج",
+    "target_lemma": "διαλέκτους",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "A district or region often yields its own dialect; this is a solid place-to-speech-variety semantic drift."
+  },
+  {
+    "pair_id": "GRC_0359",
+    "arabic_root": "الشكوثي",
+    "target_lemma": "λυκοσκυτάλιον",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "الشكوثي is explicitly a plant term, a variant name for الكشوثاء, while λυκοσκυτάλιον is likewise a plant name. The exact species differ, but the botanical meaning survives clearly."
+  }
+]

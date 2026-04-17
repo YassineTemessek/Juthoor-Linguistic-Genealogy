@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0016",
+    "arabic_root": "بلسم",
+    "target_lemma": "βάλσαμον",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both mean balsam (Commiphora), same substance. Clear Semitic-Greek loanword sharing. Near identical b-l-s-m."
+  },
+  {
+    "pair_id": "GRC_0017",
+    "arabic_root": "شمشاط",
+    "target_lemma": "Σαμόσατα",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides are the same toponymic referent, essentially an identical place-name match."
+  },
+  {
+    "pair_id": "GRC_0018",
+    "arabic_root": "قسطنطينيه",
+    "target_lemma": "Κωνσταντίνου",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic Qustantiniyya = 'Constantinople'; Greek = 'of Constantine'. Direct etymological borrowing — the city named after the emperor."
+  },
+  {
+    "pair_id": "GRC_0019",
+    "arabic_root": "سمال",
+    "target_lemma": "Σαμουήλ",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "The Arabic gloss explicitly gives a personal name, and Σαμουήλ is the same biblical name Samuel."
+  },
+  {
+    "pair_id": "GRC_0020",
+    "arabic_root": "جندر",
+    "target_lemma": "Γίνδαρος",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "combined",
+    "original_reasoning": "Both sides preserve a proper name or toponymic identity, so this is near-direct name continuity rather than drift."
+  },
+  {
+    "pair_id": "GRC_0021",
+    "arabic_root": "حلط",
+    "target_lemma": "χολωθείς",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الاحتلاط explicitly glossed as anger and vexation matches Greek angered almost identically."
+  },
+  {
+    "pair_id": "GRC_0022",
+    "arabic_root": "جلفار",
+    "target_lemma": "Γλαφύραι",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "combined",
+    "original_reasoning": "Both sides are place names, and this looks like direct toponymic preservation rather than semantic drift."
+  },
+  {
+    "pair_id": "GRC_0023",
+    "arabic_root": "البرذون",
+    "target_lemma": "βουρδών",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic البرذون: horse/pack animal. Greek βουρδών: mule. Direct borrowing of the same animal-category term; near-identical phonology. Classic Greco-Arabic loanword."
+  }
+]

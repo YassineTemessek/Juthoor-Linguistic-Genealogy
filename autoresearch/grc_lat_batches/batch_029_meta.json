@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0232",
+    "arabic_root": "سخخ",
+    "target_lemma": "ἐσχήκει",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic soft earth receiving the locust's tail preserves a clear notion of insertion and being fixed in place, close to holding."
+  },
+  {
+    "pair_id": "GRC_0233",
+    "arabic_root": "بلصم",
+    "target_lemma": "βάλσαμον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "blsm variant of balsam; still semitic root. Strong link."
+  },
+  {
+    "pair_id": "GRC_0234",
+    "arabic_root": "الكمع",
+    "target_lemma": "Λάκμων",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic explicitly means place, location, or valley-side, which aligns well with a named mountain landmark."
+  },
+  {
+    "pair_id": "GRC_0235",
+    "arabic_root": "خشم",
+    "target_lemma": "αἰχμάς",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic خشم nose/snout and Greek spear-points share the concrete notion of projecting front tips."
+  },
+  {
+    "pair_id": "GRC_0236",
+    "arabic_root": "دمس",
+    "target_lemma": "Δεῖμος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'intensify/be severe' aligns well with Greek 'terror' as intensified fear."
+  },
+  {
+    "pair_id": "GRC_0237",
+    "arabic_root": "خثي",
+    "target_lemma": "χθονί",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "خثي refers to dunging or excrement, a direct material-to-ground relation with χθονί 'earth/ground'."
+  },
+  {
+    "pair_id": "GRC_0238",
+    "arabic_root": "دخض",
+    "target_lemma": "ἄνδιχα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Claws or beast weapons directly rend apart, matching asunder on the result side."
+  },
+  {
+    "pair_id": "GRC_0239",
+    "arabic_root": "الكلج",
+    "target_lemma": "καλκουλάτωρ",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss centers on a measure and measuring vessel, while καλκουλάτωρ is an accountant; both belong to reckoning and quantified handling."
+  }
+]

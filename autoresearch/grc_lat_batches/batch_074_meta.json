@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0592",
+    "arabic_root": "البرنس",
+    "target_lemma": "Βορινός",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic البرنس: a tall hood/hood-garment. Greek Βορινός: ancient city between Beirut and Sidon. The Arabic garment name may derive from 'Phoenician-style' covering (برنساء = the people). Plausible that the city name and the garment share a Phoenician origin."
+  },
+  {
+    "pair_id": "GRC_0593",
+    "arabic_root": "الثرم",
+    "target_lemma": "Θέρμη",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الثرم: breaking of a tooth at its root. Greek Θέρμη: Therma (hot springs city, Macedonia). Heat-fever-breaking: the Arabic ثرم includes bodily breaking, the Greek city name means 'hot.' Weak phonological match th-r-m."
+  },
+  {
+    "pair_id": "GRC_0594",
+    "arabic_root": "الجفر",
+    "target_lemma": "Γάφαρα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic الجفر: young sheep (fattened), also an unlined well. Greek Γάφαρα: place name. Both share j/g-f-r consonant skeleton; the place may derive from a pastoral/water source term."
+  },
+  {
+    "pair_id": "GRC_0595",
+    "arabic_root": "الجنث",
+    "target_lemma": "γενηθείς",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الجنث: origin/root (الجنث = الأصل). Greek γενηθείς: aorist passive participle of γίγνομαι (having been born/generated). Origin/root and 'having been generated/born' share the conceptual core of genesis/origin. Strong mafahim match."
+  },
+  {
+    "pair_id": "GRC_0596",
+    "arabic_root": "الحذن",
+    "target_lemma": "χόδανος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الحذن: waistband, also small-eared animal; الحذنة = buttocks area. Greek χόδανος: buttocks. The Arabic الحذنتان = the two buttocks/labia explicitly matches the Greek 'butt' meaning. Clear semantic match."
+  },
+  {
+    "pair_id": "GRC_0597",
+    "arabic_root": "الحرسم",
+    "target_lemma": "Χοράσμιοι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic الحرسم: poison, death (also a corner). Greek Χοράσμιοι: Chorasmians (ancient tribe of Chorasmia). The Chorasmians were famous warriors; 'poison/death' as a tribal characterization. Consonant match h-r-s-m / kh-r-s-m. Plausible ethnonym derivation."
+  },
+  {
+    "pair_id": "GRC_0598",
+    "arabic_root": "الخفر",
+    "target_lemma": "ἐχέφρων",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الخفر: (1) intense modesty/shyness; (2) to give protection, escort, guard. Greek ἐχέφρων = holding one's mind, thoughtful, prudent (ἔχω=hold + φρήν=mind). Both carry a core of restraint combined with protective vigilance; the guard/protector role (خفر) and the prudent mind-holder map closely at the mafahim level."
+  },
+  {
+    "pair_id": "GRC_0599",
+    "arabic_root": "الشقف",
+    "target_lemma": "σκάφη",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الشقف = pottery; broken earthenware shards (كسر الفخار). Greek σκάφη = boat-shaped vessel, tub, basin (earthenware). Both refer directly to pottery/ceramic vessel material; Arabic شقف is earthenware/ceramic and Greek σκάφη is a clay/earthenware vessel. Direct material overlap in the ceramic/pottery domain."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0624",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-tawah = to go astray, wander lost, perish. Greek lethete = you have forgotten (related to lethe = forgetting, concealment). Shared core: something disappearing from awareness. Arabic encodes physical wandering-lost; Greek encodes mental disappearance-from-awareness. 2-step drift: wandering-lost -> disappeared-from-sight -> forgotten/concealed.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic wandering-lost and Greek forgetting share the concept of disappearing from awareness, physical in Arabic and mental in Greek."
+  },
+  {
+    "pair_id": "GRC_0625",
+    "finding": "no_path",
+    "semantic_journey": "Arabic afala = to set (of sun/stars), to disappear. Greek Philai = Philae, a sacred Egyptian island (proper name). Philae has Egyptian/Coptic etymology. Proper name exclusion applies; astronomical setting and frontier place-name require too many steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Philae is an Egyptian proper name with Egyptian/Coptic etymology; astronomical setting does not plausibly name an Egyptian island."
+  },
+  {
+    "pair_id": "GRC_0626",
+    "finding": "path_found",
+    "semantic_journey": "Arabic aqta'ara = cutting off, stopping of breath, suffocating. Greek katargeo = to make inactive, abolish, render powerless (kata + argos = idle). Core concept: cutting off active function. Arabic encodes physical cessation (breath-stopping); Greek encodes making something functionally inert. 1-step drift: cutting-off-breath -> making-functionless.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic cutting-off-breath and Greek making-inactive share the core of bringing active function to a stop."
+  },
+  {
+    "pair_id": "GRC_0627",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-thantal = spoiling and becoming foul after cleansing (same root as GRC_0613). Greek kataluthentoyn = of the two having been dissolved. Putrefaction and structural dissolution are distinct processes requiring 3+ steps. Same verdict as GRC_0613.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Same root as GRC_0613; putrefaction does not connect to structural dissolution within 2 semantic steps."
+  },
+  {
+    "pair_id": "GRC_0628",
+    "finding": "path_found",
+    "semantic_journey": "Arabic jalasa = to sit down, take a seated position. Greek egklisei = in the inclination/leaning (from egklisis = bending of body). Core: deliberate bodily positional settling. Sitting involves lowering-and-settling; inclining is adjacent bodily positioning. 1-step drift: sitting/settling -> inclining toward a surface.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sitting-down and Greek inclining/leaning share the core of deliberate bodily positional settling."
+  },
+  {
+    "pair_id": "GRC_0629",
+    "finding": "no_path",
+    "semantic_journey": "Arabic daqahu = to entice, draw out, lure someone outward. Greek dekhetai = receives, accepts, takes in. Drawing-out and receiving/taking-in are directionally opposite movements. Even under negation-cognate frame these are too directionally opposed with weak phonetic correspondence.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Luring/drawing-outward and receiving/taking-inward are directionally opposed actions that do not form a plausible semantic pair."
+  },
+  {
+    "pair_id": "GRC_0630",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-shuwaythi = a specific variety of date palm (botanical name). Greek teleesthai = to be completed, fulfilled. Chain from a date-variety name to completion/fulfillment requires: date-type -> ripeness -> maturation -> completion = 3+ steps. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A specific date-palm variety name and Greek completion/fulfillment share no direct semantic path within 2 steps."
+  },
+  {
+    "pair_id": "GRC_0631",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qa'tara = to fall, collapse, come down. Greek katerkomai = to come down, descend, return. Core: downward movement. Arabic encodes falling/collapsing down; Greek encodes descending or coming back. 1-step direct preservation of downward motion semantics.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic falling/collapsing downward and Greek coming-down/descending share direct downward motion semantics."
+  }
+]

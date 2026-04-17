@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0440",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الجت = to test/feel something by palpation, to investigate by touch. Greek εὐέλεγκτος = easy to refute, easy to test/prove (from εὔ + ἐλέγχω = well/easy + to test/refute). The original reasoning maps physical palpation testing to logical refutability. But physical palpation and logical proof/refutation are in entirely different domains (bodily investigation vs intellectual argument). The abstraction palpation -> investigation -> logical testing requires 3 steps with domain jumps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical palpation-testing and Greek logical refutability are different domains — physical investigation does not generate logical refutation in 1-2 steps."
+  },
+  {
+    "pair_id": "GRC_0441",
+    "finding": "no_path",
+    "semantic_journey": "Arabic التود = trees (a collective noun for trees/wooded areas). Greek Ἐλαιάτιδι = dative of Ἐλαιᾶτις = of the olive region/olive-land (a toponym meaning olive territory). This is a proper place name. Even if the concept (tree-covered land) is adjacent, Ἐλαιάτιδι is a proper geographic designation and must be excluded.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Ἐλαιάτιδι is a proper geographic toponym — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0442",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الجيتر = shortness, being small/brief. Greek ὀλιγοθερμία = deficiency of heat, low body temperature (from ὀλίγος + θερμία = little + heat). The original reasoning maps shortness/small degree to little heat. But small quantity/brevity and low temperature are different properties — both are 'small/little' but of different things. Shortness -> little -> little heat requires: being short -> being small -> small amount of heat. This is just: both involve smallness, which is too weak for cognacy.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic shortness and Greek low-heat both involve smallness but of entirely different properties — category-level overlap is not cognacy."
+  },
+  {
+    "pair_id": "GRC_0443",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رتب = to arrange in order, rank, set in proper sequence (ordering things in degree/rank). Greek ἀρτάβη = an artab (a Persian unit of dry measure, borrowed into Greek from Old Persian artaba). The original reasoning maps ordering/arrangement to a standardized measure. But Arabic ordering and Greek unit-of-measure both involve a standard, though: orderly arrangement -> standardized quantity -> unit of measure. 3 steps. Also ἀρτάβη is a Persian loanword into Greek, not of Arabic origin.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic ordering/arrangement and Greek artab (Persian measure loanword) have no direct path — also ἀρτάβη is borrowed from Persian, not Arabic."
+  },
+  {
+    "pair_id": "GRC_0444",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الرس = to be firm, settled, stable (firmness/settledness). Greek Λάρισα = Larissa (proper place name, several Greek cities). Larissa is a proper place name, excluded by methodology. Even analyzing it, Larissa's etymology is pre-Greek (possibly Pelasgian) and unrelated to Arabic stability.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Λάρισα is a proper place name (several Greek cities) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0445",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القاقاء = whiteness of eggs, egg-white. Greek λευκίσκος = a small white fish (dace/roach, from λευκός = white + diminutive). The original reasoning maps egg-white to white-colored fish. But egg-white and a silvery fish share only the color white. Every language has words for white things; this is trivial color overlap, not cognacy. No semantic path beyond shared color.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic egg-whiteness and Greek white-fish share only the color white — trivial color overlap is not cognacy."
+  },
+  {
+    "pair_id": "GRC_0446",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دحر = to drive away, expel, push back forcefully (pushing someone away from a position). Greek διέρχεται = he/she/it passes through (from δια + ἔρχομαι = through + come/go). The original reasoning maps drive-away to pass-through as both involving motion. But driving someone AWAY (expulsion) and passing THROUGH (transit) are different motion types in different directions. Expulsion is outward force on another; passing-through is self-directed transit. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic forceful expulsion (drive away) and Greek passing-through (transit) are different motion types in different directions."
+  },
+  {
+    "pair_id": "GRC_0447",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حندج = interior hollows, short dunes with enclosed depressions inside (spatial enclosure within terrain). Greek χανδάνω = to contain, hold, comprise (to have room for, to be large enough to hold). Both encode ENCLOSURE/CONTAINING CAPACITY: Arabic = the physical hollow that encloses/contains space within terrain; Greek = the capacity to contain/hold something within. A 1-step spatial-to-functional metaphor: enclosed hollow -> the property of being able to contain things.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic terrain-hollow/enclosed depression (حندج) and Greek containing/holding capacity (χανδάνω) share the core of enclosure — space-within-form."
+  }
+]

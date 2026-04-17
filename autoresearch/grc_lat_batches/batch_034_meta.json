@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0272",
+    "arabic_root": "حزال",
+    "target_lemma": "χαμαίζηλος",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "The Arabic gloss explicitly includes shortness, which matches a low seat or stool quite directly."
+  },
+  {
+    "pair_id": "GRC_0273",
+    "arabic_root": "سخخ",
+    "target_lemma": "ἐσχήκασι",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic embedding into ground aligns well with Greek perfect 'they have held' through secure fixation."
+  },
+  {
+    "pair_id": "GRC_0274",
+    "arabic_root": "الحق",
+    "target_lemma": "λογχίον",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "حق is fixed emplacement or socket, and a spear-head is the inserted fixed head of a weapon."
+  },
+  {
+    "pair_id": "GRC_0275",
+    "arabic_root": "الثطاع",
+    "target_lemma": "ἀγγέλθητε",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "Greek means 'you were announced', which matches the Arabic sense of appearing or becoming manifest."
+  },
+  {
+    "pair_id": "GRC_0276",
+    "arabic_root": "جنف",
+    "target_lemma": "γονυπετεῖς",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic leaning or slanting aligns well with Greek kneeling through the shared bodily core of bending downward."
+  },
+  {
+    "pair_id": "GRC_0277",
+    "arabic_root": "اردب",
+    "target_lemma": "Ἀρδάβδα",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "The cluster looks like a preserved name or measure-word transmission; consonantal body and referential value stay close."
+  },
+  {
+    "pair_id": "GRC_0278",
+    "arabic_root": "الساحه",
+    "target_lemma": "λέσχη",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "Arabic ساحة is an open court or space, and Greek λέσχη is a gathering place or hall; both preserve a place-for-assembly core."
+  },
+  {
+    "pair_id": "GRC_0279",
+    "arabic_root": "البستق",
+    "target_lemma": "ἀλάβαστος",
+    "lang": "grc",
+    "original_score": 0.68,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss explicitly gives something of earthenware, and Greek ἀλάβαστος is a vessel or mineral term; the durable container-material sense is plausibly preserved."
+  }
+]

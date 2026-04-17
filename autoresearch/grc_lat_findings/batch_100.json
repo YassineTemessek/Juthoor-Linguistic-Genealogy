@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0800",
+    "finding": "no_path",
+    "semantic_journey": "Arabic satik has unclear/uncertain meaning; suggested stand-fixed interpretation is not well-attested. Greek steko = to stand firm (from histemi), a well-documented form. Without a clear Arabic root meaning stand-fixed, no valid path established.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic satik has unclear meaning; Greek steko derives from well-documented histemi; no valid Arabic-Greek cognate path."
+  },
+  {
+    "pair_id": "GRC_0801",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-afaa = a brand/mark shaped like a snake (sima ala surat al-afaa). Greek glupho = to carve, engrave. Core: an incised mark on a surface. 1-step action-to-result: carving/engraving -> the-engraved-mark. Arabic is the specific snake-shaped result; Greek is the general engraving action.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic snake-shaped brand mark and Greek engraving action share the incised-mark concept; Arabic is the specific result, Greek is the action."
+  },
+  {
+    "pair_id": "GRC_0802",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kadhan = soft porous stones. Greek khalkedonian = antimony/kohl (cosmetic mineral). Both mineral domain but entirely different minerals with different properties and uses. Shared mineral category is insufficient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic soft-porous-stone and Greek antimony/kohl are both mineral but entirely different minerals in different use-categories."
+  },
+  {
+    "pair_id": "GRC_0803",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qanaath = hairy, having much hair. Greek kolokynthe = gourd, pumpkin. Hairy and gourd are in entirely different semantic categories. Gourds have an incidental fuzzy surface but this cannot generate a cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic hairy and Greek gourd share only incidental surface fuzziness; insufficient for cognate status."
+  },
+  {
+    "pair_id": "GRC_0804",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-basl = amen (solemn affirmation); also brave warrior; also forbidden/sacred. Greek eulabees = holding fast with reverence, devoutly cautious. Core: solemn careful assent to the sacred. 1-step drift: solemn-affirmation -> devout-clinging-to-what-is-affirmed.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic solemn affirmation (amen) and Greek devoutly-holding-fast share solemn careful assent to the sacred."
+  },
+  {
+    "pair_id": "GRC_0805",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dunuw = nearness, reduced distance. Greek -idion = Greek diminutive grammatical suffix. A content spatial word and a grammatical morpheme cannot form a cognate, even if both encode reduction.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic spatial nearness and Greek grammatical diminutive suffix are different categories; content words and grammatical morphemes cannot cognate."
+  },
+  {
+    "pair_id": "GRC_0806",
+    "finding": "no_path",
+    "semantic_journey": "Arabic saqahu = a water-carrier, one who holds/provides water. Greek eskhekei = had held/possessed (pluperfect of ekhein). Generalizing from water-carrier to general-have-possession requires 3 steps: carrier -> holding-water -> holding-things-generally -> had-held.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic water-carrier (specific agent) and Greek had-held (general possession) require 3 steps; specific and general are categorically different."
+  },
+  {
+    "pair_id": "GRC_0807",
+    "finding": "path_found",
+    "semantic_journey": "Arabic fahih = hissing of a snake. Greek ophiouhos = serpent-handler, one who holds/manages snakes (ophis=serpent + okhos=holder). Core: snakes. Arabic encodes the snake-sound; Greek encodes the snake-handler. 2-step material-culture: snake-sound -> the-snake -> one-who-handles-snakes.",
+    "journey_type": "material_culture",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic snake-hissing and Greek serpent-handler share the snake as core referent; Arabic preserves the sound, Greek the handler relationship."
+  }
+]

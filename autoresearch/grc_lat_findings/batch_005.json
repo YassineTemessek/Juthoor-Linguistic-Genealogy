@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0040",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek are proper names. Doukas was a Byzantine family name (related to Latin dux = leader). Arabic rendering of a proper name. Excluded as proper names.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both are proper names (Byzantine Doukas family vs Arabic rendering) - excluded as proper names."
+  },
+  {
+    "pair_id": "GRC_0041",
+    "finding": "path_found",
+    "semantic_journey": "Arabic sabata = to rest, cease activity, the Semitic root s-b-t meaning cessation/rest. Greek sabbaton = Sabbath (day of rest). Greek borrowed sabbaton from Hebrew/Aramaic shabbat (to rest/cease). The Semitic root s-b-t encoding rest/cessation is genuine, and Greek received the term via Semitic. Confirmed Semitic religious-cultural term transmission.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Semitic rest/cessation root (s-b-t) entered Greek as sabbaton - genuine Semitic religious-cultural term transmission."
+  },
+  {
+    "pair_id": "GRC_0042",
+    "finding": "no_path",
+    "semantic_journey": "Arabic patterned inlay/banding on cloth or ground (generic). Greek diakhrysos = interwoven specifically with gold (gold-threaded). The Arabic concept of generic patterned inlay -> Greek specifically gold-threaded requires knowing the metal, which is an additional unspecified step. Also phonetics are distant. False positive.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic generic patterning does not specifically connect to Greek gold-threading - specificity mismatch."
+  },
+  {
+    "pair_id": "GRC_0043",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-harth = tillage/ploughing (agricultural action). Greek helkethron = the stock (wooden frame) of a plough, derives from Greek helko (to drag/pull). The Greek word is native Greek (pull/drag -> dragging implement), not from a Semitic root. Phonetics are very distant. False cognates.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek helkethron derives from native Greek helko (to drag) - not from Arabic ploughing action."
+  },
+  {
+    "pair_id": "GRC_0044",
+    "finding": "path_found",
+    "semantic_journey": "Arabic subsiding/calming/settling (becoming still). Greek hesukhazetai = be quiet, rest, be at peace. The Arabic root carries the sense of subsidence/calming; Greek derives from hesukhos (quiet/still). The semantic core is identical: becoming quiet/still/calm. Both encode transition from activity to stillness. One direct step.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic subsiding/calming aligns with Greek being-quiet/still - direct stillness concept."
+  },
+  {
+    "pair_id": "GRC_0045",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek are proper names. Sybrita was a pre-Greek settlement in Crete with a name of uncertain (possibly pre-Greek Aegean) origin. Arabic form is a rendering of a toponym. Excluded as proper names.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Sybrita is a Cretan city name of pre-Greek origin - proper name, no Arabic root connection."
+  },
+  {
+    "pair_id": "GRC_0046",
+    "finding": "path_found",
+    "semantic_journey": "Arabic barakan = a black cloak or outer garment. Greek barakine = a type of garment/cloth (attested in late Greek sources). Both name a specific garment or cloth type. The Arabic root b-r-k-n names a black outer cloak; Greek barakine names a similar cloth/garment. Plausible Semitic garment term that entered Greek, or shared substrate. The clothing type and name correspondence are close enough for plausible material culture transmission.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic black cloak (barakan) and Greek garment (barakine) plausibly share a material culture garment term."
+  },
+  {
+    "pair_id": "GRC_0047",
+    "finding": "no_path",
+    "semantic_journey": "Root confusion in the original reasoning: Arabic al-saatar is the herb thyme/savory, not a rogue. The original reasoning conflates al-saatar (thyme) with al-shater (clever rogue). If we use al-saatar (thyme), there is no connection to Greek female robber. If we use al-shater, the chain is still too long. Root misidentification makes this a false positive.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Root confusion: Arabic thyme (al-saatar) has no connection to Greek female robber - root mismatch in original scoring."
+  }
+]

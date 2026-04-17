@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0656",
+    "arabic_root": "سحطه",
+    "target_lemma": "σχέσθαι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic slipping away and Greek 'to have/hold for oneself' meet through the same holding-versus-loss conceptual axis."
+  },
+  {
+    "pair_id": "GRC_0657",
+    "arabic_root": "حتد",
+    "target_lemma": "ἰχθυώδης",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Abiding firmly in a place can drift to a place characterized by what fills it."
+  },
+  {
+    "pair_id": "GRC_0658",
+    "arabic_root": "حكوت",
+    "target_lemma": "οὐχ ἥκιστα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Recounting and excelling can both mark singled-out prominence; especially is a plausible abstract result."
+  },
+  {
+    "pair_id": "GRC_0659",
+    "arabic_root": "ضابل",
+    "target_lemma": "διάβολος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic ضئبل 'calamity, disaster' vs Greek 'slanderer, devil' (origin of diabolos). Both negative/destructive concepts; moderate conceptual link"
+  },
+  {
+    "pair_id": "GRC_0660",
+    "arabic_root": "غفره",
+    "target_lemma": "Γάφαρα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic ghafara = cover/forgive; Greek = Punic Gaphara. Shared substrate for the root cover-hide plausible."
+  },
+  {
+    "pair_id": "GRC_0661",
+    "arabic_root": "سحطه",
+    "target_lemma": "σχεθήσεται",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic loss of grip contrasts directly with Greek future passive of 'have', giving a plausible opposite-pole semantic chain."
+  },
+  {
+    "pair_id": "GRC_0662",
+    "arabic_root": "اقذن",
+    "target_lemma": "κίνδυνι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "اقذنّ = produced many faults/defects (أتى بعيوب كثيرة). κίνδυνος = danger, peril, risk. Accumulation of faults leading to dangerous situation is a natural causal chain. Defectiveness as the precondition of danger is a plausible conceptual evolution."
+  },
+  {
+    "pair_id": "GRC_0663",
+    "arabic_root": "كرفا",
+    "target_lemma": "κάρφος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Piled clouds vs 'dry twig' - faint via piled/dried material"
+  }
+]

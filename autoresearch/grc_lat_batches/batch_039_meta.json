@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0312",
+    "arabic_root": "اللحد",
+    "target_lemma": "ἀλλαχόθι",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic means to incline aside or deviate; Greek means elsewhere. The shift from 'to one side' to 'in another place' is a clear semantic chain."
+  },
+  {
+    "pair_id": "GRC_0313",
+    "arabic_root": "العنصل",
+    "target_lemma": "λινόζωστις",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Both sides point to a specific herbaceous plant; Arabic names squill/mouse-onion and Greek names mercury, so the plant-domain match is real though not identical."
+  },
+  {
+    "pair_id": "GRC_0314",
+    "arabic_root": "اصطب",
+    "target_lemma": "στίβη",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "الأصطبة is hackled flax fibers or torn strips, which plausibly matches στίβη as packed fiber or bedding material."
+  },
+  {
+    "pair_id": "GRC_0315",
+    "arabic_root": "سقط",
+    "target_lemma": "σχέτε",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "dropping contrasts with holding/keeping; this is a solid negation-style semantic pairing."
+  },
+  {
+    "pair_id": "GRC_0316",
+    "arabic_root": "سفل",
+    "target_lemma": "ἀσφαλέσι",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "السافل/downward fall stands in a negation relation to 'safe, not falling'."
+  },
+  {
+    "pair_id": "GRC_0317",
+    "arabic_root": "افثي",
+    "target_lemma": "ἄφθιτον",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic أفثى 'become exhausted/weakened, perish'; Greek ἄφθιτον 'imperishable' (the negation, a-phthitos, where phthitos itself is from a perishing root). Polar relationship: Arabic shows the affirmative perishing root while Greek shows the negation. This is a classic negation-pattern cognate (per calibration: افثي→ἄφθιτον=0.70)."
+  },
+  {
+    "pair_id": "GRC_0318",
+    "arabic_root": "ساخت",
+    "target_lemma": "ἐσχήκατε",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "The Arabic sense of settled deposition links plausibly to Greek 'you have held' through maintained or fixed condition."
+  },
+  {
+    "pair_id": "GRC_0319",
+    "arabic_root": "عفته",
+    "target_lemma": "ἄφθιτον",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic عفت 'twisted, fiery, consume/destroy' vs ἄφθιτον 'imperishable' (negation of destruction). Per calibration: negation cognate pattern (perish↔imperishable) = 0.65"
+  }
+]

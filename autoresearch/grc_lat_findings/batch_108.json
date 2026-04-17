@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0864",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-mukh = marrow/brain. Latin magulum = jaw/mouth. Marrow/brain and jaw are both head-anatomy but different regions with different functions. No valid 2-step path from marrow/brain to jaw.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic marrow/brain and Latin jaw/mouth are both head-anatomy but in different regions; no valid derivation path."
+  },
+  {
+    "pair_id": "LAT_0865",
+    "finding": "path_found",
+    "semantic_journey": "Arabic maghada = soft, flexible, yielding (mughd = soft/tender). Latin mitigatio = softening, mitigation (from mitis=mild/soft + agere). Core: soft-quality. 1-step direct preservation: soft/flexible-quality -> act-of-making-soft.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic soft/flexible (mughd) and Latin softening/mitigation (from mitis=soft) directly share the soft-quality concept."
+  },
+  {
+    "pair_id": "LAT_0866",
+    "finding": "path_found",
+    "semantic_journey": "Arabic martala = to smear, coat with mud/clay, plaster. Latin mortariolum = small mortar vessel (diminutive of mortarium). Core: working with thick mixed paste-like material. 1-step material-culture: smearing/plastering -> vessel-for-grinding/mixing-paste.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic smearing/plastering with clay and Latin mortar-vessel share the context of working with thick mixed material."
+  },
+  {
+    "pair_id": "LAT_0867",
+    "finding": "path_found",
+    "semantic_journey": "Arabic dalaqa = to pour out rapidly; sword slipping; to rush forth. Latin deliquo = to strain off, pour a liquid, clarify. Core: liquid flowing forth rapidly. 1-step direct preservation: rapid-pouring-forth -> straining/pouring-liquid.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic rapidly-pouring/flowing and Latin straining-off/pouring-liquid directly share the concept of liquid moving forth with force."
+  },
+  {
+    "pair_id": "LAT_0868",
+    "finding": "path_found",
+    "semantic_journey": "Arabic dalaqa = to pour out rapidly, to gush (same root as LAT_0867). Latin deliquium = melting away, dissolution. Core: flowing away/dissolution. 1-step drift: rapid-pouring-forth -> melting-away/dissolution.",
+    "journey_type": "semantic_drift",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic rapidly-flowing/gushing and Latin melting-away/dissolution share flowing out until dissolved or depleted."
+  },
+  {
+    "pair_id": "LAT_0869",
+    "finding": "path_found",
+    "semantic_journey": "Arabic rahiqa = to press urgently, closely; to approach/oppress. Latin arrha = earnest money, down payment (pledge under pressure). Core: urgent pressing/binding. 1-step drift: pressing-urgently -> binding-pledge-under-urgency.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic pressing-urgently and Latin earnest-money/pledge share binding urgency; a pledge made under pressing circumstances."
+  },
+  {
+    "pair_id": "LAT_0870",
+    "finding": "path_found",
+    "semantic_journey": "Arabic falaghaa = to crack the skull, split the head. Latin infligo = to knock, strike against (inflict a blow). Core: striking hard. 1-step direct preservation: hard-strike-to-crack -> striking-inflicting-blow.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic skull-cracking-blow and Latin inflicting-a-blow directly share the hard-striking concept."
+  },
+  {
+    "pair_id": "LAT_0871",
+    "finding": "path_found",
+    "semantic_journey": "Arabic falaghaa = to crack the skull (same root as LAT_0870). Latin affligo = to cast down, strike, beat. Core: hard striking/beating. 1-step direct preservation.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Same root as LAT_0870; Arabic skull-cracking and Latin casting-down/striking share the hard-blow concept."
+  }
+]

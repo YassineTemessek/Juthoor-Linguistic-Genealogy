@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0112",
+    "finding": "no_path",
+    "semantic_journey": "Arabic sajara = to fill watercourses/flood channels (the root s-j-r = to fill/flood). Greek Sangarios = a river name (Sakarya River in Anatolia). The original reasoning: filling watercourses -> river name. While rivers fill their courses, the Greek proper name Sangarios is a specific river toponym of Phrygian/Anatolian origin, not derived from an Arabic root. Proper name (river toponym).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Sangarios is an Anatolian/Phrygian river name - not derived from Arabic filling-watercourses concept."
+  },
+  {
+    "pair_id": "GRC_0113",
+    "finding": "path_found",
+    "semantic_journey": "Arabic sakhata = settling/sinking, subsiding into a state of rest (the root s-kh-t = to sink/settle/subside). Greek hesukhazetai = be quiet, rest, be at peace (from hesukhos = quiet/still). Both encode the transition from activity to quietness/stillness. Arabic: settling/subsiding; Greek: being quiet/at rest. One clear step: settling/subsiding -> quieting/resting.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic settling/subsiding (sakhata) and Greek being-quiet/resting (hesukhazetai) share the stillness concept."
+  },
+  {
+    "pair_id": "GRC_0114",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-qubrus = Cyprus (the island), explicitly associated with copper (the island that gave copper its name - kupros = copper). Greek khalkobaros = weighed down with bronze/copper (khalko = bronze/copper + baros = weight/burden). Both encode the copper/bronze concept. Arabic: Cyprus as the island of copper; Greek: loaded with copper/bronze. One step: the copper-island (Cyprus) -> heavy with copper/bronze. The semantic core of copper is shared.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic Cyprus/copper island (al-qubrus) and Greek copper-heavy (khalkobaros) share the copper/bronze semantic core."
+  },
+  {
+    "pair_id": "GRC_0115",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-binyth = a type of deep-sea fish (named with the letters b-y-n-th). Greek benthos = depth (of the sea). The original reasoning: deep-sea fish -> the depth of the sea. However, Arabic al-binyth names a specific fish; Greek benthos names the depth itself. These are different categories (animal vs location). Also noted: Arabic borrowed the Greek term for deep-sea fish. If Arabic borrowed from Greek, this is Greek-to-Arabic, not the reverse.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic deep-sea fish (al-binyth) and Greek sea-depth (benthos) are different categories; Arabic likely borrowed from Greek."
+  },
+  {
+    "pair_id": "GRC_0116",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-taghran = boiling/effervescence (also as a proper name). Greek Tigranes = an Armenian royal name. Tigranes is an Iranian/Armenian proper name (from Old Iranian Tigra + -ana suffix). Arabic al-taghran as a proper name may phonetically resemble Tigranes, but there is no etymological connection between Arabic boiling/effervescence and the Armenian royal name. Proper name coincidence.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Tigranes is an Iranian/Armenian royal name - no connection to Arabic boiling/effervescence root."
+  },
+  {
+    "pair_id": "GRC_0117",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-tantalum = short/small person. Greek Tantalos = Tantalus (the king in Greek mythology punished with eternal hunger/thirst). Tantalus is a Greek mythological proper name. The connection proposed through diminishment/lacking is a mythological interpretation not an etymological one. Proper name - excluded.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Tantalus is a mythological proper name - not etymologically connected to Arabic small/diminished person."
+  },
+  {
+    "pair_id": "GRC_0118",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-sharshaq = a loose/promiscuous woman (a Semitic root describing a woman of loose morals/licentiousness). Greek kaseoris = strumpet/prostitute. Both directly mean a sexually loose/promiscuous woman. The semantic match is exact: Arabic names the behavior (looseness/promiscuity) and Greek names the role (prostitute). One direct step: sexually loose woman -> prostitute. This is a genuine direct semantic preservation.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic loose/promiscuous woman (al-sharshaq) and Greek strumpet/prostitute (kaseoris) are exact semantic equivalents."
+  },
+  {
+    "pair_id": "GRC_0119",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-samandal = salamander (the mythical fire creature, also the word for a fire-resistant material). Greek salamandra = salamander. Both name the same mythological fire-creature/actual salamander. However, Arabic al-samandal is borrowed FROM Greek salamandra (or from a shared Eastern source that also gave Greek the word). The direction is Greek-to-Arabic, not Arabic-to-Greek. Shared loanword from a third source or Greek-to-Arabic.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic salamander borrowed from Greek or shared Eastern source - not a native Arabic root cognate for Greek."
+  }
+]

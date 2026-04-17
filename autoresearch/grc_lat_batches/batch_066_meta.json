@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0528",
+    "arabic_root": "صخم",
+    "target_lemma": "σχήμασι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic صخم 'standing upright, erect posture' vs σχῆμα 'form/posture/figure'; conceptual overlap on bodily posture/form"
+  },
+  {
+    "pair_id": "GRC_0529",
+    "arabic_root": "الانس",
+    "target_lemma": "γαληνός",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الأنس: الإنسي=الأيسر (the left/easier side), ما أقبل عليك (what faces you). Also root أنس=familiarity, ease, comfort. γαληνός=calm, serene (especially of the sea). Both orbit the concept of tranquility, ease, and gentleness. The emotional quality of peaceful comfort connects them."
+  },
+  {
+    "pair_id": "GRC_0530",
+    "arabic_root": "الضرس",
+    "target_lemma": "λοιδόρους",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic includes becoming irritable from hunger or teeth being worn/soured, and Greek means abusive or insulting people; irritability can plausibly drift into verbal abuse."
+  },
+  {
+    "pair_id": "GRC_0531",
+    "arabic_root": "البساق",
+    "target_lemma": "λώβηξ",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "If the Greek term belongs to the λώβη field of harm and ruin, Arabic الداهية shares a strong negative disaster core, giving a plausible semantic chain."
+  },
+  {
+    "pair_id": "GRC_0532",
+    "arabic_root": "دعمظ",
+    "target_lemma": "δαμάζομαι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "The sense of forcefully overwhelming or fully entering preserves a plausible domination chain toward being tamed or subdued."
+  },
+  {
+    "pair_id": "GRC_0533",
+    "arabic_root": "داكه",
+    "target_lemma": "ἄνδιχα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic hostility or dispute can yield a split relation; Greek means apart or asunder."
+  },
+  {
+    "pair_id": "GRC_0534",
+    "arabic_root": "خنط",
+    "target_lemma": "εἴχοντο",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "خنط is distress or pressing, while εἴχοντο is they held or were held; pressure and being held form a plausible semantic chain."
+  },
+  {
+    "pair_id": "GRC_0535",
+    "arabic_root": "اشرحف",
+    "target_lemma": "προσέρχομαι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "اشرحف=تهيأ لمحاربته (prepared himself for combat, moved toward confrontation). προσέρχομαι=to come/go toward, approach. Both involve directed movement toward someone. The Arabic specifies hostile approach, Greek is neutral, but the 'approaching' core is solid."
+  }
+]

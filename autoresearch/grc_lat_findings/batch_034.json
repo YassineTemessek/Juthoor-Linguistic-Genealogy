@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0272",
+    "finding": "path_found",
+    "semantic_journey": "Arabic حزال (hazal) = shortness, being short/stunted; also a short person. Greek χαμαίζηλος = a low stool, something low to the ground (χαμαί 'on the ground' + ζηλ- related to sitting/resting). Both encode the concept of being low/short in height. Arabic shortness → Greek low-to-the-ground (a stool that is short) is a direct 1-step specialization: the stool is the specific object that embodies the concept of being low/short.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic shortness/being-short (hazal) maps directly to Greek low-ground-stool (khamaizel) — the stool as the object embodying shortness."
+  },
+  {
+    "pair_id": "GRC_0273",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سخخ (sakhkha) = soft earth, ground that absorbs something that is inserted. Greek ἐσχήκασι = they have held (perfect of ἔχω). Same Arabic root as GRC_0232 with the same Greek target (ἔχω). Same rejection: embedding-in-soft-earth and holding/possessing are too many steps apart. This is a repeated pairing with the same failing.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Identical rejection as GRC_0232: Arabic earth-absorption and Greek holding require too many intermediate steps."
+  },
+  {
+    "pair_id": "GRC_0274",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الحق (al-haqq) = socket, fixed emplacement; the joint or socket where something is fitted; also: right, truth, what is established. Greek λογχίον = a small spear-head, lance-tip (diminutive of λόγχη 'spear-point'). The connection: Arabic socket/joint where something is fitted → the socketed spear-head (a weapon designed to fit into a socket). The spear-head fits into the socket of the shaft — the Arabic names the fitting/socket concept, Greek names what is fitted into it. This is a 1-step material culture path: socket → the thing that fits into it.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fixed-socket/joint (haqq) connects to Greek spear-tip (lonkhion) through the socket-fitting concept — spear-tip fits into its socket."
+  },
+  {
+    "pair_id": "GRC_0275",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثطاع (al-thitaa) = appearing, becoming manifest, emerging into view. Greek ἀγγέλθητε = you were announced (aorist passive of ἀγγέλλω 'to announce/report'). The connection: appearing → being announced. While something that is announced becomes known/manifest, the Arabic encodes spontaneous appearing and the Greek encodes being formally announced/reported. The chain appear → be seen → be reported → be announced is 3+ steps. Furthermore ἀγγέλλω has its own etymology from ἄγγελος (messenger). No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic spontaneous appearing and Greek formal announcement/reporting are different types of becoming-known; 3+ steps apart."
+  },
+  {
+    "pair_id": "GRC_0276",
+    "finding": "path_found",
+    "semantic_journey": "Arabic جنف (janafa) = to lean, slant, deviate to one side; also: to be unjust (because injustice leans/tilts away from straightness). Greek γονυπετεῖς = those who fall to their knees, suppliants (γόνυ 'knee' + πίπτω 'to fall'). The connection: Arabic leaning/bending to one side → Greek bending down to kneel. Both encode a downward-bending posture. Arabic body-leaning-downward → Greek kneeling-downward is a 1-step parallel of the downward-bending body posture.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic leaning/bending sideways (janaf) and Greek kneeling/bending-to-knees (gonypeteis) share the concept of downward bodily inclination."
+  },
+  {
+    "pair_id": "GRC_0277",
+    "finding": "no_path",
+    "semantic_journey": "Arabic اردب (irdabb) = ardeb, a unit of measure (from Aramaic/Egyptian). Greek Ἀρδάβδα = a proper place name. The Arabic irdabb is itself a loanword from Aramaic/Egyptian into Arabic (measure of grain capacity). The Greek Ardabda is a proper toponym. Even if the consonant clusters match, this is a proper name on the Greek side and a loanword on the Arabic side. Excluded: proper toponym.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Ardabda is a proper toponym; Arabic ardab is itself a loanword from Aramaic/Egyptian. No Arabic-Greek cognate path."
+  },
+  {
+    "pair_id": "GRC_0278",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الساحة (al-saha) = an open courtyard, square, open space; the area in front of or around a building. Greek λέσχη = a gathering place, hall, place for conversation and assembly; a social space. Both encode an open/communal space for people to gather. Arabic open-courtyard → Greek gathering-hall is a 1-step drift from outdoor open space to indoor/covered assembly space — both are communal gathering places.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic open courtyard (saha) and Greek gathering hall (leskhe) share the concept of a communal space where people assemble."
+  },
+  {
+    "pair_id": "GRC_0279",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البستق (al-bustaq) = something of earthenware, a ceramic vessel. Greek ἀλάβαστος = alabaster vessel; also the mineral alabaster (fine gypsum). Both are containers, but Arabic earthenware and Greek alabaster are different materials entirely. Furthermore, ἀλάβαστος is a proper word for the specific mineral alabaster (gypsum), which has its own Egyptian/Coptic etymology. No Arabic-to-Greek path; the Greek word is Egyptian-origin.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic earthenware vessel and Greek alabaster vessel are different materials; alabastos has Egyptian-Coptic origin, not Semitic."
+  }
+]

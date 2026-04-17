@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0304",
+    "finding": "no_path",
+    "semantic_journey": "Arabic root ت-ع-س means to stumble, fall, be wretched — an ACTION of misfortune. Greek τελευτή means end, death, completion — a RESULT of finality, often neutral or even positive (end of a journey). The original reasoner conflated two different kinds of negative outcome. Stumbling/wretchedness does not semantically generate completion/death in two steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic stumbling/wretchedness and Greek completion/death share only incidental negative valence, not a genuine semantic path."
+  },
+  {
+    "pair_id": "GRC_0305",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ارجا (r-j-') = to defer, postpone, hold back judgment (Murji'a = those who defer). Greek εἴργω = to shut in, keep back, confine, restrain. Both encode HOLDING BACK: Arabic in the temporal domain (deferring action/judgment), Greek in the spatial/physical domain (confining, barring). The 1-step journey is temporal restraint -> physical restraint — a well-attested metaphorical extension.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Both words encode the core of holding/keeping back — Arabic temporally (deferral), Greek physically (confinement)."
+  },
+  {
+    "pair_id": "GRC_0306",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ناموس = law (Semitic). Greek νόμος = law, custom. νομίσαντες is the aorist participle of νομίζω (to consider lawful/customary), directly derived from νόμος. Arabic ناموس is a recognized loan between the two civilizations; the law concept traveled intact. This is a confirmed direct preservation of a legal concept across Arabic-Greek contact.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic ناموس and Greek νόμος are direct cognates — the law concept traveled intact, and νομίσαντες derives from that same root."
+  },
+  {
+    "pair_id": "GRC_0307",
+    "finding": "no_path",
+    "semantic_journey": "Arabic شرع = law, path, watering place. Greek ΣΡΑ is an abbreviation — not a lexical entry that can be semantically compared. Even if interpreted as Savior (Σωτήρ), the path law -> divine order -> sacred guidance -> savior requires 3+ steps. An abbreviation cannot anchor a semantic finding.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "ΣΡΑ is an abbreviation, not a lexical item; even the nearest interpretation requires 3+ drift steps from Arabic law."
+  },
+  {
+    "pair_id": "GRC_0308",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خامة = fresh, juicy, succulent plant growth (moist tender vegetation). Greek ἐκχυμόω = to extract juice, squeeze out sap. Both belong to the same field of VEGETAL SAP/MOISTURE: Arabic = the state (being fresh and juicy), Greek = the action (extracting that juice). The 1-step journey: juicy plant -> the process of drawing juice from it.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fresh juicy vegetation and Greek juice-extraction share the core of plant sap — state and action around the same substance."
+  },
+  {
+    "pair_id": "GRC_0309",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ملج = to suckle (infant at breast), which involves a gentle drawing-softening action. Greek μάλαγμα = emollient, softening poultice applied to soften tissue. The semantic journey: suckling (gentle drawing/softening action) -> softening medicinal substance. Both preserve the core of SOFTENING. The step is action -> substance that performs that action.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic suckling/softening action and Greek emollient/poultice share the core concept of softening through gentle application."
+  },
+  {
+    "pair_id": "GRC_0310",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خنط = being under oppressive distress/pressure (involuntary suffering). Greek ἠνείχοντο = they bore with, endured, tolerated (from ἀνέχω = to hold up, bear patiently). Arabic encodes involuntary distress; Greek encodes voluntary patient tolerance. These are opposite psychological orientations toward hardship. No genuine semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic involuntary distress and Greek voluntary patient endurance are opposite stances, not a semantic path."
+  },
+  {
+    "pair_id": "GRC_0311",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العقرب = scorpion (specific venomous arachnid). Greek ἀλωπέκουρος = foxtail grass (transparent compound: ἀλώπηξ fox + οὐρά tail, named for spiky grass shape). Any connection requires: scorpion -> spiky form -> spiky grass, which is independent metaphorical naming in each language, not cognacy. Greek compound etymology is transparent and unrelated to Arabic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Scorpion and foxtail grass share only a spiky visual quality; Greek names the plant fox+tail with no etymological link to Arabic."
+  }
+]

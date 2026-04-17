@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0872",
+    "finding": "no_path",
+    "semantic_journey": "Arabic halqa = ring, circle. Latin alcohol derives from Arabic al-kuhl = kohl, powdered antimony eye cosmetic. Two completely different Arabic words conflated: halqa (ring) vs al-kuhl (kohl). Alcohol entered Latin directly from al-kuhl, not from halqa. Misidentification of the Arabic source root.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two different Arabic words conflated: halqa (ring) has no connection to al-kuhl (kohl), the actual Arabic source of Latin alcohol."
+  },
+  {
+    "pair_id": "LAT_0873",
+    "finding": "no_path",
+    "semantic_journey": "Arabic difda = frog. Latin paludifer = marsh-making. The proposed link: frogs live in marshes so frog-name connects to marsh-maker. This is a 3-step chain: frog name -> frog habitat -> habitat descriptor. No cognate relationship possible.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic frog-name vs Latin marsh-making compound: ecological proximity is not etymology."
+  },
+  {
+    "pair_id": "LAT_0874",
+    "finding": "path_found",
+    "semantic_journey": "Arabic naqara = to peck, strike; Form II naqqara = to investigate, scrutinize, probe. Latin insequor = to follow after, pursue. Step 1: pecking/probing -> directed pursuit. Plausible but weak, as insequor is transparently in-sequor meaning to follow after, a native Latin compound with its own etymology.",
+    "journey_type": "semantic_drift",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic naqara covers physical pecking and investigative probing; Latin insequor covers pursuit, but Latin has its own transparent etymology."
+  },
+  {
+    "pair_id": "LAT_0875",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-arak = arak tree (Salvadora persica), the toothbrush tree native to Arabia. Latin larix = larch tree (Larix decidua), native to Alpine Europe. Both are tree names for completely different trees from different geographic regions. Sharing the category of tree does not make them cognates.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two unrelated tree names from different geographic and cultural contexts: sharing the category of tree is not a semantic connection."
+  },
+  {
+    "pair_id": "LAT_0876",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-tahabras = swaggering strut, walking with exaggerated elevated gait. Latin colobathra = stilts, an elevated walking device. Step 1: manner of elevated walking -> tool that produces elevated walking. A 1-step specialization from behavioral description to the device producing that behavior.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic elevated-prancing-gait maps onto Latin stilts via plausible 1-step specialization."
+  },
+  {
+    "pair_id": "LAT_0877",
+    "finding": "path_found",
+    "semantic_journey": "Arabic baba/bab-bab = to buzz, to make a buzzing or humming sound, onomatopoeic. Latin bombio = to buzz, to hum. Direct onomatopoeic preservation. Both encode the same sound: the labial-stop/labial-stop pattern b-b mimicking buzzing. The consonant skeleton b-b maps to b-mb in Latin with nasal insertion.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic bab-bab (buzz) and Latin bombio (buzz) share direct onomatopoeic preservation, b-b -> b-mb being a regular Latin nasal insertion pattern."
+  },
+  {
+    "pair_id": "LAT_0878",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-halaka from root halak = intense blackness, deep dark coloration. Latin/Medieval Latin alcohol derives from Arabic al-kuhl = kohl, the powdered black antimony eye cosmetic. Step 1: conceptual blackness -> the canonical black cosmetic (kohl). Halaka (blackness) -> al-kuhl (the black thing) is a coherent 1-step concept-to-substance path.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic halaka (intense blackness) connects to al-kuhl (kohl = the black substance), the actual etymon of Latin alcohol, via 1-step path through the blackness concept."
+  },
+  {
+    "pair_id": "LAT_0879",
+    "finding": "path_found",
+    "semantic_journey": "Arabic naqar in Form II (naqqara) = to investigate, examine, scrutinize, probe. Latin anquiro = to search carefully, investigate thoroughly, examine judicially. Step 1: physical pecking/probing -> investigative probing (Form II shift complete in Arabic). The Latin preserves this investigative sense directly. Stronger than LAT_0874 because anquiro specifically means careful thorough investigation.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic naqqara (to investigate/probe deeply) and Latin anquiro (to investigate thoroughly) share the concept of directed intensive probing-investigation, a 1-step semantic path."
+  }
+]

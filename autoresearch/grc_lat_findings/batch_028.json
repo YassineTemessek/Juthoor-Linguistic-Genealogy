@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0224",
+    "finding": "path_found",
+    "semantic_journey": "Arabic العكنه (al-ukna) = the fold of skin on the belly; wrinkled flesh that folds over. Greek ἑλίκοιν = of spirals, coils (genitive plural of ἕλιξ). Both encode folding/coiling. Arabic belly-fold/wrinkle → Greek spiral/coil is a 1-step generalization: both describe curved material that loops back on itself. The fold of skin is a specific form of the general coiling concept.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic belly fold/wrinkle (ukna) and Greek spiral/coil (helix) share the geometric concept of curved material folding back."
+  },
+  {
+    "pair_id": "GRC_0225",
+    "finding": "no_path",
+    "semantic_journey": "Arabic غمل (ghamal) = to gather, accumulate (clouds, trees). Greek Γάμαλα = Gamla, an ancient fortified city in the Golan Heights. The original reasoning acknowledges this is a Semitic place name. The actual Semitic etymology of Gamla is from gml (camel) — the city was on a camel-shaped ridge. Arabic غمل (accumulate) is a different root from gml (camel). Excluded: proper toponym; also different root.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gamla is a proper Semitic toponym (from gml 'camel shape'); Arabic ghamal (accumulate) is a different root entirely."
+  },
+  {
+    "pair_id": "GRC_0226",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سطح (sath) = flat surface, slaughter/sacrifice. Greek εὐστόχοις = well-aimed (dative plural of εὔστοχος 'good-aiming'). The reasoning: Arabic slaughter/striking → Greek well-aimed strike. But Arabic سطح primarily means flat surface; the slaughter sense is secondary. Even using the slaughter sense, the chain is: slaughtering → striking → aiming well to strike — the target concept of εὔστοχος (hitting a mark) is semantically different from Arabic flat surface or even slaughter. No clean path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic flat surface / slaughter and Greek well-aimed do not share a direct semantic path; the reasoning uses an inverted action-result chain."
+  },
+  {
+    "pair_id": "GRC_0227",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خضرف (khadraf) = a large, fleshy, ample woman; something thick and abundant. Greek παχύδερμος = thick-skinned (παχύς 'thick' + δέρμα 'skin'); also used for large thick-bodied creatures. Both encode the concept of large, thick-bodied, fleshy form. Arabic large-fleshy-body → Greek thick-skinned/thick-bodied is a direct 1-step parallel in the semantic field of largeness and bodily thickness.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic large-fleshy form (khadraf) and Greek thick-skinned/thick-bodied (pachydermos) share the concept of bodily thickness and ampleness."
+  },
+  {
+    "pair_id": "GRC_0228",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سحب (sahaba) = to drag, pull, draw along; to drink by drawing (water). Greek σκάφη = a vessel, boat, basin, bowl (hollowed-out container). The reasoning: Arabic drinking → vessel for drinking. Arabic سحب means dragging/drawing, not a vessel. Even the 'drawing water' sense leads to: drawing-water → water-container — the Arabic names the action, not the vessel. Greek σκάφη is from σκάπτω (to hollow out) with its own etymology. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic dragging/drawing-water and Greek hollow-vessel are different categories; Greek skaphe derives from 'hollowing out' not drawing."
+  },
+  {
+    "pair_id": "GRC_0229",
+    "finding": "path_found",
+    "semantic_journey": "Arabic مشج (mashaja) = to mix between two things, intermingle two materials. Greek μίσγω = to mix, mingle, blend together. Both encode the same direct mixing/mingling action. Arabic mixing-between-two → Greek mixing/mingling is a direct 1-step match — essentially the same word meaning the same thing. This is a confirmed cognate with high phonetic and semantic correspondence.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic mixing/mingling (mashaj) and Greek mixing/mingling (misgein) are direct cognates preserving the same action of blending two things."
+  },
+  {
+    "pair_id": "GRC_0230",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القنعاث (al-qanaath) = hairy, covered in rough hair. Greek λευκάκανθα = white thistle (λευκός 'white' + ἄκανθα 'thorn'). The reasoning: hairy → thorny/spiny. While hair and thorns are both surface projections, hairy (soft, flexible) and thorny (hard, rigid, white-colored) are distinct enough that no clean 1-2 step path exists. Furthermore, Greek λευκάκανθα has transparent internal etymology (white + thorn). No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic hairy and Greek white-thistled share only the loose category of surface projections; the Greek compound has its own transparent etymology."
+  },
+  {
+    "pair_id": "GRC_0231",
+    "finding": "path_found",
+    "semantic_journey": "Arabic قرضم (qardim) = a plant related to the cardamom family; a biting/astringent plant used as a spice. Greek κάρδαμον = cress, cardamom (the pungent spice). The root q-r-d-m encodes the biting/pungent property that defines the spice. Both words name the same class of pungent spice plants. This is a material culture trade-route cognate — the pungent spice traveled with its Semitic name (as also seen in GRC_0165).",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic qardim and Greek kardamon both name pungent spice plants in the cardamom/cress family — the Semitic root for this pungent spice preserved in Greek."
+  }
+]

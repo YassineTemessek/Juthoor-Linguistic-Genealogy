@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0160",
+    "arabic_root": "الترفه",
+    "target_lemma": "πολύτροφος",
+    "lang": "grc",
+    "original_score": 0.71,
+    "original_method": "combined",
+    "original_reasoning": "Arabic luxury and well-being align with Greek 'much-nourishing' through a clear abundance and richness concept."
+  },
+  {
+    "pair_id": "GRC_0161",
+    "arabic_root": "حظر",
+    "target_lemma": "ἀρχιζάκορος",
+    "lang": "grc",
+    "original_score": 0.71,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "حظر is barrier, enclosure, and keeping apart; a temple keeper is one who guards the sacred boundary."
+  },
+  {
+    "pair_id": "GRC_0162",
+    "arabic_root": "الحصر",
+    "target_lemma": "λέχεσι",
+    "lang": "grc",
+    "original_score": 0.71,
+    "original_method": "combined",
+    "original_reasoning": "One who abstains from women points directly to the marriage-bed side of λέχος."
+  },
+  {
+    "pair_id": "GRC_0163",
+    "arabic_root": "الثقب",
+    "target_lemma": "βελοθήκη",
+    "lang": "grc",
+    "original_score": 0.71,
+    "original_method": "combined",
+    "original_reasoning": "Piercing closely fits arrows and a quiver, preserving the core of perforating or pointed penetration."
+  },
+  {
+    "pair_id": "GRC_0164",
+    "arabic_root": "خسم",
+    "target_lemma": "αἰχμάς",
+    "lang": "grc",
+    "original_score": 0.71,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "The Arabic gloss explicitly mentions a spear, and αἰχμάς is accusative plural of spearheads; the concrete weapon sense is clearly shared."
+  },
+  {
+    "pair_id": "GRC_0165",
+    "arabic_root": "قرضم",
+    "target_lemma": "καρδάμωμον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic qirdim resembles cardamom name; Greek = 'cardamom'. Strong loanword/etymological echo."
+  },
+  {
+    "pair_id": "GRC_0166",
+    "arabic_root": "السرندي",
+    "target_lemma": "λαλιστέραιν",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "If tied to س ر د, the Arabic core is ordered narration or stringing together, which aligns well with more talkative or speaking."
+  },
+  {
+    "pair_id": "GRC_0167",
+    "arabic_root": "الخطل",
+    "target_lemma": "ἐλέχθητε",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Disordered or abusive speech on the Arabic side aligns clearly with Greek verbal utterance."
+  }
+]

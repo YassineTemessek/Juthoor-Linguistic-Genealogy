@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0752",
+    "arabic_root": "ثنت",
+    "target_lemma": "Θάνατε",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Thanatos vocative=Death; thnt=stink/decay. Semantic link: death/decay. Possible shared IE/Semitic root th-n-t."
+  },
+  {
+    "pair_id": "GRC_0753",
+    "arabic_root": "ساته",
+    "target_lemma": "στήθεα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic sa'at = the two sides of the throat/windpipe (anatomical, upper torso). Greek stethea = nom/acc.pl of stethos 'chests, breasts'. Both denote upper-torso anatomical regions. Strong concrete link with phonetic resemblance sa-t / steth."
+  },
+  {
+    "pair_id": "GRC_0754",
+    "arabic_root": "خثر",
+    "target_lemma": "ἰχθυόρροος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ἰχθυόρροος means swarming with fish; خثر includes mixedness and thick remainder, a plausible crowding concept."
+  },
+  {
+    "pair_id": "GRC_0755",
+    "arabic_root": "كثر",
+    "target_lemma": "κατάχρησις",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Abundance/kathura (many) vs 'analogical/extended use' - shared excess/over-use notion"
+  },
+  {
+    "pair_id": "GRC_0756",
+    "arabic_root": "كربر",
+    "target_lemma": "Κέρβερος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Unexplained root (Ibn Jinni) vs Cerberus - phonetic match but uncertain meaning link"
+  },
+  {
+    "pair_id": "GRC_0757",
+    "arabic_root": "فزز",
+    "target_lemma": "φύζα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic fazz = 'restless, startled, fleeing'; Greek phyza = 'panicked rout from battle'. Plausible semantic overlap of panic-flight."
+  },
+  {
+    "pair_id": "GRC_0758",
+    "arabic_root": "سرنج",
+    "target_lemma": "σαυκρόν",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Greek 'delicate/light' can align with a fine crafted object; a plausible abstracted quality shift."
+  },
+  {
+    "pair_id": "GRC_0759",
+    "arabic_root": "الصقب",
+    "target_lemma": "βλώσκω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الصقب = ولد الناقة (offspring of a she-camel); also جمعه = gathered it. βλώσκω = to come, to go. The offspring as 'the one who comes forth' and βλώσκω as 'coming' share the concept of emergence/arrival. Birth as a form of coming is conceptually strong."
+  }
+]

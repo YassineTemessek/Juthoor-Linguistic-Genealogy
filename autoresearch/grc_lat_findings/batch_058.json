@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0464",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الصرح = something plain/clear/explicit; also a lofty edifice, a high tower (two different meanings). Greek ὁλοσειρικός = made entirely of silk, wholly silken (from ὅλος + σηρικός = whole + silk). The original reasoning maps Arabic purity/plainness to Greek unmixed/wholly-silken. But plain/explicit (of speech or construction) and wholly made of silk (of fabric) are entirely different domains. Even if Arabic الصرح is interpreted as pure/unmixed, 'pure' in speech vs 'pure silk' in fabric are different specializations of purity.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic plainness/lofty-tower and Greek wholly-silken are unrelated — purity in speech/architecture does not generate purity-of-silk-fabric."
+  },
+  {
+    "pair_id": "GRC_0465",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثرب = fat/omentum (the fatty membrane covering abdominal organs); also a water-well in some dialects. Greek λουτροφορέω = to carry water for ritual bathing (from λουτρόν + φορέω = bath + carry). The original reasoning maps water-well to carrying bath-water. Even accepting the well meaning for Arabic, a well (water source) and carrying water for bathing (specific ritual use of water) require: water source -> water -> water carried -> water for bathing. The primarily attested meaning of الثرب is fat/omentum, which has no water connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic fatty membrane (الثرب, primary meaning) and Greek ritual bath-water-carrying are entirely unrelated; the well meaning is a secondary dialectal sense."
+  },
+  {
+    "pair_id": "GRC_0466",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العضر = to blurt out a word, to utter inadvertently. Greek λοίδορος = abusive/insulting speech. The original reasoning maps inadvertent utterance to abusive speech. But blurting something out accidentally and deliberately insulting someone are different: accident vs intention. A blurted word might be embarrassing; abusive speech is deliberately harmful. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic inadvertent blurting and Greek deliberate abusive speech differ in intent — accidental vs purposeful verbal act."
+  },
+  {
+    "pair_id": "GRC_0467",
+    "finding": "path_found",
+    "semantic_journey": "Arabic جمخ = to boast confrontationally, to assert oneself arrogantly in others' faces; boastful confrontation. Greek λογομαχέω = to fight with words, to engage in verbal quarreling (from λόγος + μάχη = word + fight). Both encode CONFRONTATIONAL VERBAL AGGRESSION: Arabic = boastful face-to-face confrontation; Greek = fighting through words/arguments. A 1-step specialization: confrontational boasting -> specifically verbal fighting/argument.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic confrontational boasting (جمخ) and Greek word-fighting (λογομαχέω) share the core of aggressive verbal confrontation."
+  },
+  {
+    "pair_id": "GRC_0468",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الشكز = addressing/talking to a woman, verbal approach to another person. Greek καλέεσκον = they kept calling, repeated calling (iterative form of καλέω = to call). Both involve calling/addressing, but Arabic specifically addresses a woman in a particular manner (possibly courtship speech), while Greek is generic repeated calling. The gender-specific Arabic and generic Greek are at different levels of specificity, but the calling-to-another-person connection is real though weak.",
+    "journey_type": "no_connection",
+    "confidence": "low",
+    "verdict": "false_positive",
+    "key_insight": "Arabic gender-specific addressing and Greek generic repeated calling share the speech-directed-at-another concept but at different specificity levels — too weak for cognacy."
+  },
+  {
+    "pair_id": "GRC_0469",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحصلب = dust, fine powder (scattered fine particles). Greek πολλαχόσε = to many places, in many directions (from πολλαχοῦ = in many places). The original reasoning: dust spreads in many directions. But Arabic dust is a SUBSTANCE; Greek many-places is an ADVERB of direction. The path dust -> spreads -> in many directions requires: substance -> what substance does -> directional distribution. 3 steps, and the adverb encodes direction, not a substance.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic dust (substance) and Greek in-many-directions (spatial adverb) require 3+ steps — substance does not directly generate directional adverb."
+  },
+  {
+    "pair_id": "GRC_0470",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العشوف = defilement, foulness, filth (what is dirty/polluted). Greek βλάσφημος = impious speech, profane utterance. The original reasoning maps foulness to ill-omened speech. But physical defilement/filth and impious verbal profanation are adjacent concepts in religious law (both are pollution), but the path physical filth -> verbal sacrilege requires: dirty/polluted -> symbolically impure -> expressing impurity in speech. 3 steps. The two are both 'pollution' but in different domains.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical defilement and Greek verbal profanation are both pollution-concepts but in different domains requiring 3 drift steps."
+  },
+  {
+    "pair_id": "GRC_0471",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الاصر = to bind, to fasten tightly (tying/binding someone or something). Greek λύω = to loosen, release (λυσέρωσι = they may release/loosen). This is a genuine negation cognate: Arabic preserves the BINDING/FASTENING side of the binding-releasing axis; Greek λύω preserves the RELEASING/LOOSENING side. The root encodes the bond (Arabic الاصر) and its dissolution (Greek λύω). The Arabic root can also mean the bond itself (ἴσαρ in Greek = bond/fetter), making this a near-direct shared root.",
+    "journey_type": "negation_cognate",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic binding/fastening (الاصر) and Greek releasing/loosening (λύω) are true negation cognates — both sides of the same binding-releasing axis from the same root."
+  }
+]

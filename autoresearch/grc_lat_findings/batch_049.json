@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0392",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الآمص = a food made from calf meat with skin (a specific prepared meat dish). Greek λιμώσσω = to be hungry, starving, famished. The original reasoning maps food to hunger as two poles of nourishment. But food (specific prepared dish) and hunger (state of lacking food) are OPPOSITES with no semantic derivation. Every food culture has both foods and hunger — this is trivial opposition, not cognacy. Food does not semantically generate hunger within one root.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A specific meat dish and the state of hunger are trivially opposite — not a semantic path but a trivial antonym relationship."
+  },
+  {
+    "pair_id": "GRC_0393",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دخش = to be filled with flesh, to be plump (same semantic field as GRC_0385 دخص). Greek δέχεσθαι = to receive, accept. Same analysis as GRC_0385: plump flesh-filling and receiving/accepting are entirely different domains. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic becoming plump and Greek receiving/accepting are different semantic domains — no path."
+  },
+  {
+    "pair_id": "GRC_0394",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الوخز = to prick, stab with a spear-point or sharp implement (a jabbing piercing action). Greek λογχιάζω = to transfix with a spear/lance (from λόγχη = spear-point). Both directly encode PIERCING WITH A SPEAR-POINT: Arabic = the pricking/jabbing with a point; Greek = the transfixing with a lance. This is a direct material culture cognate — the spear-thrust action preserved across languages.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic spear-pricking (الوخز) and Greek spear-transfixing (λογχιάζω) directly preserve the same action of piercing with a spear-point."
+  },
+  {
+    "pair_id": "GRC_0395",
+    "finding": "path_found",
+    "semantic_journey": "Arabic كربد = to rush in, hasten rapidly (swift forceful movement). Greek Χάρυβδις = the whirlpool monster (from a root encoding the rushing/swirling motion). Charybdis is characterized by its violently rushing, swirling sucking motion. The semantic journey: rapid rushing/hastening -> the swirling rush of a whirlpool. Both encode SWIFT VIOLENT RUSHING MOTION. Note: Χάρυβδις is a proper mythological name, but if we treat it as encoding the concept of swirling-rushing, there is a genuine motion connection.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic rapid rushing (كربد) and Greek whirlpool (Χάρυβδις) share the core of swift violent rush — but Χάρυβδις is a proper mythological name, weakening this finding."
+  },
+  {
+    "pair_id": "GRC_0396",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حكي = to narrate, imitate, mimic. Greek καχέκτης = a person with a bad/poor bodily condition (from κακό + ἕξις = bad + condition/habit). The original reasoning maps imitation of form to habitual bodily state. But imitating someone's actions is not the same as having a chronic physical condition. These require 3+ steps: imitation -> repeated pattern -> habit -> physical condition. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic narrating/imitating and Greek bad physical condition are entirely unrelated — no credible path exists."
+  },
+  {
+    "pair_id": "GRC_0397",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الشعث = disheveled, unkempt, disordered hair/appearance (spread/scattered condition). Greek λύσασθαι = to loosen for oneself, to release (aorist middle infinitive of λύω = to loosen/release). The original reasoning maps dishevelment (spread/scatter) to loosening. But disheveled hair is already in a loose disordered state; it did not arrive there by the action of loosening. The connection scattered -> loosened is reverse-directional. No genuine semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic disordered dishevelment (a state) and Greek act of loosening (an action causing that state) are directionally reversed — not a cognate path."
+  },
+  {
+    "pair_id": "GRC_0398",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الجزاء = repayment, recompense, retribution (giving what is owed as response). Greek ἐκλογίζομαι = to reckon carefully, calculate, compute (from ἐκ + λογίζομαι = out + reckon). The original reasoning maps exacting a debt to calculating. But recompense/retribution (moral settling) and calculation (mathematical accounting) are adjacent but different: recompense is about justice/moral balance; calculation is about numerical computation. The step: settling a debt -> calculating what is owed. This works as a 1-step specialization into the bookkeeping aspect.",
+    "journey_type": "specialization",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic debt-settlement/recompense and Greek careful reckoning/calculation share the edge of settling accounts — but only at low confidence due to domain shift."
+  },
+  {
+    "pair_id": "GRC_0399",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الصعصع = ranks scattered/displaced from their positions (صفوف زالت عن مواقفها = formations displaced from their stations). Greek ἅλωσις = capture, conquest, taking (of a city). The original reasoning maps scattered ranks to conquest: scattering is the result of conquest. But this is a CAUSE-EFFECT relationship between two different events, not a semantic path within one concept. Conquest causes scattering; they are not the same thing. Requires: scattered ranks -> why did they scatter -> because they were conquered -> conquest. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Scattered ranks and conquest are cause and effect, not semantic cognates — different events even if one causes the other."
+  }
+]

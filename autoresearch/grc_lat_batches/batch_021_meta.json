@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0168",
+    "arabic_root": "البرشاع",
+    "target_lemma": "λάβρος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "البرشاع=الأهوج الضخم الجافي (reckless, bulky, coarse). λάβρος=furious, boisterous, impetuous. Both describe uncontrolled violent force and wild temperament. Strong conceptual overlap in the domain of fierce impetuosity."
+  },
+  {
+    "pair_id": "GRC_0169",
+    "arabic_root": "الكمع",
+    "target_lemma": "Λευκίμμη",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic place-side or flank matches the topographic idea of a promontory with a clear locational chain."
+  },
+  {
+    "pair_id": "GRC_0170",
+    "arabic_root": "العقب",
+    "target_lemma": "λυκάβας",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'successor/heel/following' matches the conceptual core of sequence; a 'year' is the coming-next cycle."
+  },
+  {
+    "pair_id": "GRC_0171",
+    "arabic_root": "خطل",
+    "target_lemma": "χύτλον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic glosses of smearing residue and dispersed tears fit the Greek field of pourable liquid or fluid."
+  },
+  {
+    "pair_id": "GRC_0172",
+    "arabic_root": "سستان",
+    "target_lemma": "Σιαστανσας",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Strong onomastic and royal-domain continuity: Arabic lineage context and Greek satrap name closely align."
+  },
+  {
+    "pair_id": "GRC_0173",
+    "arabic_root": "غدر",
+    "target_lemma": "Γάδαρα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic ghadar = betrayal/abandonment, ghadir = pool; Greek Gadara = Semitic place name in Palestine (Aramaic/Hebrew root gdr 'wall'). Strong shared Semitic substrate for place name."
+  },
+  {
+    "pair_id": "GRC_0174",
+    "arabic_root": "القعثله",
+    "target_lemma": "λεχθείς",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gloss explicitly discusses transmitted reading and wording, while Greek means said; speech-text semantics clearly meet."
+  },
+  {
+    "pair_id": "GRC_0175",
+    "arabic_root": "السطح",
+    "target_lemma": "ἐλᾶαι στοιχάδες",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic means leveling and broad flatness; Greek rows of olives preserves the ordered laid-out surface concept."
+  }
+]

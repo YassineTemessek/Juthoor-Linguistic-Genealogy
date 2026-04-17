@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0376",
+    "arabic_root": "الثيتل",
+    "target_lemma": "λήθετε",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "الثيتل تحامق بعد تغافل، وλήθετε من حقل الخفاء أو النسيان؛ التغافل يقارب الإغفال والذهول."
+  },
+  {
+    "pair_id": "GRC_0377",
+    "arabic_root": "الثطاع",
+    "target_lemma": "ἐλέχθητε",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Greek means 'you were said', and the Arabic gloss includes appearance/disclosure; emergence into speech is a clear conceptual chain."
+  },
+  {
+    "pair_id": "GRC_0378",
+    "arabic_root": "الطرد",
+    "target_lemma": "ἀλλοτρία",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Arabic طريد carries the sense of one driven out or set apart, and Greek means belonging to another or alien; the chain through estrangement is clear."
+  },
+  {
+    "pair_id": "GRC_0379",
+    "arabic_root": "الحضجر",
+    "target_lemma": "δολιχοδρόμος",
+    "lang": "grc",
+    "original_score": 0.61,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "واسع منهج points to course or track, which plausibly meets long-course running."
+  },
+  {
+    "pair_id": "GRC_0380",
+    "arabic_root": "الثن",
+    "target_lemma": "καταλυθέν",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الثن: بلي الهرم (worn out by age, decayed). καταλύω=to dissolve, break down, destroy. Decay/wearing out IS dissolution. Strong semantic parallel: بلي (disintegrate through age) maps directly to κατα-λύω (break apart)."
+  },
+  {
+    "pair_id": "GRC_0381",
+    "arabic_root": "دلل",
+    "target_lemma": "δαιδάλλω",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "دلل: الدل والدلال=charm, coquetry, الغنج والشكل=flirtation and attractive form. δαιδάλλω=to work cunningly, embellish, adorn. Both center on making something/oneself attractive and appealing. Adorning (δαιδάλλω) produces the charming display (دلال)."
+  },
+  {
+    "pair_id": "GRC_0382",
+    "arabic_root": "مرر",
+    "target_lemma": "Μύρρα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Marrara - bitterness vs Myrrh (bitter resin) - direct bitterness match, same Semitic root"
+  },
+  {
+    "pair_id": "GRC_0383",
+    "arabic_root": "الريش",
+    "target_lemma": "ἁλουργής",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic clothing/adornment and Greek purple-dyed share a clear garment-appearance chain."
+  }
+]

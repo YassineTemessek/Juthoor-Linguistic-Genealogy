@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0296",
+    "arabic_root": "دعلق",
+    "target_lemma": "διάλεκτε",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "Questioning and engaging a matter preserve a clear speech-discussion chain toward dialect or mode of speaking."
+  },
+  {
+    "pair_id": "GRC_0297",
+    "arabic_root": "ساخت",
+    "target_lemma": "σχέτε",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'to subside, sink, settle' and Greek imperative 'have/hold' meet in the concept of keeping something fixed or steady."
+  },
+  {
+    "pair_id": "GRC_0298",
+    "arabic_root": "الصيص",
+    "target_lemma": "ἅλωσις",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الصيص: كل ما امتنع به (everything one defends/fortifies oneself with - horns, fortifications). ἅλωσις=capture, conquest. Defense fortifications and siege capture are two sides of the same military concept. What you fortify against (صيص) is what ἅλωσις overcomes. Strong military-domain pairing."
+  },
+  {
+    "pair_id": "GRC_0299",
+    "arabic_root": "الباس",
+    "target_lemma": "εὐλαβής",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "بئيس=brave/formidable, بنات بئس=calamities. εὐλαβής=cautious, God-fearing, holding fast. Both orbit the concept of فearing/being formidable: one who inspires بأس (dread) vs one who holds εὐλάβεια (cautious reverence). The emotional core of awe/dread connects them well."
+  },
+  {
+    "pair_id": "GRC_0300",
+    "arabic_root": "حبطا",
+    "target_lemma": "ἰχθύβοτος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "Short, fat, big-bellied strongly matches the result of being well fed."
+  },
+  {
+    "pair_id": "GRC_0301",
+    "arabic_root": "البرنوف",
+    "target_lemma": "γλαβρήνη",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss is a plant term, and the Greek item also appears botanical, giving a clear plant-to-plant semantic chain."
+  },
+  {
+    "pair_id": "GRC_0302",
+    "arabic_root": "ذلق",
+    "target_lemma": "δεδήλωκας",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'sharp, pointed' maps well to Greek 'you have made clear': both share a core of making something precise and distinct."
+  },
+  {
+    "pair_id": "GRC_0303",
+    "arabic_root": "دحصت",
+    "target_lemma": "δέχεσθαι",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic becoming fat and filled suggests taking in or receiving, a solid action-result chain."
+  }
+]

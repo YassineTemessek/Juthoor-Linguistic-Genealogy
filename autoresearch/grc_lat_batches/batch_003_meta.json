@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0024",
+    "arabic_root": "السقلبه",
+    "target_lemma": "Σκλάβος",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic: السقلب (a people/ethnic group, Slavs), verb meaning to throw down. Greek: Slav. This is a direct loanword — both refer to the Slavic peoples. The Arabic al-Saqlab is itself borrowed from Greek/Latin Sclavus. Near-identity."
+  },
+  {
+    "pair_id": "GRC_0025",
+    "arabic_root": "الفرخ",
+    "target_lemma": "φάρκες",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic فرخ = chick/nestling/young of a bird. Greek φάρκες = young birds/nestlings/chicks (Hesychius: νεοσσοί). Direct semantic match — both mean exactly 'young birds/nestlings'. Strong cognate candidate."
+  },
+  {
+    "pair_id": "GRC_0026",
+    "arabic_root": "النفط",
+    "target_lemma": "νάφθα",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "naphtha=naphtha; direct loanword"
+  },
+  {
+    "pair_id": "GRC_0027",
+    "arabic_root": "فرخش",
+    "target_lemma": "φάρκες",
+    "lang": "grc",
+    "original_score": 0.95,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "young bird/chick=young birds; calibration pair"
+  },
+  {
+    "pair_id": "GRC_0028",
+    "arabic_root": "الصاعقه",
+    "target_lemma": "ὀλιγοψυχέω",
+    "lang": "grc",
+    "original_score": 0.93,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic says one is struck senseless or faints; Greek directly means be faint."
+  },
+  {
+    "pair_id": "GRC_0029",
+    "arabic_root": "شاذك",
+    "target_lemma": "Σάδοκος",
+    "lang": "grc",
+    "original_score": 0.92,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides are proper-name forms with very close phonetic preservation, making this an almost direct name match."
+  },
+  {
+    "pair_id": "GRC_0030",
+    "arabic_root": "الحناء",
+    "target_lemma": "λάχανον",
+    "lang": "grc",
+    "original_score": 0.91,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Henna is a cultivated plant, and λάχανον is a garden herb; the plant/cultivated-herb core is near-identical."
+  },
+  {
+    "pair_id": "GRC_0031",
+    "arabic_root": "ارمال",
+    "target_lemma": "ἁρμαλά",
+    "lang": "grc",
+    "original_score": 0.91,
+    "original_method": "combined",
+    "original_reasoning": "This is near-identical as a transmitted place-name form: consonants and referential identity are both preserved closely."
+  }
+]

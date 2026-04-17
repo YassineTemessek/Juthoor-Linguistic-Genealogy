@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0576",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خوت = to stealthily take prey, to swoop on and seize (a bird of prey snatching its quarry — the action of seizure). Greek εἴχετε = you (plural) had, held, possessed (imperfect of ἔχω = to have, hold). Both encode SEIZURE/POSSESSION: Arabic = the act of swooping-seizing (active capture); Greek = the resulting state of having/holding. A 1-step action-to-result: seizing prey (action) -> holding/possessing it (state). The having is what results from the seizing.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic stealthy prey-seizure (خوت) and Greek you-held/possessed (εἴχετε) share the seizure-to-possession chain — capture and resulting hold."
+  },
+  {
+    "pair_id": "GRC_0577",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الغور = depth, going deeply into something, the hidden interior (penetrating to the concealed inner core). Greek ἀλληγορία = allegory, speaking otherwise/hidden meaning (from ἄλλος + ἀγορεύω = other + speak publicly). The core: Arabic = the hidden depth beneath the surface; Greek = speaking in a way that hides meaning beneath the surface. The conceptual overlap is 'hidden depth of meaning': Arabic = physical/conceptual depth; Greek = the rhetorical mode that encodes hidden meaning. A 1-step semantic drift: going deep into hidden interior -> speaking with hidden inner meaning (allegory).",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic deep hidden interior (الغور) and Greek allegory/hidden meaning (ἀλληγορία) share the concept of meaning/content concealed beneath the surface."
+  },
+  {
+    "pair_id": "GRC_0578",
+    "finding": "path_found",
+    "semantic_journey": "Arabic شفزه = kicked someone with the front of the foot (a violent kicking motion). Greek σφαδάζω = to struggle convulsively, kick about, writhe in death-throes. Both encode VIOLENT KICKING/THRASHING MOTION: Arabic = a deliberate forceful kick; Greek = the convulsive kicking of death-throes. A 1-step semantic drift: deliberate kick (action) -> convulsive kicking/writhing (spasmodic motion). Both preserve the violent leg-striking motion. The phonetic resemblance (shafz/sphad) reinforces the connection.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic deliberate kick with the foot (شفزه) and Greek convulsive kicking/writhing (σφαδάζω) share the violent kicking-motion core."
+  },
+  {
+    "pair_id": "GRC_0579",
+    "finding": "path_found",
+    "semantic_journey": "Arabic صفو = pure, clear, unclouded (the quality of liquid or air being free of turbidity — clarity). Greek σαφέσι = clearly, plainly (dative plural adverbial form of σαφής = clear, plain, manifest). Both encode CLARITY/CLEARNESS: Arabic = physical clarity/purity (of liquid, air, mind); Greek = perceptual/intellectual clarity (plainness to perception). A near-direct preservation: physical clarity (clear liquid) -> perceptual clarity (clear to the mind/eye). A 1-step concrete-to-abstract path. This is one of the stronger pairs in this batch.",
+    "journey_type": "semantic_drift",
+    "confidence": "high",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic purity/clarity (صفو) and Greek clearly/plainly-manifest (σαφέσι) directly share the clarity concept — physical unclouded-ness and perceptual plainness."
+  },
+  {
+    "pair_id": "GRC_0580",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الكال = a specific debt-trading practice (buying a debt from one person against a debt from another). Greek καλκουλάτωρ = a calculator/accountant (from Latin calculus = pebble used for counting; a loanword into Greek from Latin). The Greek term καλκουλάτωρ is a direct Latin loanword (from calculus/calculare), not a native Greek word. Comparing an Arabic debt-trading practice to a Latin-origin accountant-title in Greek is comparing to a Latin loanword, not a Greek cognate. Even analytically: specific debt-swap practice -> general accounting title requires: debt-swap -> debt-calculation -> one who calculates. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "καλκουλάτωρ is a Latin loanword in Greek (from calculus) — this is not an Arabic-Greek cognate pair, and the semantic chain requires 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0581",
+    "finding": "no_path",
+    "semantic_journey": "Arabic القسطاس = a balance scale, a standard of weights and measures (an instrument for weighing/measuring). Greek ἐλάχιστα = least, smallest (superlative neuter plural of ἐλαχύς = small, little). The original reasoning maps scale to leastness on a measure continuum. But a weighing scale (an instrument) and the superlative of smallness (a comparative quantity descriptor) are categorically different. Balance -> measure -> small measurement -> smallest requires: instrument -> concept of measurement -> small quantity -> superlative of small. 4+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic balance scale (القسطاس) and Greek smallest/least (ἐλάχιστα) are entirely different — instrument vs superlative quantity descriptor, 4+ steps apart."
+  },
+  {
+    "pair_id": "GRC_0582",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حبر = (1) beauty, elegance; (2) a rabbi/Jewish scholar (al-habr). Greek χερουβεῖς = cherubim (plural of cherub — a Hebrew loanword into Greek: from Hebrew כרובים). χερουβεῖς is a Hebrew loanword, not a native Greek word. The Arabic habr (rabbi) and Greek cherubim are both from the Semitic religious sphere but through different routes: Arabic habr from Hebrew חבר (companion/scholar), while cherub is from Hebrew כרוב (a different root entirely). This is not Arabic-Greek cognacy but a shared Semitic religious vocabulary domain — and the two words derive from different Hebrew roots.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic rabbi/scholar (حبر, from Hebrew חבר) and Greek cherubim (χερουβεῖς, Hebrew loanword from כרוב) derive from different Hebrew roots — not cognates."
+  },
+  {
+    "pair_id": "GRC_0583",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خندريس = aged date-wine or groats; explicitly a Greek loanword per Ibn Durayd and classical sources. Greek χόνδρινος = made of groats/coarse meal (adjective from χόνδρος = groats). Same analysis as GRC_0564: Arabic خندريس is borrowed FROM Greek (from χόνδρος or a derivative form χόνδρινος). Comparing this loanword back to its Greek source is circular — not Arabic-to-Greek cognacy but Greek-to-Arabic borrowing.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic خندريس is a documented Greek loanword — comparing it back to χόνδρινος is circular, same exclusion as GRC_0564."
+  }
+]

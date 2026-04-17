@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0360",
+    "arabic_root": "الثقوه",
+    "target_lemma": "αὐλοθήκη",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "A small bowl or vessel preserves the container concept clearly when compared with an instrument case."
+  },
+  {
+    "pair_id": "GRC_0361",
+    "arabic_root": "الت",
+    "target_lemma": "Εἱλώτων",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'held back, reduced' aligns plausibly with Helots as a subdued servile class."
+  },
+  {
+    "pair_id": "GRC_0362",
+    "arabic_root": "ذاطه",
+    "target_lemma": "δεηθείς",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic gloss includes deficiency and choking, which gives a fair abstract path to Greek lack."
+  },
+  {
+    "pair_id": "GRC_0363",
+    "arabic_root": "الصدق",
+    "target_lemma": "Λυσιδίκη",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic truthfulness and Greek dikē 'justice/right' meet at the deeper core of moral rectitude."
+  },
+  {
+    "pair_id": "GRC_0364",
+    "arabic_root": "الدفء",
+    "target_lemma": "Φιλαδέλφεια",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic warmth can extend metaphorically to affection, and Greek Philadelphia is brotherly love; the abstract emotional warmth link is clear."
+  },
+  {
+    "pair_id": "GRC_0365",
+    "arabic_root": "رثي",
+    "target_lemma": "εὐρυθμία",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Softness, sweetness, and tenderness can extend naturally to smooth measured order."
+  },
+  {
+    "pair_id": "GRC_0366",
+    "arabic_root": "الخاء",
+    "target_lemma": "Λάχεσις",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "The gloss points to twisting and cord-like form; Fate imagery also centers on twisting/thread allotment."
+  },
+  {
+    "pair_id": "GRC_0367",
+    "arabic_root": "العرجد",
+    "target_lemma": "ἁλουργίδα",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "The first emergence of grapes maps plausibly to grape-derived purple dye or purple garment by concrete association."
+  }
+]

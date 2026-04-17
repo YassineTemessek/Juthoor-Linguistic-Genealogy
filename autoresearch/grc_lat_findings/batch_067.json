@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0536",
+    "finding": "no_path",
+    "semantic_journey": "Arabic صابل/دابل = calamity, disaster. Greek εἰσβολαί = nom.pl of εἰσβολή = invasions, irruptions, inroads (military attacks). The original reasoning maps calamity to invasion as both producing harm. But calamity (a natural/uncontrolled disaster) and military invasion (a deliberate attack) are different: uncontrolled event vs deliberate action. Calamity -> invasion requires: disaster -> violent attack. These are different types of harm events.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic calamity/disaster and Greek military invasion are different types of harm events — natural disaster vs deliberate attack."
+  },
+  {
+    "pair_id": "GRC_0537",
+    "finding": "path_found",
+    "semantic_journey": "Arabic شمت = to designate, to name (giving a name/designation to something). Greek σῆμα = a sign, mark, token (that which designates/indicates something). σήματ' = plural (signs, marks). Both encode DESIGNATION/INDICATION: Arabic = the act of naming/designating; Greek = the material sign/mark that designates. A 1-step action-to-result: naming/designating -> the sign/mark that does the designating.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic naming/designating (شمت) and Greek sign/mark (σῆμα) share the designation concept — the act of naming and the material token that names."
+  },
+  {
+    "pair_id": "GRC_0538",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفاه = wide-mouthed, eloquent (from فم/فاه = mouth). Greek Πολύφημος = Polyphemus (the Cyclops in the Odyssey — a proper mythological name, meaning much-voiced/much-famed). This is a proper name. Per methodology, proper names including mythological names are excluded. Even if φήμη (speech/fame) relates to Arabic فاه (mouth), Πολύφημος is a specific character name excluded from analysis.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Πολύφημος is a mythological proper name (the Cyclops) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0539",
+    "finding": "path_found",
+    "semantic_journey": "Arabic العنفك = a fool, an idiot (a person of deficient intellect). Greek φλήναφος = nonsense, idle chatter, foolish talk (what a fool produces). Both encode FOOLISHNESS/STUPIDITY: Arabic = the person (fool); Greek = the speech of that person (nonsense). A 1-step action-to-agent or agent-to-product relationship: fool -> what the fool says (nonsense). Direct preservation of the foolishness concept.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fool/idiot (العنفك) and Greek nonsensical chatter (φλήναφος) share the foolishness concept — person and their foolish speech."
+  },
+  {
+    "pair_id": "GRC_0540",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سيوط = Asyut (a city in Egypt — a proper place name). Greek -ιστί = a suffix meaning 'in the manner/language of' (as in Ἑλληνιστί = in Greek). A proper place name (Asyut) cannot be compared to a grammatical suffix. These are categorically incomparable items. Proper name exclusion also applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic سيوط is a proper place name (Asyut); Greek -ιστί is a grammatical suffix — categorically incomparable."
+  },
+  {
+    "pair_id": "GRC_0541",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الشخا = salty/chalky white land, salt flats (the pale white alkaline terrain). Greek λευκίσκος = a small white fish (from λευκός = white). Both encode WHITENESS: Arabic = the pale white quality of salt flats/alkaline land; Greek = white in the context of a white-colored fish. The step: pale-white land -> white-colored object. Both preserve the white/pale quality. A 1-step color preservation.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic white salt-flat terrain (الشخا) and Greek white fish (λευκίσκος) both preserve the whiteness/paleness quality."
+  },
+  {
+    "pair_id": "GRC_0542",
+    "finding": "path_found",
+    "semantic_journey": "Arabic جنن = to be enclosed/covered; to grow (of plants emerging from enclosed seed); also جنين = fetus (enclosed, growing being). Greek γεγονέναι = to have become/been born (perfect infinitive of γίγνομαι = to become, be born, come into being). Both encode COMING INTO BEING/EMERGING: Arabic = enclosed growth that emerges (seed/fetus); Greek = having been born/come forth. A 1-step direct path: enclosed emerging growth -> having been generated/born.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic enclosed growth/emerging (جنن, root of جنين = fetus) and Greek having-been-born (γεγονέναι) share the core of coming into being."
+  },
+  {
+    "pair_id": "GRC_0543",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دستوي = unclear/obscure term; possibly marking something as foreign/non-Arabic. Greek Ἰνδιστί = 'in the Indian language/manner' (a suffix form meaning speaking-Indian). Both supposedly mark foreignness. But an obscure Arabic term of unknown meaning cannot anchor a semantic comparison. Without reliable Arabic meaning, no finding is possible.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic دستوي lacks reliable attested meaning — semantic comparison with Greek is impossible."
+  }
+]

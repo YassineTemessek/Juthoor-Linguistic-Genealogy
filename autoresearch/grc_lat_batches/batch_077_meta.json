@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0616",
+    "arabic_root": "حرث",
+    "target_lemma": "ἀχυροθήκη",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "حرث belongs to tilling and agricultural activation, and 'chaff holder' stays in the same farming-material domain with a tool/container drift."
+  },
+  {
+    "pair_id": "GRC_0617",
+    "arabic_root": "حطم",
+    "target_lemma": "χωμάτων",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Breaking earth or dry matter can yield heaps or mounds; the bridge from broken material to piled mass is plausible."
+  },
+  {
+    "pair_id": "GRC_0618",
+    "arabic_root": "شفته",
+    "target_lemma": "σαφέστατα",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "مجال العين والاستشراف يلامس معنى الوضوح المباشر، لكن الصلة غير مطابقة."
+  },
+  {
+    "pair_id": "GRC_0619",
+    "arabic_root": "الشكم",
+    "target_lemma": "γλωσσοκομεῖον",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "Arabic includes the handles of a cooking pot, and Greek γλωσσοκομεῖον is a chest or container; both meet in the vessel-object domain."
+  },
+  {
+    "pair_id": "GRC_0620",
+    "arabic_root": "رشح",
+    "target_lemma": "προσχωρέω",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "راشح is one being prepared or qualified; Greek approach can be the action-side of moving toward entry or affiliation."
+  },
+  {
+    "pair_id": "GRC_0621",
+    "arabic_root": "الارعن",
+    "target_lemma": "Λέρνη",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss carries fortress and royal-place value, and the Greek lemma is also a place-name; place continuity is plausible."
+  },
+  {
+    "pair_id": "GRC_0622",
+    "arabic_root": "رمطه",
+    "target_lemma": "ὀδυροίμεθα",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic رمطه ‘to fault, blame’ can sit near lamentation in the social register of reproach and grief; the chain is plausible but not direct."
+  },
+  {
+    "pair_id": "GRC_0623",
+    "arabic_root": "ذاح",
+    "target_lemma": "ἐκδοχαί",
+    "lang": "grc",
+    "original_score": 0.52,
+    "original_method": "combined",
+    "original_reasoning": "Arabic inflating a container plausibly connects to reception or receiving as a result state."
+  }
+]

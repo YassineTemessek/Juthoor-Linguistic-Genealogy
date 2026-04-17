@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0264",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الشرف (al-sharf) = elevation, high place, nobility; also the camel's hump (highest point); battlements (raised projections on a wall). Greek ὑψόροφος = high-roofed (ὑψ- 'high' + ῥοφή 'roof'). Both encode upward elevation/height. Arabic high-place/elevation → Greek high-roofed is a direct 1-step parallel: both describe the property of being raised/elevated above the normal level.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic elevation/high-place (sharf) and Greek high-roofed (hypsorphos) share the core concept of upward elevation."
+  },
+  {
+    "pair_id": "GRC_0265",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الكركم (al-kurkum) = saffron/turmeric, the golden-yellow spice (from Arabic/Semitic). Greek κροκόμαγμα = the pressed residue of saffron unguent (κρόκος 'saffron/crocus' + μάγμα 'pressed residue'). Both are in the saffron/golden-spice domain. The Semitic root kurkum/krkm is the origin of both the Arabic term for saffron and related Greek words for the crocus/saffron plant. This is a material-culture trade transmission of the golden spice.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic saffron/turmeric (kurkum) and Greek saffron-residue compound (krokoma) share the Semitic saffron-spice root transmitted via ancient trade."
+  },
+  {
+    "pair_id": "GRC_0266",
+    "finding": "no_path",
+    "semantic_journey": "Arabic النزك (al-nazk) = a spear (a weapon). Greek ἀγωνίζομαι = to compete, contest, fight (from ἀγών 'contest, struggle'). The connection: spear → fighting with a spear → competing. Arabic names a weapon; Greek names the act of competing/contesting. The path weapon → wielding weapon → combat → contest is 3+ steps, and ἀγωνίζομαι is used for athletic contests (Olympics) as much as war — the Greek word has broader competitive meaning not tied to spear fighting.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic spear (weapon) and Greek competing/contesting (agonizesthai) are in different semantic categories; Greek agon covers all competitions, not just spear combat."
+  },
+  {
+    "pair_id": "GRC_0267",
+    "finding": "path_found",
+    "semantic_journey": "Arabic اقعنصر (iqansara) = to shrink downward, become stunted, curl up and crouch low. Greek ῥικνός = shrunken, withered, contracted (applied to dried-up or shriveled things). Both encode the concept of shrinking/contracting into a reduced form. Arabic shrinking-crouching-downward → Greek shrunken/withered is a direct 1-step match: both describe the state of something that has contracted and reduced in size.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic crouching-shrinkage (iqansara) and Greek shrunken/withered (riknos) share the concept of contracted diminishment."
+  },
+  {
+    "pair_id": "GRC_0268",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خنطه (khanta) = burden, distress, pressure borne; something heavy that presses down. Greek ἠνείχοντο = they were enduring/bearing (imperfect of ἀνέχω 'to hold up under, endure, bear'). Both encode bearing/enduring a heavy burden. Arabic pressure-borne-as-burden → Greek enduring/holding-up-under is a direct 1-step match: Arabic encodes the burden, Greek encodes the act of bearing it.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic heavy burden/pressure (khanta) and Greek enduring/bearing-under (eneikhonto) share the concept of bearing a heavy load."
+  },
+  {
+    "pair_id": "GRC_0269",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السنع (al-sana) = beauty, excellence, fine appearance. Greek ἀγαλλιῴησαν = they exulted, rejoiced greatly (aorist optative of ἀγαλλιάω). The connection: beauty → inducing joy → exultation. This requires: beautiful-excellence → what beauty causes → joy → exultation — that is 3 steps. Furthermore, ἀγαλλιάω in Greek already has its own etymology from ἄγαλμα (glory, honor). The chain beauty → exultation is too long and indirect.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic beauty/excellence and Greek exultation are 3 semantic steps apart; exultation is not a direct result of naming beauty."
+  },
+  {
+    "pair_id": "GRC_0270",
+    "finding": "no_path",
+    "semantic_journey": "Arabic شحك (shahaka) = to prevent suckling by inserting a stick in the animal's mouth; restraining by means of a physical obstacle in the mouth. Greek ἐσχήκασι = they have held (perfect of ἔχω). The same Arabic root شحك appeared in GRC_0282 (batch_035 context). Restraining-via-mouth-obstacle → holding is: restraint → being-held-back → holding — the Arabic is very specific (oral restraint) while Greek is generic (have/hold). The specificity gap is too large for a valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic specific oral-restraint mechanism and generic Greek holding are too distant; the restraint method is lost in any proposed connection."
+  },
+  {
+    "pair_id": "GRC_0271",
+    "finding": "no_path",
+    "semantic_journey": "Arabic جلن (jaln) = النجيل grass, a leafy ground plant. Greek γέλενος = asphodel or daffodil (a bulb plant). Both are plants, but different plant types: Arabic is a grass-like ground-cover, Greek is a bulb flower (asphodel being the death-flower of Greek mythology). Plant-category matching is insufficient — these are fundamentally different botanical types.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic grass-plant and Greek asphodel/daffodil share only botanical category; different plant families and cultural associations."
+  }
+]

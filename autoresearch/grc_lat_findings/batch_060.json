@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0480",
+    "finding": "no_path",
+    "semantic_journey": "Arabic جعثر = to gather, collect things into a heap/pile. Greek ἐγκαθιδρύομαι = to be established in a place, to be enthroned/installed (from ἐν + καθ + ἱδρύω = in + down + establish). The original reasoning maps gathering/collecting to being established in place. But gathering things into a pile and being officially installed/enthroned in a position are different: material accumulation vs positional installation. The path gather -> arrange -> be installed requires 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic gathering/heaping (material accumulation) and Greek being officially installed/enthroned (positional establishment) require 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0481",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحوة = dark brownish-green color (a specific color hue). Greek γλήχων = pennyroyal (Mentha pulegium, an aromatic herb). The original reasoning maps dark-green color to green aromatic herb. But a color term and a plant name are different categories. Color -> plant-of-that-color requires: dark green hue -> something dark green -> pennyroyal (which is green). 3 steps. Also pennyroyal is identified by scent/medicinal property, not primarily by its color.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic dark-greenish color and Greek pennyroyal herb are different categories — color to plant-species requires 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0482",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ذاح = to inflate a skin/vessel with air, to puff up. Greek δέχεται = he/she/it receives, accepts (present of δέχομαι). The original reasoning maps inflating a skin (filling it with air) to receiving (taking something in). But inflating (filling with air, expanding outward) and receiving (taking in an object or person) are different actions. Inflating is one-directional outward expansion; receiving is welcoming/accepting. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic inflating/puffing (outward expansion) and Greek receiving/accepting (welcoming intake) are different directional actions."
+  },
+  {
+    "pair_id": "GRC_0483",
+    "finding": "path_found",
+    "semantic_journey": "Arabic شفت = the emergence/appearance of something; its coming forth to view (ظهور الشيء وخروجه للعين = something coming out to the eye). Greek σαφής/σαφέστατα = most clearly, most plainly (superlative of σαφής = clear, plain, manifest). Both encode VISIBILITY/MANIFESTATION: Arabic = the act of appearing/coming forth; Greek = the quality of being maximally clear/plain to see. The semantic journey: something coming forth to view -> being clearly/plainly visible. A 1-step action-to-quality path.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic appearing/coming-forth-to-view (شفت) and Greek most-clearly-visible (σαφέστατα) share the core of manifestation/visibility."
+  },
+  {
+    "pair_id": "GRC_0484",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الجاثليق = Catholicos (head of the Eastern Christian church — a religious title borrowed from Greek καθολικός). Greek λογοθέτης = a logothetes, a Byzantine official/administrator (from λόγος + τίθημι = word/account + place). Both are high administrative/religious titles. But الجاثليق is a Greek loanword (from καθολικός = universal), not an independent Arabic term. Comparing a borrowed Greek title back to a different Greek term is not Arabic-Greek cognacy.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic الجاثليق is borrowed from Greek καθολικός — comparing a Greek loanword back to another Greek term is circular."
+  },
+  {
+    "pair_id": "GRC_0485",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الجزاء = recompense, settling of a debt/due (calculating and paying what is owed). Greek λογίζομαι = to reckon, calculate, count, compute (to do the arithmetic of accounting). The semantic journey: settling recompense (moral accounting) -> calculating/reckoning (numerical accounting). Both belong to the domain of ACCOUNTING/SETTLEMENT: Arabic = the moral settlement of what is owed; Greek = the numerical calculation of what is owed. A 1-step specialization: moral settlement -> numerical calculation.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic debt-settlement/recompense (الجزاء) and Greek calculating/reckoning (λογίζομαι) share the accounting/settlement concept."
+  },
+  {
+    "pair_id": "GRC_0486",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الطرق = a craft, profession, trade (one's particular skill/calling); also road/path. Greek λειτουργέω = to perform a public service, to carry out a liturgical function (from λαός + ἔργον = people + work). Both encode PERFORMING A SPECIALIZED FUNCTION: Arabic = one's craft/profession (specific trade performed); Greek = performing public/religious service (specific function carried out for community). A 1-step path: individual craft/profession -> communal public function.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic craft/profession (الطرق) and Greek public service/liturgy (λειτουργέω) share the core of a specific skilled function being performed."
+  },
+  {
+    "pair_id": "GRC_0487",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ارمعن = to flow swiftly, rush (repeated from GRC_0449 — same Arabic root). Greek ὁρμώμενοι = rushing onward, setting out with force (present participle of ὁρμάω = to rush, set in motion). Both encode SWIFT RUSHING FORWARD MOTION: Arabic = the flowing/rushing; Greek = the rushing/setting-out. Direct preservation of the swift-rush concept. Same analysis as GRC_0449 (ὁρμήν).",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic swift rushing/flowing (ارمعن) and Greek rushing-forth (ὁρμώμενοι) directly share the concept of swift forward motion — same root pair as GRC_0449."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0152",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حسن (husn/hasan) = beauty, goodness, excellence. Greek χρύσινος = golden, made of gold. The reasoning is that gold connotes beauty — but this is an indirect cultural association, not a semantic path. 'Golden' is a material property (made of gold) and 'beautiful' is an aesthetic quality. The connection requires: beautiful → what is beautiful → gold is beautiful → golden. That is 3+ steps of cultural association, not linguistic drift. No direct path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic beauty and Greek golden are connected only by the cultural cliche that gold is beautiful, not by any direct semantic drift."
+  },
+  {
+    "pair_id": "GRC_0153",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الخسيج (al-khusayj) = tent, pavilion. Greek λέχεσσι = beds, lairs (dative plural of λέχος, alternate form). Same assessment as GRC_0146 (λέχεσι). Tent/shelter to bed/lair requires 3+ steps. Duplicate pair with different Greek inflection. No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Identical rejection as GRC_0146: tent and bed are distinct resting-place concepts with no clean 2-step semantic path."
+  },
+  {
+    "pair_id": "GRC_0154",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الرسل (al-rasl) / root رسل = to send forth, let go, release; رسول = messenger (one sent). Greek λυσέρωσι = related to loosening/releasing (from λύω 'to loose, release'). Both encode the concept of releasing/letting go. Arabic sending-forth/releasing → Greek loosing/releasing is a direct 1-step parallel: both describe the action of freeing something from constraint and sending it on.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic releasing/sending-forth (rasl) and Greek loosing/releasing (lyo) share the core concept of freeing from constraint."
+  },
+  {
+    "pair_id": "GRC_0155",
+    "finding": "path_found",
+    "semantic_journey": "Arabic العجز (al-ajz) = weakness, inability, incapacity; عجز also = the rear/backside (the part that lags behind). Greek λαγγάζω = to be slack, lag behind, become weary and slow. Both encode weakness causing slowing/lagging. Arabic inability/lagging-behind → Greek slack/lagging is a direct 1-step match: both describe the state of falling behind due to weakness.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic weakness/lagging (ajz) and Greek slackness/lagging (langazo) share the core of inability causing one to fall behind."
+  },
+  {
+    "pair_id": "GRC_0156",
+    "finding": "path_found",
+    "semantic_journey": "Arabic شجر (shajara) = to dispute, fight, come into conflict; also = tree, branching. Root شجر has two semantic poles: literal branching of trees and metaphorical 'branching' of conflict between people. Greek συγκρούομαι = to collide, clash, come into conflict. Both encode interpersonal conflict/collision. Arabic dispute/clash between people → Greek collide/clash is a direct match.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic شجر (dispute, clash) and Greek clashing (sygkrouomai) both encode the concept of violent interpersonal conflict."
+  },
+  {
+    "pair_id": "GRC_0157",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العسنق (al-usanq) = perfect in beauty, completely handsome. Greek κάλοισιν = with good/beautiful things (dative plural of καλός 'beautiful'). Both mean beautiful, but this is translation equivalence — any two languages have words for beauty. The Arabic is an obscure adjective for physical perfection; Greek καλός is a common word. No specific phonetic or semantic path can be constructed from this generic overlap.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Both words meaning beautiful is translation equivalence, not a cognate — every language has beauty words."
+  },
+  {
+    "pair_id": "GRC_0158",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حري (hariy/hara) = to intend, aim at, be worthy of; حري به = he intends/aims at something. Greek ἐγχειρέω = to put one's hand to, attempt, undertake (from ἐν 'in' + χείρ 'hand'). The Greek is a transparent compound meaning 'to set one's hand to.' While intending and attempting are related concepts, the Greek word's internal structure (hand + action) has no Semitic parallel, and the connection requires: intending → attempting → putting hand to = 3-step chain. The Greek compound explains itself internally.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek ἐγχειρέω has transparent internal etymology (hand + action); Arabic intending and Greek hand-attempting are too distant for a direct cognate path."
+  },
+  {
+    "pair_id": "GRC_0159",
+    "finding": "path_found",
+    "semantic_journey": "Arabic القوس (al-qaws) = bow (weapon), arc, curve. Greek ἕλιξ = something twisted or coiled, spiral, helix. Both encode curved/bent form — the Arabic specifically names the bow/arc shape, the Greek generalizes to any spiral/coil. The conceptual core is the same geometric property of curving/bending. Arc/bow shape → spiral/coil is a 1-step generalization from specific arc to any coiling curve.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic bow/arc (qaws) and Greek spiral/coil (helix) share the geometric core of curving form."
+  }
+]

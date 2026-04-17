@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0088",
+    "finding": "no_path",
+    "semantic_journey": "Arabic Hirqil = Heraclius (Byzantine emperor) is an Arabic borrowing of the Greek name. Greek Herakles = Heracles (the ancient hero). Arabic borrowed the Byzantine emperor name (Heraclius/Herakleios) from Greek. This is a Greek personal name borrowed into Arabic, not an Arabic root cognate. Proper name with Arabic borrowing from Greek.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic Hirqil = Greek Heraclius borrowed from Greek into Arabic - Greek-to-Arabic direction, proper name."
+  },
+  {
+    "pair_id": "GRC_0089",
+    "finding": "no_path",
+    "semantic_journey": "Arabic subbukht = a name/word sharing Aramaic root with sabachthani. Greek sabakhthani = you have forsaken me (Aramaic phrase in the Gospels). Both share the Aramaic root sh-b-q (to leave/forsake). However, sabakhthani is a direct Aramaic religious text transmission (Matthew 27:46, the crucifixion cry). This is a quoted Aramaic/Semitic phrase in Greek scripture - a proper religious text citation, not a lexical cognate. Excluded as scriptural proper name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek sabakhthani is a quoted Aramaic phrase in scripture (you have forsaken me) - scriptural transmission, not a lexical cognate."
+  },
+  {
+    "pair_id": "GRC_0090",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-thajra = sediment/dregs/residue (ثفل = the heavy settled matter). Greek lithargiros = litharge (lead oxide, the metallic dross from silver refining). Arabic sediment/residue and Greek lead-oxide dross are both residual materials, but: Greek lithargiros is a compound (lithos = stone/lead + arguros = silver) naming a very specific metallic compound. The Arabic general sediment concept does not specifically reach Greek metallurgical lead-oxide. The Greek is a native compound, not from Semitic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic general sediment/residue does not specifically reach Greek metallurgical litharge (lead oxide) - Greek is a native compound."
+  },
+  {
+    "pair_id": "GRC_0091",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-hadir = al-hadhir = something collected into a mass, gathered/concentrated material. Greek khondros = a lump, a grain, a rounded mass (also groats/grain in general; also cartilage). Both encode the concept of a collected/gathered mass or lump. Arabic: collected mass; Greek: lump/grain. One step: collected material -> rounded lump. Plausible connection in the mass/lump domain.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic collected mass (al-hadir) and Greek lump/rounded mass (khondros) share the mass/lump concept."
+  },
+  {
+    "pair_id": "GRC_0092",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-tarkha = a name for the noble chief. Greek Kleitarkhos = Cleitarchus (personal name = fame + arkhos = ruler/leader). Both involve leadership/rule. However, Cleitarchus is a Greek proper personal name constructed from native Greek elements (kleitos = famous + arkhos = leader). The Arabic gloss naming a noble chief is not the etymological source of this Greek proper name. Proper name with no productive Semitic connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Cleitarchus is a native Greek proper name (fame + ruler) - not derived from Arabic noble-chief concept."
+  },
+  {
+    "pair_id": "GRC_0093",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-lajaj = persistence in speech, stammering repetition in speaking (the root l-j-j encodes repetitive insistence). Greek lalagio = to babble, to prattle, to chatter (onomatopoeic root for rapid repetitive speech). Both encode repetitive/persistent speech. Arabic: repetitive/insistent speech behavior; Greek: babbling/chattering (rapid repetitive sounds). One step: repetitive insistent speech -> babbling/prattling. Clear speech-behavior alignment.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic repetitive insistent speech (al-lajaj) and Greek babbling/prattling (lalagio) share the repetitive-speech behavior."
+  },
+  {
+    "pair_id": "GRC_0094",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-hashw = stuffing, that which is put inside to fill (padding/stuffing material). Greek lekhesi = beds/couches (dative plural of lekhos = bed/couch). The semantic journey: stuffing/padding material -> the bed that is stuffed/padded. A bed requires stuffing/filling to be comfortable. The Arabic identifies the material used to fill; Greek names the filled object. One step: stuffing material -> the stuffed/padded resting place. Plausible material culture connection.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic stuffing/padding material (al-hashw) and Greek bed/couch (lekhesi) connect through stuffed-resting-place concept."
+  },
+  {
+    "pair_id": "GRC_0095",
+    "finding": "path_found",
+    "semantic_journey": "Identical to GRC_0094 but different Greek inflected form (lekhessi vs lekhesi - both dative plural of lekhos). Same finding applies.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Variant inflected form of GRC_0094 - same Arabic stuffing/Greek bed connection."
+  }
+]

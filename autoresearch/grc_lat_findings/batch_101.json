@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0808",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-saym = hard, strong, compactly built (same root as GRC_0707). Greek katalusimons = dissolvable, able to be dissolved (accusative plural). Genuine antonyms on the same structural-durability axis. Negation-cognate frame applies: compact/hard vs dissolvable. Same analysis as GRC_0707.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Same root as GRC_0707; Arabic compactly-hard and Greek dissolvable are valid negation-cognates on the structural-durability axis."
+  },
+  {
+    "pair_id": "GRC_0809",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-baras = leprosy; sam abrass = large gecko (both associated with disease/harm). Greek blabers = harmful, pernicious. Core: intrinsic harm. Leprosy is the paradigmatic harmful disease; Arabic baras encodes harm-through-disease; Greek blabers encodes the general quality of being harmful/pernicious. 1-step generalization: specific-disease-harm -> general-harmful-quality.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic leprosy (paradigmatic harmful disease) and Greek harmful/pernicious share the core concept of intrinsic harm to health and life."
+  },
+  {
+    "pair_id": "GRC_0810",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-brashaa = coarse, troublesome, oafish person. Greek blabers = harmful, pernicious. Core: a harmful/troublesome character causing damage. Arabic encodes the troublesome-oafish person; Greek encodes the general quality of harmfulness. 1-step drift: coarse-troublesome-person -> harmful/pernicious quality.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic coarse-troublesome person and Greek harmful/pernicious share the concept of someone or something causing harm and disturbance."
+  },
+  {
+    "pair_id": "GRC_0811",
+    "finding": "no_path",
+    "semantic_journey": "Arabic kharz = stringing beads, threading (creating ordered joining). Greek diakhorizo = to separate, distinguish (separate objects). Same analysis as GRC_0732: joining and separating are opposite processes. Without stronger phonetic match, negation-cognate is too weak.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic threading/stringing (joining) and Greek separating (splitting) are opposites; negation-cognate insufficient without stronger phonetic evidence."
+  },
+  {
+    "pair_id": "GRC_0812",
+    "finding": "path_found",
+    "semantic_journey": "Arabic faza = panic, fleeing (fazaa = terror, fear causing flight). Greek pephyzotes = having fled (perfect active participle of phygo/pheugo). Core: panic-flight. Direct preservation: Arabic panic-causing-flight and Greek having-fled are the same concept from different grammatical angles. 1-step direct preservation.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic panic/fleeing and Greek having-fled are the same concept; Arabic encodes the panic-flight state, Greek the completed-flight result."
+  },
+  {
+    "pair_id": "GRC_0813",
+    "finding": "path_found",
+    "semantic_journey": "Arabic maraja = mixed, disordered; also a wild pasture (marj = meadow where animals roam freely). Greek margos = mad, furious, rampant, lustful. Core: wild/uncontrolled behavior or state. Arabic encodes wild disorder (free pasturing/mixing); Greek encodes the behavioral/psychological state of being wild/mad. 1-step drift: wild-pasturing-disorder -> rampant/mad behavior.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic wild pasture/mixed disorder and Greek rampant/mad share the concept of wild/uncontrolled state, physical in Arabic and psychological in Greek."
+  },
+  {
+    "pair_id": "GRC_0814",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khitab = directed speech, a discourse, an address to someone. Greek epekete = hold toward, attend to, check yourself (imperative of epekho). Directed-speech (discourse) and hold-toward/attend are adjacent (one attends to/holds toward a speaker) but different: Arabic encodes the speech act itself; Greek encodes the attentive-holding posture. No valid 2-step derivation.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic directed speech and Greek hold-toward/attend are adjacent but different: speech act vs attentive posture."
+  },
+  {
+    "pair_id": "GRC_0815",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khadhiyat = slackening, loosening. Greek katheude = sleep (imperative of katheudein = to sleep). Slackening/loosening and sleep are adjacent (sleep involves muscle relaxation) but different concepts: slackening is a physical loosening process; sleep is a complex biological state. The metaphor loosening->sleep requires: slackening -> relaxation -> rest -> sleep = 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic slackening/loosening and Greek sleep are adjacent (sleep involves relaxation) but 3 steps apart; too weak a metaphorical path."
+  }
+]

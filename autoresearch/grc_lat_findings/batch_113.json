@@ -1,0 +1,29 @@
+[
+  {
+    "pair_id": "LAT_0904",
+    "finding": "no_path",
+    "semantic_journey": "Arabic masat (root m-s-t) = to extract moisture, to squeeze out fluid (from womb/body). Latin mistum = mixed (wine mixed with water), past participle of misceo (to mix). The Arabic describes extraction/pressing to draw fluid out of something. The Latin describes mixing (combining two things together). These are opposite processes: extraction vs mixing/combination. The original reasoning admits this at the surface level and tries to bridge it via liquid handling, but that bridge requires: squeeze-extract -> liquid -> mix-liquid, which is 3 steps. No valid semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic masat (to extract by squeezing) and Latin mistum (mixed, from misceo) describe opposite liquid operations: extraction vs combination."
+  },
+  {
+    "pair_id": "LAT_0905",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-bank = a term with multiple proposed meanings including essence/core and benzoin/gum benjamin resin. Latin galbanum = aromatic gum resin from Ferula plant, used in incense and medicine. If Arabic al-bank truly means benzoin/gum benjamin, both are aromatic resins. However, benzoin/gum benjamin is itself a loanword from Arabic (luban jawi = frankincense of Java -> benjamin -> benzoin). So if Arabic bank = benzoin, that Arabic word itself comes from a Southeast Asian trade route word. The consonant match is b-n-k vs g-l-b-n-m, which is poor. Galbanum has its own Greek etymology (from khalbone). The connection is speculative.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Latin galbanum derives from Greek khalbone; Arabic al-bank as a gum-resin term is poorly attested; the consonant match b-n-k vs g-l-b-n-m is weak."
+  },
+  {
+    "pair_id": "LAT_0906",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-luzub (luzub) = adhesion, clinging, sticking firmly (from lazib = firmly attached, permanent; Quranic tin lazib = sticky clay). Latin lapis lazuli = blue precious stone (lapis = stone + lazuli from Arabic lazaward/lazuward, from Persian lajward, from Lajwurd, a place in Badakhshan where the stone was mined). The Latin lazuli derives from Arabic lazaward, which itself derives from Persian lajward, which derives from the place name Lajwurd. Arabic al-luzub (stickiness/adhesion) and the lapis lazuli chain share the consonants l-z but the etymological paths are completely different. Lazuli comes from a toponym (place name in Badakhshan), not from the adhesion root. Shared loanword from Persian place-name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Latin lazuli derives from Arabic lazaward from Persian lajward from the place name Lajwurd; Arabic al-luzub (adhesion) is a completely different word sharing only the l-z consonants."
+  }
+]

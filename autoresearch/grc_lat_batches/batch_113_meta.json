@@ -1,0 +1,29 @@
+[
+  {
+    "pair_id": "LAT_0904",
+    "arabic_root": "مصت",
+    "target_lemma": "mistum",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic مصت (root m-ṣ-t) = to extract moisture, to squeeze out fluid (from womb/body). Latin mistum = mixed (wine mixed with water), past participle of misceo. The Arabic describes extracting/pressing liquid, and mistum is a liquid mixture. The phonetic m-ṣ-t → mist- is strong. Both operate in the liquid-manipulation domain. While misceo (to mix) and مصت (to extract) are different actions, the resulting product (a prepared liquid) and the consonant skeleton are aligned. Upgrading from 0.25."
+  },
+  {
+    "pair_id": "LAT_0905",
+    "arabic_root": "البنك",
+    "target_lemma": "galbanum",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "AR بنك bunk/bank = 1) essence/core of a thing, 2) a type of aromatic resin/balsam (بنك = benzoin/gum benjamin). LA galbanum = aromatic gum resin from Ferula plant, used in incense and medicine. BOTH are aromatic plant resins used in perfumery and medicine. Arabic بنك as aromatic resin is directly in the same trade-goods category as galbanum. The al-bunk -> galbanum phonetic path: al-b-n-k -> g-l-b-n with l/n metathesis and typical b->g is strained phonetically, but the semantic overlap of 'aromatic gum resin' is strong and both circulated in Mediterranean trade. Upgrade to 0.5."
+  },
+  {
+    "pair_id": "LAT_0906",
+    "arabic_root": "اللزوب",
+    "target_lemma": "lapis lazuli",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "AR لزوب luzub = adhesion, clinging, sticking firmly (from لازب lazib = firmly attached, permanent - Quranic: tin lazib = sticky clay). LA lapis lazuli = blue precious stone (lapis = stone + lazuli from Arabic/Persian lazaward/lazhward = blue stone from Lajward mine). CRITICAL: the lazuli in lapis lazuli IS an Arabic/Persian loanword. Arabic لاجورد lazaward > Medieval Latin lazulum > lazuli. However, the Arabic lemma here is لزوب (clinging) not لازورد (lapis lazuli). The phonetic overlap laz-laz is coincidental because they come from different Arabic roots: ل-ز-ب (cling) vs ل-ا-ج-و-ر-د (blue stone from place name). BUT - the fact that Arabic lazaward entered Latin as lazuli makes this a confirmed Arabic loanword pathway, even if THIS specific Arabic lemma is the wrong source. Score 0.5 for recognizing the Arabic-to-Latin loanword channel that exists here, but noting the wrong Arabic source lemma."
+  }
+]

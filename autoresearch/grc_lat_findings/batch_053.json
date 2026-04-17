@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0424",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البرغز = young calf (a juvenile bovine). Greek Βαρύγαζα = Barygaza (ancient port city in Gujarat, India — Bharuch). This is a proper place name. Proper names are excluded by methodology. Even analytically, Barygaza derives from Sanskrit/Indo-Aryan, not Arabic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Βαρύγαζα is a proper place name of Sanskrit/Indian origin — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0425",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الجعفر = a small or large flowing river (a stream, brook). Greek Γάφαρα = a place name in Tunisia/North Africa. This is a proper place name, excluded by methodology. The original reasoning acknowledges it is a place name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Γάφαρα is a proper place name — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0426",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الحرج = a narrow enclosed wooded area; also prohibition/sin (both mean a bounded/restricted zone). Greek χάραγμα = an engraved mark, a brand, an incised impression (from χαράσσω = to engrave, mark with incisions). The semantic journey: narrow enclosed boundary (the restricted zone) -> an engraved mark that creates a boundary/demarcation. Both encode the concept of a MARKED/BOUNDED LIMIT: Arabic = a restricted enclosed space; Greek = the physical mark that creates restriction/demarcation. A 1-step concrete-to-instrument path.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic narrow enclosed restricted zone (الحرج) and Greek engraved boundary-mark (χάραγμα) share the core of demarcated restriction."
+  },
+  {
+    "pair_id": "GRC_0427",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحرز = an amulet (protective charm worn for protection); also a fortified place. Greek χαρίζομαι = to grant a favor, to give freely, to rescue/deliver. The original reasoning maps amulet protection to rescue/delivery. But an amulet passively wards off evil; χαρίζομαι is an active GIVING of favor or rescue. The path amulet -> protection -> deliverance -> active rescue requires: passive protection -> active intervention. This is a direction reversal (passive vs active) making it a poor path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic passive amulet protection and Greek active gift/rescue are different in direction — passive ward vs active intervention."
+  },
+  {
+    "pair_id": "GRC_0428",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الغبيثة = a specific mixed food dish (curds/cheese beaten with clarified butter, served in a bowl). Greek γαβάθα = a bowl, dish, platter (vessel for serving food). The semantic journey: a mixed dish -> the bowl/vessel in which that dish is served. Arabic encodes the FOOD CONTENT; Greek encodes the VESSEL that holds it. These are two sides of the same food-service unit. The dish name and the vessel name share an intimate material culture relationship — the dish is inseparable from the bowl that serves it.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic mixed food dish (الغبيثة) and Greek serving bowl (γαβάθα) are two sides of the same food-service unit — content and container."
+  },
+  {
+    "pair_id": "GRC_0429",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الغلقة = a bitter shrub from Hijaz/Tihama used for tanning leather; also used as a weapon-poison. Greek γλήχων = pennyroyal (Mentha pulegium), a bitter aromatic medicinal herb. Both are BITTER MEDICINAL/FUNCTIONAL PLANTS from the Mediterranean/Arabian region used for specific purposes (tanning/poisoning vs medicine). The phonetic match is tight (gh-l-q / gl-kh). The semantic match: both are bitter plants with utilitarian medicinal/industrial uses. A material culture transmission of a plant-use category name.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic bitter tanning/poisoning shrub (الغلقة) and Greek bitter medicinal pennyroyal (γλήχων) share both phonetics and the bitter-plant-with-uses field."
+  },
+  {
+    "pair_id": "GRC_0430",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ماث = to dissolve, make soft by soaking (maatha = to steep/dissolve something in water). Greek μαθητεύω = to be a disciple, to learn as a student (from μανθάνω = to learn). The original reasoning claims shared م-ث consonants with Greek μαθ-. But Arabic steeping/dissolving and Greek learning/discipleship are entirely different domains. The consonant pattern is coincidental — Arabic ماث and Greek μαθ- are different roots encoding unrelated concepts. No semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic dissolving/soaking (ماث) and Greek learning/discipleship (μαθ-) share a consonant pattern but encode entirely unrelated concepts."
+  },
+  {
+    "pair_id": "GRC_0431",
+    "finding": "path_found",
+    "semantic_journey": "Arabic التناوح = mutual lamentation/wailing, paired mourning (women mourning together in alternating cries, facing each other). Greek στενάχω = to sigh, groan, moan (vocalized grief sounds). Both directly encode AUDIBLE SOUNDS OF GRIEF: Arabic = the vocalized mutual wailing of mourners; Greek = the sighing/moaning of grief. A direct preservation of grief-vocalization. Arabic preserves the communal ritual form; Greek preserves the individual sound.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic mutual wailing/lamentation (التناوح) and Greek groaning/sighing (στενάχω) directly share audible grief vocalization — communal mourning to individual groaning."
+  }
+]

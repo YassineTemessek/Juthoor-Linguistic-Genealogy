@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0880",
+    "arabic_root": "حضرموت",
+    "target_lemma": "hadrumetinus",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic حضرموت = Hadhramaut, ancient South Arabian region (etymologically debated: حضر + موت = 'death is present' or related to حضر = to settle). Latin Hadrumetinus = adjective for Hadrumetum, Phoenician colony in North Africa. Both are Semitic place names. Hadrumetum was founded by Phoenicians (Semitic speakers from the Levant). The root حضر (to be present, to settle in a place) is pan-Semitic. The phonetic correspondence ḥ-ḍ-r-m-t → Hadrumet- preserves the consonant skeleton almost perfectly. This is a genuine Semitic toponym pair — not identical places but names from the same Semitic naming tradition."
+  },
+  {
+    "pair_id": "LAT_0881",
+    "arabic_root": "بابل",
+    "target_lemma": "babulus",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic بابل = Babel (city of confounded speech, Genesis 11); babulus = babbler — Babel is the direct etymological ancestor of babble/babbler concept"
+  },
+  {
+    "pair_id": "LAT_0882",
+    "arabic_root": "بابل",
+    "target_lemma": "babello",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic بابل = Babel (tower of linguistic confusion); babello = to babble/stammer — direct etymological connection, Babel gives babble"
+  },
+  {
+    "pair_id": "LAT_0883",
+    "arabic_root": "البثع",
+    "target_lemma": "phlebotomia",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "البثع (blood appearing on lips/skin) ↔ phlebotomia (bloodletting): both concern blood at skin surface"
+  },
+  {
+    "pair_id": "LAT_0884",
+    "arabic_root": "ينبت",
+    "target_lemma": "cynosbatos",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "ينبت (thorny Yanbut tree with berries) ↔ cynosbatos (dog-rose/wild briar): both thorny shrubs with berries"
+  },
+  {
+    "pair_id": "LAT_0885",
+    "arabic_root": "رهكه",
+    "target_lemma": "rhexis",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "weak",
+    "original_reasoning": "رهكه = to grind/crush between stones; rhexis = incision/cutting — shared destructive force on matter"
+  },
+  {
+    "pair_id": "LAT_0886",
+    "arabic_root": "سلاه",
+    "target_lemma": "salar",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "weak",
+    "original_reasoning": "سلاه: honey (سُلوانة) vs salar = trout — both food but weak stretch"
+  },
+  {
+    "pair_id": "LAT_0887",
+    "arabic_root": "شفي",
+    "target_lemma": "pascha",
+    "lang": "lat",
+    "original_score": 0.55,
+    "original_method": "weak",
+    "original_reasoning": "شفى = healing; pascha = Passover/Easter — شفيّ مردود; etymologically الفصح is closer"
+  }
+]

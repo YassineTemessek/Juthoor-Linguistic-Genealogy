@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0312",
+    "finding": "no_path",
+    "semantic_journey": "Arabic اللحد = lateral grave niche, the side-hollow cut into a grave wall; verb لحد = to incline to one side, deviate. Greek ἀλλαχόθι = elsewhere, in another place. The original reasoning maps aside/deviate to elsewhere. But lateral inclination (digging into a side wall) does not semantically generate the idea of being in another place. These are fundamentally different concepts: a physical directional action vs a locative adverb.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Lateral grave-digging/deviation and the adverb elsewhere occupy entirely different semantic fields with no credible 1-2 step path."
+  },
+  {
+    "pair_id": "GRC_0313",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العنصل = squill (Urginea maritima, sea onion), a specific bulb plant. Greek λινόζωστις = mercury plant (Mercurialis annua), a completely different herb. Both are plants, but 'both are plants' is translation equivalence, not cognacy. Matching two different plant species under the label 'plant domain' is too weak — every language has plant names, and these name different species with no shared ethnobotanical tradition evidenced.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two different medicinal plant names in the same botanical domain does not constitute cognacy — species identity is needed, not just category membership."
+  },
+  {
+    "pair_id": "GRC_0314",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الأصطبة = hackled flax fibers, tow — the coarse fibrous material pulled off during flax processing. Greek στίβη = a bed of leaves/straw/fiber, packed fibrous bedding material. The semantic journey: raw processed fiber -> packed fibrous bedding. Both refer to the FIBROUS PLANT MATERIAL that results from processing, used for padding/bedding. This is a 1-step specialization of processed plant fiber to its use as bedding.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic hackled flax tow and Greek fibrous plant bedding both describe processed fibrous plant material — a direct material culture connection."
+  },
+  {
+    "pair_id": "GRC_0315",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سقط = to fall, drop, fail (active process of falling). Greek σχέτε = 2nd plural aorist imperative of ἔχω = hold! keep! The original reasoning calls this a negation cognate (dropping vs holding). But negation cognates require the Arabic root itself to cover both sides of the concept. Root س-ق-ط means only falling/dropping; the opposite (holding) must be a different root. Simply being opposites in meaning is not a negation cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Falling and holding are mere antonyms in different roots, not a true negation cognate where one root covers both poles."
+  },
+  {
+    "pair_id": "GRC_0316",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سفل = to be low, descend, downward fall (root of lowness/descent). Greek ἀσφαλέσι = dative plural of ἀσφαλής = safe, secure, not falling (from ἀ- + σφάλλω = cause to fall). The original reasoning calls this a negation cognate: downward fall vs safe/not falling. This is a genuine conceptual opposition, but the phonetic match is on the prefix ἀσφ- where the σφ corresponds to Arabic سف. Greek actually has the concept of falling BUILT IN (σφάλλω = to trip/cause to fall) negated by ἀ-. This is a plausible negation cognate where Arabic preserves the falling concept and Greek negates it in the same word.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic سفل (downward/falling) and Greek ἀσφαλής (safe = not-falling) preserve opposite sides of the falling concept in a true negation pattern."
+  },
+  {
+    "pair_id": "GRC_0317",
+    "finding": "path_found",
+    "semantic_journey": "Arabic افثى/أفثى = to become exhausted, weakened, perish. Greek ἄφθιτον = imperishable (ἀ- + φθίω/φθίνω = to waste away, perish). Greek φθίτος (the base) = perishable, the one who perishes. Arabic and the Greek base BOTH encode perishing/exhaustion. Greek then negates it with ἄ-. This is a direct negation cognate: Arabic preserves the positive (perishing), Greek built the imperishable concept by negating the same root meaning.",
+    "journey_type": "negation_cognate",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic perishing/exhaustion and Greek φθίτος (base of imperishable) encode the same decay concept — ἄφθιτον negates it, making this a confirmed negation cognate."
+  },
+  {
+    "pair_id": "GRC_0318",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ساخت = settled/deposited (as sediment), also related to a kind of deposition. Greek ἐσχήκατε = perfect of ἔχω = you have held/possessed. The original reasoning connects settled deposition to held/maintained condition. But this requires: deposition -> settled state -> maintained possession — at least 3 steps. Moreover, Arabic ساخت specifically refers to physical sedimentation/settling, not to active holding. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sedimentation/settling and Greek active possession/holding require 3+ steps and encode fundamentally different actions."
+  },
+  {
+    "pair_id": "GRC_0319",
+    "finding": "path_found",
+    "semantic_journey": "Arabic عفت = twisted, fiery, consuming/destroying (also عفت = to destroy, consume). Greek ἄφθιτον = imperishable (ἀ- + base meaning perishable/consumed). GRC_0317 already established the negation pattern with a different Arabic root. Here عفت (consuming/destroying) maps to the destroying component of φθίτος. Both Arabic عفت and Greek φθ- encode the concept of consuming/destroying — Greek then negates it. A valid negation cognate, though slightly weaker than 0317 since عفت is less directly about perishing than about consuming fire.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic consuming/destroying (عفت) and the base of Greek imperishable (φθίτος = perishable) both encode destruction — Greek negates it."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0072",
+    "arabic_root": "حطم",
+    "target_lemma": "ἰχθυήματα",
+    "lang": "grc",
+    "original_score": 0.82,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "حطم is crushing or breaking; scrapings or shavings are the direct material result of such breaking."
+  },
+  {
+    "pair_id": "GRC_0073",
+    "arabic_root": "زفر",
+    "target_lemma": "Ζέφυρε",
+    "lang": "grc",
+    "original_score": 0.82,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic زفر carries strong exhalation or forceful breath in its root family, and Greek Zephyros is the wind; this is a clear breath-to-wind chain."
+  },
+  {
+    "pair_id": "GRC_0074",
+    "arabic_root": "سبن",
+    "target_lemma": "σεβένινος",
+    "lang": "grc",
+    "original_score": 0.82,
+    "original_method": "combined",
+    "original_reasoning": "Arabic denotes a fabric kind, and Greek 'made of palm fibre' preserves the material-textile domain clearly."
+  },
+  {
+    "pair_id": "GRC_0075",
+    "arabic_root": "حدرج",
+    "target_lemma": "χόνδρος",
+    "lang": "grc",
+    "original_score": 0.82,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "A rolled or twisted form directly supports the idea of a small rounded lump or mass."
+  },
+  {
+    "pair_id": "GRC_0076",
+    "arabic_root": "جلفه",
+    "target_lemma": "γλύφω",
+    "lang": "grc",
+    "original_score": 0.82,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic trimming/cutting and Greek carving/engraving align clearly in the domain of cutting-shaping a surface."
+  },
+  {
+    "pair_id": "GRC_0077",
+    "arabic_root": "دال",
+    "target_lemma": "δέλτα",
+    "lang": "grc",
+    "original_score": 0.82,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic دال (sneaking gait; to conceal/trick) connects to Greek Δέλτα via Phoenician Dāleth (door/guide). Clear graphemic-phonemic cognate pair Semitic D → Greek D (Δ)."
+  },
+  {
+    "pair_id": "GRC_0078",
+    "arabic_root": "دلل",
+    "target_lemma": "δέλτα",
+    "lang": "grc",
+    "original_score": 0.82,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic دلل (guide, evidence, to show the way) connects to Greek Δέλτα via Phoenician Dāleth (door/guide). Clear graphemic-phonemic cognate pair Semitic D → Greek D (Δ)."
+  },
+  {
+    "pair_id": "GRC_0079",
+    "arabic_root": "دخض",
+    "target_lemma": "διχοτομία",
+    "lang": "grc",
+    "original_score": 0.8,
+    "original_method": "combined",
+    "original_reasoning": "سلاح السباع is an instrument of splitting or tearing, close to dividing in two."
+  }
+]

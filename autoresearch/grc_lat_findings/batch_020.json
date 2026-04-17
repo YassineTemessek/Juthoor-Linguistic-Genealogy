@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0160",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الترفه (al-taraffuh) = luxury, comfort, ease, living well. Greek πολύτροφος = much-nourishing (πολύ 'much' + τρέφω 'nourish'). The Greek compound means 'that which nourishes greatly' or 'much-fed.' The connection luxury → nourishment requires: luxurious life → well-fed person → nourishing food — that is 3+ steps. Furthermore, Greek πολύτροφος describes a source of nourishment (e.g., a rich land), not a lifestyle. No direct path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic luxury/comfort and Greek much-nourishing are adjacent cultural concepts but not semantically direct enough for cognate status."
+  },
+  {
+    "pair_id": "GRC_0161",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حظر (hazara) = to enclose, fence off, prohibit, create a boundary/barrier. Greek ἀρχιζάκορος = chief temple-keeper, head sacristan (ἀρχι- 'chief' + ζάκορος 'temple servant'). The reasoning: enclosure → guarding sacred boundary → temple keeper. While conceptually adjacent, the path requires: barrier/enclosure → sacred boundary → keeper of sacred boundary → compound title for chief temple-servant — that is 3+ steps. No direct path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic enclosing/banning and Greek chief-temple-keeper are too many conceptual steps apart to constitute a cognate."
+  },
+  {
+    "pair_id": "GRC_0162",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحصر (al-hasr) = one who abstains from women, also restriction/constriction. Greek λέχεσι = beds, couches, marriage-beds (dative plural of λέχος). The reasoning: one who abstains from the marriage bed → the marriage bed itself is a negation cognate claim. But this is too indirect — Arabic encodes abstaining FROM the bed, not the bed itself. The consonant skeletons h-s-r vs l-kh-s don't align. No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Abstaining from marriage bed and the marriage bed itself are opposites without the crisp negation-cognate relationship needed."
+  },
+  {
+    "pair_id": "GRC_0163",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثقب (al-thaqb) = hole, perforation, boring through. Greek βελοθήκη = quiver, arrow-case (βέλος 'arrow' + θήκη 'case/container'). The reasoning: piercing → arrows. But Arabic names the perforation/hole itself, not a piercing instrument, and Greek names the container for arrows, not the arrows or piercing. The chain: hole/perforation → penetrating tool (arrow) → container for that tool (quiver) is 3+ steps. Greek βελοθήκη has transparent internal etymology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic perforation/hole and Greek arrow-quiver are separated by multiple steps; Greek compound has its own transparent etymology."
+  },
+  {
+    "pair_id": "GRC_0164",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خسم (khasama) = to seize, grasp; also: the tip/point of a spear, the nose. Root encodes pointed forward extension. Greek αἰχμάς = spearheads, spear-points (accusative plural of αἰχμή = spear-point, the tip of a weapon). Arabic spear-point/tip → Greek spear-point is a direct material culture match. Both name the forward-pointing weapon tip.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic spear-tip/point (khasm) and Greek spear-point (aikhme) share direct warrior-culture vocabulary for weapon tips."
+  },
+  {
+    "pair_id": "GRC_0165",
+    "finding": "path_found",
+    "semantic_journey": "Arabic قرضم (qardim) = a plant name resembling cardamom; closely related to Arabic هيل (cardamom family). Greek καρδάμωμον = cardamom (the spice). The Arabic root qrdm is a variant name for the cardamom plant or similar spice. The word 'cardamom' itself travels from a South Asian language through Semitic trade routes into Greek. This is a material culture spice-trade transmission — the plant traveled with its name.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Cardamom spice traveled the ancient trade routes with its Semitic name, preserved in both Arabic qardim and Greek kardamomon."
+  },
+  {
+    "pair_id": "GRC_0166",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السرندي (al-sarandi) = unclear; if from root سرد (sarada) = to string together, narrate in sequence. Greek λαλιστέραιν = more talkative (comparative of λάλος 'talkative'). The connection 'ordered narration → talkative' requires: stringing stories together → speaking much → more talkative. This is 2-3 steps, and the Arabic root is speculative. The Greek λαλιστέραιν is a straightforward comparative of a common Greek word for talkativeness with no Semitic etymology needed.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic sequential narration and Greek talkativeness are conceptually adjacent but not semantically direct enough for a cognate claim."
+  },
+  {
+    "pair_id": "GRC_0167",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الخطل (al-khatal) = disordered/abusive speech, babbling, foolish talk. Greek ἐλέχθητε = you were said/spoken (aorist passive of λέγω). The Greek verb simply means 'to say/speak' with no connotation of disorder. Arabic disordered speech → Greek neutral speech verb is a case where the Arabic's negative quality (disordered) is stripped away, leaving only the generic speaking concept. That is not a valid semantic drift — you cannot lose a core semantic component and call it preserved.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic disordered/abusive speech compared to a neutral Greek speaking verb strips the core meaning; no valid semantic path."
+  }
+]

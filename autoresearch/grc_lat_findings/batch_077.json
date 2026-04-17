@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0616",
+    "finding": "no_path",
+    "semantic_journey": "Arabic haratha = to plow, till land. Greek akhurotheke = chaff-holder container (akhuron=chaff + theke=container). Both agricultural, but plowing (soil-breaking action) and chaff-storage (containing byproduct) are different nodes in the agricultural domain with no semantic derivation path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Plowing soil and storing chaff are both agricultural but occupy distinct semantic positions; shared domain does not make cognates."
+  },
+  {
+    "pair_id": "GRC_0617",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hatama = to break, shatter dry things. Greek khomaton = of earthen mounds/embankments. Shattering produces fragments; mounding requires accumulation. These are opposite processes. No valid 2-step path connects breaking to mounding.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Shattering (producing fragments) and mounding (accumulating earth) are opposite processes with no semantic connection."
+  },
+  {
+    "pair_id": "GRC_0618",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shafatahu relates to observing/surveying (eye domain). Greek safestata = most clearly, most plainly (superlative of saphes). Even if watching connects to seeing clearly, Greek saphes encodes conceptual clarity/plainness of speech or appearance, not the act of watching. Too loose a 2-step chain.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic observing/watching and Greek most-clearly do not share a 2-step semantic path; the original reasoning was too vague."
+  },
+  {
+    "pair_id": "GRC_0619",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-shakm includes handles of a cooking pot. Greek glossokomeon = a chest/box (originally for mouthpieces of musical instruments, later a money-box or case). A pot handle and a specialized storage chest are both objects but share no semantic derivation. The Greek compound is morphologically transparent (glossa=tongue/mouthpiece + komeo=to tend).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A pot handle and a specialized storage chest share only broad object-category; no semantic descent path exists."
+  },
+  {
+    "pair_id": "GRC_0620",
+    "finding": "no_path",
+    "semantic_journey": "Arabic rashaha = to prepare, qualify, be a candidate (rashih = candidate). Greek proskhore = to go toward, approach. Being a qualified candidate (social status) is not a motion event. Greek proskhore encodes physical or metaphorical movement; Arabic encodes social preparatory state. No valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Being a prepared candidate (social qualification) and approaching/moving toward something (motion) are distinct semantic categories."
+  },
+  {
+    "pair_id": "GRC_0621",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-ar'an = a fortress or royal place. Greek Lerne = Lerna, a mythological Greek place famous for the Lernaean Hydra. No documented Semitic substrate etymology for Lerna. Proper name; the reasoning offers no phonetic skeleton correspondence that would justify a substrate connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Lerna is a well-attested Greek mythological site with no documented Semitic substrate etymology; proper name exclusion applies."
+  },
+  {
+    "pair_id": "GRC_0622",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ramtahu = to fault, blame, reproach someone. Greek oduroimetha = we would lament/bewail. Blaming (active accusatory act directed outward) and lamenting (passive inward grief expression) are different emotional acts even if both appear in grief contexts. No valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Reproaching/blaming (active accusation) and lamenting/grieving (passive suffering) are distinct emotional acts with no semantic derivation."
+  },
+  {
+    "pair_id": "GRC_0623",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dhaha = to inflate a container, blow up. Greek ekdokhai = receivings, receptions (from ekdokhe = expectation, handing-over, reception). Inflating something and receiving/accepting something are conceptually unrelated. No 2-step path connects air-filling to social-transfer acceptance.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Inflating a container (air-filling) and receiving/accepting (social transfer) share no plausible semantic path."
+  }
+]

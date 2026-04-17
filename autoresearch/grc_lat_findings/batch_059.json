@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0472",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البوت = a type of tree (obscure tree name). Greek βόλβιτον = cow/animal dung (bovine manure). The original reasoning claims Greek βόλβιτον refers to a bulb/plant growth, but βόλβιτον actually means COW DUNG (from βοῦς = ox). The original reasoner confused βόλβιτον with βολβός (bulb). An obscure Arabic tree name and Greek cow-dung are unrelated.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "The original reasoning misidentified βόλβιτον (cow dung) as a plant term; Arabic tree and Greek cow-dung are entirely unrelated."
+  },
+  {
+    "pair_id": "GRC_0473",
+    "finding": "no_path",
+    "semantic_journey": "Duplicate of GRC_0464 (same Arabic root الصرح vs Greek ὁλοσηρικαί, a different inflection of the same compound). Same analysis: Arabic pure/lofty and Greek wholly-silken are in different domains. False positive.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Duplicate of GRC_0464: Arabic plain/pure and Greek wholly-silken are unrelated domains."
+  },
+  {
+    "pair_id": "GRC_0474",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الاجز = bending, sinking (as onto a cushion/support); becoming slack or drooping under weight. Greek λαγγάζω = to become slack, languid, to droop (to go slack). Both directly encode GOING SLACK/DROOPING: Arabic = the sinking/bending onto support; Greek = the slackening/drooping quality. A near-direct preservation of the slack-drooping concept.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sinking/drooping (الاجز) and Greek going slack/languid (λαγγάζω) directly share the concept of slackening downward."
+  },
+  {
+    "pair_id": "GRC_0475",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العمرس = strong, harsh, fierce (of character — strong harshness). Greek τολμηρός = bold, daring, reckless (from τολμάω = to dare). The original reasoning maps strong harshness to boldness/daring. But harshness (aggressive roughness directed outward) and boldness (willingness to face risk) are different character traits. Harsh -> bold requires: harsh to others -> confrontational -> willing to face confrontation -> daring. 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic strong harshness and Greek boldness/daring are different character traits requiring 3+ drift steps."
+  },
+  {
+    "pair_id": "GRC_0476",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خزي = shame, disgrace, humiliation (the inner state of being shamed/disgraced). Greek ἀκαχίζω = to grieve, distress, cause pain (inner emotional suffering). Both encode INNER DISTRESS FROM SOCIAL FAILURE: Arabic = shame/disgrace (the specific social pain of being humiliated); Greek = grief/pain (inner emotional suffering more generally). The step: shame/disgrace (specific painful inner state) -> grief/inner pain (generalized suffering). A 1-step generalization.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic shame/disgrace (خزي) and Greek grief/inner-pain (ἀκαχίζω) share the core of painful inner distress — specific shame generalizing to inner pain."
+  },
+  {
+    "pair_id": "GRC_0477",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الاعفث = exposure, being left uncovered/exposed (an exposed/uncovered state). Greek λέλειφθε = you have been left (perfect passive of λείπω = to leave, abandon). The original reasoning maps exposure/uncovered to being left. But being uncovered/exposed and being abandoned/left behind are different: one is about physical covering, the other about social/physical abandonment. The path uncovered -> left/abandoned requires: physically exposed -> nobody covered it -> nobody cared for it -> abandoned. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical exposure/uncoveredness and Greek being-left/abandoned are different states requiring 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0478",
+    "finding": "no_path",
+    "semantic_journey": "Arabic شطاه = related to being struck/diminished/afflicted (as per the gloss رزأناه). Greek ἀάσθητε = you were harmed/blinded (aorist passive of ἀάω = to harm, blind, infatuate). Both involve being harmed/afflicted. But Arabic strike/diminishment and Greek harm/blinding-infatuation are in different domains: one is physical reduction; Greek ἀάω specifically means to be blinded/infatuated by a god (divine harm/delusion). These are different types of harm.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic physical striking/diminishing and Greek divine blinding/infatuation (ἀάω) are different types of harm in different domains."
+  },
+  {
+    "pair_id": "GRC_0479",
+    "finding": "path_found",
+    "semantic_journey": "Arabic السمت = proper speech, invoking God with correct formula; also bearing/manner/proper comportment. Greek ἵλασμα = propitiation, atonement, a sacrifice that appeases/conciliates. Both encode RITUAL PROPER ORDERING for divine appeasement: Arabic = proper invocation/comportment before God (right conduct in speech and manner); Greek = the propitiatory sacrifice (the ritual act that appease the divine). A 1-step path: proper ritual speech/conduct -> the sacrificial act that achieves propitiation.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic proper ritual speech/comportment before God (السمت) and Greek propitiatory sacrifice (ἵλασμα) share the core of ritual right-ordering for divine appeasement."
+  }
+]

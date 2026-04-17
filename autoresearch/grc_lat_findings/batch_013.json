@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0104",
+    "finding": "path_found",
+    "semantic_journey": "Arabic hanak = to be seasoned/experienced, to have achieved mastery (al-istihkam = consolidation/firmness; hanak = matured/seasoned by experience). Greek ankhonoos = quick-witted, sharp-minded, ready of wit (from ankhi = near + nous = mind). The semantic journey: seasoned mastery through experience -> mental sharpness/readiness. Experienced/seasoned understanding -> quick-witted alertness. Two steps: firm established mastery -> mental competence -> ready wit. Borderline 2-step rule.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic seasoned mastery (hanak) and Greek quick-witted (ankhonoos) - 2-step connection via established mental competence, low confidence."
+  },
+  {
+    "pair_id": "GRC_0105",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-hawz = taking in possession, encompassing (the root h-w-z = to take/hold). The gloss includes cutting into hearts. Greek lonkhiazo = to transfix with a spear (pierce with a weapon). The original reasoning: cutting into hearts -> piercing. However, al-hawz primarily means encompassing/taking possession - the cutting-into-hearts gloss is a metaphorical secondary usage. The chain possession -> piercing with a spear requires more than 2 steps. No real direct path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic encompassing/taking possession (al-hawz) does not reach Greek spear-piercing - secondary metaphorical gloss over-interpreted."
+  },
+  {
+    "pair_id": "GRC_0106",
+    "finding": "path_found",
+    "semantic_journey": "Arabic namus (from na-m-s, related to Greek nomos) = law, divine law, divine order (also used for the angel Gabriel as the law-bringer). Greek Nemesis = the goddess of divine retribution/divine justice (from nemein = to distribute justly). Both encode divine law/order: Arabic namus = divine law; Greek Nemesis = the enforcer of divine order/retribution. The semantic core: divine ordering principle -> divine justice/retribution. One clear step: divine law -> retribution for violating divine law.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic divine law/order (namus) and Greek divine retribution goddess (Nemesis) share the divine-ordering-justice concept."
+  },
+  {
+    "pair_id": "GRC_0107",
+    "finding": "no_path",
+    "semantic_journey": "Arabic Nisan = the month Nisan (the first/seventh month in different calendar systems, a Semitic month name). Greek Nisa = a place name (Nisa was a mountain or city in various Greek sources). A Semitic month name and a Greek place name are different categories. While the Semitic month name Nisan traveled with calendar knowledge, the Greek place Nisa is a different entity. Proper names from different categories (month vs place) with coincidental phonetic resemblance.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Semitic month name Nisan and Greek place name Nisa are different proper-name categories - coincidental phonetic resemblance."
+  },
+  {
+    "pair_id": "GRC_0108",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-aql = reason/intelligence/the mind (the core Semitic concept of rational capacity). Greek kalkulathor = accountant, calculator (from Latin calculare = to calculate, from calculus = pebble used for counting). Arabic reason/intelligence and Greek accountant are in the same broad cognitive domain but: the Greek word is a Latin loanword (calculare/calculator) in late Greek. Greek received this from Latin, not from Arabic. Arabic al-aql is a native Semitic root for reason; Greek kalkulathor is a Latin technical term. Different origins despite superficial semantic overlap.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic rational intelligence (al-aql) and Greek accountant (kalkulathor from Latin) are different origins - Greek term is Latin loanword."
+  },
+  {
+    "pair_id": "GRC_0109",
+    "finding": "no_path",
+    "semantic_journey": "Arabic malakata = he owned/ruled. Greek Malkhos = Malchus (a Semitic personal name meaning king from root m-l-k). Malchus is a Semitic proper personal name (from m-l-k = king) that entered Greek as a borrowed proper name. This is a Semitic proper name that Greek received as-is. Proper name - excluded by methodology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Malkhos is a Semitic proper name (from mlk = king) borrowed into Greek - proper name, excluded by methodology."
+  },
+  {
+    "pair_id": "GRC_0110",
+    "finding": "path_found",
+    "semantic_journey": "Arabic safala = to be low/downward, to fall below (the root s-f-l = low/downward). Greek sphallo = to make fall, to overthrow, to trip up, to cause to stumble. Both encode the downward falling motion. Arabic: the state of being low/going downward; Greek: the action of causing something to fall/topple. One step: being/going downward -> causing to fall down. Genuine semantic connection in the fall/descent domain.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic being-low/falling-down (safala) and Greek toppling/overthrowing (sphallo) share the downward-fall concept."
+  },
+  {
+    "pair_id": "GRC_0111",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-bashar = human beings/skin/good news/joyful tidings (multiple meanings of the root b-sh-r). Greek larbason = antimony/kohl (a cosmetic used for eye-darkening and beautification). The original reasoning: Arabic beauty sense -> Greek antimony for beauty. But Arabic al-bashar primarily means humans/people, not cosmetic beauty. The specific meaning of antimony/kohl is too specialized and the Arabic root does not encode cosmetics. No real path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic humans/skin/good news (al-bashar) does not connect to Greek antimony/kohl (larbason) - root meaning mismatch."
+  }
+]

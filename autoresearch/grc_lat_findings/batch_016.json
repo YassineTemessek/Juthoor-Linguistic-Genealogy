@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0128",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رصخ (rasikha) = became firm, fixed, settled solidly. Greek ἀραρίσκω = to fit together, fasten, join. Both encode the concept of securing/fixing — Arabic emphasizes the result state (solid/firm), Greek the action (join firmly). Fixation → fastening is a direct 1-step drift.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic becoming-firm and Greek fastening-together share the core of solid fixation."
+  },
+  {
+    "pair_id": "GRC_0129",
+    "finding": "no_path",
+    "semantic_journey": "Λάζαρος is the Greek transliteration of the Hebrew personal name אֶלְעָזָר (Eleazar = 'God has helped'). Arabic الازر contains the name Lazarus only as a borrowing from Hebrew/Aramaic through Christian texts. This is a proper name shared via religious textual transmission, not a linguistic cognate. Excluded per proper-name rule.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Lazarus is a Hebrew personal name (Eleazar) transmitted through Semitic religious texts, not an Arabic-Greek cognate."
+  },
+  {
+    "pair_id": "GRC_0130",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رسف (rasafa) = to walk in shackles/fetters, to bind the feet. Greek περισφύριον = anklet, bracelet worn around the ankle (from περί 'around' + σφυρόν 'ankle'). The Arabic root encodes ankle-binding motion; the Greek word names the object that binds the ankle. Action of fettering → the fetter ornament is a clear 1-step specialization.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic ankle-binding action specialized into the Greek word for an ankle ornament/anklet."
+  },
+  {
+    "pair_id": "GRC_0131",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الطسق (al-tasq) = a measure, tax, tribute paid in kind. Greek καλαθίσκος = small basket, small wicker container. The link rests only on 'container-ness' — both are vessel-like objects. But a tax measure and a small decorative basket are functionally very different, and the consonant skeletons t-s-q vs k-l-th-sk have no credible merger path. No real semantic connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Tax measure and small basket share only the generic category of container; no specific semantic path exists."
+  },
+  {
+    "pair_id": "GRC_0132",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ذاقه (dhaqahu) / root ذوق = to taste, to take a sample of, to experience/handle. Greek δέχεται = he receives, takes. The semantic connection: tasting involves taking a portion; receiving involves taking. Arabic taking-a-taste → Greek receiving/taking is a plausible 1-step generalization from specific (taste-sampling) to general (receive/take).",
+    "journey_type": "generalization",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sampling/tasting generalizes into Greek receiving — both involve the act of taking in."
+  },
+  {
+    "pair_id": "GRC_0133",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفن (al-fann) = a type, kind, sort; variety of expression. Greek πολυφωνία = polyphony, variety of tones/voices. While both involve variety, the Arabic word is generic (any kind) and the Greek is specifically about vocal/musical multiplicity. Furthermore, the Arabic فن may itself be borrowed from Greek or used in different contexts. The consonant skeletons f-n vs p-l-ph-n don't match well. Superficial semantic similarity, no clear cognate path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Generic Arabic variety (fann) and specific Greek vocal multiplicity (polyphonia) share a surface category but no direct semantic path."
+  },
+  {
+    "pair_id": "GRC_0134",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ساكاه (sakahu) = to press, constrict, confine someone. Greek ἐσχήκει = he had held/possessed (perfect of ἔχω). The semantic gap is large: Arabic pressing/constraining vs Greek having/possessing. While possession implies some degree of control, pressing someone and having/holding something are conceptually distinct actions requiring multiple drift steps. No direct path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic pressing/constraining and Greek having/holding are distinct enough that no clean 2-step path exists."
+  },
+  {
+    "pair_id": "GRC_0135",
+    "finding": "path_found",
+    "semantic_journey": "Arabic رفي (rafa) = to patch, repair a garment; to stitch covering material. Greek ἐρέφω = to cover with a roof, to roof over. Both encode the same conceptual act: applying material to cover and protect. Arabic covering/patching garments → Greek covering buildings with a roof is a direct 1-step parallel of the same protective-covering action at different scales.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic patching/covering garments and Greek roofing/covering buildings share a core covering-action semantic."
+  }
+]

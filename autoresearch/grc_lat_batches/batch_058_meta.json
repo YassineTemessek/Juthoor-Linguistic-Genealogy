@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0464",
+    "arabic_root": "الصرح",
+    "target_lemma": "ὁλοσειρικός",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic purity/plain explicitness plausibly aligns with Greek 'made wholly of silk' as a refined unmixed quality."
+  },
+  {
+    "pair_id": "GRC_0465",
+    "arabic_root": "الثرب",
+    "target_lemma": "λουτροφορέω",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Greek is carrying bath-water, while the Arabic gloss names a well; the direct water-source to water-carrying path is plausible."
+  },
+  {
+    "pair_id": "GRC_0466",
+    "arabic_root": "العضر",
+    "target_lemma": "λοίδορα",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "ʿaḍara includes reporting or blurting out a word; Greek loídora is abusive speech, a plausible specialization from utterance into verbal attack."
+  },
+  {
+    "pair_id": "GRC_0467",
+    "arabic_root": "جمخ",
+    "target_lemma": "λογομαχέω",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic boastful confrontation can drift into verbal fighting, so the quarrel sense is plausible though not direct."
+  },
+  {
+    "pair_id": "GRC_0468",
+    "arabic_root": "الشكز",
+    "target_lemma": "καλέεσκον",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Greek means repeated calling, and the Arabic gloss includes addressing or talking to a woman; both preserve an active speech-approach core."
+  },
+  {
+    "pair_id": "GRC_0469",
+    "arabic_root": "الحصلب",
+    "target_lemma": "πολλαχόσε",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Dust conceptually spreads into many parts, giving a plausible abstract bridge."
+  },
+  {
+    "pair_id": "GRC_0470",
+    "arabic_root": "العشوف",
+    "target_lemma": "βλάσφημος",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic أقذره points to defilement or foulness, which plausibly drifts to ill-omened or profaning speech."
+  },
+  {
+    "pair_id": "GRC_0471",
+    "arabic_root": "الاصر",
+    "target_lemma": "λυσέρωσι",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Arabic root points to binding and fastening, Greek λυ- carries loosening/releasing; the pair preserves both sides of the same conceptual axis."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0672",
+    "arabic_root": "العنتل",
+    "target_lemma": "ἀνείλοντο",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic 'anatil = hyenas that tear prey to pieces; also 'hard, severe'. Greek aneilonto = 3pl aor middle of anaireo 'they took up, killed, destroyed'. The 'taking-by-tearing/killing' link is direct in the destructive-action field. Strong link."
+  },
+  {
+    "pair_id": "GRC_0673",
+    "arabic_root": "الانف",
+    "target_lemma": "φλήναφος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الأنف=أعرض عن الحق (turned away from truth) / يتتبع أنفه (follows his nose = arrogant). φλήναφος=idle talk, nonsense. Arrogant disregard for truth and speaking nonsense share the domain of rejecting truth/substance, though from different angles."
+  },
+  {
+    "pair_id": "GRC_0674",
+    "arabic_root": "ختوب",
+    "target_lemma": "ὄχθοιβος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "ختربه 'cut it up' gives an action, and ὄχθοιβος is a stripe on a tunic, plausibly the cut result."
+  },
+  {
+    "pair_id": "GRC_0675",
+    "arabic_root": "البينيث",
+    "target_lemma": "πολυβενθέος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "البينيث = سمك بحري = a sea fish. πολυβενθής = very deep (of sea). A sea fish lives in the βένθος (depth). The Arabic names the creature; the Greek describes its habitat. The deep-sea semantic field is shared directly. Fish belong to depth; depth hosts fish."
+  },
+  {
+    "pair_id": "GRC_0676",
+    "arabic_root": "الطس",
+    "target_lemma": "τελευτῆς",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "طسّ = ذهب (went away, disappeared); also غطّسه في الماء = submerged him in water. τελευτή = end, death, completion. Disappearing/going away is semantically close to ending/death. Both express cessation of presence. The drift from 'vanishing' to 'death/end' is natural and well-attested."
+  },
+  {
+    "pair_id": "GRC_0677",
+    "arabic_root": "دقه",
+    "target_lemma": "ἄνδιχα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic also refers to what is used for pounding, so a split/asunder result is a plausible action-to-result development."
+  },
+  {
+    "pair_id": "GRC_0678",
+    "arabic_root": "السخب",
+    "target_lemma": "λέσχη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "السخب is noisy clamor, and λέσχη includes talk or gossip, so both converge on loud social speech."
+  },
+  {
+    "pair_id": "GRC_0679",
+    "arabic_root": "برد",
+    "target_lemma": "βέρεδος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "barid=posthorse/postal system vs veredus=posthorse; same semantic meaning, Arabic loaned from Greek/Latin"
+  }
+]

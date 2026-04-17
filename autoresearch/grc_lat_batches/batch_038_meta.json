@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0304",
+    "arabic_root": "التعس",
+    "target_lemma": "τελευτῆς",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "التعس: تعس=stumble, fall, perish (opposite of نعش=rise). τελευτή=end, death, completion. التعس as ruin/downfall maps strongly to τελευτή as death/end. Both describe the terminal negative outcome of a life or endeavor."
+  },
+  {
+    "pair_id": "GRC_0305",
+    "arabic_root": "ارجا",
+    "target_lemma": "εἴργω",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "أرجأ الأمر = أخّره (deferred, delayed, held back a matter). المرجئة = those who defer/postpone judgment. εἴργω = to shut in, keep back, confine, restrain. Both verbs express restraint and holding back — أرجأ holds back action/decision, εἴργω holds back movement/access. The semantic core of 'preventing forward progress' is directly and strongly shared. Phonetically r-j/g-ʔ maps plausibly to (e)r-g-ō."
+  },
+  {
+    "pair_id": "GRC_0306",
+    "arabic_root": "نءمس",
+    "target_lemma": "νομίσαντες",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ناموس=law; νομίσαντες=those considering lawful. From νόμος=law. Strong conceptual link"
+  },
+  {
+    "pair_id": "GRC_0307",
+    "arabic_root": "شرع",
+    "target_lemma": "ΣΡΑ",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic root includes law/path/watering place and specifically 'سن'; Greek abbreviation stands for savior. By deep concept, divine law and salvation can form two sides of sacred guidance, though not a direct gloss match."
+  },
+  {
+    "pair_id": "GRC_0308",
+    "arabic_root": "خوم",
+    "target_lemma": "ἐκχυμόω",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "خامة is fresh juicy growth, and ἐκχυμόω is to extract juice; the shared core of moist vegetal sap is clear."
+  },
+  {
+    "pair_id": "GRC_0309",
+    "arabic_root": "ملج",
+    "target_lemma": "μάλαγμα",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ملج=to suckle/soften; μάλαγμα=emollient/softening poultice. Semantic overlap via softening"
+  },
+  {
+    "pair_id": "GRC_0310",
+    "arabic_root": "خنط",
+    "target_lemma": "ἠνείχοντο",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "ἠνείχοντο carries holding up or enduring, which aligns better with خنط as distress or burden borne."
+  },
+  {
+    "pair_id": "GRC_0311",
+    "arabic_root": "العقرب",
+    "target_lemma": "ἀλωπέκουρος",
+    "lang": "grc",
+    "original_score": 0.65,
+    "original_method": "combined",
+    "original_reasoning": "Scorpion to beardgrass is a plausible shape-drift: spiky barbed form in animal and plant alike."
+  }
+]

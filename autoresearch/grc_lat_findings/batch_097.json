@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0776",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-dhart = farting, offensive bodily emission. Greek loidora = insults, verbal abuse. Both offensive but from different organs and different domains: bodily gas vs verbal abuse. Crosses domain boundary. Too speculative.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic flatulence (bodily emission) and Greek verbal insults are entirely different domains; the offensive-emission metaphor is too weak."
+  },
+  {
+    "pair_id": "GRC_0777",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-fawgh = mouth-related defect or openness. Greek polyphagos = gluttonous (polu+phagein). Mouth-defect and excessive-eating are both mouth-related but categorically different: structural defect vs behavioral excess.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic mouth-openness/defect and Greek excessive-eating are both mouth-related but in different categories (structural vs behavioral)."
+  },
+  {
+    "pair_id": "GRC_0778",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-shamaz = to speak with gentle words to soothe someone, gentle movement without violence. Greek hilasma = propitiation, atonement (from hilaskomai = to appease). Core: gentle verbal appeasement. 1-step drift: gentle-soothing-speech -> formal-appeasement-act.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic gentle-soothing speech and Greek propitiation/appeasement share words/acts aimed at calming and restoring favor."
+  },
+  {
+    "pair_id": "GRC_0779",
+    "finding": "no_path",
+    "semantic_journey": "Arabic danu = a worthless fragment, cast-off, negligible. Greek -idion = a Greek diminutive grammatical suffix. A content word meaning worthless-fragment and a grammatical morpheme are fundamentally different categories and cannot form a cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A content word meaning worthless-fragment and a grammatical diminutive suffix are fundamentally different categories."
+  },
+  {
+    "pair_id": "GRC_0780",
+    "finding": "no_path",
+    "semantic_journey": "Arabic radasa = to drop a stone to gauge depth. Greek rizais = dative plural of rhiza = tree roots. Depth-plumbing-stone and tree-roots require 3+ steps: depth-plumb -> bottom -> below-surface -> root. Different domains.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic depth-plumbing stone and Greek plant roots require 3+ steps to connect across different domains."
+  },
+  {
+    "pair_id": "GRC_0781",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-itawa = tribute, tax imposed on subjects (al-kharaj). Greek Heilotes = Helots, Spartan serfs who paid forced dues. Core: forced extraction of wealth from subordinates. 1-step material-culture: tribute-system -> the-tribute-paying-class.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic al-itawa (tribute/tax) and Greek Helots (serfs paying forced dues) share forced economic extraction from subordinates."
+  },
+  {
+    "pair_id": "GRC_0782",
+    "finding": "no_path",
+    "semantic_journey": "Arabic sataha = to have intercourse with (erotic domain). Greek stethea = chests, breasts (upper torso anatomy). Both body-related but different anatomical and functional domains. Getting from intercourse to chest-area requires 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic intercourse and Greek chest/breasts are both body-related but in different anatomical domains requiring 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0783",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qazw = to play with something, poke at the ground. Greek laikaze = to perform the sexual act (vulgar). Playing-with/poking and a specific sexual act verb require 3 steps minimum: playful-poking -> erotic-play -> specific-sexual-act.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic playful-poking and Greek specific-sexual-act are in different categories; the erotic-play bridge requires 3+ steps."
+  }
+]

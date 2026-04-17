@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0184",
+    "arabic_root": "قصر",
+    "target_lemma": "Καίσαρι",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qasr = 'palace, castle, court' (derived via Aramaic from Latin castrum, same root as Caesar); Greek = 'Caesar'. Plausible Mediterranean etymological connection via the Roman loanword."
+  },
+  {
+    "pair_id": "GRC_0185",
+    "arabic_root": "نبت",
+    "target_lemma": "Ναβαταῖος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "نبت=to grow/sprout; Ναβαταῖος=Nabataean (people name from Semitic root). Strong Semitic cognate via ethnonym"
+  },
+  {
+    "pair_id": "GRC_0186",
+    "arabic_root": "خظظ",
+    "target_lemma": "χάζετο",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic استرخى بطنه centers on slackening or giving way, closely matching Greek gave way or retreated."
+  },
+  {
+    "pair_id": "GRC_0187",
+    "arabic_root": "خصص",
+    "target_lemma": "σχήσουσα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic خص has the core of assigning specially or making something one's own, close to Greek have/hold."
+  },
+  {
+    "pair_id": "GRC_0188",
+    "arabic_root": "الكون",
+    "target_lemma": "ἑλίκοιν",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic folding and Greek helix both preserve a turning, bending, or coiling conceptual core."
+  },
+  {
+    "pair_id": "GRC_0189",
+    "arabic_root": "برذون",
+    "target_lemma": "βουρδών",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "birdhaun=packhorse/mule vs bourdon=mule; same meaning, Arabic borrowed from Greek (via Byzantine)"
+  },
+  {
+    "pair_id": "GRC_0190",
+    "arabic_root": "حيض",
+    "target_lemma": "χυδαῖος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic gloss centers on continued blood flow beyond its normal days; Greek gloss centers on copious pouring. The chain through abundant flowing is clear."
+  },
+  {
+    "pair_id": "GRC_0191",
+    "arabic_root": "الفوز",
+    "target_lemma": "εἰλήφατε",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic أفازه = caused him to attain, and Greek = you have taken/received. This is a clear attainment/acquisition chain."
+  }
+]

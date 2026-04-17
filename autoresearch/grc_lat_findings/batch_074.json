@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0592",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البرنس = a tall hooded garment (a long cloak with a hood — specific clothing item). Greek Βορινός = an ancient city name (located between Beirut and Sidon in Phoenicia). Βορινός is a proper place name. Per methodology, proper names are excluded. Even analytically: a hood-garment name and a city name are categorically incomparable. The original reasoning that 'the garment may derive from Phoenician-style covering' is speculation with no evidential basis.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Βορινός is a proper place name (ancient Phoenician city) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0593",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثرم = the breaking of a tooth at its root, removal of a front tooth (dental fracture at the base). Greek Θέρμη = Therma (proper place name, ancient city in Macedonia known for hot springs). Θέρμη is a proper place name. Per methodology, proper names are excluded. Even analytically: a dental root-fracture and a hot-springs city name are categorically incomparable — tooth-breaking and hot-springs belong to entirely different domains.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Θέρμη is a proper place name (ancient Macedonian city) — proper names are excluded; also tooth-fracture and hot-springs have no semantic path."
+  },
+  {
+    "pair_id": "GRC_0594",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الجفر = (1) a young fattened sheep; (2) an unlined well (a wide shallow pit). Greek Γάφαρα = a proper place name (a city in Transjordan/Peraea). Γάφαρα is a proper place name. Per methodology, proper names are excluded. Even analytically: both a young sheep and an unlined well share the j-f-r skeleton with a toponym — but toponyms are named for many reasons and this is coincidental consonant overlap.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Γάφαρα is a proper place name — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0595",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الجنث = origin, root, primal source (الجنث = الأصل = the origin/root of a thing). Greek γενηθείς = having been born, having been generated, brought into being (aorist passive participle of γίγνομαι = to be born, become, come into being). Both encode ORIGIN/COMING-INTO-BEING: Arabic = the root/origin (the source from which something came); Greek = having been generated/born (the act of coming from that origin). A 1-step action-to-source relationship: having-been-born (Greek) -> the origin from which one comes (Arabic). The concept of primal source and its generation are directly linked.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic origin/root/primal source (الجنث) and Greek having-been-born/generated (γενηθείς) share the origin/coming-into-being concept."
+  },
+  {
+    "pair_id": "GRC_0596",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الحذن = الحذنتان = the two buttocks (also: labia; also: a small-eared animal; also: waistband). Greek χόδανος = buttocks (specifically the buttock/rump area). This is a near-direct anatomical match. Arabic الحذنتان explicitly designates the two buttocks, and Greek χόδανος designates the buttocks. Both encode the same specific body part — the posterior/buttock anatomy. The dual form Arabic الحذنتان directly corresponds to the Greek anatomical term for the same region.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic الحذنتان (the two buttocks) and Greek χόδανος (buttocks) directly name the same anatomical region — a confirmed anatomical term cognate."
+  },
+  {
+    "pair_id": "GRC_0597",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحرسم = poison, venom, death (also: a corner). Greek Χοράσμιοι = the Chorasmians (a proper ethnic/tribal name for the people of Chorasmia in Central Asia). Χοράσμιοι is a proper ethnic name. Per methodology, proper names including ethnic/tribal designations are excluded. Even analytically: an Arabic poison/death term and a specific Central Asian tribal name cannot be connected — the 'famous warriors therefore deadly' reasoning is 3+ steps of speculation.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Greek Χοράσμιοι is a proper ethnic/tribal name (Chorasmians) — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0598",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الخفر = (1) intense modesty/shyness, bashfulness (restraining oneself from forward behavior); (2) to escort, guard, give protection (actively restraining danger from another). Greek ἐχέφρων = thoughtful, prudent, holding one's mind/wits (from ἔχω + φρήν = hold + mind). Both encode CONTROLLED RESTRAINT OF SELF: Arabic = restraining one's own behavior (modesty) OR restraining danger for another (guarding); Greek = holding one's mind in check (prudence/thoughtfulness). A 1-step direct path: restraint of self/behavior (Arabic modesty) -> holding-the-mind-in-check (Greek prudence). The self-restraint concept is directly preserved.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic modesty/self-restraint (الخفر) and Greek mind-holding/prudent (ἐχέφρων) share the core of controlled self-restraint — behavioral modesty and mental self-control."
+  },
+  {
+    "pair_id": "GRC_0599",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الشقف = pottery shards, broken earthenware (كسر الفخار = fragments of fired clay vessels). Greek σκάφη = a tub, basin, boat-shaped vessel (an earthenware or wooden container). Both encode EARTHENWARE VESSEL MATERIAL: Arabic = pottery/earthenware (the material and its fragments); Greek = a vessel made of earthenware or similar material (a specific vessel shape). A 1-step specialization: earthenware material (Arabic shards) -> a specific shaped earthenware vessel (Greek basin/tub). Both preserve the clay-vessel material domain.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic pottery shards/earthenware (الشقف) and Greek earthenware tub/basin (σκάφη) share the clay-vessel material domain."
+  }
+]

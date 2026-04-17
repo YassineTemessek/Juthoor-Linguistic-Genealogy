@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0000",
+    "arabic_root": "سميساط",
+    "target_lemma": "Σαμόσατα",
+    "lang": "grc",
+    "original_score": 0.98,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "This is the same place-name, Samosata/Samsat, with direct toponymic identity across Arabic and Greek."
+  },
+  {
+    "pair_id": "GRC_0001",
+    "arabic_root": "اصطبل",
+    "target_lemma": "στάβλον",
+    "lang": "grc",
+    "original_score": 0.98,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides point directly to the place where animals stand, a stable or horse-stall; the semantic identity is near-total."
+  },
+  {
+    "pair_id": "GRC_0002",
+    "arabic_root": "شمصر",
+    "target_lemma": "σαμψήρα",
+    "lang": "grc",
+    "original_score": 0.98,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Greek gloss explicitly says shamshir, matching the Arabic form directly as the same sword term."
+  },
+  {
+    "pair_id": "GRC_0003",
+    "arabic_root": "ساسم",
+    "target_lemma": "σήσαμον",
+    "lang": "grc",
+    "original_score": 0.98,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Direct lexical identity: Arabic root points to sesame and Greek gloss is sesame."
+  },
+  {
+    "pair_id": "GRC_0004",
+    "arabic_root": "الاصطفلين",
+    "target_lemma": "σταφυλῖνος",
+    "lang": "grc",
+    "original_score": 0.97,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الإصطفلين = carrot (direct borrowing). Greek σταφυλῖνος = carrot. Near-identical phonology and meaning; this is a direct loanword."
+  },
+  {
+    "pair_id": "GRC_0005",
+    "arabic_root": "البربط",
+    "target_lemma": "βάρβιτον",
+    "lang": "grc",
+    "original_score": 0.97,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic البربط: lute (direct loanword from Greek/Iranian). Greek βάρβιτον: lyre/lute. Direct borrowing, same instrument, near-identical phonology."
+  },
+  {
+    "pair_id": "GRC_0006",
+    "arabic_root": "المصطكا",
+    "target_lemma": "μαστίχη",
+    "lang": "grc",
+    "original_score": 0.97,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "mastic resin=mastic; confirmed direct loanword masadiq"
+  },
+  {
+    "pair_id": "GRC_0007",
+    "arabic_root": "اصطفلينه",
+    "target_lemma": "σταφυλῖνος",
+    "lang": "grc",
+    "original_score": 0.96,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الإصطفلينة is glossed as a Sham carrot-like plant, and Greek σταφυλῖνος is likewise a carrot or wild-carrot term; the plant meaning is essentially identical."
+  }
+]

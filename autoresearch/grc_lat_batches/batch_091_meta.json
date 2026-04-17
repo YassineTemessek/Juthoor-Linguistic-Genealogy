@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0728",
+    "arabic_root": "الكرتع",
+    "target_lemma": "ὀχλοκρατία",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Plausible disorder chain: meddling in what does not concern one overlaps with intrusive crowd-rule."
+  },
+  {
+    "pair_id": "GRC_0729",
+    "arabic_root": "شخم",
+    "target_lemma": "πάσχοιμι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Spoiling or turning foul is something undergone; Greek πάσχω 'suffer/undergo' fits the undergo-result side reasonably well."
+  },
+  {
+    "pair_id": "GRC_0730",
+    "arabic_root": "دفع",
+    "target_lemma": "δέφω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic push/drive/hasten can plausibly drift into pressing or working material; Greek 'soften, knead' is a moderate fit."
+  },
+  {
+    "pair_id": "GRC_0731",
+    "arabic_root": "الكتو",
+    "target_lemma": "τηλικαύται",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Plausible deep link: to rise above an enemy implies superiority or greatness, close to 'so great'."
+  },
+  {
+    "pair_id": "GRC_0732",
+    "arabic_root": "خرز",
+    "target_lemma": "διαχωρίζομαι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "As with διαχωρίζω, Arabic stringing and Greek self-separation fit opposite sides of one conceptual field: ordered joining versus splitting apart."
+  },
+  {
+    "pair_id": "GRC_0733",
+    "arabic_root": "كلته",
+    "target_lemma": "κάλαθος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Kalata - to gather/collect vs 'narrow-base basket' - shared gathering/container concept"
+  },
+  {
+    "pair_id": "GRC_0734",
+    "arabic_root": "الخوع",
+    "target_lemma": "Λάχεσις",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الخوع: قضى دينه = paid his debt, settled what was owed. Also التحيّر = bewilderment. Λάχεσις = 'the Allotter', one of three Fates who assigns each person's due portion. Both concepts center on what is owed/allotted — paying a debt is fulfilling one's allotted obligation. The semantic core of 'settling what is due' is genuinely shared."
+  },
+  {
+    "pair_id": "GRC_0735",
+    "arabic_root": "سفد",
+    "target_lemma": "σφαδάζω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic safd = the iron skewer for grilling meat; sifad = mating of male on female (mounting). Greek sphadazo = struggle convulsively, kick about. Both involve violent rhythmic bodily motion (mounting/struggling). Phonetic resemblance s-f-d/sph-d is direct. Strong combined link."
+  }
+]

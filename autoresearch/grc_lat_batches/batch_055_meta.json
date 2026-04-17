@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0440",
+    "arabic_root": "الجت",
+    "target_lemma": "εὐέλεγκτος",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "The Arabic gloss centers on testing and finding out by palpation, while εὐέλεγκτος means easy to test, prove, or refute; the core of examinability survives."
+  },
+  {
+    "pair_id": "GRC_0441",
+    "arabic_root": "التود",
+    "target_lemma": "Ἐλαιάτιδι",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الشجر and Greek olive/olive-land retain a direct tree/wooded referent with moderate phonetic drift."
+  },
+  {
+    "pair_id": "GRC_0442",
+    "arabic_root": "الجيتر",
+    "target_lemma": "ὀλιγοθερμία",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Shortness maps plausibly to little heat through the core idea of small degree."
+  },
+  {
+    "pair_id": "GRC_0443",
+    "arabic_root": "رتب",
+    "target_lemma": "ἀρτάβη",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Rank, upright arrangement, and ordered degree align plausibly with a standardized measure."
+  },
+  {
+    "pair_id": "GRC_0444",
+    "arabic_root": "الرس",
+    "target_lemma": "Λάρισα",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic centers on firmness, settledness, and stable positioning; Greek Larisa is often a citadel/fortified height, a place of firm standing."
+  },
+  {
+    "pair_id": "GRC_0445",
+    "arabic_root": "القاقاء",
+    "target_lemma": "λευκίσκος",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Greek names a pale/silvery fish, and Arabic is 'whiteness of eggs'; both converge on a white/light color notion."
+  },
+  {
+    "pair_id": "GRC_0446",
+    "arabic_root": "دحر",
+    "target_lemma": "διέρχεται",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic drive away or expel and Greek pass through share a motion-through or motion-away core."
+  },
+  {
+    "pair_id": "GRC_0447",
+    "arabic_root": "حندج",
+    "target_lemma": "χανδάνω",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Arabic evokes short dunes and interior hollows, while Greek is 'contain/comprise'; both converge on enclosure/interiority."
+  }
+]

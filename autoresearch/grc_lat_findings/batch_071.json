@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0568",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دمغ = to strike on the brain, to smash/split the skull (violent cleaving of the head). Greek διατμήγω = to cut apart, cleave, sever (from δια+τμήγω = through+cut/cleave). Both encode VIOLENT CLEAVING/SPLITTING: Arabic = the specific act of skull-splitting by a blow; Greek = the general action of cutting/cleaving apart. A 1-step generalization: skull-splitting blow (specific) -> cutting apart (general cleaving). The violent-splitting core is directly shared.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic skull-smashing/splitting (دمغ) and Greek cutting-apart/cleaving (διατμήγω) share the violent splitting core — specific skull-split and general cleavage."
+  },
+  {
+    "pair_id": "GRC_0569",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حدا = to drive forward, to urge on, to prod (actively moving others ahead). Greek χυδαῖος = common, vulgar, copious, poured-out (from χέω = to pour). The original reasoning maps driving forward to outward pouring. But driving/urging (directed propulsion of others) and being copious/poured-out (quantity/quality descriptor) are entirely different: one is an action on animate beings; the other is an abstract quality. This is the same χυδαῖος pair rejected at GRC_0492 (Arabic حوذ). False match.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic driving-forward (حدا) and Greek copious/vulgar (χυδαῖος) are different domains — urging motion and abstract quantity descriptor are not cognate."
+  },
+  {
+    "pair_id": "GRC_0570",
+    "finding": "path_found",
+    "semantic_journey": "Arabic السحل = (1) a long white linen garment; (2) the tongue (because it is long and smooth); (3) eloquent/smooth speech. Greek λέσχη = a place for conversation, idle talk, gossip, chat (from leskha = a lounging place for talk). Both preserve the TONGUE/SPEECH domain: Arabic root covers both the tongue (the organ) and smooth eloquent speech; Greek = the social practice of speech/gossip. A 1-step action-to-venue: eloquent-speaking (Arabic) -> a place/practice of talk (Greek). The speech concept connects.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic smooth tongue/eloquent speech (السحل) and Greek place-of-talk/gossip (λέσχη) share the speech domain — tongue and its social practice."
+  },
+  {
+    "pair_id": "GRC_0571",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خمش = to scratch, claw, leave sharp marks (sharp pointed contact producing marks on a surface). Greek αἰχμάς = accusative plural of αἰχμή = spear-point, sharp tip, lance-point. Both encode SHARP POINTED CONTACT: Arabic = the scratching/clawing with a sharp implement producing marks; Greek = the pointed tip of a weapon that produces piercing contact. A 1-step specialization: sharp-pointed-marking-action (general scratching) -> the sharp point of a weapon (specific piercing tool). The sharp-pierce core is shared.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic scratching/clawing with sharp marks (خمش) and Greek spear-point/sharp tip (αἰχμάς) share the sharp-pointed-contact core."
+  },
+  {
+    "pair_id": "GRC_0572",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دحض = to nullify, refute, make void an argument; also to slip/slide (to displace from its position). Greek ἄνδιχα = apart, asunder, in two (spatial separation). The original reasoning maps nullifying/displacing to splitting asunder. But refuting an argument (logical nullification) and being asunder/apart (spatial separation) are different domains. This is the same pair-type as GRC_0533 (Arabic داكه/hostility vs ἄνδιχα/asunder) already rejected. Argument-nullification -> falling apart requires: logic -> displacement -> physical separation. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic argument-nullification/displacement (دحض) and Greek asunder/apart (ἄνδιχα) are different domains — logical refutation does not generate spatial separation in 2 steps."
+  },
+  {
+    "pair_id": "GRC_0573",
+    "finding": "path_found",
+    "semantic_journey": "Arabic سحطه = slipping from the hand, losing grip; also choking/strangling (the loss of hold/control). Greek σχέθε = hold! keep! (aorist imperative of ἔχω = to have, hold, keep). This is a genuine negation cognate: Arabic encodes the LOSING OF GRIP/HOLD; Greek encodes the MAINTAINING OF GRIP/HOLD. Arabic = slipping from the hand (the failed hold); Greek = the command to hold (the desired hold). Both sides of the same hold/release concept. The root covers the possession-grip pole and its loss.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic losing-grip/slipping-from-hand (سحطه) and Greek hold!/keep! (σχέθε) are negation cognates — the loss of hold and the command to hold."
+  },
+  {
+    "pair_id": "GRC_0574",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العروس = a bride (a woman newly married, the center of wedding ceremony and adornment). Greek ἁλουργής = sea-purple (dyed with murex, the most expensive luxury dye). The original reasoning maps bridal finery to purple dye. But a bride (a person in a social role) and sea-purple dye (a specific material substance) are different: person/role vs material/color. Bride -> adornment -> luxury -> purple-luxury requires 3+ steps. Also many luxury materials existed; purple is not specifically bridal in Greek culture.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic bride (العروس) and Greek sea-purple dye (ἁλουργής) require 3+ steps — bridal adornment does not specifically generate purple dye."
+  },
+  {
+    "pair_id": "GRC_0575",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ذخر = to store up, hoard, lay in reserve; also orderly arrangement/structure. Greek διάχρυσος = interwoven with gold, all golden (from δια+χρυσός = through+gold). The original reasoning maps orderly arrangement to orderly interweaving. But hoarding/storing up (accumulation for future) and being threaded through with gold (a luxury material property) are different: temporal accumulation vs physical material composition. Arranged storage -> interweaved fabric -> gold-threaded requires: stockpiling -> weaving -> specific luxury material. 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic storing/hoarding in orderly reserve (ذخر) and Greek interwoven-with-gold (διάχρυσος) require 3+ steps — stockpiling does not generate gold-thread weaving."
+  }
+]

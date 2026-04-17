@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0432",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الزوج = pair, couple, spouse (two joined as one unit). Greek Ζεῦγμα = the act of yoking, joining two (ζεύγνυμι = to yoke/join). Both directly encode the PAIRING/JOINING OF TWO: Arabic = the paired couple/spouse (result); Greek = the act of yoking two together (action). A clean 1-step action-to-result path, or equivalently, both sides of the same pairing concept. This is a strong material culture cognate — the yoking/pairing concept is central to both.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic pair/spouse (الزوج = two joined) and Greek yoking/joining (Ζεῦγμα) directly share the core of two things joined together."
+  },
+  {
+    "pair_id": "GRC_0433",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العرب = Arabs (the Arab people). Greek ἀραβέω = to clatter, make a rattling noise (onomatopoeic term). The original reasoning claims this is Greek deriving a verb from Arab to denote Arab speech style. But ἀραβέω is an ONOMATOPOEIC Greek verb (rattling/clattering sounds like ἄρ-αβ-), not derived from the ethnonym Arab. Even if it were, comparing a proper ethnonym (Arabs) to a possibly derived verb is not a discovery of Arabic-Greek cognacy. Proper name exclusion also applies to ethnonyms.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic العرب is an ethnonym (proper name of a people); ἀραβέω is Greek onomatopoeia — proper ethnonyms are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0434",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الفربيون = euphorbia plant (clearly a loanword from Greek Εὔφορβος/Euphorbia). Greek Εὔφορβος = well-fed (εὔ + φορβή = well + feeding), also the name of a figure in the Iliad after whom the Euphorbia plant was named. The original reasoning acknowledges Arabic الفربيون is a loanword from Greek Euphorbus/Euphorbia. Comparing a known Arabic loanword FROM Greek back to Greek is circular — not a genuine independent cognacy.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic الفربيون is an acknowledged loanword from Greek Εὔφορβος — comparing it back to Greek is circular, not a cognate discovery."
+  },
+  {
+    "pair_id": "GRC_0435",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الماج = someone confused, disoriented, stupid; also related to churning/agitation. Greek Μάγος = a Magus, Persian priest/wise man/sorcerer (proper title). The original reasoning connects Arabic confusion to the Persian Magi through the idea that the Magi were seen as confusing/strange. But Μάγος is a proper title/ethnoreligious designation (Magian priests), not a common adjective. Proper name/title exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Μάγος is a proper religious title (Magian priest) — proper designations are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0436",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ذرف = to shed tears, for tears to flow (eyes tearing/weeping). Greek δάκρυ/δακρυόφι = tear(s), a teardrop (δακρυόφι = oblique form of tear). Both directly encode TEARS/WEEPING: Arabic = the action of shedding tears; Greek = the tear itself. A clean 1-step action-to-result: Arabic preserves the verb (to tear/weep), Greek preserves the noun (the teardrop).",
+    "journey_type": "semantic_drift",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic tear-shedding (ذرف) and Greek teardrop (δάκρυ) directly share the weeping/tear concept — verb and noun of the same action."
+  },
+  {
+    "pair_id": "GRC_0437",
+    "finding": "path_found",
+    "semantic_journey": "Arabic برهوت = a deep well/abyss in Hadhramaut believed to be a gathering place for souls of the wicked (deep underground pit with religious/spiritual significance). Greek βάραθρον = a deep pit, gulf, abyss at Athens where condemned criminals were thrown (a deep pit with judicial/religious significance). Both encode a DEEP UNDERGROUND PIT with religious-judicial significance. The semantic journey is direct: named abyssal pit used for punishment/judgment of wrongdoers. A clear material culture cognate — the concept of a sacred judicial abyss.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic برهوت (sacred wicked-soul abyss in Arabia) and Greek βάραθρον (judicial abyss in Athens) directly share the concept of a sacred deep pit for judgment/punishment."
+  },
+  {
+    "pair_id": "GRC_0438",
+    "finding": "no_path",
+    "semantic_journey": "Arabic امض = speech, discourse, oral communication. Greek μεταυδάω = to speak differently, to change one's speech (from μετά + αὐδάω = after/change + speak). Both involve speech, but at different levels: Arabic = speech generally; Greek = specifically changing or altering speech. The path general speech -> changed speech requires a specific semantic restriction. More importantly, both being 'in the speech domain' is not cognacy — all languages have words for speaking, and the specific actions (general speech vs changing one's speech) differ.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic general speech and Greek speech-changing are in the same domain but at different levels — domain membership alone is not cognacy."
+  },
+  {
+    "pair_id": "GRC_0439",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العثن = the first coming of wind or rain; the initial onset of a weather event. Greek ἐλθόντα = accusative participle of ἔρχομαι = having come, having arrived (generic arrival). The original reasoning maps first-coming-of-wind to having-arrived. But Arabic specifies the FIRST COMING of a weather event specifically; Greek is generic arrival of anything. These are different: specific natural onset vs generic motion toward. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic first onset of wind/rain and Greek generic arrival/having-come are different specificity levels — meteorological onset vs generic motion."
+  }
+]

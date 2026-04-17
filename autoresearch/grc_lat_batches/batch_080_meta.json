@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0640",
+    "arabic_root": "اللوذ",
+    "target_lemma": "ἄλλυδις",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic side/refuge and Greek to another place both share directional displacement."
+  },
+  {
+    "pair_id": "GRC_0641",
+    "arabic_root": "خنظ",
+    "target_lemma": "χόδανος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic khanaza = obscene/foul speech, also fahish. Greek chodanos = butt, buttocks. The obscenity-vulgarity field shared. Strong direct domain link."
+  },
+  {
+    "pair_id": "GRC_0642",
+    "arabic_root": "القنذع",
+    "target_lemma": "καταλυτικήν",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'calamities' aligns plausibly with Greek 'dissolving/destructive' by a shared undoing sense."
+  },
+  {
+    "pair_id": "GRC_0643",
+    "arabic_root": "الصوح",
+    "target_lemma": "λέσχη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic gloss includes the wall/bank of a valley, a bounded gathering edge or enclosure; Greek means a hall or place of talk. Place/enclosure is a plausible shared core."
+  },
+  {
+    "pair_id": "GRC_0644",
+    "arabic_root": "فرش",
+    "target_lemma": "φάρεσσι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic farsh/firāsh = 'bedding, cloak-spread'; Greek pharos = 'cloak, large piece of cloth'. Plausible semantic parallel via cloth/spread."
+  },
+  {
+    "pair_id": "GRC_0645",
+    "arabic_root": "السقب",
+    "target_lemma": "βλώσκω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "السقب = young camel calf (offspring), also legs of camels (أرجل الإبل), also المسقب = mother who produces male calves. βλώσκω = to come, to go. The birth/emergence of offspring and the concept of 'coming forth' share a genuine conceptual core — the newborn 'comes' into existence. Also the legs (أرجل) connect to locomotion (going)."
+  },
+  {
+    "pair_id": "GRC_0646",
+    "arabic_root": "الثيه",
+    "target_lemma": "λήθετε",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الثيه = مأوى الغنم (shelter/hiding place for sheep). λήθω = to be hidden, to escape notice, to be concealed. A shelter for animals is a place of concealment/hiding. The core concept of 'hidden from view in an enclosure' is directly shared between a sheep pen and the semantic field of λήθω."
+  },
+  {
+    "pair_id": "GRC_0647",
+    "arabic_root": "الكهر",
+    "target_lemma": "λέχριος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic means grimacing or scowling; Greek means slanting or crosswise, a plausible drift through crooked facial expression."
+  }
+]

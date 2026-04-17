@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0896",
+    "arabic_root": "الدندم",
+    "target_lemma": "laudanum",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Ar dindim=ancient blackened plant; Lat laudanum=opium resin (dark sedative plant extract); both relate to dark resinous plant substance — plausible semantic parallel in medicinal plant category"
+  },
+  {
+    "pair_id": "LAT_0897",
+    "arabic_root": "اللجح",
+    "target_lemma": "alcohol",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "اللجح includes eye secretion (اللخص في العين، الغمص); alcohol=kohl/collyrium for eyes — faint eye link"
+  },
+  {
+    "pair_id": "LAT_0898",
+    "arabic_root": "طسع",
+    "target_lemma": "hiatus",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "weak",
+    "original_reasoning": "مكان طيسع = wide; hiatus = opening/gap — spatial connection"
+  },
+  {
+    "pair_id": "LAT_0899",
+    "arabic_root": "قرشح",
+    "target_lemma": "querquerus",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic قرشح = jumping with quick steps, moving in rapid jerky motions, shivering. Latin querquerus = causing chills, making one shiver (used in medical context: febris querquera = ague with shivering fits). Both specifically describe rapid, involuntary bodily shaking/shivering. The phonetic chain q-r-sh-ḥ → querquer- shows quadrilateral root with q-r-q/sh correspondence. The semantic match on 'shivering/trembling' is precise, not just generic 'rapid movement'. Upgrading slightly."
+  },
+  {
+    "pair_id": "LAT_0900",
+    "arabic_root": "قرشه",
+    "target_lemma": "querquerus",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Same analysis as قرشح above — Arabic قرشه is a variant form of the same quadrilateral root describing rapid jerky motion/shivering. Latin querquerus = causing chills/shivering. Semantic match is specific to involuntary bodily trembling. Upgrading."
+  },
+  {
+    "pair_id": "LAT_0901",
+    "arabic_root": "انمل",
+    "target_lemma": "numella",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic أنامل (plural of أنملة) = fingertips, finger-ends. Latin numella = a collar or shackle that constrains movement, also a wooden frame placed on hands/fingers as punishment. Both relate to the extremities (fingers/hands): أنامل are the fingertips themselves, numella is a restraint placed on fingers/hands. The phonetic chain a-n-m-l → numell- preserves the n-m-l skeleton perfectly. If numella is a finger/hand restraint, and أنامل are fingers, they share the same body-part domain with strong phonetic correspondence. Upgrading from 0.30."
+  },
+  {
+    "pair_id": "LAT_0902",
+    "arabic_root": "بلد",
+    "target_lemma": "bladum",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic بلد (root b-l-d) = (1) country, land, settlement, (2) بَلْدَة = town, (3) بلاد = lands, territories. Latin bladum = grain, wheat, corn (medieval Latin, possibly from Frankish *blad or related to Old English blaed = fruit/harvest). The connection: بلد = settled agricultural land → bladum = the grain produced by settled agriculture. The phonetic b-l-d → blad- is near-perfect. Agricultural settlement and its produce are deeply linked concepts. If bladum entered medieval Latin from a Semitic substrate via Mediterranean trade, the 'land → grain of the land' metonymy is natural. Upgrading."
+  },
+  {
+    "pair_id": "LAT_0903",
+    "arabic_root": "طاب",
+    "target_lemma": "Iotaba",
+    "lang": "lat",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic طاب (root ṭ-y-b) = to be good, pleasant, agreeable, wholesome. Latin Iotaba = an island in the Red Sea (modern Tiran Island near Sinai). The island name Iotaba/Jotabe likely derives from Semitic ṭ-y-b (good/pleasant), as it was a prosperous trading post. Arabic طاب → Semitic toponym Iotaba = 'the pleasant/good [island].' This follows the established pattern of Semitic place names in Latin texts preserving the original Semitic root meaning. Upgrading."
+  }
+]

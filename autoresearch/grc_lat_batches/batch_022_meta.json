@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0176",
+    "arabic_root": "دكاهم",
+    "target_lemma": "διαδέχομαι",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic mutual pushing/jostling and Greek reciprocal receiving are two sides of an exchange/contact event."
+  },
+  {
+    "pair_id": "GRC_0177",
+    "arabic_root": "حرقه",
+    "target_lemma": "χαρακίας",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "حرقه keeps the sense of burning, singeing, or heat-driven intensity, which fits a caustic or burning-associated plant name."
+  },
+  {
+    "pair_id": "GRC_0178",
+    "arabic_root": "دفق",
+    "target_lemma": "διαφεύγω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic gushing/streaming maps well to motion outward; Greek 'escape' is a clear abstract drift from flowing out."
+  },
+  {
+    "pair_id": "GRC_0179",
+    "arabic_root": "اصطب",
+    "target_lemma": "στιβάδιον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Flax shreds and stitched material give a clear chain to something spread or stuffed into a pallet or cushion, στιβάδιον."
+  },
+  {
+    "pair_id": "GRC_0180",
+    "arabic_root": "خمدت",
+    "target_lemma": "χαμάδις",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic خمد means to sink, faint, or subside; Greek 'to the ground' preserves the same downward-settling concept."
+  },
+  {
+    "pair_id": "GRC_0181",
+    "arabic_root": "الكنهدل",
+    "target_lemma": "κολοκύνθη",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic means bulky and thick; bottle gourd strongly fits that same massy rounded concept."
+  },
+  {
+    "pair_id": "GRC_0182",
+    "arabic_root": "القنوه",
+    "target_lemma": "ἑλίκοιν",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic 'arched/aquiline' clearly meets Greek 'helix' by the shared curved form."
+  },
+  {
+    "pair_id": "GRC_0183",
+    "arabic_root": "القزل",
+    "target_lemma": "σολοικίζω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic worst lameness gives bodily crookedness or defective gait, and Greek is defective speech; this is a clear metaphorical chain from physical distortion to linguistic error."
+  }
+]

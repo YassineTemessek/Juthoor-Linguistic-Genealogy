@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0712",
+    "finding": "path_found",
+    "semantic_journey": "Arabic batn = belly/interior/inside; also hidden valley. Greek Batnai = Batnae, a Syrian city with Aramaic substrate etymology from btn = interior/belly. Legitimate Semitic substrate toponym. Arabic batn (interior-hollow) directly names the terrain that became the settlement name. 1-step material-culture.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic batn (interior/belly/hollow) and Greek-transliterated Batnae share the Semitic substrate root for interior-terrain used as a toponym."
+  },
+  {
+    "pair_id": "GRC_0713",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khashaa = to be low, flat, adhering; submissive posture. Greek khasko = to gape open. Arabic sinking-downward and Greek opening-upward are directional opposites. The terrain-opening bridge is too abstract. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic submissive-lowering and Greek gaping-open are directional opposites with no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0714",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qalam = aged old man/woman. Greek leukomelan = white-and-black, grey. Old-person to grey-color requires 3 steps: old-person -> grey-hair -> grey-color. Different categories.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic aged-person and Greek grey-color require 3 steps; a person-type and a color are different categories."
+  },
+  {
+    "pair_id": "GRC_0715",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-laka = contemptible, base person; insult. Greek lalaks = babbler, chatterer. Both are insults for a despicable person type. 1-step specialization: contemptible-person -> specific-contemptible-type-babbler.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic contemptible-base-person and Greek babbler are both pejorative person-type insults; Greek specializes the contempt to idle-talking."
+  },
+  {
+    "pair_id": "GRC_0716",
+    "finding": "path_found",
+    "semantic_journey": "Arabic jurthuma = collected earth at tree roots, accumulation, cluster/foundation. Greek ageirametha = we should gather/collect (aorist middle optative of ageiro). Core: gathering/accumulation. 1-step action-to-result: gathering-action -> accumulated-mass.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic accumulated-cluster at roots and Greek we-should-gather both center on the concept of gathering/accumulation."
+  },
+  {
+    "pair_id": "GRC_0717",
+    "finding": "path_found",
+    "semantic_journey": "Arabic karmad = brick, tile-like construction material. Greek keramidion = small tile (diminutive of keramida). Almost certainly a direct material-culture transmission. Arabic karmad and Greek keramis/keramida are cognates in building-material domain. Direct link.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic karmad (brick/tile) and Greek keramidion (small tile) are direct cognates in the building-material domain."
+  },
+  {
+    "pair_id": "GRC_0718",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qakh = insides rotted/spoiled by disease. Greek kakektes = sick, wasted body (kakos=bad + hexis=bodily condition). Core: disease rotting the body from within. Same as GRC_0649. 1-step drift: internal-rotting -> externally-wasted bodily state.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic internal disease-rotting and Greek bad bodily condition/wasting share the core of disease destroying the body from within (same analysis as GRC_0649)."
+  },
+  {
+    "pair_id": "GRC_0719",
+    "finding": "no_path",
+    "semantic_journey": "Arabic jaza = to be permitted; root j-w-z = to pass over. Greek Gaza = the Levantine city (from Semitic azz = strength/treasure). Arabic jaza and the Semitic root of Gaza are different roots. Phonetic coincidence between different Semitic roots. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gaza derives from Semitic azz (strength/treasure), not Arabic jaza (permissible/crossing); different roots, proper name exclusion applies."
+  }
+]

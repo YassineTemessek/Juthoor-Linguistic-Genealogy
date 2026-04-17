@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0288",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الثويناء (al-thuwaina) = التثاون = idle deception, something done secretly/stealthily; concealment with harmful intent. Greek λανθάνομαι = to escape notice, to be hidden/concealed from, to act without being noticed (from λανθάνω). Both encode stealth/concealment. Arabic deceptive-concealment → Greek escaping-notice/being-hidden is a direct 1-step match: both describe the act of concealing oneself or one's actions from others.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic stealthy deception/concealment (thuwaina) and Greek escaping-notice/being-hidden (lanthanesthai) share the core concept of concealment."
+  },
+  {
+    "pair_id": "GRC_0289",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رثد (rathada) = to stack, arrange in a well-ordered pile; to arrange goods neatly. Greek ἀρρυθμία = lack of rhythm, disorder, irregularity (ἀ- privative + ῥυθμός 'rhythm'). The original reasoning positions this as an opposition: Arabic orderly arrangement vs. Greek disorder/lack-of-rhythm. But this is not a valid negation-cognate because negation cognates require the Arabic root to contain BOTH poles of a concept (as in Arabic roots that mean X and anti-X simultaneously). Arabic رثد straightforwardly means orderly arrangement; Greek ἀρρυθμία means disorder with no Arabic connection needed.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic orderly-arrangement and Greek disorder-lack-of-rhythm are simple opposites, not a true negation cognate — the Arabic root does not encode both poles."
+  },
+  {
+    "pair_id": "GRC_0290",
+    "finding": "no_path",
+    "semantic_journey": "Arabic جمخ (jamakha) = to be arrogant, to strut proudly, to boast challengingly. Greek ἐγρεμάχης = battle-rousing (ἔγρω 'rouse' + μάχη 'battle'). Same as GRC_0261 (batch 032): Arabic boasting/arrogance → battle-rousing requires too many steps, and the Greek compound has transparent internal Greek etymology. No Semitic origin needed for ἐγρεμάχης.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic arrogant boasting and Greek battle-rousing compound are too distant; the Greek compound has transparent internal etymology."
+  },
+  {
+    "pair_id": "GRC_0291",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الحشي (al-hashiy) = filled, padded; also: the flank/side of the body (the region between ribs and hip). Greek λέχεσι = beds, sleeping places (dative plural of λέχος). The connection here uses the body-flank meaning: the flank is the reclining surface of the body → reclining → bed. Arabic body-flank/side (the part one lies on) → Greek bed/sleeping-place is a 1-step metaphorical extension: you lie on your flank, and the flank-resting position becomes the bed. This is speculative but within 2 steps.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic body-flank (the part one rests on) maps at low confidence to Greek bed/resting-place through the reclining-on-flank posture."
+  },
+  {
+    "pair_id": "GRC_0292",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الثعو (al-thaw) = dates becoming soft and ripe; ripening to full softness. Greek τελέθω = to come into being, come to maturity, grow fully, be fully realized. Both encode coming to full maturity/ripeness. Arabic dates-reaching-soft-ripeness → Greek coming-to-full-maturity is a direct 1-step match: Arabic names the ripening of a specific fruit, Greek generalizes to any coming-to-completion/maturity.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic date-ripening/softening (thaw) and Greek coming-to-maturity (telethein) share the concept of reaching full development."
+  },
+  {
+    "pair_id": "GRC_0293",
+    "finding": "path_found",
+    "semantic_journey": "Arabic افرنبج جلد الجمل شُوي = the camel's skin was roasted/scorched/burned. Greek φρύγανον = dry stick, firewood, tinder (from φρύγω 'to roast/parch'). Both are in the roasting/burning domain. Arabic roasting-burning of skin → Greek dry-wood used for roasting is a 1-step parallel: Arabic describes the burning process applied to skin, Greek names the material used to burn (dry firewood). Both encode the roasting/parching concept.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic roasting/scorching (skin-burning) and Greek dry firewood (burning material) share the roasting/parching domain."
+  },
+  {
+    "pair_id": "GRC_0294",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحرت (al-harat) = root or base of a plant; the foundational part. Greek ἕλκηθρον = the beam/drag-pole of a plough, the frame of the plough. The reasoning: Arabic root/base → Greek plough-frame (the structural base). But a plant root and a plough's wooden frame are in completely different domains. The path: Arabic plant-root → base/support → structural support → plough frame is 3+ steps. No direct connection.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic plant root and Greek plough beam share only the loose concept of a structural base; completely different domains with no 2-step path."
+  },
+  {
+    "pair_id": "GRC_0295",
+    "finding": "path_found",
+    "semantic_journey": "Arabic سفه (safiha) = foolishness, folly, lack of wisdom; intellectual deficiency. Greek σοφίζω = to make wise, to teach wisdom, to practice cleverness (from σοφός 'wise'). Both share the wisdom concept — Arabic encodes its ABSENCE, Greek encodes its PRESENCE. This is a clear negation-cognate: Arabic سفه is the opposite of wisdom, Greek σοφίζω is the practice of wisdom. The root s-f-h/s-ph encodes the wisdom concept, preserved on opposite ends in each language.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic foolishness/folly (safah) and Greek making-wise (sophizein) are negation cognates — one encodes the absence of wisdom, the other its practice."
+  }
+]

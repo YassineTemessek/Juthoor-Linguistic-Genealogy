@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0832",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-tafan = filth, dirt. Greek tiphinos = of einkorn wheat (a grain type). Filth/dirt and einkorn wheat are in different semantic categories. The mafahim connection (agricultural waste/chaff from threshing) requires: dirt -> fine-particulate -> chaff-from-threshing -> of-einkorn-grain = 3+ steps. Too speculative.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic filth/dirt and Greek of-einkorn-wheat are in different categories; even the agricultural-waste bridge requires 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0833",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-talith = a plant from saline ground (a specific halophyte plant). Greek teletho = to come around of a season, to be/become (a verb of existence and seasonal return). A saline-ground plant name and a verb of seasonal-becoming share no valid semantic path. The seasonal-plant-marking-the-season reasoning is too indirect.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic saline-ground plant name and Greek seasonal-becoming verb share no valid semantic path within 2 steps."
+  },
+  {
+    "pair_id": "GRC_0834",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-thalj = snow; also thalajat nafsi = my soul found peace/calm. Greek thelgo = to charm, enchant, bewitch, soothe. Core: calming/stilling effect on the soul. Arabic snow-and-soul-settling and Greek charming/soothing share the concept of something that settles and stills the inner self. 1-step direct preservation: calming-the-soul -> charming/enchanting-the-soul.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic snow-calming-the-soul and Greek charming/enchanting share the concept of something that settles and stills the inner self."
+  },
+  {
+    "pair_id": "GRC_0835",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-jalbar = scabbard of a sword or its edge. Greek Galabrioi = a tribe in Illyria/Kosovo (proper name). Sword-scabbard and an Illyrian tribal name share no semantic path. Even if the tribe were associated with weapons, that reasoning (weapon-carriers named for weapon-part) is too speculative. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic sword-scabbard and Greek Illyrian tribal name share no documented connection; proper name exclusion applies."
+  },
+  {
+    "pair_id": "GRC_0836",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-hatr = tightening/fastening; also feeding (itaam); also a small amount. Greek khutra = earthen pot for boiling/cooking (a cooking vessel). Core: the feeding/cooking vessel. Arabic al-hatr feeding-sense -> Greek cooking-pot (vessel used for feeding). 1-step material-culture: feeding-context -> cooking-vessel-used-for-feeding.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic feeding-sense and Greek cooking-pot share the feeding/nourishment context; the pot is the instrument of the feeding encoded in Arabic."
+  },
+  {
+    "pair_id": "GRC_0837",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-azfal = anger and sharpness (al-ghadab wa-al-hidda); also a crowd. Greek epizaphelos = vehement, violent, furious (intensified form of zaphelos). Core: vehement anger/fury. Arabic al-ghadab/hidda (anger/sharpness) and Greek vehement-furious directly share the concept of intense anger/fury. 1-step direct preservation: anger/sharpness -> vehement-fury.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic anger/sharpness (al-ghadab/al-hidda) and Greek vehement-fury directly share the concept of intense anger/fury in a 1-step direct preservation."
+  },
+  {
+    "pair_id": "GRC_0838",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-dhifan = deadly poison (the lethal substance). Greek rodhodaphne = oleander (Nerium oleander, a poisonous plant). Core: deadly/toxic substance. Arabic encodes the poison itself; Greek encodes the plant that contains the poison. 1-step material-culture: deadly-poison -> poisonous-plant-that-carries-it.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic deadly poison and Greek oleander (a poisonous plant) share the toxic/deadly substance domain; Arabic is the poison itself, Greek is the plant carrying it."
+  },
+  {
+    "pair_id": "GRC_0839",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-rabiykh = large saddle; also a woman who loses consciousness during intercourse. Greek orobankhe = dodder (Cuscuta), a parasitic plant that strangles/chokes other plants. Heavy-saddle and a strangling parasitic plant share no semantic path. The heavy-attachment/parasitic reasoning requires: heavy-saddle -> heavy-clinging -> parasitic-clinging -> plant-strangling = 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic large saddle and Greek strangling-parasitic-plant share no valid semantic path within 2 steps."
+  }
+]

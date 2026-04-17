@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0368",
+    "arabic_root": "السفه",
+    "target_lemma": "βλάσφημος",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic السفه is foolish, rash, irreverent behavior; Greek βλάσφημος is abusive or impious speech. Both meet in irreverent moral/intellectual disorder."
+  },
+  {
+    "pair_id": "GRC_0369",
+    "arabic_root": "الاليغ",
+    "target_lemma": "λαλαγέω",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Arabic includes coaxing away and extreme foolishness, and Greek means chatter or babble; both converge on unstable, speech-linked behavior."
+  },
+  {
+    "pair_id": "GRC_0370",
+    "arabic_root": "حرش",
+    "target_lemma": "αἰσχράς",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Arabic roughness or barren coarseness maps well onto Greek 'ugly, shameful' through a shared negative-quality core."
+  },
+  {
+    "pair_id": "GRC_0371",
+    "arabic_root": "ازج",
+    "target_lemma": "Ζεῦγμα",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "آزاج suggests arching or paired joining, which fits a yoking or linkage sense well."
+  },
+  {
+    "pair_id": "GRC_0372",
+    "arabic_root": "الفرعون",
+    "target_lemma": "ὀλοόφρονος",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "combined",
+    "original_reasoning": "Farʿawnah carries cunning and pharaonic harshness, while oloophron is destructive-minded; both share a strong negative mental quality with partial phonetic convergence around fr/n-phron."
+  },
+  {
+    "pair_id": "GRC_0373",
+    "arabic_root": "دجم",
+    "target_lemma": "δείγματε",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic kind or type of a thing aligns fairly well with Greek sample or specimen."
+  },
+  {
+    "pair_id": "GRC_0374",
+    "arabic_root": "حضر",
+    "target_lemma": "χῖδρον",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الحضير is gathered matter; rubbed groats are also a gathered granular mass, a plausible concrete match."
+  },
+  {
+    "pair_id": "GRC_0375",
+    "arabic_root": "الفرات",
+    "target_lemma": "λουτροφορέω",
+    "lang": "grc",
+    "original_score": 0.62,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic explicitly includes very sweet water, and Greek means carrying water for bathing, so water is a direct shared core."
+  }
+]

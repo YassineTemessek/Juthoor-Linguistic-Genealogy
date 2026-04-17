@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0864",
+    "arabic_root": "المخ",
+    "target_lemma": "magulum",
+    "lang": "lat",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "المخ=marrow/brain (نقي العظم، الدماغ); magulum=jaw/mouth — head anatomy overlap, plausible"
+  },
+  {
+    "pair_id": "LAT_0865",
+    "arabic_root": "مغد",
+    "target_lemma": "mitigatio",
+    "lang": "lat",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "مغد: Arabic concept 'soft_flexible' detected in masadiq; Latin gloss also expresses 'soft_flexible'"
+  },
+  {
+    "pair_id": "LAT_0866",
+    "arabic_root": "مرطل",
+    "target_lemma": "mortariolum",
+    "lang": "lat",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic مرطل from root م-ر-ط with لام extension: to smear, coat with mud/clay, plaster. Latin mortariolum = small mortar (diminutive of mortarium = mortar vessel for grinding/mixing substances, also building mortar/cement). Both share the core concept of mixing/working viscous clay-like material. Phonetic chain m-r-t-l → mortar- is compelling — the Arabic root preserves the action (plastering), Latin preserves the vessel/material used for the same activity. Possible shared Mediterranean craft vocabulary."
+  },
+  {
+    "pair_id": "LAT_0867",
+    "arabic_root": "دلق",
+    "target_lemma": "deliquo",
+    "lang": "lat",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic دلق (root d-l-q) = (1) to pour out rapidly, (2) sword slipping/sliding out of scabbard, (3) tongue protruding from mouth, (4) to rush forth. Latin deliquo = to strain off, pour a liquid, clarify by pouring. Both share the precise concept of rapid liquid pouring/flowing out. The phonetic chain d-l-q → deliq- is nearly perfect consonant-for-consonant (d-l-q → d-l-q with Latin vowel insertion). This is one of the strongest phonosemantic matches in the batch. Sonnet significantly underscored this at 0.40."
+  },
+  {
+    "pair_id": "LAT_0868",
+    "arabic_root": "دلق",
+    "target_lemma": "deliquium",
+    "lang": "lat",
+    "original_score": 0.65,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic دلق (root d-l-q) = to pour out rapidly, to slip forth (sword from sheath), to flow/gush. Latin deliquium = (1) failure, want, deficiency, (2) melting away, dissolution, (3) in astronomy: eclipse (deliquium solis). The deeper meaning of deliquium is 'flowing away, draining away' — from deliquesco = to melt, dissolve, flow away. Both Arabic دلق and Latin deliquium share the core concept of 'flowing/pouring away.' The phonetic chain d-l-q → deliq- is the same perfect match as دلق→deliquo above. Upgrading significantly from 0.30."
+  },
+  {
+    "pair_id": "LAT_0869",
+    "arabic_root": "رهق",
+    "target_lemma": "arrha",
+    "lang": "lat",
+    "original_score": 0.62,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "رهق = to press urgently/closely; arrha = down payment under compulsion — semantic link via urgency/binding"
+  },
+  {
+    "pair_id": "LAT_0870",
+    "arabic_root": "فلغ",
+    "target_lemma": "infligo",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "both mean 'to strike hard': AR falagha=crack skull, LA infligo=knock/strike against"
+  },
+  {
+    "pair_id": "LAT_0871",
+    "arabic_root": "فلغ",
+    "target_lemma": "affligo",
+    "lang": "lat",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "both mean 'to strike/beat hard': AR falagha=crack skull, LA affligo=cast down/strike"
+  }
+]

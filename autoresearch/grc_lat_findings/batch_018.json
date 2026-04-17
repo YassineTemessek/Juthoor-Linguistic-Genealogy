@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0144",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحوث (al-hawth) = dialectal form of حيث (haythu) = where, the place where. Greek ἀλλαχόθι = elsewhere (ἄλλος 'other' + -χόθι locative suffix). While both are locative words, the Arabic is a demonstrative/relative place word ('where') and the Greek is a different locative ('elsewhere'). The comparison requires: Arabic 'where' → Greek 'other-where' which involves a semantic component not present in the Arabic word. No clean cognate path; these are independent locative formations.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic 'where' and Greek 'elsewhere' are superficially locative but semantically distinct, with Greek adding 'other' as a separate component."
+  },
+  {
+    "pair_id": "GRC_0145",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العرقصاء (al-arqasa) = a plant with fennel-like stalks, possibly fennel or similar umbelliferous plant. Greek λάριξ = larch tree (a conifer). Both are plants but fennel and larch are completely different botanical categories with no shared characteristics or cultural uses. Plant-to-plant categorization is not sufficient for a cognate claim. No semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A fennel-like herb and a larch conifer share only botanical category; different plant families, no semantic path."
+  },
+  {
+    "pair_id": "GRC_0146",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الخسيج (al-khusayj) = a tent, pavilion, shelter. Greek λέχεσι = beds, lairs, resting places (dative plural of λέχος). The reasoning attempts tent → bed as both being resting places. However, these are distinct: a tent is a portable structure/shelter, a bed is a sleeping surface. The shift requires: shelter → interior of shelter → sleeping place within → bed — that is 3+ steps. Too speculative.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Tent/pavilion and bed/lair are distinct enough resting-place concepts that no clean 2-step path exists."
+  },
+  {
+    "pair_id": "GRC_0147",
+    "finding": "no_path",
+    "semantic_journey": "Arabic البرنوف (al-barnuf) = a plant name (possibly a type of medicinal herb). Greek ἑλλεβορίνη = helleborinae, a plant resembling hellebore. Both are plant names, but different plants with no demonstrated relationship. Plant-category matching is insufficient for a cognate claim. The consonant skeletons also show no clear merger path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two unrelated plant names sharing only the botanical category is not a cognate — different plants, different semantic fields."
+  },
+  {
+    "pair_id": "GRC_0148",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السنط (al-sant) = acacia tree; also a medicinal preparation. Greek ἠλείψαντο = they anointed, smeared (aorist of ἀλείφω). The reasoning: medicine → anointing application. But السنط is a plant name, not a verb of applying. The Greek verb refers to the act of anointing with oil. Plant name → anoint is a 3+ step chain (plant → extract from plant → preparation → application of preparation). Far too speculative.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic acacia plant name and Greek anointing verb have no direct semantic connection — too many steps between plant and application action."
+  },
+  {
+    "pair_id": "GRC_0149",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دحر (dahara) = to push away, repel, drive off, expel. Greek διαχωρίζω = to separate, divide apart, keep asunder (from διά 'apart' + χωρίζω 'to separate'). Both encode forceful separation/pushing-apart. Arabic repelling/driving away → Greek separating/dividing apart is a direct 1-step correspondence: both actions create distance between entities through force.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic pushing-away (dahr) and Greek separating-apart (diakhoridzo) share the core of forcefully creating distance."
+  },
+  {
+    "pair_id": "GRC_0150",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الطسك (al-task) = a measure, tax/tribute vessel. Greek καλαθίσκος = small basket. Same situation as GRC_0131 (الطسق variant). Tax-measure and decorative basket share only generic container category. No specific semantic path, no viable consonant merger. Duplicate assessment: no path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Tax-measure container and small decorative basket share only generic vessel category; no specific semantic or phonetic path."
+  },
+  {
+    "pair_id": "GRC_0151",
+    "finding": "no_path",
+    "semantic_journey": "Arabic العبرب (al-ubayrb) = sumac (Rhus coriaria), a tart edible berry used as a spice. Greek ἑλλέβοροι = hellebore plants (toxic plants used in ancient medicine). Sumac and hellebore are completely different plants — one a culinary spice berry, the other a toxic medicinal root. Plant-category matching is insufficient, and these plants have no shared properties. No cognate path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Sumac (edible spice) and hellebore (toxic medicinal) are unrelated plants sharing only the botanical category label."
+  }
+]

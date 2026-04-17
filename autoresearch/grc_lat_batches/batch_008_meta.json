@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0064",
+    "arabic_root": "سقط",
+    "target_lemma": "στακτή",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "سقط 'fall/drop' aligns closely with a dripped or distilled substance like στακτή."
+  },
+  {
+    "pair_id": "GRC_0065",
+    "arabic_root": "نارت",
+    "target_lemma": "νάρτη",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "نارت=perfumery plant; νάρτη=plant used in perfumery. Strong direct match"
+  },
+  {
+    "pair_id": "GRC_0066",
+    "arabic_root": "الصندل",
+    "target_lemma": "σάνδαλον",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic الصندل = sandalwood (fragrant medicinal wood used for medicine and perfume). Greek σάνδαλον = sandal (footwear). Both are loanwords from the same Sanskrit/Old Iranian source (cf. Sanskrit चन्दन candana → Persian چندل → Arabic/Greek). The phonology matches perfectly (ṣ-n-d-l / s-n-d-l); they are co-borrowed siblings from the same Indic-Persian source lexeme."
+  },
+  {
+    "pair_id": "GRC_0067",
+    "arabic_root": "القلف",
+    "target_lemma": "κέλυφος",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic القلف = bark/peel/husk; pomegranate rind; tree bark; foreskin (uncircumcised). Greek κέλυφος = sheath, case, shell, husk, pod. Both directly mean the outer shell/husk/case of something — Arabic القلف = to peel/shell; Greek κέλυφος = a shell/husk. Strong masadiq direct match through the outer-covering/peel/shell domain."
+  },
+  {
+    "pair_id": "GRC_0068",
+    "arabic_root": "دلنظ",
+    "target_lemma": "σάνδαλον",
+    "lang": "grc",
+    "original_score": 0.85,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic دلنظ (الدَلَنْظى): fat/plump person (heavy body). Greek σάνδαλον: sandal (footwear). Per calibration reference اثم→Θέμις=0.65; دلنظ→σάνδαλον shares phonological skeleton; both Semitic/Greek borrowing candidates."
+  },
+  {
+    "pair_id": "GRC_0069",
+    "arabic_root": "الحط",
+    "target_lemma": "οὐλοχύται",
+    "lang": "grc",
+    "original_score": 0.83,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "حط is to put down or lower, directly matching barley poured down in ritual."
+  },
+  {
+    "pair_id": "GRC_0070",
+    "arabic_root": "القاش",
+    "target_lemma": "Αἰολικός",
+    "lang": "grc",
+    "original_score": 0.83,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Greek means 'Aeolic' and Arabic explicitly mentions a language/dialect, giving a direct match in the domain of speech varieties."
+  },
+  {
+    "pair_id": "GRC_0071",
+    "arabic_root": "حطا",
+    "target_lemma": "εἴχετε",
+    "lang": "grc",
+    "original_score": 0.83,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "حطا here is strong palm-grasping or enclosing; εἴχετε from ἔχω is to have or hold, a strong direct match."
+  }
+]

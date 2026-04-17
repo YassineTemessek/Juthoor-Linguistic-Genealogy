@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0896",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dindim = an ancient blackened plant (obscure term). Latin laudanum = an opium resin, a dark sedative plant extract (from Greek ladanon/ledanon = the cistus plant resin, collected from goat beards). The original reasoning proposes: dark plant -> dark resinous plant extract. But Latin laudanum traces to Greek ladanon (the rockrose resin), which has its own etymology from the Greek name for that plant. Arabic dindim is an extremely obscure term for an unspecified dark plant. The consonant match d-n-d-m vs l-d-n-m is distant. No clear cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Latin laudanum derives from Greek ladanon (rockrose resin); Arabic dindim is obscure and unattested in any direct plant-resin context."
+  },
+  {
+    "pair_id": "LAT_0897",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-lajah (root l-j-h) = eye secretion, the discharge from eyes (laghas fi al-ayn = eye mucus/crust, ghamas). Latin alcohol in its earliest attestation = kohl, powdered antimony eye cosmetic (from Arabic al-kuhl). The proposed link: eye secretion -> eye cosmetic. These are both eye-related substances, but eye discharge (natural biological waste) vs eye cosmetic (refined mineral powder) are not the same concept. The actual etymon of alcohol is al-kuhl, not al-lajah. The consonant match is also weak: l-j-h vs l-k-h-l.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic al-lajah (eye discharge) and Latin alcohol (from Arabic al-kuhl = kohl) are different substances in different registers; the actual etymon is al-kuhl, not al-lajah."
+  },
+  {
+    "pair_id": "LAT_0898",
+    "finding": "no_path",
+    "semantic_journey": "Arabic taysa = wide, spacious (makan taysia = wide place). Latin hiatus = a gap, opening, hole (from hiare = to gape, to be open, to yawn). The Arabic describes spatial wideness/spaciousness; the Latin describes a specific opening or gap. Wideness is not the same as gap-ness: a wide space is expansive; a hiatus is a specific bounded opening. The 2-step chain would be: wide space -> opening -> gap. This is borderline but the fundamental concepts are different enough: taysa encodes diffuse expanse while hiatus encodes a specific puncture/gap. Latin hiare is transparently onomatopoeic (the gaping sound of yawning).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic taysa (wide/spacious) and Latin hiatus (gap/opening) encode different spatial concepts: diffuse expanse vs specific opening; hiatus is transparently from Latin hiare (to gape)."
+  },
+  {
+    "pair_id": "LAT_0899",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qarshaha (root q-r-sh-h) = jumping with quick steps, moving in rapid jerky motions, shivering with rapid movement. Latin querquerus = causing chills, making one shiver (used medically: febris querquera = ague with shivering fits). The semantic core of both words is the same: rapid involuntary jerky motion, trembling, shivering. Step 1: rapid jerky movement -> shivering/trembling. This is a near-direct preservation of the shivering/trembling concept. The specific application differs (Arabic is gait; Latin is medical chills) but both encode rapid involuntary bodily tremor.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic qarshaha (rapid jerky shivering motion) and Latin querquerus (causing shivering chills) share direct preservation of the shivering/trembling concept."
+  },
+  {
+    "pair_id": "LAT_0900",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qarshaah = a variant form of the same quadrilateral root describing rapid jerky motion/shivering (same analysis as LAT_0899). Latin querquerus = causing chills/shivering (febris querquera = ague with shivering fits). Both encode rapid involuntary trembling. This is the same cognate pair as LAT_0899 with a variant root spelling. The shivering/trembling concept is directly preserved.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic qarshaah (rapid jerky shivering motion, variant form) and Latin querquerus (causing shivering chills) share direct preservation of the trembling/shivering concept."
+  },
+  {
+    "pair_id": "LAT_0901",
+    "finding": "path_found",
+    "semantic_journey": "Arabic anamil (plural of anmula) = fingertips, finger-ends, the tips of the fingers. Latin numella = a collar or shackle that constrains movement; specifically a wooden frame placed on hands/fingers as punishment. Step 1: fingertips -> device that constrains fingertips. The Arabic refers to the body part; the Latin refers to the device that immobilizes that body part. This is a 1-step metonymic shift: the specific body part -> the device that binds that body part. The connection is coherent: a numella was placed at exactly the finger/hand level that anamil refers to.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic anamil (fingertips) -> Latin numella (finger/hand shackle): a 1-step metonymic shift from the body part to the device that constrains it."
+  },
+  {
+    "pair_id": "LAT_0902",
+    "finding": "no_path",
+    "semantic_journey": "Arabic balad (root b-l-d) = country, land, settlement; balda = town; bilad = lands/territories. Latin bladum = grain, wheat, corn (Medieval Latin, from Frankish blad = harvest, related to blade of grain). The Arabic encodes a settled human territory; the Latin encodes the agricultural product grown in that territory. Country -> grain grown in country would require: country -> agricultural land -> the crop. This is a 3-step chain. Moreover, Latin bladum derives from Frankish/Germanic blad (leaf, blade, harvest), not from Semitic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic balad (country/settlement) and Latin bladum (grain/wheat from Frankish blad) are unrelated; grain is grown in countries but that is not etymology."
+  },
+  {
+    "pair_id": "LAT_0903",
+    "finding": "no_path",
+    "semantic_journey": "Arabic taba (root t-y-b) = to be good, pleasant, agreeable, wholesome. Latin Iotaba = an island in the Red Sea (modern Tiran Island near Sinai), appearing in Latin geographical sources. Iotaba/Jotabe is a Semitic place name that likely derives from the root t-y-b (goodness, pleasantness) applied as a toponym: the pleasant place. However, per the rules, proper place names are excluded from cognate counting. This is a proper name. Even if the etymological connection between the Arabic root and the place name is real, it counts as a known Semitic transmission (a place named for its pleasant character), not a new discovery.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Iotaba is a Semitic proper place name likely from the t-y-b root, but proper names are excluded; this is a known Semitic toponym, not a new cognate discovery."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0568",
+    "arabic_root": "دمغ",
+    "target_lemma": "διατμήγω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic damagha = strike on the brain, smash the skull. Greek diatmego = cut apart, cleave, separate. Brain-striking and cutting-apart share the violent splitting core. Strong concrete link via cleaving action."
+  },
+  {
+    "pair_id": "GRC_0569",
+    "arabic_root": "حدا",
+    "target_lemma": "χυδαῖος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "'Move forward / drive on' can plausibly drift to forceful outward pouring or abundance."
+  },
+  {
+    "pair_id": "GRC_0570",
+    "arabic_root": "السحل",
+    "target_lemma": "λέσχη",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "One Arabic sense is an eloquent tongue, and λέσχη includes talk or gossip, giving a plausible speech-centered semantic chain."
+  },
+  {
+    "pair_id": "GRC_0571",
+    "arabic_root": "خمش",
+    "target_lemma": "αἰχμάς",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic khamash = scratch, claw, leave sharp small marks; khumash = remnants of vengeance. Greek aichmas = acc.pl of aichme 'spear-point, sharp tip'. The 'sharp scratching/piercing' core matches directly. Strong concrete link."
+  },
+  {
+    "pair_id": "GRC_0572",
+    "arabic_root": "دحض",
+    "target_lemma": "ἄνδιχα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic nullified or displaced argument aligns with Greek asunder through breakup or disintegration."
+  },
+  {
+    "pair_id": "GRC_0573",
+    "arabic_root": "سحطه",
+    "target_lemma": "σχέθε",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic slipping from the hand or choking stands on the opposite pole of Greek 'have, hold', preserving the same possession-loss field."
+  },
+  {
+    "pair_id": "GRC_0574",
+    "arabic_root": "العروس",
+    "target_lemma": "ἁλουργής",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Bridehood strongly associates with adornment, luxury, and rich color, so sea-purple fits as a plausible specialization of bridal finery."
+  },
+  {
+    "pair_id": "GRC_0575",
+    "arabic_root": "ذخر",
+    "target_lemma": "διάχρυσος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic points to orderly structuring; Greek means 'interwoven with gold'. Both meet in the idea of arranged interweaving."
+  }
+]

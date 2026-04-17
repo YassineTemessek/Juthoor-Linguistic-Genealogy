@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0408",
+    "arabic_root": "لبن",
+    "target_lemma": "Λίβανος",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Laban - white (milk) vs Lebanon - mountain named from 'white' (whiteness of snow/chalk), shared Semitic root"
+  },
+  {
+    "pair_id": "GRC_0409",
+    "arabic_root": "شمت",
+    "target_lemma": "σημειωμάτων",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic naming and Greek notes/markings share a clear signifying-recording core."
+  },
+  {
+    "pair_id": "GRC_0410",
+    "arabic_root": "رسخ",
+    "target_lemma": "αἱρεσιάρχης",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Firm establishment and rooted knowledge plausibly deepen into a doctrinal school leader."
+  },
+  {
+    "pair_id": "GRC_0411",
+    "arabic_root": "العتق",
+    "target_lemma": "καταλυτικά",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "العتق = freeing, emancipation (عتيق = freed; مولى عتاقة = freedman, emancipated slave). καταλυτικός = able to dissolve, able to end/undo. Both concepts center on the dissolution of bonds — العتق is specifically the loosening of the bond of slavery, καταλύω is loosening/dissolving in general. The semantic core of 'breaking/loosening a binding constraint' is directly shared."
+  },
+  {
+    "pair_id": "GRC_0412",
+    "arabic_root": "دخس",
+    "target_lemma": "δέχεσθαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "A joint or tightly linked mail fits receiving/holding together more clearly."
+  },
+  {
+    "pair_id": "GRC_0413",
+    "arabic_root": "صقلب",
+    "target_lemma": "Σκλάβος",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic صقلاب refers to Slav/red-haired strong-eating; Greek Σκλάβος is 'Slav'. Direct ethnonym match; Arabic preserves Greek/Byzantine ethnic term"
+  },
+  {
+    "pair_id": "GRC_0414",
+    "arabic_root": "الطهثه",
+    "target_lemma": "λήθετε",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic denotes weak-mindedness despite large size, and λήθετε relates to forgetting/mental lapse; both share a core of impaired cognition."
+  },
+  {
+    "pair_id": "GRC_0415",
+    "arabic_root": "سحا",
+    "target_lemma": "σύκχος",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic peel or outer layer aligns reasonably with Greek shoe or sock as an external covering."
+  }
+]

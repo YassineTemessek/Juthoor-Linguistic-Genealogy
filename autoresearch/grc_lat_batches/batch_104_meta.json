@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0832",
+    "arabic_root": "التفن",
+    "target_lemma": "τίφινος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic التفن: filth/dirt. Greek τίφινος: of einkorn wheat. Dirt and grain chaff are both fine particulate matter from threshing — possible mafahim connection through agricultural waste."
+  },
+  {
+    "pair_id": "GRC_0833",
+    "arabic_root": "التليث",
+    "target_lemma": "τελέθω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic التليث: a type of plant from saline ground. Greek τελέθω: to come around (of a season). Seasonal plants that return/bloom — the plant's appearance marks the season's coming. Plausible mafahim link."
+  },
+  {
+    "pair_id": "GRC_0834",
+    "arabic_root": "الثلج",
+    "target_lemma": "θέλγω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الثلج: snow, also 'heart settled/calmed' (ثَلَجَتْ نفسي = my soul found peace). Greek θέλγω: to charm/enchant/bewitch. Both express a calming/stilling of the soul — snow cools and calms, charm bewitches and stills. Mafahim connection through 'stilling the soul.'"
+  },
+  {
+    "pair_id": "GRC_0835",
+    "arabic_root": "الجلبار",
+    "target_lemma": "Γαλάβριοι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الجلبار: scabbard of a sword or its edge. Greek Γαλάβριοι: ancient Illyrian tribe in Kosovo. Tribe name and sword-scabbard — if the tribe were known as weapon-carriers, possible ethnonym from weapon-term. Speculative."
+  },
+  {
+    "pair_id": "GRC_0836",
+    "arabic_root": "الحتر",
+    "target_lemma": "χύτρα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الحتر: tightening/fastening, also feeding (اطعام), also a small amount. Greek χύτρα: earthen pot for boiling. Pots for cooking/feeding — the Arabic 'feeding' sense connects to Greek cooking vessel. Faint mafahim."
+  },
+  {
+    "pair_id": "GRC_0837",
+    "arabic_root": "الازفل",
+    "target_lemma": "ἐπιζάφελος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الازفل = anger and sharpness (الغضب والحدة); also a crowd/group (الأزفلى). Greek ἐπιζάφελος = vehement, violent, furious (intensified form of ζάφελος). Both Arabic الغضب/حدة and Greek ἐπιζάφελος share a core of intense violent force/fury. The Arabic lexical form (ازفل) may relate to the same Semitic-Greek contact zone that produced this intensity vocabulary."
+  },
+  {
+    "pair_id": "GRC_0838",
+    "arabic_root": "الذيفان",
+    "target_lemma": "ῥοδοδάφνη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: deadly poison (the lethal substance). Greek: oleander (a poisonous plant). Both sit in the semantic field of deadly/toxic substances. Plausible mafahim link: poison-carrying plant."
+  },
+  {
+    "pair_id": "GRC_0839",
+    "arabic_root": "الربيخ",
+    "target_lemma": "ὀροβάγχη",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: large saddle; also a woman who loses consciousness during intercourse. Greek: dodder (Cuscuta) — a parasitic plant that strangles/chokes other plants. Both masadiq senses: heavy attachment/parasitic clinging. Plausible plant-adjacent connection."
+  }
+]

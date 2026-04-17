@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0224",
+    "arabic_root": "العكنه",
+    "target_lemma": "ἑλίκοιν",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'wrinkled/folded belly' matches Greek 'helix/spiral' well through the shared core of folds and coils."
+  },
+  {
+    "pair_id": "GRC_0225",
+    "arabic_root": "غمل",
+    "target_lemma": "Γάμαλα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic ghamal = accumulated (trees/clouds); Greek Gamala = Gamla in Golan Heights, Semitic place name. Shared Semitic substrate for place name plausible."
+  },
+  {
+    "pair_id": "GRC_0226",
+    "arabic_root": "سطح",
+    "target_lemma": "εὐστόχοις",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Greek 'well-aimed' links clearly to Arabic slaughter/victim through striking the target and the result."
+  },
+  {
+    "pair_id": "GRC_0227",
+    "arabic_root": "خضرف",
+    "target_lemma": "παχύδερμος",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic describes a large fleshy woman, which aligns clearly with the Greek idea of thick-skinned or thick-bodied form."
+  },
+  {
+    "pair_id": "GRC_0228",
+    "arabic_root": "سحب",
+    "target_lemma": "σκάφη",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic eating and drinking strongly fit a bowl or basin as the vessel that receives drink or food."
+  },
+  {
+    "pair_id": "GRC_0229",
+    "arabic_root": "مشج",
+    "target_lemma": "μίσγω",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Mashaj - to mix between two vs 'to mix' - direct match on mixing"
+  },
+  {
+    "pair_id": "GRC_0230",
+    "arabic_root": "القنعاث",
+    "target_lemma": "λευκάκανθα",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "combined",
+    "original_reasoning": "Arabic 'hairy' and Greek 'thistle' meet through a rough spiny-hairy surface concept."
+  },
+  {
+    "pair_id": "GRC_0231",
+    "arabic_root": "قرضم",
+    "target_lemma": "κάρδαμον",
+    "lang": "grc",
+    "original_score": 0.7,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic qirdim = 'pomegranate peel used for tanning; one who grabs'; Greek = 'garden cress/cardamom'. Clear Mediterranean loanword connection (cardamom was traded across Arabia)."
+  }
+]

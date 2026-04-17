@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0480",
+    "arabic_root": "جعثر",
+    "target_lemma": "ἐγκαθιδρύομαι",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "'Gather/collect' can drift toward 'set in place, establish' through arranging things into position."
+  },
+  {
+    "pair_id": "GRC_0481",
+    "arabic_root": "الحوه",
+    "target_lemma": "γλήχων",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Darkness inclining to green can drift toward naming a green aromatic herb; color-to-plant is plausible."
+  },
+  {
+    "pair_id": "GRC_0482",
+    "arabic_root": "ذاح",
+    "target_lemma": "δέχεται",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "Arabic inflating a skin evokes receiving or taking in, giving a plausible receive chain."
+  },
+  {
+    "pair_id": "GRC_0483",
+    "arabic_root": "شفت",
+    "target_lemma": "σαφέστατα",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "ظهور الشيء وخروجه للعين يمكن أن ينجرف إلى معنى الوضوح والجلاء."
+  },
+  {
+    "pair_id": "GRC_0484",
+    "arabic_root": "الجاثليق",
+    "target_lemma": "λογοθέτης",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "الجاثليق رئيس ديني، وλογοθέτης صاحب منصب رسمي؛ كلاهما يدل على صاحب رتبة ووظيفة عليا."
+  },
+  {
+    "pair_id": "GRC_0485",
+    "arabic_root": "الجزاء",
+    "target_lemma": "λογίζομαι",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "جزاء as repayment or settling a due can drift toward reckoning or accounting."
+  },
+  {
+    "pair_id": "GRC_0486",
+    "arabic_root": "الطرق",
+    "target_lemma": "λειτουργέω",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "One Arabic masdaq is 'his craft/profession', and λειτουργέω is to perform a service or public work; both center on carrying out a function."
+  },
+  {
+    "pair_id": "GRC_0487",
+    "arabic_root": "ارمعن",
+    "target_lemma": "ὁρμώμενοι",
+    "lang": "grc",
+    "original_score": 0.56,
+    "original_method": "combined",
+    "original_reasoning": "سال gives a surge or rushing motion, which can drift into Greek rushing onward."
+  }
+]

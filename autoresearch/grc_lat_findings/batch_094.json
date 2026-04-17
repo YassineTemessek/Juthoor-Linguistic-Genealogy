@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0752",
+    "finding": "path_found",
+    "semantic_journey": "Arabic thant = stink, decay, putrid odor. Greek Thanate = vocative of Thanatos = Death. Core: death and decay. Death produces decay; decay produces the smell of death. Arabic encodes decay-smell; Greek encodes death-personification. 1-step drift: decay-smell -> death-as-decay-process.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic decay/stink and Greek Death share the death-and-decay semantic field; Arabic preserves physical decomposition, Greek preserves the personification."
+  },
+  {
+    "pair_id": "GRC_0753",
+    "finding": "path_found",
+    "semantic_journey": "Arabic saat = the two sides of the throat/windpipe (upper torso front). Greek stethea = chests, breasts (plural of stethos = chest/breast). Core: upper-torso anatomical region. Both are adjacent anatomical regions of the upper front torso. 1-step specialization: throat-area -> broader-chest-region.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sides-of-the-throat and Greek chests/breasts are adjacent anatomical regions of the upper body front."
+  },
+  {
+    "pair_id": "GRC_0754",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khathara = mixedness, thick remainder. Greek ikhthyorroos = swarming with fish. Crowded-mixture and fish-swarming are both crowding concepts but in different domains. Getting from material-mixedness to fish-swarming requires 3+ steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic material mixedness and Greek fish-swarming are both crowding concepts but in different domains requiring 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0755",
+    "finding": "path_found",
+    "semantic_journey": "Arabic kathura = to be many, abundant (kathir = many/much). Greek katakresis = overuse, analogical extension beyond proper application. Core: excess beyond proper limits. 1-step drift: abundant/many -> used-in-excess/overused.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic abundance/many and Greek overuse/extended-use share the concept of excess beyond proper limits."
+  },
+  {
+    "pair_id": "GRC_0756",
+    "finding": "no_path",
+    "semantic_journey": "Arabic karbara = an unexplained root (per Ibn Jinni, meaning unknown). Greek Kerberos = Cerberus, three-headed hound of Hades (mythological proper name). An unexplained Arabic root and a Greek mythological proper name cannot form a valid cognate. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Cerberus is a Greek mythological proper name; an unexplained Arabic root cannot form a valid cognate with it."
+  },
+  {
+    "pair_id": "GRC_0757",
+    "finding": "path_found",
+    "semantic_journey": "Arabic fazz = restless, startled, fleeing in panic. Greek phyza = panicked rout from battle (mass flight). Core: panic-flight. 1-step generalization: individual-panic-flight -> collective-panicked-rout.",
+    "journey_type": "generalization",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic panicked-individual-fleeing and Greek panicked-rout share panic-flight; Arabic is individual, Greek is collective."
+  },
+  {
+    "pair_id": "GRC_0758",
+    "finding": "no_path",
+    "semantic_journey": "Arabic saranj = a fine crafted object. Greek saukron = delicate, light, thin (adjective). A crafted object noun and a quality adjective are in different categories. No valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic fine crafted object and Greek delicate/light adjective are in different categories with no derivation path."
+  },
+  {
+    "pair_id": "GRC_0759",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-saqb = offspring of a she-camel (camel-calf). Greek blosko = to come, to go (general motion verb). Camel-calf noun and general motion verb share no plausible 2-step path. Birth as coming-forth does not generalize to a general motion verb.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic camel-calf (offspring) and Greek general motion verb share no plausible 2-step semantic path."
+  }
+]

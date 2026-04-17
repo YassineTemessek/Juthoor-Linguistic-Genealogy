@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0408",
+    "finding": "path_found",
+    "semantic_journey": "Arabic لبن = milk; also white; also bricks (لبنة = mud brick, perhaps because of white clay). Greek Λίβανος = Lebanon (the mountain range, named for its white snow-covered peaks, from Semitic לָבָן laban = white). Arabic لبن (white/milk) and Greek Λίβανος share the Semitic root L-B-N meaning white/whiteness. Lebanon was named for the whiteness of its snowy peaks. This is a confirmed material culture/geographic cognate — the whiteness concept traveled with the Semitic root.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic لبن (white/milk) and Greek Λίβανος (Lebanon = white mountain) share the Semitic L-B-N whiteness root — Lebanon was named for its snow-white peaks."
+  },
+  {
+    "pair_id": "GRC_0409",
+    "finding": "no_path",
+    "semantic_journey": "Arabic شمت = to name, designate, give a name; also to gloat/rejoice at another's misfortune (two very different meanings). Greek σημείωμα = a note, mark, memorandum (from σημεῖον = sign, mark). The original reasoning maps naming to marking/noting. While naming and marking are adjacent (a name is a kind of mark), the path requires: naming -> giving a sign -> making a written note. The Arabic root primarily means gloating (شمت is predominantly used for rejoicing at others' misfortune), not naming. The naming meaning is secondary. No reliable path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic شمت primarily means gloating, not naming; and even the naming sense requires 2+ steps to reach written notes/markings."
+  },
+  {
+    "pair_id": "GRC_0410",
+    "finding": "no_path",
+    "semantic_journey": "Arabic رسخ = to be firmly rooted, deeply established (of knowledge or a foundation). Greek αἱρεσιάρχης = leader of a sect/heresy (from αἵρεσις + ἀρχή = sect + leadership). The original reasoning: firmly established knowledge -> doctrinal school leader. This requires: firm knowledge -> established teaching -> sect -> leader of sect. 4+ steps. αἱρεσιάρχης is also a very late Greek compound with transparent etymology. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic rootedness/firm establishment and Greek sect-leader require 4+ drift steps — no genuine path."
+  },
+  {
+    "pair_id": "GRC_0411",
+    "finding": "path_found",
+    "semantic_journey": "Arabic العتق = freeing from slavery, emancipation (breaking bonds of slavery). Greek καταλυτικός = able to dissolve, able to undo/end (from καταλύω = to dissolve, break down). Both encode the DISSOLUTION OF BONDS: Arabic = specifically freeing from slavery (breaking human bondage); Greek = the capacity to dissolve any kind of bond/binding. The step: specific bond-breaking (emancipation) -> general capacity to dissolve bonds. A 1-step generalization.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic emancipation/freeing (العتق = breaking slavery bonds) and Greek bond-dissolving capacity (καταλυτικός) share the core of undoing a binding constraint."
+  },
+  {
+    "pair_id": "GRC_0412",
+    "finding": "no_path",
+    "semantic_journey": "Arabic دخس = joint, articulation point where body parts link together (a tight connection). Greek δέχεσθαι = to receive, accept. The original reasoning maps tight linking to receiving. But a body joint (structural connection) and the act of receiving/accepting are in entirely different domains — structural anatomy vs transaction. No credible path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic body joint/articulation and Greek receiving/accepting are structurally and semantically unrelated."
+  },
+  {
+    "pair_id": "GRC_0413",
+    "finding": "no_path",
+    "semantic_journey": "Arabic صقلاب/صقلب = Slav (the Slavic peoples). Greek Σκλάβος = Slav. Both are the same ethnonym. This is a SHARED LOANWORD case: the Greek word Σκλάβος and the Arabic صقلاب both borrowed from the same Medieval Latin/Byzantine source (sclavus/Σκλάβος, from the Slavic tribal name). Arabic borrowed from Byzantine Greek (or Latin). This is not an Arabic-origin cognate — it is Arabic borrowing from Greek.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic صقلاب is borrowed from Byzantine Greek Σκλάβος — this is Arabic borrowing from Greek, not an independent Arabic cognate."
+  },
+  {
+    "pair_id": "GRC_0414",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الطهثه = weak-minded despite large body (mental impairment in a large-bodied person). Greek λήθετε = you forget/you are hidden (from λήθω = to escape notice, forget). The original reasoning maps impaired cognition to forgetting. But mental weakness (general intellectual impairment) and forgetting (specific memory lapse) are different: one is chronic incapacity, the other a specific event. Also the connection large-body + weak-mind to forgetting is not a 1-2 step path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic weak-mindedness (cognitive impairment) and Greek forgetting/being-hidden are different cognitive concepts requiring 2+ steps."
+  },
+  {
+    "pair_id": "GRC_0415",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سحا = to peel, scrape off the outer layer (to remove surface/skin). Greek σύκχος = a kind of shoe or sock (foot-covering). The original reasoning maps outer layer to external covering. But peeling/scraping (removing a surface) and wearing a foot-covering (adding a covering) are opposite actions. Peel off vs put on. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic peeling/removing an outer layer and Greek foot-covering (putting on) are opposite actions around the covering concept."
+  }
+]

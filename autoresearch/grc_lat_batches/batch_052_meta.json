@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0416",
+    "arabic_root": "دخمر",
+    "target_lemma": "διαδέχομαι",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "ملأه and ستره both support taking in or covering over, a decent path to receive."
+  },
+  {
+    "pair_id": "GRC_0417",
+    "arabic_root": "سدل",
+    "target_lemma": "σάνδαλον",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "combined",
+    "original_reasoning": "Arabic trailing or hanging cloth plausibly meets Greek sandal through the notion of something hanging below on the body."
+  },
+  {
+    "pair_id": "GRC_0418",
+    "arabic_root": "التيه",
+    "target_lemma": "λήθετε",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "التيه: في مواضع الحيرة / مفازة تيهاء تحيّر سالكوها (in places of bewilderment / a desert where travelers are confused/lost). λήθω=to be hidden, to cause forgetfulness, escape notice. Being lost in a desert = disappearing from knowledge = λήθη (oblivion). The lost-forgotten-hidden cluster is tightly connected."
+  },
+  {
+    "pair_id": "GRC_0419",
+    "arabic_root": "العكرش",
+    "target_lemma": "ἑλίχρυσος",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic gloss identifies a plant; Greek is also a plant. This is direct botanical overlap, though not species-identical."
+  },
+  {
+    "pair_id": "GRC_0420",
+    "arabic_root": "صاصل",
+    "target_lemma": "σέσελις",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic صأصل/صوصلاء is a plant name; σέσελις is hartwort plant. Both are plant names with similar phonetics, plausible borrowing"
+  },
+  {
+    "pair_id": "GRC_0421",
+    "arabic_root": "كفن",
+    "target_lemma": "κνάφος",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Kafan - spinning wool/burial shroud vs 'fuller's teasel, used for cloth carding' - shared wool/cloth processing"
+  },
+  {
+    "pair_id": "GRC_0422",
+    "arabic_root": "الشفلح",
+    "target_lemma": "διαλυσίφιλα",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic describes coarse slack physicality; the Greek form plausibly preserves a loosened or relaxed core."
+  },
+  {
+    "pair_id": "GRC_0423",
+    "arabic_root": "الاسكف",
+    "target_lemma": "σκάφη",
+    "lang": "grc",
+    "original_score": 0.6,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الإسكاف: shoemaker/craftsman. Greek σκάφη: bowl/tub/basin. Both involve shaped hollowed objects worked by a craftsman. The Arabic root relates to crafting with tools; σκάφη (from σκάπτω = to dig/hollow) is a hollowed vessel. Shared craft-tool semantic."
+  }
+]

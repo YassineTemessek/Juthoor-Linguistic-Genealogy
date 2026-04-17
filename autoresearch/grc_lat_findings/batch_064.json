@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0512",
+    "finding": "no_path",
+    "semantic_journey": "Arabic يبرين = Yabrin (a place name in Arabia near Aleppo). Greek Βέροιαν = Beroia/Berea (a proper city name). Both are proper place names. Proper names are excluded by methodology. Even if these are the same Semitic toponym, matching proper place names to each other is not a lexical discovery.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Both يبرين and Βέροιαν are proper place names — proper names are excluded from cognacy analysis."
+  },
+  {
+    "pair_id": "GRC_0513",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الشرنتي = a bird (a specific bird species name). Greek λαλίστερος = more talkative/chattering (comparative adjective). A bird name and an adjective for talkativeness require: bird -> birds chatter -> chattering -> more chattering. 3+ steps. Also birds and adjectives are different grammatical and semantic categories.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "A specific bird name and a comparative adjective for talkativeness are different categories requiring 3+ steps."
+  },
+  {
+    "pair_id": "GRC_0514",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الآمص = food made from calf meat with skin. Greek λαιμός = throat, gullet (the anatomical tube food passes through). The original reasoning: food passes through a throat. But a specific food dish and the throat are different: one is a substance, the other is an anatomical conduit. The path food -> eating -> throat requires: substance -> the act of consumption -> the body part involved. 3 steps. Also this is the same Arabic word as GRC_0392 (already rejected).",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "A specific food dish and the throat are cause and conduit respectively — not semantic cognates, 3+ steps apart."
+  },
+  {
+    "pair_id": "GRC_0515",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حقص = to drive away, repel (pushing something away). Greek χάσκω = to gape, open wide (an involuntary opening motion). The original reasoning maps driving away to creating an opening. But repelling/pushing away and gaping open are entirely different actions in different directions — one pushes outward from a position, the other opens inward/outward by parting. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic driving-away/repelling and Greek gaping-open are different actions with no credible 1-2 step path."
+  },
+  {
+    "pair_id": "GRC_0516",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الخضا = crumbling/breaking apart of moist matter, the way wet things disintegrate. Greek οὐλοχύται = barley grains poured/scattered over a sacrificial victim (ritual scattering of barley). Both involve GRANULAR MATTER BEING SCATTERED/DISTRIBUTED: Arabic = crumbling moist matter (breaking into grains); Greek = grain specifically scattered in ritual. A 1-step specialization: crumbling into granules -> the ritual scattering of grains.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic crumbling of moist matter into granules and Greek ritual grain-scattering share the core of granular matter being broken and distributed."
+  },
+  {
+    "pair_id": "GRC_0517",
+    "finding": "no_path",
+    "semantic_journey": "Arabic سرح = to go forth freely, to let livestock roam/graze; to set free (of animals). Greek εἰσέρχομαι = to enter into, to come in (from εἰς + ἔρχομαι = into + come). The original reasoning maps roaming freely to entering through broader directed movement. But going forth freely (outward, expansive movement) and entering into (inward, directed movement) are opposite directions of movement. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic going-forth/roaming-freely (outward) and Greek entering-into (inward) are opposite directions of movement — not a semantic path."
+  },
+  {
+    "pair_id": "GRC_0518",
+    "finding": "path_found",
+    "semantic_journey": "Same as GRC_0505 (same Arabic root صبب = to pour into). Greek ἐσβιβάσας = having caused to go into (aorist participle of εἰσβιβάζω). Both encode CAUSATIVE DIRECTED ENTRY: Arabic = pouring liquid into; Greek = causing to go into. Same analysis as GRC_0505. Valid 1-step generalization from liquid to general causative entry.",
+    "journey_type": "generalization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Same as GRC_0505: Arabic pouring-into and Greek causing-to-go-into share the causative-entry core."
+  },
+  {
+    "pair_id": "GRC_0519",
+    "finding": "no_path",
+    "semantic_journey": "Arabic اصخات = the calming/subsiding of swelling; recovery from inflammation. Greek σχέτε = hold! (2nd plural aorist imperative of ἔχω). The original reasoning maps subsiding/settling to holding in a settled state. But calming of inflammation (physiological resolution) and the command to hold/keep (active directive) are different: one is involuntary physiological process, the other is volitional command. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic inflammatory subsiding (physiological process) and Greek hold!-command (active directive) are different in nature and direction."
+  }
+]

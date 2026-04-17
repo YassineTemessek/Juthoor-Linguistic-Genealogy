@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0648",
+    "finding": "no_path",
+    "semantic_journey": "Arabic malakha = to tear out; related to disturbance/madness in some contexts. Greek melankolia = melancholy (melas=black + khole=bile). Melankolia is a transparent Greek medical compound from humoral theory with no Arabic semantic input. No path from tearing-out to humoral melancholy.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Greek melankolia is a transparent Greek humoral-theory compound; Arabic tearing-out has no path to it."
+  },
+  {
+    "pair_id": "GRC_0649",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qakha = insides rotted from disease. Greek kakektes = in bad habit of body, wasted (kakos=bad + hexis=bodily condition). Core: disease wasting the body from within. 1-step drift: internal disease-rotting -> externally visible wasted condition.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic internal disease-rotting and Greek bad-bodily-state/wasting share the core of disease destroying the body from within."
+  },
+  {
+    "pair_id": "GRC_0650",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khatala = to smear with liquid. Greek katakhutlon = something poured over / a pouring-vessel. Smearing and pouring are different liquid-application methods. No valid 2-step action-to-instrument path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic smearing-with-liquid and Greek pouring-vessel describe different liquid-application methods with no valid path."
+  },
+  {
+    "pair_id": "GRC_0651",
+    "finding": "no_path",
+    "semantic_journey": "Arabic kadasha = to inform partly, to drive animals. Greek skedastheis = having been scattered/dispersed. Partial informing and scattering are unrelated concepts. Driving animals does not mean scattering them.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Partial informing or driving animals has no semantic path to scattered/dispersed in 2 steps."
+  },
+  {
+    "pair_id": "GRC_0652",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ghundar = a fat plump youth. Greek Gindaros = Gindarus, a place in northern Syria (proper name). A physical description of a fat youth does not plausibly name a fortified settlement. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic description of a fat youth does not plausibly originate a Syrian place-name; proper name exclusion applies."
+  },
+  {
+    "pair_id": "GRC_0653",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-asqafa = intended good but failed to do it (failed vigilance/incomplete effort). Greek alaoskopie = useless/blind watching (a-privative + laos + skope). Both encode deficient/failed vigilance: intention without execution (Arabic) vs watching without seeing (Greek). 1-step shared concept: deficient vigilance.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic failed-good-intention and Greek blind-useless-watching both encode deficient vigilance as a shared abstract concept."
+  },
+  {
+    "pair_id": "GRC_0654",
+    "finding": "no_path",
+    "semantic_journey": "Arabic shakhama = milk souring/changing smell (quality change). Greek skhemassi = dative plural of skhema = forms, shapes, appearances. Milk souring and external forms/shapes share no semantic path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Milk souring (quality change) and forms/shapes (external appearance) are entirely different semantic domains."
+  },
+  {
+    "pair_id": "GRC_0655",
+    "finding": "no_path",
+    "semantic_journey": "Arabic rabwa = breath in chest, panting, chest-swelling. Greek arabeo = to clatter, rattle. Panting/chest-swelling is respiratory; rattling/clattering is acoustic impact. The link requires 3+ steps. Greek arabeo appears onomatopoeic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic chest-swelling/panting and Greek armor-rattling are unrelated; Greek arabeo appears onomatopoeic, not from Semitic chest-breath."
+  }
+]

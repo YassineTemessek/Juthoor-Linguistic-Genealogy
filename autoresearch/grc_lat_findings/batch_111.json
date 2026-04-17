@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "LAT_0888",
+    "finding": "no_path",
+    "semantic_journey": "Arabic yizr = a place in Khorasan known for rice cultivation. Latin oryza = rice (from Greek oryza, from an Eastern source, likely Old Iranian or Sanskrit vrihi via Persian). The Arabic yizr is a toponym, a place name, not a word for rice. The Latin oryza is a loanword from Greek, which took the rice-word from an Eastern language. The connection proposed is: place where rice grows -> word for rice. This is a 3-step geographic metaphor at best. The actual etymology of oryza runs through Greek -> Eastern language (Iranian/Indian root), with no Arabic place-name in the chain.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic yizr is a toponym (place where rice grew); Latin oryza came from Greek from an Eastern source; a place-name is not a word-origin."
+  },
+  {
+    "pair_id": "LAT_0889",
+    "finding": "no_path",
+    "semantic_journey": "Arabic hadram = Hadramawt, the ancient South Arabian region (same root as LAT_0880). Latin Hadrumetinus = of Hadrumetum, a Phoenician city in North Africa. These are two different Semitic proper place names that happen to share consonantal patterns because both are Semitic. They are not the same place and not directly connected. Both are proper names.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Duplicate of LAT_0880 analysis: Hadrumetum (Phoenician North Africa) and Hadhramaut (South Arabian) are different Semitic proper nouns."
+  },
+  {
+    "pair_id": "LAT_0890",
+    "finding": "no_path",
+    "semantic_journey": "Arabic batala (root b-t-l) = to cut off, separate, sever; also batul = virgin (one cut off from men). Latin betulla = birch tree. The original reasoning proposes: birch bark peels in strips, so the cutting/separating root connects to the birch. This requires: cutting/severing -> peeling -> birch tree with peeling bark. This is a 3-step chain. Moreover, betulla is the Latin name for the birch tree, likely from a Gaulish substrate word (the birch was a Celtic cultural tree). The Latin word is almost certainly from a Celtic/Gaulish source, not from Arabic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic batala (to cut off) reaching Latin betulla (birch) via bark-peeling requires 3+ steps; betulla is likely from Gaulish, not Semitic."
+  },
+  {
+    "pair_id": "LAT_0891",
+    "finding": "no_path",
+    "semantic_journey": "Arabic masata (root m-s-t) = to extract liquid by pressing/squeezing (from intestines or womb), to draw out moisture. Latin mistum (from misceo) = mixed, particularly wine mixed with water, past participle of mixing. Extracting by squeezing vs mixing: these are different processes. Squeezing extracts a pure substance from a mass; mixing combines two substances. The semantic gap between these two actions (extract vs combine) is large and not bridgeable in 2 steps. Latin misceo has its own transparent etymology. No path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic masata (to extract by squeezing) and Latin mistum (mixed, past participle of mixing) describe opposite processes: extraction vs combination."
+  },
+  {
+    "pair_id": "LAT_0892",
+    "finding": "no_path",
+    "semantic_journey": "Arabic barfatty = a village near a river/fortress (possibly Persian-influenced toponym). Latin/Medieval Latin berfredus = a wooden tower or watchtower on a wall (also belfry, from Germanic bergfrid = mountain-peace or protection-tower). The Latin berfredus is from Germanic (berg = mountain/fortress + frid = peace/protection). Arabic barfatty is a toponym of unclear origin. These are not cognates: the Latin comes from Germanic, and the Arabic is a proper place name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Latin berfredus (belfry) is from Germanic bergfrid; Arabic barfatty is a toponym; no Semitic-Latin cognate relationship."
+  },
+  {
+    "pair_id": "LAT_0893",
+    "finding": "path_found",
+    "semantic_journey": "Arabic hashada (root h-sh-d) = to gather/assemble quickly, to respond urgently to a call/summons, to rally people together. Latin hutesium = hue and cry, the legal obligation to pursue criminals collectively. Step 1: urgent mass assembly in response to summons -> the legal institution of urgent collective pursuit. The Arabic root encodes the concept of urgent communal rallying in response to a call. Latin hutesium encodes exactly this: the obligation to respond to an outcry by joining the pursuit. The cultural institution (everyone must join the chase when called) matches the Arabic root concept directly.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic hashada (to urgently assemble/rally in response to a call) maps onto Latin hutesium (hue and cry, obligatory communal pursuit) via 1-step cultural semantic drift."
+  },
+  {
+    "pair_id": "LAT_0894",
+    "finding": "path_found",
+    "semantic_journey": "Arabic batala (root b-t-l) = hero, champion, brave warrior; also = to be brave and courageous; butula = heroism. Latin battualia = military exercises, combat training, gladiatorial practice (from battuere = to beat/strike). Step 1: hero/champion -> combat practice. The Arabic encodes the person (hero) and quality (bravery); the Latin encodes the activity (combat drills that produce heroes). However, battuere is transparently from a Latin/Gaulish root meaning to strike, and battualia is battle-training. The connection between the warrior-concept and the training-for-war concept is a 1-step semantic shift from agent to activity.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic batala (hero/warrior) and Latin battualia (combat training) share the warrior-combat semantic field; hero -> combat-practice is a 1-step shift from person to activity."
+  },
+  {
+    "pair_id": "LAT_0895",
+    "finding": "no_path",
+    "semantic_journey": "Arabic tabbat = root t-b-t relating to perishing and ruin (Quran 111: tabbat yada = may the hands perish). Tevet/Tebeth = the 10th month of the Hebrew calendar (appearing in Esther 2:16 as Tevet). The Hebrew month name Tevet is an Akkadian-Babylonian loanword (Tebet/Tabitu in Babylonian = the month of immersion/sinking, related to the rainy/muddy season). Arabic tabbat (to perish/be ruined) and the Babylonian month-name Tebet are unrelated words sharing only consonant pattern. The Latin tebeth is a transliteration of the Hebrew calendar month, itself from Babylonian. No cognate.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Latin tebeth is a transliteration of Hebrew Tevet, itself from Babylonian Tebet (month of immersion); unrelated to Arabic tabbat (perishing/ruin)."
+  }
+]

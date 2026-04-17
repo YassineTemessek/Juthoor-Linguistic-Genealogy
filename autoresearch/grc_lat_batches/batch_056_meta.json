@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0448",
+    "arabic_root": "افظي",
+    "target_lemma": "φύζα",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Arabic womb can plausibly extend to a pouch, cavity, or enclosing vessel, giving a workable conceptual path."
+  },
+  {
+    "pair_id": "GRC_0449",
+    "arabic_root": "ارمعن",
+    "target_lemma": "ὁρμήν",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "The masdaq of flowing aligns plausibly with an onset, rush, or impulse."
+  },
+  {
+    "pair_id": "GRC_0450",
+    "arabic_root": "الحنث",
+    "target_lemma": "λεχθέντων",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "حنث often concerns breaking what was sworn or said, so there is a real bridge from oath-bound speech to things said."
+  },
+  {
+    "pair_id": "GRC_0451",
+    "arabic_root": "السنه",
+    "target_lemma": "λυσαλγῶν",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "A harsh barren year naturally maps to distress and suffering, giving a solid hardship-to-pain chain."
+  },
+  {
+    "pair_id": "GRC_0452",
+    "arabic_root": "حثر",
+    "target_lemma": "ἰχθυόρροος",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "تحبب 'become grainy' points to clustered abundance, which plausibly matches 'swarming with fish'."
+  },
+  {
+    "pair_id": "GRC_0453",
+    "arabic_root": "الاسف",
+    "target_lemma": "βλάσφημος",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Wrath, offense, and abusive speech lie in one moral-emotive field, so a conceptual drift is plausible."
+  },
+  {
+    "pair_id": "GRC_0454",
+    "arabic_root": "زاج",
+    "target_lemma": "Ζεῦγμα",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Arabic زاج is stirring people against each other, while Greek Zeugma is a yoking/joining notion behind the place-name; both involve bringing sides into connection."
+  },
+  {
+    "pair_id": "GRC_0455",
+    "arabic_root": "الازاذ",
+    "target_lemma": "λάζευ",
+    "lang": "grc",
+    "original_score": 0.58,
+    "original_method": "combined",
+    "original_reasoning": "Both sides can be read as preserved name-material rather than lexical meaning; onomastic continuity is plausible."
+  }
+]

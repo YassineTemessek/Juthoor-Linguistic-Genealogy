@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0768",
+    "finding": "path_found",
+    "semantic_journey": "Arabic kasara = to break, crush, shatter. Greek kresera = a flour sieve. Breaking grain and sieving grain are sequential stages of grain-processing. 2-step material-culture: breaking-grain -> grinding -> sieving-the-result.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic breaking/crushing and Greek flour-sieve are sequential stages of the same grain-processing operation."
+  },
+  {
+    "pair_id": "GRC_0769",
+    "finding": "no_path",
+    "semantic_journey": "Arabic dukhan = smoke. Greek andikha = asunder, in twain (directional adverb). Smoke dispersing and the directional asunder-adverb share no semantic path. Greek andikha encodes two-way separation, not general dispersion.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic smoke/dispersing and Greek asunder-adverb (two-way separation) share no plausible semantic path."
+  },
+  {
+    "pair_id": "GRC_0770",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-shafaq = compassionate caution, tender fear/concern. Greek dialysiphilou = of the love-dissolving. Protective-vigilance and love-dissolving are in different domains and actually opposite in sentiment. No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic compassionate caution and Greek love-dissolving are in different domains and semantically opposite."
+  },
+  {
+    "pair_id": "GRC_0771",
+    "finding": "path_found",
+    "semantic_journey": "Arabic dakhala = to enter, go into an interior. Greek dolikhaylos = long-tubed (dolikhos=long + aylos=pipe/tube). Core: interior passage. 2-step drift: entering-interior -> interior-passage -> long-interior-tube.",
+    "journey_type": "metaphorical_extension",
+    "confidence": "low",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic entering-an-interior and Greek long-tubed share the concept of an interior passage, with Greek specializing to a long tube."
+  },
+  {
+    "pair_id": "GRC_0772",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qanaab = greedy, ravenous. Greek pelekan = pelican. Greek pelekanos has its own etymology (pelekus=axe, from beak shape). The reasoning is circular (greedy -> pelican as big-eater -> pelican). No valid path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic greedy/ravenous and Greek pelican share big-eater image, but Greek pelekanos has its own axe-beak etymology."
+  },
+  {
+    "pair_id": "GRC_0773",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-katad = groups or clustered masses. Greek telikaytai = so great, of such magnitude. Clusters and magnitude-adjective so-great are in different categories requiring 3+ steps: clusters -> many -> so-many -> so-great.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic clustered-masses and Greek so-great magnitude are in different categories with no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0774",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-lamat = took away, went off with. Greek leleimmetha = we have been left (perfect passive of leipo). Both sides of a leaving event (taker vs remaindee). Negation-cognate possible but phonetics (l-m-t vs l-p) are too distant to support.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic going-off-with and Greek being-left-behind are opposite sides of leaving; negation-cognate insufficient with distant phonetics."
+  },
+  {
+    "pair_id": "GRC_0775",
+    "finding": "path_found",
+    "semantic_journey": "Arabic qisma = division, apportionment (dividing-and-allotting portions). Greek diakosmeo = to divide and marshal in order, to arrange systematically. Core: division and ordered arrangement. 1-step drift: dividing-and-allotting -> dividing-and-marshaling-in-order.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic division/apportionment and Greek dividing-and-marshaling share systematic division and ordered allotment."
+  }
+]

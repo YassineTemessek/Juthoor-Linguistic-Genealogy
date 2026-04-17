@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0784",
+    "arabic_root": "خوث",
+    "target_lemma": "ἰχθυώδης",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "خوث denotes fullness, and ἰχθυώδης means full of fish; the shared core is abundance or being filled."
+  },
+  {
+    "pair_id": "GRC_0785",
+    "arabic_root": "هدا",
+    "target_lemma": "εὗδε",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "هدا=calm/quiet (tahdi'a); εὗδε=sleep (imperative). Strong semantic match via sleep/calm"
+  },
+  {
+    "pair_id": "GRC_0786",
+    "arabic_root": "غرر",
+    "target_lemma": "Γέραρα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic gharr = crease/fold, ghurar = skin folds; Greek Gerara = place in Palestine. Semitic substrate place name (Gerar in Bible) possibly shared."
+  },
+  {
+    "pair_id": "GRC_0787",
+    "arabic_root": "حمله",
+    "target_lemma": "αἰχμαλόω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic includes being carried or borne; Greek is taking prisoner. Carrying away captives gives a plausible but less direct bridge than حمل."
+  },
+  {
+    "pair_id": "GRC_0788",
+    "arabic_root": "حمشه",
+    "target_lemma": "αἰχμάς",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic is thin-shanked or scant in flesh; Greek spear points are likewise slender and pointed. The bridge is concrete shape."
+  },
+  {
+    "pair_id": "GRC_0789",
+    "arabic_root": "دحمر",
+    "target_lemma": "διαδέχομαι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "ملأ/احتوى can drift toward receive or take in, giving a plausible container chain."
+  },
+  {
+    "pair_id": "GRC_0790",
+    "arabic_root": "حمطه",
+    "target_lemma": "εἰχόμεθα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic includes protector of the sanctuary; Greek is to have or hold. Protection can arise from holding or keeping, giving a plausible abstract bridge."
+  },
+  {
+    "pair_id": "GRC_0791",
+    "arabic_root": "سفسق",
+    "target_lemma": "σαφέσι",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "visible sword striations can extend to the idea of something plain and evident, hence 'clear'."
+  }
+]

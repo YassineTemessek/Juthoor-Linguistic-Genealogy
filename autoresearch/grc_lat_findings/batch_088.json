@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0704",
+    "finding": "no_path",
+    "semantic_journey": "Arabic khushnam = good name, good reputation. Greek euskhemosune = gracefulness, decorum (eu+skhema). Good reputation (social standing) and gracefulness (aesthetic quality) are adjacent in social-praise but semantically distinct. Reputation->grace requires 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic good-name/reputation and Greek gracefulness are adjacent but distinct social concepts with no valid 2-step path."
+  },
+  {
+    "pair_id": "GRC_0705",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qundaw = bad nourishment. Greek galaktoyn = of the two milks (dual genitive of gala). Bad-nourishment and specific milk-grammatical-form are on opposite sides with weak phonetic match. Negation-cognate frame alone insufficient.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic bad-nourishment and Greek milk-form are opposites with weak phonetic match; insufficient for cognate status."
+  },
+  {
+    "pair_id": "GRC_0706",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qami'l = buds or lumps (protrusions). Greek Lakmon = a mountain in Epirus (proper toponym). Proper name exclusion applies; Lakmon is a Greek mountain name.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Arabic buds/lumps and Greek mountain-name Lakmon share no plausible semantic derivation."
+  },
+  {
+    "pair_id": "GRC_0707",
+    "finding": "path_found",
+    "semantic_journey": "Arabic al-saym = hard, strong, compactly built (al-sulb al-shadid). Greek katalusimon = dissolvable, able to be dissolved. Genuine antonyms on the same structural-durability axis. Negation-cognate frame applies: Arabic preserves the compact/hard pole; Greek preserves the dissolvable pole.",
+    "journey_type": "negation_cognate",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic compactly-hard/solid and Greek dissolvable are antonyms on the same structural-durability axis, a valid negation-cognate pair."
+  },
+  {
+    "pair_id": "GRC_0708",
+    "finding": "path_found",
+    "semantic_journey": "Arabic shakiyya = remainder, residue (what is left after use). Greek stakte = oil of myrrh, distillate, what-drips-out (from stazo = to drip). Core concept: what-remains-after-processing. 1-step shared concept: Arabic leftover-remainder, Greek dripped-out-extract. Both are products remaining after processing.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic remainder/residue and Greek distillate/what-drips-out both encode what remains after an extractive process."
+  },
+  {
+    "pair_id": "GRC_0709",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-qawwa = being hit or cast at. Greek logkhion = a small spear-head. Being-struck (patient) and a spear-head (instrument) are in different semantic roles. No valid path from being-struck to weapon-tip.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic being-struck (patient) and Greek spear-head (instrument) are in different semantic roles with no derivation path."
+  },
+  {
+    "pair_id": "GRC_0710",
+    "finding": "no_path",
+    "semantic_journey": "Arabic daha = to spread out, extend (also intercourse). Greek dekhetai = receives, accepts, takes in. Spreading-out and receiving are directionally different (one acts outward, other accepts inward). No valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic spreading-out/extending and Greek receiving/accepting are directionally different with no valid derivation path."
+  },
+  {
+    "pair_id": "GRC_0711",
+    "finding": "path_found",
+    "semantic_journey": "Arabic kataha = wind striking with gravel, blowing/uncovering forcibly. Greek katakhusma = something poured/showered down (from katakheo). Core: material falling/pouring downward with force. 1-step drift: gravel-blown-down -> material-poured-down.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic wind-striking-with-gravel and Greek something-poured/showered-down share the core of material descending with force."
+  }
+]

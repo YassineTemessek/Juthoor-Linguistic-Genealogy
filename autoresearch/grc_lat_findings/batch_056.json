@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0448",
+    "finding": "no_path",
+    "semantic_journey": "Arabic افظي = womb, uterus (the female reproductive organ). Greek φύζα = a panic, rout, flight from battle (terrified fleeing). The original reasoning maps womb to pouch/cavity. But a womb and a rout/panic are in entirely different domains — anatomy vs military psychology. The original mentions 'enclosing vessel' as an intermediate, but womb -> pouch -> vessel -> panic requires 4+ steps with no natural connections.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic womb (anatomical) and Greek panic/rout (military-psychological) are entirely unrelated domains with no credible path."
+  },
+  {
+    "pair_id": "GRC_0449",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ارمعن = to flow swiftly, to rush/stream (of water or people flowing rapidly). Greek ὁρμήν = accusative of ὁρμή = an onset, rush, impulse, violent beginning of motion. Both encode SWIFT FORWARD RUSHING MOTION: Arabic = the act of flowing/rushing; Greek = the impulse/onset of a rush. A near-direct preservation of the rushing-motion concept. Arabic preserves the action; Greek preserves the initial impulse of that action.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic swift flowing/rushing (ارمعن) and Greek rush/onset/impulse (ὁρμή) directly share the concept of swift forward motion."
+  },
+  {
+    "pair_id": "GRC_0450",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحنث = breaking an oath, violating what was sworn; the sin of oath-breaking. Greek λεχθέντων = of things that were said (genitive plural aorist passive participle of λέγω). The original reasoning maps oath-breaking to things-said through speech. But breaking a sworn oath is not semantically related to things said in general. An oath is speech, but all speech is not an oath. Breaking an oath -> the broken oath -> what was said is: oath-specific violation -> generic speech act. 3 steps plus domain broadening.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic oath-breaking and Greek things-said are different aspects of speech — oath violation is not cognate with generic utterance."
+  },
+  {
+    "pair_id": "GRC_0451",
+    "finding": "no_path",
+    "semantic_journey": "Arabic السنة = a year of drought/hardship, a lean year. Greek λυσαλγῶν = genitive of λυσαλγής = relieving pain, pain-relieving (from λύω + ἄλγος = release + pain). The original reasoning maps harsh year to distress/suffering, which is valid, but Greek λυσαλγής means RELIEVING pain, not causing it. The original got the Greek meaning backwards — λυσ- is the releasing/loosening prefix. Arabic hardship year and Greek pain-relieving are directionally opposite.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic drought-year (hardship) and Greek pain-relieving (λυσαλγής) are directionally opposite — hardship causes pain; Greek word relieves it."
+  },
+  {
+    "pair_id": "GRC_0452",
+    "finding": "no_path",
+    "semantic_journey": "Arabic حثر = to become grainy, to have small granules/pimples (clustering into small round forms). Greek ἰχθυόρροος = flowing with fish, teeming with fish (from ἰχθύς + ῥέω = fish + flow). The original reasoning maps granular clustering to fish-swarming. But granular texture (physical clustering of small particles) and water teeming with fish are entirely different domains. The path grainy -> clustered -> abundant -> abundant fish requires 4 steps.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic becoming grainy/granular and Greek flowing-with-fish are entirely unrelated domains with no credible path."
+  },
+  {
+    "pair_id": "GRC_0453",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الاسف = wrath, indignation, deep anger. Greek βλάσφημος = speaking impiously, abusive/profane speech. The original reasoning maps wrath to abusive speech. While anger often produces abusive speech, Arabic الأسف specifically encodes the EMOTION (grief/anger), while Greek βλάσφημος specifically encodes the SPEECH ACT (impious utterance). The path wrath -> expressing wrath -> abusive speech is 2 steps with a domain change (emotion -> action). At low confidence this might work but the emotional state and the verbal act are categorically different.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic grief/wrath (emotion) and Greek impious speech (action) are different categories — emotion does not directly generate speech-act within 1 step."
+  },
+  {
+    "pair_id": "GRC_0454",
+    "finding": "no_path",
+    "semantic_journey": "Arabic زاج = to stir people against each other, to instigate discord/conflict between parties. Greek Ζεῦγμα = yoking/joining (the concept of joining two together). The original reasoning maps bringing sides into connection through different valences. But Arabic زاج brings sides INTO CONFLICT (negative connection); Greek Ζεῦγμα JOINS two (positive connection). These are opposite kinds of bringing-together — conflict vs union. Opposites without being negation cognates.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic instigating conflict between parties and Greek yoking/joining are opposite valences of bringing-together — not a cognate path."
+  },
+  {
+    "pair_id": "GRC_0455",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الازاذ = unclear/obscure term. Greek λάζευ = an archaic/poetic form related to λαμβάνω = to take, seize. The original reasoning invokes onomastic continuity as plausible. But without a clear Arabic meaning, semantic comparison cannot be made. An obscure Arabic term cannot anchor a finding.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Arabic الازاذ lacks reliable attested meaning — semantic comparison with Greek is impossible on this basis."
+  }
+]

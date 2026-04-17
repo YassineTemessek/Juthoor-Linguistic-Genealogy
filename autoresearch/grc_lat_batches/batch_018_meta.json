@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0144",
+    "arabic_root": "الحوث",
+    "target_lemma": "ἀλλαχόθι",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "Arabic ḥawth is explicitly a dialectal form of ḥaythu 'where'; Greek means 'elsewhere'. Both belong to the locative/deictic domain of place."
+  },
+  {
+    "pair_id": "GRC_0145",
+    "arabic_root": "العرقصاء",
+    "target_lemma": "λάριξ",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "العرقصاء names a plant with a fennel-like stalk, and Greek λάριξ is a tree; this is a clear plant-to-plant semantic field match."
+  },
+  {
+    "pair_id": "GRC_0146",
+    "arabic_root": "الخسيج",
+    "target_lemma": "λέχεσι",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "الخسيج means a tent or pavilion, and λέχεσι means beds/lairs; both converge on an enclosed resting place or lodging."
+  },
+  {
+    "pair_id": "GRC_0147",
+    "arabic_root": "البرنوف",
+    "target_lemma": "ἑλλεβορίνη",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Both sides are botanical terms, with Arabic البرنوف a plant and Greek ἑλλεβορίνη a named plant; the object class is preserved."
+  },
+  {
+    "pair_id": "GRC_0148",
+    "arabic_root": "السنط",
+    "target_lemma": "ἠλείψαντο",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "A medicine commonly gets applied or smeared on the body, making this a fairly direct treatment-to-anointing match."
+  },
+  {
+    "pair_id": "GRC_0149",
+    "arabic_root": "دحر",
+    "target_lemma": "διαχωρίζω",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic expel or push away matches Greek separate through a clear division-away chain."
+  },
+  {
+    "pair_id": "GRC_0150",
+    "arabic_root": "الطسك",
+    "target_lemma": "καλαθίσκος",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "As with الطسق, the Arabic word denotes a measure/container and καλαθίσκος is a small basket; both sit in the vessel/instrument domain."
+  },
+  {
+    "pair_id": "GRC_0151",
+    "arabic_root": "العبرب",
+    "target_lemma": "ἑλλέβοροι",
+    "lang": "grc",
+    "original_score": 0.72,
+    "original_method": "combined",
+    "original_reasoning": "Arabic is sumac and Greek is hellebore; both are specific plant names, giving a strong botanical-category match."
+  }
+]

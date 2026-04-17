@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0544",
+    "arabic_root": "استرغزه",
+    "target_lemma": "στραγγίζω",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "استرغزه = found him weak, softened him (استضعفه واستلانه). στραγγίζω = to squeeze out, strain. The phonetic similarity is striking (r-gh-z vs str-ng-z). Semantically: making something soft/yielding relates to squeezing — both involve applying pressure to extract compliance or liquid. Pressing to soften and pressing to squeeze share a force-on-substance core."
+  },
+  {
+    "pair_id": "GRC_0545",
+    "arabic_root": "سفي",
+    "target_lemma": "σαφέσι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "cloudiness can stand opposite to clarity, giving a plausible negation-based bridge to 'clear'."
+  },
+  {
+    "pair_id": "GRC_0546",
+    "arabic_root": "سنخ",
+    "target_lemma": "εἰς ὄνυχα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Greek 'to the nail' carries a concrete edge or exact-end sense; Arabic gloss centers on roots, bases, and firm embeddedness, giving a plausible structural semantic chain."
+  },
+  {
+    "pair_id": "GRC_0547",
+    "arabic_root": "ادم",
+    "target_lemma": "Δήμητερ",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic udm = condiment/seasoning that flavors food, mixed with bread. Greek Demeter = goddess of grain and food. Both are central to the food/eating concept; udm flavors what Demeter provides."
+  },
+  {
+    "pair_id": "GRC_0548",
+    "arabic_root": "السكركه",
+    "target_lemma": "γλίσχρος",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "السكركة = شراب الذرة (a drink made from sorghum/millet — a thick fermented grain beverage). γλίσχρος = sticky, viscous, adhesive, claggy. A fermented grain drink is characteristically thick and sticky in texture. The Arabic names the substance, the Greek names its primary physical quality. This is a genuine material-property match."
+  },
+  {
+    "pair_id": "GRC_0549",
+    "arabic_root": "شتمه",
+    "target_lemma": "στόματι",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "combined",
+    "original_reasoning": "Arabic shatama = insult/curse; mashtum = insulted one. Greek stomati = dat.sg of stoma 'mouth'. Insulting is done with the mouth — direct action-instrument link. Strong concrete link, with notable phonetic resemblance shtm/stom."
+  },
+  {
+    "pair_id": "GRC_0550",
+    "arabic_root": "درك",
+    "target_lemma": "διέρχεται",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic catching up or reaching and Greek passing through both sit in the field of directed movement across a course."
+  },
+  {
+    "pair_id": "GRC_0551",
+    "arabic_root": "الاثم",
+    "target_lemma": "λυόμεθα",
+    "lang": "grc",
+    "original_score": 0.55,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "الإثم = sin, being burdened with guilt (آثم، أثيم، مأثوم). λυόμεθα = we are being released/loosened. This is a genuine conceptual pair: the concept of being freed from sin (λύω τὰς ἁμαρτίας) is central to both Semitic and Greek religious thought. Release from guilt is the natural complement of guilt itself."
+  }
+]

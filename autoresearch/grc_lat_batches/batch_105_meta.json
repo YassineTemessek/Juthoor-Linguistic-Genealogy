@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0840",
+    "arabic_root": "الزغبر",
+    "target_lemma": "ζιγγίβερις",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: fine fluffy hair/fiber; a type of aromatic herb (marw). Greek: ginger (the spice). Both involve fine fibrous plant material in the aromatic/textile domain. Plausible connection via plant fiber and aroma."
+  },
+  {
+    "pair_id": "GRC_0841",
+    "arabic_root": "السلكوت",
+    "target_lemma": "σύλλεκτος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic: السلكوت, a type of bird. Greek: gathered together, collected. Faint link — birds gather in flocks; σύλλεκτος could apply to a bird that congregates. Plausible but weak."
+  },
+  {
+    "pair_id": "GRC_0842",
+    "arabic_root": "السمرود",
+    "target_lemma": "σμάραγδος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "weak",
+    "original_reasoning": "Arabic: السمرود, a tall person; also brownish complexion (samrā). Greek: emerald (the green gem). Both involve the color domain — Arabic refers to tawny/brown complexion while Greek refers to green gem. Weak but plausible color adjacency. More phonological than semantic."
+  },
+  {
+    "pair_id": "GRC_0843",
+    "arabic_root": "الشرعوف",
+    "target_lemma": "ὑψόροφος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: الشرعوف = a plant; also the outer sheath of a palm frond (the top covering). Greek: high-roofed, high-ceilinged. Both share the notion of something covering/roofing from above — the palm frond sheath as a natural roof analog. Plausible mafahim link."
+  },
+  {
+    "pair_id": "GRC_0844",
+    "arabic_root": "الطفره",
+    "target_lemma": "τάφρος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: الطفرة = a leap upward; also cream that rises. Greek: τάφρος = ditch/trench/moat. Both involve movement related to a sunken or elevated ground feature — leaping over vs digging into the earth. Plausible spatial-motion connection: one leaps the trench."
+  },
+  {
+    "pair_id": "GRC_0845",
+    "arabic_root": "الغرقد",
+    "target_lemma": "ἀγριόκαρδον",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic: الغرقد = a large thorny shrub (Lycium, boxthorn/goji family); also called العوسج when large. Greek: ἀγριόκαρδον = gum arabic tree (Vachellia nilotica), also a thorny Acacia-type shrub. Both are thorny shrubs found in arid/semi-arid environments. Plausible shared plant-family semantic link."
+  },
+  {
+    "pair_id": "GRC_0846",
+    "arabic_root": "الفنيق",
+    "target_lemma": "φοινίκινος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic فنيق = a prized male breeding camel (highly valued animal); also a place name near Medina. Greek φοινίκινος = of the date palm/phoenix tree. Shared domain: both terms relate to the prized resources of the Arab/Semitic world — the date palm and the prized camel are emblematic of the same cultural-geographic space. Possible loanword from Phoenician/Semitic φοῖνιξ."
+  },
+  {
+    "pair_id": "GRC_0847",
+    "arabic_root": "القرناس",
+    "target_lemma": "κορωνόπους",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic القرناس: a nose-like protrusion on a mountain or cliff face (from قرن = horn/protrusion). Greek κορωνόπους = buck's horn plantain (Plantago coronopus) — named for its horn-shaped leaves (κορωνή = crown/beak + πούς = foot). Both involve horn/beak-shaped projections in their core imagery."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0632",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-da'arma = short hurried steps, moving in small quick steps. Greek teleodromeo = to complete the course/race (telos+dromos). Short hurried steps (manner of walking) and completing a race (goal achievement) are in different semantic categories despite both involving movement.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Short hurried steps (manner of movement) and completing a race (achievement goal) are in different semantic categories despite both involving locomotion."
+  },
+  {
+    "pair_id": "GRC_0633",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-kast = an unspecified plant name. Greek lukoskutalion = a plant in the Lycium/boxthorn family. Both are plant names but in different botanical categories. Shared category of plant is not sufficient for cognate status; every culture independently names plants.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Two plant names in unrelated botanical categories with no documented etymological connection; shared plant-category is not cognate evidence."
+  },
+  {
+    "pair_id": "GRC_0634",
+    "finding": "no_path",
+    "semantic_journey": "Arabic asattat al-ardh = the land had no vegetation (barren/still). Greek hestaouta = standing still (perfect participle of histemi = to stand). Barren land being metaphorically still and a person/object literally standing still are different semantic domains. The Arabic encodes absence of growth; Greek encodes a positional state.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Barren/ungrowing land and literally standing-still are different semantic domains; the stillness metaphor is too weak a bridge."
+  },
+  {
+    "pair_id": "GRC_0635",
+    "finding": "no_path",
+    "semantic_journey": "Arabic ghadara = treachery/betrayal; ghadir = shallow pool. Greek Gindaros = Gindarus, a place in the northern Levant. Gindarus is a proper toponym; its Semitic etymology is debated. Arabic ghadara (treachery) or ghadir (pool) does not plausibly name a Syrian fortified site. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gindarus is a Levantine proper toponym; assigning it an Arabic betrayal/pool etymology is speculative without documented substrate evidence."
+  },
+  {
+    "pair_id": "GRC_0636",
+    "finding": "path_found",
+    "semantic_journey": "Arabic khazza = belly-slackening, emptiness of belly (inner looseness implying inner lack/want). Greek khatizo = to be in want, to crave, to lack. Core concept: inner lack. Arabic encodes physical inner looseness (empty belly); Greek encodes experiential want/craving. 1-step drift: empty-belly -> craving/wanting.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic belly-emptiness/slackening and Greek craving/wanting share the core concept of inner lack, physical in Arabic and experiential in Greek."
+  },
+  {
+    "pair_id": "GRC_0637",
+    "finding": "no_path",
+    "semantic_journey": "Arabic gharasa = to plant trees/seeds. Greek Gerasa = Jerash, a major Decapolis city in Jordan (proper name). Even if Gerasa has a Semitic root related to planting, this is substrate toponymy not a cognate of the common verb. Proper name exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Gerasa is a proper toponym; even a Semitic planting-root etymology would be substrate toponymy, not a cognate of the verb."
+  },
+  {
+    "pair_id": "GRC_0638",
+    "finding": "no_path",
+    "semantic_journey": "Arabic sastan = Sistan (a historical Persian/Central Asian region, proper name). Greek Sosthanes = a Greek personal name from Greek roots (sos+sthenos = safe+strength). One is a Persian geographic proper name, one is a Greek personal name. Proper name exclusion applies doubly.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "A Persian place-name and a Greek personal name from Greek roots are not cognates; proper name exclusion applies to both."
+  },
+  {
+    "pair_id": "GRC_0639",
+    "finding": "no_path",
+    "semantic_journey": "Arabic al-ghidhy = cutting with an instrument (also nourishment). Greek ligdos = a kind of mortar or hard grinding stone. A cutting instrument and a grinding mortar are both hard tools but operate on different principles (sharp-edge cutting vs circular-pressure grinding). No valid 2-step path.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "false_positive",
+    "key_insight": "Cutting instruments and grinding mortars are both hard tools but operate on different principles with distinct semantic identities."
+  }
+]

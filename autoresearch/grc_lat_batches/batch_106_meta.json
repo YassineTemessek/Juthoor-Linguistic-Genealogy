@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0848",
+    "arabic_root": "القسطناس",
+    "target_lemma": "κάστανα",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic القسطناس: a type of wood (specifically noted as a hard/strong wood). Greek κάστανα = sweet chestnuts (Castanea sativa). The Arabic is almost certainly a loanword from Greek κάστανον (chestnut) or shares the same Mediterranean source — both refer to the chestnut tree and its material."
+  },
+  {
+    "pair_id": "GRC_0849",
+    "arabic_root": "القنطريس",
+    "target_lemma": "Κένταυρος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic القنطريس: a plant name (cross-reference to قطرس). The plant قنطوريون (centaury/كنتوريون) is a known Arabic medicinal plant name borrowed from Greek κενταύριον (centaury — the plant Centaurium erythraea, named after the centaur Chiron who used it medicinally). The Arabic القنطريس likely refers to the same or related plant via the Κένταυρος mythological connection."
+  },
+  {
+    "pair_id": "GRC_0850",
+    "arabic_root": "الكرناس",
+    "target_lemma": "κορωνόπους",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الكرناس: a variant of الكرباس (fine linen cloth) OR a nose/horn-shaped protrusion. Greek κορωνόπους = buck's horn plantain — named for its horn/beak-shaped leaf lobes. If Arabic sense is 'protrusion', both share the horn-shaped projection imagery."
+  },
+  {
+    "pair_id": "GRC_0851",
+    "arabic_root": "الكستيج",
+    "target_lemma": "κατάστεγος",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "mafahim_deep",
+    "original_reasoning": "Arabic الكستيج: a thick cord/rope that Zoroastrians (Magians) tie around their waist — a ritual belt/girdle covering the body. Greek κατάστεγος = covered in/roofed over. Both involve the concept of 'covering/enclosing' — the girdle covers the body, the roof covers a building. Plausible conceptual link, though domains differ."
+  },
+  {
+    "pair_id": "GRC_0852",
+    "arabic_root": "خوف",
+    "target_lemma": "ἐκφεύγω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic خوف: fear/dread. Greek ἐκφεύγω: to flee/escape. Fear and flight are cognitively coupled; plausible semantic overlap."
+  },
+  {
+    "pair_id": "GRC_0853",
+    "arabic_root": "خيف",
+    "target_lemma": "ἐκφεύγω",
+    "lang": "grc",
+    "original_score": 0.5,
+    "original_method": "combined",
+    "original_reasoning": "Arabic خيف: fear/dread. Greek ἐκφεύγω: to flee/escape. Fear and flight are cognitively coupled; plausible semantic overlap."
+  },
+  {
+    "pair_id": "LAT_0854",
+    "arabic_root": "هندكي",
+    "target_lemma": "hindicus",
+    "lang": "lat",
+    "original_score": 0.92,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "هندكي (Indian person) ↔ Latin hindicus: same ethnonym"
+  },
+  {
+    "pair_id": "LAT_0855",
+    "arabic_root": "اصطبل",
+    "target_lemma": "stabilio",
+    "lang": "lat",
+    "original_score": 0.9,
+    "original_method": "masadiq_direct",
+    "original_reasoning": "Arabic اصطبل < Latin stabulum (stable for animals); stabilio=to stabilize/make firm — same borrowed root, verb form"
+  }
+]

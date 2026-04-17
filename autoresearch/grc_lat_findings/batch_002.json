@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0016",
+    "finding": "path_found",
+    "semantic_journey": "Arabic balsam = the resin of Commiphora (balsam of Mecca), a prized aromatic. Greek balsamon = balsam. The Semitic root b-l-s-m names this aromatic resin, attested in ancient Hebrew as basam (spice/balsam). Greek borrowed the word from Semitic via trade in the luxury resin. Material culture transmission - an aromatic trade commodity and its Semitic name entered Greek.",
+    "journey_type": "material_culture",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Semitic balsam term (b-l-s-m) entered Greek via ancient spice trade - confirmed material culture cognate."
+  },
+  {
+    "pair_id": "GRC_0017",
+    "finding": "no_path",
+    "semantic_journey": "Arabic variant spelling of Samosata and Greek Samosata are the same city. Variant of GRC_0000. Proper place-name identity.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Variant of GRC_0000 - another Arabic spelling of Samosata, same toponymic identity."
+  },
+  {
+    "pair_id": "GRC_0018",
+    "finding": "no_path",
+    "semantic_journey": "Arabic Constantinople (city named after Emperor Constantine) and Greek of Constantine. Both refer to the Byzantine capital. Arabic borrowed from Greek (Konstantinoupolis). Proper name - a Latin personal name plus Greek polis, transmitted Greek-to-Arabic.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Constantinople - city name (Latin Constantine + Greek polis), borrowed from Greek into Arabic. Proper name identity."
+  },
+  {
+    "pair_id": "GRC_0019",
+    "finding": "no_path",
+    "semantic_journey": "Arabic Samuel and Greek Samuel are the same Hebrew personal name transmitted into Greek via the Septuagint. Biblical proper names are excluded by the methodology.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Biblical personal name Samuel - known Semitic name transmitted via scriptures, excluded."
+  },
+  {
+    "pair_id": "GRC_0020",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek are proper place names. Gindarus was a city in northern Syria (Cyrrhestica). Arabic form is a rendering of the same Hellenistic toponym. Proper name identity.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Same Hellenistic city name (Gindarus in Syria) rendered in Arabic and Greek - toponymic identity."
+  },
+  {
+    "pair_id": "GRC_0021",
+    "finding": "path_found",
+    "semantic_journey": "Arabic means anger and vexation (being mixed up in a disturbing way). Greek means having become angry (from bile/gall - the humoral theory that bile = anger). Both encode anger/vexation. Arabic through inner agitation concept; Greek through bile metaphor for anger. The semantic domains align directly at anger as inner disturbance. One direct step.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic anger/vexation and Greek angered share the anger semantic domain - plausible direct alignment."
+  },
+  {
+    "pair_id": "GRC_0022",
+    "finding": "no_path",
+    "semantic_journey": "Arabic and Greek are proper place names from different geographic regions - Glaphyrai was a Thessalian town in Greece; Arabic Jalfar is in the UAE. Geographically unrelated proper names with superficial phonetic resemblance.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "proper_name",
+    "key_insight": "Two unrelated proper place names (Greek Thessaly vs Arabian Gulf) - accidental phonetic resemblance."
+  },
+  {
+    "pair_id": "GRC_0023",
+    "finding": "path_found",
+    "semantic_journey": "Arabic bardhawn = horse, riding horse, pack horse (strong working animal). Greek bourdon = mule (hybrid pack animal). Semantic journey: general working/pack animal -> specialized to mule. Arabic preserves the broader term; Greek specialized to the mule specifically. Both share the pack animal field. The term is a wanderwort of Iranian/Turkish origin traveling through trade and military routes. Material culture transmission.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic pack-horse term relates to Greek mule term - pack animal vocabulary shared across Mediterranean trade routes."
+  }
+]

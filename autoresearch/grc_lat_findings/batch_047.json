@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0376",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثيتل = to feign stupidity after pretending to be absent/unaware (تحامق بعد تغافل). Greek λήθετε = 2nd plural of λήθω = you are hidden/escape notice, or you forget (from root of λήθη = forgetfulness). The original reasoning maps feigning unawareness to genuine forgetting/being hidden. But deliberately feigning stupidity is the OPPOSITE of forgetting — it is a conscious act of pretense. Active deception is not the same as genuine concealment/forgetfulness.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Deliberately feigning stupidity (conscious deception) is opposite to genuinely forgetting/being hidden — no semantic path."
+  },
+  {
+    "pair_id": "GRC_0377",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الثطاع = obscure term; gloss mentions appearance/disclosure. Greek ἐλέχθητε = you were said/spoken (aorist passive of λέγω). The connection speech -> appearance/disclosure is plausible conceptually but the Arabic root الثطاع is not well-attested. Without a clear Arabic meaning, no reliable comparison can be made. The original reasoning is speculative on both sides.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic الثطاع lacks reliable attested meaning — comparison cannot be made on speculative glosses."
+  },
+  {
+    "pair_id": "GRC_0378",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الطرد = to drive out, expel, banish; طريد = one who has been driven out, an exile/outcast. Greek ἀλλότριος = belonging to another, foreign, alien (from ἄλλος = other). The semantic journey: being driven out/expelled -> becoming foreign/other (belonging to another group). An exile driven out becomes by definition 'one who belongs elsewhere' = alien/foreign. Arabic encodes the ACTION; Greek encodes the RESULTING STATUS. A clean 1-step action-to-result.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic driving-out/exile (طريد) and Greek alien/foreign (ἀλλότριος) share the core of being separated from one's group — expulsion creating foreignness."
+  },
+  {
+    "pair_id": "GRC_0379",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحضجر = having a wide/broad path (واسع المنهج). Greek δολιχοδρόμος = a long-distance runner (from δολιχός + δρόμος = long + course/run). The original reasoning maps wide path to long running course. But wide path and long running course are different spatial properties (width vs length) of different things (a path vs a race). 3+ steps: wide path -> path for running -> long running -> long-distance runner.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic wide/broad path and Greek long-distance running course are different spatial properties of different concepts."
+  },
+  {
+    "pair_id": "GRC_0380",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الثن = to be worn out by age, to decay (بلي الهرم = worn out by oldness). Greek καταλύω = to dissolve, break down, destroy (katá + lúō = down + loosen). καταλυθέν = having been dissolved/broken down. The semantic journey: wearing out through age (gradual breakdown) -> being dissolved/broken down (process of decomposition). Both encode PROGRESSIVE BREAKDOWN/DECOMPOSITION: Arabic through aging, Greek through dissolution. A 1-step parallel of the same underlying process.",
+    "journey_type": "direct_preservation",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic age-wearing/decay (الثن) and Greek dissolution/breakdown (καταλύω) share the core of progressive material decomposition."
+  },
+  {
+    "pair_id": "GRC_0381",
+    "finding": "path_found",
+    "semantic_journey": "Arabic دلل = الدل والدلال = charm, coquetry, playful attractiveness; also the flirtatious movements and forms of a charming person. Greek δαιδάλλω = to work cunningly, embellish, adorn artfully (related to Daedalus the craftsman). Both encode MAKING SOMETHING BEAUTIFULLY ATTRACTIVE through skilled work: Arabic = the charm/coquetry of a person (natural artful attractiveness); Greek = the artful embellishment/adornment of an object. The step: natural attractive charm -> artistic embellishment and adornment.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic charm/coquetry (natural attractive quality) and Greek artful embellishment share the core of skilled, deliberate attractiveness."
+  },
+  {
+    "pair_id": "GRC_0382",
+    "finding": "path_found",
+    "semantic_journey": "Arabic مرر/مرّ = bitterness (مرّ = bitter, مرارة = bitterness). Greek Μύρρα = myrrh (the bitter aromatic resin) — from Semitic מֹר (mor = myrrh, bitterness). Myrrh is famous for its bitter taste; the Greek word Μύρρα/μύρρα is a direct borrowing from Semitic. Arabic bitterness and Greek myrrh share the same Semitic root meaning bitter substance. This is a confirmed material culture cognate — the bitter aromatic resin traveled with its name.",
+    "journey_type": "direct_preservation",
+    "confidence": "high",
+    "verdict": "confirmed_cognate",
+    "key_insight": "Arabic bitterness (مرر) and Greek myrrh (Μύρρα) share the same Semitic root — myrrh is the bitter resin, a confirmed material culture cognate."
+  },
+  {
+    "pair_id": "GRC_0383",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الريش = feathers, plumage; also rich clothing/adornment (metaphorical use of feathers for finery). Greek ἁλουργής = sea-purple colored, made with purple dye from sea-mollusks. The path: feathers/finery -> purple-dyed garment requires: feathers as adornment -> any fine garment -> specifically purple garment. 3+ steps. Purple is a specific color requiring sea-mollusks, not feathers. No genuine path.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic feathers/finery and Greek sea-purple garment require 3+ steps — purple is a specific material culture item unrelated to feathers."
+  }
+]

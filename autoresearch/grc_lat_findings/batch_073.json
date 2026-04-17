@@ -1,0 +1,74 @@
+[
+  {
+    "pair_id": "GRC_0584",
+    "finding": "no_path",
+    "semantic_journey": "Arabic الحرقوص = a small insect/tick (a tiny biting creature); also مقاربة الخطا والكلام = walking in small close steps and close speech. Greek γλίσχρος = sticky, viscous, adhesive (clinging, glutinous). The original reasoning maps close-sticking to sticky/adhesive. But small steps and close speech (physical proximity of steps, compressed speech) and sticky/viscous (physical adhesion) are different properties. Close-stepping -> clinging -> sticky requires: small steps -> physical proximity -> adhesion. 3 steps.",
+    "journey_type": "no_connection",
+    "confidence": "medium",
+    "verdict": "false_positive",
+    "key_insight": "Arabic small-stepping insect/close-speech (الحرقوص) and Greek sticky/viscous (γλίσχρος) require 3+ steps — close-proximity and physical adhesion are different properties."
+  },
+  {
+    "pair_id": "GRC_0585",
+    "finding": "path_found",
+    "semantic_journey": "Arabic هيمن = to dominate, oversee, guard over; المهيمن = the Overseer, the Dominant Guardian (one of the divine names). Greek ἡγεμόνευεν = he led, governed, acted as leader (imperfect of ἡγεμονεύω = to lead, command, from ἡγεμών = leader, commander). Both encode AUTHORITATIVE LEADERSHIP/OVERSIGHT: Arabic = dominating oversight/guardianship from above; Greek = active leadership/command of a body of people. A 1-step semantic drift: dominant overseer (Arabic, guardianship aspect) -> active leader/commander (Greek, directional aspect). Both preserve the authority-over-others core.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic dominant overseer/guardian (هيمن, المهيمن) and Greek leading/commanding (ἡγεμόνευεν) share the authoritative-oversight core."
+  },
+  {
+    "pair_id": "GRC_0586",
+    "finding": "path_found",
+    "semantic_journey": "Arabic اقعث = to make the gift generous/abundant (أجزلها العطية = made the giving lavish). Greek καταθείς = having placed down, deposited, bestowed (aorist active participle of κατατίθημι = to place down, deposit, bestow). Both encode GIVING/BESTOWING: Arabic = making a gift generous (the quality of giving lavishly); Greek = having placed-down/bestowed (the act of giving). A 1-step action-to-quality or quality-to-action: generous giving (Arabic) -> having bestowed (Greek). Both preserve the act of giving something to another.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic making-a-gift-generous (اقعث) and Greek having-bestowed/placed-down (καταθείς) share the giving/bestowing concept."
+  },
+  {
+    "pair_id": "GRC_0587",
+    "finding": "path_found",
+    "semantic_journey": "Arabic ذلق = (1) sharpness of a blade or tip; (2) slipperiness; (3) eloquence/sharpness of tongue (ذلق اللسان = sharp-tongued/eloquent). Greek διάλεκτος = dialect, mode of speech (way of speaking of a people or region). Both belong to the TONGUE/SPEECH domain: Arabic = the sharp eloquence of the tongue (the quality of speech); Greek = a particular mode/variety of speech. A 1-step specialization: sharp eloquent speech (general quality) -> a specific dialect/mode of speech. The tongue's sharpness-eloquence -> the recognized form of speech.",
+    "journey_type": "specialization",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic sharp-tongued eloquence (ذلق اللسان) and Greek dialect/mode-of-speech (διάλεκτε) share the speech quality domain — sharpness of tongue and its recognized form."
+  },
+  {
+    "pair_id": "GRC_0588",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الاشقر = reddish-blond (fair complexion); also الدم الذي صار علقاً = blood that became clotted/congealed into a thick mass. Greek γλίσχρος = sticky, viscous, adhesive, glutinous. The direct path: clotted blood (Arabic) IS sticky/viscous (Greek). Coagulated blood has the property of viscosity/stickiness. A 1-step material property match: clotted blood (the Arabic meaning) -> sticky/viscous (the material property of clotted blood that Greek captures as an abstract quality). This is a direct material-property cognate.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic clotted blood (الاشقر, blood that congealed) and Greek sticky/viscous (γλίσχρος) directly match — clotted blood IS viscous/sticky."
+  },
+  {
+    "pair_id": "GRC_0589",
+    "finding": "path_found",
+    "semantic_journey": "Arabic خمد = to subside, become extinguished, go low (of fire dying down — from blazing to dead/low). Greek χαμάδις = to the ground, downward (from χαμαί = on the ground, down low). Both encode GOING DOWN LOW: Arabic = the dying-down of fire to a low/extinguished state; Greek = the direction downward/to-the-ground. A 1-step direct path: going low/extinguished (Arabic, fire subsiding) -> downward/to-the-ground (Greek, directional). The going-low concept is preserved — fire subsiding = going down to ground level.",
+    "journey_type": "semantic_drift",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic fire-subsiding/going-low (خمد) and Greek downward/to-the-ground (χαμάδις) share the going-low concept — subsidence and downward direction."
+  },
+  {
+    "pair_id": "GRC_0590",
+    "finding": "no_path",
+    "semantic_journey": "Arabic خندرس = name of old wine; also = old wheat/groats (Lane). Greek χόνδρος = groats, grain, lump of wheat/barley. Per the same analysis as GRC_0564 and GRC_0583: Arabic خندرس/خندريس is a documented Greek loanword. The variant spelling خندرس is the same word. Comparing a Greek loanword back to its Greek source is circular. Same exclusion applies.",
+    "journey_type": "no_connection",
+    "confidence": "high",
+    "verdict": "shared_loanword",
+    "key_insight": "Arabic خندرس is the same Greek loanword as خندريس — comparing it back to χόνδρος is circular (third occurrence of same exclusion)."
+  },
+  {
+    "pair_id": "GRC_0591",
+    "finding": "path_found",
+    "semantic_journey": "Arabic الاسكتان = labia (the two skin-folds at the sides of the vulva — specifically the skin-like anatomical folds). Greek σκύτινος = made of leather/skin, of hide (adjective from σκῦτος = hide, leather, skin). Both encode THE SKIN/HIDE MATERIAL DOMAIN: Arabic = anatomical skin folds (named for their skin-like quality); Greek = the general quality of being made of hide/skin. A 1-step direct material match: skin anatomical folds (Arabic, named for their skin texture) -> being-of-skin/leather (Greek, the material property). Both preserve the skin/hide concept.",
+    "journey_type": "material_culture",
+    "confidence": "medium",
+    "verdict": "plausible_link",
+    "key_insight": "Arabic skin-fold anatomy (الاسكتان) and Greek made-of-skin/hide (σκύτινος) both preserve the skin/hide material concept — anatomical skin folds and hide-material quality."
+  }
+]
