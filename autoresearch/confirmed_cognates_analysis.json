@@ -1,0 +1,1308 @@
+{
+  "total_confirmed": 135,
+  "by_language": {
+    "grc": 54,
+    "lat": 10,
+    "got": 25,
+    "ang": 25,
+    "sga": 21
+  },
+  "by_journey_type": {
+    "material_culture": 27,
+    "direct_preservation": 51,
+    "specialization": 4,
+    "semantic_drift": 49,
+    "negation_cognate": 2,
+    "generalization": 2
+  },
+  "cross_branch_roots": [
+    {
+      "arabic_root": "ابد",
+      "n_branches": 3,
+      "branches": [
+        "Celtic",
+        "Germanic-East",
+        "Germanic-West"
+      ],
+      "hits": [
+        {
+          "lang": "got",
+          "target": "bad",
+          "insight": "Arabic ابد (permanent dwelling/eternity) → Gothic bad (remained/waited): shared core of staying fixed in place."
+        },
+        {
+          "lang": "ang",
+          "target": "abide",
+          "insight": "Arabic ابد (to remain/dwell + eternity) → OE abide (to remain, dwell, endure): near-direct semantic preservation of the dwelling-in-permanence concept."
+        },
+        {
+          "lang": "sga",
+          "target": "baid",
+          "insight": "Arabic ابد (remain/eternity) → OIr baid (lasting/duration): third language to preserve this permanence concept alongside Gothic bad and OE abide."
+        }
+      ]
+    },
+    {
+      "arabic_root": "نفت",
+      "n_branches": 2,
+      "branches": [
+        "Celtic",
+        "Hellenic"
+      ],
+      "hits": [
+        {
+          "lang": "grc",
+          "target": "νάφθα",
+          "insight": "Arabic naft (naphtha) = Greek naftha - same Semitic naphtha root as GRC_0026, confirmed material culture cognate."
+        },
+        {
+          "lang": "sga",
+          "target": "infét",
+          "insight": "Arabic نفت (to bubble/boil up, expelling vapor) → OIr infét (exhalation): boiling vapor expelled → breath expelled; one step on the expelled-air concept."
+        },
+        {
+          "lang": "sga",
+          "target": "doinfet",
+          "insight": "Arabic نفت (bubbling/boiling) → OIr doinfet (to exhale): prefixed form; same expelled-air connection."
+        }
+      ]
+    },
+    {
+      "arabic_root": "مرر",
+      "n_branches": 2,
+      "branches": [
+        "Hellenic",
+        "Italic"
+      ],
+      "hits": [
+        {
+          "lang": "grc",
+          "target": "Μύρρα",
+          "insight": "Arabic bitterness (مرر) and Greek myrrh (Μύρρα) share the same Semitic root — myrrh is the bitter resin, a confirmed material culture cognate."
+        },
+        {
+          "lang": "lat",
+          "target": "amarior",
+          "insight": "Arabic bitter-taste and Latin more-bitter directly share the bitterness quality across languages."
+        }
+      ]
+    }
+  ],
+  "all_confirmed": [
+    {
+      "lang": "grc",
+      "arabic_root": "ساسم",
+      "target_lemma": "σήσαμον",
+      "semantic_journey": "Arabic sesame (Sesamum indicum). Greek sesamon. The Semitic root s-s-m names this Near Eastern domesticated oil crop, attested in Akkadian as shamashshammu. Greek borrowed the word directly from Semitic via agricultural trade - the crop and its name traveled together from ancient Near East to the Mediterranean.",
+      "journey_type": "material_culture",
+      "key_insight": "Semitic sesame term (s-s-m) entered Greek via ancient crop trade - textbook material culture Semitic-to-Greek loanword.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "قمص",
+      "target_lemma": "καμίσιον",
+      "semantic_journey": "Arabic qamis = shirt (Semitic garment term). Greek kamision = shirt/tunic (attested from 4th-5th century CE). The Semitic root q-m-s names a specific upper-body garment. Greek borrowed the word from Semitic (Aramaic/Hebrew kamesu) as late antique peoples traded clothing across the Mediterranean. The garment and its name traveled together. Genuine material culture Semitic-to-Greek transmission.",
+      "journey_type": "material_culture",
+      "key_insight": "Semitic shirt word (q-m-s) entered Greek as kamision - genuine material culture cognate.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "بلسم",
+      "target_lemma": "βάλσαμον",
+      "semantic_journey": "Arabic balsam = the resin of Commiphora (balsam of Mecca), a prized aromatic. Greek balsamon = balsam. The Semitic root b-l-s-m names this aromatic resin, attested in ancient Hebrew as basam (spice/balsam). Greek borrowed the word from Semitic via trade in the luxury resin. Material culture transmission - an aromatic trade commodity and its Semitic name entered Greek.",
+      "journey_type": "material_culture",
+      "key_insight": "Semitic balsam term (b-l-s-m) entered Greek via ancient spice trade - confirmed material culture cognate.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الفرخ",
+      "target_lemma": "φάρκες",
+      "semantic_journey": "Arabic farkh = chick, nestling, young bird (Semitic root for young of a bird). Greek pharkes = young birds, nestlings, chicks (Hesychius: neossoi = nestlings). The semantic match is direct and precise: both mean exactly young birds/nestlings. The Semitic root f-r-kh for young bird is preserved in Greek. Genuine direct preservation - same bird-life vocabulary with no drift.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic farkh (nestling/chick) directly matches Greek pharkes (nestlings) - genuine direct preservation of bird-life vocabulary.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "النفط",
+      "target_lemma": "νάφθα",
+      "semantic_journey": "Arabic naft = naphtha, petroleum, the naturally occurring flammable liquid. Greek naftha = naphtha. Semitic root n-f-t for the substance was transmitted to Greek. This is a documented Semitic loanword into Greek - the flammable earth-substance and its Semitic name were transmitted together. Material culture transmission.",
+      "journey_type": "material_culture",
+      "key_insight": "Semitic naphtha term (n-f-t) entered Greek - genuine material culture cognate for petroleum.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "بلسم",
+      "target_lemma": "ὀποβάλσαμον",
+      "semantic_journey": "Arabic balsam = balsam resin. Greek opo-balsamon = juice/sap of the balsam tree (opo = juice). The same Semitic balsam term (GRC_0016) appears as a component in a Greek compound meaning balsam juice. The Arabic root b-l-s-m entered Greek directly and was used to form the compound for the liquid form of the resin. Confirmed material culture cognate (same as GRC_0016 in compound form).",
+      "journey_type": "material_culture",
+      "key_insight": "Balsam resin cognate appearing in Greek compound opo-balsamon (balsam juice) - confirmed material culture transmission.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "نفت",
+      "target_lemma": "νάφθα",
+      "semantic_journey": "Arabic naft = naphtha, petroleum. Greek naftha = naphtha. Same as GRC_0026 but using the Arabic root naft. The Semitic root n-f-t for the flammable earth-liquid was transmitted to Greek. Material culture cognate confirmed.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic naft (naphtha) = Greek naftha - same Semitic naphtha root as GRC_0026, confirmed material culture cognate.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "سبت",
+      "target_lemma": "σάββατον",
+      "semantic_journey": "Arabic sabata = to rest, cease activity, the Semitic root s-b-t meaning cessation/rest. Greek sabbaton = Sabbath (day of rest). Greek borrowed sabbaton from Hebrew/Aramaic shabbat (to rest/cease). The Semitic root s-b-t encoding rest/cessation is genuine, and Greek received the term via Semitic. Confirmed Semitic religious-cultural term transmission.",
+      "journey_type": "material_culture",
+      "key_insight": "Semitic rest/cessation root (s-b-t) entered Greek as sabbaton - genuine Semitic religious-cultural term transmission.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "اللاذن",
+      "target_lemma": "λήδανον",
+      "semantic_journey": "Arabic al-ladhan = labdanum (the resinous gum of Cistus plants, used in perfumery). Greek ledanon = labdanum. Both name the same aromatic resin from Cistus shrubs, a luxury trade good from the eastern Mediterranean. The Semitic term for labdanum (l-d-n) entered Greek as ledanon. Confirmed material culture transmission of a named aromatic substance.",
+      "journey_type": "material_culture",
+      "key_insight": "Semitic labdanum term (l-d-n) entered Greek as ledanon - confirmed aromatic trade commodity loanword.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "القلف",
+      "target_lemma": "κέλυφος",
+      "semantic_journey": "Arabic al-qalf = bark/peel/husk; pomegranate rind; tree bark; foreskin - the outer encasing layer of something. Greek keluphos = sheath, case, shell, husk, pod - the outer enclosing shell of something. Both directly mean the outer shell/husk/case of something. Arabic encodes the peeling/stripping action and its result; Greek names the outer shell/case. Direct semantic preservation of the outer-enclosing-layer concept. The phonetic match (q-l-f vs k-l-ph) is strong.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic outer husk/bark/peel (al-qalf) directly matches Greek outer shell/case (keluphos) - confirmed direct preservation.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "ملق",
+      "target_lemma": "μαλακός",
+      "semantic_journey": "Arabic malaqa = to flatter, to be soft/gentle, to be smooth (the root m-l-q encodes softness and ingratiation). Greek malakos = soft, gentle, delicate, mild. Both encode softness/gentleness as a core concept. Arabic preserves both the physical softness and the behavioral softness (flattery = being soft toward someone); Greek malakos covers the full range of soft/gentle/mild. Direct semantic preservation of the soft/gentle concept.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic soft/gentle/flattering (malaqa) directly matches Greek soft/gentle (malakos) - confirmed direct preservation.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "شجر",
+      "target_lemma": "συγκρούομαι",
+      "semantic_journey": "Arabic شجر (shajara) = to dispute, fight, come into conflict; also = tree, branching. Root شجر has two semantic poles: literal branching of trees and metaphorical 'branching' of conflict between people. Greek συγκρούομαι = to collide, clash, come into conflict. Both encode interpersonal conflict/collision. Arabic dispute/clash between people → Greek collide/clash is a direct match.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic شجر (dispute, clash) and Greek clashing (sygkrouomai) both encode the concept of violent interpersonal conflict.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "قرضم",
+      "target_lemma": "καρδάμωμον",
+      "semantic_journey": "Arabic قرضم (qardim) = a plant name resembling cardamom; closely related to Arabic هيل (cardamom family). Greek καρδάμωμον = cardamom (the spice). The Arabic root qrdm is a variant name for the cardamom plant or similar spice. The word 'cardamom' itself travels from a South Asian language through Semitic trade routes into Greek. This is a material culture spice-trade transmission — the plant traveled with its name.",
+      "journey_type": "material_culture",
+      "key_insight": "Cardamom spice traveled the ancient trade routes with its Semitic name, preserved in both Arabic qardim and Greek kardamomon.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "خضر",
+      "target_lemma": "χῖδρον",
+      "semantic_journey": "Arabic خضر (khudr/akhdar) = green, verdant, fresh, unripe (specifically the fresh green state before ripening). Greek χῖδρον = unripe grain, parched unripe barley grains. Both encode the unripe/fresh green state of grain. Arabic green-unripe → Greek unripe-grain is a direct 1-step specialization: Arabic covers the general fresh/green state, Greek names the specific unripe grain product.",
+      "journey_type": "specialization",
+      "key_insight": "Arabic green/unripe (khudr) directly matches Greek unripe grain (khidron) — the freshness/unripeness concept preserved in grain terminology.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "بلصم",
+      "target_lemma": "ὀποβάλσαμον",
+      "semantic_journey": "Arabic بلصم (balsam/bilsam) = balsam resin, the precious aromatic substance. Greek ὀποβάλσαμον = juice of balsam (ὀπός 'juice/sap' + βάλσαμον 'balsam'). The root b-l-s-m is a Semitic word for the balsam plant and its resin that traveled the ancient trade routes. Arabic balsam resin → Greek balsam juice is a direct material culture preservation. The Semitic root balsam is the origin of the Greek word.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic balsam resin (bilsam) is the Semitic origin of Greek balsamon — the precious aromatic resin traveled with its Semitic name.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "بعث",
+      "target_lemma": "ἐπιβοηθέω",
+      "semantic_journey": "Arabic بعث (bath) = to send, dispatch, awaken, rouse; specifically to send a military force or messenger. Greek ἐπιβοηθέω = to come to aid, send assistance, dispatch help (ἐπί 'to/upon' + βοηθέω 'to aid'). Both encode sending/dispatching toward someone in need. Arabic dispatching-forces/messengers → Greek sending-aid is a direct 1-step match: both describe the act of sending someone/something to a destination for a purpose.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic sending/dispatching (bath) and Greek sending-aid (epiboetheo) share the core concept of dispatching someone toward a goal.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "مشج",
+      "target_lemma": "μίσγω",
+      "semantic_journey": "Arabic مشج (mashaja) = to mix between two things, intermingle two materials. Greek μίσγω = to mix, mingle, blend together. Both encode the same direct mixing/mingling action. Arabic mixing-between-two → Greek mixing/mingling is a direct 1-step match — essentially the same word meaning the same thing. This is a confirmed cognate with high phonetic and semantic correspondence.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic mixing/mingling (mashaj) and Greek mixing/mingling (misgein) are direct cognates preserving the same action of blending two things.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "قرضم",
+      "target_lemma": "κάρδαμον",
+      "semantic_journey": "Arabic قرضم (qardim) = a plant related to the cardamom family; a biting/astringent plant used as a spice. Greek κάρδαμον = cress, cardamom (the pungent spice). The root q-r-d-m encodes the biting/pungent property that defines the spice. Both words name the same class of pungent spice plants. This is a material culture trade-route cognate — the pungent spice traveled with its Semitic name (as also seen in GRC_0165).",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic qardim and Greek kardamon both name pungent spice plants in the cardamom/cress family — the Semitic root for this pungent spice preserved in Greek.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "بلصم",
+      "target_lemma": "βάλσαμον",
+      "semantic_journey": "Arabic بلصم / بلسم (balsam) = balsam resin (same root as GRC_0207, variant form). Greek βάλσαμον = balsam (the aromatic resin tree and its product). This is the same confirmed Semitic-origin material culture term as GRC_0207 — the balsam tree and its aromatic resin traveled from the Near East into Greek with the Semitic name b-l-s-m intact.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic balsam (bilsam) is the Semitic origin of Greek balsamon — the same confirmed trade-route cognate as GRC_0207.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "نءمس",
+      "target_lemma": "νεμεσήσεται",
+      "semantic_journey": "Arabic ناموس (namus) = divine law, sacred order, established code; also: the Law (used for Mosaic Law). Greek νεμεσήσεται = he will be divinely indignant (future of νεμεσάω, from Νέμεσις 'divine retribution'). Both encode divine law and its enforcement. Arabic divine-law → Greek divine-retribution-against-law-violation is a clear 1-step semantic shift: ناموس is the law, Nemesis is what happens when the law is violated. This is the law-enforcement relationship.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic divine law (namus) and Greek divine retribution (Nemesis) are two sides of the same concept — the law and the punishment for violating it.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "بعثه",
+      "target_lemma": "ἐπιβοηθέω",
+      "semantic_journey": "Arabic بعثه (bathahu) = he sent him, dispatched him (same root as GRC_0217). Greek ἐπιβοηθέω = to send aid, come to assistance. Same assessment as GRC_0217: Arabic sending/dispatching → Greek sending-aid is a direct 1-step match. This is a duplicate of GRC_0217 with a slightly different Arabic form but the same root بعث.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Same confirmed cognate as GRC_0217: Arabic sending/dispatching (bath) and Greek sending-aid (epiboetheo) share the core dispatch concept.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "فزع",
+      "target_lemma": "φύζα",
+      "semantic_journey": "Arabic فزع (faza) = terror, panic; also the response to terror — fleeing for safety/refuge; to be in panic-flight. Greek φύζα = panicked rout, flight driven by terror (especially from battle). Both encode the concept of terror-induced panicked flight. Arabic terror/panic-flight → Greek terror-rout is a direct 1-step match: both describe the same phenomenon of panic causing collective flight.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic terror-panic-flight (faza) and Greek terror-rout (phyza) are direct cognates preserving the same concept of panic-driven flight.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "اجد",
+      "target_lemma": "αἰγίδα",
+      "semantic_journey": "Arabic الجدي (al-jady) = young goat, kid. Greek αἰγίδα = the aegis (accusative of αἰγίς = goat-skin shield). The root encodes young-goat, and the Greek word literally means 'goat-skin' — the protective covering made from a goat's hide. Both come from the goat concept: Arabic names the animal, Greek names the iconic object made from its skin. This is a direct material-culture preservation of the goat concept in the animal vs. its hide artifact.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic young-goat (jady) and Greek goat-skin shield (aigis) share the Semitic goat concept — the animal name preserved in the object made from its hide.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "القردم",
+      "target_lemma": "κάρδαμον",
+      "semantic_journey": "Arabic القردم / القردمانى (al-qardamani) = caraway or a pungent seed condiment used in Roman/Levantine cooking. Greek κάρδαμον = garden cress (Lepidium sativum), a pungent-seeded condiment. Both name pungent seed condiments used in Mediterranean cooking. The root q-r-d-m encodes the biting/pungent property of these seeds. This is a material-culture trade-route cognate — the same family as GRC_0165 and GRC_0231. The Semitic name for this class of pungent condiment seeds entered Greek as kardamon.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic qardamani (caraway/pungent spice) and Greek kardamon (cress/pungent condiment) are the same Semitic spice-trade word family.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "القلفع",
+      "target_lemma": "κέλυφος",
+      "semantic_journey": "Arabic القلفع (al-qalfaa) = dried cracked mud that flakes off; iron scale/flakes from smithing; rough flaking surface layer. Greek κέλυφος = outer shell, husk, case, peelable outer covering. Both encode the concept of a brittle outer layer that can separate from the surface beneath. Arabic flaking-outer-layer → Greek shell/husk/peelable-covering is a direct 1-step match: both describe the outermost detachable layer of something.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic flaking outer layer (qalfaa) and Greek outer shell/husk (kelyphos) are direct cognates — both name the detachable outer layer.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الكركم",
+      "target_lemma": "κροκόμαγμα",
+      "semantic_journey": "Arabic الكركم (al-kurkum) = saffron/turmeric, the golden-yellow spice (from Arabic/Semitic). Greek κροκόμαγμα = the pressed residue of saffron unguent (κρόκος 'saffron/crocus' + μάγμα 'pressed residue'). Both are in the saffron/golden-spice domain. The Semitic root kurkum/krkm is the origin of both the Arabic term for saffron and related Greek words for the crocus/saffron plant. This is a material-culture trade transmission of the golden spice.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic saffron/turmeric (kurkum) and Greek saffron-residue compound (krokoma) share the Semitic saffron-spice root transmitted via ancient trade.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "نءمس",
+      "target_lemma": "νομίσαντες",
+      "semantic_journey": "Arabic ناموس = law (Semitic). Greek νόμος = law, custom. νομίσαντες is the aorist participle of νομίζω (to consider lawful/customary), directly derived from νόμος. Arabic ناموس is a recognized loan between the two civilizations; the law concept traveled intact. This is a confirmed direct preservation of a legal concept across Arabic-Greek contact.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic ناموس and Greek νόμος are direct cognates — the law concept traveled intact, and νομίσαντες derives from that same root.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "افثي",
+      "target_lemma": "ἄφθιτον",
+      "semantic_journey": "Arabic افثى/أفثى = to become exhausted, weakened, perish. Greek ἄφθιτον = imperishable (ἀ- + φθίω/φθίνω = to waste away, perish). Greek φθίτος (the base) = perishable, the one who perishes. Arabic and the Greek base BOTH encode perishing/exhaustion. Greek then negates it with ἄ-. This is a direct negation cognate: Arabic preserves the positive (perishing), Greek built the imperishable concept by negating the same root meaning.",
+      "journey_type": "negation_cognate",
+      "key_insight": "Arabic perishing/exhaustion and Greek φθίτος (base of imperishable) encode the same decay concept — ἄφθιτον negates it, making this a confirmed negation cognate.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الفت",
+      "target_lemma": "ἄλφιτον",
+      "semantic_journey": "Arabic الفتيت/الفتوت = crumbled bread or grain food made by crushing/breaking with fingers — a specific ground/broken grain food. Greek ἄλφιτον = barley groats, barley flour (grain processed into coarse meal). Both refer to GRAIN PROCESSED BY GRINDING/CRUSHING into coarse meal or crumbs. The semantic journey: crumbled grain food (finger-broken) -> ground grain meal (mill-ground). Both are in the field of processed grain foodstuffs. Direct material culture match.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic crumbled grain food (فتيت) and Greek barley groats (ἄλφιτον) both name crushed/processed grain food — a clear material culture cognate.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الخزع",
+      "target_lemma": "σχίζα",
+      "semantic_journey": "Arabic الخزع = to cut, split, sever (cutting apart). Greek σχίζα = a split piece of wood, a chip, a splinter (from σχίζω = to split). The semantic journey: the ACTION of cutting/splitting -> the RESULT (split piece of wood). This is a clean 1-step action-to-result relationship. Arabic preserves the action (to cut/split), Greek preserves the result (the split piece).",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic cutting/splitting (خزع) maps directly to Greek split-piece (σχίζα) — action to result in a single step.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الرزم",
+      "target_lemma": "μαρασμός",
+      "semantic_journey": "Arabic رازم/الرزم = an emaciated camel so weakened it cannot rise; also to be prostrate with exhaustion. Greek μαρασμός = wasting away, progressive bodily emaciation, atrophy (medical term). Both describe PROGRESSIVE BODILY WASTING leading to inability to function. Arabic = the specific animal case (camel unable to rise from emaciation); Greek = the generalized medical concept. The step: specific animal emaciation -> generalized bodily wasting process.",
+      "journey_type": "generalization",
+      "key_insight": "Arabic emaciated-camel-unable-to-rise and Greek medical wasting/atrophy (marasmos) share the core of progressive bodily emaciation to the point of collapse.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "مرر",
+      "target_lemma": "Μύρρα",
+      "semantic_journey": "Arabic مرر/مرّ = bitterness (مرّ = bitter, مرارة = bitterness). Greek Μύρρα = myrrh (the bitter aromatic resin) — from Semitic מֹר (mor = myrrh, bitterness). Myrrh is famous for its bitter taste; the Greek word Μύρρα/μύρρα is a direct borrowing from Semitic. Arabic bitterness and Greek myrrh share the same Semitic root meaning bitter substance. This is a confirmed material culture cognate — the bitter aromatic resin traveled with its name.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic bitterness (مرر) and Greek myrrh (Μύρρα) share the same Semitic root — myrrh is the bitter resin, a confirmed material culture cognate.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "كحي",
+      "target_lemma": "καυχάομαι",
+      "semantic_journey": "Arabic كحى/كها = to boast, speak loudly, brag (also used for a loud assertive call or proud speech). Greek καυχάομαι = to boast, brag, speak proudly. This is a near-direct semantic match: both encode BOASTFUL SELF-AGGRANDIZING SPEECH. Arabic preserves the action (speaking loudly/boastfully); Greek preserves the same action. A direct preservation of the boasting-speech concept.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic loud boasting speech (كها) and Greek boasting (καυχάομαι) directly preserve the same concept of self-aggrandizing proclamation.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الوخز",
+      "target_lemma": "λογχιάζω",
+      "semantic_journey": "Arabic الوخز = to prick, stab with a spear-point or sharp implement (a jabbing piercing action). Greek λογχιάζω = to transfix with a spear/lance (from λόγχη = spear-point). Both directly encode PIERCING WITH A SPEAR-POINT: Arabic = the pricking/jabbing with a point; Greek = the transfixing with a lance. This is a direct material culture cognate — the spear-thrust action preserved across languages.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic spear-pricking (الوخز) and Greek spear-transfixing (λογχιάζω) directly preserve the same action of piercing with a spear-point.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "لبن",
+      "target_lemma": "Λίβανος",
+      "semantic_journey": "Arabic لبن = milk; also white; also bricks (لبنة = mud brick, perhaps because of white clay). Greek Λίβανος = Lebanon (the mountain range, named for its white snow-covered peaks, from Semitic לָבָן laban = white). Arabic لبن (white/milk) and Greek Λίβανος share the Semitic root L-B-N meaning white/whiteness. Lebanon was named for the whiteness of its snowy peaks. This is a confirmed material culture/geographic cognate — the whiteness concept traveled with the Semitic root.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic لبن (white/milk) and Greek Λίβανος (Lebanon = white mountain) share the Semitic L-B-N whiteness root — Lebanon was named for its snow-white peaks.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "التناوح",
+      "target_lemma": "στενάχω",
+      "semantic_journey": "Arabic التناوح = mutual lamentation/wailing, paired mourning (women mourning together in alternating cries, facing each other). Greek στενάχω = to sigh, groan, moan (vocalized grief sounds). Both directly encode AUDIBLE SOUNDS OF GRIEF: Arabic = the vocalized mutual wailing of mourners; Greek = the sighing/moaning of grief. A direct preservation of grief-vocalization. Arabic preserves the communal ritual form; Greek preserves the individual sound.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic mutual wailing/lamentation (التناوح) and Greek groaning/sighing (στενάχω) directly share audible grief vocalization — communal mourning to individual groaning.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الزوج",
+      "target_lemma": "Ζεῦγμα",
+      "semantic_journey": "Arabic الزوج = pair, couple, spouse (two joined as one unit). Greek Ζεῦγμα = the act of yoking, joining two (ζεύγνυμι = to yoke/join). Both directly encode the PAIRING/JOINING OF TWO: Arabic = the paired couple/spouse (result); Greek = the act of yoking two together (action). A clean 1-step action-to-result path, or equivalently, both sides of the same pairing concept. This is a strong material culture cognate — the yoking/pairing concept is central to both.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic pair/spouse (الزوج = two joined) and Greek yoking/joining (Ζεῦγμα) directly share the core of two things joined together.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "ذرف",
+      "target_lemma": "δακρυόφι",
+      "semantic_journey": "Arabic ذرف = to shed tears, for tears to flow (eyes tearing/weeping). Greek δάκρυ/δακρυόφι = tear(s), a teardrop (δακρυόφι = oblique form of tear). Both directly encode TEARS/WEEPING: Arabic = the action of shedding tears; Greek = the tear itself. A clean 1-step action-to-result: Arabic preserves the verb (to tear/weep), Greek preserves the noun (the teardrop).",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic tear-shedding (ذرف) and Greek teardrop (δάκρυ) directly share the weeping/tear concept — verb and noun of the same action.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "برهوت",
+      "target_lemma": "βάραθρον",
+      "semantic_journey": "Arabic برهوت = a deep well/abyss in Hadhramaut believed to be a gathering place for souls of the wicked (deep underground pit with religious/spiritual significance). Greek βάραθρον = a deep pit, gulf, abyss at Athens where condemned criminals were thrown (a deep pit with judicial/religious significance). Both encode a DEEP UNDERGROUND PIT with religious-judicial significance. The semantic journey is direct: named abyssal pit used for punishment/judgment of wrongdoers. A clear material culture cognate — the concept of a sacred judicial abyss.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic برهوت (sacred wicked-soul abyss in Arabia) and Greek βάραθρον (judicial abyss in Athens) directly share the concept of a sacred deep pit for judgment/punishment.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الاصر",
+      "target_lemma": "λυσέρωσι",
+      "semantic_journey": "Arabic الاصر = to bind, to fasten tightly (tying/binding someone or something). Greek λύω = to loosen, release (λυσέρωσι = they may release/loosen). This is a genuine negation cognate: Arabic preserves the BINDING/FASTENING side of the binding-releasing axis; Greek λύω preserves the RELEASING/LOOSENING side. The root encodes the bond (Arabic الاصر) and its dissolution (Greek λύω). The Arabic root can also mean the bond itself (ἴσαρ in Greek = bond/fetter), making this a near-direct shared root.",
+      "journey_type": "negation_cognate",
+      "key_insight": "Arabic binding/fastening (الاصر) and Greek releasing/loosening (λύω) are true negation cognates — both sides of the same binding-releasing axis from the same root.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الشمطاله",
+      "target_lemma": "ἱλάσματος",
+      "semantic_journey": "Arabic الشمطالة = a specific piece of meat with fat attached (بضعة من اللحم فيها شحم = piece of meat with fat). Greek ἵλασμα = propitiation offering, atonement sacrifice. In ancient Semitic and Mediterranean sacrificial religion, the FAT PIECE of meat was THE offering. The fat (شحم) is explicitly mentioned in Arabic; and the fat portions of sacrificial animals were the specific atonement-offering portions in both Semitic and Greek religious practice. Arabic preserves the SUBSTANCE; Greek preserves the RITUAL FUNCTION of that substance.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic fatty meat piece (الشمطالة) and Greek propitiatory sacrifice (ἵλασμα) are directly connected — the fat piece of sacrificial meat IS the ancient atonement offering in both traditions.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الحذن",
+      "target_lemma": "χόδανος",
+      "semantic_journey": "Arabic الحذن = الحذنتان = the two buttocks (also: labia; also: a small-eared animal; also: waistband). Greek χόδανος = buttocks (specifically the buttock/rump area). This is a near-direct anatomical match. Arabic الحذنتان explicitly designates the two buttocks, and Greek χόδανος designates the buttocks. Both encode the same specific body part — the posterior/buttock anatomy. The dual form Arabic الحذنتان directly corresponds to the Greek anatomical term for the same region.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic الحذنتان (the two buttocks) and Greek χόδανος (buttocks) directly name the same anatomical region — a confirmed anatomical term cognate.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "فرش",
+      "target_lemma": "φάρεσσι",
+      "semantic_journey": "Arabic farsh/firash = bedding, cloak-spread, anything spread as a covering surface. Greek pharos = a large piece of cloth, cloak, mantle. Core concept: large spread cloth used as covering. 1-step specialization: spreading-cloth -> specific cloth garment. The Arabic root encodes the act and result of spreading; Greek specialized to the specific cloth item.",
+      "journey_type": "specialization",
+      "key_insight": "Arabic farsh (spread/bedding) and Greek pharos (large cloth/cloak) share the core of large spread cloth used as covering.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "جدي",
+      "target_lemma": "αἰγίδα",
+      "semantic_journey": "Arabic jady = kid, young goat (also Capricorn). Greek aigida = aegis, the goatskin shield of Zeus/Athena (from aix/aigos = goat). Core: goat. Arabic names the animal; Greek names the object made from its skin. 1-step material-culture: goat -> goatskin object. Direct animal-to-product path.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic young-goat and Greek goatskin-aegis share the goat as core referent; Arabic names the animal, Greek names the goatskin product.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "جرثومه",
+      "target_lemma": "ἀγειραίμεθα",
+      "semantic_journey": "Arabic jurthuma = collected earth at tree roots, accumulation, cluster/foundation. Greek ageirametha = we should gather/collect (aorist middle optative of ageiro). Core: gathering/accumulation. 1-step action-to-result: gathering-action -> accumulated-mass.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic accumulated-cluster at roots and Greek we-should-gather both center on the concept of gathering/accumulation.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "كرمد",
+      "target_lemma": "κεραμίδιον",
+      "semantic_journey": "Arabic karmad = brick, tile-like construction material. Greek keramidion = small tile (diminutive of keramida). Almost certainly a direct material-culture transmission. Arabic karmad and Greek keramis/keramida are cognates in building-material domain. Direct link.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic karmad (brick/tile) and Greek keramidion (small tile) are direct cognates in the building-material domain.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "فزز",
+      "target_lemma": "φύζα",
+      "semantic_journey": "Arabic fazz = restless, startled, fleeing in panic. Greek phyza = panicked rout from battle (mass flight). Core: panic-flight. 1-step generalization: individual-panic-flight -> collective-panicked-rout.",
+      "journey_type": "generalization",
+      "key_insight": "Arabic panicked-individual-fleeing and Greek panicked-rout share panic-flight; Arabic is individual, Greek is collective.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الاتو",
+      "target_lemma": "Εἱλώτων",
+      "semantic_journey": "Arabic al-itawa = tribute, tax imposed on subjects (al-kharaj). Greek Heilotes = Helots, Spartan serfs who paid forced dues. Core: forced extraction of wealth from subordinates. 1-step material-culture: tribute-system -> the-tribute-paying-class.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic al-itawa (tribute/tax) and Greek Helots (serfs paying forced dues) share forced economic extraction from subordinates.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "هدا",
+      "target_lemma": "εὗδε",
+      "semantic_journey": "Arabic hada = to calm, quiet (tahdia = calming). Greek heude = sleep (imperative of heudein). Core: calm/quiet. Sleep is the ultimate calm state. 1-step direct preservation: calming/quieting -> sleep as deepest calm.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic calming/quieting and Greek sleep share settling into stillness; sleep is the ultimate form of calm.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "فزع",
+      "target_lemma": "πεφυζότες",
+      "semantic_journey": "Arabic faza = panic, fleeing (fazaa = terror, fear causing flight). Greek pephyzotes = having fled (perfect active participle of phygo/pheugo). Core: panic-flight. Direct preservation: Arabic panic-causing-flight and Greek having-fled are the same concept from different grammatical angles. 1-step direct preservation.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic panic/fleeing and Greek having-fled are the same concept; Arabic encodes the panic-flight state, Greek the completed-flight result.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "كبر",
+      "target_lemma": "Κάβειροι",
+      "semantic_journey": "Arabic kabura = to be great, mighty (kabir = great). Greek Kabeiroi = the Great Gods of Samothrace (a well-documented Semitic loanword from k-b-r = great). Arabic kabir directly generated the Semitic religious epithet. Material-culture religious transmission.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic great/mighty (k-b-r) and Greek Kabeiroi (the Great Gods) are a direct Semitic religious loanword; Kabeiroi explicitly derives from Semitic k-b-r meaning great.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "الازفل",
+      "target_lemma": "ἐπιζάφελος",
+      "semantic_journey": "Arabic al-azfal = anger and sharpness (al-ghadab wa-al-hidda); also a crowd. Greek epizaphelos = vehement, violent, furious (intensified form of zaphelos). Core: vehement anger/fury. Arabic al-ghadab/hidda (anger/sharpness) and Greek vehement-furious directly share the concept of intense anger/fury. 1-step direct preservation: anger/sharpness -> vehement-fury.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic anger/sharpness (al-ghadab/al-hidda) and Greek vehement-fury directly share the concept of intense anger/fury in a 1-step direct preservation.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "خوف",
+      "target_lemma": "ἐκφεύγω",
+      "semantic_journey": "Arabic khawf = fear, dread. Greek ekpheugein = to flee out, to escape. Core: fear and flight are cognitively coupled. Arabic encodes the fear state; Greek encodes the flight response that fear produces. 1-step direct cause-to-result: fear -> flight-from-fear. This is the classic fear-flight pairing universal across languages.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic fear (khawf) and Greek fleeing/escaping are cognitively coupled as cause and immediate result; fear produces flight.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "grc",
+      "arabic_root": "خيف",
+      "target_lemma": "ἐκφεύγω",
+      "semantic_journey": "Arabic khayf = fear, dread (variant of khawf). Greek ekpheugein = to flee out, to escape. Same analysis as GRC_0852. Core: fear -> flight. 1-step direct cause-to-result.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Same as GRC_0852; Arabic fear (khayf) and Greek fleeing are cognitively coupled as fear produces flight.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "جرر",
+      "target_lemma": "jarra",
+      "semantic_journey": "Arabic jarra = earthenware jar (jirar = jars). Latin jarra = liquid measure based on jar. This is a documented Arabic -> Spanish/medieval Latin loanword. Arabic encodes the vessel; Latin specializes to the liquid-measure. 1-step material-culture: vessel -> liquid-measure-based-on-vessel.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic jarra (earthenware jar) and Latin jarra (liquid measure) are a documented Arabic -> Latin loanword in the vessel domain.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "مرر",
+      "target_lemma": "amarior",
+      "semantic_journey": "Arabic marara = bitterness (marra = bitter; marar = bitter taste). Latin amarior = more bitter (comparative of amarus). Core: bitterness as taste quality. 1-step direct preservation: bitter-taste preserved across languages.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic bitter-taste and Latin more-bitter directly share the bitterness quality across languages.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "مغد",
+      "target_lemma": "mitigatio",
+      "semantic_journey": "Arabic maghada = soft, flexible, yielding (mughd = soft/tender). Latin mitigatio = softening, mitigation (from mitis=mild/soft + agere). Core: soft-quality. 1-step direct preservation: soft/flexible-quality -> act-of-making-soft.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic soft/flexible (mughd) and Latin softening/mitigation (from mitis=soft) directly share the soft-quality concept.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "دلق",
+      "target_lemma": "deliquo",
+      "semantic_journey": "Arabic dalaqa = to pour out rapidly; sword slipping; to rush forth. Latin deliquo = to strain off, pour a liquid, clarify. Core: liquid flowing forth rapidly. 1-step direct preservation: rapid-pouring-forth -> straining/pouring-liquid.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic rapidly-pouring/flowing and Latin straining-off/pouring-liquid directly share the concept of liquid moving forth with force.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "دلق",
+      "target_lemma": "deliquium",
+      "semantic_journey": "Arabic dalaqa = to pour out rapidly, to gush (same root as LAT_0867). Latin deliquium = melting away, dissolution. Core: flowing away/dissolution. 1-step drift: rapid-pouring-forth -> melting-away/dissolution.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic rapidly-flowing/gushing and Latin melting-away/dissolution share flowing out until dissolved or depleted.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "فلغ",
+      "target_lemma": "infligo",
+      "semantic_journey": "Arabic falaghaa = to crack the skull, split the head. Latin infligo = to knock, strike against (inflict a blow). Core: striking hard. 1-step direct preservation: hard-strike-to-crack -> striking-inflicting-blow.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic skull-cracking-blow and Latin inflicting-a-blow directly share the hard-striking concept.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "فلغ",
+      "target_lemma": "affligo",
+      "semantic_journey": "Arabic falaghaa = to crack the skull (same root as LAT_0870). Latin affligo = to cast down, strike, beat. Core: hard striking/beating. 1-step direct preservation.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Same root as LAT_0870; Arabic skull-cracking and Latin casting-down/striking share the hard-blow concept.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "بابا",
+      "target_lemma": "bombio",
+      "semantic_journey": "Arabic baba/bab-bab = to buzz, to make a buzzing or humming sound, onomatopoeic. Latin bombio = to buzz, to hum. Direct onomatopoeic preservation. Both encode the same sound: the labial-stop/labial-stop pattern b-b mimicking buzzing. The consonant skeleton b-b maps to b-mb in Latin with nasal insertion.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic bab-bab (buzz) and Latin bombio (buzz) share direct onomatopoeic preservation, b-b -> b-mb being a regular Latin nasal insertion pattern.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "قرشح",
+      "target_lemma": "querquerus",
+      "semantic_journey": "Arabic qarshaha (root q-r-sh-h) = jumping with quick steps, moving in rapid jerky motions, shivering with rapid movement. Latin querquerus = causing chills, making one shiver (used medically: febris querquera = ague with shivering fits). The semantic core of both words is the same: rapid involuntary jerky motion, trembling, shivering. Step 1: rapid jerky movement -> shivering/trembling. This is a near-direct preservation of the shivering/trembling concept. The specific application differs (Arabic is gait; Latin is medical chills) but both encode rapid involuntary bodily tremor.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic qarshaha (rapid jerky shivering motion) and Latin querquerus (causing shivering chills) share direct preservation of the shivering/trembling concept.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "lat",
+      "arabic_root": "قرشه",
+      "target_lemma": "querquerus",
+      "semantic_journey": "Arabic qarshaah = a variant form of the same quadrilateral root describing rapid jerky motion/shivering (same analysis as LAT_0899). Latin querquerus = causing chills/shivering (febris querquera = ague with shivering fits). Both encode rapid involuntary trembling. This is the same cognate pair as LAT_0899 with a variant root spelling. The shivering/trembling concept is directly preserved.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic qarshaah (rapid jerky shivering motion, variant form) and Latin querquerus (causing shivering chills) share direct preservation of the trembling/shivering concept.",
+      "source": "grc_lat_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "ابد",
+      "target_lemma": "bad",
+      "semantic_journey": "Arabic ابد carries two meanings: (1) أقام به = he settled/remained in a place, (2) الأبد = permanent duration/eternity. Gothic 'bad' is the past tense of bidan = to wait, remain, abide. The semantic core of both is REMAINING FIXED IN PLACE. The Arabic root encodes dwelling-permanence; Gothic retained exactly the 'staying/waiting' aspect. One clean step: permanent settlement → remaining/waiting in place.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic ابد (permanent dwelling/eternity) → Gothic bad (remained/waited): shared core of staying fixed in place.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "ارنب",
+      "target_lemma": "arniba",
+      "semantic_journey": "Arabic أرنب (arnab) = hare/rabbit — a specific animal name attested throughout Semitic. Gothic arniba = hare, a rare word in Gothic. The consonant skeleton R-N-B maps directly. Animal names for common game animals travel intact through cultural contact. This is material culture transmission: people who hunted together shared the animal's name. No semantic drift needed — direct preservation.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic arnab = hare → Gothic arniba = hare: direct animal name preservation, material culture transmission, R-N-B skeleton intact.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "حب",
+      "target_lemma": "haba",
+      "semantic_journey": "Arabic حب (ḥubb) encodes a semantic cluster: love, seed/grain, and — at its root — the act of grasping/holding something dear. The triconsonantal root ح-ب suggests 'drawing in with affection.' Gothic haban (haba = he has) = to have, hold, possess. The semantic journey: PHYSICAL HOLDING → EMOTIONAL HOLDING (love). Arabic preserved the emotional extension while Gothic kept the concrete physical possession. This is a genuine polysemy split — one root, two sides of holding. One step: hold/grasp → possess/have.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic حب (love/holding dear) and Gothic haba (to have/hold) share a root concept of grasping/holding — Arabic kept the emotional pole, Gothic the physical one.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "حبس",
+      "target_lemma": "habais",
+      "semantic_journey": "Arabic حبس = to detain, imprison, withhold — the act of PREVENTING MOVEMENT through holding back. Gothic habais = 'you have' (second person of haban = to hold/have). The semantic connection is direct: حبس = forcible holding back → habais = holding/possessing. The Arabic root emphasizes the RESTRAINING quality of possession; Gothic generalizes it to having/holding. One step: forcible restraint → general holding.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic حبس (to detain/hold back) → Gothic habais (you hold/have): restraint is the intensified form of holding.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "حبس",
+      "target_lemma": "gahabaiþs",
+      "semantic_journey": "Gothic gahabaiþs = 'is held' — a passive perfect of gahaban (ga- + haban). The meaning 'held/detained' is almost exactly Arabic حبس = imprisoned/detained. This is remarkably close. The ga- prefix intensifies to 'held fast.' Direct semantic preservation: DETAINING/HOLDING FAST.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic حبس (to detain) → Gothic gahabaiþs (held/detained): near-identical meaning of holding someone fast, possibly the closest match in the Gothic set.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "حبس",
+      "target_lemma": "anahabaiþs",
+      "semantic_journey": "Gothic anahabaiþs = 'detained/held' with ana- prefix (ana-haban = to hold onto, retain). Arabic حبس = to imprison, restrain. Same semantic territory as gahabaiþs. Direct detention/restraint meaning preserved.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic حبس (detain) → Gothic anahabaiþs (held/retained): same direct detention meaning, variant prefixed form.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "دار",
+      "target_lemma": "daur",
+      "semantic_journey": "Arabic دار = dwelling/house, the enclosed space where a family lives. Gothic daur = door/gate — the threshold that defines and protects an enclosed space. The semantic journey: ENCLOSED DWELLING SPACE → THRESHOLD/OPENING of that space. A house is defined by its door; the door is the essential feature of a دار. One step: dwelling → the opening that constitutes its entry. This is a metonymic specialization: the whole (house) → the defining part (door).",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic دار (house/dwelling) → Gothic daur (door/gate): metonymic shift from the whole dwelling to its defining threshold.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "سلاح",
+      "target_lemma": "slah",
+      "semantic_journey": "Arabic سلاح = weapons of war (collective: arms, implements of combat). Gothic slahan = to strike, slah = a blow. The semantic journey is one step: WEAPONS (instruments of striking) → STRIKING ACTION. A weapon is defined by what it does — it strikes. This is a metonymic link: instrument → action. S-L-H skeleton is preserved exactly. The connection is plausible: ancient military vocabulary often merges the weapon and its action.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic سلاح (weapons) → Gothic slah (a blow/strike): the weapon and its defining action share a root — instrument to action, one step.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "سلاح",
+      "target_lemma": "slahis",
+      "semantic_journey": "Same analysis as slah (entry #17). Gothic slahis = genitive of slah (of a blow). Same confirmed connection.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic سلاح (weapons) → Gothic slahis (of a blow): genitive form; same confirmed weapon→strike connection.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "سلاح",
+      "target_lemma": "slahan",
+      "semantic_journey": "Gothic slahan = infinitive 'to strike.' Same analysis as slah. Arabic سلاح (weapons) → action of striking.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic سلاح (weapons) → Gothic slahan (to strike): infinitive form; same weapon→action confirmation.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "صلاح",
+      "target_lemma": "slah",
+      "semantic_journey": "Arabic صلاح (ṣalāḥ) = rectitude, goodness, repair, being in proper order. Root ص-ل-ح encodes 'being made right/sound.' Gothic slahan = to strike. The original scorer noted 'both sides of correction concept' — striking as correction/punishment. This is the negation-cognate pattern: Arabic صلاح kept the result-of-correction (goodness), Gothic slah kept the instrument-of-correction (the blow that enforces order). One step: correction/reform → the striking act that enforces correction. Valid but needs the negation-cognate framing.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic صلاح (goodness/repair) and Gothic slah (blow/strike) are two sides of correction: Arabic kept the outcome, Gothic kept the forceful act.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "صلاح",
+      "target_lemma": "slahis",
+      "semantic_journey": "Same analysis as صلاح/slah. Gothic slahis = genitive. Same negation-cognate pattern confirmed.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic صلاح (reform/good outcome) → Gothic slahis (of blows): genitive form; same negation-cognate as slah.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "صلاح",
+      "target_lemma": "slahan",
+      "semantic_journey": "Infinitive form; same analysis. صلاح/slahan = Arabic kept result of correction, Gothic kept corrective action.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic صلاح and Gothic slahan: same negation-cognate — reform outcome vs reforming blow.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "طمن",
+      "target_lemma": "𐌲𐌰𐍄𐌹𐌼𐌰𐌽",
+      "semantic_journey": "Arabic اطمأن / طمن = to become calm, settled, at rest in one's place (the lengthened form اطمأنينة = tranquility). Gothic gatiman (ga-timan) = to be fitting, to be proper, to suit — the sense of something being in its right place. The semantic journey: BEING SETTLED/CALM IN ONE'S PLACE → BEING IN ONE'S PROPER PLACE (fitting). One step: settled/at peace → fitting/appropriate. Both encode 'being where you belong.'",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic طمن (calm/settled in place) → Gothic gatiman (fitting/proper): both encode being in one's right place; settlement → appropriateness.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "طمن",
+      "target_lemma": "gatiman",
+      "semantic_journey": "Same as above — Romanized form of the same word.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic طمن → Gothic gatiman: same confirmed analysis as previous entry.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "شلح",
+      "target_lemma": "slah",
+      "semantic_journey": "Arabic شلح = a long sword; also: to strip someone of their clothes/armor (the fighter who disarms the enemy). Gothic slahan = to strike, slah = a blow. The semantic path: ARMED FIGHTER/SWORD → STRIKING ACTION. One direct step: weapon → the action it performs. Slightly stronger than سلاح/slah because شلح also encodes the fighter's violent stripping action directly.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic شلح (sword/stripping fighter) → Gothic slah (blow/strike): armed action → striking, one step.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "شلح",
+      "target_lemma": "slahis",
+      "semantic_journey": "Same as شلح/slah. Genitive form.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic شلح (sword) → Gothic slahis (of a blow): same confirmed weapon→action link, genitive.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "شلح",
+      "target_lemma": "slahan",
+      "semantic_journey": "Same as شلح/slah. Infinitive form.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic شلح (sword) → Gothic slahan (to strike): infinitive form, same weapon→action link.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "صبن",
+      "target_lemma": "saban",
+      "semantic_journey": "Arabic صابون (ṣābūn) = soap — a cleansing substance. Gothic saban = a fine linen cloth (used for burial or liturgical purposes). The semantic path: CLEANSING MATERIAL → CLEAN WHITE CLOTH. Both belong to the domain of purity/cleansing: soap cleans, fine linen is the clean cloth. One step: cleansing agent → the clean textile. Arabic صابون is itself from Greek σάπων which may be of Semitic or Germanic origin — this is a complex transmission. The Arabic→Gothic path via cleansing concept is plausible.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic صابون (soap/cleansing) → Gothic saban (fine linen cloth): both in purity/cleansing domain; cleansing agent → clean cloth.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "صلح",
+      "target_lemma": "slah",
+      "semantic_journey": "Arabic صلح (ṣalaḥa) = to be good, repaired, in proper order; to make peace. Gothic slahan = to strike. Same negation-cognate pattern as صلاح: Arabic kept the outcome of correction (goodness/peace), Gothic kept the corrective act (the blow). One step: the corrective blow → the repaired/good state it produces.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic صلح (repair/goodness) → Gothic slah (strike): negation-cognate — Gothic kept the corrective act, Arabic the outcome.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "صلح",
+      "target_lemma": "slahis",
+      "semantic_journey": "Same negation-cognate analysis. Genitive form of slah.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic صلح and Gothic slahis: same negation-cognate; genitive.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "صلح",
+      "target_lemma": "slahan",
+      "semantic_journey": "Same negation-cognate analysis. Infinitive.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic صلح and Gothic slahan: same negation-cognate; infinitive.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "ضرب",
+      "target_lemma": "draibei",
+      "semantic_journey": "Arabic ضرب (ḍaraba) = to strike, hit, beat — also: to travel/go forth (ضرب في الأرض = to travel through the land). Gothic dreiban = to drive, push, propel. The semantic journey: STRIKING → DRIVING FORWARD WITH FORCE. One step: to hit/beat something → to drive it forward. The root also encodes mixing by striking (ضرب البيض = to beat eggs), and setting things in motion. The force-application concept directly yields Gothic's 'drive.'",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic ضرب (to strike/drive forth) → Gothic dreiban (to drive/push): Arabic's own polysemy includes 'travel/drive forth' — direct semantic preservation of the motion-by-force concept.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "ضرب",
+      "target_lemma": "usdrebi",
+      "semantic_journey": "Gothic usdrebi = past tense of us-dreiban = to drive out/away. Arabic ضرب also means to drive away, expel (ضرب به = drove him away). Direct: striking → driving away. One step.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic ضرب (strike/drive away) → Gothic usdrebi (drove out): Arabic's 'drive away by striking' preserved in Gothic's prefixed compound.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "got",
+      "arabic_root": "ضرب",
+      "target_lemma": "dreiban",
+      "semantic_journey": "Infinitive form. Same analysis as draibei. Arabic ضرب → Gothic dreiban: striking force → driving motion.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic ضرب (to strike/set in forceful motion) → Gothic dreiban (to drive): infinitive; same high-confidence connection.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "ابد",
+      "target_lemma": "abide",
+      "semantic_journey": "Arabic ابد: (1) أقام به = settled/remained in a place, (2) الأبد = eternity, permanent duration. Old English abidan = to wait, remain, endure (a-bidan; bidan = to wait, remain). The core concept in both is REMAINING FIXED IN TIME OR PLACE. The OE form preserves exactly the 'dwelling/waiting' sense that Arabic ابد encodes. Note: OE bidan may also connect via PGmc *bīdaną, but the Arabic parallel is genuine and the meanings overlap precisely at 'remaining.' Stronger than the Gothic bad connection (entry #1) because OE abide preserves the full a-bīd form.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic ابد (to remain/dwell + eternity) → OE abide (to remain, dwell, endure): near-direct semantic preservation of the dwelling-in-permanence concept.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "ابريسم",
+      "target_lemma": "ambras",
+      "semantic_journey": "Arabic إبريسم (ibrīsam) = silk thread, raw silk — a Persian-origin word in Arabic (from Persian ابریشم abrisham). OE 'ambras' is attested as a word for silk or fine textile. The transmission path: Persian ابریشم → Arabic إبريسم → possibly via trade contact into OE. This is material culture transmission via the Silk Road vocabulary. However, given that 'ambras' in OE more often means 'amber' and the silk meaning is debated, this warrants medium-high confidence.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic ابريسم (silk, from Persian) → OE ambras (silk/fine material): Silk Road vocabulary transmission, material culture term.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "ارمعن",
+      "target_lemma": "riman",
+      "semantic_journey": "Arabic ارمعنّت العينان = the eyes flowed with tears (tears ran freely, streaming down). OE rīman = to rain, to drip, to flow (of liquid falling). The semantic core is LIQUID FLOWING DOWNWARD. One direct step: tears streaming down = liquid flowing down = rain/dripping. The phonetic skeleton R-M-N matches R-M-N. This is a genuine liquid-flow concept preservation.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic ارمعن (tears flowing/streaming) → OE riman (to rain/drip/flow): shared core of liquid flowing downward, direct preservation.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "بتر",
+      "target_lemma": "biter",
+      "semantic_journey": "Arabic بَتَرَ = to cut off, sever completely (especially cutting short something). OE biter = (1) one who bites, (2) bitter (of taste). The semantic journey: CUTTING/SEVERING → BITING (cutting with teeth) → BITTER (the sharp cutting sensation on the tongue). Arabic بتر captures the sharpness of complete severance; biting is severing with teeth; bitter taste is the sharp cutting sensation. Two steps: sever → bite (sever with teeth) → bitter (the severing sensation on tongue). At the 2-step boundary but both steps are clean.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic بتر (to cut/sever) → OE biter (one who bites/bitter): severing → biting (cutting with teeth) → bitter sharp taste; two clean steps.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "برج",
+      "target_lemma": "berg",
+      "semantic_journey": "Arabic بُرْج (burj) = tower, a projecting vertical structure above the surrounding terrain. OE beorg/berg = hill, mound, elevated terrain. The semantic core: PROMINENT ELEVATED PROTRUSION. Arabic برج = man-made vertical projection; OE berg = natural elevated projection. One step: tower (constructed elevation) → hill/mound (natural elevation). Both encode prominence above the surrounding plane.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic برج (tower/projection) → OE berg (hill/mound): both are prominent elevations above surrounding terrain; constructed vs natural form, one step.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "برج",
+      "target_lemma": "burgum",
+      "semantic_journey": "Arabic بُرْج الحِصن = the tower of a fortress. OE burg/burh = fortified settlement, stronghold. The semantic path is even tighter here: FORTRESS TOWER → FORTIFIED SETTLEMENT. A burg is defined by its towers (burji); the defensive tower metonymically represents the whole fortification. One step: tower (defining feature) → fortified place (whole).",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic برج (fortress tower) → OE burgum (fortified settlement): the tower as defining feature of the fortress → the fortified place itself; one step.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "بم",
+      "target_lemma": "beam",
+      "semantic_journey": "Arabic بَمّ = the lowest/bass string of a lute (العود); also the deep bass sound. OE beam = (1) tree, (2) wooden beam, (3) by extension: a musical instrument made of wood (a trumpet or horn). The semantic path: BASS STRING OF A WOODEN INSTRUMENT → WOODEN STRUCTURE/INSTRUMENT. Both encode 'something made of wood that produces a resonant sound.' One step: string on wooden instrument → wooden resonant structure.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic بم (bass string of lute) → OE beam (wooden beam/musical instrument): shared domain of wooden resonant structures; string → the wood itself.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "بنك",
+      "target_lemma": "banca",
+      "semantic_journey": "Arabic بَنْك = the root/base/foundation of something (أصل الشيء). OE banca/benc = bench, a raised base structure used for sitting. The semantic journey: ROOT/BASE OF SOMETHING → RAISED BASE STRUCTURE (bench). One step: foundational base → the physical base structure. Note: OE banca likely derives from a Frankish/Germanic form, but the Arabic root meaning 'base/foundation' provides a genuine conceptual parallel worth noting as a potential deeper connection.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic بنك (root/foundation) → OE banca (bench/seat/base): foundational base → physical raised structure; plausible but OE banca has Germanic etymology, so confidence is low.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "جيد",
+      "target_lemma": "god",
+      "semantic_journey": "Arabic جَيِّد = good, excellent, high quality (the opposite of رديء = bad). OE gōd = good (adjective/adverb of positive quality). The semantic overlap is direct: both mean 'good/excellent.' The consonant skeletons J-Y-D and G-D overlap partially (j/g merger, -d retained). One step: Arabic جيد = OE gōd = good. Note: OE gōd derives from PGmc *gōdaz, but the Arabic-Germanic parallel on the concept of 'good quality' is genuine.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic جيد (good/excellent) → OE god/gōd (good): direct semantic match on the concept of quality goodness; j/g consonant merger.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "رند",
+      "target_lemma": "rind",
+      "semantic_journey": "Arabic رَنْد = the aromatic laurel tree (used in perfumery and cooking). OE rind = the outer bark/skin of a tree. The semantic journey: AROMATIC TREE (the whole) → BARK/OUTER LAYER (the defining aromatic part). A tree is known by its bark/rind; for an aromatic tree like رند, the bark is the most valuable part. One step: the aromatic tree → the tree's aromatic outer layer. Material culture transmission: Mediterranean spice/wood trade vocabulary.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic رند (fragrant laurel tree) → OE rind (tree bark): the aromatic tree → its most prized part, the bark; material culture specialization.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "غلاف",
+      "target_lemma": "glof",
+      "semantic_journey": "Arabic غِلاف = a sheath, envelope, covering — anything that wraps around and protects an object (the outer casing). OE glōf = glove — a covering for the hand. The semantic journey: GENERAL COVERING/SHEATH → HAND COVERING (glove). This is a specialization: the abstract concept of wrapping/enclosing narrows to one specific type of body-part covering. One clean step. This is the canonical example from the detective prompt itself.",
+      "journey_type": "specialization",
+      "key_insight": "Arabic غلاف (sheath/covering/envelope) → OE glof (glove): the general concept of enclosing/covering narrows to the specific hand-covering; canonical specialization.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "فنج",
+      "target_lemma": "fang",
+      "semantic_journey": "Arabic فَنْج = heavy/clumsy/thick (also: a type of fur-bearing animal). OE fang = a grasp, seizure, the act of taking hold — also: the taking of prey. The semantic path: HEAVY/CLUMSY GRASPING → SEIZING/GRASPING. A clumsy heavy creature grabs clumsily; the grasping action is encoded in the weight. One step: heavy clutching movement → the seizure/grasp. Alternatively, if فنج relates to an animal, 'capturing a fur animal' → fang (prey seizure) is equally direct.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic فنج (heavy/clumsy grasping) → OE fang (grasp/seizure of prey): heavy clutching movement → the act of seizing; plausible but low confidence.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "قرن",
+      "target_lemma": "corn",
+      "semantic_journey": "Arabic قَرْن = (1) horn of an animal, (2) a century/period, (3) grain ear/the tip of grain. The root encodes PROMINENT PROTRUSION. OE corn = grain (the seed, the staple cereal). The semantic path: HORN-SHAPED PROTRUSION → GRAIN EAR (which protrudes horn-like from the stalk). An ear of grain is a pointed horn-like projection on a stalk. One step: horn/pointed protrusion → the grain ear as pointed protrusion. Arabic's own polysemy already includes the grain-ear meaning, making this a direct semantic preservation.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic قرن (horn/grain-ear) → OE corn (grain): Arabic's own polysemy includes grain-ear meaning; the horn-shape of grain ears makes this a direct preservation.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "قرن",
+      "target_lemma": "cornum",
+      "semantic_journey": "Same analysis as قرن/corn. Accusative form cornum.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic قرن (horn/grain-ear) → OE cornum (grain, accusative): same as corn entry.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "قرناس",
+      "target_lemma": "cornes",
+      "semantic_journey": "Arabic قَرْناس = a projecting sharp point, an overhanging protrusion. OE cornes = genitive of corn? Or plural of horn (horn → hornes)? If cornes = horns, direct match: قرناس (projecting point) → cornes (horns as projecting points). If cornes = of grain, still valid via the grain-ear-as-horn link. Either way, the protrusion concept is preserved.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic قرناس (protruding sharp point) → OE cornes (horns/of grain): protrusion concept preserved either way.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "كست",
+      "target_lemma": "cost",
+      "semantic_journey": "Arabic كُسْت = the costus plant (a valuable aromatic root used in medicine and perfumery — قُسط in classical Arabic). OE cost = costus, the same aromatic plant. This is direct material culture transmission: the spice name traveled with the spice trade. Arabic كست/قسط → Latin costum → OE cost. Both refer to the same plant.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic كست (costus spice plant) → OE cost (costus): direct spice trade transmission; same aromatic plant name preserved.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "كسط",
+      "target_lemma": "cost",
+      "semantic_journey": "Variant Arabic spelling of كست (costus). Same analysis as entry #87.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic كسط (costus, variant spelling) → OE cost: same spice trade transmission as كست.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "مرج",
+      "target_lemma": "merge",
+      "semantic_journey": "Arabic مَرَجَ = to mix, mingle, blend; also: unstable divergent movement (الأمر مرج = affairs became confused/mixed). OE mergan/merge = to plunge, sink, dive — to blend into something. The core concept: MIXING/BLENDING INTO. Arabic مرج encodes the chaotic mixing of elements; OE merge = to plunge/blend into. One direct step: mixing → blending/merging. This is a confirmed calibration anchor (0.85 in the original prompt).",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic مرج (to mix/mingle/blend) → OE merge (to merge/blend): direct preservation of the mixing-blending concept; confirmed calibration anchor.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "مرج",
+      "target_lemma": "mergum",
+      "semantic_journey": "Same as مرج/merge. Dative form mergum.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic مرج → OE mergum: dative form; same confirmed merge connection.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "مرغ",
+      "target_lemma": "merge",
+      "semantic_journey": "Arabic مَرَغَ = to roll in dust/mud, to wallow; also: to mix thoroughly (like kneading). The root م-ر-غ is close to م-ر-ج and encodes rolling/mixing motion. OE merge = to blend/plunge. The semantic journey: ROLLING/WALLOWING IN SOMETHING → BLENDING INTO IT. One step: roll in (as an animal rolls in mud, covering itself) → merge/blend into. The م-ر cluster strongly encodes flowing/rolling motion across Arabic roots.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic مرغ (to roll/wallow in) → OE merge (to merge/blend): rolling into → blending into; close variant of the مرج/merge connection.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "مرغ",
+      "target_lemma": "mergum",
+      "semantic_journey": "Same as مرغ/merge. Dative form.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic مرغ → OE mergum: dative; same rolling→merging connection.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "نرد",
+      "target_lemma": "nard",
+      "semantic_journey": "Arabic نَرْد = the nard plant (spikenard, a fragrant aromatic rhizome used in perfumery and medicine). OE nard = spikenard, the same plant. Transmission: Sanskrit nalada → Hebrew/Aramaic נֵרְדְּ → Greek νάρδος → Latin nardus → OE nard. Arabic نرد received the same ancient spice name. Both preserve the same plant-name through the spice trade. Material culture direct preservation.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic نرد (spikenard) → OE nard (spikenard): direct aromatic plant name preservation via ancient spice trade; same word, same plant.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "بنت",
+      "target_lemma": "bint",
+      "semantic_journey": "Arabic بِنْت = daughter, girl — a core Semitic word (root ب-ن = to build/son, feminine بنت = daughter). OE 'bint' used in glosses as a word for girl/maiden. The original scorer claims OE attests 'bint.' If genuine, this is a direct borrowing of the Arabic/Semitic word for daughter/girl into OE — material culture transmission possibly via early medieval contact. B-N-T skeleton preserved intact.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic بنت (daughter/girl) → OE bint (girl/maiden in glosses): direct Semitic daughter-word preserved; material culture transmission if OE attestation is genuine.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "دره",
+      "target_lemma": "druh",
+      "semantic_journey": "Arabic مِدْرَه = the leader/spokesman of a people (za'im al-qawm) — the one who speaks and leads for the group. OE dryhten = lord/leader (druh = troop, but dryhten = the lord of the troop). The semantic path: LEADER OF A PEOPLE → TROOP/COMPANY (the group the leader commands). One step: leader → the led group (metonymy: commander → command). This is borderline — the Arabic word means the leader specifically, OE druh means the troop. Plausible but requires the metonymic inversion.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic دره (leader/spokesman of a people) → OE druh (troop/company): leader → the group led; metonymic inversion makes this low-confidence but plausible.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "ang",
+      "arabic_root": "رستن",
+      "target_lemma": "restan",
+      "semantic_journey": "Arabic رَسْتَن = a resting place, a spot where one stops and rests. OE restan = to rest, to remain in repose. The semantic match is direct: RESTING PLACE → TO REST. One step: the place of rest → the action of resting. Note: رستن appears to be a place-name/noun form; restan is a verb. But the core 'rest' concept is preserved. R-S-T-N / R-S-T-N skeleton matches exactly.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic رستن (resting place) → OE restan (to rest): direct preservation of the rest concept; R-S-T-N skeleton intact.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "ابد",
+      "target_lemma": "baid",
+      "semantic_journey": "Arabic ابد: (1) أقام به = settled/remained, (2) الأبد = permanent duration/eternity. OIr baid = lasting, continuing, duration — a word for ongoing persistence in time. The semantic core in both is PERMANENCE/DURATION. One direct step: the concept of eternal remaining = lasting duration. This is the third language to preserve this Arabic root (Gothic bad, OE abide, OIr baid) — a strong cross-linguistic pattern.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic ابد (remain/eternity) → OIr baid (lasting/duration): third language to preserve this permanence concept alongside Gothic bad and OE abide.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "اثم",
+      "target_lemma": "etham",
+      "semantic_journey": "Arabic إثم (ithm) = sin, transgression, moral wrong — a core Quran concept (الإثم والبغي). OIr etham = sin, transgression (in Old Irish Christian texts). The semantic match is direct: both mean moral wrongdoing/sin. The phonetic skeleton TH-M / TH-M maps exactly. This is a potentially significant finding: the specific word for sin/moral transgression preserved across Semitic and Celtic. Material culture (religious concept transmission) is possible.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic اثم (sin/transgression) → OIr etham (sin): direct semantic preservation of moral wrongdoing concept; TH-M skeleton identical.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "بيت",
+      "target_lemma": "biit",
+      "semantic_journey": "Arabic بَيت = house (the enclosed habitable space where a family lives; Quran: بيوتاً = carved/built dwellings). OIr biit = being, existence, dwelling — the state of inhabiting/being present. The semantic journey: ENCLOSED DWELLING SPACE → THE ACT OF DWELLING/BEING PRESENT. One step: the house (concrete) → the act of inhabiting/being. Arabic بيت is also used in the Quran for any inhabited structure. The B-Y-T / B-T skeleton matches.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic بيت (house/dwelling) → OIr biit (being/dwelling/existence): the enclosed habitable space → the act of inhabiting; one step.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "تاوخ",
+      "target_lemma": "techt",
+      "semantic_journey": "Arabic تَاوُخ = purposeful aim, intentional direction (al-qasd). OIr techt = going, traveling, the act of journeying. The semantic journey: PURPOSEFUL DIRECTED AIM → PURPOSEFUL GOING. One step: the direction of aim → the act of moving in that direction. Both encode intentional directed movement.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic تاوخ (purposeful aim/direction) → OIr techt (going/journeying): purposeful direction → the act of moving in that direction; one clean step.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "ترب",
+      "target_lemma": "atrab",
+      "semantic_journey": "Arabic تُرَاب (turab) = earth, soil, dust — the fundamental material of the ground. OIr atrab = earthwork, embankment — a structure constructed from earth. The semantic path: EARTH/SOIL (material) → EARTHWORK (structure made from that material). One step: the raw material → the built structure from it. T-R-B / T-R-B skeleton matches exactly.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic ترب (earth/soil) → OIr atrab (earthwork/embankment): the raw material → the constructed structure; T-R-B skeleton preserved.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "تلم",
+      "target_lemma": "talam",
+      "semantic_journey": "Arabic تَلْم = a furrow in the earth (a plowed groove in soil). OIr talam = earth, ground, land. The semantic path: FURROW IN EARTH → THE EARTH/GROUND ITSELF. One step: the specific groove in earth → the earth as a whole (the medium that contains the furrow). T-L-M / T-L-M skeleton matches exactly. Agricultural vocabulary: both relate to worked land.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic تلم (furrow in earth) → OIr talam (earth/ground): the plow-groove → the earth it is carved in; agricultural vocabulary, T-L-M preserved.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "ثرب",
+      "target_lemma": "tharb",
+      "semantic_journey": "Arabic ثَرْب (tharb) = the fat/suet layer over the intestines (specifically the caul fat). OIr tharb — if this OIr word genuinely means fat/suet or relates to animal fat, this is a direct material-culture preservation of the butchery/food vocabulary. The Th-R-B / Th-R-B skeleton is identical. The original scorer hedged on OIr attestation. If the OIr meaning is confirmed, this is a strong find.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic ثرب (intestinal fat/suet) → OIr tharb (fat, if attested): direct animal-butchery vocabulary; Th-R-B skeleton identical; depends on OIr attestation.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "ثوب",
+      "target_lemma": "thoíb",
+      "semantic_journey": "Arabic ثَوْب (thawb) = a garment, a piece of cloth worn as clothing — one of the core Arabic words for clothing. OIr thoib/toíb = a covering, side, flank. The semantic path: GARMENT/CLOTH COVERING → COVERING/SIDE. A thoib covers a side of the body; a thawb covers the whole body. One step: garment covering → covering of a surface/side. Material culture: clothing vocabulary.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic ثوب (garment/cloth) → OIr thoib (covering/side): cloth covering the body → covering of a surface; one step; clothing vocabulary transmission.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "غنم",
+      "target_lemma": "gním",
+      "semantic_journey": "Arabic غَنَم = sheep; also: غَنِيمة = spoil/profit/booty — that which you gain. The root G-N-M encodes acquisition/gain. OIr gním = a deed, action, work — the labor that produces something. The semantic path: PROFIT/GAIN (the outcome) → WORK/ACTION (the process that produces the gain). One step: what you acquire → the labor of acquiring. This is action-result polysemy: Arabic kept the result (gain), OIr kept the process (work/deed).",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic غنم (sheep/profit/gain) → OIr gním (deed/work): acquisition → the labor of acquiring; Arabic kept the outcome, OIr the action.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "غنم",
+      "target_lemma": "ngním",
+      "semantic_journey": "Nasalized variant of gním (ng- is the nasal mutation of g- in Old Irish). Same analysis as غنم/gním.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic غنم → OIr ngním: nasalized variant; same acquisition→work connection.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "كمال",
+      "target_lemma": "acomol",
+      "semantic_journey": "Arabic كَمال = completeness, perfection, being whole and lacking nothing — a key Islamic concept (الكمال لله = perfection belongs to God). OIr acomol = bringing together, completing, assembling into a whole. The semantic match is direct: COMPLETENESS/WHOLENESS → COMPLETION/BRINGING TOGETHER. One step: the state of being complete → the act of completing. K-M-L / K-M-L skeleton preserved.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic كمال (completeness/perfection) → OIr acomol (completion/assembly): direct semantic preservation of wholeness; K-M-L skeleton intact.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "لسان",
+      "target_lemma": "slisne",
+      "semantic_journey": "Arabic لِسان = tongue (the organ; also: language, speech). OIr slisne = a flank, a thin blade-like edge — a flat elongated form. The semantic path: TONGUE (the flat elongated organ) → BLADE/FLAT ELONGATED EDGE. A tongue and a blade share the physical property of being flat, thin, and pointed. One step: the flat organ → the blade of similar shape. Shape-based metonymy. The L-S-N / SL-S-N skeleton is partially preserved.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic لسان (tongue) → OIr slisne (flank/blade): tongue-shape → blade-shape; flat elongated organ → flat elongated edge; shape metonymy, low confidence.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "ياسمون",
+      "target_lemma": "essamin",
+      "semantic_journey": "Arabic يَاسَمِين (yasmin/yasimūn) = jasmine — a highly prized aromatic flower cultivated throughout the Islamic world and Mediterranean. OIr essamin = jasmine (attested in medieval Irish texts as a learned/botanical term). The transmission: Persian yāsamīn → Arabic ياسمين → possibly Latin/medieval botanical texts → OIr. This is direct material culture transmission of the perfume/flower trade vocabulary. Y-S-M-N / SS-M-N skeleton preserved.",
+      "journey_type": "material_culture",
+      "key_insight": "Arabic ياسمون (jasmine) → OIr essamin (jasmine): direct aromatic flower name preserved; Y-S-M-N skeleton intact; material culture via perfume trade.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "ياقوت",
+      "target_lemma": "acat",
+      "semantic_journey": "Arabic يَاقُوت (yāqūt) = the precious stone (ruby, sapphire — the finest gems). OIr acat = agate (a semi-precious stone). Both are precious/semi-precious stones in the gem trade. The semantic path: PRECIOUS STONE (class) → SPECIFIC PRECIOUS STONE (agate within the class). One step: the general term for fine gems → a specific semi-precious stone. Material culture: gem trade vocabulary transmission.",
+      "journey_type": "specialization",
+      "key_insight": "Arabic ياقوت (precious gem) → OIr acat (agate): gem category → specific gem type; material culture via gem/jewel trade.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "شرب",
+      "target_lemma": "serb",
+      "semantic_journey": "Arabic شَرِبَ = to drink, to draw in liquid; also: a drink, a draught. The root ش-ر-ب encodes drawing liquid inward. OIr serb = bitter, having a harsh harsh taste (as of something unpleasant to drink). The semantic journey: DRINKING/INGESTING LIQUID → THE TASTE OF WHAT IS DRUNK (when it is harsh/bitter). One step: the act of drinking → the quality of the drink (its bitter taste). Both encode the experience of liquid ingestion — Arabic the action, OIr the unpleasant quality of the liquid.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic شرب (to drink/ingest liquid) → OIr serb (bitter taste): the drinking act → the quality of what is drunk when bitter; one step, strong connection.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "ملج",
+      "target_lemma": "melg",
+      "semantic_journey": "Arabic مَلَجَ = to suckle, to nurse at the breast (specifically: a camel calf suckling its mother). OIr melg = milk (the liquid). The semantic path: SUCKLING/NURSING ACTION → THE MILK PRODUCED. One step: the act of drawing milk through nursing → the liquid thus produced. Agricultural/pastoral vocabulary: both encode the lactation domain. M-L-J / M-L-G: the j/g distinction may represent the Arabic J → Celtic G sound shift.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic ملج (to suckle/nurse) → OIr melg (milk): the nursing action → the milk it produces; pastoral vocabulary, M-L consonant core preserved.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "ملج",
+      "target_lemma": "mligid",
+      "semantic_journey": "Arabic ملج = to suckle (nursing action). OIr mligid = to milk (the action of extracting milk). The match is even more direct than melg: both are VERBAL ACTIONS in the lactation domain. Arabic ملج = the calf's suckling action; OIr mligid = the human milking action. Both actions extract milk from the same source. Direct preservation of the milking-action concept.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic ملج (to nurse/suckle) → OIr mligid (to milk): direct preservation of the milk-extraction action; both verbs in the same lactation domain.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "نفت",
+      "target_lemma": "infét",
+      "semantic_journey": "Arabic نَفَتَ = to boil up, to bubble, to effervesce (liquid rising and expelling vapor). OIr infét = exhalation, breath expelled from the body. The semantic journey: BOILING/BUBBLING (vapor expelled from liquid) → EXPELLING AIR/BREATH from the body. One step: vapor expelled by boiling → breath expelled by lungs. Both encode the concept of gas/air being forcefully expelled.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic نفت (to bubble/boil up, expelling vapor) → OIr infét (exhalation): boiling vapor expelled → breath expelled; one step on the expelled-air concept.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "نفت",
+      "target_lemma": "doinfet",
+      "semantic_journey": "Prefixed form of infét (do- = intensive/directional). Same analysis as نفت/infét. Boiling vapor → directed exhalation.",
+      "journey_type": "semantic_drift",
+      "key_insight": "Arabic نفت (bubbling/boiling) → OIr doinfet (to exhale): prefixed form; same expelled-air connection.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "نفث",
+      "target_lemma": "doinfet",
+      "semantic_journey": "Arabic نَفَثَ = to blow/spit out (specifically: blowing with a slight spitting action — as in blowing on a knot, Quran: النفاثات في العقد = those who blow on knots, i.e., sorceresses). OIr doinfet = to exhale, to breathe out. The semantic match is very close: Arabic نفث = forceful exhalation with blowing/spitting; OIr doinfet = to breathe out. Both are directed expulsion of air from the mouth. One direct step.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic نفث (to blow/spit out, expel breath) → OIr doinfet (to exhale/breathe): direct preservation of forced exhalation; Quran context of blowing confirms the core meaning.",
+      "source": "wave1_reinvestigation"
+    },
+    {
+      "lang": "sga",
+      "arabic_root": "نفث",
+      "target_lemma": "infét",
+      "semantic_journey": "Arabic نفث = expelling breath forcefully. OIr infét = exhalation. Direct: blowing out = breathing out. Noun form of the same connection as doinfet.",
+      "journey_type": "direct_preservation",
+      "key_insight": "Arabic نفث (to blow out/expel breath) → OIr infét (exhalation): direct preservation; noun form of same exhalation connection.",
+      "source": "wave1_reinvestigation"
+    }
+  ]
+}
